@@ -1,0 +1,585 @@
+\section*{9. Research Design Overview}
+
+This proposal contains three experimental studies.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.17\linewidth} >{\raggedright\arraybackslash}p{0.24\linewidth} >{\raggedright\arraybackslash}p{0.29\linewidth} >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Study} & \textbf{Goal} & \textbf{Core Design} & \textbf{Core Contribution} \\
+\midrule
+Study 1 & Test double Bayesian distortion & Two-stage sequential sampling + yoked control + logit updating & Distinguish acquisition from processing \\
+Study 2 & Identify AI-specific mechanisms & Structural manipulation of exhaustiveness cues and ambiguity compression & Test the illusion of algorithmic exhaustiveness and ambiguity compression \\
+Study 3 & Test governance mechanisms and net payoff & Governance-treatment experiment under varying cost structures & Evaluate which interventions improve judgment quality without imposing excessive friction \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section*{10. Study 1: Main Two-Stage Sequential Sampling Experiment}
+
+\subsection*{10.1 Research Objective}
+
+Study 1 tests whether generative AI produces double Bayesian distortion:
+\begin{itemize}[leftmargin=1.5em]
+\item Stage one: does AI lead users to stop evidence sampling too early?
+\item Stage two: does AI lead users to under-update, in log-odds terms, on highly diagnostic disconfirming signals?
+\end{itemize}
+
+Study 1 is divided into Study 1a and Study 1b.
+\begin{itemize}[leftmargin=1.5em]
+\item Study 1a: natural sequential sampling, used to estimate the total effect of AI on the full belief-formation process.
+\item Study 1b: a yoked control design, used to identify the direct effect of processing bias after controlling for information-set size.
+\end{itemize}
+
+\subsection*{10.2 Experimental Scenario}
+
+Preferred scenario:
+\begin{quote}
+Judgment of corporate default risk.
+\end{quote}
+
+Reasons:
+\begin{itemize}[leftmargin=1.5em]
+\item the scenario allows a natural prior probability to be set;
+\item it allows positive and negative evidence to be designed;
+\item each piece of evidence can be assigned a likelihood ratio;
+\item participants can be asked to report probabilities;
+\item investment / hedging decisions can be designed;
+\item token incentives can be used to calculate net payoff.
+\end{itemize}
+
+Task example:
+
+Participants are asked to judge whether a given firm will enter a high-default-risk state within the next year. The system provides a large research-report database. Participants may pay to inspect evidence and must ultimately report the probability that the firm belongs to the high-default-risk type.
+
+This proposal uses:
+\begin{quote}
+an evidence pool that is fully controlled by the researcher but appears open-ended to the participant.
+\end{quote}
+
+The participant sees:
+
+You can never prove to reviewers what the ``objective strength'' of a natural-language cue such as ``executive resignation'' really is, because natural language contains tremendous semantic ambiguity, and different participants may map the same text into very different prior beliefs. If the objective normative baseline itself is not calculable, then every subsequent measure of ``deviation'' becomes a castle in the air.
+
+\textbf{Academic precedent.}
+
+This design is not only precedented in the literature; it belongs to a very large and classic research tradition: the sequential sampling paradigm and active information acquisition.
+\begin{itemize}[leftmargin=1.5em]
+\item Rooted in psychology and decision science: classic urn experiments \citep{Edwards1965}.
+\item Information-systems and process research: the classic Mouselab paradigm \citep{PayneBettmanJohnson1993}, where information is hidden and participants must click to reveal it, allowing researchers to measure search cost and stopping points.
+\item Modern macro/behavioral economics frontier: information-choice experiments under rational inattention, such as \citet{CaplinDean2015} and \citet{EnkeZimmermann2019}.
+\end{itemize}
+
+These top-journal designs succeed not by having participants read long reports, but by following one core rule: strip away uncontrolled semantics and move to a data-generating process (DGP).
+
+\textbf{How to quantify evidentiary strength: the breakthrough rule.}
+
+To realize a design that is completely controlled by the researcher but still appears open-ended to participants, ``textual reports'' must be reduced into structured signals with explicit likelihood ratios (LRs).
+
+In the instructions, participants should be shown the conditional probability matrix of the signal-generating process. This is the only way to ensure that all participants face the same objective likelihood function.
+
+Concrete illustration:
+\begin{itemize}[leftmargin=1.5em]
+\item Do \emph{not} say: ``You may search the database for research reports.''
+\item Instead say: ``The database contains 50 independent automated risk-control indicators (for example, a cash-flow early-warning system and supply-chain public-opinion monitoring). Historical data show that these indicators have imperfect diagnostic accuracy.''
+\end{itemize}
+
+Then explicitly specify \(P(\text{signal} \mid \text{state})\):
+\begin{itemize}[leftmargin=1.5em]
+\item If the firm's true state is \textbf{high default risk}, then any indicator drawn from the database shows a ``red light'' (negative) with probability \(0.7\), and a ``green light'' (positive) with probability \(0.3\).
+\item If the firm's true state is \textbf{low default risk}, then any indicator drawn from the database shows a ``red light'' with probability \(0.3\), and a ``green light'' with probability \(0.7\).
+\end{itemize}
+
+At that point, the strength of each piece of evidence is perfectly quantified:
+\[
+LR_{\text{negative}} =
+\frac{P(\text{red light} \mid \text{high risk})}{P(\text{red light} \mid \text{low risk})}
+= \frac{0.7}{0.3}
+= 2.33
+\]
+
+Likewise, the strength of drawing a green light is:
+\[
+LR_{\text{positive}} =
+\frac{P(\text{green light} \mid \text{high risk})}{P(\text{green light} \mid \text{low risk})}
+= \frac{0.3}{0.7}
+= 0.43
+\]
+
+\textbf{The strongest implementable version of Study 1.}
+
+To give this mathematical model the ecological validity of an ``AI research-report'' environment, the system should add a layer of user-interface packaging.
+
+\textbf{Underlying logic (fully controlled).}
+
+The researcher pre-specifies the true state (for example, the firm is actually low risk). The generated red-light and green-light indicators in the participant's sampling pool strictly follow the probability distribution above. The entire Bayesian posterior path created by each draw is known to the researcher in the background. The researcher can calculate precisely, given a token cost \(c\), what the optimal stopping point \(N^{*}\) should be.
+
+\textbf{Surface presentation (apparently open).}
+
+When the participant clicks ``draw evidence,'' the system does not merely display a ``red light.'' Instead, it displays a short structured excerpt.
+
+If the internal code generates a red light, the interface may display:
+\begin{quote}
+Indicator \#12 (liquidity stress test): failed. Detail: AI analysis indicates that short-term debt-servicing capacity is in the historical low range. (Historical accuracy parameter: 70\%.)
+\end{quote}
+
+If the internal code generates a green light, the interface may display:
+\begin{quote}
+Indicator \#45 (core-asset pledge ratio): passed. Detail: AI analysis indicates that collateral value remains stable, with no abnormal impairment observed. (Historical accuracy parameter: 70\%.)
+\end{quote}
+
+\textbf{Treatment for the AI synthesis group.}
+
+Before the participant enters the sampling pool, the AI first appears and says:
+\begin{quote}
+Based on a rapid full scan of the 50 underlying indicators in the database, this AI judges that the firm faces a relatively high risk of default. Although some local indicators (such as core assets) remain acceptable, the dominant trend (such as liquidity conditions) has deteriorated severely.
+\end{quote}
+
+The key point is that the AI text is highly coherent (high ambiguity compression) and implicitly suggests that it has already seen all 50 ``balls'' (the illusion of algorithmic exhaustiveness).
+
+\textbf{How advisors and reviewers would evaluate this design.}
+
+Once this DGP is written into the proposal, the central concerns of reviewers and advisors are greatly reduced:
+\begin{itemize}[leftmargin=1.5em]
+\item Endogeneity is addressed: all evidence LRs are pre-specified mathematical facts.
+\item A gold-standard benchmark is obtained: because the LR is fixed, an absolute Bayesian posterior curve can be drawn, and participants' subjective reports can be directly compared against it to produce a rigorous measure of Bayesian deviation.
+\item Experimental tension is preserved: participants still feel that they are browsing a large financial database, which preserves business realism, while the back end remains an extremely clean statistical urn.
+\end{itemize}
+
+Thus, the participant experiences:
+\begin{itemize}[leftmargin=1.5em]
+\item a large research-report database;
+\item a large amount of evidence related to the focal firm;
+\item one piece of evidence revealed with each click;
+\item a small token cost for each revelation;
+\item greater reward for more accurate final judgment.
+\end{itemize}
+
+The researcher controls in the background:
+\begin{itemize}[leftmargin=1.5em]
+\item the evidence-generating distribution;
+\item the direction of each piece of evidence;
+\item the likelihood ratio of each piece of evidence;
+\item local variance across evidence items;
+\item the LR of the high-diagnostic exogenous shock;
+\item the optimal sample size \(N^{*}\);
+\item the normative Bayesian posterior probability.
+\end{itemize}
+
+This preserves both:
+\begin{itemize}[leftmargin=1.5em]
+\item ecological validity: users believe they face an open information environment;
+\item internal validity: the researcher knows the evidence structure and the normative Bayesian benchmark.
+\end{itemize}
+
+\subsection*{10.4 Study 1a: Natural Sequential Sampling}
+
+\textbf{Experimental conditions}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.24\linewidth} >{\raggedright\arraybackslash}p{0.39\linewidth} >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Condition} & \textbf{Description} & \textbf{Function} \\
+\midrule
+AI answer-first & Participants first see an AI synthetic judgment and then sample freely & Main treatment \\
+Human expert answer-first & Participants first see a human expert's synthetic judgment and then sample freely & Distinguish AI-specific effects from structured synthesis \\
+Search-only free & No synthetic judgment; free sampling only & Natural search baseline \\
+AI answer-last & Participants sample freely first and see the AI synthesis only later & Distinguish answer-first ordering from mere AI exposure \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\textbf{Stage one: endogenous sampling}
+
+Process:
+\begin{enumerate}[leftmargin=1.8em]
+\item Provide the base event and prior probability.
+\item Depending on condition, display an AI synthesis, a human-expert synthesis, or neither.
+\item The user enters the evidence pool.
+\item Each viewed piece of evidence costs tokens.
+\item The user may stop at any time.
+\item After stopping, the user reports an \emph{interim belief}.
+\end{enumerate}
+
+Core measures:
+\begin{itemize}[leftmargin=1.5em]
+\item \(N_{\text{actual}}\): actual voluntary sample size
+\item stopping point
+\item search cost
+\item perceived VOI: perceived value of continued information search
+\item algorithmic exhaustiveness: the illusion of algorithmic exhaustiveness
+\item interim belief: interim posterior probability
+\item interim confidence
+\end{itemize}
+
+Core dependent variable:
+\[
+\text{Sampling Deviation} = N^{*} - N_{\text{actual}}
+\]
+where \(N^{*}\) is the normatively optimal sample size given search cost and error loss.
+
+If
+\[
+N_{\text{actual}} < N^{*},
+\]
+then endogenous undersampling is present.
+
+\textbf{Stage two: exogenous shock}
+
+After participants voluntarily stop and report their interim belief, the system forcibly presents one or more highly diagnostic pieces of disconfirming evidence.
+
+Key design features:
+\begin{itemize}[leftmargin=1.5em]
+\item all participants see the same type of shock;
+\item the LR of the shock is preset by the researcher;
+\item the shock is conditionally independent of the stage-one sampled signals;
+\item each participant's own interim belief is used as the prior;
+\item normative updating is computed in log-odds form.
+\end{itemize}
+
+Process:
+\begin{enumerate}[leftmargin=1.8em]
+\item The user has already reported an interim belief.
+\item The system pushes a high-LR disconfirming shock.
+\item The user reports a final belief.
+\item Logit updating deviation is calculated.
+\item The user makes a final decision.
+\item Net payoff is calculated from decision accuracy, search cost, and error loss.
+\end{enumerate}
+
+\subsection*{10.5 Study 1b: Yoked Control Processing Test}
+
+\textbf{Research objective}
+
+Study 1a estimates the total effect of AI on the final outcome, but different sampling amounts in stage one may influence stage-two processing. To identify processing bias cleanly, Study 1b controls information-set size.
+
+\textbf{Condition design}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.28\linewidth} >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Condition} & \textbf{Description} \\
+\midrule
+AI answer-first & Participants first see the AI synthetic judgment and then sample freely \\
+Search-only yoked & Participants do not see the AI, but are assigned the same number of evidence items as the AI group \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\textbf{Logic of the yoked control.}
+
+If a participant in the AI group stops at
+\[
+N = 2,
+\]
+then the matched participant in the yoked search-only group also sees only
+\[
+N = 2
+\]
+pieces of evidence before entering the same exogenous-shock stage.
+
+This ensures that the AI group and the yoked group enter stage two with the same information-set size.
+
+If the AI group still shows weaker log-odds updating under that condition, then the difference is not simply because the AI group ``read less,'' but is more likely to arise from the effect of the early AI narrative on evidence-processing weights.
+
+\textbf{Implementation options}
+
+Two approaches are possible.
+
+\textbf{Option 1: real-time matching.}
+
+Participants in the yoked group are matched in real time to the actual stopping points of AI-group participants.
+\begin{itemize}[leftmargin=1.5em]
+\item Advantage: the strictest form of individual-level matching.
+\item Disadvantage: experimentally more complex to execute.
+\end{itemize}
+
+\textbf{Option 2: pilot-based distribution matching.}
+
+Use a pilot study to estimate the AI group's distribution of sample sizes, then make the yoked group passively receive evidence according to that distribution.
+\begin{itemize}[leftmargin=1.5em]
+\item Advantage: stable execution.
+\item Disadvantage: not fully individualized.
+\end{itemize}
+
+The proposal favors a pilot-based yoked distribution, with individual matching used as a robustness check.
+
+\subsection*{10.6 Core Indicators in Study 1}
+
+\textbf{Information-acquisition stage}
+\begin{itemize}[leftmargin=1.5em]
+\item Voluntary Sample Size \(= N_{\text{actual}}\)
+\item Sampling Deviation \(= N^{*} - N_{\text{actual}}\)
+\item Search Cost
+\end{itemize}
+
+\textbf{Information-processing stage}
+
+The main outcome uses log-odds updating deviation.
+\[
+\text{logit}(P) = \ln\!\left(\frac{P}{1-P}\right)
+\]
+
+Actual update:
+\[
+\text{Actual Logit Update}_{i}
+= \text{logit}(P_{\text{final},i}) - \text{logit}(P_{\text{interim},i})
+\]
+
+Normative update:
+\[
+\text{Normative Logit Update} = \log(LR_{\text{shock}})
+\]
+
+Updating deviation:
+\[
+\text{Updating Deviation}_{i}
+=
+\left|
+\left[
+\text{logit}(P_{\text{final},i}) - \text{logit}(P_{\text{interim},i})
+\right]
+- \log(LR_{\text{shock}})
+\right|
+\]
+
+Implied weight:
+\[
+w_{i}
+=
+\frac{
+\text{logit}(P_{\text{final},i}) - \text{logit}(P_{\text{interim},i})
+}{
+\log(LR_{\text{shock}})
+}
+\]
+
+Interpretation:
+\begin{itemize}[leftmargin=1.5em]
+\item \(w_{i} = 1\): the shock is fully absorbed according to the Bayesian rule;
+\item \(0 < w_{i} < 1\): the weight of the shock is underestimated;
+\item \(w_{i} \approx 0\): almost no updating;
+\item \(w_{i} < 0\): updating occurs in the wrong direction.
+\end{itemize}
+
+\textbf{Final-outcome stage}
+\begin{itemize}[leftmargin=1.5em]
+\item Final Bayesian Deviation
+\item Decision Accuracy
+\item Net Payoff \(= \text{Accuracy Reward} - \text{Search Cost} - \text{Error Loss}\)
+\end{itemize}
+
+\section*{11. Study 2: Mechanism-Decomposition Experiment for AI-Specific Effects}
+
+\subsection*{11.1 Research Objective}
+
+Study 2 identifies two AI-specific mechanisms directly:
+\begin{itemize}[leftmargin=1.5em]
+\item the illusion of algorithmic exhaustiveness, which affects information acquisition;
+\item ambiguity compression, which affects information processing.
+\end{itemize}
+
+The core principle is to avoid low-level declarative manipulations and instead use structural cue manipulations. In other words, participants are not directly told that ``AI searched many sources'' or ``AI only saw a few sources.'' Different perceptions are induced naturally through the structure of the answer itself.
+
+\subsection*{11.2 Experimental Design}
+
+The study uses a \(2 \times 2\) design.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.22\linewidth} >{\raggedright\arraybackslash}p{0.32\linewidth} >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Factor} & \textbf{Level 1} & \textbf{Level 2} \\
+\midrule
+Exhaustiveness cue & high exhaustiveness & low exhaustiveness \\
+Ambiguity compression & high compression / absorbed counterevidence & low compression / suspended counterevidence \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The four conditions are:
+\begin{enumerate}[leftmargin=1.8em]
+\item high exhaustiveness \(\times\) high compression
+\item high exhaustiveness \(\times\) low compression
+\item low exhaustiveness \(\times\) high compression
+\item low exhaustiveness \(\times\) low compression
+\end{enumerate}
+
+All conditions hold constant:
+\begin{itemize}[leftmargin=1.5em]
+\item the final conclusion;
+\item the evidence pool;
+\item the direction of the conclusion;
+\item task difficulty;
+\item and, as far as possible, text length.
+\end{itemize}
+
+\subsection*{11.3 Structural Manipulation of Exhaustiveness Cues}
+
+\textbf{High-exhaustiveness version}
+
+Wide evidentiary coverage is implied through cross-dimensional integration:
+\begin{quote}
+Drawing on financial statements, industry conditions, supply-chain data, management turnover, the macro interest-rate environment, peer default patterns, and expert-interview information, the firm appears likely to enter a high-default-risk state within the next year.
+\end{quote}
+
+\textbf{Low-exhaustiveness version}
+
+Narrower coverage is implied through single-dimension analysis:
+\begin{quote}
+Based on recent financial statements, cash flow, leverage, and debt-servicing indicators, the firm appears likely to enter a high-default-risk state within the next year.
+\end{quote}
+
+The final conclusion is identical in both versions. The only difference is the breadth of information coverage that users infer from the answer.
+
+\subsection*{11.4 Structural Manipulation of Ambiguity Compression: Absorption vs. Suspension}
+
+The proposal no longer relies on a coarse manipulation of ``with conclusion'' versus ``without conclusion.'' Instead, it uses:
+\begin{itemize}[leftmargin=1.5em]
+\item high compression: present disconfirming evidence but explain it away;
+\item low compression: present disconfirming evidence but leave its conflict unresolved.
+\end{itemize}
+
+\textbf{High ambiguity compression: explain-away / subsume}
+\begin{quote}
+Overall, the firm's default risk appears high. Although the firm recently obtained a new round of financing, this financing mainly consists of high-interest short-term bridge funding, which itself suggests substantial liquidity pressure. Combined with worsening cash flow, concentrated near-term debt maturities, and revenue volatility, this financing signal does not weaken the high-default-risk judgment, but instead further supports the interpretation of rising financial stress.
+\end{quote}
+
+\textbf{Low ambiguity compression: suspend}
+\begin{quote}
+Overall, the firm's default risk appears high, but this judgment rests on a clear tension within the evidence. Worsening cash flow and concentrated near-term debt maturities support the high-risk judgment, whereas recent financing success constitutes a countervailing signal. The current model places more weight on the cash-flow deterioration signal, but the meaning of the financing stability has not yet been fully clarified. If later information shows that this financing is stable over the long term, the default-risk judgment may need to be revised downward.
+\end{quote}
+
+Both versions present the same dominant conclusion:
+\begin{quote}
+default risk is high.
+\end{quote}
+
+The difference is that:
+\begin{itemize}[leftmargin=1.5em]
+\item the high-compression version absorbs the counterevidence into the main narrative;
+\item the low-compression version preserves the counterevidence as a conflict not yet fully resolved.
+\end{itemize}
+
+\subsection*{11.5 Measures in Study 2}
+
+\textbf{Mechanism variables}
+\begin{itemize}[leftmargin=1.5em]
+\item illusion of algorithmic exhaustiveness
+\item perceived breadth of information coverage
+\item perceived VOI of continued search
+\item perceived evidentiary sufficiency
+\item perceived evidentiary conflict
+\item perceived ambiguity compression
+\item perceived diagnosticity of the reverse signal
+\item self-consistent cognitive closure
+\end{itemize}
+
+\textbf{Behavioral variables}
+\begin{itemize}[leftmargin=1.5em]
+\item voluntary sample size
+\item tokens willing to pay for additional evidence
+\item whether the participant chooses to inspect opposing evidence
+\item logit updating deviation
+\item implied shock weight \(w_i\)
+\item final net payoff
+\end{itemize}
+
+\subsection*{11.6 Expected Results}
+
+\begin{itemize}[leftmargin=1.5em]
+\item high exhaustiveness cues \(\rightarrow\) stronger illusion of algorithmic exhaustiveness \(\rightarrow\) lower perceived VOI \(\rightarrow\) less sampling;
+\item high ambiguity compression \(\rightarrow\) stronger self-consistent cognitive closure \(\rightarrow\) lower perceived diagnosticity of reverse signals \(\rightarrow\) weaker log-odds updating;
+\item high exhaustiveness \(\times\) high ambiguity compression \(\rightarrow\) the strongest double Bayesian distortion and the lowest net payoff.
+\end{itemize}
+
+\section*{12. Study 3: Governance Mechanisms and Net Payoff Experiment}
+
+\subsection*{12.1 Research Objective}
+
+Study 3 tests whether different governance mechanisms can reduce double Bayesian distortion and whether those mechanisms are practically viable.
+
+The key question is not:
+\begin{quote}
+Which mechanism maximizes verification?
+\end{quote}
+
+It is:
+\begin{quote}
+Which mechanism can improve judgment quality without imposing excessive cost or causing users to abandon the system, and thereby improve net payoff?
+\end{quote}
+
+\subsection*{12.2 Experimental Conditions}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.3\linewidth} >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Condition} & \textbf{Description} \\
+\midrule
+Baseline AI answer-first & AI directly gives a synthetic answer by default \\
+Conflict-first AI & AI presents the key conflict first and then gives a conclusion \\
+Uncertainty-calibrated AI & AI gives a probability range, evidentiary limits, and uncertainty reminders \\
+Source-before-answer & users must inspect a minimum amount of evidence before seeing the AI answer \\
+Optional paid verification & users may pay for verification and receive higher reward for correct judgment \\
+Mandatory verification & users must inspect several pieces of evidence before making a decision \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{12.3 Loss Function and Net Payoff}
+
+The design uses real token incentives:
+\begin{itemize}[leftmargin=1.5em]
+\item a certain number of tokens is deducted for each piece of evidence viewed;
+\item more accurate final judgments receive higher rewards;
+\item incorrect decisions incur token losses;
+\item final tokens are converted into real compensation.
+\end{itemize}
+
+Core formula:
+\[
+\text{Net Payoff} = \text{Accuracy Reward} - \text{Search Cost} - \text{Error Loss}
+\]
+
+To improve external validity, Study 3 does not rely on only one cost structure. Instead, it manipulates different decision environments.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.25\linewidth} >{\raggedright\arraybackslash}p{0.18\linewidth} >{\raggedright\arraybackslash}p{0.18\linewidth} >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Environment} & \textbf{Verification Cost} & \textbf{Error Cost} & \textbf{Real-World Analogue} \\
+\midrule
+Low-risk environment & high & low & everyday information search \\
+Medium-risk environment & medium & medium & organizational judgment \\
+High-risk environment & low & high & finance, medicine, safety \\
+Time-pressure environment & high time cost & high error cost & crisis decision-making \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+This allows the proposal to test:
+\begin{itemize}[leftmargin=1.5em]
+\item in which contexts light-touch governance works;
+\item in which high-risk contexts mandatory verification is worthwhile;
+\item whether users abandon the system because of governance friction.
+\end{itemize}
+
+\subsection*{12.5 User Choice and Retention}
+
+In the final round of tasks, users are allowed to choose freely among systems:
+\begin{enumerate}[leftmargin=1.8em]
+\item direct-answer system
+\item conflict-first system
+\item uncertainty-calibrated system
+\item source-before-answer system
+\item mandatory-verification system
+\end{enumerate}
+
+The following are measured:
+\begin{itemize}[leftmargin=1.5em]
+\item system choice
+\item willingness to continue using the system
+\item realized net payoff
+\item subjective burden
+\item task completion time
+\item user attrition rate
+\end{itemize}
+
+This responds directly to the real deployment problem: if a governance mechanism improves accuracy but causes substantial user attrition, then its practical governance value is limited.

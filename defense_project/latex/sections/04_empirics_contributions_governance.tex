@@ -1,0 +1,438 @@
+\section*{13. Empirical Strategy}
+
+\subsection*{13.1 Identifying Distortion in Information Acquisition}
+
+Main model:
+\[
+\begin{aligned}
+N_{\text{actual},i}
+&=
+\beta_0
++ \beta_1 \text{AIAnswerFirst}_i
++ \beta_2 \text{HumanExpert}_i \\
+&\quad
++ \beta_3 \text{AIAnswerLast}_i
++ \beta_4 \text{Controls}_i
++ \varepsilon_i
+\end{aligned}
+\]
+
+Mediation model:
+\[
+\text{AI answer-first}
+\rightarrow
+\text{Algorithmic Exhaustiveness}
+\rightarrow
+\text{Perceived VOI}
+\rightarrow
+N_{\text{actual}}
+\]
+
+Core test:
+
+Does AI answer-first reduce voluntary sample size through the illusion of algorithmic exhaustiveness?
+
+\subsection*{13.2 Identifying Distortion in Information Processing}
+
+Main outcome:
+\[
+\text{Updating Deviation}_i
+=
+\left|
+\left[
+\text{logit}(P_{\text{final},i}) - \text{logit}(P_{\text{interim},i})
+\right]
+- \log(LR_{\text{shock}})
+\right|
+\]
+
+Model:
+\[
+\begin{aligned}
+\text{UpdatingDeviation}_i
+&=
+\beta_0
++ \beta_1 \text{AIAnswerFirst}_i
++ \beta_2 \text{HumanExpert}_i \\
+&\quad
++ \beta_3 \text{SearchOnly}_i
++ \beta_4 \text{logit}(P_{\text{interim},i}) \\
+&\quad
++ \beta_5 \text{Controls}_i
++ \varepsilon_i
+\end{aligned}
+\]
+
+In Study 1b, after adding yoked control:
+\[
+\begin{aligned}
+\text{UpdatingDeviation}_i
+&=
+\beta_0
++ \beta_1 \text{AIAnswerFirst}_i
++ \beta_2 \text{YokedSearch}_i \\
+&\quad
++ \beta_3 \text{InformationSetSize}_i
++ \beta_4 \text{Controls}_i
++ \varepsilon_i
+\end{aligned}
+\]
+
+Key comparison:
+\[
+\text{AI answer-first} \;\text{vs.}\; \text{search-only yoked}
+\]
+
+If the AI group still under-updates, then processing bias cannot be explained entirely by differences in information-set size.
+
+\subsection*{13.3 Estimating Implied Weights}
+
+Computation:
+\[
+w_i
+=
+\frac{
+\text{logit}(P_{\text{final},i}) - \text{logit}(P_{\text{interim},i})
+}{
+\log(LR_{\text{shock}})
+}
+\]
+
+Model:
+\[
+\begin{aligned}
+w_i
+&=
+\beta_0
++ \beta_1 \text{AIAnswerFirst}_i
++ \beta_2 \text{AmbiguityCompression}_i \\
+&\quad
++ \beta_3 \text{Controls}_i
++ \varepsilon_i
+\end{aligned}
+\]
+
+Expected result:
+
+In the AI answer-first condition and in the high-ambiguity-compression condition, \(w_i\) should be lower.
+
+\subsection*{13.4 Distinguishing Belief from Preference}
+
+To avoid conflating belief effects with preference effects, the proposal simultaneously measures:
+\begin{itemize}[leftmargin=1.5em]
+\item subjective probability reports
+\item information-purchase behavior
+\item final choice
+\item risk preference
+\item ambiguity aversion
+\item confidence calibration
+\item net payoff
+\end{itemize}
+
+If AI mainly changes risk preference, then probability reports, information purchase, and logit updating need not move consistently. If AI changes belief updating, then these indicators should jointly exhibit systematic deviation.
+
+\subsection*{13.5 Handling Double Counting}
+
+This proposal explicitly models the AI summary as:
+\begin{quote}
+a lossy compression of the underlying evidence environment
+\end{quote}
+and not as:
+\begin{quote}
+an independent new source of evidence.
+\end{quote}
+
+Accordingly, the normative Bayesian model does not simply add the AI summary as an independent signal. The AI summary is only a compressed presentation of the underlying evidence pool. The value of continued sampling lies in recovering what the AI compression process may have omitted:
+\begin{itemize}[leftmargin=1.5em]
+\item local variance
+\item disconfirming evidence
+\item evidence heterogeneity
+\item alternative explanations
+\item tensions in evidentiary weighting
+\end{itemize}
+
+Theoretical statement:
+
+Generative-AI synthesis should not be modeled as independent evidence; it should be modeled as a lossy compression of the evidence environment. Because the compression process may suppress local variance and the salience of conflicting evidence, a rational Bayesian decision-maker should continue sampling whenever the expected value of restoring omitted variance exceeds the marginal search cost.
+
+\section*{14. Variables and Measures}
+
+\subsection*{14.1 Independent Variables}
+
+\begin{itemize}[leftmargin=1.5em]
+\item AI answer-first synthesis
+\item human-expert answer-first synthesis
+\item search-only free
+\item search-only yoked
+\item AI answer-last
+\item high vs. low exhaustiveness cue
+\item high vs. low ambiguity compression
+\item conflict-first design
+\item uncertainty-calibrated design
+\item source-before-answer
+\item mandatory verification
+\end{itemize}
+
+\subsection*{14.2 Mediators}
+
+\begin{itemize}[leftmargin=1.5em]
+\item illusion of algorithmic exhaustiveness
+\item perceived breadth of information coverage
+\item perceived VOI of continued search
+\item perceived evidentiary sufficiency
+\item ambiguity compression
+\item perceived evidentiary conflict
+\item perceived diagnosticity of the reverse signal
+\item self-consistent cognitive closure
+\end{itemize}
+
+\subsection*{14.3 Evidence-Acquisition Outcomes}
+
+\begin{itemize}[leftmargin=1.5em]
+\item voluntary sample size
+\item stopping point
+\item search cost
+\item sampling deviation
+\item deviation from the optimal sample size \(N^{*}\)
+\end{itemize}
+
+\subsection*{14.4 Evidence-Processing Outcomes}
+
+\begin{itemize}[leftmargin=1.5em]
+\item \(\text{logit}(P_{\text{final}}) - \text{logit}(P_{\text{interim}})\)
+\item logit updating deviation
+\item implied shock weight \(w_i\)
+\item belief revision after the reverse signal
+\end{itemize}
+
+\subsection*{14.5 Decision Outcomes}
+
+\begin{itemize}[leftmargin=1.5em]
+\item final posterior probability
+\item final choice
+\item judgment accuracy
+\item net payoff
+\item system choice
+\item willingness to continue using the system
+\item user attrition rate
+\end{itemize}
+
+\section*{15. Expected Contributions}
+
+\subsection*{15.1 From AI Anchoring to Dual Bayesian Distortion}
+
+This proposal no longer reduces the influence of AI to a simple anchoring effect. Instead, it argues that AI may produce two different kinds of Bayesian distortion:
+\begin{itemize}[leftmargin=1.5em]
+\item undersampling at the information-acquisition stage;
+\item insufficient log-odds updating at the information-processing stage.
+\end{itemize}
+
+This shifts the project from traditional psychological-bias research toward normative belief-updating research.
+
+\subsection*{15.2 From Advice-Taking to Algorithmic Sensemaking}
+
+The proposal does not treat AI as an ordinary source of advice, but as a meaning-making agent.
+
+The function of AI is not merely to say:
+\begin{quote}
+I recommend that you choose A.
+\end{quote}
+
+Rather, it first organizes the world for the user:
+\begin{itemize}[leftmargin=1.5em]
+\item which evidence matters most;
+\item which conflicts can be absorbed;
+\item which conclusions are most reasonable;
+\item whether further search is still necessary.
+\end{itemize}
+
+This extends the literature on AI advice-taking.
+
+\subsection*{15.3 Proposing the Illusion of Algorithmic Exhaustiveness as an AI-Specific Mechanism}
+
+The proposal argues that one of the key differences between AI and human experts is that users may believe AI covers a larger information space.
+
+This illusion of algorithmic exhaustiveness lowers the perceived informational value of continued search and thereby triggers the stopping rule earlier.
+
+\subsection*{15.4 Proposing Ambiguity Compression as an Information-Processing Mechanism}
+
+The proposal argues that AI does not merely provide answers. It explains, absorbs, and reconstructs conflicting evidence, compressing a complex evidence environment into a coherent narrative.
+
+This ambiguity compression lowers the perceived diagnosticity of counterevidence and may produce attenuation in log-odds updating when users later encounter a high-LR shock.
+
+\subsection*{15.5 Recasting AI Governance as a Net-Benefit Problem}
+
+The proposal does not simply argue that ``more verification is better.'' Instead, it evaluates governance mechanisms within a net-benefit framework.
+
+The core claim is:
+\begin{itemize}[leftmargin=1.5em]
+\item optimal governance is not the maximization of verification;
+\item optimal governance balances accuracy gains, search costs, error losses, and user retention.
+\end{itemize}
+
+\section*{16. Anticipated Critiques and Responses}
+
+\textbf{Critique 1: Is this just confirmation bias in new packaging?}
+
+\textbf{Response:}
+
+The proposal acknowledges that confirmation bias may be present, but its contribution lies in identifying AI-specific antecedent conditions. By comparing AI answer-first, human-expert answer-first, search-only free, and search-only yoked conditions, the study can distinguish:
+\begin{itemize}[leftmargin=1.5em]
+\item a general structured-synthesis effect
+\item versus an AI-specific algorithmic-authority effect.
+\end{itemize}
+
+If equally coherent human-expert reports produce the same effect, then the mechanism is mainly structured synthesis. If the AI condition is stronger, and the difference is explained by the illusion of algorithmic exhaustiveness, then there is an AI-specific component.
+
+\textbf{Critique 2: Is the smaller update in the AI group just a probability-boundary effect?}
+
+\textbf{Response:}
+
+The proposal does not use absolute probability differences as the main outcome. It uses log-odds updating:
+\[
+\text{Updating Deviation}
+=
+\left|
+\left[
+\text{logit}(P_{\text{final}}) - \text{logit}(P_{\text{interim}})
+\right]
+- \log(LR_{\text{shock}})
+\right|
+\]
+
+On the log-odds scale, Bayesian updating is linear, which avoids ceiling effects caused by probability boundaries.
+
+\textbf{Critique 3: Is under-updating in the AI group only because the group saw less in stage one?}
+
+\textbf{Response:}
+
+Study 1b uses a search-only yoked control to ensure that the AI group and the yoked group possess the same amount of evidence before entering the exogenous-shock stage.
+
+If the AI group still shows weaker log-odds updating under equal information-set size, then the processing distortion cannot be explained entirely by differences in reading volume.
+
+\textbf{Critique 4: If AI explain-away is correct, is lowering the weight of disconfirming evidence not rational?}
+
+\textbf{Response:}
+
+The proposal does not claim that every explain-away move is wrong. What it tests is whether, when objectively highly diagnostic disconfirming signals exist, AI's coherent narrative causes users to underestimate the normative evidentiary weight of those signals.
+
+\textbf{Critique 5: Are token incentives sufficient to offset cognitive laziness?}
+
+\textbf{Response:}
+
+The proposal does not assume that token incentives fully eliminate cognitive laziness. On the contrary, cognitive-effort cost is part of the theory itself. Study 3 manipulates incentive strength and cost structure to test whether the AI effect persists even in high-incentive environments.
+
+Possible incentive levels:
+\begin{itemize}[leftmargin=1.5em]
+\item low incentive
+\item medium incentive
+\item high incentive
+\end{itemize}
+
+If the AI effect persists under high incentives, then it is not merely a low-effort compliance effect.
+
+\textbf{Critique 6: Does discrete sampling sacrifice ecological validity?}
+
+\textbf{Response:}
+
+Discrete sampling is used in order to obtain a computable Bayesian benchmark. A fully naturalistic long-text search environment has higher ecological validity, but it is difficult to determine the LR and normative posterior associated with each signal.
+
+The proposal therefore adopts a two-layer strategy:
+\begin{itemize}[leftmargin=1.5em]
+\item main experiment: discrete signal sampling, to ensure internal validity and a normative benchmark;
+\item supplementary experiment: long-form evidence packets or a simulated web environment, to test external validity.
+\end{itemize}
+
+\section*{17. Limitations}
+
+First, although the experimental evidence pool appears open-ended to participants, it is still a simulated environment constructed by the researcher. It cannot fully reproduce the complexity of real search environments that contain webpages, long texts, videos, and social information flows.
+
+Second, the Bayesian benchmark in this proposal depends on likelihood ratios and evidence-generation structures specified by the researcher. Although this helps identify normative deviation, it also means that the conclusions must be further validated in other settings.
+
+Third, AI-specific mechanisms may correlate with general trust, cognitive laziness, and obedience to authority. The proposal will reduce confounding through control variables, mediation models, and comparison groups, but it cannot exhaust every possible psychological mechanism at once.
+
+Fourth, token incentives in the experiment cannot be fully equivalent to the large gains and losses present in high-stakes real-world decisions. Study 3 alleviates this issue by manipulating the cost structure, but external validity will still require later field experiments or platform data.
+
+Fifth, in the real world, AI explain-away of disconfirming evidence may sometimes be high-quality reasoning. The present proposal tests only whether, in an experimental environment where the objective LR is known, AI narrative causes users to underestimate highly diagnostic reverse signals.
+
+\section*{18. Governance Implications}
+
+The governance implication of this proposal is not simply to tell users to ``verify more.'' Instead, it is to design different information architectures for different risk environments.
+
+\textbf{Low-risk environments}
+
+Examples:
+\begin{itemize}[leftmargin=1.5em]
+\item everyday information search
+\item low-cost consumer decisions
+\end{itemize}
+
+Suitable mechanisms:
+\begin{itemize}[leftmargin=1.5em]
+\item lightweight uncertainty reminders
+\item optional source expansion
+\item low-friction verification prompts
+\end{itemize}
+
+Not suitable:
+\begin{itemize}[leftmargin=1.5em]
+\item mandatory verification
+\item source-before-answer
+\end{itemize}
+
+The reason is that the cost may exceed the benefit.
+
+\textbf{Medium-risk environments}
+
+Examples:
+\begin{itemize}[leftmargin=1.5em]
+\item organizational judgment
+\item ordinary investment analysis
+\end{itemize}
+
+Suitable mechanisms:
+\begin{itemize}[leftmargin=1.5em]
+\item conflict-first AI
+\item uncertainty-calibrated AI
+\item source-traceable summary
+\end{itemize}
+
+The goal is to reduce ambiguity compression and excessive cognitive closure while preserving usability.
+
+\textbf{High-risk environments}
+
+Suitable mechanisms:
+\begin{itemize}[leftmargin=1.5em]
+\item source-before-answer
+\item mandatory verification
+\item confidence calibration
+\item required exposure to disconfirming evidence
+\end{itemize}
+
+In environments with high error costs, the net benefit of strong governance may be positive.
+
+\textbf{Core governance principles}
+\begin{enumerate}[leftmargin=1.8em]
+\item One should not optimize only for answer fluency.
+\item AI should not overcompress evidentiary conflict.
+\item High-risk systems should explicitly present key disconfirming evidence.
+\item Source transparency is not enough; conflict transparency is also needed.
+\item Optimal governance does not maximize verification; it maximizes net benefit.
+\item AI systems should evaluate their effects on users' search-stopping rules and updating weights.
+\end{enumerate}
+
+\section*{19. Expected Findings}
+
+This proposal expects to find the following:
+
+First, AI answer-first will reduce users' willingness to continue sampling, especially when users form a strong illusion of algorithmic exhaustiveness.
+
+Second, AI answer-first will cause users to stop searching earlier, and their voluntary sample size may fall below the normatively optimal sample size.
+
+Third, even when using a log-odds updating metric, the AI answer-first group may still discount the weight of highly diagnostic disconfirming signals.
+
+Fourth, in the yoked control, even after holding information-set size constant, the AI answer-first group may still show greater updating deviation, indicating that AI narrative affects not only information acquisition but also information processing.
+
+Fifth, the negative effects of AI will not appear in every setting. In low-risk, low-error-cost tasks, AI may improve efficiency. But in high-risk, high-error-cost tasks, the undersampling and under-updating induced by AI are more likely to create net welfare losses.
+
+Sixth, the effectiveness of governance mechanisms depends on cost structure. Conflict-first and uncertainty-calibrated designs may improve belief updating while imposing relatively low burden. Mandatory verification may be more valuable in high-risk settings, but in low-risk settings it may reduce net benefit and user retention because its cost is too high.
