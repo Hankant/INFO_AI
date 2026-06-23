@@ -1,0 +1,52 @@
+\documentclass[11pt,a4paper]{ctexart}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{titlesec}
+
+\setstretch{1.2}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.75em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.75em}{}
+
+\title{学习 AI 的角色：人类如何形成稳定的人机协作架构\\
+\large Learning AI's Role: How Humans Converge Toward Stable Human-AI Collaboration Architectures}
+\author{研究计划学术写作包}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+生成式人工智能进入决策系统后，组织真正需要回答的问题，不再只是是否使用 AI，而是如何配置 AI 在系统中的角色。现有研究虽然已经从 trust in automation、algorithm aversion、appropriate reliance 和 confidence calibration 等角度解释了人类如何看待和使用 AI，但它们大多聚焦于单次判断、局部信号或短期反应，尚不足以解释一个更动态的问题：人类如何在持续反馈中学习 AI 的系统角色，并最终收敛到某种稳定的人机协作架构。本文提出一个从 trust/adoption 转向 architecture learning 的研究框架，主张 AI error 的关键后果不是短期 trust 的下降，而是通过非对称的 attraction updating 改变长期收敛路径。为检验这一机制，本文提出一个基于多轮行为实验与 EWA-inspired 动态模型的研究设计，通过操控 AI error 与 human error 的时间分布，识别 early AI error 是否会导致低 AI autonomy 的路径依赖式锁定。本文预期在理论上推进 human--AI collaboration 研究的分析层级，在方法上将 EWA 从附加统计工具转化为全文的解释语言，并在实践上为 AI deployment 和 governance 提供关于 early-stage error management 的启发。
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\input{sections/01_introduction}
+\input{sections/02_literature_and_gap}
+\input{sections/03_theory_and_hypotheses}
+\input{sections/04_research_design}
+\input{sections/05_expected_contributions}
+\input{sections/06_conclusion}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

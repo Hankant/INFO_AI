@@ -1,0 +1,35 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\caption{Collaboration architecture set}
+\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+\toprule
+Code & Architecture & Control structure & Typical implication \\
+\midrule
+1 & Human-only & Human makes and executes the decision & Highest review burden, lowest AI exposure \\
+2 & AI advice + human decision & AI advises, human decides & AI visible but no default authority \\
+3 & AI recommendation + human confirmation & AI recommends, human confirms & Changed default sequence with explicit confirmation \\
+4 & AI default + human override & AI acts first, human retains override & Lower review burden, higher residual risk \\
+5 & AI autonomous decision & AI decides within stated bounds & Lowest human intervention, highest AI authority \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htbp]
+\centering
+\caption{Pre-registered focal shock schedule}
+\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+\toprule
+Condition & Focal source & Focal rounds & Identification purpose \\
+\midrule
+AI Early Error & AI & 5, 8, 11, 14, 17, 20 & Tests whether early AI shocks rewrite the long-run path \\
+AI Late Error & AI & 41, 44, 47, 50, 53, 56 & Separates timing from average performance \\
+Human Early Error & Human analyst & 5, 8, 11, 14, 17, 20 & Tests source asymmetry under matched timing \\
+Evenly Distributed & AI & 8, 18, 28, 38, 48, 58 & Separates concentrated early shock from smooth exposure \\
+\bottomrule
+\end{tabularx}
+\end{table*}

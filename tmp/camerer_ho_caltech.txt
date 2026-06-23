@@ -1,0 +1,2365 @@
+                        Econometrica, Vol. 67, No. 4 ŽJuly, 1999., 827᎐874
+
+
+         EXPERIENCE-WEIGHTED ATTRACTION LEARNING IN
+                     NORMAL FORM GAMES
+
+                      BY COLIN CAMERER AND TECK ᎐HUA HO1
+
+
+       In ‘experience-weighted attraction’ ŽEWA. learning, strategies have attractions that
+    reflect initial predispositions, are updated based on payoff experience, and determine
+    choice probabilities according to some rule Že.g., logit.. A key feature is a parameter ␦
+    that weights the strength of hypothetical reinforcement of strategies that were not chosen
+    according to the payoff they would have yielded, relative to reinforcement of chosen
+    strategies according to received payoffs. The other key features are two discount rates, ␾
+    and ␳ , which separately discount previous attractions, and an experience weight. EWA
+    includes reinforcement learning and weighted fictitious play Žbelief learning. as special
+    cases, and hybridizes their key elements. When ␦ s 0 and ␳ s 0, cumulative choice
+    reinforcement results. When ␦ s 1 and ␳ s ␾ , levels of reinforcement of strategies are
+    exactly the same as expected payoffs given weighted fictitious play beliefs. Using three sets
+    of experimental data, parameter estimates of the model were calibrated on part of the
+    data and used to predict a holdout sample. Estimates of ␦ are generally around .50, ␾
+    around .8᎐1, and ␳ varies from 0 to ␾ . Reinforcement and belief-learning special cases
+    are generally rejected in favor of EWA, though belief models do better in some
+    constant-sum games. EWA is able to combine the best features of previous approaches,
+    allowing attractions to begin and grow flexibly as choice reinforcement does, but reinforc-
+    ing unchosen strategies substantially as belief-based models implicitly do.
+
+       KEYWORDS: Learning, behavioral game theory, reinforcement learning, fictitious play.
+
+
+
+                                       1. INTRODUCTION
+HOW DOES AN EQUILIBRIUM arise in a noncooperative game? While it is
+conceivable that players reason their way to an equilibrium, a more psychologi-
+
+
+
+   1
+     This research was supported by NSF Grants SBR-9511001, 9511137, 9601236, and 9730187, and
+the hospitality of the Center for Advanced Study in Behavioral Sciences. We have had helpful
+discussions with Bruno Broseta, Vince Crawford, Ido Erev, Dan Friedman, Dave Grether, Elef
+Gkioulekas, John Kagel, Tom Palfrey, Matthew Rabin, Al Roth, Yuval Rottenstreich, Rajiv Sarin,
+Rakesh Sarin, Dale Stahl, John Van Huyck, Roberto Weber, and an editor, and research assistance
+from Hongjai Rhee, Chris Anderson, and Juin Kuan Chong. Barry Sopher generously provided data.
+Many helpful comments were received from anonymous referees and seminar participants at the
+Society for Mathematical Psychology conference in honor of Amnon Rapoport ŽJuly 1996., the
+Russell Sage Foundation Summer Institute in Behavioral Economics ŽJuly 1996., the Economic
+Science Association ŽOctober 1996., the Marketing Science Conference ŽMarch 1997., Bonn Confer-
+ence on Theories of Bounded Rationality ŽMay 1997., FUR VIII in Mons, Belgium ŽJuly 1997.,
+Gerzensee ESSET Economic Theory Conference ŽJuly 1997., BDRM ŽJune 1998., and seminars at
+Caltech, Harvard, and Washington Universities, the Stockholm School of Economics, and the
+Universities of Alicante, Autonoma, California ŽBerkeley, Los Angeles., Chicago, Pennsylvania,
+Pittsburgh, Pompeu Fabra, Texas ŽAustin., and Texas A& M.
+
+                                                827
+828                        COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+cally plausible view is that players adapt or evolve toward it.2 The flurry of
+recent research on adaptation and evolution mostly explores theoretical ques-
+tions, such as to which types of equilibria specific evolutionary or adaptive rules
+converge. We are interested in a fundamentally empirical question: Which
+models describe human behavior best? In this paper we propose a general
+‘experience-weighted attraction’ ŽEWA. model and estimate the model para-
+metrically, using three sets of experimental data.
+    The EWA model combines elements of two seemingly different approaches,
+and includes them as special cases. One approach, belief-based models, starts
+with the premise that players keep track of the history of previous play by other
+players and form some belief about what others will do in the future based on
+past observation. Then they tend to choose a best-response, a strategy that
+maximizes their expected payoffs given the beliefs they formed.
+    A different approach, choice reinforcement, assumes that strategies are
+‘reinforced’ by their previous payoffs, and the propensity to choose a strategy
+depends in some way on its stock of reinforcement. Players who learn by
+reinforcement do not generally have beliefs about what other players will do.
+They care only about the payoffs strategies yielded in the past, not about the
+history of play that created those payoffs.
+    The belief and reinforcement approaches have been treated as fundamentally
+different since the 1950s. Until recently, nobody asked whether the two might be
+related, or how. But like two rivers with a surprising common source, or children
+raised apart who turn out to be siblings, belief and reinforcement are special
+kinds of one learning model. The common heritage of these approaches was
+probably not discovered earlier because reinforcement models were used pri-
+marily by psychologists, and belief models primarily by decision and game
+theorists. In addition, the information used by each approach is quite different.
+Belief-based models do not specially reflect past successes Žreinforcements . of
+chosen strategies. Reinforcement models do not reflect the history of how
+others played. The EWA approach includes both as special cases by incorporat-
+ing both kinds of information, using three modelling features.
+    The crucial feature is how strategies are reinforced. In the choice reinforce-
+ment approach, when player 1 picks strategy s1j , and player 2 picks s2k , player 1’s
+strategy s1j is reinforced according to the payoff ␲ 1Ž s1j , s2k .. Unchosen strategies
+s1h Ž h / j . are not reinforced at all. In EWA, the unchosen strategies are
+reinforced based on a multiple ␦ of the payoffs ␲ 1Ž s1h , s2k . they would have
+earned. This makes psychological sense because research on human and animal
+learning shows that people learn from many kinds of experiences other than
+those that are directly reinforcing. An expanded notion of reinforcement there-
+fore liberates learning from the straitjacket of behaviorist psychology, toward
+something more cognitive and descriptive of humans.
+   2
+     Like most good ideas in economics, the adaptive and evolutionary interpretations of equilibra-
+tion have a long pedigree. Weibull Ž1997. pointed out that in Adam Smith’s famous passage where
+he said that the division of labor emerged as a consequence of the ‘‘propensity to truck, barter, and
+exchange,’’ Smith also noted that the division of labor emerged in a ‘‘very slow and gradual’’ way
+Ž1981..
+                             ATTRACTION LEARNING                                829
+
+   The second EWA feature controls the growth rates of attractions. Attractions
+are numbers that are monotonically related to the probability of choosing a
+strategy. In cumulative reinforcement models attractions can grow and grow,
+which implies that convergence can be sharper Žin the sense that choice
+probabilities diverge toward one and zero.. In belief learning, attractions are
+expected payoffs, which are always bounded by the range of matrix payoffs. The
+EWA model allows growth rates to vary between these two bounds by using
+separate decay rates, ␾ for past attractions, and ␳ for the amount of experience
+Žwhich normalizes attractions ..
+   The third modelling feature is initial attraction and experience weight. In
+belief models initial attractions must be expected payoffs given prior beliefs. In
+reinforcement models initial attractions are usually unrestricted. Therefore,
+initial attractions are unrestricted in EWA too. The initial experience weight
+N Ž0. reflects a strength of prior in belief models, or the relative weight given to
+lagged attractions versus payoffs when attractions are updated.
+   When ␦ s 0, ␳ s 0, and N Ž0. s 1, the EWA attractions of strategies are equal
+to reinforcements, as used in many models. When ␦ s 1, and ␾ s ␳ Žand initial
+attractions are determined by prior beliefs., the attractions of strategies are
+equal to their expected payoffs given beliefs in a general class. That is, reinforc-
+ing each strategy according to what it would have earned Žor did earn. is
+behaviorally equivalent to forming beliefs, based on observed history, and
+calculating expected payoffs. The equivalence holds because looking back at
+what strategies earned Žor would have. in the past is the same as forming beliefs
+based on what others did in the past, then computing forward-looking expected
+payoffs based on those backward-looking beliefs.
+   EWA tries to mix appropriate elements of reinforcement and belief learning
+approaches in a way that makes sense. We think this can be judged by whether
+the parameters have clear psychological interpretations, and whether adding
+them improves statistical fit Žadjusting, of course, for added degrees of freedom.
+and predictive accuracy. To test the empirical usefulness of EWA, we derived
+maximum-likelihood parameter estimates from three data sets. The data sets
+span a wide range of games: constant-sum games with unique mixed-strategy
+equilibria; coordination games with multiple Pareto-ranked equilibria; and ‘ p-
+beauty contests’ with unique dominance-solvable equilibria. Some empirical
+studies have evaluated belief and reinforcement models, but most have not
+compared them directly with statistical tests. Because EWA is a generalization
+which reduces to belief and reinforcement learning when parameters have
+certain values, it is easy to compare them to EWA and to each other.
+   In the next section, the EWA approach is defined and we show how a general
+class of choice reinforcement and adaptive belief-based approaches are special
+cases. The third section provides interpretations of the model parameters and
+discusses how they relate to principles of human learning. The fourth section
+describes previous findings and shows how our empirical implementation goes
+further than earlier work. The fifth section reports parameter estimates from
+several data sets. The last section concludes and mentions some future research
+directions.
+830                          COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+              2. THE EXPERIENCE-WEIGHTED ATTRACTION ŽEWA. MODEL
+    We start with notation. We study n-person normal-form games. Players are
+indexed by i Ž i s 1, . . . , n., and the strategy space of player i, S i consists of m i
+discrete choices, that is, Si s  si1 , si2 , . . . , sij, . . . , sim iy1 , sim i 4 . S s S1 = . . . = Sn is
+the Cartesian product of the individual strategy spaces and is the strategy space
+of the game. si g S i denotes a strategy of player i, and is therefore an element of
+Si . s s Ž s1 , . . . , sn . g S is a strategy combination, and it consists of n strategies,
+one for each player. syi s Ž s1 , . . . , siy1 , siq1 , . . . , sn . is a strategy combination of
+all players except i. Syi has a cardinality of myi s ⌸ ks1,                     n
+                                                                                       k / i m k . The scalar-
+                                                       Ž            .
+valued payoff function of player i is ␲ i si , syi . Denote the actual strategy
+chosen by player i in period t by si Ž t ., and the strategy Žvector. chosen by all
+other players by syi Ž t .. Denote player i’s payoff in a period t by ␲ i Ž si Ž t ., syi Ž t ...
+    EWA assumes each strategy has a numerical attraction, which determines the
+probability of choosing that strategy Žin a precise way made clear below..
+Learning models require a specification of initial attractions, how attractions are
+updated by experience, and how choice probabilities depend on attractions.
+
+
+                                   2.1. The EWA Updating Rules
+   The core of the EWA model is two variables which are updated after each
+round. The first variable is N Ž t ., which we interpret as the number of ‘observa-
+tion-equivalents’ of past experience. The second variable is A ij Ž t ., player i’s
+attraction of strategy sij after period t has taken place.
+   The variables N Ž t . and A ij Ž t . begin with some prior values, N Ž0. and
+  jŽ .
+A i 0 .These prior values can be thought of as reflecting pregame experience,
+either due to learning transferred from different games or due to introspection.
+ŽThen N Ž0. can be interpreted as the number of periods of actual experience,
+which is equivalent in attraction impact to the pregame thinking..
+   Updating is governed by two rules. First,
+
+Ž 2.1.       N Ž t . s ␳ ⭈ N Ž t y 1 . q 1,     t G 1.
+
+The parameter ␳ is a depreciation rate or retrospective discount factor that
+measures the fractional impact of previous experience, compared to one new
+period.
+  The second rule updates the level of attraction. A key component of the
+updating is the payoff that a strategy either yielded, or would have yielded, in a
+period. The model weights hypothetical payoffs that unchosen strategies would
+have earned by a parameter ␦ , and weights payoffs actually received, from
+chosen strategy si Ž t ., by an additional 1 y ␦ Žso they receive a total weight of 1..
+Using an indicator function I Ž x, y . that equals 1 if xs y and 0 if x/ y, the
+weighted payoff can be written as w ␦ q Ž1 y ␦ . ⭈ I Ž sij, si Ž t ..x ⭈ ␲ i Ž sij, syi Ž t ...
+  The rule for updating attraction sets A ij Ž t . to be the sum of a depreciated,
+experience-weighted previous attraction A ij Ž t y 1. plus the Žweighted. payoff
+                                             ATTRACTION LEARNING                                                     831
+
+from period t, normalized by the updated experience weight:
+                           ␾ ⭈ N Ž ty1 . ⭈ A ij Ž ty1 . qw ␦q Ž 1y␦ . ⭈ I Ž sij , si Ž t ..x ⭈ ␲ i Ž sij , syi Ž t ..
+Ž 2.2.      A ij Ž t . s                                                                                              .
+                                                                NŽ t .
+   The factor ␾ is a discount factor or decay rate, which depreciates previous
+attraction.
+
+                                           2.2. Choice Reinforcement
+  In early reinforcement models Žand some recent ones. choice probabilities are
+updated directly Že.g., Bush and Mosteller Ž1955.; cf. Cross Ž1983... In more
+recent models ŽHarley Ž1981.; Roth and Erev Ž1995.., strategies have levels of
+reinforcement or propensity that are incremented cumulatively by received
+payoffs Žand perhaps normalized; Arthur Ž1991... We emphasize the latter
+cumulative form, which gives more modelling freedom3 and avoids some clumsy
+technical features Že.g., imposing boundary conditions so probabilities do not
+grow above one or below zero..
+  The initial reinforcement level of strategy sij of player i is R ij Ž0.. These initial
+reinforcements can be assumed a priori Žbased on a theory of first-period play.
+or estimated from the data. Reinforcements are updated according to two
+principles:
+
+Ž 2.3.      R ij Ž t . s
+                            ½   ␾ ⭈ R ij Ž t y 1 . q ␲ i Ž sij , syi Ž t ..
+                                ␾ ⭈ R ij Ž t y 1 .
+                                                                               if
+                                                                               if
+                                                                                     sij s si Ž t . ,
+                                                                                     sij / si Ž t . .
+
+   The two principles can be reduced to a single updating equation:
+Ž 2.4.      R ij Ž t . s ␾ ⭈ R ij Ž t y 1 . q I Ž sij , si Ž t .. ⭈ ␲ i Ž sij , syi Ž t .. .
+It is easy to see that this updating formula is a special case of the EWA rule,
+when ␦ s 0, N Ž0. s 1, and ␳ s 0. Thus, cumulative choice reinforcement in this
+form is a special case of experience-weighted attraction learning.4
+   Other reinforcement models assume that previous payoffs are averaged,
+rather than cumulated ŽMcAllister Ž1991., Mookerjhee and Sopher Ž1994, 1997.,
+   3
+     In the Cross model, strategies have utilities that are weighted averages of past utilities and
+current payoffs Žfor chosen strategies ., and players maximize utility. Sarin Ž1995. shows that when
+the weight on current payoff declines over time, this model behaves similarly to the Harley version
+in which attractions grow. The similarity reflects the fact that both models build in a declining effect
+of marginal reinforcements.
+   4
+     Some reinforcement models add other parameters. Roth and Erev Ž1995. add a parameter that
+cuts off attractions close to zero, to avoid negative attractions. Erev and Roth Ž1997. add three
+parameters that allow reinforcement to depend on payoffs minus an Župdated. reference point Žas in
+Bush and Mosteller Ž1995., Cross Ž1983.., where the updating may be different for losses and gains.
+They also add a parameter that smears a portion of the chosen-strategy reinforcement to neighbor-
+ing strategies, to reflect a kind of experimentation or generalization that is Žlocally. similar to our ␦
+parameter. Camerer and Ho Ž1998. compare the local-generalization specification with ␦ updating
+in the EWA model and find that local-generalization fits much worse.
+832                           COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+Sarin and Vahid Ž1997... Then reinforcements are updated according to
+Ž 2.5.      R ij Ž t . s ␾ ⭈ R ij Ž t y 1 . q Ž 1 y ␾ . I Ž sij , si Ž t .. ⭈ ␲ i Ž sij , syi Ž t .. .
+When ␦ s 0, N Ž0. s 1rŽ1 y ␳ . and ␳ s ␾ , EWA reduces to this averaged-
+reinforcement form.
+
+                                         2.3. Belief-based Models
+   In a belief-based model, players tend to choose strategies that have high
+expected payoffs given beliefs formed by observing the history of what others
+did. While there are many ways of forming beliefs, we consider a fairly large
+class of weighted fictitious play models, which include familiar ones like ficti-
+tious play ŽBrown Ž1951.. and Cournot Ž1960. best-response as special cases Žsee
+Fundenberg and Levine Ž1995, 1998., Cheung and Friedman Ž1997...5
+   In the weighted fictitious play model, prior beliefs of opponents’ strategy
+combinations are expressed as a ratio of hypothetical counts of observations of
+                         k                   k Ž .
+strategy combination syi   , denoted by Nyi     0 . These observations can then be
+naturally integrated with actual observations as experience accumulates. ŽCarnap
+Ž1962. shows an elegant set of axioms that implies this structure, which corre-
+sponds to Bayesian updating with a Dirichlet-distributed prior.. In our view,
+specifying prior beliefs Žand computing initial expected payoffs based on the
+prior. is a crucial feature of belief models, though some papers have not
+imposed this assumption. Without specifying a prior, there is no guarantee that
+the updated beliefs that result from mixing initial expected payoffs with later
+experience will be valid beliefs Ži.e., nonnegative probabilities that sum to one..
+   We also allow past experience to be depreciated or discounted by a factor ␳
+Žpresumably between zero and one.. Formally, the prior beliefs for player i
+about choices of others are specified by a vector of relative frequencies of
+                         k                k Ž .
+choices of strategies syi  , denoted Nyi     0 . Call the sum of those frequencies
+Ždropping the player subscript for simplicity. N Ž t . s Ý m        k Ž .
+                                                             ks 1 Nyi t . Then the
+                                                               yi
+
+               k Ž .
+initial prior Byi 0 is
+                            k Ž .
+                           Nyi 0
+Ž 2.6.       k Ž .
+            Byi 0 s        ,
+                     N Ž0.
+       k Ž .
+with Nyi  0 G 0 and N Ž0. ) 0. Beliefs are updated by depreciating the previous
+counts by ␳ , and adding one for the strategy combination actually chosen by the
+other players. That is,
+                                     k Ž
+                                ␳ ⭈ Nyi  t y 1 . q I Ž syi
+                                                        k
+                                                           , syi Ž t ..
+Ž 2.7.       k Ž .
+            Byi t s                                                         .
+                                         h Ž
+                           Ý hs 1 ␳ ⭈ Nyi t y 1 . q I Ž syi
+                             m yi                            h
+                                                               , syi Ž t ..
+
+   5
+     When the description ‘fictitious play’ is used below, we mean traditional fictitious play in which
+all past observations are weighted equally. Also, Crawford Ž1995. and Camerer and Ho Ž1998.
+estimate models in which ␾ varies across periods, which generalizes weighted fictitious play to
+include cases where the weight rises or falls over time. In both papers, allowing time-varying weight
+does not improve fit very much, so assuming a fixed ␾ seems reasonable.
+                                       ATTRACTION LEARNING                            833
+
+Expressing beliefs in terms of previous-period beliefs,
+
+                              k Ž
+                                                 I Ž syi
+                                                      k
+                                                         , syi Ž t ..
+                         ␳ ⭈ Byi  t y 1. q
+                                                     N Ž t y 1.
+Ž 2.8.     k Ž .
+          Byi t s
+                                                 1
+                                     ␳q
+                                            N Ž t y 1.
+                     ␳ ⭈ N Ž t y 1 . ⭈ Byi
+                                         k Ž
+                                             t y 1 . q I Ž syi
+                                                            k
+                                                               , syi Ž t ..
+                   s                                                        .
+                                      ␳ ⭈ N Ž t y 1. q 1
+
+   This form of belief updating weights observations from one period ago ␳
+times as much as the most recent observation. This includes Cournot dynamics
+Ž ␳ s 0; only the most recent observation counts. and fictitious play Ž ␳ s 1; all
+observations count equally. as special cases. The general case 0 F ␳ F 1 is a
+compromise in which all observations count but more recent observations count
+more.
+   Expected payoffs in period t, Eij Ž t ., are taken over beliefs according to
+                        myi
+Ž 2.9.    Eij Ž t . s Ý ␲ i Ž sij , syi
+                                     k .    k Ž .
+                                         ⭈ Byi t .
+                        ks1
+
+The crucial step is to express period t expected payoffs as a function of period
+t y 1 expected payoffs. Substituting equation Ž2.8. into Ž2.9. and rearranging
+yields:
+
+                        ␳ ⭈ N Ž t y 1 . ⭈ Eij Ž t y 1 . q ␲ Ž sij , syi Ž t ..
+Ž 2.10.   Eij Ž t . s                                                          .
+                                        ␳ ⭈ N Ž t y 1. q 1
+
+   This equation makes the kinship between the EWA and belief approaches
+transparent. Formally, suppose initial attractions are equal to expected payoffs
+given initial beliefs that arise from the‘experience-equivalent’ strategy counts
+  k Ž .
+Nyi  0 , so A ij Ž0. s Eij Ž0. s Ý m      Ž j k . k Ž .
+                                   ks1 ␲ i s i , syi ⭈ Byi 0 . Then substituting ␦ s 1 and
+                                     yi
+
+
+␳ s ␾ into the attraction updating equation Ž2.2. gives attractions that are
+exactly the same as updated expected payoffs in Ž2.10.. Hence, the weighted
+belief models are a special case of EWA.
+   The contrast with EWA makes clear that belief models actually make three
+separate assumptions: Players’ initial attractions are expected payoffs based on
+some prior; players update attractions using EWA with ␦ s 1; and attractions
+are a weighted average of lagged attractions and payoffs Ž ␾ s ␳ .. We think the
+most intuitively appealing assumption is the best-responsiveness to foregone
+payoffs embodied in ␦ s 1, rather than the weighted-average restriction ␾ s ␳
+or the restriction on first-period play. EWA allows one to separate the three
+features of belief learning: Players could have attractions that begin and grow
+differently than belief models assume, but update those attractions in a belief-
+learning way. Such players are a special kind of EWA learner.
+834                       COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+   The close relation between reinforcement and belief learning is surprising
+because the two approaches have generally been treated as fundamentally
+different Že.g., Selten Ž1991, p. 14... Some authors have extended choice rein-
+forcement models to include reinforcement using all foregone payoffs ŽMcAllis-
+ter Ž1991.. or the highest foregone payoffs ŽRoth Ž1995, pp. 37᎐40., Roth and
+Erev Ž1995., on market games., without noticing that these extensions make
+reinforcement like belief learning.
+   Some connection between reinforcement and belief learning was recognized
+very recently by others Žunbeknownst to us.. Fudenberg and Levine Ž1995, pp.
+1084᎐1085. and Cheung and Friedman Ž1997, p. 54᎐55. both pointed out that
+expected payoffs computed using fictitious play beliefs, and based on history, are
+asymptotically the same as histories of actual payoffs. But their arguments are
+based on long-run asymptotic equivalence between a stationary distribution
+Žpossible payoffs. and a sample from it Žactual payoffs.. Neither explicitly
+recognized that even in the short run, there is an exact equivalence between a
+general kind of reinforcement learning ŽEWA. and weighted fictitious play.6
+   The nonlinear interplay of parameters in the EWA updating rules is why, as a
+model of human learning, EWA is potentially superior to simply running a
+regression of choices against reinforcements and expected payoffs or combining
+the two in a weighted average. Reinforcements and expected payoffs differ in
+three crucial dimensionsᎏinitial attractions and experience weight N Ž0., the
+weight ␦ on foregone payoffs in updating attractions, and whether attractions
+can grow outside the bounds of possible payoffs Žwhich depends on ␾ and ␳ ..
+EWA is not a convex combination of reinforcement and belief models because
+these three dimensions are controlled by separate parameters. For instance, a
+weighted average in which expected payoffs are given weight ␦ and reinforce-
+ments have weight 1 y ␦ will update attractions like EWA does, but that
+weighted average will not allow the wide range of initial attractions, experience
+rates, and growth rates available in EWA.7
+
+
+                                  2.4. Choice Probabilities
+     Attractions must determine probabilities of choosing strategies in some way.
+Pi j Ž t . should be monotonically increasing in A ij Ž t . and decreasing in A ki Ž t .
+Žwhere k / j .. Three forms have been used in previous research: Exponential
+Žlogit., power, and normal Žprobit.. In estimation reported below we use the
+
+    6
+      For example, Cheung and Friedman Ž1997. make their point by ‘‘assumwingx for the moment
+Žvery counterfactually! ., that the player somehow managed to play both strategies each period.’’
+Then ‘‘dropping the counterfactual,’’ they show that the average experienced payoffs will corre-
+spond, up to some noise, to expected payoffs. Counterfactual simulation of foregone payoffs is
+precisely the mental process invoked by ␦ in EWA. However, the ‘noise’ is correlated with past
+observations that are included explicitly in EWA, so the relation between EWA and weighted
+fictitious play is exact rather than approximate.
+    7
+      Indeed, Camerer and Ho Ž1998. show that EWA fits much better than a convex combination of
+belief and reinforcement learning, in two coordination games.
+                                            ATTRACTION LEARNING                                           835
+
+logit function, which is commonly used in studies of choice under risk and
+uncertainty, brand choice, etc. ŽBen-Akiva and Lerman Ž1985., Anderson, Palma,
+and Thisse Ž1992.., and is given by
+
+                                    e ␭⭈ A i Ž t .
+                                             j
+
+
+Ž 2.11.      Pi j Ž t q 1 . s                                .
+                                        ␭⭈ A i Ž t . k
+                                Ým
+                                 ks 1 e
+                                   i
+
+
+
+
+   The parameter ␭ measures sensitivity of players to attractions. Sensitivity
+could vary due to the psychophysics of perception or whether subjects are highly
+motivated or not. In this probability function, the exponent in the numerator is
+just the weighted effect of strategy sij ’s attraction, ␭ ⭈ A ij Ž t ., on the probability of
+choosing strategy sij. Models in which cross-effects of attractions on other
+strategies’ choice probabilities are allowed have been estimated ŽMookerjhee
+and Sopher Ž1997.. but we do not have the degrees of freedom to do so.8
+   The logit, power, and probit probability functions each have advantages and
+disadvantages. The exponential form has been used to study learning in games
+by Mookerjhee and Sopher Ž1994, 1997., Ho and Weigelt Ž1996., and Fudenberg
+and Levine Ž1998., and in ‘quantal response equilibrium’ models by Chen,
+Friedman, and Thisse Žin press. and McKelvey and Palfrey Ž1995, 1998.. Cheung
+and Friedman Ž1997. used the probit form. The exponential form is invariant to
+adding a constant to all attractions. 9 As a result, negative values of A ij Ž0. are
+permissible, which means one can avoid the difficult question of how to update
+attractions when payoffs are negative.10
+   The power probability form is given by
+
+                                                         ␭
+                                    Ž A ij Ž t ..
+Ž 2.12.        jŽ
+             Pi t q 1 . s                                    ␭
+                                                                 .
+                                Ým i Ž  k Ž ..
+                                 ks 1 A i t
+
+
+   8
+     In Mookerjhee and Sopher Ž1997., the exponent in the probability equation numerator is the
+                                                                        kŽ .
+sum of weighted effects of all the attractions, Ý m       hs 1 ␭ jk ⭈ A i t , where ␭ jk is the cross-effect of
+                                                           i
+
+strategy sik ’s attraction on strategy sij ’s score. This model allows cross-effects in which one strategy’s
+attraction can affect other strategies’ choice probabilities differently. These cross-effects are hard to
+interpret without knowing more about similarity of strategies or some other basis for one strategy’s
+attraction to affect others differently. Nonetheless, they have some significance as a whole in the
+Mookerjhee᎐Sopher analysis of constant-sum games. Estimating them for our median-action and
+p-beauty contest data uses up far too many degrees of freedom because there are too many
+strategies. Including cross-effects could proceed particularly efficiently if some structural considera-
+tions were used to restrict coefficients a priori Žas in Sarin and Vahid’s Ž1997. use of strategy
+similarity..
+   9
+    As a result, one must normalize A ijŽ0. to equal a constant for one value of j in order to identify
+parameters. There is some evidence that adding a constant to payoffs does matter ŽBereby᎐Meyer
+and Erev Ž1997.. but there is also evidence that logit fits better than power, so we regard the choice
+of proper form as a matter of one’s purpose and yet-unresolved empirical debate.
+   10
+      Borgers and Sarin Ž1996. avoid this problem by adding x to all other strategies when a chosen
+strategy loses x.
+836                         COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+    The power form is invariant to multiplying all attractions by a constant.
+Because of this invariance, the parameters N Ž0. and ␳ make no difference
+when the power form is used Ži.e., they are not identified..11
+    Depending on one’s purpose, being able to ignore N Ž0. and ␳ can be an
+advantage or disadvantage. For the purpose of distinguishing different models, it
+is a big disadvantage because models impose different restrictions on N Ž0. and
+␳ . By using the power form, the difference between belief-based, reinforcement,
+and EWA models, besides initial attractions, is only one parameter, ␦ , rather
+than three parameters. For the purposes of estimating any one model reliably,
+however, conserving degrees of freedom is good so the power form is better.
+Since our main purpose in this paper is comparing models, having the extra tools
+to distinguish theories is a large advantage so we use the logit form rather than
+the power form. This choice of probability rule is, of course, not an essential
+part of the EWA model.
+    Ultimately, it is an empirical question whether the logit, probit, or power
+forms fit better Žadjusting for degrees of freedom.. Previous studies show
+roughly equal fits of logit and power ŽTang Ž1996., Chen and Tang Ž1998., Erev
+and Roth Ž1997.. or better fits for the logit form over the power form ŽCamerer
+and Ho Ž1998...
+
+
+                             3. INTERPRETING EWA PARAMETERS
+   We think it is crucial to ask how a learning model’s parameters can be
+interpreted, what general behavioral principles of learning they capture, and, for
+EWA, how they reveal the assumptions implicit in reinforcement and belief
+learning. Asking these questions about any learning theory avoids the danger of
+adding parameters just to improve statistical fit, without adding new insight or
+respecting what is known in other disciplines. In addition, if parameters have
+natural psychological interpretations they can be measured in other ways Že.g.,
+response times and attention measures. and used in psychological modelling.
+
+
+                     3.1. Learning Principles, Aspiration Le¨ els, and ␦
+  The parameter ␦ measures the relative weight given to foregone payoffs,
+compared to actual payoffs, in updating attractions. This is the most important
+parameter in EWA because it shows most clearly the different ways in which
+EWA, reinforcement and belief models capture two basic principles of learn-
+ingᎏthe law of actual effect and the law of simulated effect.
+
+   11
+       The parameter ␳ disappears because it only appears in the updating equation denominator
+␳ ⭈ N Ž t y 1. q 1 that is common to all attractions and thus cancels out in the power form. Then EWA
+attractions at time t depend only on recent payoffs and the product A ijŽ0. ⭈ N Ž0.. While initial choice
+probabilities depend on A ijŽ0. only, these probabilities are the same as those that depend on
+A ijŽ0. ⭈ N Ž0. Žfor N Ž0. ) 0.. As a result, multiplying the initial attractions by an arbitrary constant
+makes no difference Žeconometrically, N Ž0. is not identifiable..
+                                    ATTRACTION LEARNING                                          837
+
+   Many decades of learning experiments, mostly with Žnonhuman. animal
+subjects, show that successful chosen strategies are subsequently chosen more
+often. Behaviorist psychologists call this the ‘law of effect’ ŽThorndike Ž1911.,
+Herrnstein Ž1970... We relabel this the ‘law of actual effect’ because behavior-
+ists took it for granted for years that the only effect on subsequent choices was
+produced by rewards for actual choices. The behaviorists eschewed ‘mentalist’
+constructs like imagination, which allowed the possibility that foregone rewards
+could affect the probability of choosing new strategies, until a series of demon-
+strations showed that those cognitive constructs are necessary. When applied to
+humans playing games with a known payoff matrix, it is sensible to propose a
+corollary general principle, the ‘law of simulated effect’. The law of simulated
+effect states that unchosen strategies that would have yielded high payoffsᎏ
+simulated successes ᎏare more likely to be chosen subsequently. Many experi-
+ments on reinforcement learning are consistent with this principle.12
+   Furthermore, most research on human and machine learning assumes that
+the basic process driving learning is not reinforcement, per se, but the reduction
+of errors. Since errors are measured by the difference between what players
+received and what they could have received, error-reduction algorithms effec-
+tively use both actual payoffs and foregone payoffs.
+   This error reduction idea also lies behind learning direction theory ŽSelten
+and Stoecker Ž1986., Selten Ž1997... Learning direction theory presumes players
+have a causal understanding of the game that enables them to tell in which
+direction they should switch strategies.13 If players know strategies’ foregone
+payoffs, then direction learning predicts they will move Žweakly. in the direction
+of higher-forgone payoffs, and away from low foregone payoffs. This is essen-
+tially the same prediction as EWA with ␦ s 1, except that the direction learning
+allows inertia in responses, which corresponds to ␦ - 1 when payoffs are
+positive.14 Thus, in our view EWA incorporates the intuition behind direction
+learning in a precise way, when the causal structure is known, while direction
+learning can more generally apply to situations with known causal structure Žbut
+unknown foregone payoffs. in a way yet to be fully specified.
+   The empirical strengths of the law of effect and the law of simulated effect
+are the key to distinguishing different models of learning in games, and are
+
+   12
+      For example, anxious patients can be taught to fear a picture of a triangle Ža conditioned
+stimulus, or CS. when it is followed by a loud annoying noise Žan unconditioned stimulus, or UCS..
+When patients are told to simply imagine the UCS several times, their imagination increases the
+strength of their conditioned fear response to the triangle CS ŽDavey and Matchett Ž1994... A
+related phenomenon is ‘incubation’, in which presentation of the CS itself increases the fear
+response ŽEysenck Ž1979... In these cases, people are not learning by direct reinforcement. They
+‘learn’ by simply imagining either the UCS’s reinforcement, or the reinforcement that typically
+follows a CS.
+   13
+      The players’ understanding could be expressed in a causal diagram or map, but this central part
+of the theory is not yet developed.
+   14
+      When payoffs are negative, ␦ - 1 in EWA implies players will be likely to move away from
+money-losing chosen strategies Žwhich are reinforced fully, and negatively., even moving to strategies
+with larger negative Žforegone payoffs..
+838                        COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+calibrated by ␦ . Reinforcement insists that only actual effects matter Ž ␦ s 0..
+Belief models implicitly require that actual and simulated effects are equally
+strong Ž ␦ s 1.. EWA takes the middle ground.
+   The parameter ␦ could also be interpreted as creating an endogeneous
+aspiration level against which payoffs are compared. Including an aspiration
+level is sensible because many studies show that the reinforcement value of a
+fixed payoff depends on the aspiration level to which the payoff is compared
+Že.g.., Erev and Roth Ž1997...15
+   In EWA, ␦ creates an adjustable aspiration level endogeneously. It is easy to
+show that reinforcing strategies according to foregone payoffs means the proba-
+bility of a chosen strategy si Ž t . only increases if its payoff is larger than ␦ times
+the average foregone payoff, holding previous attractions constant Žsee our
+working paper for details.. Therefore, one can interpret ␦ times the average
+foregone payoff in each period as a kind of aspiration level. A larger ␦ creates a
+higher aspiration level. Furthermore, the aspiration level adjusts automatically
+over time, because it depends on the foregone payoffs in each period. EWA
+therefore creates an endogeneous, adjustable aspiration level at no extra para-
+metric cost.
+   If ␦ is interpreted as the weight placed on foregone payoffs, many generaliza-
+tions spring to mind. The size of the weight ␦ could depend on the size of the
+foregone payoff or on its sign, to allow the possibilities that unusually large or
+small foregone payoffs catch a player’s attention, or that players are more
+sensitive to losses than to gains Žcf. loss-aversion in risky choices, e.g., Tversky
+and Kahneman Ž1992... If players are more sensitive to foregone payoffs for
+strategies that are closer to the chosen strategy, or more similar, then ␦ will
+depend on the distance or similarity between each strategy and the chosen
+strategy si Ž t . Žcf. Sarin and Vahid Ž1997...
+   If ␦ is applied to others’ actual payoffs instead of own foregone payoffs, EWA
+can be used to capture learning by imitation. Imitation is obviously common,
+especially among animals, children, and impressionable teenagers. Payoff-
+dependent imitation is also a sensible heuristic behavior in low-information
+environments where players do not know what their foregone payoffs are, but
+can observe success of other firms. EWA and imitation learning will be approxi-
+mately the same when Ži. games are symmetric, so that another player’s payoffs
+are the same as one’s own foregone payoffs, and Žii. when there are many
+players who choose different strategies, so that a player who imitates others
+according to how successful they were is effectively reinforcing a wide range of
+her own strategies according to their foregone payoffs. We conjecture that these
+are the conditions under which imitation is most common. If so, then imitation
+is just a heuristic way to implement foregone-payoff-based updating Ža la EWA.,
+
+  15
+     Players who tend to repeat previously-chosen strategies, regardless of their outcomes, reveal a
+‘status quo bias’ or ‘habit’ ŽMajure Ž1994., Tang, Ž1996... This habitual behavior of chosen strategies
+can be captured by having an aspiration level that is always lower than the actual payoffs and by a
+lack of simulated effect.
+                                       ATTRACTION LEARNING                                                 839
+
+using payoffs of others as the best available proxy for one’s own unknown
+payoffs. In this sense, EWA captures some of the intuition underlying imitation,
+and perhaps much of its empirical force as well.
+
+
+
+                               3.2. Growth of Attractions, ␳ and ␾
+   The parameter ␾ depreciates past attractions, A ij Ž t ..16 The parameter ␳
+depreciates the experience measure N Ž t .. It captures decay in the strength of
+prior beliefs, which can be different than decay of early attraction Žcaptured by
+␾ .. These factors combine cognitive phenomena like forgetting with a deliberate
+tendency to discount old experience when the environment is changing.
+   One way to interpret ␳ and ␾ is by considering the numerator and denomina-
+tor of the main EWA updating equation Ž2.2. separately, and thinking about
+how reinforcement and belief-based models use these two terms differently. The
+numerator is ␾ ⭈ N Ž t y 1. ⭈ A ij Ž t y 1. q w ␦ q Ž1 y ␦ . ⭈ I Ž sij, si Ž t ..x ⭈ ␲ i Ž sij, syi Ž t ... This
+term is a running total of Ždepreciated. attraction, updated by each period’s
+payoffs. The denominator is ␳ ⭈ N Ž t y 1. q 1. This term is a running total of
+Ždepreciated. periods of experience-equivalence. Reinforcement models essen-
+tially keep track of the running total in the numerator, and do not adjust for the
+number of periods of experience-equivalence Žsince ␳ s 0, the denominator is
+always one.. Belief-based models also keep track of the attraction total but
+divide by the total number of periods of experience-equivalence. By depreciating
+the two totals at the same rate Ž ␳ s ␾ ., the belief-based models keep the
+‘per-period’ attractions Žexpected payoffs. in a range bounded by the game’s
+payoffs.
+   EWA allows attractions to grow faster than an average, but slower than a
+cumulative total. An analogy might help illustrate. Instead of determining
+attractions of strategies, think about evaluating a person Žfor example, an
+athlete, or a senior colleague you might hire. based on a stream of lifetime
+performances. The reinforcement model evaluates people based on Ždepreci-
+ated. lifetime performance. The belief-based models evaluate people based on
+‘average’ Ždepreciated. performance. Both statistics are probably useful in
+evaluationᎏin hiring a colleague or an athlete, you would want to know lifetime
+performance and some kind of performance averaged across experience. One
+way to mix the two is to normalize depreciated cumulative performance by
+depreciated experience, but depreciate the amount of experience more rapidly.
+Then if two people perform equally well on average every year, the person with
+10 years of experience is rated somewhere between equally as good and twice as
+good as the person with five years of experience. When ␾ ) ␳ , EWA models
+players who use something in between ‘lifetime’ performance and ‘average’
+performance to evaluate strategies.
+
+    A ‘primary effect’ Žor ‘imprinting’; Cheung and Friedman Ž1997.. in which early observations
+   16
+
+are remembered more strongly than recent ones, can be expressed by ␾ G 1.
+840                        COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+   The depreciation rate parameters ␾ and ␳ can also be understood by how
+they control slowdown in learning rate or sharpness of convergence. Solving
+recursively for steady-state attraction levels shows that those levels equal the
+ratio Ž1 y ␳ .rŽ1 y ␾ . times the steady-state average payoff. Thus, when ␳ s 0 as
+in reinforcement learning, attractions can end up outside the bounds of payoff
+levels Žand they grow as large as possible, holding ␾ constant.. When ␳ s ␾ , as
+in belief-learning, steady-state attraction levels are equal to steady-state average
+payoffs. The implication of these two possibilities depends on how attractions
+determine probabilities. In the logit probability form, only differences in attrac-
+tion levels affect choice probabilities. Therefore, given a fixed value of ␭,
+attractions that can grow outside the bounds of payoff levels have a wider range
+across strategies. This allows the possibility of sharper convergence in the sense
+that choice probabilities can converge closer to the boundaries at zero and one.
+When attractions are bounded to be close to payoff levels, convergence cannot
+be as sharp. In the power probability form, only ratios of attraction levels
+matter. Therefore, if attractions grow, the relative impact of new reinforcements
+falls; learning slows down. Ceteris paribus, reinforcement learning requires
+convergence to be as sharp as possible Žin the logit form. or requires learning to
+slow down as quickly as possible Žin the power form., while belief learning
+requires the opposite. EWA is able to choose an intermediate value of ␳ that
+tailors the sharpness of convergence or rate of learning to the data.
+
+
+
+                   3.3. Initial Attractions A ij Ž0. and their Strength N Ž0.
+   The term A ij Ž0. represents the initial attraction, which might be derived from
+an analysis of the game, from surface similarity between strategies and strategies
+that were successful in similar games, etc. Belief models restrict the A ij Ž0.
+strongly by requiring initial attractions to be derived from prior beliefs. This
+requires, for example, that weakly dominated strategies will always have Žweakly.
+lower initial attractions than dominant strategies. EWA allows more flexibility.
+   For example, suppose players make first-period choices randomly, by choosing
+what was chosen previously in a different game, by setting each strategy’s initial
+attraction equal to its minimum payoff Žthe maximin rule. or maximum payoff
+Žthe maximax rule.,17 or by choosing stochastically among selection principles
+like payoff-dominance, risk-dominance, loss-avoidance, etc. All these decision
+rules are plausible models of first-period play, but none of them generate initial
+attractions that are always expected payoffs given some prior beliefs.
+   We consider the scientific problem of figuring out how people choose their
+initial strategies as fundamentally different than explaining how they learn.
+
+  17
+     Making a strategy’s initial attraction equal to its minimum payoff, for example, is implicitly
+putting all the belief weight on the choices by others that yield that minimum. But the choices by
+others that lead to minima for different strategies are likely to be different. So the implicit beliefs
+underlying each attraction will be different.
+                                         ATTRACTION LEARNING                                                    841
+
+Leaving initial attractions unrestricted makes them numerical placeholders that
+can be filled by a theory of first-period play that supplies attractions as an input
+to EWA. That combination would be a complete theory of behavior in games,
+from start to finish.
+    The initial-attraction weight N Ž0. appears in the EWA model to allow players
+in belief-based models to have an initial prior that has a certain strength
+Žmeasured in units of actual experience.. In EWA, N Ž0. is therefore naturally
+interpreted as the strength of initial attractions, relative to incremental changes
+in attractions due to actual experience and payoffs. Fixing N Ž0. s 1 means that,
+unit for unit, initial attractions A ij Ž0. and chunks of reinforcement from payoffs
+are weighed equally when attractions are updated. This is easiest to see by fixing
+␦ s 1 for simplicity and directly computing the attraction after two periods,
+A ij Ž2., which gives
+
+                         ␾ 2 ⭈ A ij Ž 0 . ⭈ N Ž 0 . q ␾ ⭈ ␲ i Ž sij , syi Ž 1 .. ⭈ q ␲ i Ž sij , syi Ž 2 ..
+Ž 3.1.    A ij Ž 2 . s                                                                                      .
+                                                     ␳ 2 ⭈ N Ž0. q ␳ q 1
+
+   The parameter ␾ captures the declining weight placed on payoffs from more
+distant periods of actual experience, compared to more recent periods. ŽThat is,
+the older period 1 payoff ␲ i Ž sij, syi Ž1.. is weighted by ␾ but the recent period 2
+payoff ␲ i Ž sij, syi Ž2.. is not.. Like previous payoffs, the initial attraction is also
+weighted by a power of ␾ Ž ␾ 2 , because it ‘happened’ two periods earlier., but is
+also weighted by N Ž0.. Thus, the parameter N Ž0. captures the special weight
+placed on the initial attractions, compared to increments in attraction due to
+payoffs. N Ž0. can therefore be thought of as a‘pre-game Žintrospective. experi-
+ence’ weight. If N Ž0. is small the effect of the initial attractions is quickly
+displaced by experience. If N Ž0. is large then the effect of the initial attractions
+persists.
+   Notice that updating the experience-weight by N Ž t . s ␳ ⭈ N Ž t y 1. q 1 implies
+a steady-state value of N* s 1rŽ1 y ␳ .. In estimation, we have found it useful to
+restrict N Ž0. to be less than N*. This implies N Ž t y 1. F N Ž t .; the experience
+weight is Žweakly. rising over time. Since the relative weight on decayed
+attractions, compared to recent reinforcement, is always increasing, the relative
+weight on observed payoffs is always declining. This implies a ‘law of declining
+effect’ that is widely observed in research of learning.
+   The flexibility of initial attractions and experience weight allows one to fit a
+variety of models. Theories of equilibrium behavior are special cases in which all
+‘learning’ occurs before the game starts. For example, a ‘stubborn’ game-theo-
+retically-minded player sets A ij Ž0. equal to the equilibrium payoffs of each
+strategy and act as if N Ž0. is infinite Žmeaning that no amount of game-playing
+experience can outweigh the prior calculation .. An adaptive game theorist
+assumes A ij Ž0. are equilibrium payoffs but has a small N Ž0., so she learns from
+experience. A player who does not begin with prior beliefs, but updates accord-
+842                        COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+ing to experience as a belief learner does, has ␾ s ␳ and ␦ s 1 with arbitrary
+A ij Ž0..
+
+
+
+                                    4. PREVIOUS RESEARCH
+   In this section we briefly summarize previous research Žsee Camerer Žin
+progress. for more details..
+   Several papers investigate only belief learning. Cheung and Friedman Ž1997.
+ŽCF. estimated a weighted fictitious play model on individual-level data from
+four games Žhawkdove, stag hunt, ‘buyer seller’ and battle-of-the-sexes .. They
+find substantial heterogeneity across subjects but stability across games in
+parameters that are like our ␾ and ␭. A more general belief model, allowing
+idiosyncratic shocks in beliefs and time-varying weights, was developed by
+Crawford Ž1995. to fit data from coordination games, extended by Broseta Ž1995.
+to allow ARCH error terms, and applied by Crawford and Broseta Ž1998. to
+coordination with preplay auctions. Brandts and Holt Žin press. and Cooper,
+Garvin, and Kagel Žin press. simulate fictitious play in signaling games. Boylan
+and El-Gamal Ž1992. compare fictitious play and Cournot learning in coordina-
+tion and dominance-solvable games; they find overwhelming relative support for
+fictitious play.
+   Other studies concentrate only on reinforcement learning. Versions of rein-
+forcement in which probabilities were reinforced directly, or cumulative payoffs
+normalized, were used by Bush and Mosteller Ž1955., Cross Ž1983., and Arthur
+Ž1991.. Harley Ž1981. posited a reinforcement model using cumulative payoffs
+and simulated its behavior in several games. The Harley model was later
+extended by Roth and Erev Ž1995. to include spillover of reinforcement to
+neighboring strategies. Their model fits the time trends in ultimatum, public
+good, and responder-competition games but converges much too slowly. McAl-
+lister Ž1991. shows that a modified Cross model that uses foregone payoff
+information fits weak-link data modestly well. Sarin and Vahid Ž1997. show that
+a modified Cross model with distance-weighted spillover of reinforcement to
+similar strategies fits data on coordination experiments with low information
+fairly well.
+   These studies of belief and reinforcement learning find that each approach,
+evaluated separately, has some explanatory power. Other studies compared
+models.18 Erev and Roth Ž1997. add an adjustable reference point to their
+earlier model Žcf. Cross Ž1983... The extended model fits slightly better than
+fictitious play, at the individual level, in constant-sum games played for 100 or
+
+  18
+     In still another approach, models in which players learn to shift weight across various rules Žor
+‘methods’., rather than across strategies, were studied by Tang Ž1996. and by Stahl Ž1996, 1997.. In
+Tang’s comparison ‘method-learning’ does slightly worse than reinforcement. Stahl Ž1997. finds that
+players seem to weight rules that mimic choices of others or best-respond given diffuse priors.
+                             ATTRACTION LEARNING                               843
+
+more periods. Mookerjhee and Sopher Ž1994, 1997. ŽMS. compare average-pay-
+off reinforcement and fictitious play in constant-sum games; reinforcement does
+somewhat better. Ho and Weigelt Ž1996. compare modified versions of fictitious
+play and choice reinforcement Žthe MS ‘vindication’ model. in coordination
+games with multiple Nash equilibria. Fictitious play fits better. Battalio, Samuel-
+son, and Van Huyck Ž1997. compare average-payoff reinforcement and fictitious
+play in three variants of stag hunt with the same equilibria but different
+disequilibrium incentives to converge. Fictitious play does better but a model
+that uses both reinforcements and expected payoffs does better still.
+   Many variants of weighted fictitious play and reinforcement Žand other
+models. were compared by Tang Ž1996. in games with mixed-strategy equilibria.
+Reinforcement does better in most games. Chen and Tang Ž1998. fit models to
+data from two public goods games. In one game equilibration is so fast that
+Nash equilibrium outpredicts the learning models. In the other game reinforce-
+ment does better.
+   The overall picture from previous research is somewhat blurry. Comparisons
+appear to favor reinforcement in constant-sum games and belief learning in
+coordination games. However, specifications of the models and estimation
+techniques vary across studies. Our approach allows one to compare models
+more systematically by including all features that have been used differently in
+different studies. Two general features are especially notable.
+   First, most papers assume equal initial attractions or, for belief models,
+uniform priors. Some papers estimate initial attractions using data from early
+periods Žwhich does not generally optimize overall fit.. Our procedure is more
+general because we estimate initial attractions and experience weight as part of
+an overall maximization of fit. Estimating initial experience weight N Ž0. allows
+belief models to express a prior strength. This is an important feature of belief
+learning; omitting it may explain why belief models have sometimes fit relatively
+poorly Žin Mookerjhee and Sopher Ž1997., Tang Ž1996., Erev and Roth Ž1997.,
+Chen and Tang Ž1998...
+   Second, some reinforcement models assume averaged payoffs affect choices,
+while others assume reinforcements cumulate. This difference can be captured
+by allowing ␳ to vary between ␾ Žfor averaging. and 0 Žfor maximum cumula-
+tion., as EWA does. In addition, many studies of belief learning did not allow
+weighted fictitious play, as EWA does. Including ␾ and ␳ therefore allows us to
+determine whether previous mixed results depend on whether reinforcements
+are averaged or cumulated, and on whether belief models are weighted.
+   Our methodology for model estimation is more general than most earlier
+papers in four ways. First, we compare across three classes of games using the
+same estimation technique Žonly Cheung and Friedman Ž1997. have done this in
+one paper.. Second, our method uses standard statistical tests to judge whether
+differences in fit are due to chance, or put differently, to decide whether simple
+models are too simple or not. Third, we calibrate models on the first 70% of the
+periods in each sample and predict the rest of the sample to validate the
+estimates and avoid overfitting Žno previous paper has done this.. Fourth, we
+844                        COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+allow heterogeneity across individuals by comparing a model with a single class
+of agents with a two-segment model, which has not been done before.19
+
+
+
+               5. PARAMETER ESTIMATION FROM EXPERIMENTAL DATA
+                                   5.1. Estimation Strategy
+   We estimated the values of model parameters using three samples of experi-
+mental data20 and validated the models by predicting behavior out of sample.
+The games are: Constant-sum games with unique mixed-strategy equilibria Žand
+one weakly dominated strategy.; a ‘median-action’ coordination with multiple
+Pareto-ranked equilibria; and a dominance-solvable ‘ p-beauty contest’ game
+with a unique equilibrium. We chose these games for several reasons.
+   First, the games have a range of different structural features Žas in Cheung
+and Friedman Ž1997. and Stahl Ž1997... This avoids the possible mistake of
+concluding that a model generally fits well because it happens to fit one class of
+games.
+   Second, the games have different spansᎏthe constant-sum games last 40
+periods and the others last 10 periods. Longer spans provide more data and
+more power for estimating individual differences. But a mixture of long and
+short spans are valuable too, because some gamesᎏlike the coordination games
+ᎏconverge quickly. Learning models should be able to explain why convergence
+is quick in those games and slow in others.
+   Third, most previous studies have reported results that are favorable to either
+reinforcement or belief learning. The games we use each present some new
+challenges to these models. The presence of dominated strategies in the con-
+stant-sum games is a challenge for belief models, which predict those strategies
+will be played relatively rarely. Rapid convergence in the coordination and
+dominance-solvable games is a challenge for reinforcement learning Žsee also
+Van Huyck, Battalio, and Rankin Ž1996.., which tends to be sluggish.
+   Next we describe some general features of the estimation method. For
+simplicity we assume that players’ strategies are the stage-game strategies, and
+denote player i’s strategy choice in period t by si Ž t .. ŽOf course, in general
+
+  19
+      The only paper that estimates individual-level parameters on these kinds of models is Cheung
+and Friedman Ž1997.. While the median parameter estimates are reasonable and similar across
+games when expected to be, the individual-level estimates are variable Že.g., a third of the ␾
+estimates are negative and a sixth are above one.. This reflects some imprecision in individual-level
+estimation that suggests that multiple-segment estimation, which lies between single-segment
+estimation and individual-level estimation, may be a reasonably parsimonious compromise between
+the desires to allow heterogeneity and to estimate reliably.
+   20
+      Our working paper includes two other samples of data, on weak-link coordination games and
+matching pennies ŽMookerjhee and Sopher Ž1994... We dropped these because the weak-link data
+did not have a long enough span to permit both calibration and validation; calibration is reported in
+Camerer and Ho Ž1999.. The matching pennies data did not distinguish models from each other or
+from Nash equilibrium.
+                                    ATTRACTION LEARNING                                          845
+
+strategies could be history-dependent or could be decision rules; we say more
+about this in the conclusion..
+   We use a ‘latent class’ approach in which there are one or two segments of
+players, and all players in a segment are assumed to have the same parameter
+values. This technique is standard in some fields Že.g., analyses of brand choice
+in marketing. and was also suggested by Crawford Ž1995..21 The single-class
+estimation provides a representative-agent benchmark. Allowing a second class
+gives a clue about how important it is to allow heterogeneity. While allowing
+heterogeneity should obviously improve fit in most cases, it does not always. For
+example, in constant-sum games, allowing a second class hardly improves the fit
+at all.
+   The two-class procedure makes sense for these data sets because there are
+not enough observations per subject to reliably estimate many more classes. 22
+And while including more segments would be desirable, there is no reason to
+think that assuming all players have the same parameters favors some models
+over others, so this simplification should not alter our conclusions about which
+models fit better.
+   Estimating initial attractions A j Ž0. Žsuppressing the player subscript., as we
+do, has three advantages. First, assuming initial attractions are equal Žor
+assuming equal priors in belief models. saves degrees of freedom but fits poorly
+in some of these data sets. Second, estimating initial attractions creates raw
+material that may be useful for constructing a good theory of first-period play; in
+a sense, any such theory is trying to predict the values that we estimate. Third,
+forcing a model to maximize fit by estimating learning parameters and initial
+attractions at the same time allows the possibility that the model will misspecify
+the initial attractions ‘on purpose’. That is, if a model cannot easily explain how
+players move away from initial behavior as they learn, it will misestimate the
+initial behavior. Therefore, estimating the initial attractions and comparing
+them with first-period play serves as an indirect test for gross specification error.
+For example, we see below that reinforcement models fail this test for coordina-
+tion games.
+   Let the stage game be repeated for T rounds. Recall that the indicator
+function I Ž sij, si Ž t .. is equal to 1 if sij s si Ž t . and 0 otherwise. Define the vector
+                                                            def
+of initial attractions for player i to be A i Ž0. s Ž A1i Ž0., A2i Ž0., . . . , Am i Ž ..
+                                                                                  i 0 . Since
+we study symmetric games and assume all players have the same parameter
+values, for this paper there is a common set of initial attractions AŽ0. s A i Ž0.
+᭙ i. Define the number of subjects by N. The overall sample size for calibration,
+
+   21
+      Note that even though all agents in a class have the same parameter values, after the first
+period they will be predicted to behave differently because their actual choices and experiences vary.
+   22
+      Two segments are also useful because one can then compare a two-segment EWA model with a
+two-segment model in which one segment consists of reinforcement learners and the other segment
+contains belief learners, to see whether EWA is fitting better than a ‘population mixture’ of belief
+and reinforcement learning. We did this in Camerer and Ho Ž1998. for weak-link and median-action
+data and found that EWA does fit much better than the mixture model.
+846                            COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+.7⭈ T ⭈ N, is denoted by M. Then the log-likelihood function, LLŽ AŽ0., N Ž0.,
+␾ , ␳ , ␦ , ␭., is
+
+Ž 5.1.      LL Ž AŽ 0 . , N Ž 0 . , ␾ , ␳ , ␦ , ␭ .
+
+
+                                      žÝ                                           /
+                       0.7⭈T    N         mi
+                   s Ý         Ý ln             I Ž sij , si Ž t .. ⭈ Pi j Ž t .
+                       ts1 is1            js1
+
+
+
+
+                                      ž                                     e ␭⭈ A i Ž ty1.
+                                                                                                /
+                                                                                       j
+                       0.7⭈T    N         mi
+Ž 5.2.             s Ý         Ý ln Ý           I Ž sij , si Ž t .. ⭈           ␭⭈ A i Ž ty1.
+                                                                                           k        .
+                       ts1 is1            js1                           Ým
+                                                                         ks 1 e
+                                                                           i
+
+
+
+
+   Keep in mind that in the exponential form, attractions are only identified up
+to a constant, so we must fix one of the A j Ž0. to equal a constant. We searched
+over parameter values to maximize the LL function using the MAXLIK routine
+in GAUSS, which uses a gradient method. To avoid converging to local optima
+we tried a variety of starting points. We restricted ␾ , ␭ to be positive, 0 F ␦ , ␳ F 1.
+   Generally, violations of these restrictions should be interpreted as either signs
+of misspecification, or evidence that the model is trying to reach outside
+reasonable parameter values to explain an unusual feature of data. Fortunately,
+there are only two cases where the EWA restrictions bindᎏ ␦ˆs 0 in constant-
+sum game G1, which we can’t easily explain, and ␳ˆs 0 in coordination games,
+which we can explain.23
+   In order to make the value of N Ž0. interpretable as a weight on initial
+attractions relative to reinforcing payoffs, we restricted the range of A j Ž0. to be
+less than or equal to the difference between the minimum and maximum payoffs
+in the entire game Žwhile also setting one of the attractions equal to zero for
+identifiability..24 Since this restriction is naturally satisfied in belief models, in
+order to compare EWA to belief and reinforcement learning we imposed it in
+EWA and reinforcement as well.25 We also restricted 0 F N Ž0. F 1rŽ1 y ␳ . to
+guarantee that the weights N Ž t . rise over time.
+
+   23
+      In the coordination games convergence is very sharp after substantial initial dispersion. To
+explain this in the logit model, EWA needs attractions to grow apart as rapidly as possible, so high
+attraction strategies are chosen very frequently Žand more frequently than in early periods.. Since
+the denominator of the attraction equation is ␳ ⭈ N Ž t y 1. q 1, attractions grow faster if this
+denominator shrinks, which means a negative value of ␳ can make growth even faster. Therefore,
+the restricted estimate ␳ˆs 0 in the coordination games means the model is trying to make ␳
+negative to capture the remarkable pace of equilibration seen in those data.
+   24
+      If the attractions are not restricted in this way, then the experience weight N Ž0. expresses both
+the relative weight on initial attractions and payoffs, and a scaling factor which puts attractions and
+payoffs on the same scale. By restricting attractions to have the same range as payoffs, we can then
+interpret N Ž0. as a relative weight.
+   25
+      In our working paper we allowed initial attractions to have arbitrary scale, which made MLE
+convergence slower and identification worse. Allowing arbitrary attractions helps reinforcement a bit
+in constant-sum games but does not help much in median-action and beauty-contest games.
+                                    ATTRACTION LEARNING                                          847
+
+   Standard errors of parameters were estimated using a jackknife procedure. In
+each run of the jackknife, one subject was excluded from the analysis and the
+model was estimated using all remaining subjects.26 Doing this sequentially
+produces N vectors of estimates Žwhere N is the number of subjects.. The
+parameter standard errors are then the standard deviations of parameter
+estimates across the N runs. ŽCorrelations between parameters can also be
+computed this way, and help detect identification problems..
+   Since EWA is always more general than the special cases, it will necessarily fit
+the data better so there is some danger of overfitting. To guard against this we
+use five ways to penalize theories that have more degrees of freedom. We
+calibrate the models by deriving MLE estimates using the first 70% of the
+observations in each sample, and measure goodness of fit three ways. Then we
+validate the models by using the derived estimates to predict the path of play in
+the remaining 30% of the sample and measure fit two ways. This procedure uses
+enough data to estimate parameters reliably, but also forecasts out-of-sample to
+ensure models are not being overfit.
+   Obviously, deriving estimates on one part of the sample and predicting the
+rest of the sample implicitly assumes stationarity in parameters throughout the
+sample. In games that converge within an experiment, it is an open question how
+much power out-of-sample forecasting has to distinguish theories when behavior
+in the later, holdout-sample periods does not vary much. As is shown below for
+coordination games, the power can be substantial. The reason is that some
+theories do predict a lot of variation in later periods. If there is little variation
+in the holdout sample, the absence of variation counts against a theory that
+predicts variation. Also, we use the first 70% of the periods in an experimental
+session to calibrate parameter estimates and the final 30% of the periods to
+validate Žforecast.. A different approach is to derive estimates for some fraction
+of the subjects Žusing their entire samples., and use those estimates to forecast
+behavior for a holdout sample of subjects across the entire experimental session.
+Future work could use that method and compare the results to ours.
+   To evaluate model accuracy in the calibration phase, the three criteria we
+report are: Log likelihoods Žthese are used in ␹ 2 tests, which effectively
+penalize for EWA., and Akaike and Bayesian information criteria, which
+penalize theories according to the number of free parameters in different
+ways.27 We also report a pseudo-R 2 , denoted ␳ 2 , based on the Akaike measure,
+so one can see how much better the models do than random choice.28 For the
+validation sample we report the log likelihood and a mean squared deviation
+
+  26
+      For the constant-sum games, with only twenty subjects per game Žten row players and ten
+column players., every pair of row and column players were excluded, giving 100 jackknife runs.
+   27
+      The Akaike criterion ŽAIC. is LL y k and the Bayesian criterion ŽBIC. is LL y Ž kr2. ⭈ log Ž M .
+where k is the number of degrees of freedom and M is the size of the calibration sample.
+   28
+      The measure ␳ 2 is the difference between the Akaike measure and the log likelihood of a
+model of random choices, normalized by the random-model log likelihood.
+848                        COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+Ž MSD ., which is defined as
+                                                                                2
+                          T       N    mi
+                                             Pi j Ž t . y I Ž sij , si Ž t ..
+Ž 5.3.      MSD s         Ý      Ý Ý               .3⭈ T ⭈ N ⭈ m i
+                                                                                    .
+                      ts .7⭈Tq1 is1 js1
+
+ŽNote that this MSD does not average observations across individuals.. Model
+fits are also compared to a random choice model in which all strategies are
+chosen equally often in each period.29
+   Since out-of-sample forecasting is a tougher test than in-sample fitting, and
+levels the playing field among theories with different numbers of parameters,
+why report in-sample fits at all? One reason is that both measures of fit are
+needed to judge whether a model does much better in-sample than out-of-sam-
+ple, which is the telltale sign of egregious over-fitting. Furthermore, most
+previous studies have relied solely on in-sample fits for comparing models.
+Reporting them allows readers familiar with such comparisons to weigh the
+results against their own standards.
+   For each game, we describe the game and basic details of how the experi-
+ments were conducted. Then we compare models and discuss parameter esti-
+mates.
+   Table I previews and summarizes the results. Within each game and measure,
+other than LL and ␳ 2 , the best fit statistic is printed in italics and marked with
+an asterisk. In both the calibration and validation phases, EWA fits substantially
+better in four of six games; in two cases the belief models fit a little better. ŽIf
+EWA was overfitting, it would do relatively better in calibration than in
+validation, but this isn’t the case.. Belief models do better than reinforcement in
+constant-sum games and worse in the median-action game. In the beauty contest
+game, the belief model does worse than reinforcement during calibration and
+better during validation. The two-segment models generally fit a little better
+during both validation and calibration, but the improvement in fit over one-seg-
+ment models is small.
+
+                   5.2. Constant-sum Games with Dominated Actions
+  We fit data from four constant-sum games: two are 4 = 4 ŽG1 and G3. and the
+others are 6 = 6 ŽG2 and G4. from Mookherjee and Sopher Ž1997.. Tables IIa᎐b
+show the payoff matrices.30 The 4 = 4 games essentially collapse three of the
+undominated actions Žactions 3᎐5. of the 6 = 6 games into a single action
+Žaction 3..
+  29
+      We do not compare results with Nash equilibrium, as many studies do, because it does very
+poorly in constant sum games and beauty-contest games Žin which iteratively-dominated strategies
+predicted to have zero probability are often played. and does not exclude any choices in the
+coordination games.
+   30
+      The fractional payoffs Že.g., 2r3W ., denote probabilistic chances of winning W. These present a
+complication for reinforcement models, including EWAᎏdo you reinforce the actual payoff Žwhich
+has a one-third chance of being zero if 2r3W is the payoff. or the expected payoff? We reinforce
+according to the expected payoff.
+                                    ATTRACTION LEARNING                                             849
+
+
+                                                TABLE I
+           MODEL CALIBRATION AND VALIDATION IN MEDIAN-ACTION, CONSTANT-SUM,
+                             AND P-BEAUTY CONTEST GAMES
+
+
+                                                    Calibration                     Validation
+Game                         No. of
+Model                      Parameters      LL         AIC            BIC       ␳2     LL          MSD
+
+Constant-sum 1 (M s 560)
+1-Segment
+  Random                        0       y803.69    y803.69        y803.69 0.0000 y332.71 0.1875
+  Choice Reinforcement          5       y681.97    y686.97        y697.96 0.1452 y335.50 0.1888
+  Belief-based                  6       y680.23    y686.23        y699.42 0.1461 y285.60* 0.1688*
+  EWA                           8       y653.07    y661.07 *      y678.66* 0.1775 y326.38 0.1883
+2-Segment
+  Random                       0        y803.69    y803.69        y803.69 0.0000 y332.71         0.1875
+  Choice Reinforcement        11        y681.69    y692.69        y716.87 0.1381 y328.71         0.1905
+  Belief-based                13        y680.12    y693.12        y721.70 0.1376 y285.96         0.1689
+  EWA                         17        y652.46    y669.46        y706.83 0.1670 y317.66         0.1865
+Constant-sum 2 (M s 560)
+1-Segment
+  Random                       0        y1003.39 y1003.39         y1003.39 0.0000 y430.02        0.1435
+  Choice Reinforcement         7        y853.61 y860.61           y876.00 0.1423 y359.74         0.1222
+  Belief-based                 8        y797.72 y805.72           y823.31 0.1970 y350.09         0.1212
+  EWA                         10        y790.61 y800.61           y822.59* 0.2021 y341.71        0.1179*
+2-Segment
+  Random                       0        y1003.39 y1003.39 y1003.39           0.0000 y430.02 0.1435
+  Choice Reinforcement        15        y853.50 y868.50   y901.48            0.1344 y363.10 0.1513
+  Belief-based                17        y790.10 y807.10   y844.47            0.1956 y347.50 0.1205
+  EWA                         21        y776.83 y797.83* y844.00             0.2049 y335.95* 0.1195
+Constant-sum 3 (M s 560)
+1-Segment
+  Random                        0       y803.69    y803.69        y803.69 0.0000 y332.71         0.1875
+  Choice Reinforcement          5       y710.14    y715.14        y726.13 0.1102 y308.47         0.1801
+  Belief-based                  6       y681.63    y687.63        y700.82* 0.1444 y296.28        0.1728
+  EWA                           8       y678.50    y686.50*       y704.09 0.1458 y301.70         0.1767
+2-Segment
+  Random                       0        y803.69    y803.69        y803.69 0.0000 y332.71 0.1875
+  Choice Reinforcement        11        y710.14    y721.14        y745.32 0.1027 y308.30 0.1800
+  Belief-based                13        y681.07    y694.07        y722.65 0.1364 y295.85* 0.1722
+  EWA                         17        y677.60    y694.60        y731.97 0.1357 y302.88 0.1712*
+Constant-sum 4 (M s 560)
+1-Segment
+  Random                       0        y1003.39 y1003.39 y1003.39 0.0000 y430.02                0.1435
+  Choice Reinforcement         7        y901.60 y908.60   y923.99 0.0945 y375.94                 0.1284
+  Belief-based                 8        y857.19 y865.19* y882.78* 0.1377 y371.18                 0.1262
+  EWA                         10        y855.29 y865.29   y887.27 0.1376 y362.26                 0.1241
+2-Segment
+  Random                       0        y1003.39 y1003.39         y1003.39   0.0000 y430.02 0.1435
+  Choice Reinforcement        15        y901.60 y916.60           y949.58    0.0865 y375.62 0.1283
+  Belief-based                17        y856.97 y873.97           y911.34    0.1290 y372.12 0.1265
+  EWA                         21        y854.00 y875.00           y921.17    0.1280 y361.15* 0.1239*
+850                      COLIN CAMERER AND TECK ᎐ HUA HO
+
+                                                TABLE I
+                                                Continued
+
+                                                      Calibration                     Validation
+Game                             No. of
+Model                          Parameters      LL       AIC            BIC       ␳2      LL         MSD
+
+Median Action (M s 378)
+1-Segment
+  Random Choice                    0        y677.29   y677.29       y677.29 0.0000 y315.24 0.1217
+  Choice Reinforcement             8        y341.70   y349.70       y365.44 0.4837 y80.27 0.0301
+  Belief-based                     9        y438.74   y447.74       y465.45 0.3389 y113.90 0.0519
+  EWA                             11        y309.30   y320.30       y341.94* 0.5271 y41.05 0.0185
+2-Segment
+  Random                           0        y677.29   y677.29       y677.29    0.0000 y315.24 0.1217
+  Choice Reinforcement            17        y331.25   y348.25       y381.70    0.4858 y66.32 0.0245
+  Belief-based                    19        y379.24   y398.24       y435.62    0.4120 y70.31 0.0250
+  EWA                             23        y290.25   y313.25*      y358.51    0.5375 y34.79* 0.0139*
+p-beauty contests (M s 1372)
+1-Segment
+  Random                           0        y6318.29 y6318.29       y6318.29   0.0000 y2707.84     0.0099
+  Choice Reinforcement            12        y5910.99 y5922.99       y5954.33   0.0626 y2594.37     0.0101
+  Belief-based                    13        y6083.04 y6096.04       y6129.99   0.0352 y2554.21     0.0097
+  EWA                             15        y5878.20 y5893.20       y5932.38   0.0673 y2381.28     0.0098
+2-Segment
+  Random                           0        y6318.29 y6318.29 y6318.29 0.0000 y2707.84 0.0099
+  Choice Reinforcement            25        y5910.98 y5935.98 y6001.28 0.0605 y2594.17 0.0101
+  Belief-based                    27        y6083.02 y6110.02 y6180.54 0.0330 y2554.11 0.0097*
+  EWA                             31        y5771.46 y5802.46* y5883.43* 0.0816 y2355.00* 0.0098
+
+
+
+   Note that these games each have a weakly dominated action Žaction 4 in G1
+and G3 and 6 in G2 and G4.. Dominated actions are useful for model
+discrimination because belief-based models always predict these actions will be
+chosen Žweakly. less frequently than dominant actions, whereas the arbitrary
+initial attractions allowed by EWA and choice reinforcement can allow frequent
+choices of dominated strategies.
+   All these games have a unique mixed strategy equilibrium that is symmetric
+Ževen though the games are not symmetric.. In games G1 and G3, in equilibrium
+actions 1᎐4 are played with probabilities 3r8, 2r8, 3r8, 0 respectively. In games
+G2 and G4, equilibrium proportions are 3r8, 2r8, 1r8, 1r8, 1r8, 0 for actions
+1᎐6.
+   Each game was played by 10 different pairs of subjects playing with the same
+partner 40 times. At the end of each period players were told their partner’s
+choice and their own payoff. In games G1 and G2 a win paid 5 rupees; in games
+G3 and G4 the payoffs were doubled to 10 rupees. ŽA typical student’s monthly
+room and board cost 600 rupees..
+   We derived MLE parameter estimates using the first 28 periods, and validated
+by predicting the last 12 periods. Because the payoff matrix is not symmetric
+Ževen though the equilibrium mixed-strategy proportions are., we estimate
+separate initial attractions A ij Ž0. and separate initial experience-weights Ni j Ž0.
+                                       ATTRACTION LEARNING                                    851
+
+                                               TABLE IIa
+                         4 = 4 CONSTANT SUM GAMES, G1 ŽWs 5 RUPEES.;
+                                    AND G3 Ž Ws 10 RUPEES.
+
+
+                                                          Column
+                                  S1           S2             S3                S4
+
+                    S1        W, L         L, W             L, W               W, L
+                    S2        L, W         L, W             W, L               W, L
+         Row
+                    S3        L, W         W, L       1r3W, 2r3W         1r3W, 2r3W
+                    S4        L, W         L, W       2r3W, 1r3W               W, L
+
+
+                                               TABLE IIb
+             6 = 6 CONSTANT-SUM GAMES, G2 ŽWs 5 RUPEES. AND G4 ŽWs 10 RUPEES.
+
+                                                          Column
+                             S1           S2         S3            S4    S5           S6
+
+                  S1        W,L          L,W        L,W            L,W   L,W          W,L
+                  S2        L,W          L,W        W,L            W,L   W,L          W,L
+                  S3        L,W          W,L        L,W            L,W   W,L          L,W
+       Row
+                  S4        L,W          W,L        W,L            L,W   L,W          L,W
+                  S5        L,W          W,L        L,W            W,L   L,W          W,L
+                  S6        L,W          L,W        W,L            L,W   W,L          W,L
+
+
+for row and column players Žthough we restrict the total experience weight N Ž0.
+to be the same for both types of players.. Tables IIIa᎐b show the MLE
+parameter estimates of the models, and ␹ 2 tests of the belief and reinforcement
+restrictions Žalong with p-values and degrees of freedom.. We report only the
+one-segment results because the two-segment results do not improve much and
+offer no special insights.
+   Tables IIIa᎐b shows that for one-segment models, belief-based models and
+choice reinforcement restrictions are weakly and strongly rejected by ␹ 2 tests,
+respectively, in the calibration phase. In the validation phase, the reinforcement
+model is worst. The belief model is better than EWA in the four-strategy games
+G1 and G3, and worse in the six-strategy games G2 and G4. These differences
+are not large, however, and seem to be due to an idiosyncracy in game G1.31
+   Tables IIIa᎐b report parameter estimates and jackknifed standard errors. The
+initial conditions Aˆj Ž0. are encouragingly similar in pairs of low- and high-stakes
+games ŽG1᎐G3 and G2᎐G4., and put low initial attraction on the dominated
+  31
+     In game G1, EWA overfits the first 28 periods because it detects some upward trend in
+strategies S1 and S3, and downward trend in S2. These trends are reversed in the last 12 periods so
+EWA predicts poorly there. The belief model estimates differences in initial expected payoffs but
+has a huge value of NˆŽ0. s 300, so it doesn’t predict much movement at all.
+852                             COLIN CAMERER AND TECK ᎐ HUA HO
+
+                                               TABLE IIIa
+                          4 = 4 CONSTANT-SUM GAMES ŽG1 AND G3. Ž Ms 560.
+
+                                                   Choice
+                             EWA                Reinforcement                Belief-Based Models
+Parameters              G1          G3         G1          G3             G1                       G3
+
+Initial Values
+ROW
+  A1 Ž0. w N 1 Ž0.x    1.320       5.237      0.000     10.000       1.780 w107.370x      3.914 w22.703x
+                      Ž0.059.     Ž0.222.    Ž0.012.    Ž0.000.     Ž0.029. w1.758x      Ž0.073. w0.423x
+  A2 Ž0. w N 2 Ž0.x    1.145       1.172      0.000      0.000       1.422 w107.290x      1.739 w25.214x
+                      Ž0.092.     Ž0.265.    Ž0.000.    Ž0.000.     Ž0.070. w4.687x      Ž0.290. w1.403x
+  A3 Ž0. w N 3 Ž0.x    1.913       7.187      5.000     10.000       2.262 w85.335x       4.927 w10.084x
+                      Ž0.066.     Ž0.300.    Ž0.000.    Ž0.000.     Ž0.057. w4.187x      Ž0.149. w1.682x
+  A4 Ž0. w N 4 Ž0.x    0.000       0.000      0.000      0.000       0.948 w0.000x        1.159 w0.000x
+                      Ž0.000.     Ž0.000.    Ž0.000.    Ž0.000.     Ž0.047. w0.000x      Ž0.193. w0.000x
+COLUMN
+ A1 Ž0. w N 1 Ž0.x     2.681       6.790      5.000     10.000       3.385 w96.887x       6.674 w19.294x
+                      Ž0.091.     Ž0.640.    Ž0.000.    Ž0.000.     Ž0.049. w2.923x      Ž0.092. w0.536x
+  A2 Ž0. w N 2 Ž0.x    2.583       6.859      5.000     10.000       3.079 w87.932x       6.423 w17.962x
+                      Ž0.102.     Ž0.580.    Ž0.000.    Ž0.000.     Ž0.043. w2.582x      Ž0.089. w0.935x
+  A3 Ž0. w N 3 Ž0.x    2.345       5.359      5.000      8.408       2.896 w115.280x      5.711 w20.744x
+                      Ž0.092.     Ž0.735.    Ž0.000.    Ž0.000.     Ž0.040. w2.563x      Ž0.136. w0.514x
+  A4 Ž0. w N 4 Ž0.x    0.000       0.000      0.000      0.000       1.281 w0.001x        2.384 w0.000x
+                      Ž0.000.     Ž0.000.    Ž0.000.    Ž0.000.     Ž0.029. w0.000x      Ž0.059. w0.000x
+      N Ž0.           19.630      18.391      1.000      1.000          300.000              58.000
+                      Ž0.065.     Ž0.713.    Ž0.000.    Ž0.000.          w0.000x             w0.001x
+Decay Parameters
+   ␾                   1.040       1.005      1.012       0.978          1.000                1.000
+                      Ž0.010.     Ž0.009.    Ž0.006.     Ž0.008.        Ž0.001.              Ž0.005.
+      ␳                0.961       0.946      0.000       0.000          1.000                1.000
+                      Ž0.014.     Ž0.011.    Ž0.000.     Ž0.000.        Ž0.001.              Ž0.005.
+Imagination factor
+     ␦               0.000         0.730      0.000       0.000          1.000                1.000
+                    Ž0.035.       Ž0.103.    Ž0.000.     Ž0.000.        Ž0.000.              Ž0.000.
+Payoff sensitivity
+     ␭               0.508         0.182      0.053       0.033          1.168                0.459
+                    Ž0.048.       Ž0.015.    Ž0.004.     Ž0.002.        Ž0.067.              Ž0.063.
+Log-likelihood
+    yLL            653.072       678.496    681.968    710.136          680.232             y681.632
+     ␹2               ᎏ             ᎏ        57.792     63.280           54.320               5.328
+Ž p-value, dof.                             Ž0.000, 3. Ž0.000, 3.      Ž0.000, 2.           Ž0.067, 2.
+
+
+
+strategies. The initial experience weight NˆŽ0. varies between about 10᎐20 and is
+close to its steady-state value of 1rŽ1 y ␳ .. This means that initial attractions
+are weighted quite heavily, which is reasonable given the slow convergence in
+these 40-period games. The decay parameters ␾ˆ and ␳ˆ are close to one, with
+␾ˆ) ␳ˆ. These numbers imply that attractions grow only slightly on average. By
+forcing ␳ s 0, in contrast, the reinforcement model forces attractions to grow
+and ‘locks in’ initial behavior too quickly. Finally, ␦ˆ is between .4 and .7 and
+                                         ATTRACTION LEARNING                                           853
+
+
+
+                                               TABLE IIIb
+                          6 = 6 CONSTANT-SUM GAMES ŽG2 AND G4. Ž Ms 560.
+
+                                                   Choice
+                              EWA               Reinforcement                Belief-Based Models
+Parameters               G2         G4          G2          G4             G2                  G4
+
+Initial Values
+ROW
+  A1 Ž0. w N 1 Ž0.x     2.996      9.491      5.000       10.000      2.309 w41.566x      5.335 w16.005x
+                       Ž0.068.    Ž0.145.    Ž0.000.      Ž0.000.    Ž0.045. w0.810x     Ž0.053. w0.283x
+  A2 Ž0. w N 2 Ž0.x     2.434      7.964      5.000       10.000      2.077 w11.048x      4.665 w0.001x
+                       Ž0.043.    Ž0.090.    Ž0.000.      Ž0.000.    Ž0.036. w0.886x     Ž0.053. w0.000x
+  A3 Ž0. w N 3 Ž0.x     0.000      0.027      0.000        0.000      1.122 w10.227x      0.734 w1.090x
+                       Ž0.015.    Ž0.081.    Ž0.000.      Ž0.000.    Ž0.086. w1.111x     Ž0.050. w0.083x
+  A4 Ž0. w N 4 Ž0.x     0.000      0.004      0.000        0.000      1.182 w18.018x      0.364 w10.704x
+                       Ž0.036.    Ž0.001.    Ž0.000.      Ž0.000.    Ž0.080. w0.850x     Ž0.026. w0.298x
+  A5 Ž0. w N 5 Ž0.x     1.338      6.105      0.229        8.501      1.615 w9.141x       3.568 w2.200x
+                       Ž0.034.    Ž0.060.    Ž0.000.      Ž0.000.    Ž0.030. w0.993x     Ž0.071. w0.115x
+  A6 Ž0. w N 6 Ž0.x     0.000      0.000      0.000        0.000      1.076 w0.000x       0.097 w0.000x
+                       Ž0.000.    Ž0.000.    Ž0.000.      Ž0.000.    Ž0.038. w0.000x     Ž0.040. w0.000x
+COLUMN
+ A1 Ž0. w N 1 Ž0.x      4.998      8.733      5.000       10.000      3.595 w25.296x      7.769 w6.692x
+                       Ž0.020.    Ž0.198.    Ž0.000.      Ž0.000.    Ž0.044. w0.797x     Ž0.072. w0.253x
+  A2 Ž0. w N 2 Ž0.x     4.047      6.306      4.852        9.996      3.218 w32.627x      6.383 w10.301x
+                       Ž0.046.    Ž0.080.    Ž0.000.      Ž0.000.    Ž0.034. w1.151x     Ž0.131. w0.496x
+  A3 Ž0. w N 3 Ž0.x     2.201      1.572      0.001        0.001      2.444 w16.539x      3.954 w5.141x
+                       Ž0.050.    Ž0.049.    Ž0.000.      Ž0.000.    Ž0.068. w0.922x     Ž0.102. w0.352x
+  A4 Ž0. w N 4 Ž0.x     3.852      6.565      4.973        9.832      3.068 w13.391x      6.557 w5.684x
+                       Ž0.043.    Ž0.070.    Ž0.000.      Ž0.000.    Ž0.053. w0.914x     Ž0.150. w0.462x
+  A5 Ž0. w N 5 Ž0.x     1.737      1.851      0.000        0.001      2.269 w2.147x       4.135 w0.028x
+                       Ž0.047.    Ž0.267.    Ž0.000.      Ž0.000.    Ž0.085. w0.389x     Ž0.213. w0.000x
+  A6 Ž0. w N 6 Ž0.x     0.000      0.000      0.000        0.000      1.663 w0.000x       3.608 w2.155x
+                       Ž0.000.    Ž0.000.    Ž0.000.      Ž0.000.    Ž0.034. w0.000x     Ž0.131. w0.373x
+  N Ž0.                15.276      9.937      1.000        1.000         90.000              30.000
+                       Ž0.009.    Ž0.017.    Ž0.000.      Ž0.000.        Ž0.012.             Ž0.448.
+Decay Parameters
+   ␾                    0.986      0.991      0.960        0.962          0.989               1.000
+                       Ž0.005.    Ž0.011.    Ž0.005.      Ž0.005.        Ž0.004.             Ž0.002.
+     ␳                  0.935      0.926      0.000        0.000          0.989               1.000
+                       Ž0.006.    Ž0.024.    Ž0.000.      Ž0.000.        Ž0.004.             Ž0.002.
+Imagination factor
+   ␦                    0.413      0.547      0.000        0.000          1.000               1.000
+                       Ž0.082.    Ž0.054.    Ž0.000.      Ž0.000.        Ž0.000.             Ž0.000.
+Payoff sensitivity
+    ␭                   0.646      0.218       0.098       0.046         1.812               1.501
+                       Ž0.030.    Ž0.019.     Ž0.005.     Ž0.002.       Ž0.123.             Ž0.019.
+     yLL              790.608    855.288    853.608      901.600       797.720             842.968
+     ␹2                  ᎏ          ᎏ       126.000       92.264        14.224              21.280
+Ž p-value, dof.                              Ž0.000,3.   Ž0.000,3.     Ž0.001,2.           Ž0.000,2.
+854                      COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+significantly different from both zero and one, except in game G1 where it is
+estimated to be zero.
+    Notice how the EWA estimates reflect a hybridization of elements of rein-
+forcement and belief learning. First, the initial EWA attractions place much less
+relative weight on the dominated strategies Žthe highest-numbered strategies 4
+or 6. than the corresponding expected payoffs in belief models. In the belief
+model the gap between the initial expected payoffs of strategy 2 Žthe dominant
+strategies . and the dominated strategies cannot be too large because the
+strategies are only weakly dominated. For example, in game G1 the estimated
+EWA attractions on row strategies 2 and 4 are 1.14 and .00, while the corre-
+sponding estimated expected payoffs are 1.42 and .95, a gap less than half as
+large. Thus, EWA exploits the flexibility of initial attractions from reinforcement
+models to squash the likelihood of playing weakly dominated strategies further
+down than belief models can. Second, EWA borrows the belief-model property
+that attractions do not grow much, since ␾ˆ and ␳ˆ are very close. Third, the
+estimates of ␦ around .5 Žexcept G1. reflect both the law of simulated effect
+Ž ␦ ) 0. and stronger effects of actual payoffs than foregone payoffs Ž ␦ - 1..
+    Our conclusions about the relative performance of reinforcement and belief
+models are different from the findings of Mookerjhee and Sopher Ž1997.. Their
+analysis differed in a couple of important ways.32 They allowed cross-effects so
+that the attraction A ij Ž t . can affect the probability of playing other strategies
+differentially, which is more general than our approach and seems to favor
+reinforcement in their estimation. Their version of reinforcement also used
+‘a¨ erage achieved earnings’ rather than Žweighted. cumulative earnings. The fact
+that ␾ˆ was very close to ␳ˆ in the EWA estimates indicates that MS took the
+right tack by using average earnings rather than cumulative earnings, because
+the cumulative-earnings assumption predicts a sharpness of convergence that is
+not evident in the data. In addition, their version of the belief model Žwhich uses
+time-averaged expected payoffs. does not begin with an initial pre-game experi-
+ence count expressing prior beliefs. Our estimates of N Ž0. range from 30 to 300,
+which means that the belief model does best when it starts with a strong prior
+and updates very little. Thus, the difference between our results and theirs is
+either due to their use of cross-effects of attractions on other-strategy probabili-
+ties, to the fact that they use averaged reinforcements rather than cumulative
+ones Žwhich improves reinforcement relative to our method., or to the fact that
+they did not allow strong prior beliefs Žwhich handicaps the belief model relative
+to our method..
+    Finally, notice that these constant-sum games simply do not distinguish
+models empirically very well Žas shown also by Erev and Roth Ž1997.., and the
+
+   32
+      Their analysis used logit estimation of strategy choices to judge whether choices depended
+more strongly on a player’s own average past earnings Ža kind of choice reinforcement. or on
+expected earnings based on opponent’s past history Žfictitious play.. They also compared models
+based on the entire previous history, weighting all observations equally, with models based on a
+five-period moving average. ŽThe entire-history models fit better..
+                                  ATTRACTION LEARNING                                        855
+
+                                           TABLE IV
+                                   THE MEDIAN EFFORT GAME
+
+                                                   Median  Xi 4
+                          7         6         5        4            3       2       1
+
+                 7      1.30       1.15     0.90      0.55         0.10   y0.45   y1.10
+                 6      1.25       1.20     1.05      0.80         0.45    0.00   y0.55
+                 5      1.10       1.15     1.10      0.95         0.70    0.35   y0.10
+           Xi    4      0.85       1.00     1.05      1.00         0.85    0.60    0.25
+                 3      0.50       0.75     0.90      0.95         0.90    0.75    0.50
+                 2      0.05       0.40     0.65      0.80         0.85    0.80    0.65
+                 1     y0.50      y0.05     0.30      0.55         0.70    0.75    0.70
+
+
+
+pseudo-R 2 ’s are low. Coordination games, in which players converge quickly,
+may prove to be a better domain in which to distinguish theories.
+
+                                 5.3. Median-action Games
+   In median-action order-statistic coordination games, the group payoff de-
+pends on the median of all players’ actions.33 Table IV shows the payoff matrix
+used by Van Huyck, Battalio, and Beil ŽVHBB Ž1990.., whose data we use.
+   Players earn a payoff that increases in the median, and decreases in the
+Žsquared. deviation from the median. The median-action games capture social
+situations in which conformity pressures induce people to behave like others do,
+but everyone prefers the group to choose a high median.
+   We estimate EWA, choice reinforcement, and belief models using sessions
+1᎐6 from VHBB Žgame ⌫ .. In their experiments groups of nine subjects each
+play ten periods together, so the sample has 54 subjects.34 In each round players
+choose an integer from 1 to 7, inclusive. At the end of each round the median is
+announced Žbut not the full distribution of choices. and players compute their
+payoffs. Since the groups are large Žand players do not know what the median
+would be if their own choice was different., we assume that players form beliefs
+over the median of all players, ignoring their own influence on the median and
+treating the group as a composite single player.
+   Figure 1a shows the actual frequencies across the six sessions, pooled to-
+gether. Initial choices are concentrated around 4᎐5, with a dip at 6 and small
+spikes at 3 and 7. Later choices move sharply toward the initial medians, which
+were always 4 or 5. A striking feature, which is masked by pooling sessions, is
+that the 10th-round median in e¨ ery session was equal to the first-round median.
+   33
+      Camerer and Ho Ž1999. also report estimates from ’weak-link’ coordination games in which the
+group payoff depends on the minimum. The parameter estimates are similar to those reported here
+ᎏfor example ␳ˆ is .65 and N Ž0. is around two.
+   34
+      They compared two treatments using nine-person groups and ‘dual market’ Ždm. treatments in
+which players play with a nine-person group and a twenty-seven person group simultaneously. There
+is no apparent or statistically-significant difference between these treatments so we pool them
+together.
+856                   COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+
+
+                   FIGURE 1A.ᎏActual frequencies, median-effort games.
+
+
+
+In three sessions the median began at 4 and stayed there; in the other three
+sessions the median began at 5 and stayed there. Figure 1a shows three key
+features of the data that any learning model should account for: The initial
+spikes at 4᎐5 roughly double in size Žas players converge fully toward them.;
+disequilibrium choices of 3 and 7 are quickly extinguished after the first period;
+and there is a ‘‘dip’’ in initial choices at 6 Žfewer players choose 6 than choose
+neighboring strategies 5 or 7..
+   From a learning point of view, median-action games are interesting because
+the penalty for deviating is fairly small if the players are close to equilibrium.
+Yet sharp convergence occurs within a couple of periods. Learning models that
+assume choices are reinforced must explain why players move quickly to equilib-
+rium despite the large reinforcement if they are close to equilibrium and the
+small extra gain from moving precisely to equilibrium. The EWA model can
+account for this swift convergence if ␦ is close to one, incorporating the
+best-responsiveness inherent in belief learning.
+                            ATTRACTION LEARNING                              857
+
+
+
+
+                      FIGURE 1B.ᎏPredictive errors of EWA model.
+
+
+
+   Table V shows estimation results for the median-action games. First we focus
+on one-segment results. EWA fits better than the reinforcement model Ž ␹ 2 s
+64.8. and much better than the belief model Ž ␹ 2 s 258.9.. The sources of
+EWA’s improved fit are evident from looking at the data and plots of prediction
+errors.
+   Figure 1a shows that in the actual data, there are two large spikes in initial
+choices at 4᎐5, smaller spikes Žabout 15% of the observations. at 3 and 7, and
+few observations at 6. The estimated EWA initial attractions basically reflect
+this pattern in the data. The accuracy of the reflection can be judged from
+Figure 1b, an EWA error plot. This figure shows the difference between ŽMLE.
+predicted frequencies of the EWA model and the actual frequencies. The
+largest error is that EWA underpredicts the frequency of choices of 3 by about
+.06; predictions of 6 and 7 are too high by .03 and .01.
+   Reinforcement and belief learning cannot fit the initial conditions as well as
+EWA, but for different reasons. Reinforcement learning underpredicts the
+858                    COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+
+
+                 FIGURE 1C.ᎏPredictive errors of choice reinforcement model.
+
+
+
+actual initial frequencies of 3 and 7 by about .08. Players who chose strategy 7 in
+the first period quickly switch to lower numbers in period 2, as Figure 1a shows.
+ŽThe same is true for players who chose strategy 3, but this cannot be seen in
+Figure 1a.. Reinforcement learning cannot predict how quickly this convergence
+occurs. Since the initial medians are 4᎐5, choices of 3 or 7 earn between $.55
+and $.95, while ex-post best responses earn $1.00 to $1.10. Since the initial
+choices are positively reinforced, reinforcement learning cannot explain why
+subjects will abandon these strategies so quickly and switch in the direction of
+the observed median. ŽEWA explains convergence with a high estimate of
+␦ˆs .85.. Since choice reinforcement does not adjust chosen strategies quickly
+enough, to maximize overall fit it deliberately misestimates the first-period
+choices by assuming the initial frequencies are close to frequencies in later
+periods, thereby underpredicting choices of 3 and 7 Žand overpredicting 4᎐5..
+   Figure 1c shows that the belief model underpredicts 3 and 7 also, but for a
+different reason. In the belief-based framework it is hard to explain why players
+                              ATTRACTION LEARNING                               859
+
+
+
+
+                    FIGURE 1D.ᎏPredictive errors of belief-based model.
+
+
+
+would play 6 less than they play 5 or 7. The problem is that initial beliefs that
+give a high expected payoff to 4᎐5 Žexpecting a median of 4᎐5. also give an
+expected payoff to 6 that is nearly as large, and larger than the expected payoff
+to 7. Beliefs that give a large expected payoff to 7, because there is a high
+probability that the median will be 7, will also give a high expected payoff to 6.
+Thus, it is difficult to find a single set of beliefs that can explain the spikes at
+4᎐5 and 7, without also predicting a spike at 6. As a result, Table V shows that
+the one-segment model generates initial expected payoffs that are higher for 6
+Ž$.78. than for 3 or 7 Ž$.71 and $.60., so it overpredicts 6 and underpredicts 3
+and 7 Žand also overpredicts 5..
+   Adding a second segment of players improves the belief-model fit dramati-
+cally. As Table V shows, the log likelihood improves a lot Žthe ␹ 2 statistics for
+the two-segment results compare one- and two-segment fits within each model..
+The two belief-model segments correspond naturally to a large Ž78%. segment
+with high expected payoffs for 4᎐5 generated by high initial beliefs in 4᎐5, and a
+                                                                      TABLE V
+
+
+
+
+                                                                                                                                                                     860
+                                                           MEDIAN EFFORT GAMES, Ž Ms 378.
+
+                                          EWA                         Choice Reinforcement                               Belief-Based Models
+Parameters                    1-Segment        2-Segment        1-Segment         2-Segment             1-Segment                       2-Segment
+
+Initial valuesrSegment Size                0.659      0.341                    0.799        0.201                               0.785                 0.215
+                                          Ž0.012 .   Ž0.012 .                Ž0.008 .     Ž0.008 .                            Ž0.007 .              Ž0.007 .
+    1Ž
+  A 0.       w N 1Ž0 .x        0.000       0.000      0.000       0.000        0.000        0.000     0.168 w0.075 x      0.457 w0.096 x       y0.500 w0.000 x
+                              Ž0.000 .    Ž0.000.    Ž0.000 .    Ž0.000.     Ž 0.000.     Ž 0.000.   Ž 0.007 w 0.018x.   Ž 0.007 w 0.010x.     Ž 0.000 w 0.000x.
+  A 0.
+    2Ž       wN   2Ž
+                       0 .x    0.000       0.095      0.034       0.000        0.000        0.002      0.491 w0.049x      0.725 w0.037 x        0.050 w0.000 x
+                              Ž0.145 .    Ž0.028.    Ž0.175.     Ž0.028.     Ž 0.028.     Ž 0.113.   Ž 0.005 w0.012x.    Ž 0.005 w 0.005x.     Ž 0.000 w 0.000x.
+  A 3Ž0 .    w N 3Ž0 .x        0.337       0.000      2.400       0.877        0.000        2.400      0.713 w0.059 x     0.893 w0.083x         0.500 w0.000 x
+                              Ž0.144 .    Ž0.000.    Ž0.010 .    Ž0.033.     Ž 0.020.     Ž 0.073.   Ž 0.002 w 0.014x.   Ž 0.002 w 0.012x.     Ž 0.000 w 0.000x.
+  A 4 Ž0 .    w N 4 Ž0 .x      0.561       2.387      2.400       2.400        2.400        0.007     0.836 w0.073 x      0.961 w1.124 x        0.850 w0.000x
+                              Ž0.143.     Ž0.005.    Ž0.328.     Ž0.000.     Ž0.000.      Ž0.379.    Ž0.003 w0.019x.     Ž 0.003 w 0.063x.     Ž 0.000 w 0.000x.
+  A 5Ž 0 .   w N 5Ž0 .x        0.505       2.400      0.000       2.261        2.400        0.006     0.859 w0.093 x      0.928 w0.490 x        1.100 w0.000 x
+                              Ž0.143 .    Ž0.008.    Ž0.327 .    Ž0.021.     Ž 0.050.     Ž 0.135.   Ž 0.003 w 0.022x.   Ž 0.003 w 0.069x.     Ž 0.000 w 0.000x.
+  A 6 Ž0 .   w N 6 Ž0 .x       0.364       2.313      1.797       1.329        1.293        0.013      0.781 w0.123 x     0.796 w0.126 x         1.250 w0.00 x
+                              Ž0.148.     Ž0.007.    Ž0.255.     Ž0.033.     Ž0.049.      Ž 0.135.   Ž 0.006 w 0.028x.   Ž 0.006 w 0.017x.     Ž 0.006 w 0.000x.
+  A7Ž0 .     w N 7Ž0 .x        0.431       2.348      2.000       0.986        0.000        2.400     0.604 w0.170x       0.564 w0.019x         1.300 w0.358x
+                              Ž0.146 .    Ž0.008.    Ž0.111 .    Ž0.041.     Ž 0.072.     Ž 0.072.   Ž 0.008 w 0.038x.   Ž 0.008 w 0.002x.     Ž 0.000 w 0.051x.
+  N Ž0 .                       0.647       0.205      0.149       1.000        1.000        1.000           0.642               1.976                0.358
+                              Ž0.059 .    Ž0.027 .   Ž0.034 .    Ž0.000.     Ž 0.000.     Ž 0.000.        Ž 0.150 .           Ž 0.115 .             Ž 0.051.
+Decay Parameters
+   ␾                           0.800       0.746      0.800       0.930        0.979        0.000          0.738               0.494                   0.999
+                              Ž0.018.     Ž0.030.    Ž0.020.     Ž0.009.     Ž 0.011.     Ž 0.235.       Ž 0.054.            Ž 0.030.                 Ž 0.00.
+    ␳                          0.000       0.000      0.000       0.000        0.000        0.000         0.738               0.494                   0.999
+                                                                                                                                                                   COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+
+
+                              Ž0.000.     Ž0.000.    Ž0.000.     Ž0.000.     Ž 0.000.     Ž 0.000.       Ž 0.054.            Ž 0.030.                Ž 0.000.
+Imagination factor
+   ␦                           0.853       0.947      0.497       0.000       0.000        0.000          1.000               1.000                    1.000
+                              Ž0.005 .    Ž0.002 .   Ž0.014 .    Ž0.000.     Ž0.000.      Ž0.000.        Ž0.000.             Ž0.000.                 Ž 0.000.
+Payoff sensitivity
+   ␭                           6.827      17.987      2.969       1.190        1.002        0.365         16.726             43.600                    5.868
+                              Ž0.251.     Ž0.869.    Ž0.127.     Ž0.015.     Ž 0.032.     Ž 0.777.       Ž 0.366.            Ž 0.837.                Ž 0.448.
+    yLL                       309.304          290.255           341.697           331.348               438.748                         379.236
+     ␹2                         ᎏ               38.098           64.785              20.698              258.888                         119.024
+  Ž p-value, dof.                             Ž0.000,12.        Ž0.000,3.          Ž0.014,9.            Ž0.000,2.                       Ž0.000,10.
+                                  ATTRACTION LEARNING                                        861
+
+smaller Ž22%. segment with belief only in 7, which generates the highest
+expected payoff for 7. While testing the restriction that the second segment does
+not improve fit rejects strongly Ž ␹ 2 s 119.0., the two-segment belief model still
+does not fit as well as the one- or two-segment EWA model.
+   Finally, Table I shows that EWA performs much better than the other models
+in out-of-sample validation, using either the LL or MSD measure. The error
+plots show that reinforcement overpredicts the number of people choosing 6 in
+periods eight and ten, because these choices are positively reinforced and should
+persist; EWA does a little better by predicting that these late-period choices
+move toward 4᎐5. The belief model predicts a growth in strategies 3 and 6 over
+time, because the expected payoffs of those strategies will be almost as high as
+the expected payoffs from strategies 4᎐5 as equilibration occurs. Since those
+strategies are rarely used in later periods, the belief model badly overpredicts
+them in those periods.
+   Besides fitting initial conditions, a good learning model must explain why
+convergence in the first couple of periods is fast and sharp. EWA does this by
+estimating a large value of ␦ Ž.85. and ␾ˆ much larger than ␳ˆ, which allows
+attractions to grow rapidly so that choice probabilities move toward zero and
+one swiftly. The low value of N Ž0., .65, also allows players to learn quickly from
+payoff reinforcement relative to initial attractions.
+   The estimates show how EWA mixes and matches the best features of belief
+and reinforcement learning: It allows near-best response Ž ␦ close to one. as in
+belief models, which explains why players choosing near-equilibrium strategies
+move quickly toward equilibrium. But as in reinforcement, it can allow arbitrary
+initial attractions, which explains the relative paucity of choices of 6 in the first
+period, and allows attractions to grow Žbecause ␳ s 0. to explain the sharpness
+of convergence. As a result, the EWA errors ŽFigure 1b. are generally much
+smaller than those in reinforcement ŽFigure 1c. and belief learning ŽFigure 1d..
+   The results shown in the error plots are for one-segment models. Adding a
+second segment improves fits significantly for all three models. In EWA, the
+larger segment Žwith proportion 66%. has an estimate ␦ˆs .95, very close to the
+belief restriction of one, while the smaller second segment has ␦ˆs .50. This
+corresponds to a segment of people with belief-type equal weighting of actual
+and foregone payoffs, and another segment who weight actual payoffs twice as
+heavily. Notice that these two segments do not particularly correspond to one
+segment of reinforcement learners and another segment of belief learners, so
+EWA is not simply capturing a mixture of these two special cases.
+   In reinforcement, the larger segment Ž80%. has parameter values which are
+similar to those in the single segment, except the estimates of initial attractions
+for 3 and 7 are zero. The smaller second segment Ž20%. is the oppositeᎏ
+strategies 3 and 7 have the largest possible initial attractions and all the others
+are close to zeroᎏexcept that ␾ˆs 0.35 This means the two-segment structure is
+   35
+      The estimate of zero for ␾ is the full-sample MLE estimate. The jackknifed standard error of
+.235 means that in many jackknife samples ␾ is estimated to be positive. Indeed, the mean of the
+jackknife estimates is .18, but this does not substantially affect the point we make in the text.
+862                                COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+trying to solve the problem of explaining first-period choices of 3 and 7 that are
+quickly extinguished by creating a second segment of players who choose only 3
+or 7 initially, then immediately decay their initial attraction. But adding this
+segment does not improve log likelihood much and the two-segment reinforce-
+ment model still fits worse than the one-segment EWA model.
+   The two-segment belief model improves fit substantially but still does not
+capture initial attractions flexibly enough Žcompared to EWA.. We think the
+problem is that the belief model requires initial behavior to be consistent with
+prior beliefs and requires beliefs to be updated using weighted fictitious play.
+The latter assumption requires ␦ s 1 and ␾ s ␳ . In games like the median-ac-
+tion game, the ␦ s 1 assumption is a reasonable approximation but ␾ s ␳ does
+not allow sharp enough convergence.36 More importantly, forcing initial attrac-
+tions to spring from expected payoffs does not explain behavior of players who
+use certain decision rules. For example, a player who randomizes among
+different selection principles will not necessarily choose according to expected
+payoffs given prior.
+
+
+                          5.4. Dominance-sol¨ able p-Beauty Contest Games
+   In a p-beauty contest game, n players simultaneously choose numbers x i in
+some interval, say w0,100x. The average of their numbers x s Ý ni x irn is com-
+puted, which establishes a target number, ␶ , equal to p⭈ x. The player whose
+number is closest to the target wins a fixed prize n ⭈ ␲ Žand ties are broken
+randomly 37 ..
+   P-beauty contest games were first studied experimentally by Nagel Ž1995. and
+extended by Ho, Camerer, and Weigelt Ž1998. and Duffy and Nagel Žin press..
+These games are useful for estimating the number of steps of iterated domi-
+nance players use in reasoning through games. To illustrate, suppose p s .7.
+Since the target can never be above 70, any number choice above 70 is
+stochastically dominated by simply picking 70. Similarly, players who obey
+dominance, and believe others do too, will pick numbers below 49 so choices in
+the interval Ž49,100x violate the conjunction of dominance and one step of
+iterated dominance. The unique Nash equilibrium is 0.
+   There are two behavioral regularities in beauty contest games Žsee Nagel
+Ž1999. for a review.. First, initial choices are widely dispersed and centered
+somewhere between the interval midpoint and the equilibrium. This basic result
+has been replicated with students on three continents and with several samples
+of sophisticated adults, including economics Ph.D.’s and a sample of CEOs and
+
+   36
+      The fact that ␳ˆs 0 in EWA Žand never varies across the jackknife runs. also suggests that
+adding more segments to the belief model will not improve fit substantially compared to EWA
+models with the same number of segments, because the belief models are always constrained to have
+␳ s ␾.
+   37
+      Formally, ␲ Ž x i , xyi . s n ⭈ ␲ ⭈ I Ž x i , argmin x j < x j y ␶ <.rÝ i I Ž x i , argmin x j < x j y ␶ <. where I Ž x, y . is
+the indicator function that equals one if xs y and 0 otherwise.
+                                     ATTRACTION LEARNING                                           863
+
+corporate presidents Žsee Camerer Ž1997... Second, when the game is repeated,
+numbers gradually converge toward the equilibrium.
+   Explaining beauty contest convergence is a challenge for adaptive learning
+models. Standard choice reinforcement is likely to converge far too slowly,
+because only one player wins each period and the losers get no reinforcement.
+Belief models with low values of ␾ , which update beliefs very quickly, may track
+the learning process reasonably well, but earlier work suggests Cournot dynam-
+ics do not converge fast enough either ŽHo, Camerer, and Weigelt Ž1998...
+   The three models were estimated on a subsample of data collected by Ho,
+Camerer, and Weigelt Ž1998.. Subjects were 196 undergraduate students in
+computer science and engineering in Singapore. Each seven-person group of
+players played 10 times together twice, with different values of p in the two
+10-period sequences. ŽOne sequence used p ) 1 and is not included below.. The
+prize was .5 Singapore dollars per player each time, about $2.33 per group for
+seven-person groups. They were publicly told the target number ␶ and privately
+told their own payoff Ži.e., whether they were closest or not..
+   We analyze a subsample of their data with ps .7 and .9, from groups of size
+7. This subsample combines groups in a ‘high experience’ condition Žthe game is
+the second one subjects play, following a game with a value of p ) 1. and the
+‘low experience’ condition Žthe game is the first they play.. The experience
+conditions were pooled to create enough data to get reliable estimates.
+   Several design choices were necessary to implement the model. The subjects
+chose integers in the interval w0, 100x, a total of 101 strategies. If we allow 101
+possible values of A j Ž0. we quickly use too many degrees of freedom estimating
+the initial attractions. Rather than imposing too many structural requirements
+on the distribution of A j Ž0., we assumed initial attractions were equal in
+ten-number intervals w0, 9x, w10, 19x, etc.38
+   To implement EWA we assumed subjects knew the winning number, w s
+argmin x j w < x j y ␶ <x, and neglected the effect of their own choice on the target
+number.39 Define the distance between the winning number and the target
+number as ds <␶ y w <. All subjects reinforced numbers in the intervals Ž␶ y d, ␶
+q d . by ␦ times the prize, and numbers in the intervals w0, ␶ y d . and Ž␶ q d, 100x
+received no reinforcement. Winners reinforced the boundary number they
+chose, either ␶ y d or ␶ q d, by the prize divided by the number of winners, and
+reinforced the other boundary number by ␦ times the prize divided by the
+
+   38
+      In our working paper we assumed the distribution of the values of A jŽ0. came from a beta
+distribution but the basic results were not much different. We also tried fitting asymmetric triangular
+distributions, in which A100 Ž0. s 0, A50 Ž0. s c, A0 Ž0. s b, and A jŽ0. was piecewise linear between 0
+and 50, and 50 and 100, with slopes Ž c y b .r50 and ycr50, respectively, and tried normal
+distributions but the basic results were unchanged.
+   39
+      Since subjects were not told the winning number Žunless their number won., the fact that we
+must assume they do to estimate the model could be considered a handicap for the EWA and
+belief-based models, and a possible advantage for choice reinforcement, which does not require this
+assumption.
+864                        COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+number of winners. Losers reinforced both boundary numbers ␶ y d and ␶ q d
+by ␦ times the prize, divided by the number of winners plus one.
+   Implementing the belief model is not straightforward because subjects were
+told only the target number, and whether they won, so they do not have enough
+information to form beliefs about what other subjects will do, and use these
+updated beliefs to calculate expected payoffs. Reinforcing numbers in some
+intervals, as in the EWA updating, will not necessarily correspond to belief
+learning based in information about all others’ numbers Žwhich they do not
+know anyway.. As a result, we estimate a restricted form of EWA with belief-type
+parameters by setting ␦ s 1, ␾ s ␳ , estimating initial belief counts in the
+ten-number intervals, and taking initial expected payoffs to be normalized belief
+counts multiplied by the prize. Numbers in the winning interval Ž␶ y d, ␶ q d . are
+reinforced by one times the prize. This corresponds to a special kind of belief
+learning in which players are learning what the target number will be and
+best-responding given their beliefs.
+   Table I reports overall results. Generally the fit is not very impressive; ␳ 2
+values are only around 7%. In the calibration sample, EWA is slightly better
+than reinforcement, which is better than the belief model. Out of sample, the
+belief model and EWA model are about equally good Žand reinforcement is
+clearly worst.; the belief model is slightly better on MSD and much worse in log
+likelihood than EWA.
+   Table VI reports results of parameter estimates.
+   The EWA model fits the data as best it can in an odd way: It assumes there is
+a general tendency to pick lower numbers, which grows stronger over time. This
+can be seen in the initial attractions, which are largest for the lowest number
+intervals,40 even though the first-period choices are clustered around 40᎐49 Ži.e.,
+attraction category A5 Ž0... Then the model assumes these initial attractions
+‘inflate’ over time Ž ␾ˆs 1.33.. The model is not capturing learning from experi-
+ence well because lagged attractions are weighted heavily compared to payoff
+reinforcement Ž Nˆ  Ž0. is 16.82., and the estimate ␦ˆ is small Ž.23..
+   Choice reinforcement uses the same ingredientsᎏhigh initial attractions for
+lower numbers, inflated by ␾ˆs 1.38ᎏbut fits substantially worse because N Ž0.
+is forced to be one and there is little reinforcement from direct payoffs Žsince
+most players lose and get nothing.. The belief model, in contrast, fits best by
+assuming initial expected payoffs are highest for choices in the interval w40, 49x,
+responding to payoff experience strongly Ž ␦ is fixed at one., and decaying
+attractions fairly quickly Ž NˆŽ0. s 1.67 and ␾ˆs .40..
+   The two-segment analysis of EWA improves calibration substantially, com-
+pared to the one-segment model, and improves on the validation log-likelihood
+modestly. The two-segment reinforcement and belief models add very little to
+fit, especially in validation.
+
+   40
+      The exception is that attractions are high for the interval w90, 100x. This is to account for the
+occasional outlying choices of 100, which are discussed at length in Ho, Camerer, and Weigelt
+Ž1998..
+                                  ATTRACTION LEARNING                                 865
+
+                                            TABLE VI
+                                 P-BEAUTY CONTESTS Ž Ms 1372.
+
+                                                  Choice
+         Parameters                EWA         Reinforcement    Belief-Based Models
+
+         Initial values
+           A1 Ž0. w N 1 Ž0.x       3.348          3.500           0.000 w0.000x
+                                  Ž0.002.        Ž0.000.         Ž0.000. w0.000x
+           A2 Ž0. w N 2 Ž0.x       3.311          3.240           0.000 w0.000x
+                                  Ž0.002.        Ž0.002.         Ž0.000. w0.000x
+           A3 Ž0. w N 3 Ž0.x       3.301          3.160           0.000 w0.000x
+                                  Ž0.002.        Ž0.002.         Ž0.000. w0.000x
+           A4 Ž0. w N 4 Ž0.x       3.269          2.891           0.000 w0.000x
+                                  Ž0.001.        Ž0.002.         Ž0.000. w0.000x
+           A5 Ž0. w N 5 Ž0.x       3.227          2.442           0.350 w0.167x
+                                  Ž0.001.        Ž0.002.         Ž0.000. w0.000x
+           A6 Ž0. w N 6 Ž0.x       3.180          2.006           0.000 w0.000x
+                                  Ž0.001.        Ž0.001.         Ž0.000. w0.000x
+           A7Ž0. w N 7Ž0.x         3.052          0.591           0.000 w0.000x
+                                  Ž0.003.        Ž0.001.         Ž0.000. w0.000x
+           A8 Ž0. w N 8 Ž0.x       2.912          0.000           0.000 w0.000x
+                                  Ž0.006.        Ž0.000.         Ž0.000. w0.000x
+           A9 Ž0. w N 9 Ž0.x       2.871          0.000           0.000 w0.000x
+                                  Ž0.005.        Ž0.000.         Ž0.000. w0.000x
+           A10 Ž0. w N 10 Ž0.x     3.060          0.700           0.000 w0.000x
+                                  Ž0.004.        Ž0.001.         Ž0.000. w0.000x
+              N Ž0.               16.815          1.000               1.672
+                                  Ž0.000.        Ž0.000.             w0.002x
+         Decay Parameters
+            ␾                      1.330          1.375               0.402
+                                  Ž0.004.        Ž0.002.             Ž0.001.
+              ␳                    0.941          0.000               0.402
+                                  Ž0.000.        Ž0.000.             Ž0.001.
+         Imagination factor
+            ␦                      0.232          0.000               1.000
+                                  Ž0.013.        Ž0.000.             Ž0.000.
+         Payoff sensitivity
+             ␭                     2.579          0.223               0.942
+                                  Ž0.002.        Ž0.002.             Ž0.001.
+         Log-likelihood
+              yLL                5878.197       5910.988            6083.036
+              ␹2                                 65.582              409.679
+           Ž p-value, dof.          ᎏ           Ž0.000,3.           Ž0.000,2.
+
+
+
+   The two EWA segments that emerge Žnot reported in Table VI. are interest-
+ing. The larger segment Ž66%. is very much like the one-segment EWA
+estimate: Estimated initial attractions increase for smaller-number intervals, ␾ˆ
+is 1.61, ␦ˆ is zero, and the experience weight NˆŽ0. is 16.83. The smaller segment
+Ž34%. is remarkably like the one-segment belief model estimate: Initial attrac-
+tions are highest for choices in the middle interval w50, 59x, ␾ˆ and ␳ˆ are small
+and very close Ž.50 and .43., ␦ˆ is estimated to be 1.0, and Nˆ Ž0. s 1.76.
+866                    COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+   None of these models captures the nature of learning well. The reinforcement
+and one-segment EWA models simply pretend that the first period is like later
+periods and inflate initial attractions to gradually reproduce the latter-period
+data. Belief models converge too slowly.
+   We think the results suggest two possible kinds of misspecification which we
+plan to remedy in future research Žand have been studied by others..
+   One possibility is that players detect trends and so, for example, use an
+extrapolative rule of the form ‘‘expect that x Ž t q 1. is the same multiple of x Ž t .
+that x Ž t . was of x Ž t y 1..’’ ŽOur model does not explicitly allow this since players
+are assumed to use stage-game strategies only.. Such a model could be adaptive,
+in the sense of using only past observations and neglecting information about
+payoffs of others, but could allow subjects to choose strategies that are best
+responses to behavior they have not observed before.
+   Another possibility is this: Since these models are adaptive, they only use
+information about previous payoffs Žincluding previous foregone payoffs.. Adap-
+tive models of this sort cannot account for learning when players sophisticatedly
+realize that other players are learning as well Žcf. Milgrom and Roberts Ž1991...
+Our earlier work ŽHo, Camerer, and Weigelt Ž1998.. and Stahl Ž1996. showed
+that a fraction of players seems to ‘iteratively best-respond’ in the sense that
+they choose numbers that are not best responses to observed history Žas in
+weighted fictitious play., but instead choose numbers that are best responses to
+anticipated best-responding by others. Because the belief and reinforcement
+models do not have this kind of sophistication, the hybrid EWA does not either.
+Including sophistication in some parsimonious way may improve the fit.
+   We are agnostic about whether the extrapolative or sophisticated approach is
+generally better. There are empirical reasons to pursue both: Some experiments
+have shown that players behave differently when they know the payoffs of others
+Že.g., Partow and Schotter Ž1993.., indicating sophistication. Still other experi-
+ments Žbesides p-beauty contests. suggest sensitivity to time trends or differ-
+ences in previous results ŽHuck, Normann, and Oechssler Ž1997...
+
+
+
+              5.5. Identification of Parameters and Model Diagnostics
+   The results generally show that EWA fits better than either of the special
+cases, both adjusting for extra parameters and predicting out of sample. A
+further test for model specification is to ask whether there are regular correla-
+tions among the three added parameters, ␦ N Ž0., and ␳ , and other parameters.
+Because the EWA model is highly nonlinear, it is possible that certain parame-
+ters covary so closely that it is difficult to identify them econometrically. ŽBy
+definition, a nonidentified parameter could be dropped from the model without
+reducing fit.. It is easy to show algebraically that the parameters are identified,
+in the sense that for arbitrary data sets and MLE parameter estimates, no other
+set of parameter values would fit equally well. However, it is possible that
+parameters are nearly nonidentified in some data sets.
+                                     ATTRACTION LEARNING                                           867
+
+   One way to check the severity of nonidentifiability is to compute correlations
+among parameter estimates across jackknife runs. Two parameters that cannot
+be disentangled will be perfectly correlated across runs. Low or modest correla-
+tions across runs indicate that parameters have detectably separate influences.
+By inspecting the intercorrelations of the three important added parameters we
+can check whether each parameter contributes to predictive power.
+   A good overall statistic is the mean absolute correlation of the estimates of a
+parameter with all the other parameters with which it might be misidentified.
+We exclude initial attractions and compute correlations among ␾ , ␦ , ␳ , N Ž0.,
+and ␭.
+   For ␦ the mean absolute correlation with the other parameters is .31, .39, and
+.23 across the constant-sum, median-action, and beauty-contest games. None of
+the correlations with a specific parameter are consistent in magnitude and sign
+across games. This indicates that ␦ is well-identified. The same statistics for
+N Ž0. are .19, .22, and .32. The latter number excludes the correlation between
+N Ž0. and ␳ in the beauty-contest game, which is nearly one because the
+declining-effect constraint is binding.41 These figures show that N Ž0. is well-
+identified too Žexcept when the constraint binds.. The mean absolute correla-
+tions for ␳ are .48, .30, and .32 Žthe latter again excludes the high correlation
+with N Ž0... These correlations are somewhat higher than for ␦ and N Ž0.,
+especially in constant-sum games, indicating possible identification problems.
+The most systematic large correlation is between ␳ and ␾ , which have an
+average correlation of .88 in the constant-sum games Žand the correlations are
+nearly equal in all four games.. They are also correlated .50 in the median-ac-
+tion game and uncorrelated Žy.03. in the beauty contest game. This pattern of
+correlations is a hint that the two depreciation parameters may be fundamen-
+tally related, in some games, in a way we hope to explore in further research.
+   The fact that the intercorrelations among estimates are modest and unsystem-
+atic Žwith noted exceptions. confirms that the parameters added in EWA
+contribute separately to its fit. We can also ask whether adding these parameters
+helps solve identification problems that arise in the belief and reinforcement
+special cases. For the reinforcement model, ␭ and ␾ are correlated y.79, y.68,
+and .05 in the three classes of games. The large negative correlations arise
+because when ␾ is lower attractions decay more rapidly, so ␭ must be larger to
+magnify small differences in attractions into large differences in choice probabil-
+ities. ŽThe same effect does not seem to happen across runs of the beauty-con-
+test game, where ␾ˆ is 1.38 and none of the models captures learning well..
+Therefore, it is difficult to identify separate influences of the two parameters.
+
+  41
+      When the declining-effect constraint N Ž0. F 1rŽ1 y ␳ . is binding, N Ž0. and ␳ are not identified
+separately. ŽThe same is true in the belief model.. We regard this as a shred of evidence about the
+way in which parameters may vary systematically across classes of games Žsee Cheung and Friedman
+Ž1997... It may be that dominance-solvable games in which observed strategy choices are constantly
+shifting location have this general property so the restriction N Ž0. s 1rŽ1 y ␳ . can be safely
+imposed.
+868                   COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+Adding ␳ and N Ž0. in the EWA model reduces the correlations between ␭ and
+␾ in magnitude, to.15, y.40, and y.20, eliminating any possible identification
+problem.
+   In the belief model the only apparent identification problem is between N Ž0.
+and ␾ , which are correlated .20, y.86, and .99 in the three games. When ␳ is
+included in the EWA model, these correlations become .23, .31, and .99, so the
+identification problem is partly eliminated.
+   Overall, there are modest identification problems in all three models. Prob-
+lems in the reinforcement and belief models are largely alleviated by introducing
+␳ , N Ž0., and ␦ , in EWA. These new parameters are fairly well identified, except
+for modest-to-strong correlation between ␳ and ␾ in two of three games. EWA
+therefore solves minor identification problems in the simpler models at the
+expense of creating another minor one, which could be explored in further
+research.
+
+                        6. DISCUSSION AND CONCLUSION
+   We proposed a general ‘experience-weighted attraction’ ŽEWA. learning
+model in which the probability of choosing a strategy is determined by its
+relative attraction. A strategy’s attractions are updated by weighting lagged
+attractions by the number of periods of ‘experience-equivalence’ they contain,
+adding the payoffs actually received or a fraction of the payoffs that would have
+been received, then normalizing by an experience weight.
+   The paper makes two basic contributions.
+   First, we show that belief learning is not fundamentally different from
+reinforcement learning because both are special examples of one general
+learning ruleᎏEWA. By showing their common basis, EWA lays bare the
+essential components of reinforcement and belief learning, and shows how those
+components can be combined to make a better model. Comparing choice
+reinforcement to EWA makes it clear that reinforcement assumes players
+ignore foregone payoffs, and attractions either cumulate as quickly as possible
+Žin some models. or average past reinforcements Žin other models.. Comparing
+weighted fictitious play to EWA makes it clear that belief models assume initial
+attractions are consistent with prior beliefs, foregone and actual payoffs are
+equally reinforcing, and attractions are weighted averages of past attractions and
+payoffs.
+   Indeed, as an empirical matter there is no reason to think that the clusters of
+parametric restrictions embodied in cumulative choice reinforcement and
+weighted fictitious play are the clusters most likely to arise in human behavior.
+For example, there is no empirical reason to think that players who ignore
+foregone payoffs also cumulate reinforcements, or that players who weight
+foregone payoffs necessarily use weighted averages of past attractions. EWA
+shows that there are many more clusters of parameter values than the two
+special kinds embodied in cumulative reinforcement and weighted fictitious play.
+For this reason, perhaps EWA should be studied more extensively in modern
+empirical work before these special cases.
+                             ATTRACTION LEARNING                                869
+
+   Second, by estimating the more general EWA model, along with reinforce-
+ment and belief-learning restrictions, our study combines methodological
+strengths of earlier studies while avoiding weaknesses. All earlier studies did one
+or more of the following: concentrated on only one or two models, focussed on
+one class of games, ignored player heterogeneity, restricted the generality of
+models, derived parameter values using methods that do not guarantee best-fits,
+or did not report inferential statistics testing relative fit. Our paper had none of
+these limits because we compared three general models, on three classes of
+games, allowed some heterogeneity, derived parameter values optimally, and
+reported both test statistics Žadjusting for free parameters three ways. and
+out-of-sample predictive accuracy Žmeasured two ways..
+   EWA fits better than the reinforcement models in all cases, and better than
+belief learning in most cases, both adjusting for degrees of freedom within-sam-
+ple and in out-of-sample prediction. Belief models are more accurate than
+reinforcement in some games, and by some measures, and less accurate in
+others.
+   The foregone payoff weight ␦ is estimated to be .42 Žaveraging across the four
+constant-sum games., .85 in median-action games, and .23 in beauty contests.
+The raw average of these numbers, .50, suggests that players generally weight
+foregone payoffs about half as much as actual payoffs. This result incorporates
+the intuitions underlying both reinforcement Žactual payoffs are stronger. and
+belief learning Žforegone payoffs matter.. Put differently, players seem to obey
+both the law of actual effect and a corollary law of simulated effect.
+   In the three games, the decay parameters ␾ and ␳ average 1.00 and .94, .80
+and 0, and 1.33 and .94. The first two games indicate that sometimes attractions
+are approximately averages Žas in belief models. and other times they cumulate
+as rapidly as possible Žas in reinforcement .. The value of ␾ above one in beauty
+contests, as discussed above, reflects a likely misspecification because the
+adaptive models with stage-game strategies do not allow players to extrapolate
+trends or have sophisticated beliefs Ža shortcoming the weighted fictitious play
+and reinforcement models also share..
+   The initial experience weight N Ž0. averages 15.80, .65, and 16.82. The large
+values in constant-sum and beauty-contest games imply that players learn slowly,
+because they give much more weight to lagged attractions than to payoffs. The
+low value of .65 in median-action games means players respond more strongly to
+payoffs, learning faster.
+   EWA also exploits the flexibility of initial attractions shared by reinforcement
+models, compared to belief models in which initial attractions must be expected
+payoffs based on some prior. This flexibility is particularly helpful in the
+coordination games.
+   The results show how EWA is able to ‘gene-splice’ the best features of belief
+and reinforcement learning while avoiding their weaknesses. For example, in the
+median-action games players begin with dispersed choices that seem to reflect
+different selection principles, and converge quickly. Explaining this pattern well
+requires initial attractions that are flexible and cumulate Žas in reinforcement .,
+870                        COLIN CAMERER AND TECK ᎐ HUA HO
+
+
+rather than belief-based initial attractions that are averages, but also requires
+players to respond strongly to foregone payoffs Žas in belief learning..
+  The fact that parameter values vary widely across the data sets is not
+surprising, because all studies that have looked for differences in parameters
+across games have found them Že.g., Crawford Ž1995., Cheung and Friedman
+Ž1997., Erev and Roth Ž1997., Chen and Tang Ž1998... Furthermore, the parame-
+ters capture different features of the dataᎏspeed of learning and sharpness of
+convergence. Since these features are different across games, parameter values
+should differ. Nonetheless, our understanding of learning will not be complete
+until there is a theory of how parameter values depend on game structure and
+experimental conditions Žsee Cheung and Friedman Ž1997. for important
+progress.. Our estimates provide raw material for such theorizing.
+
+
+                                     6.1. EWA Extensions
+   There are many directions for future research.
+   Theorizing about the kinds of equilibria to which EWA learning rules con-
+verge would be extremely useful. Hart and Mas-Colell Ž1996. provide a clue.
+They study a process in which players shift probability toward strategies they
+wish they had played, in proportion to the difference between foregone and
+actual payoffs Ž‘‘regret’’.. This process is similar to EWA learning because EWA
+also shifts probability toward high-regret strategies when ␦ is close to one. Hart
+and Mas-Collel prove that their process converges almost surely to correlated
+equilibrium for finite normal-form games. Similar results might be derived for
+EWA Žperhaps for a restricted class of games.. Interested theorists might keep
+in mind that mapping attractions into probabilities using the ratio form means
+the denominator of the updating equation vanishes, so ␳ disappears and the
+experience weight only enters if the scale of the initial attractions is restricted.
+Then the model can be sensibly reduced to two parametersᎏ ␦ and ␾ Žwhich
+can be set to one for some theoretical purposes. ᎏwhich should make theorizing
+easier.
+   An empirical direction for further research is measurement of model parame-
+ters using psychological methods. For example, if ␦ is interpreted as attention to
+foregone payoffs from unchosen alternatives, then values of ␦ should correlate
+with direct measures of attention, such as the amount of time subjects spend
+looking at different numbers in a payoff matrix Žsee Camerer et al Ž1993... ŽIn
+general, measuring attention to information provides a direct way to test
+theories that assume certain kinds of information are not used.42 . Or if N Ž0. is
+
+   42
+      For example, choice reinforcement predicts that players do not use information other than their
+own payoff history. Experiments that vary the information subjects are given have shown this
+prediction is clearly wrong ŽMookerjhee and Sopher Ž1994., Van Huyck, Battalio, and Rankin Ž1996.,
+Huck, Normann, Oechssler Ž1997... Direct measures of attention provide a more direct test: if
+players look at foregone payoffs frequently, then reinforcement models have some explaining to do.
+Similarly, all adaptive models predict that players do not use information about others’ payoffs;
+looking at those payoffs is evidence of sophistication.
+                                    ATTRACTION LEARNING                                      871
+
+the number of pregame ‘trials’ a player simulates that form prior beliefs, then
+N Ž0. should be related to the ratio of initial response times to later-period
+response times.
+   EWA will also have to be upgraded to cope with three modelling
+challengesᎏsophistication, imperfect payoff information, and specification of
+strategiesᎏbefore it is generally applicable.
+   Incorporating sophistication is important because EWA players only use
+information about their opponents’ past choices, ignoring information about
+payoffs of others. Using this information in an expanded learning rule that
+incorporates sophistication could help explain data like those from the beauty-
+contest games. Iterating sophistication might also link sophisticated-EWA to
+equilibrium theories like quantal-response equilibrium.
+   Incorporating imperfect payoff information is important because any general
+model should be able to explain learning in low-information environments,
+where players do not know everything about their own payoffs, opponents’
+strategies, etc. EWA can obviously be applied in these settings by fixing ␦ s 0
+Žwhich means EWA can apply to any environment choice to which reinforce-
+ment applies.. A more general approach would use imperfect information in
+some other way, rather than just giving it zero weight.
+   Incorporating a richer specification of strategies is important because stage-
+game strategies are not always the most natural candidates for the strategies
+that players learn about. For example, players may learn by extrapolating from
+sequences of observations, or learn about history-dependent repeated-game
+strategies or a wide variety of decision rules Žlike minimax, Nash equilibrium, or
+imitation; e.g., Stahl Ž1997... Once a set of richer strategies is specified, of
+course, EWA can still model learning about those strategies. The open question,
+therefore, is what rules to specify a priori, and how a model can winnow down a
+very large set of possible rules as quickly as humans probably do.
+   Adding these difficult extensions to EWA, and a theory of first-period play to
+supply initial attractions, might eventually create a unified way to predict how
+people play games in the lab and, eventually, how they play outside as well.
+
+  Di¨ . of Social Sciences, 228᎐77, California Institute of Technology, Pasadena, CA
+91125, U.S.A.; camerer@hss.caltech.edu
+                                         and
+  Marketing Dept., The Wharton School, Philadelphia, PA 19104, U.S.A.;
+hoteck@wharton.upenn.edu
+
+               Manuscript recei¨ ed January, 1997; final re¨ ision recei¨ ed August, 1998.
+
+
+                                           REFERENCES
+ANDERSON, S., A. DE PALMA, AND J.᎐F. THISSE Ž1992.: Discrete Choice Theory of Product Differentia-
+  tion. Cambridge: MIT Press.
+ARTHUR, B. Ž1991.: ‘‘Designing Economic Agents That Act Like Human Agents: A Behavioral
+  Approach to Bounded Rationality,’’ American Economic Re¨ iew Proceedings, 81, 353᎐359.
+872                         COLIN CAMERER AND TECK ᎐ HUA HO
+
+BATTALIO, R., L. SAMUELSON, AND J. VAN HUYCK Ž1997.: ‘‘Risk Dominance, Payoff Dominance and
+  Probabilistic Choice Learning,’’ Working Paper, Department of Economics, Texas A& M Univer-
+  sity.
+BEN ᎐AKIVA, M., AND S. LERMAN Ž1985.: Discrete Choice Analysis: Theory and Application to Tra¨ el
+  Demand. Cambridge: MIT Press.
+BEREBY ᎐MEYER, Y., AND I. EREV Ž1997.: ‘‘On Learning to Become a Successful Loser: A Compari-
+  son of Alternative Abstractions of Learning Processes in the Loss Domain,’’ Working Paper,
+  Technion᎐Israel Institute of Technology.
+BOYLAN, R. T., AND M. A. EL ᎐GAMAL Ž1992.: ‘‘Fictitious Play: A Statistical Study of Multiple
+  Economic Experiments,’’ Games and Economic Beha¨ ior, 5, 205᎐222.
+BORGERS, T., AND R. SARIN Ž1996.: ‘‘Naive Reinforcement Learning With Endogenous Aspirations,’’
+  Working Paper, Texas A& M University.
+BRANDTS, J., AND C. HOLT Žin press.: ‘‘Naive Bayesian Learning and Adjustment to Equilibrium in
+  Signalling Games,’’ Journal of Economic Beha¨ ior and Organization, forthcoming.
+BROSETA, B. Ž1995.: ‘‘Estimation of an Adaptive Learning Model in Experimental Coordination
+  Games: An ARCHŽ1. Approach,’’ Working Paper, Department of Economics, University of
+  Arizona.
+BROWN, G. Ž1951.: ‘‘Iterative Solution of Games by Fictitious Play,’’ in Acti¨ ity Analysis of Production
+  and Allocation. New York: John Wiley & Sons.
+BUSH, R., AND F. MOSTELLER Ž1955.: Stochastic Models for Learning. New York: John Wiley & Sons.
+CAMERER, C. F. Ž1997.: ‘‘Progress in Behavioral Game Theory,’’ Journal of Economic Perspecti¨ es,
+  11, 167᎐188.
+ᎏᎏᎏ Žin progress.: ‘‘Game Theory Experiments,’’ Manuscript in progress.
+CAMERER, C. F., AND T.᎐H. HO Ž1998.: ‘‘EWA Learning in Games: Probability Form, Heterogene-
+  ity, and Time Variation,’’ Journal of Mathematical Psychology, 42, 305᎐326.
+ᎏᎏᎏ Ž1999.: ‘‘EWA Learning in Games: Preliminary Estimates from Weak-Link Games,’’ in
+  Games and Human Beha¨ ior: Essays in Honor of Amnon Rapoport, ed. by D. Budescu, I. Erev, and
+  R. Zwick. New Jersey: Lawrence Erlbaum Assoc., Inc., 31᎐52.
+CAMERER, C. F., E. JOHNSON, S. SEN, AND T. RYMON Ž1993.: ‘‘Cognition and Framing in Sequential
+  Bargaining for Gains and Losses,’’ in Frontiers of Game Theory, ed. by K. Binmore, A. Kirman,
+  and P. Tani. Cambridge: MIT Press, 27᎐48.
+CARNAP, R. Ž1962.: The Logical Foundations of Probability Ž 2nd edition.. Chicago: University of
+  Chicago Press.
+CHEN, H., J. W. FRIEDMAN, AND J. F. THISSE Žin press.: Boundedly Rational Nash Equilibrium: A
+  Probabilistic Choice Approach,’’ Games and Economic Beha¨ ior, forthcoming.
+CHEN, Y., AND F᎐F. TANG Ž1998.: ‘‘Learning and Incentive Compatible Mechanisms for Public
+  Goods Provision,’’ Journal of Political Economy, 106, 633᎐662.
+CHEUNG, Y. W., AND D. FRIEDMAN Ž1997.: ‘‘Individual Learning in Normal Form Games: Some
+  Laboratory Results,’’ Games and Economic Beha¨ ior, 19, 46᎐76.
+COOPER, D., S. GARVIN, AND J. KAGEL Žin press.: ‘‘Signaling and Adaptive Learning in an Entry
+  Limit Pricing Game,’’ RAND Journal of Economics, forthcoming.
+COURNOT, A. Ž1960.: Recherches sur les Principes Mathematiques de la Theorie des Richesses.
+  Translated into English by N. Bacon as Researches in the Mathematical Principles of the Theory
+  of Wealth. London: Haffner.
+CRAWFORD, V. P. Ž1995.: ‘‘Adaptive Dynamics in Coordination Games,’’ Econometrica, 63, 103᎐143.
+CRAWFORD, V. P., AND B. BROSETA Ž1998.: ‘‘What Price Coordination? Auctioning the Right to Play
+  as a Form of Preplay Communication,’’ American Economic Re¨ iew, 88, 198᎐225.
+CROSS, J. G. Ž1983.: ‘‘A Theory of Adaptive Economic Behavior,’’ New YorkrLondon: Cambridge
+  University Press.
+DAVEY, G. C. L., AND G. MATCHETT Ž1994.: ‘‘Unconditioned Stimulus Rehearsal and the Retention
+  and Enhancement of Differential ‘Fear’ Conditioning: Effects of Trait and State Anxiety,’’
+  Journal of Abnormal Psychology, 103, 708᎐718.
+DUFFY, J., AND R. NAGEL Žin press.: ‘‘On the Robustness of Behavior in Experimental Guessing
+  Games,’’ Economic Journal, forthcoming.
+                                    ATTRACTION LEARNING                                          873
+
+EREV, I., AND A. ROTH Ž1997.: ‘‘Predicting How People Play Games: Reinforcement Learning in
+  Experimental Games with Unique, Mixed-Strategy Equilibria,’’ Working Paper, University of
+  Pittsburgh.
+EYSENCK, H. J Ž1979.: ‘‘The Conditioning Model of Neurosis,’’ Beha¨ ioral and Brain Sciences, 2,
+  155᎐199.
+FRIEDMAN, D. Ž1991.: ‘‘Evolutionary Games in Economics,’’ Econometrica, 59, 637᎐666.
+FUDENBERG, D., AND D. K. LEVINE Ž1995.: ‘‘Consistency and Cautious Fictitious Play,’’ Journal of
+  Economic Dynamics and Control, 19, 1065᎐1090.
+ᎏᎏᎏ Ž1998.: Theory of Learning in Games. Cambridge: MIT Press.
+HARLEY, C. B. Ž1981.: ‘‘Learning the Evolutionary Stable Strategies,’’ Journal of Theoretical Biology,
+  89, 611᎐633.
+HART, S., AND A. MAS-COLEL Ž1996.: ‘‘A Simple Adaptive Procedure Leading to Correlated
+  Equilibrium,’’ Hebrew University, Department of Economics, December.
+HERRNSTEIN, J. R. Ž1970.: ‘‘On the Law of Effect,’’ Journal of Experimental Analysis of Beha¨ ior, 13,
+  342᎐366.
+HO, T᎐H., C. CAMERER, AND K. WEIGELT Ž1998.: ‘‘Iterated Dominance and Iterated Best-
+  response in p-Beauty Contests,’’ American Economic Re¨ iew, 88, 947᎐969.
+HO, T᎐H., AND K. WEIGELT Ž1996.: ‘‘Task Complexity, Equilibrium Selection, and Learning: An
+  Experimental Study,’’ Management Science, 42, 659᎐679.
+HUCK, S., H.᎐T. NORMANN, AND J. OECHSSLER Ž1997.: ‘‘Learning in Cournot OligopolyᎏAn
+  Experiment,’’ Humboldt University, Department of Economics Working Paper.
+MAJURE, W. R. Ž1994.: ‘‘Disequilibrium Game Theory,’’ Unpublished dissertation, Department of
+  Economics, Massachusetts Institute of Technology.
+MCALLISTER, P. H. Ž1991.: ‘‘Adaptive Approaches to Stochastic Programming,’’ Annals of Operations
+  Research, 30, 45᎐62.
+MCKELVEY, R. D., AND T. R. PALFREY Ž1995.: ‘‘Quantal Response Equilibria for Normal Form
+  Games,’’ Games and Economic Beha¨ ior, 10, 6᎐38.
+ᎏᎏᎏ Ž1998.: ‘‘Quantal Response Equilibria for Extensive Form Games,’’ Experimental Economics,
+  1, 9᎐41.
+MILGROM, P., AND J. ROBERTS Ž1991.: ‘‘Adaptive and Sophisticated Learning in Repeated Normal
+  Form Games,’’ Games and Economic Beha¨ ior, 3, 82᎐100.
+MOOKERJEE, D., AND B. SOPHER Ž1994.: ‘‘Learning Behavior in an Experimental Matching Pennies
+  Game,’’ Games and Economic Beha¨ ior, 7, 62᎐91.
+ᎏᎏᎏ Ž1997.: ‘‘Learning and Decision Costs in Experimental Constant-sum Games,’’ Games and
+  Economic Beha¨ ior, 19, 97᎐132.
+NAGEL, R. Ž1995.: ‘‘Unraveling in Guessing Games: An Experimental Study,’’ American Economic
+  Re¨ iew, 85, 1313᎐1326.
+ᎏᎏᎏ Ž1999.: ‘‘A Review of Beauty Contest Games,’’ in Games and Human Beha¨ ior: Essays in
+  Honor of Amnon Rapoport, ed. by D. Budescu, I. Erev, and R. Zwick. New Jersey: Lawrence
+  Erlbaum Assoc., Inc., 105᎐142.
+PARTOW, Z., AND A. SCHOTTER Ž1993.: ‘‘Does Game Theory Predict Well for the Wrong Reasons:
+  An Experimental Investigation,’’ New York University C.V. Starr Center for Applied Economics
+  RR噛93᎐46, December.
+ROTH, A. E. Ž1995.: ‘‘Introduction,’’ in Handbook of Experimental Economics, ed. by A. E. Roth and
+  J. H. Kagel. Princeton: Princeton University Press.
+ROTH, A., AND I. EREV Ž1995.: ‘‘Learning in Extensive-Form Games: Experimental Data and Simple
+  Dynamic Models in the Intermediate Term,’’ Games and Economic Beha¨ ior, 8, 164᎐212.
+SARIN, R. Ž1995.: ‘‘Learning Through Reinforcement: The Cross Model,’’ Working Paper, Depart-
+  ment of Economics, Texas A& M University.
+SARIN, R., AND F. VAHID Ž1997.: ‘‘Payoff Assessments Without Probabilities: Incorporating ‘Similar-
+  ity’ Among Strategies,’’ Working Paper, Department of Economics, Texas A& M University.
+SELTEN, R. Ž1991.: ‘‘Evolution, Learning, and Economic Behavior,’’ Journal of Risk Uncertainty, 3,
+  3᎐24.
+ᎏᎏᎏ Ž1997.: ‘‘Features of Experimentally Observed Bounded Rationality,’’ Universitat Bonn
+  Sonderforschungsbereich 303, Discussion Paper No. B-421, November.
+874                       COLIN CAMERER AND TECK ᎐ HUA HO
+
+SELTEN, R., AND R. STOECKER Ž1986.: ‘‘End Behavior in Sequences of Finite Prisoner’s Dilemma
+  Supergames,’’ Journal of Economic Beha¨ ior and Organization, 7, 47᎐70.
+SMITH, A. Ž1981.: An Inquiry into Nature and Causes of the Wealth of Nations. Indianapolis: Liberty
+  Classics.
+STAHL, D. Ž1996.: ‘‘Boundedly Rational Rule Learning in a Guessing Game,’’ Games and Economic
+  Beha¨ ior, 16, 303᎐330.
+ᎏᎏᎏ Ž1997.: ‘‘Rule Learning in Symmetric Normal-Form Games: Theory and Evidence,’’ Working
+  Paper, Department of Economics, University of Texas.
+TANG, F. Ž1996.: ‘‘Anticipatory Learning in Two-person Games: An Experimental Study,’’ Working
+  Paper, University of Bonn Working Paper.
+THORNDIKE, E. L. Ž1911.: Animal Intelligence. New York: Macmillan.
+TVERSKY, A., AND D. KAHNEMAN Ž1992.: ‘‘Advances in Prospect Theory: Cumulative Representation
+  of Uncertainty,’’ Journal of Risk and Uncertainty, 5, 297᎐323.
+VAN HUYCK, J., R. BATTALIO, AND R. BEIL Ž1990.: ‘‘Strategic Uncertainty, Equilibrium Selection,
+  and Coordination Failure in Average Opinion Games,’’ Quarterly Journal of Economics, 106,
+  885᎐909.
+VAN HUYCK, J., R. BATTALIO, AND F. W. RANKIN Ž1996.: ‘‘Selection Dynamics and Adaptive
+  Behavior Without Much Information,’’ Working Paper, Department of Economics, Texas A & M
+  University.
+WEIBULL, J. W. Ž1997.: ‘‘What Have We Learned From Evolutionary Game Theory So Far?’’
+  Stockholm School of Economics Research Institute of Industrial Economics Working Paper
+  No. 487.
+

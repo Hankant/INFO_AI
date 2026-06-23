@@ -1,0 +1,230 @@
+{"kind":"deck","id":"pr/lj83bj","name":"Deck"}
+{"kind":"layout","layoutId":"ccbe7c50-354a-4a4b-b25a-ad65a51b32e8","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"3c5de7ad-fd95-4848-ba2e-49acc8ae6e7a","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/3ze3xy","slide":1,"title":"Conference Research Plan","textShapes":5}
+{"kind":"shape","id":"sh/4zidonyd","slide":1,"bbox":[0,0,24,720]}
+{"kind":"shape","id":"sh/fepkzupw","slide":1,"bbox":[84,54,220.8,28]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":1,"text":"Conference Research Plan","textPreview":"Conference Research Plan","textChars":24,"textLines":1,"bbox":[96,59,196.8,18]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":1,"text":"学习 AI 的角色：\n人类如何形成稳定的人机协作架构","textPreview":"学习 AI 的角色： | 人类如何形成稳定的人机协作架构","textChars":26,"textLines":2,"bbox":[84,118,860,170]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":1,"text":"从 trust/adoption 转向 architecture learning","textPreview":"从 trust/adoption 转向 architecture learning","textChars":41,"textLines":1,"bbox":[84,302,760,60]}
+{"kind":"shape","id":"sh/f6dcbulw","slide":1,"bbox":[84,404,856,144]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":1,"text":"AI error 最值得警惕的后果，不是某一次互动中的 trust 下滑，而是它可能通过非对称学习重画权限边界，进而把人机协作系统推向一条长期低 AI 授权的收敛路径。","textPreview":"AI error 最值得警惕的后果，不是某一次互动中的 trust 下滑，而是它可能通过非对称学习重画权限边界，进而把人机协作系统推向一条长期低 AI 授权的收敛路径。","textChars":84,"textLines":1,"bbox":[112,434,800,86]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":1,"text":"Real multi-agent redo package | June 2026","textPreview":"Real multi-agent redo package | June 2026","textChars":41,"textLines":1,"bbox":[84,632,420,24]}
+{"kind":"notes","id":"nt/3ze3xy","slide":1,"text":"开场不要先讲 trust。先讲现实问题已经变了：组织现在决定的是 AI 的角色，而不是要不要碰它。\n一句话主张要咬住：AI error 的关键后果不是短期 trust 下降，而是长期授权路径被改写。\n如果评委一上来把题目听成 adoption，请立刻把问题重述成 role configuration 与 architecture learning。"}
+{"kind":"slide","id":"sl/sw23v4","slide":2,"title":"WHY NOW","textShapes":13}
+{"kind":"shape","id":"sh/7ed8bat4","slide":2,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/0z61032l","slide":2,"text":"WHY NOW","textPreview":"WHY NOW","textChars":7,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/ih4byhgn","slide":2,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/72x4nap4","slide":2,"text":"The Problem Has Changed","textPreview":"The Problem Has Changed","textChars":23,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":2,"text":"AI 时代的核心问题已经从“是否采用”变成“如何配置角色”。","textPreview":"AI 时代的核心问题已经从“是否采用”变成“如何配置角色”。","textChars":30,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/p8nqxs72","slide":2,"bbox":[72,170,470,400]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":2,"text":"What the old frame asks","textPreview":"What the old frame asks","textChars":23,"textLines":1,"bbox":[94,188,426,28]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":2,"text":"Do people trust AI?\nWill users adopt AI?\nWill they accept one piece of advice?\nCan they calibrate AI confidence?","textPreview":"Do people trust AI? | Will users adopt AI? | Will they accept one piece of advice? | Can they calibrate AI confidence?","textChars":112,"textLines":4,"bbox":[94,224,426,328]}
+{"kind":"shape","id":"sh/rmhk3q5o","slide":2,"bbox":[72,588,470,82]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":2,"text":"What this project asks","textPreview":"What this project asks","textChars":22,"textLines":1,"bbox":[94,606,426,28]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":2,"text":"In repeated feedback, where do humans finally place AI in the decision chain?","textPreview":"In repeated feedback, where do humans finally place AI in the decision chain?","textChars":77,"textLines":1,"bbox":[94,642,426,10]}
+{"kind":"shape","id":"sh/g7adsji5","slide":2,"bbox":[614,188,530,66]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":2,"text":"1  Human-only","textPreview":"1  Human-only","textChars":13,"textLines":1,"bbox":[638,208,482,30]}
+{"kind":"shape","id":"sh/yd0z6103","slide":2,"bbox":[614,274,530,66]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":2,"text":"2  AI advice + human decision","textPreview":"2  AI advice + human decision","textChars":29,"textLines":1,"bbox":[638,294,482,30]}
+{"kind":"shape","id":"sh/gfmlkjm1","slide":2,"bbox":[614,360,530,66]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":2,"text":"3  AI recommendation + confirmation","textPreview":"3  AI recommendation + confirmation","textChars":35,"textLines":1,"bbox":[638,380,482,30]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":2,"bbox":[614,446,530,66]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":2,"text":"4  AI default + human override","textPreview":"4  AI default + human override","textChars":30,"textLines":1,"bbox":[638,466,482,30]}
+{"kind":"shape","id":"sh/vahoza1g","slide":2,"bbox":[614,532,530,66]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":2,"text":"5  AI autonomous decision","textPreview":"5  AI autonomous decision","textChars":25,"textLines":1,"bbox":[638,552,482,30]}
+{"kind":"notes","id":"nt/sw23v4","slide":2,"text":"这里要明确：AI 不是普通工具，它可以是顾问、推荐者、默认执行者，甚至自主决策者。\n因此研究问题不能停留在 use vs. not use，而必须升级成 how to organize human-AI collaboration。\n如果听众说这仍然像 adoption，就强调 adoption 只能回答“用不用”，不能回答“放在哪”。"}
+{"kind":"slide","id":"sl/hlufy7","slide":3,"title":"LITERATURE GAP","textShapes":13}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":3,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":3,"text":"LITERATURE GAP","textPreview":"LITERATURE GAP","textChars":14,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/u9knih4b","slide":3,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/judg7ads","slide":3,"text":"Why Existing Literatures Are Not Enough","textPreview":"Why Existing Literatures Are Not Enough","textChars":39,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":3,"text":"它们解释短期反应很多，但解释长期协作结构形成很少。","textPreview":"它们解释短期反应很多，但解释长期协作结构形成很少。","textChars":25,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/1032lszq","slide":3,"bbox":[72,180,480,148]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":3,"text":"Trust","textPreview":"Trust","textChars":5,"textLines":1,"bbox":[96,202,180,30]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":3,"text":"Explains whether an output is worth believing.","textPreview":"Explains whether an output is worth believing.","textChars":46,"textLines":1,"bbox":[96,244,432,58]}
+{"kind":"shape","id":"sh/v6psfil0","slide":3,"bbox":[650,180,480,148]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":3,"text":"Advice-taking","textPreview":"Advice-taking","textChars":13,"textLines":1,"bbox":[674,202,180,30]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":3,"text":"Explains whether one recommendation is accepted.","textPreview":"Explains whether one recommendation is accepted.","textChars":48,"textLines":1,"bbox":[674,244,432,58]}
+{"kind":"shape","id":"sh/knih4byh","slide":3,"bbox":[72,366,480,148]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":3,"text":"Calibration","textPreview":"Calibration","textChars":11,"textLines":1,"bbox":[96,388,180,30]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":3,"text":"Explains whether users understand confidence signals.","textPreview":"Explains whether users understand confidence signals.","textChars":53,"textLines":1,"bbox":[96,430,432,58]}
+{"kind":"shape","id":"sh/d0z61032","slide":3,"bbox":[650,366,480,148]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":3,"text":"Aversion","textPreview":"Aversion","textChars":8,"textLines":1,"bbox":[674,388,180,30]}
+{"kind":"textbox","id":"sh/vixczed8","slide":3,"text":"Explains whether algorithm errors trigger immediate punishment.","textPreview":"Explains whether algorithm errors trigger immediate punishment.","textChars":63,"textLines":1,"bbox":[674,430,432,58]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":3,"bbox":[196,562,888,92]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":3,"text":"Missing piece: long-run architecture formation under repeated feedback.","textPreview":"Missing piece: long-run architecture formation under repeated feedback.","textChars":71,"textLines":1,"bbox":[224,586,832,44]}
+{"kind":"notes","id":"nt/hlufy7","slide":3,"text":"这页不是贬低旧文献，而是指出它们的分析单位大多是单轮判断或局部反馈。\n我们要补的是 architecture-level learning，不是再做一个更复杂的 trust study。\n如果被问 novelty 在哪里，答案是：研究对象、时间尺度、学习内容和结果变量都换了。"}
+{"kind":"slide","id":"sl/kigrr7","slide":4,"title":"FRAMING","textShapes":10}
+{"kind":"shape","id":"sh/g7adsji5","slide":4,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":4,"text":"FRAMING","textPreview":"FRAMING","textChars":7,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/90je9cvi","slide":4,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":4,"text":"Theoretical Reframing","textPreview":"Theoretical Reframing","textChars":21,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":4,"text":"这不是换标题，而是同时改写研究对象、时间尺度、学习内容和结果变量。","textPreview":"这不是换标题，而是同时改写研究对象、时间尺度、学习内容和结果变量。","textChars":33,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/yd0z6103","slide":4,"bbox":[72,188,500,398]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":4,"text":"Old frame","textPreview":"Old frame","textChars":9,"textLines":1,"bbox":[94,206,456,28]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":4,"text":"Object: attitudes toward AI\nTime scale: one-shot response\nLearning target: AI capability\nOutcome: adoption, reliance, trust","textPreview":"Object: attitudes toward AI | Time scale: one-shot response | Learning target: AI capability | Outcome: adoption, reliance, trust","textChars":123,"textLines":4,"bbox":[94,242,456,326]}
+{"kind":"shape","id":"sh/ahoza1gv","slide":4,"bbox":[708,188,500,398]}
+{"kind":"textbox","id":"sh/32lszqtc","slide":4,"text":"New frame","textPreview":"New frame","textChars":9,"textLines":1,"bbox":[730,206,456,28]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":4,"text":"Object: collaboration architecture\nTime scale: long-run convergence\nLearning target: AI role in the system\nOutcome: autonomy path, boundary, lock-in","textPreview":"Object: collaboration architecture | Time scale: long-run convergence | Learning target: AI role in the system | Outcome: autonomy path, ...","textChars":148,"textLines":4,"bbox":[730,242,456,326]}
+{"kind":"textbox","id":"sh/l87ed8ba","slide":4,"text":"TO","textPreview":"TO","textChars":2,"textLines":1,"bbox":[590,336,100,64]}
+{"kind":"shape","id":"sh/at47y1kr","slide":4,"bbox":[604,282,70,2]}
+{"kind":"shape","id":"sh/3ex0nuxc","slide":4,"bbox":[604,436,70,2]}
+{"kind":"shape","id":"sh/szqtcj6t","slide":4,"bbox":[270,610,740,52]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":4,"text":"From trust/adoption -> architecture learning; from short-term error response -> long-run convergence.","textPreview":"From trust/adoption -> architecture learning; from short-term error response -> long-run convergence.","textChars":101,"textLines":1,"bbox":[298,626,684,20]}
+{"kind":"notes","id":"nt/kigrr7","slide":4,"text":"这页是 framing 的中轴页。要讲清：不是换个更响亮的词，而是整个问题结构变了。\nAgentA 的红线是：如果主因变量能被 trust 量表替代，项目就已经降级。\n这里可以主动点出：我们研究的是 role learning，不是 capability learning。"}
+{"kind":"slide","id":"sl/hj8zr2","slide":5,"title":"CORE THEORY","textShapes":11}
+{"kind":"shape","id":"sh/at47y1kr","slide":5,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":5,"text":"CORE THEORY","textPreview":"CORE THEORY","textChars":11,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/32lszqtc","slide":5,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":5,"text":"Core Theory","textPreview":"Core Theory","textChars":11,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/l87ed8ba","slide":5,"text":"反馈更新的是架构吸引力，而不是抽象 trust 分数。","textPreview":"反馈更新的是架构吸引力，而不是抽象 trust 分数。","textChars":27,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/sneloj2t","slide":5,"bbox":[108,250,188,130]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":5,"text":"1  Repeated feedback","textPreview":"1  Repeated feedback","textChars":20,"textLines":1,"bbox":[126,286,152,66]}
+{"kind":"shape","id":"sh/e9cvixcz","slide":5,"bbox":[322,250,188,130]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":5,"text":"2  Architecture attraction updating","textPreview":"2  Architecture attraction updating","textChars":35,"textLines":1,"bbox":[340,286,152,66]}
+{"kind":"shape","id":"sh/xs72x4na","slide":5,"bbox":[536,250,188,130]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":5,"text":"3  AI vs. human error asymmetry","textPreview":"3  AI vs. human error asymmetry","textChars":31,"textLines":1,"bbox":[554,286,152,66]}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":5,"bbox":[750,250,188,130]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":5,"text":"4  Path dependence","textPreview":"4  Path dependence","textChars":18,"textLines":1,"bbox":[768,286,152,66]}
+{"kind":"shape","id":"sh/1gvy90je","slide":5,"bbox":[964,250,188,130]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":5,"text":"5  Convergence and steady state","textPreview":"5  Convergence and steady state","textChars":31,"textLines":1,"bbox":[982,286,152,66]}
+{"kind":"shape","id":"sh/je9cvixc","slide":5,"bbox":[214,446,852,174]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":5,"text":"The strongest claim","textPreview":"The strongest claim","textChars":19,"textLines":1,"bbox":[236,464,808,28]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":5,"text":"Humans do not only learn whether AI is reliable; they learn whether AI deserves a particular role.\nAI error matters because it can be interpreted as role misfit, not merely answer-level failure.\nEarly AI error can reduce future exposure to high-autonomy structures and slow recovery.","textPreview":"Humans do not only learn whether AI is reliable; they learn whether AI deserves a particular role. | AI error matters because it can be i...","textChars":283,"textLines":3,"bbox":[236,500,808,102]}
+{"kind":"notes","id":"nt/hj8zr2","slide":5,"text":"这一页要把机制讲实：错误影响的不只是答案评价，更是角色授权判断。\n如果评委问为什么 early error 关键，不要答“首因效应”，要答“它改写了后续暴露与修复机会”。\n这里的 steady state 是 EWA 意义上的学习稳定状态，不是传统 Nash equilibrium。"}
+{"kind":"slide","id":"sl/vzng67","slide":6,"title":"QUESTIONS","textShapes":8}
+{"kind":"shape","id":"sh/6dcbulwv","slide":6,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":6,"text":"QUESTIONS","textPreview":"QUESTIONS","textChars":9,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/vmtwra5g","slide":6,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/61032lsz","slide":6,"text":"Research Questions and Hypotheses","textPreview":"Research Questions and Hypotheses","textChars":33,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":6,"text":"主问题是角色学习，机制问题是非对称更新，结果问题是路径依赖。","textPreview":"主问题是角色学习，机制问题是非对称更新，结果问题是路径依赖。","textChars":30,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":6,"bbox":[72,182,528,450]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":6,"text":"Research questions","textPreview":"Research questions","textChars":18,"textLines":1,"bbox":[94,200,484,28]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":6,"text":"Do humans converge toward stable human-AI collaboration architectures under repeated feedback?\nWhen average objective performance is held equal, do AI errors trigger stronger negative architecture updating than human errors?\nDo early AI errors create path-dependent convergence toward low-AI-autonomy structures?\nCan the resulting steady state deviate from an objective benchmark?","textPreview":"Do humans converge toward stable human-AI collaboration architectures under repeated feedback? | When average objective performance is he...","textChars":380,"textLines":4,"bbox":[94,236,484,378]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":6,"bbox":[680,182,528,450]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":6,"text":"Hypotheses","textPreview":"Hypotheses","textChars":10,"textLines":1,"bbox":[702,200,484,28]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":6,"text":"H1: AI errors carry stronger negative weights than human errors.\nH2: Early AI error lowers long-run autonomy choice.\nH3: Recovery from AI error is weaker than the initial damage.\nH4: Human early error does not symmetrically push people toward high AI autonomy.\nH5: Participants may settle into suboptimal low-autonomy steady states.","textPreview":"H1: AI errors carry stronger negative weights than human errors. | H2: Early AI error lowers long-run autonomy choice. | H3: Recovery fro...","textChars":332,"textLines":5,"bbox":[702,236,484,378]}
+{"kind":"notes","id":"nt/vzng67","slide":6,"text":"这里要让听众看到：问题不是‘下一轮会不会少用一点 AI’，而是‘长期会收敛到哪里’。\nH5 很关键，它把项目从普通 behavior response 拉到 suboptimal institutional outcome。\n如果被追问为什么要谈最优，需要说明：没有客观 benchmark，就不能声称观察到了次优锁定。"}
+{"kind":"slide","id":"sl/d6r3tw","slide":7,"title":"DESIGN","textShapes":16}
+{"kind":"shape","id":"sh/6dcbulwv","slide":7,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":7,"text":"DESIGN","textPreview":"DESIGN","textChars":6,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/vmtwra5g","slide":7,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/61032lsz","slide":7,"text":"Experimental Design","textPreview":"Experimental Design","textChars":19,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":7,"text":"多轮行为实验 + 动态学习模型，用架构选择轨迹而不是问卷态度来识别机制。","textPreview":"多轮行为实验 + 动态学习模型，用架构选择轨迹而不是问卷态度来识别机制。","textChars":36,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":7,"bbox":[72,176,208,110]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":7,"text":"90","textPreview":"90","textChars":2,"textLines":1,"bbox":[94,196,164,40]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":7,"text":"paid rounds","textPreview":"paid rounds","textChars":11,"textLines":1,"bbox":[94,238,164,28]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":7,"bbox":[318,176,208,110]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":7,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[340,196,164,40]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":7,"text":"architecture choices","textPreview":"architecture choices","textChars":20,"textLines":1,"bbox":[340,238,164,28]}
+{"kind":"shape","id":"sh/ji5snelo","slide":7,"bbox":[564,176,208,110]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":7,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[586,196,164,40]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":7,"text":"experimental conditions","textPreview":"experimental conditions","textChars":23,"textLines":1,"bbox":[586,238,164,28]}
+{"kind":"shape","id":"sh/ulwval87","slide":7,"bbox":[810,176,208,110]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":7,"text":"61-90","textPreview":"61-90","textChars":5,"textLines":1,"bbox":[832,196,164,40]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":7,"text":"steady-state window","textPreview":"steady-state window","textChars":19,"textLines":1,"bbox":[832,238,164,28]}
+{"kind":"shape","id":"sh/18jqh0fe","slide":7,"bbox":[72,330,520,304]}
+{"kind":"textbox","id":"sh/1032lszq","slide":7,"text":"Architecture ladder","textPreview":"Architecture ladder","textChars":19,"textLines":1,"bbox":[94,348,476,28]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":7,"text":"Human-only\nAI advice + human decision\nAI recommendation + human confirmation\nAI default + human override\nAI autonomous decision","textPreview":"Human-only | AI advice + human decision | AI recommendation + human confirmation | AI default + human override | AI autonomous decision","textChars":127,"textLines":5,"bbox":[94,384,476,232]}
+{"kind":"shape","id":"sh/judg7ads","slide":7,"bbox":[688,330,520,304]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":7,"text":"Conditions","textPreview":"Conditions","textChars":10,"textLines":1,"bbox":[710,348,476,28]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":7,"text":"AI Early Error\nAI Late Error\nHuman Early Error\nEvenly Distributed Errors","textPreview":"AI Early Error | AI Late Error | Human Early Error | Evenly Distributed Errors","textChars":72,"textLines":4,"bbox":[710,384,476,232]}
+{"kind":"notes","id":"nt/d6r3tw","slide":7,"text":"分析单位必须是 repeated architecture choice trajectory，而不是单次 advice acceptance。\n多轮设计是红线。如果只做 vignette 或十轮以内，无法研究 convergence 与 steady state。\n汇报时要强调：主结果不是 trust，而是 autonomy path、switching rate、recovery speed 和 low-autonomy lock-in。"}
+{"kind":"slide","id":"sl/n5u299","slide":8,"title":"IDENTIFICATION","textShapes":9}
+{"kind":"shape","id":"sh/at47y1kr","slide":8,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":8,"text":"IDENTIFICATION","textPreview":"IDENTIFICATION","textChars":14,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/32lszqtc","slide":8,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":8,"text":"What Identifies Path Dependence","textPreview":"What Identifies Path Dependence","textChars":31,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/l87ed8ba","slide":8,"text":"同均值，不同路径；同冲击强度，不同来源。","textPreview":"同均值，不同路径；同冲击强度，不同来源。","textChars":20,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/sneloj2t","slide":8,"bbox":[72,188,520,370]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":8,"text":"AI Early Error vs. AI Late Error","textPreview":"AI Early Error vs. AI Late Error","textChars":32,"textLines":1,"bbox":[94,206,476,28]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":8,"text":"Same total AI errors\nSame long-run AI average accuracy\nSame human average accuracy\nSame cases and cost rules\nOnly timing differs\nIf 61-90 still diverges, sequence changed the path","textPreview":"Same total AI errors | Same long-run AI average accuracy | Same human average accuracy | Same cases and cost rules | Only timing differs ...","textChars":179,"textLines":6,"bbox":[94,242,476,298]}
+{"kind":"shape","id":"sh/87ed8bat","slide":8,"bbox":[688,188,520,370]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":8,"text":"AI Early Error vs. Human Early Error","textPreview":"AI Early Error vs. Human Early Error","textChars":36,"textLines":1,"bbox":[710,206,476,28]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":8,"text":"Same early shock timing\nSame shock quantity and severity\nSame long-run average performance\nOnly source differs\nIf AI shock lowers autonomy more, punishment is source-based","textPreview":"Same early shock timing | Same shock quantity and severity | Same long-run average performance | Only source differs | If AI shock lowers...","textChars":171,"textLines":5,"bbox":[710,242,476,298]}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":8,"bbox":[222,586,836,62]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":8,"text":"Common recovery window: all shocks end before the final observation window.","textPreview":"Common recovery window: all shocks end before the final observation window.","textChars":75,"textLines":1,"bbox":[248,604,784,22]}
+{"kind":"notes","id":"nt/n5u299","slide":8,"text":"这是方法页的核心。最重要的一句话是：我们操控的是经验路径，不是能力水平。\n如果 AI 与 human 长期平均表现不同，后期授权差异就可能只是 rational response，而不是 learning path。\n共同恢复窗口是为了排除‘最近冲击更强’而不是路径依赖的解释。"}
+{"kind":"slide","id":"sl/jnv6yp","slide":9,"title":"ALTERNATIVE EXPLANATIONS","textShapes":12}
+{"kind":"shape","id":"sh/d8v6psfi","slide":9,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":9,"text":"ALTERNATIVE EXPLANATIONS","textPreview":"ALTERNATIVE EXPLANATIONS","textChars":24,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/ovahoza1","slide":9,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":9,"text":"What This Is Not","textPreview":"What This Is Not","textChars":16,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":9,"text":"要有力声称路径依赖，必须系统排除替代解释。","textPreview":"要有力声称路径依赖，必须系统排除替代解释。","textChars":21,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/vahoza1g","slide":9,"bbox":[72,184,480,156]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":9,"text":"Prior anti-AI bias","textPreview":"Prior anti-AI bias","textChars":18,"textLines":1,"bbox":[96,204,432,30]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":9,"text":"Measure prior AI attitude and initial architecture preference; estimate initial attraction separately.","textPreview":"Measure prior AI attitude and initial architecture preference; estimate initial attraction separately.","textChars":102,"textLines":1,"bbox":[96,246,432,70]}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":9,"bbox":[650,184,480,156]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":9,"text":"Generic inertia","textPreview":"Generic inertia","textChars":15,"textLines":1,"bbox":[674,204,432,30]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":9,"text":"Estimate switching cost eta so we can separate ‘too lazy to switch’ from path-dependent updating.","textPreview":"Estimate switching cost eta so we can separate ‘too lazy to switch’ from path-dependent updating.","textChars":97,"textLines":1,"bbox":[674,246,432,70]}
+{"kind":"shape","id":"sh/i5sneloj","slide":9,"bbox":[72,390,480,156]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":9,"text":"Recent shock effect","textPreview":"Recent shock effect","textChars":19,"textLines":1,"bbox":[96,410,432,30]}
+{"kind":"textbox","id":"sh/wjudg7ad","slide":9,"text":"All shocks end before the common final window; if early shock still matters, it is not just recency.","textPreview":"All shocks end before the common final window; if early shock still matters, it is not just recency.","textChars":100,"textLines":1,"bbox":[96,452,432,70]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":9,"bbox":[650,390,480,156]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":9,"text":"Fatigue or task difficulty","textPreview":"Fatigue or task difficulty","textChars":26,"textLines":1,"bbox":[674,410,432,30]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":9,"text":"Use the same case pool and round controls so differences cannot be explained by some groups simply facing harder tasks.","textPreview":"Use the same case pool and round controls so differences cannot be explained by some groups simply facing harder tasks.","textChars":119,"textLines":1,"bbox":[674,452,432,70]}
+{"kind":"notes","id":"nt/jnv6yp","slide":9,"text":"这一页对应 AgentB 的‘替代解释排除’和 AgentA 的‘监管红线’。\n如果不能把先验偏见、惯性和近期冲击拆开，本研究就会看起来像更复杂的 algorithm aversion。\n答辩时可以主动说：我们并不否认这些机制可能存在，但主机制必须是 AI error 改写角色授权路径。"}
+{"kind":"slide","id":"sl/ng02le","slide":10,"title":"MODEL","textShapes":9}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":10,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":10,"text":"MODEL","textPreview":"MODEL","textChars":5,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/1cfa9w3m","slide":10,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":10,"text":"EWA Is the Theory Language","textPreview":"EWA Is the Theory Language","textChars":26,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":10,"text":"如果 EWA 只在最后出现，它就是装饰；只有贯穿理论和设计，它才有意义。","textPreview":"如果 EWA 只在最后出现，它就是装饰；只有贯穿理论和设计，它才有意义。","textChars":36,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/ulwval87","slide":10,"bbox":[72,188,590,386]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":10,"text":"N(t) = rho * N(t-1) + 1\n\nA(k,t) = prior attraction\n          + experienced payoff updating\n\nP(choice k) = f[ attraction,\n                  switching cost, sensitivity ]","textPreview":"N(t) = rho * N(t-1) + 1 |  | A(k,t) = prior attraction |           + experienced payoff updating |  | P(choice k) = f[ attraction, |     ...","textChars":168,"textLines":7,"bbox":[100,220,534,182]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":10,"text":"Key interpretation:\nAI errors and human errors can carry different updating weights.\nEarly shocks matter because they change future exposure and future updating opportunities.","textPreview":"Key interpretation: | AI errors and human errors can carry different updating weights. | Early shocks matter because they change future e...","textChars":175,"textLines":3,"bbox":[100,442,534,88]}
+{"kind":"shape","id":"sh/al87ed8b","slide":10,"bbox":[706,188,502,386]}
+{"kind":"textbox","id":"sh/z61032ls","slide":10,"text":"Parameters that matter","textPreview":"Parameters that matter","textChars":22,"textLines":1,"bbox":[728,206,458,28]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":10,"text":"theta_AI^- : negative weight on AI error\ntheta_H^- : negative weight on human error\neta : generic switching cost\nlambda : choice sensitivity\ndelta : counterfactual learning weight\nphi and rho : persistence of prior experience","textPreview":"theta_AI^- : negative weight on AI error | theta_H^- : negative weight on human error | eta : generic switching cost | lambda : choice se...","textChars":225,"textLines":6,"bbox":[728,242,458,314]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":10,"bbox":[214,604,852,48]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":10,"text":"Strong empirical signature: theta_AI^- < theta_H^- < 0, and |theta_AI^-| > theta_AI^+.","textPreview":"Strong empirical signature: theta_AI^- < theta_H^- < 0, and |theta_AI^-| > theta_AI^+.","textChars":86,"textLines":1,"bbox":[240,619,800,18]}
+{"kind":"notes","id":"nt/ng02le","slide":10,"text":"这里不要把注意力放在公式本身，而要讲公式在替谁说话：它是在替架构学习这条理论链说话。\n最重要的参数解读是：AI error 的负向更新权重是否更大，以及它是否比后续正确更难被修复。\n如果评委问为什么不用静态 logit，答案是：静态模型无法识别路径依赖和收敛过程。"}
+{"kind":"slide","id":"sl/eb1hcf","slide":11,"title":"CONTRIBUTIONS","textShapes":12}
+{"kind":"shape","id":"sh/nih4byhg","slide":11,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":11,"text":"CONTRIBUTIONS","textPreview":"CONTRIBUTIONS","textChars":13,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":11,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":11,"text":"Expected Contributions","textPreview":"Expected Contributions","textChars":22,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":11,"text":"从态度逻辑推进到结构逻辑，从短期惩罚推进到长期锁定。","textPreview":"从态度逻辑推进到结构逻辑，从短期惩罚推进到长期锁定。","textChars":26,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/9cvixcze","slide":11,"bbox":[72,190,480,170]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":11,"text":"Theory","textPreview":"Theory","textChars":6,"textLines":1,"bbox":[94,208,436,28]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":11,"text":"From trust/adoption to architecture learning\nFrom capability learning to role learning","textPreview":"From trust/adoption to architecture learning | From capability learning to role learning","textChars":86,"textLines":2,"bbox":[94,244,436,98]}
+{"kind":"shape","id":"sh/bi9s36hc","slide":11,"bbox":[650,190,480,170]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":11,"text":"Mechanism","textPreview":"Mechanism","textChars":9,"textLines":1,"bbox":[672,208,436,28]}
+{"kind":"textbox","id":"sh/tovahoza","slide":11,"text":"AI error as boundary-redrawing event\nAsymmetric updating -> path dependence","textPreview":"AI error as boundary-redrawing event | Asymmetric updating -> path dependence","textChars":75,"textLines":2,"bbox":[672,244,436,98]}
+{"kind":"shape","id":"sh/032lszqt","slide":11,"bbox":[72,410,480,170]}
+{"kind":"textbox","id":"sh/bulwval8","slide":11,"text":"Method","textPreview":"Method","textChars":6,"textLines":1,"bbox":[94,428,436,28]}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":11,"text":"Repeated architecture choice\nSame means, different paths","textPreview":"Repeated architecture choice | Same means, different paths","textChars":56,"textLines":2,"bbox":[94,464,436,98]}
+{"kind":"shape","id":"sh/p0bi9s36","slide":11,"bbox":[650,410,480,170]}
+{"kind":"textbox","id":"sh/0fepkzup","slide":11,"text":"Governance","textPreview":"Governance","textChars":10,"textLines":1,"bbox":[672,428,436,28]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":11,"text":"From performance audit to architecture audit\nFrom rollout to recovery design","textPreview":"From performance audit to architecture audit | From rollout to recovery design","textChars":76,"textLines":2,"bbox":[672,464,436,98]}
+{"kind":"notes","id":"nt/eb1hcf","slide":11,"text":"这页要避免变成流水账。最强的总结是：我们把 AI 行为研究从 attitude logic 推进到 structure logic。\n如果被问最核心理论贡献，一句话答：AI error 通过非对称架构更新改写长期收敛路径。\n如果被问最核心方法贡献，一句话答：用 repeated architecture choice 替代单轮 advice-taking，并在同均值不同路径框架下识别动态机制。"}
+{"kind":"slide","id":"sl/h12a0c","slide":12,"title":"CLOSE","textShapes":11}
+{"kind":"shape","id":"sh/n29gr2p8","slide":12,"bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":12,"text":"CLOSE","textPreview":"CLOSE","textChars":5,"textLines":1,"bbox":[72,18,420,24]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1160,14,60,28]}
+{"kind":"shape","id":"sh/y90je9cv","slide":12,"bbox":[72,46,1136,1]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":12,"text":"Governance Implication","textPreview":"Governance Implication","textChars":22,"textLines":1,"bbox":[72,72,1136,52]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":12,"text":"治理真正要管理的，不只是性能，而是协作架构如何形成、如何锁定、又如何恢复。","textPreview":"治理真正要管理的，不只是性能，而是协作架构如何形成、如何锁定、又如何恢复。","textChars":37,"textLines":1,"bbox":[72,122,1136,26]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":12,"bbox":[72,214,340,220]}
+{"kind":"textbox","id":"sh/u54zidon","slide":12,"text":"1  Early deployment is institution formation","textPreview":"1  Early deployment is institution formation","textChars":44,"textLines":1,"bbox":[94,240,296,74]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":12,"text":"部署初期不是普通磨合期，而是角色边界开始被学习的阶段。","textPreview":"部署初期不是普通磨合期，而是角色边界开始被学习的阶段。","textChars":27,"textLines":1,"bbox":[94,330,296,78]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":12,"bbox":[450,214,340,220]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":12,"text":"2  Reversible delegation matters","textPreview":"2  Reversible delegation matters","textChars":32,"textLines":1,"bbox":[472,240,296,74]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":12,"text":"如果边界一旦下移就很难恢复，治理就必须保留可逆授权与重新暴露机会。","textPreview":"如果边界一旦下移就很难恢复，治理就必须保留可逆授权与重新暴露机会。","textChars":33,"textLines":1,"bbox":[472,330,296,78]}
+{"kind":"shape","id":"sh/onyd0z61","slide":12,"bbox":[828,214,340,220]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":12,"text":"3  Audit the path, not only the score","textPreview":"3  Audit the path, not only the score","textChars":37,"textLines":1,"bbox":[850,240,296,74]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":12,"text":"平均准确率高，不代表组织没有把 AI 学成一个长期低权限角色。","textPreview":"平均准确率高，不代表组织没有把 AI 学成一个长期低权限角色。","textChars":31,"textLines":1,"bbox":[850,330,296,78]}
+{"kind":"shape","id":"sh/dg7adsji","slide":12,"bbox":[160,496,960,120]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":12,"text":"The real governance question is not only whether AI is strong, but what kind of role the organization will learn to give it.","textPreview":"The real governance question is not only whether AI is strong, but what kind of role the organization will learn to give it.","textChars":124,"textLines":1,"bbox":[202,530,876,54]}
+{"kind":"notes","id":"nt/h12a0c","slide":12,"text":"结尾不要只说‘对企业有启发’。要明确说：治理要从 performance audit 扩展到 collaboration architecture audit。\n如果机制成立，组织最大的风险不只是误判，而是长期 under-delegation lock-in。\n最后一句一定要回到题眼：重要的不只是 AI 有多强，而是组织会把它学成什么角色。"}

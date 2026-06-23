@@ -1,0 +1,255 @@
+\documentclass[man,natbib]{apa7}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\IfFontExistsTF{Times New Roman}
+  {\setmainfont{Times New Roman}}
+  {\setmainfont{TeX Gyre Termes}}
+\IfFontExistsTF{SimSun}
+  {\setCJKmainfont[BoldFont=SimHei]{SimSun}}
+  {\setCJKmainfont{Microsoft YaHei}}
+\IfFontExistsTF{SimHei}
+  {\setCJKsansfont{SimHei}}
+  {\setCJKsansfont{Microsoft YaHei}}
+\IfFontExistsTF{FangSong}
+  {\setCJKmonofont{FangSong}}
+  {\setCJKmonofont{SimSun}}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\title{Learning AI's Role: How Humans Converge Toward Stable Human--AI Collaboration Architectures\\学习AI的角色：人类如何在重复反馈中收敛到稳定的人机协作架构}
+\shorttitle{LEARNING AI'S ROLE}
+\authorsnames{[Author Name]}
+\authorsaffiliations{[Institutional Affiliation]}
+\authornote{This APA 7 manuscript-style proposal is the submission-format version of the revised research plan in the current workspace. Replace the author name, affiliation, and IRB or ethics information before formal submission.}
+\abstract{Generative AI is increasingly embedded in regulated screening, review, exception handling, and oversight workflows. In these settings, the critical question is no longer simply whether people trust AI, adopt AI, or accept a single piece of advice. The more consequential question is how people learn where AI should sit in a decision system and how much authority it should hold after repeated performance feedback. This proposal therefore shifts the theoretical focus from trust and adoption to architecture learning. It argues that AI error matters not only because it can reduce short-run reliance, but because it can update the perceived suitability of AI for different decision roles and thereby alter long-run delegation trajectories. To test this claim, the study proposes a 90-round behavioral experiment in a stylized regulated supervision task. Participants repeatedly choose among five human--AI collaboration architectures, while the design holds long-run AI and human performance constant and manipulates only focal error source and error timing. The proposal further defines an objective expected-utility benchmark, maps each hypothesis to both reduced-form and structural evidence, and pre-registers parameter-recovery simulations for an Experience-Weighted Attraction inspired model. The contribution is framed as a middle-range micro-to-meso mechanism for repeated-feedback supervision settings rather than a direct account of full organizational institutionalization.}
+\keywords{human--AI collaboration, architecture learning, AI error, path dependence, behavioral steady state, EWA}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+The central challenge of AI in organizations is no longer just whether people trust AI or whether they adopt it at all. In many contemporary workflows, AI can appear as an adviser, a recommender, a default executor, or an autonomous actor whose output remains only partially reviewable. The more meaningful problem is therefore architectural: where should AI sit in the workflow, how much authority should it receive, and under what conditions should humans retain confirmation or override rights?
+
+This proposal treats that problem as one of \textit{architecture learning under repeated feedback}. The primary object of study is not a single piece of advice, a single reliance decision, or a single trust judgment. Instead, the object of study is the trajectory by which people repeatedly choose among alternative human--AI collaboration architectures and eventually converge toward a relatively stable arrangement.
+
+That distinction matters because AI error may have a larger institutional meaning than a simple performance miss. A system error can be read as evidence not only that ``this answer was wrong,'' but also that ``AI should not occupy this role in the workflow.'' If that interpretation receives greater negative weight than comparable human error, then early AI failures may change subsequent exposure, later recovery opportunities, and long-run delegation patterns. The proposal thus asks whether repeated feedback produces path-dependent convergence toward low-AI-authority arrangements even when AI and human analysts have the same long-run average performance.
+
+\section{Literature Review}
+
+\subsection{Trust, Reliance, and Algorithm Aversion}
+
+\citet{lee2004trust} argued that the core issue in automation is not blind trust but appropriate reliance. Later work on algorithm aversion showed that people may punish algorithms too strongly after observing them err \citep{dietvorst2015algorithm}, while work on algorithm appreciation showed that people may also prefer algorithmic judgment in some contexts \citep{logg2019algorithm}. These findings are foundational, but they remain largely pointwise: they explain whether a source is accepted, rejected, or trusted in a given moment rather than how a collaboration architecture forms over time.
+
+\subsection{Levels of Automation and Supervisory Control}
+
+The proposal also builds on the levels-of-automation and supervisory-control tradition. \citet{parasuraman2000levels} showed that automation level is inseparable from which functions are automated, while \citet{endsley1999automation} demonstrated that automation level changes performance, workload, and situation awareness. This literature implies that the location of automation in a workflow is theoretically consequential. Yet it more often studies the consequences of a given architecture than the learning dynamics by which people move toward or away from one.
+
+\subsection{Confidence Calibration Is Not Role Learning}
+
+Research on AI-assisted decision making further shows that confidence cues, explanations, and relative correctness likelihood affect local trust calibration \citep{zhang2020confidence,ma2023trust}. That work is important, but it primarily concerns signal-level learning: whether users learn to interpret a confidence cue appropriately for a particular case. The present proposal instead concerns role learning: whether users learn that AI should be limited to advice, kept at recommendation, allowed to default, or granted autonomy.
+
+\subsection{Human--AI Teaming and Learning to Defer}
+
+Related work on human--AI teaming and learning to defer considers how systems should divide labor between people and AI \citep{mozannar2020defer,bansal2019updates,vaccaro2024combinations}. However, that literature usually starts from a system optimization perspective. The present study starts from the human side and asks how repeated experience changes the architecture people are willing to sustain.
+
+\subsection{A Middle-Range Bridge From Individual Updating to Organizational Routines}
+
+The proposal is explicitly positioned as a middle-range or meso-level theoretical contribution. It does not claim to identify the full macro-process of organizational institutionalization. Instead, it uses \citet{feldman2003routines} to motivate a micro-to-meso bridge: repeated enactment can stabilize or transform routines, so repeated downward adjustment of AI authority may be understood as the behavioral foundation of a routine-level authorization pattern. This bridge is not limited to routines alone. It is also adjacent to levels-of-automation, supervisory-control, and accountability-boundary research, all of which treat human--AI division of labor as an allocation of default rights, review rights, and responsibility rather than as performance alone.
+
+\subsection{Research Gap}
+
+The research gap is therefore more specific than ``people have not studied AI error'' or ``people have not studied trust.'' It is also not a simple relabeling of trust, automation levels, or team performance. Existing work leaves at least four unresolved gaps. First, it says much more about learning AI capability than about learning AI role. Second, it rarely tests whether source asymmetry and timing asymmetry jointly shape long-run delegation trajectories. Third, it seldom combines repeated feedback, path dependence, and an objective benchmark in one design. Fourth, it rarely evaluates whether the eventual steady state is behaviorally stable yet objectively suboptimal.
+
+\section{Theoretical Framework}
+
+\subsection{From Capability Learning to Role Learning}
+
+The proposal's central theoretical claim is that people learn not only whether AI is accurate, but whether AI is suitable for a specific role in a decision system. Once the learning object shifts from capability to role, AI error becomes a boundary-revision event rather than a mere performance miss. The core dependent outcome is therefore not short-run trust but long-run architecture choice.
+
+\subsection{Architectures Are Categorical Role Configurations}
+
+The proposal uses five collaboration architectures: human-only, AI advice plus human decision, AI recommendation plus human confirmation, AI default plus human override, and AI autonomous decision. These categories are ordered by authority, but they are not treated as an equal-interval scale. They differ categorically in default rights, review rights, timing cost, interception opportunity, and responsibility structure. Accordingly, mean AI-autonomy level is treated as descriptive, whereas modal architecture, switching rate, lock-in probability, and distance to benchmark carry the primary inferential load.
+
+\subsection{AI Error as an Institutional Shock}
+
+In this framework, AI error matters because it can be interpreted as evidence that AI should not hold a given workflow position. The proposal therefore does not reduce the phenomenon to a generic drop in trust. The sharper claim is that AI error can induce a larger negative update to the attractiveness of high-authority architectures than comparable human error induces.
+
+\subsection{Architecture Attraction Updating}
+
+Following the logic of Experience-Weighted Attraction learning \citep{camerer1999ewa}, the proposal treats architectures as competing options whose attractiveness is updated over repeated experience. Participants learn about future architecture value from realized correctness, error source, interception, review cost, and time cost. The theoretical prediction is not just that AI error hurts, but that AI error receives more negative updating weight than comparable human error.
+
+\subsection{Path Dependence and Low-Autonomy Lock-In}
+
+The argument becomes strongest when error occurs early. Early shocks arrive while the architecture space is still unsettled. If early AI error drives participants toward lower-AI-authority choices, then later exposure to higher-authority architectures becomes rarer, which slows recovery and can generate path-dependent convergence. The proposal uses the more cautious language of \textit{behavioral steady state} or \textit{architecture convergence} rather than claiming a full equilibrium model of strategic interaction.
+
+\subsection{Scope of the Claim}
+
+The proposal is deliberately bounded. It identifies a micro-foundation for architecture learning in repeated-feedback supervision settings. It does not claim to directly prove macro-level institutional lock-in, cross-organizational political bargaining, or one-shot strategic deployment decisions.
+
+\section{Research Questions and Hypotheses}
+
+The overarching research question is: How do humans learn where AI should sit in a decision workflow under repeated feedback, and when does that learning converge toward a stable but possibly suboptimal collaboration architecture?
+
+\begin{enumerate}
+  \item \textbf{H1: Asymmetric negative learning.} Holding long-run average performance constant, AI errors will produce larger negative architecture updating than comparable human errors.
+  \item \textbf{H2: Path-dependent convergence.} Early AI errors will increase the probability of long-run convergence toward lower-AI-authority architectures.
+  \item \textbf{H3: Recovery asymmetry (secondary mechanism probe).} Later correct AI performance will recover authority more weakly than early AI errors reduce it. If identification is weak, this hypothesis is downgraded to exploratory mechanism evidence rather than treated as a make-or-break claim.
+  \item \textbf{H4: Human-error tolerance.} Early human errors will not symmetrically push participants toward substantially higher-AI-authority architectures.
+  \item \textbf{H5: Conditional suboptimal steady state.} Participants may stably remain in more human-supervised architectures that lie below the preregistered utility benchmark, even when AI and human long-run performance are aligned. If the benchmark is unstable under reasonable parameter variation, the claim is downgraded to conservative steady state.
+\end{enumerate}
+
+\section{Method}
+
+\subsection{Design Overview}
+
+The study uses a four-condition between-subjects design with repeated choices across 90 paid rounds. Each participant acts as a supervisor in a regulated exception-review environment and selects one collaboration architecture before each case. The unit of analysis is therefore an architecture-choice trajectory rather than a one-shot advice-taking response.
+
+\subsection{Task Setting}
+
+To avoid vague references to ``high-risk'' work, the task is framed as a stylized but regulated exception-handling pipeline. Each case requires a pass-reject or escalate-not-escalate judgment, and each architecture implies different review burden, delay, and residual error exposure. The scenario is not presented as a full simulation of any one sector; instead, it is designed as a canonical supervision task that cleanly instantiates control rights, review rights, and interception opportunities.
+
+\subsection{Participants and Sample Plan}
+
+At the proposal stage, the target sample is $N = 320$ to $400$, or approximately 80 to 100 participants per condition. A pilot study will be used to calibrate task duration, compensation, comprehension thresholds, and the cost parameters used in the benchmark. The formal study will preregister exclusion rules, including failed comprehension checks and attention failures, before outcome analysis.
+
+\subsection{Round Windows}
+
+The 90 rounds are pre-partitioned into four windows: acquisition (Rounds 1--20), stabilization (Rounds 21--40), shock-completion (Rounds 41--60), and common recovery (Rounds 61--90). All focal shocks end before Round 60 so that long-run outcomes are read from a shared recovery window rather than from a recency-contaminated terminal segment.
+
+\subsection{Architecture Set}
+
+\begin{table}[htbp]
+\centering
+\caption{Collaboration architecture set}
+\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+\toprule
+Code & Architecture & Control structure & Typical implication \\
+\midrule
+1 & Human-only & Human makes and executes the decision & Highest review burden, lowest AI exposure \\
+2 & AI advice + human decision & AI advises, human decides & AI visible but no default authority \\
+3 & AI recommendation + human confirmation & AI recommends, human confirms & Changed default sequence with explicit confirmation \\
+4 & AI default + human override & AI acts first, human retains override & Lower review burden, higher residual risk \\
+5 & AI autonomous decision & AI decides within stated bounds & Lowest human intervention, highest AI authority \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Experimental Conditions and Manipulation Discipline}
+
+The design follows a common-baseline plus focal-shock logic. Every condition shares the same case pool, case order, long-run AI and human average performance, total error count, severity composition, and overlap structure. Each round also inherits the same preregistered AI-by-round and human-by-round latent correctness table, although participants observe only the realized consequences of the architecture they selected. The only systematic differences concern focal error source and focal error timing.
+
+\begin{table}[htbp]
+\centering
+\caption{Pre-registered focal shock schedule}
+\begin{tabularx}{\textwidth}{@{}lYYY@{}}
+\toprule
+Condition & Focal source & Focal rounds & Identification purpose \\
+\midrule
+AI Early Error & AI & 5, 8, 11, 14, 17, 20 & Tests whether early AI shocks rewrite the long-run path \\
+AI Late Error & AI & 41, 44, 47, 50, 53, 56 & Separates timing from average performance \\
+Human Early Error & Human analyst & 5, 8, 11, 14, 17, 20 & Tests source asymmetry under matched timing \\
+Evenly Distributed & AI & 8, 18, 28, 38, 48, 58 & Separates concentrated early shock from smooth exposure \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+All conditions additionally satisfy the following pre-registered controls: AI and human each accumulate 12 total errors over 90 rounds, but the condition-defining focal set always contains only 6 matched episodes. In AI Early Error, AI Late Error, and Evenly Distributed, those 6 focal episodes belong to AI; in Human Early Error, they belong to the human analyst. The actor that does not receive the focal set is rebalanced through dispersed non-focal balancing slots that equalize cumulative performance without creating a second clustered shock. Severity composition is matched as 2 low-loss, 2 medium-loss, and 2 high-loss focal errors. AI and human underlying error overlap is fixed at 25\%, and no focal shocks occur after Round 60. A full agent-by-round latent outcome matrix will be preregistered in an appendix.
+
+\subsection{Feedback Visibility and Exposure Endogeneity}
+
+In the main design, participants observe only the realized outcome of the architecture they selected, including whether the case was correct, whether an error was intercepted downstream, and what time or review costs were incurred. This preserves the path-dependent logic whereby early choices alter later exposure. To address the alternative explanation that recovery is slow merely because counterfactual information is hidden, the proposal preregisters a separate robustness module rather than inserting audits into the main trajectory. After Round 90, participants complete a post-task calibration-audit block, or the same audit is run in a parallel robustness arm, revealing all five counterfactual architecture payoffs without contaminating the primary learning path.
+
+\subsection{Objective Benchmark}
+
+The benchmark is defined at the case level as
+\begin{align*}
+EU(k,c) ={}& 100 \cdot Pr(\text{correct}\mid k,c) \\
+&- L_c \cdot Pr(\text{unintercepted error}\mid k,c) \\
+&- 6 \cdot ReviewSteps(k,c) \\
+&- 2 \cdot DelayUnits(k,c) \\
+&- 10 \cdot EscalationCost(k,c) \\
+&- 12 \cdot Pr(\text{intercepted error}\mid k,c),
+\end{align*}
+where $L_c \in \{40, 80, 160\}$ for low-, medium-, and high-loss cases. The coefficients for correct reward, review burden, delay burden, escalation burden, and loss severity are fixed ex ante using pilot timing data, task-payment mappings, and expert calibration of responsibility weights. Case-level benchmark architecture is the architecture that maximizes $EU(k,c)$ for a case. Task-level benchmark is the architecture or architecture distribution with the highest mean expected utility across all 90 cases. H5 is only interpreted as conditional suboptimal lock-in when at least 80\% of sensitivity draws across preregistered review-cost and delay-cost ranges place the observed late steady state below the benchmark.
+
+\subsection{Outcome Variables and Steady-State Criteria}
+
+Primary outcomes are late modal architecture, the architecture distribution in Rounds 61--90, switching rate, recovery slope after focal shocks, low-autonomy lock-in probability, and distance to benchmark. Mean AI-autonomy level remains a descriptive summary rather than the sole substantive outcome. A behavioral steady state is declared only when the final 15 to 20 rounds show concentration on a narrow subset of architectures, low switching, and no continuing time trend in architecture choice.
+
+\section{Analytic Strategy}
+
+\subsection{Hypothesis-to-Evidence Mapping}
+
+Each hypothesis is tied to a distinct evidence package. H1 is tested by immediate post-error switching and by the structural comparison $|\beta_{AI-}| > |\beta_{H-}|$. H2 is tested by whether AI Early Error remains below AI Late Error in the common recovery window and by whether higher-authority architectures retain lower attraction in the structural model. H3 is tested by recovery slope, supplemented by the post-task audit diagnostic, and by whether $|\beta_{AI-}| > \beta_{AI+}$. H4 is tested by the absence of a mirrored upward-authority shift after matched early human errors. H5 is tested by the distribution of late distance-to-benchmark scores under benchmark sensitivity analysis.
+
+\subsection{Descriptive Dynamics}
+
+The first layer of analysis visualizes architecture trajectories by condition: architecture shares over time, modal architecture changes, post-shock switching rates, and late-window distributions. These plots are essential because the theory is about dynamic divergence and incomplete reconvergence rather than only mean treatment effects.
+
+\subsection{Reduced-Form Analysis}
+
+The second layer estimates round-level mixed-effects models that interact condition with time window and participant-level controls. The critical reduced-form question is whether AI Early Error remains lower than AI Late Error and Human Early Error during the shared recovery window after baseline preference, risk attitude, and initial anti-AI orientation are absorbed.
+
+\subsection{Structural EWA-Inspired Model}
+
+For participant $i$, architecture $k$, and round $t$, the proposal specifies
+\begin{align*}
+N_{it} &= \rho N_{i,t-1} + 1, \\
+A_{i,k,t} &= \frac{\phi N_{i,t-1}A_{i,k,t-1} + [\delta + (1-\delta)\mathbf{1}(s_{it}=k)]\pi_{i,k,t}}{N_{it}}, \\
+P(s_{i,t+1}=k) &= \frac{\exp\{\lambda[A_{i,k,t} - \kappa \mathbf{1}(k \neq s_{it})]\}}{\sum_j \exp\{\lambda[A_{i,j,t} - \kappa \mathbf{1}(j \neq s_{it})]\}},
+\end{align*}
+with
+\begin{align*}
+\pi_{i,k,t} ={}& \beta_0 + \beta_{AI+}C^{AI}_{it} + \beta_{AI-}E^{AI}_{it} + \beta_{H+}C^{H}_{it} \\
+&+ \beta_{H-}E^{H}_{it} + \beta_{INT}I_{it} - \beta_T T_{it} - \beta_R R_{it}.
+\end{align*}
+Here $C$ denotes correct feedback, $E$ denotes error feedback, $I$ denotes interception, and $T$ and $R$ denote time and review costs. The theory predicts larger negative updating for AI errors than human errors and, as a secondary mechanism claim, weaker positive recovery from later AI correctness than the damage created by early AI failure.
+
+\subsection{Estimation Discipline and Parameter Recovery}
+
+The structural model is not included as decorative after-the-fact fitting. The proposal preregisters a hierarchical Bayesian implementation, comparison against a source-neutral EWA model and an inertia-only multinomial logit, and 500 parameter-recovery simulations before interpreting structural coefficients. Recovery is judged adequate only if key parameters satisfy preregistered sign recovery of at least 80\%, median standardized absolute bias no larger than 0.15, and participant-level rank-order recovery of at least .60. If recovery fails for $\beta_{AI-}$, $\beta_{H-}$, $\beta_{AI+}$, or $\kappa$, the structural results will be downgraded to exploratory status and only reduced-form conclusions will be retained; even when recovery succeeds, H3 remains secondary mechanism evidence rather than the proposal's sole pillar.
+
+\subsection{Alternative Explanations}
+
+The design explicitly addresses alternative explanations involving baseline anti-AI bias, generic switching aversion, fatigue, task-sequence difficulty, pure loss aversion, and hidden counterfactual information. These alternatives may enter as controls or supplemental mechanisms, but they cannot substitute for the proposal's main claim that AI error updates role allocation more strongly than comparable human error.
+
+\section{Validity, Falsification, and Scope}
+
+\subsection{Internal Validity}
+
+Internal validity rests on four disciplines: long-run AI and human average performance must be aligned; focal error source and timing are the only systematic treatment differences, with the full agent-by-round latent matrix and balancing-slot rules preregistered in an appendix; all focal shocks end before the shared recovery window; and participants must pass comprehension, responsibility-salience, and practice gates that verify understanding of cost structure and authority structure. If any of these conditions fail, the architecture-learning interpretation is weakened.
+
+\subsection{Construct Validity}
+
+Construct validity requires treating architecture as a categorical role configuration rather than a simple 1--5 attitude scale. The primary outcomes therefore remain architecture distributions, switching behavior, steady-state convergence, and benchmark deviation rather than trust scores. Likewise, AI error is interpreted as a role-boundary shock, not merely as a negative emotion trigger.
+
+\subsection{External Validity and Middle-Range Positioning}
+
+The proposal's most defensible external target is repeated-feedback supervision settings with recurring cases, observable feedback, stable supervisory roles, and reversible delegation boundaries. It does not directly generalize to one-shot strategic decisions, cross-organizational bargaining, or all forms of AI governance. Because an online sample cannot fully reproduce real professional accountability, the design adds domain-experience screening and responsibility-understanding checks, and any governance implication is framed as mechanism-suggested rather than field-generalized. Its theoretical contribution is intentionally middle-range: it offers a micro-to-meso mechanism that can inform organizational theorizing without claiming to exhaust organizational reality.
+
+\subsection{Falsification Standards}
+
+The proposal accepts five downgrade rules. If AI Early Error does not remain distinct from Human Early Error after controls, source asymmetry fails. If AI Early Error does not remain distinct from AI Late Error in the common recovery window, the path-dependence claim fails. If the post-task audit or parallel robustness arm shows that apparent recovery weakness is explained primarily by hidden counterfactual information, H3 is downgraded to an exposure-based pattern rather than an independent recovery mechanism. If benchmark rankings are too unstable under reasonable cost variation, H5 must be relabeled as conservative steady state rather than conditional suboptimal lock-in. If parameter recovery fails, the EWA model cannot be used as strong mechanism evidence.
+
+\section{Expected Contributions}
+
+The theoretical contribution is to move human--AI collaboration research from static reliance to dynamic architecture learning and to explain how AI error can alter long-run authority trajectories rather than merely short-run acceptance. The methodological contribution is to integrate architecture choice, error source, error timing, benchmark definition, and structural estimation in one pre-registered design. The governance contribution is narrower than a general theory of AI institutions: the proposal identifies why early deployment periods and recovery opportunities matter in repeated-feedback supervision settings where organizations may otherwise learn AI into persistently under-delegated roles, and it presents these implications as mechanism-suggested rather than as complete organizational prescriptions.
+
+\section{Discussion and Submission Readiness}
+
+Whether the hypotheses are supported or not, the proposal is informative only if it is treated as a study of dynamic convergence rather than a study of one-shot distrust. Supportive results would show how early AI failure can be learned into durable under-delegation. Null results would be equally useful, because they would indicate that early AI error does not reliably induce durable lock-in or that recovery mechanisms are stronger than expected.
+
+Before submission, the manuscript still requires final author metadata, an ethics statement appropriate to a compensated behavioral experiment, and journal- or conference-specific formatting adjustments. Substantively, however, the present version is intended to align the APA submission artifact with the stronger markdown research plan rather than leaving the PDF as a compressed and methodologically weaker version.
+
+\bibliography{references}
+
+\end{document}

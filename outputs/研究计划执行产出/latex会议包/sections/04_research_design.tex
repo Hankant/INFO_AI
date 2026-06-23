@@ -1,0 +1,102 @@
+\section{Research Design}
+
+\subsection{Overview}
+
+To test the argument, the project proposes a repeated-choice behavioral experiment in which participants act as supervisors of a decision pipeline. In each round, participants select one of five collaboration architectures:
+
+\begin{enumerate}[label=\arabic*.]
+    \item Human-only
+    \item AI advice only
+    \item AI recommendation + human confirmation
+    \item AI default + human override
+    \item AI autonomous decision
+\end{enumerate}
+
+These architectures can also be represented as an ordinal AI autonomy scale from 1 to 5.
+
+\subsection{Core Identification Principle}
+
+The central identification requirement is that AI and human analysts must have equal long-run objective performance. For example, both can be calibrated to an 80\% accuracy rate across the full experiment. The experimental manipulation then shifts only the timing and distribution of errors, not the long-run average quality of the human or AI decision source.
+
+\subsection{Experimental Conditions}
+
+Four conditions are proposed:
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{AI Early Error}: AI errors are concentrated in early rounds.
+    \item \textbf{Human Early Error}: human errors are concentrated in early rounds.
+    \item \textbf{Evenly Distributed Errors}: AI and human errors are distributed evenly across rounds.
+    \item \textbf{AI Late Error}: AI errors are concentrated in later rounds.
+\end{enumerate}
+
+This design isolates whether error source and error timing affect later architecture choice trajectories.
+
+\subsection{Round Structure}
+
+Each round follows the same logic:
+
+\begin{enumerate}[label=\arabic*.]
+    \item The participant chooses a collaboration architecture.
+    \item The system executes the chosen workflow.
+    \item The participant receives feedback on correctness, gains/losses, time cost, review cost, whether the error was intercepted, and whether the error originated from AI or the human analyst.
+    \item The participant proceeds to the next round.
+\end{enumerate}
+
+The main study should ideally contain around 80 rounds, with pretests determining whether 60 or 100 rounds would yield better convergence visibility without unacceptable fatigue.
+
+\subsection{Dependent Variables}
+
+The main dependent variables are architecture-level rather than trust-level:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item final converged architecture,
+    \item average AI autonomy level in late rounds,
+    \item probability of entering a low-AI-authorization steady state,
+    \item convergence speed,
+    \item recovery speed after AI-error shocks,
+    \item choice volatility in late rounds,
+    \item distance between the stable architecture and the objectively optimal architecture.
+\end{itemize}
+
+\subsection{Steady-State Criteria}
+
+Behavioral steady states can be defined using multiple parallel criteria:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item a single architecture accounts for more than 70\% of choices in the final 15 rounds,
+    \item variance in autonomy level during the final 15 rounds falls below a predefined threshold,
+    \item architecture choice probabilities no longer change significantly over time,
+    \item estimated attractions from the structural model enter a stable band.
+\end{itemize}
+
+\subsection{EWA-inspired Model}
+
+Let $A_{k,t}$ denote the attraction of architecture $k$ after round $t$, and let $s_t$ denote the chosen architecture in round $t$. The updating logic follows an EWA-style process:
+
+\begin{align}
+N_t &= \rho N_{t-1} + 1 \\
+A_{k,t} &= \frac{\phi N_{t-1}A_{k,t-1} + [\delta + (1-\delta)I(s_t = k)]U_{k,t}}{N_t} \\
+P(s_{t+1}=k) &= \frac{\exp(\beta A_{k,t})}{\sum_j \exp(\beta A_{j,t})}
+\end{align}
+
+To capture asymmetric learning, the instantaneous utility term can be decomposed by feedback source and sign:
+
+\begin{equation}
+U_{k,t} =
+\alpha_{AI}^{+} I(AI\ correct)
++ \alpha_{AI}^{-} I(AI\ error)
++ \alpha_{H}^{+} I(Human\ correct)
++ \alpha_{H}^{-} I(Human\ error)
+- c_t
+\end{equation}
+
+The critical parameter tests are:
+
+\begin{align}
+\alpha_{AI}^{-} &> \alpha_{H}^{-} \\
+|\alpha_{AI}^{-}| &> |\alpha_{AI}^{+}|
+\end{align}
+
+\subsection{Analysis Strategy}
+
+The empirical analysis proceeds in three layers. First, descriptive trajectory plots show how architecture use and autonomy change across rounds by condition. Second, multilevel or GEE models estimate the long-run effect of experimental conditions on later authorization. Third, the EWA-inspired model is estimated structurally to identify whether asymmetric learning weights and recovery asymmetries account for the observed path dependence.

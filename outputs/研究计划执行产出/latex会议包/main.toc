@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Literature Review and Research Gap}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}From Trust to Architecture}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Algorithm Aversion, Appreciation, and the Limits of One-shot Framing}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Confidence Calibration Is Not Role Learning}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Human--AI Teaming and Learning to Defer}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}EWA and Path Dependence as Integrating Mechanisms}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}The Core Gap}{5}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Theory and Hypotheses}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Core Theoretical Claim}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Architecture Attraction}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Asymmetric Updating}{5}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Path Dependence and Behavioral Steady States}{6}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Hypotheses}{6}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Research Design}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Overview}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Core Identification Principle}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Experimental Conditions}{7}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Round Structure}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Dependent Variables}{7}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Steady-State Criteria}{8}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}EWA-inspired Model}{8}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Analysis Strategy}{8}{subsection.4.8}%
+\contentsline {section}{\numberline {5}Expected Contributions}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Theoretical Contribution}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Mechanism Contribution}{9}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Methodological Contribution}{9}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Practical Contribution}{9}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Conclusion}{9}{section.6}%
