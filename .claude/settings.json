@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python \"C:/Users/69596/.claude/skills/claude-skill-citation-checker/scripts/citation_checker.py\" \"e:/Info_AI/defense_project/latex/references.bib\")",
+      "Bash(ls \"C:/Users/69596/.claude/skills/claude-skill-citation-checker/scripts/\" 2>&1)",
+      "Read(//c/Users/69596/.claude/skills/claude-skill-citation-checker/scripts/**)"
+    ]
+  }
+}

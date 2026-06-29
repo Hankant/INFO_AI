@@ -1,0 +1,2360 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-30",
+  "source_bib": "defense_project\\latex\\references.bib",
+  "paper_count": 68,
+  "categories": [
+    "advice_taking",
+    "algorithm_aversion",
+    "algorithms_trust_hci",
+    "foundational_theory",
+    "information_acquisition",
+    "narrative_epistemic",
+    "newly_added_candidates",
+    "overconfidence_control",
+    "recommender_genai",
+    "self_serving_attribution"
+  ],
+  "papers": [
+    {
+      "key": "ParasuramanRiley1997",
+      "type": "article",
+      "title": "Humans and Automation: Use, Misuse, Disuse, Abuse",
+      "authors": [
+        "Parasuraman, Raja",
+        "Riley, Victor"
+      ],
+      "authors_raw": "Parasuraman, Raja and Riley, Victor",
+      "year": "1997",
+      "journal": "Human Factors",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "39",
+      "number": "2",
+      "pages": "230--253",
+      "doi": "10.1518/001872097778543886",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Human Factors",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "automation_use_abuse",
+        "automation_paradox",
+        "human_factors"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "key": "LeeSee2004",
+      "type": "article",
+      "title": "Trust in Automation: Designing for Appropriate Reliance",
+      "authors": [
+        "Lee, John D.",
+        "See, Katrina A."
+      ],
+      "authors_raw": "Lee, John D. and See, Katrina A.",
+      "year": "2004",
+      "journal": "Human Factors",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "46",
+      "number": "1",
+      "pages": "50--80",
+      "doi": "10.1518/hfes.46.1.50_30392",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Human Factors",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "trust_in_automation",
+        "appropriate_reliance",
+        "trust_calibration"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "key": "Dietvorst2015",
+      "type": "article",
+      "title": "Algorithm Aversion: People Erroneously Avoid Algorithms after Seeing Them Err",
+      "authors": [
+        "Dietvorst, Berkeley J.",
+        "Simmons, Joseph P.",
+        "Massey, Cade"
+      ],
+      "authors_raw": "Dietvorst, Berkeley J. and Simmons, Joseph P. and Massey, Cade",
+      "year": "2015",
+      "journal": "Journal of Experimental Psychology: General",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "144",
+      "number": "1",
+      "pages": "114--126",
+      "doi": "10.1037/xge0000033",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Experimental Psychology: General",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "algorithm_aversion",
+        "algorithm_error",
+        "forecast_algorithm"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "key": "Logg2019",
+      "type": "article",
+      "title": "Algorithm Appreciation: People Prefer Algorithmic to Human Judgment",
+      "authors": [
+        "Logg, Jennifer M.",
+        "Minson, Julia A.",
+        "Moore, Don A."
+      ],
+      "authors_raw": "Logg, Jennifer M. and Minson, Julia A. and Moore, Don A.",
+      "year": "2019",
+      "journal": "Organizational Behavior and Human Decision Processes",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "151",
+      "number": "",
+      "pages": "90--103",
+      "doi": "10.1016/j.obhdp.2018.12.005",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Organizational Behavior and Human Decision Processes",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "algorithm_appreciation",
+        "algorithmic_judgment",
+        "AI_advice"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "key": "ResnickVarian1997",
+      "type": "article",
+      "title": "Recommender Systems",
+      "authors": [
+        "Resnick, Paul",
+        "Varian, Hal R."
+      ],
+      "authors_raw": "Resnick, Paul and Varian, Hal R.",
+      "year": "1997",
+      "journal": "Communications of the ACM",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "40",
+      "number": "3",
+      "pages": "56--58",
+      "doi": "10.1145/245108.245121",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Communications of the ACM",
+      "category": "recommender_genai",
+      "concepts": [
+        "recommender_systems",
+        "collaborative_filtering",
+        "information_filtering"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 19
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 89
+        }
+      ]
+    },
+    {
+      "key": "AdomaviciusTuzhilin2005",
+      "type": "article",
+      "title": "Toward the Next Generation of Recommender Systems: A Survey of the State-of-the-Art and Possible Extensions",
+      "authors": [
+        "Adomavicius, Gediminas",
+        "Tuzhilin, Alexander"
+      ],
+      "authors_raw": "Adomavicius, Gediminas and Tuzhilin, Alexander",
+      "year": "2005",
+      "journal": "IEEE Transactions on Knowledge and Data Engineering",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "17",
+      "number": "6",
+      "pages": "734--749",
+      "doi": "10.1109/TKDE.2005.99",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "IEEE Transactions on Knowledge and Data Engineering",
+      "category": "recommender_genai",
+      "concepts": [
+        "recommender_systems_survey",
+        "next_generation_recommender"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 19
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 89
+        }
+      ]
+    },
+    {
+      "key": "Bozdag2013",
+      "type": "article",
+      "title": "Bias in Algorithmic Filtering and Personalization",
+      "authors": [
+        "Bozdag, Engin"
+      ],
+      "authors_raw": "Bozdag, Engin",
+      "year": "2013",
+      "journal": "Ethics and Information Technology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "15",
+      "number": "3",
+      "pages": "209--227",
+      "doi": "10.1007/s10676-013-9321-6",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Ethics and Information Technology",
+      "category": "recommender_genai",
+      "concepts": [
+        "algorithmic_bias",
+        "filter_bubble",
+        "personalization_ethics"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 19
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 89
+        }
+      ]
+    },
+    {
+      "key": "Vaswani2017",
+      "type": "inproceedings",
+      "title": "Attention Is All You Need",
+      "authors": [
+        "Vaswani, Ashish",
+        "Shazeer, Noam",
+        "Parmar, Niki",
+        "Uszkoreit, Jakob",
+        "Jones, Llion",
+        "Gomez, Aidan N.",
+        "Kaiser, Lukasz",
+        "Polosukhin, Illia"
+      ],
+      "authors_raw": "Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, Lukasz and Polosukhin, Illia",
+      "year": "2017",
+      "journal": "",
+      "booktitle": "Advances in Neural Information Processing Systems 30",
+      "publisher": "",
+      "volume": "",
+      "number": "",
+      "pages": "5998--6008",
+      "doi": "",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Advances in Neural Information Processing Systems 30",
+      "category": "recommender_genai",
+      "concepts": [
+        "transformer",
+        "attention_mechanism",
+        "self_supervised_learning"
+      ],
+      "has_pdf": true,
+      "pdf_path": "defense_project\\reference_materials\\papers_originals\\recommender_genai\\Vaswani2017.pdf",
+      "pdf_size_kb": 2163,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 21
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "key": "Brown2020",
+      "type": "inproceedings",
+      "title": "Language Models are Few-Shot Learners",
+      "authors": [
+        "Brown, Tom B.",
+        "Mann, Benjamin",
+        "Ryder, Nick",
+        "Subbiah, Melanie",
+        "Kaplan, Jared",
+        "Dhariwal, Prafulla",
+        "Neelakantan, Arvind",
+        "Shyam, Pranav",
+        "Sastry, Girish",
+        "Askell, Amanda",
+        "Agarwal, Sandhini",
+        "Herbert-Voss, Ariel",
+        "Krueger, Gretchen",
+        "Henighan, Tom",
+        "Child, Rewon",
+        "Ramesh, Aditya",
+        "Ziegler, Daniel M.",
+        "Wu, Jeffrey",
+        "Winter, Clemens",
+        "Hesse, Christopher",
+        "Chen, Mark",
+        "Sigler, Eric",
+        "Litwin, Mateusz",
+        "Gray, Scott",
+        "Chess, Benjamin",
+        "Clark, Jack",
+        "Berner, Christopher",
+        "McCandlish, Sam",
+        "Radford, Alec",
+        "Sutskever, Ilya",
+        "Amodei, Dario"
+      ],
+      "authors_raw": "Brown, Tom B. and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and Agarwal, Sandhini and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, Tom and Child, Rewon and Ramesh, Aditya and Ziegler, Daniel M. and Wu, Jeffrey and Winter, Clemens and Hesse, Christopher and Chen, Mark and Sigler, Eric and Litwin, Mateusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, Ilya and Amodei, Dario",
+      "year": "2020",
+      "journal": "",
+      "booktitle": "Advances in Neural Information Processing Systems 33",
+      "publisher": "",
+      "volume": "",
+      "number": "",
+      "pages": "1877--1901",
+      "doi": "",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Advances in Neural Information Processing Systems 33",
+      "category": "recommender_genai",
+      "concepts": [
+        "few_shot_learning",
+        "GPT_3",
+        "language_model",
+        "in_context_learning"
+      ],
+      "has_pdf": true,
+      "pdf_path": "defense_project\\reference_materials\\papers_originals\\recommender_genai\\Brown2020.pdf",
+      "pdf_size_kb": 6609,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 21
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "key": "Ouyang2022",
+      "type": "inproceedings",
+      "title": "Training Language Models to Follow Instructions with Human Feedback",
+      "authors": [
+        "Ouyang, Long",
+        "Wu, Jeffrey",
+        "Jiang, Xu",
+        "Almeida, Diogo",
+        "Wainwright, Carroll",
+        "Mishkin, Pamela",
+        "Zhang, Chong",
+        "Agarwal, Sandhini",
+        "Slama, Katarina",
+        "Ray, Alex",
+        "Schulman, John",
+        "Hilton, Jacob",
+        "Kelton, Fraser",
+        "Miller, Luke",
+        "Simens, Maddie",
+        "Askell, Amanda",
+        "Welinder, Peter",
+        "Christiano, Paul",
+        "Leike, Jan",
+        "Lowe, Ryan"
+      ],
+      "authors_raw": "Ouyang, Long and Wu, Jeffrey and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll and Mishkin, Pamela and Zhang, Chong and Agarwal, Sandhini and Slama, Katarina and Ray, Alex and Schulman, John and Hilton, Jacob and Kelton, Fraser and Miller, Luke and Simens, Maddie and Askell, Amanda and Welinder, Peter and Christiano, Paul and Leike, Jan and Lowe, Ryan",
+      "year": "2022",
+      "journal": "",
+      "booktitle": "Advances in Neural Information Processing Systems 35",
+      "publisher": "",
+      "volume": "",
+      "number": "",
+      "pages": "27730--27744",
+      "doi": "",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Advances in Neural Information Processing Systems 35",
+      "category": "recommender_genai",
+      "concepts": [
+        "RLHF",
+        "instruction_tuning",
+        "InstructGPT"
+      ],
+      "has_pdf": true,
+      "pdf_path": "defense_project\\reference_materials\\papers_originals\\recommender_genai\\Ouyang2022.pdf",
+      "pdf_size_kb": 1755,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 21
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "key": "KamenicaGentzkow2011",
+      "type": "article",
+      "title": "Bayesian Persuasion",
+      "authors": [
+        "Kamenica, Emir",
+        "Gentzkow, Matthew"
+      ],
+      "authors_raw": "Kamenica, Emir and Gentzkow, Matthew",
+      "year": "2011",
+      "journal": "American Economic Review",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "101",
+      "number": "6",
+      "pages": "2590--2615",
+      "doi": "10.1257/aer.101.6.2590",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "American Economic Review",
+      "category": "foundational_theory",
+      "concepts": [
+        "bayesian_persuasion",
+        "information_design",
+        "signal_structure"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 29
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 87
+        }
+      ]
+    },
+    {
+      "key": "BergemannMorris2019",
+      "type": "article",
+      "title": "Information Design: A Unified Perspective",
+      "authors": [
+        "Bergemann, Dirk",
+        "Morris, Stephen"
+      ],
+      "authors_raw": "Bergemann, Dirk and Morris, Stephen",
+      "year": "2019",
+      "journal": "Journal of Economic Literature",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "57",
+      "number": "1",
+      "pages": "44--95",
+      "doi": "10.1257/jel.20181489",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Economic Literature",
+      "category": "foundational_theory",
+      "concepts": [
+        "information_design",
+        "unified_framework",
+        "posterior_beliefs"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 29
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 87
+        }
+      ]
+    },
+    {
+      "key": "deClippelZhang2020",
+      "type": "unpublished",
+      "title": "Non-Bayesian Persuasion",
+      "authors": [
+        "de Clippel, Geoffroy",
+        "Zhang, Xu"
+      ],
+      "authors_raw": "de Clippel, Geoffroy and Zhang, Xu",
+      "year": "2020",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "doi": "",
+      "eprint": "",
+      "url": "https://geoffroydeclippel.net/Working%20Papers%20PDFs/Persuasion.pdf",
+      "note": "Working paper version dated March 4, 2020",
+      "venue": "",
+      "category": "foundational_theory",
+      "concepts": [],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 87
+        }
+      ]
+    },
+    {
+      "key": "deClippelZhang2022",
+      "type": "article",
+      "title": "Non-Bayesian Persuasion",
+      "authors": [
+        "de Clippel, Geoffroy",
+        "Zhang, Xu"
+      ],
+      "authors_raw": "de Clippel, Geoffroy and Zhang, Xu",
+      "year": "2022",
+      "journal": "Journal of Political Economy",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "130",
+      "number": "10",
+      "pages": "2594--2642",
+      "doi": "10.1086/720464",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Political Economy",
+      "category": "foundational_theory",
+      "concepts": [
+        "non_bayesian_persuasion",
+        "distortion_function",
+        "signal_design"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 31
+        }
+      ]
+    },
+    {
+      "key": "Sims2003",
+      "type": "article",
+      "title": "Implications of Rational Inattention",
+      "authors": [
+        "Sims, Christopher A."
+      ],
+      "authors_raw": "Sims, Christopher A.",
+      "year": "2003",
+      "journal": "Journal of Monetary Economics",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "50",
+      "number": "3",
+      "pages": "665--690",
+      "doi": "10.1016/S0304-3932(03)00029-1",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Monetary Economics",
+      "category": "information_acquisition",
+      "concepts": [
+        "rational_inattention",
+        "information_cost",
+        "entropy"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 49
+        }
+      ]
+    },
+    {
+      "key": "CaplinDean2015",
+      "type": "article",
+      "title": "Revealed Preference, Rational Inattention, and Costly Information Acquisition",
+      "authors": [
+        "Caplin, Andrew",
+        "Dean, Mark"
+      ],
+      "authors_raw": "Caplin, Andrew and Dean, Mark",
+      "year": "2015",
+      "journal": "American Economic Review",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "105",
+      "number": "7",
+      "pages": "2183--2203",
+      "doi": "10.1257/aer.20140117",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "American Economic Review",
+      "category": "information_acquisition",
+      "concepts": [
+        "rational_inattention",
+        "costly_information_acquisition",
+        "revealed_preference"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 49
+        },
+        {
+          "file": "defense_project\\latex\\sections\\03_research_design_and_studies.tex",
+          "line": 69
+        }
+      ]
+    },
+    {
+      "key": "PayneBettmanJohnson1993",
+      "type": "book",
+      "title": "The Adaptive Decision Maker",
+      "authors": [
+        "Payne, John W.",
+        "Bettman, James R.",
+        "Johnson, Eric J."
+      ],
+      "authors_raw": "Payne, John W. and Bettman, James R. and Johnson, Eric J.",
+      "year": "1993",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "Cambridge University Press",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "doi": "",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Cambridge University Press",
+      "category": "information_acquisition",
+      "concepts": [
+        "adaptive_decision_maker",
+        "judgment_strategies",
+        "decision_process"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 51
+        },
+        {
+          "file": "defense_project\\latex\\sections\\03_research_design_and_studies.tex",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "key": "Nickerson1998",
+      "type": "article",
+      "title": "Confirmation Bias: A Ubiquitous Phenomenon in Many Guises",
+      "authors": [
+        "Nickerson, Raymond S."
+      ],
+      "authors_raw": "Nickerson, Raymond S.",
+      "year": "1998",
+      "journal": "Review of General Psychology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "2",
+      "number": "2",
+      "pages": "175--220",
+      "doi": "10.1037/1089-2680.2.2.175",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Review of General Psychology",
+      "category": "information_acquisition",
+      "concepts": [
+        "confirmation_bias",
+        "belief_persistence"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 51
+        }
+      ]
+    },
+    {
+      "key": "LordRossLepper1979",
+      "type": "article",
+      "title": "Biased Assimilation and Attitude Polarization: The Effects of Prior Theories on Subsequently Considered Evidence",
+      "authors": [
+        "Lord, Charles G.",
+        "Ross, Lee",
+        "Lepper, Mark R."
+      ],
+      "authors_raw": "Lord, Charles G. and Ross, Lee and Lepper, Mark R.",
+      "year": "1979",
+      "journal": "Journal of Personality and Social Psychology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "37",
+      "number": "11",
+      "pages": "2098--2109",
+      "doi": "10.1037/0022-3514.37.11.2098",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Personality and Social Psychology",
+      "category": "information_acquisition",
+      "concepts": [
+        "biased_assimilation",
+        "attitude_polarization",
+        "prior_beliefs"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 51
+        }
+      ]
+    },
+    {
+      "key": "ReevesNass1996",
+      "type": "book",
+      "title": "The Media Equation: How People Treat Computers, Television, and New Media Like Real People and Places",
+      "authors": [
+        "Reeves, Byron",
+        "Nass, Clifford"
+      ],
+      "authors_raw": "Reeves, Byron and Nass, Clifford",
+      "year": "1996",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "CSLI Publications and Cambridge University Press",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "doi": "",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "CSLI Publications and Cambridge University Press",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "CASA",
+        "media_equation",
+        "human_computer_interaction"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 77
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 97
+        }
+      ]
+    },
+    {
+      "key": "NassMoon2000",
+      "type": "article",
+      "title": "Machines and Mindlessness: Social Responses to Computers",
+      "authors": [
+        "Nass, Clifford",
+        "Moon, Youngme"
+      ],
+      "authors_raw": "Nass, Clifford and Moon, Youngme",
+      "year": "2000",
+      "journal": "Journal of Social Issues",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "56",
+      "number": "1",
+      "pages": "81--103",
+      "doi": "10.1111/0022-4537.00153",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Social Issues",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "mindlessness",
+        "social_response_to_computers"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 77
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 97
+        }
+      ]
+    },
+    {
+      "key": "EpleyWaytzCacioppo2007",
+      "type": "article",
+      "title": "On Seeing Human: A Three-Factor Theory of Anthropomorphism",
+      "authors": [
+        "Epley, Nicholas",
+        "Waytz, Adam",
+        "Cacioppo, John T."
+      ],
+      "authors_raw": "Epley, Nicholas and Waytz, Adam and Cacioppo, John T.",
+      "year": "2007",
+      "journal": "Psychological Review",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "114",
+      "number": "4",
+      "pages": "864--886",
+      "doi": "10.1037/0033-295X.114.4.864",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Psychological Review",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "anthropomorphism",
+        "three_factor_theory",
+        "mind_attribution"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "key": "Waytz2010",
+      "type": "article",
+      "title": "Who Sees Human? The Stability and Importance of Individual Differences in Anthropomorphism",
+      "authors": [
+        "Waytz, Adam",
+        "Cacioppo, John",
+        "Epley, Nicholas"
+      ],
+      "authors_raw": "Waytz, Adam and Cacioppo, John and Epley, Nicholas",
+      "year": "2010",
+      "journal": "Perspectives on Psychological Science",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "5",
+      "number": "3",
+      "pages": "219--232",
+      "doi": "10.1177/1745691610369336",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Perspectives on Psychological Science",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "anthropomorphism",
+        "individual_differences"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "key": "GreenBrock2000",
+      "type": "article",
+      "title": "The Role of Transportation in the Persuasiveness of Public Narratives",
+      "authors": [
+        "Green, Melanie C.",
+        "Brock, Timothy C."
+      ],
+      "authors_raw": "Green, Melanie C. and Brock, Timothy C.",
+      "year": "2000",
+      "journal": "Journal of Personality and Social Psychology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "79",
+      "number": "5",
+      "pages": "701--721",
+      "doi": "10.1037/0022-3514.79.5.701",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Personality and Social Psychology",
+      "category": "narrative_epistemic",
+      "concepts": [
+        "narrative_transportation",
+        "persuasion",
+        "narrative_belief"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 93
+        }
+      ]
+    },
+    {
+      "key": "Bender2021",
+      "type": "inproceedings",
+      "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+      "authors": [
+        "Bender, Emily M.",
+        "Gebru, Timnit",
+        "McMillan-Major, Angelina",
+        "Shmitchell, Shmargaret"
+      ],
+      "authors_raw": "Bender, Emily M. and Gebru, Timnit and McMillan-Major, Angelina and Shmitchell, Shmargaret",
+      "year": "2021",
+      "journal": "",
+      "booktitle": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency",
+      "publisher": "ACM",
+      "volume": "",
+      "number": "",
+      "pages": "610--623",
+      "doi": "10.1145/3442188.3445922",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "stochastic_parrots",
+        "language_model_limits",
+        "linguistic_form_vs_meaning"
+      ],
+      "has_pdf": true,
+      "pdf_path": "defense_project\\reference_materials\\papers_originals\\algorithms_trust_hci\\Bender2021.pdf",
+      "pdf_size_kb": 1107,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 95
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 95
+        }
+      ]
+    },
+    {
+      "key": "Edwards1965",
+      "type": "article",
+      "title": "Optimal Strategies for Seeking Information: Models for Statistics, Choice Reaction Times, and Human Information Processing",
+      "authors": [
+        "Edwards, Ward"
+      ],
+      "authors_raw": "Edwards, Ward",
+      "year": "1965",
+      "journal": "Journal of Mathematical Psychology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "2",
+      "number": "2",
+      "pages": "312--329",
+      "doi": "10.1016/0022-2496(65)90007-6",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Mathematical Psychology",
+      "category": "information_acquisition",
+      "concepts": [
+        "information_seeking",
+        "optimal_strategy",
+        "urn_experiment"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\03_research_design_and_studies.tex",
+          "line": 67
+        }
+      ]
+    },
+    {
+      "key": "EnkeZimmermann2019",
+      "type": "article",
+      "title": "Correlation Neglect in Belief Formation",
+      "authors": [
+        "Enke, Benjamin",
+        "Zimmermann, Florian"
+      ],
+      "authors_raw": "Enke, Benjamin and Zimmermann, Florian",
+      "year": "2019",
+      "journal": "The Review of Economic Studies",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "86",
+      "number": "1",
+      "pages": "313--332",
+      "doi": "10.1093/restud/rdx081",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "The Review of Economic Studies",
+      "category": "information_acquisition",
+      "concepts": [
+        "correlation_neglect",
+        "belief_formation",
+        "subjective_beliefs"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\03_research_design_and_studies.tex",
+          "line": 69
+        }
+      ]
+    },
+    {
+      "key": "WoodruffHewitt2026",
+      "type": "article",
+      "title": "Epistemic Agency in the Age of Large Language Models: Design Principles for Knowledge-Building AI",
+      "authors": [
+        "Woodruff, Earl",
+        "Hewitt, Jim"
+      ],
+      "authors_raw": "Woodruff, Earl and Hewitt, Jim",
+      "year": "2026",
+      "journal": "AI",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "7",
+      "number": "3",
+      "pages": "99",
+      "doi": "10.3390/ai7030099",
+      "eprint": "",
+      "url": "https://www.mdpi.com/2673-2688/7/3/99",
+      "note": "",
+      "venue": "AI",
+      "category": "narrative_epistemic",
+      "concepts": [
+        "epistemic_agency",
+        "LLM_design_principles",
+        "knowledge_building_AI"
+      ],
+      "has_pdf": false,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 79
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "key": "QiPan2026",
+      "type": "article",
+      "title": "Epistemic and Ethical Limits of Large Language Models in Evidence-Based Medicine: From Knowledge to Judgment",
+      "authors": [
+        "Qi, Wenxiu",
+        "Pan, Longfei"
+      ],
+      "authors_raw": "Qi, Wenxiu and Pan, Longfei",
+      "year": "2026",
+      "journal": "Frontiers in Digital Health",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "7",
+      "number": "",
+      "pages": "1706383",
+      "doi": "10.3389/fdgth.2025.1706383",
+      "eprint": "",
+      "url": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1706383/full",
+      "note": "",
+      "venue": "Frontiers in Digital Health",
+      "category": "narrative_epistemic",
+      "concepts": [
+        "LLM_evidence_based_medicine",
+        "epistemic_limits",
+        "LLM_judgment"
+      ],
+      "has_pdf": true,
+      "pdf_path": "defense_project\\reference_materials\\papers_originals\\narrative_epistemic\\QiPan2026.pdf",
+      "pdf_size_kb": 1015,
+      "cited_in": [
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 79
+        },
+        {
+          "file": "defense_project\\latex\\sections\\01_intro_lit_review.tex",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "key": "AlonsoCamara2016",
+      "type": "article",
+      "title": "Bayesian Persuasion with Heterogeneous Priors",
+      "authors": [
+        "Alonso, Ricardo",
+        "C{\\^a"
+      ],
+      "authors_raw": "Alonso, Ricardo and C{\\^a",
+      "year": "2016",
+      "journal": "Journal of Economic Theory",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "165",
+      "number": "",
+      "pages": "672--706",
+      "doi": "10.1016/j.jet.2016.08.006",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Economic Theory",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "bayesian_persuasion",
+        "heterogeneous_priors"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "BakshyMessingAdamic2015",
+      "type": "article",
+      "title": "Exposure to Ideologically Diverse News and Opinion on Facebook",
+      "authors": [
+        "Bakshy, Eytan",
+        "Messing, Solomon",
+        "Adamic, Lada A."
+      ],
+      "authors_raw": "Bakshy, Eytan and Messing, Solomon and Adamic, Lada A.",
+      "year": "2015",
+      "journal": "Science",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "348",
+      "number": "6239",
+      "pages": "1130--1132",
+      "doi": "10.1126/science.aaa1160",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Science",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "exposure_diverse_news",
+        "facebook",
+        "ideological_diversity"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "Benjamin2019",
+      "type": "incollection",
+      "title": "Errors in Probabilistic Reasoning and Judgment Biases",
+      "authors": [
+        "Benjamin, Daniel J."
+      ],
+      "authors_raw": "Benjamin, Daniel J.",
+      "year": "2019",
+      "journal": "",
+      "booktitle": "Handbook of Behavioral Economics: Applications and Foundations 1",
+      "publisher": "Elsevier",
+      "volume": "2",
+      "number": "",
+      "pages": "69--186",
+      "doi": "10.1016/bs.hesbe.2018.11.002",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Handbook of Behavioral Economics: Applications and Foundations 1",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "probabilistic_reasoning_errors",
+        "judgment_biases",
+        "behavioral_econ_review"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "BommasaniEtAl2021",
+      "type": "misc",
+      "title": "On the Opportunities and Risks of Foundation Models",
+      "authors": [
+        "Bommasani, Rishi",
+        "Hudson, Drew A.",
+        "Adeli, Ehsan",
+        "Altman, Russ",
+        "Arora, Simran",
+        "von Arx, Sydney",
+        "Bernstein, Michael S.",
+        "Bohg, Jeannette",
+        "Bosselut, Antoine",
+        "Brunskill, Emma",
+        "Liang, Percy"
+      ],
+      "authors_raw": "Bommasani, Rishi and Hudson, Drew A. and Adeli, Ehsan and Altman, Russ and Arora, Simran and von Arx, Sydney and Bernstein, Michael S. and Bohg, Jeannette and Bosselut, Antoine and Brunskill, Emma and Liang, Percy",
+      "year": "2021",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "doi": "",
+      "eprint": "2108.07258",
+      "url": "",
+      "note": "Stanford CRFM report; first 10 of 114 authors listed",
+      "venue": "",
+      "category": "recommender_genai",
+      "concepts": [
+        "foundation_models",
+        "transfer_learning",
+        "emergence",
+        "homogenization"
+      ],
+      "has_pdf": true,
+      "pdf_path": "defense_project\\reference_materials\\papers_originals\\recommender_genai\\BommasaniEtAl2021.pdf",
+      "pdf_size_kb": 14081,
+      "cited_in": []
+    },
+    {
+      "key": "CasteloBosLehmann2019",
+      "type": "article",
+      "title": "Task-Dependent Algorithm Aversion",
+      "authors": [
+        "Castelo, Noah",
+        "Bos, Maarten W.",
+        "Lehmann, Donald R."
+      ],
+      "authors_raw": "Castelo, Noah and Bos, Maarten W. and Lehmann, Donald R.",
+      "year": "2019",
+      "journal": "Journal of Marketing Research",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "56",
+      "number": "5",
+      "pages": "809--825",
+      "doi": "10.1177/0022243719851788",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Marketing Research",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "task_dependent_algorithm_aversion",
+        "subjective_vs_objective_tasks"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "DworczakMartini2019",
+      "type": "article",
+      "title": "The Simple Economics of Optimal Persuasion",
+      "authors": [
+        "Dworczak, Piotr",
+        "Martini, Giorgio"
+      ],
+      "authors_raw": "Dworczak, Piotr and Martini, Giorgio",
+      "year": "2019",
+      "journal": "Journal of Political Economy",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "127",
+      "number": "5",
+      "pages": "1993--2048",
+      "doi": "10.1086/701813",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Journal of Political Economy",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "optimal_persuasion",
+        "simple_economics"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "Edwards1968",
+      "type": "incollection",
+      "title": "Conservatism in Human Information Processing",
+      "authors": [
+        "Edwards, Ward"
+      ],
+      "authors_raw": "Edwards, Ward",
+      "year": "1968",
+      "journal": "",
+      "booktitle": "Formal Representation of Human Judgment",
+      "publisher": "Wiley",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "doi": "",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Formal Representation of Human Judgment",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "conservatism",
+        "information_processing"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "Gabaix2019",
+      "type": "incollection",
+      "title": "Behavioral Inattention",
+      "authors": [
+        "Gabaix, Xavier"
+      ],
+      "authors_raw": "Gabaix, Xavier",
+      "year": "2019",
+      "journal": "",
+      "booktitle": "Handbook of Behavioral Economics: Applications and Foundations 1",
+      "publisher": "Elsevier",
+      "volume": "2",
+      "number": "",
+      "pages": "261--343",
+      "doi": "10.1016/bs.hesbe.2018.11.001",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Handbook of Behavioral Economics: Applications and Foundations 1",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "behavioral_inattention",
+        "inattention_models"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "Grether1980",
+      "type": "article",
+      "title": "Bayes Rule as a Descriptive Model: The Representativeness Heuristic",
+      "authors": [
+        "Grether, David M."
+      ],
+      "authors_raw": "Grether, David M.",
+      "year": "1980",
+      "journal": "The Quarterly Journal of Economics",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "95",
+      "number": "3",
+      "pages": "537--557",
+      "doi": "10.2307/1885092",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "The Quarterly Journal of Economics",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "bayes_rule_descriptive",
+        "representativeness_heuristic"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "GuzmanLewis2020",
+      "type": "article",
+      "title": "Artificial Intelligence and Communication: A Human--Machine Communication Research Agenda",
+      "authors": [
+        "Guzman, Andrea L.",
+        "Lewis, Seth C."
+      ],
+      "authors_raw": "Guzman, Andrea L. and Lewis, Seth C.",
+      "year": "2020",
+      "journal": "New Media \\& Society",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "22",
+      "number": "1",
+      "pages": "70--86",
+      "doi": "10.1177/1461444819858691",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "New Media \\& Society",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "human_machine_communication",
+        "AI_communication_agenda"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "HicksHumphriesSlater2024",
+      "type": "article",
+      "title": "ChatGPT Is Bullshit",
+      "authors": [
+        "Hicks, Michael Townsen",
+        "Humphries, James",
+        "Slater, Joe"
+      ],
+      "authors_raw": "Hicks, Michael Townsen and Humphries, James and Slater, Joe",
+      "year": "2024",
+      "journal": "Ethics and Information Technology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "26",
+      "number": "2",
+      "pages": "38",
+      "doi": "10.1007/s10676-024-09775-5",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Ethics and Information Technology",
+      "category": "recommender_genai",
+      "concepts": [
+        "ChatGPT",
+        "bullshit",
+        "AI_truthfulness",
+        "philosophy_of_AI"
+      ],
+      "has_pdf": true,
+      "pdf_path": "defense_project\\reference_materials\\papers_originals\\algorithms_trust_hci\\HicksHumphriesSlater2024.pdf",
+      "pdf_size_kb": 954,
+      "cited_in": []
+    },
+    {
+      "key": "JiEtAl2023",
+      "type": "article",
+      "title": "Survey of Hallucination in Natural Language Generation",
+      "authors": [
+        "Ji, Ziwei",
+        "Lee, Nayeon",
+        "Frieske, Rita",
+        "Yu, Tiezheng",
+        "Su, Dan",
+        "Xu, Yan",
+        "Ishii, Etsuko",
+        "Bang, Yejin",
+        "Chen, Danqi",
+        "Dai, Wenliang"
+      ],
+      "authors_raw": "Ji, Ziwei and Lee, Nayeon and Frieske, Rita and Yu, Tiezheng and Su, Dan and Xu, Yan and Ishii, Etsuko and Bang, Yejin and Chen, Danqi and Dai, Wenliang",
+      "year": "2023",
+      "journal": "ACM Computing Surveys",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "55",
+      "number": "12",
+      "pages": "1--38",
+      "doi": "10.1145/3571730",
+      "eprint": "",
+      "url": "",
+      "note": "arXiv:2202.03629; first 10 of 13 authors listed (canonical ACM ordering)",
+      "venue": "ACM Computing Surveys",
+      "category": "recommender_genai",
+      "concepts": [
+        "hallucination",
+        "NLG_survey",
+        "factuality"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "KahnemanTversky1973",
+      "type": "article",
+      "title": "On the Psychology of Prediction",
+      "authors": [
+        "Kahneman, Daniel",
+        "Tversky, Amos"
+      ],
+      "authors_raw": "Kahneman, Daniel and Tversky, Amos",
+      "year": "1973",
+      "journal": "Psychological Review",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "80",
+      "number": "4",
+      "pages": "237--251",
+      "doi": "10.1037/h0034747",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Psychological Review",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "prediction_psychology",
+        "intuitive_forecast",
+        "calibration"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "KiddBirhane2023",
+      "type": "article",
+      "title": "How AI Can Distort Human Beliefs",
+      "authors": [
+        "Kidd, Celeste",
+        "Birhane, Abeba"
+      ],
+      "authors_raw": "Kidd, Celeste and Birhane, Abeba",
+      "year": "2023",
+      "journal": "Science",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "380",
+      "number": "6651",
+      "pages": "1222--1223",
+      "doi": "10.1126/science.adi0248",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Science",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "AI_distort_beliefs",
+        "Science_commentary"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "Kruglanski2004",
+      "type": "book",
+      "title": "The Psychology of Closed Mindedness",
+      "authors": [
+        "Kruglanski, Arie W."
+      ],
+      "authors_raw": "Kruglanski, Arie W.",
+      "year": "2004",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "Psychology Press",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "doi": "10.4324/9780203506967",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Psychology Press",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "cognitive_closure",
+        "closed_mindedness",
+        "freezing"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "PuringtonEtAl2017",
+      "type": "inproceedings",
+      "title": "{``Alexa Is My New BFF''",
+      "authors": [
+        "Purington, Amanda",
+        "Taft, Jessie G.",
+        "Sannon, Shruti",
+        "Bazarova, Natalya N.",
+        "Taylor, Samuel H."
+      ],
+      "authors_raw": "Purington, Amanda and Taft, Jessie G. and Sannon, Shruti and Bazarova, Natalya N. and Taylor, Samuel H.",
+      "year": "2017",
+      "journal": "",
+      "booktitle": "Proceedings of the 2017 CHI Conference Extended Abstracts on Human Factors in Computing Systems",
+      "publisher": "ACM",
+      "volume": "",
+      "number": "",
+      "pages": "2853--2859",
+      "doi": "10.1145/3027063.3053246",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Proceedings of the 2017 CHI Conference Extended Abstracts on Human Factors in Computing Systems",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "Alexa",
+        "smart_speaker",
+        "personification",
+        "social_roles"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "RabinSchrag1999",
+      "type": "article",
+      "title": "First Impressions Matter: A Model of Confirmatory Bias",
+      "authors": [
+        "Rabin, Matthew",
+        "Schrag, Joel L."
+      ],
+      "authors_raw": "Rabin, Matthew and Schrag, Joel L.",
+      "year": "1999",
+      "journal": "The Quarterly Journal of Economics",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "114",
+      "number": "1",
+      "pages": "37--82",
+      "doi": "10.1162/003355399555945",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "The Quarterly Journal of Economics",
+      "category": "newly_added_candidates",
+      "concepts": [
+        "first_impressions",
+        "confirmatory_bias",
+        "belief_formation"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "Shanahan2024",
+      "type": "article",
+      "title": "Talking about Large Language Models",
+      "authors": [
+        "Shanahan, Murray"
+      ],
+      "authors_raw": "Shanahan, Murray",
+      "year": "2024",
+      "journal": "Communications of the ACM",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "67",
+      "number": "2",
+      "pages": "68--79",
+      "doi": "10.1145/3624724",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Communications of the ACM",
+      "category": "recommender_genai",
+      "concepts": [
+        "LLM_reasoning",
+        "anthropomorphism",
+        "LLM_dialogue"
+      ],
+      "has_pdf": true,
+      "pdf_path": "defense_project\\reference_materials\\papers_originals\\narrative_epistemic\\Shanahan2024.pdf",
+      "pdf_size_kb": 722,
+      "cited_in": []
+    },
+    {
+      "key": "SundarNass2000",
+      "type": "article",
+      "title": "Source Orientation in Human-Computer Interaction: Programmer, Networker, or Independent Social Actor?",
+      "authors": [
+        "Sundar, S. Shyam",
+        "Nass, Clifford"
+      ],
+      "authors_raw": "Sundar, S. Shyam and Nass, Clifford",
+      "year": "2000",
+      "journal": "Communication Research",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "27",
+      "number": "6",
+      "pages": "683--703",
+      "doi": "10.1177/009365000027006001",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Communication Research",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "source_orientation",
+        "HCI",
+        "social_actor"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "WingerterStraubSchweitzer2025",
+      "type": "article",
+      "title": "Mitigating Automation Bias in Generative AI Through Nudges: A Cognitive Reflection Test Study",
+      "authors": [
+        "Wingerter, Tim Lewis",
+        "Straub, Tim",
+        "Schweitzer, Sascha"
+      ],
+      "authors_raw": "Wingerter, Tim Lewis and Straub, Tim and Schweitzer, Sascha",
+      "year": "2025",
+      "journal": "Procedia Computer Science",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "270",
+      "number": "",
+      "pages": "2106--2114",
+      "doi": "10.1016/j.procs.2025.09.331",
+      "eprint": "",
+      "url": "",
+      "note": "",
+      "venue": "Procedia Computer Science",
+      "category": "recommender_genai",
+      "concepts": [
+        "automation_bias",
+        "AI_nudges",
+        "cognitive_reflection"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "YanivKleinberger2000",
+      "type": "article",
+      "title": "Advice Taking in Decision Making: Egocentric Discounting and Reputation Formation",
+      "authors": [
+        "Yaniv, Ilan",
+        "Kleinberger, E."
+      ],
+      "authors_raw": "Yaniv, Ilan and Kleinberger, E.",
+      "year": "2000",
+      "journal": "Organizational Behavior and Human Decision Processes",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "83",
+      "number": "2",
+      "pages": "260--281",
+      "doi": "10.1006/obhd.2000.2909",
+      "eprint": "",
+      "url": "",
+      "note": "Verified 2026-06-30 (2+ DBs); advice-taking baseline literature",
+      "venue": "Organizational Behavior and Human Decision Processes",
+      "category": "advice_taking",
+      "concepts": [
+        "advice_taking",
+        "egocentric_discounting",
+        "advisor_reputation",
+        "judge_advisor_paradigm"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "BonaccioDalal2006",
+      "type": "article",
+      "title": "Advice Taking and Decision-Making: An Integrative Literature Review, and Implications for the Organizational Sciences",
+      "authors": [
+        "Bonaccio, Silvia",
+        "Dalal, Reeshad S."
+      ],
+      "authors_raw": "Bonaccio, Silvia and Dalal, Reeshad S.",
+      "year": "2006",
+      "journal": "Organizational Behavior and Human Decision Processes",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "101",
+      "number": "2",
+      "pages": "127--151",
+      "doi": "10.1016/j.obhdp.2006.06.001",
+      "eprint": "",
+      "url": "",
+      "note": "Suspicious 2026-06-30 (1 DB; CrossRef returned spurious best_match — DOI confirmed by user metadata)",
+      "venue": "Organizational Behavior and Human Decision Processes",
+      "category": "advice_taking",
+      "concepts": [
+        "advice_taking",
+        "review",
+        "advice_utilization",
+        "advisor_expertise"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "SniezekBuckley1995",
+      "type": "article",
+      "title": "Cueing and Cognitive Conflict in Judge-Advisor Decision Making",
+      "authors": [
+        "Sniezek, Janet A.",
+        "Buckley, Timothy"
+      ],
+      "authors_raw": "Sniezek, Janet A. and Buckley, Timothy",
+      "year": "1995",
+      "journal": "Organizational Behavior and Human Decision Processes",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "62",
+      "number": "2",
+      "pages": "159--174",
+      "doi": "10.1006/obhd.1995.1040",
+      "eprint": "",
+      "url": "",
+      "note": "Verified 2026-06-30 (2+ DBs); judge-advisor paradigm baseline",
+      "venue": "Organizational Behavior and Human Decision Processes",
+      "category": "advice_taking",
+      "concepts": [
+        "judge_advisor_system",
+        "cognitive_conflict",
+        "advice_cueing",
+        "role_differentiation"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "HarveyFischer1997",
+      "type": "article",
+      "title": "Taking Advice: Accepting Help, Improving Judgment, and Sharing Responsibility",
+      "authors": [
+        "Harvey, Nigel",
+        "Fischer, Ilan"
+      ],
+      "authors_raw": "Harvey, Nigel and Fischer, Ilan",
+      "year": "1997",
+      "journal": "Organizational Behavior and Human Decision Processes",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "70",
+      "number": "2",
+      "pages": "117--133",
+      "doi": "10.1006/obhd.1997.2703",
+      "eprint": "",
+      "url": "",
+      "note": "Suspicious 2026-06-30 (1 DB; CrossRef returned spurious best_match — DOI confirmed by user metadata)",
+      "venue": "Organizational Behavior and Human Decision Processes",
+      "category": "advice_taking",
+      "concepts": [
+        "advice_taking",
+        "judgment_improvement",
+        "responsibility_sharing",
+        "weight_of_advice"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "SollLarrick2009",
+      "type": "article",
+      "title": "Strategies for Revising Judgment: How and How Well People Use Others' Opinions",
+      "authors": [
+        "Soll, Jack B.",
+        "Larrick, Richard P."
+      ],
+      "authors_raw": "Soll, Jack B. and Larrick, Richard P.",
+      "year": "2009",
+      "journal": "Journal of Experimental Psychology: Learning, Memory, and Cognition",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "35",
+      "number": "3",
+      "pages": "780--805",
+      "doi": "10.1037/a0015145",
+      "eprint": "",
+      "url": "",
+      "note": "Suspicious 2026-06-30 (1 DB; title 100\\% match — DOI confirmed by user metadata)",
+      "venue": "Journal of Experimental Psychology: Learning, Memory, and Cognition",
+      "category": "advice_taking",
+      "concepts": [
+        "judgment_revision",
+        "advice_weighting",
+        "averaging_vs_choosing",
+        "wisdom_of_crowds"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "MillerRoss1975",
+      "type": "article",
+      "title": "Self-Serving Biases in the Attribution of Causality: Fact or Fiction?",
+      "authors": [
+        "Miller, Dale T.",
+        "Ross, Michael"
+      ],
+      "authors_raw": "Miller, Dale T. and Ross, Michael",
+      "year": "1975",
+      "journal": "Psychological Bulletin",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "82",
+      "number": "2",
+      "pages": "213--225",
+      "doi": "10.1037/h0076486",
+      "eprint": "",
+      "url": "",
+      "note": "Suspicious 2026-06-30 (1 DB; title 100\\% match — DOI confirmed by user metadata)",
+      "venue": "Psychological Bulletin",
+      "category": "self_serving_attribution",
+      "concepts": [
+        "self_serving_bias",
+        "attribution",
+        "success_failure_asymmetry",
+        "self_protection"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "Bradley1978",
+      "type": "article",
+      "title": "Self-Serving Biases in the Attribution Process: A Reexamination of the Fact or Fiction Question",
+      "authors": [
+        "Bradley, Gifford W."
+      ],
+      "authors_raw": "Bradley, Gifford W.",
+      "year": "1978",
+      "journal": "Journal of Personality and Social Psychology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "36",
+      "number": "1",
+      "pages": "56--71",
+      "doi": "10.1037/0022-3514.36.1.56",
+      "eprint": "",
+      "url": "",
+      "note": "Verified 2026-06-30 (2+ DBs)",
+      "venue": "Journal of Personality and Social Psychology",
+      "category": "self_serving_attribution",
+      "concepts": [
+        "self_serving_attribution",
+        "success_failure_asymmetry",
+        "defensive_attribution"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "Weiner1985",
+      "type": "article",
+      "title": "An Attributional Theory of Achievement Motivation and Emotion",
+      "authors": [
+        "Weiner, Bernard"
+      ],
+      "authors_raw": "Weiner, Bernard",
+      "year": "1985",
+      "journal": "Psychological Review",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "92",
+      "number": "4",
+      "pages": "548--573",
+      "doi": "10.1037/0033-295X.92.4.548",
+      "eprint": "",
+      "url": "",
+      "note": "Verified 2026-06-30 (2+ DBs); attribution theory baseline",
+      "venue": "Psychological Review",
+      "category": "self_serving_attribution",
+      "concepts": [
+        "attribution_theory",
+        "locus_stability_controllability",
+        "achievement_motivation"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "CampbellSedikides1999",
+      "type": "article",
+      "title": "Self-Threat Magnifies the Self-Serving Bias: A Meta-Analytic Integration",
+      "authors": [
+        "Campbell, W. Keith",
+        "Sedikides, Constantine"
+      ],
+      "authors_raw": "Campbell, W. Keith and Sedikides, Constantine",
+      "year": "1999",
+      "journal": "Review of General Psychology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "3",
+      "number": "1",
+      "pages": "23--43",
+      "doi": "10.1037/1089-2680.3.1.23",
+      "eprint": "",
+      "url": "",
+      "note": "Verified 2026-06-30 (2+ DBs)",
+      "venue": "Review of General Psychology",
+      "category": "self_serving_attribution",
+      "concepts": [
+        "self_threat",
+        "self_serving_bias",
+        "meta_analysis"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "MezulisEtAl2004",
+      "type": "article",
+      "title": "Is There a Universal Positivity Bias in Attributions? A Meta-Analytic Review of Individual, Developmental, and Cultural Differences in the Self-Serving Attributional Bias",
+      "authors": [
+        "Mezulis, Amy H.",
+        "Abramson, Lyn Y.",
+        "Hyde, Janet S.",
+        "Hankin, Benjamin L."
+      ],
+      "authors_raw": "Mezulis, Amy H. and Abramson, Lyn Y. and Hyde, Janet S. and Hankin, Benjamin L.",
+      "year": "2004",
+      "journal": "Psychological Bulletin",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "130",
+      "number": "5",
+      "pages": "711--747",
+      "doi": "10.1037/0033-2909.130.5.711",
+      "eprint": "",
+      "url": "",
+      "note": "Suspicious 2026-06-30 (1 DB; title 100\\% match — DOI confirmed by user metadata)",
+      "venue": "Psychological Bulletin",
+      "category": "self_serving_attribution",
+      "concepts": [
+        "self_serving_attribution",
+        "positivity_bias",
+        "meta_analysis"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "ShepperdMaloneSweeny2008",
+      "type": "article",
+      "title": "Exploring Causes of the Self-Serving Bias",
+      "authors": [
+        "Shepperd, James",
+        "Malone, Wendi",
+        "Sweeny, Kate"
+      ],
+      "authors_raw": "Shepperd, James and Malone, Wendi and Sweeny, Kate",
+      "year": "2008",
+      "journal": "Social and Personality Psychology Compass",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "2",
+      "number": "2",
+      "pages": "895--908",
+      "doi": "10.1111/j.1751-9004.2008.00113.x",
+      "eprint": "",
+      "url": "",
+      "note": "Suspicious 2026-06-30 (1 DB; CrossRef returned spurious best_match — DOI confirmed by user metadata)",
+      "venue": "Social and Personality Psychology Compass",
+      "category": "self_serving_attribution",
+      "concepts": [
+        "self_serving_bias",
+        "motivated_reasoning",
+        "self_enhancement"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "Langer1975",
+      "type": "article",
+      "title": "The Illusion of Control",
+      "authors": [
+        "Langer, Ellen J."
+      ],
+      "authors_raw": "Langer, Ellen J.",
+      "year": "1975",
+      "journal": "Journal of Personality and Social Psychology",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "32",
+      "number": "2",
+      "pages": "311--328",
+      "doi": "10.1037/h0076863",
+      "eprint": "",
+      "url": "",
+      "note": "Suspicious 2026-06-30 (1 DB; CrossRef returned spurious best_match — DOI confirmed by user metadata)",
+      "venue": "Journal of Personality and Social Psychology",
+      "category": "overconfidence_control",
+      "concepts": [
+        "illusion_of_control",
+        "perceived_control",
+        "choice_familiarity"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "ThompsonArmstrongThomas1998",
+      "type": "article",
+      "title": "Illusions of Control, Underestimations, and Accuracy: A Control Heuristic Explanation",
+      "authors": [
+        "Thompson, Suzanne C.",
+        "Armstrong, Wade",
+        "Thomas, Craig"
+      ],
+      "authors_raw": "Thompson, Suzanne C. and Armstrong, Wade and Thomas, Craig",
+      "year": "1998",
+      "journal": "Psychological Bulletin",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "123",
+      "number": "2",
+      "pages": "143--161",
+      "doi": "10.1037/0033-2909.123.2.143",
+      "eprint": "",
+      "url": "",
+      "note": "Verified 2026-06-30 (2+ DBs)",
+      "venue": "Psychological Bulletin",
+      "category": "overconfidence_control",
+      "concepts": [
+        "illusion_of_control",
+        "control_heuristic",
+        "intentionality_connection"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "MooreHealy2008",
+      "type": "article",
+      "title": "The Trouble with Overconfidence",
+      "authors": [
+        "Moore, Don A.",
+        "Healy, Paul J."
+      ],
+      "authors_raw": "Moore, Don A. and Healy, Paul J.",
+      "year": "2008",
+      "journal": "Psychological Review",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "115",
+      "number": "2",
+      "pages": "502--517",
+      "doi": "10.1037/0033-295X.115.2.502",
+      "eprint": "",
+      "url": "",
+      "note": "Verified 2026-06-30 (2+ DBs); overestimation/overplacement/overprecision framework",
+      "venue": "Psychological Review",
+      "category": "overconfidence_control",
+      "concepts": [
+        "overestimation",
+        "overplacement",
+        "overprecision",
+        "overconfidence"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "LarrickBursonSoll2007",
+      "type": "article",
+      "title": "Social Comparison and Confidence: When Thinking You're Better Than Average Predicts Overconfidence (And When It Does Not)",
+      "authors": [
+        "Larrick, Richard P.",
+        "Burson, Katherine A.",
+        "Soll, Jack B."
+      ],
+      "authors_raw": "Larrick, Richard P. and Burson, Katherine A. and Soll, Jack B.",
+      "year": "2007",
+      "journal": "Organizational Behavior and Human Decision Processes",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "102",
+      "number": "1",
+      "pages": "76--94",
+      "doi": "10.1016/j.obhdp.2006.10.002",
+      "eprint": "",
+      "url": "",
+      "note": "Suspicious 2026-06-30 (1 DB; title 100\\% match — DOI confirmed by user metadata)",
+      "venue": "Organizational Behavior and Human Decision Processes",
+      "category": "overconfidence_control",
+      "concepts": [
+        "social_comparison",
+        "better_than_average_effect",
+        "overplacement"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "Goodie2003",
+      "type": "article",
+      "title": "The Effects of Control on Betting: Paradoxical Betting on Items of High Confidence with Low Value",
+      "authors": [
+        "Goodie, Adam S."
+      ],
+      "authors_raw": "Goodie, Adam S.",
+      "year": "2003",
+      "journal": "Journal of Experimental Psychology: Learning, Memory, and Cognition",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "29",
+      "number": "4",
+      "pages": "598--610",
+      "doi": "10.1037/0278-7393.29.4.598",
+      "eprint": "",
+      "url": "",
+      "note": "Verified 2026-06-30 (2+ DBs)",
+      "venue": "Journal of Experimental Psychology: Learning, Memory, and Cognition",
+      "category": "overconfidence_control",
+      "concepts": [
+        "control",
+        "betting",
+        "calibration",
+        "decision_value"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "PrahlVanSwol2017",
+      "type": "article",
+      "title": "Understanding Algorithm Aversion: When Is Advice from Automation Discounted?",
+      "authors": [
+        "Prahl, Andrew",
+        "Van Swol, Lyn M."
+      ],
+      "authors_raw": "Prahl, Andrew and Van Swol, Lyn M.",
+      "year": "2017",
+      "journal": "Journal of Forecasting",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "36",
+      "number": "6",
+      "pages": "691--702",
+      "doi": "10.1002/for.2496",
+      "eprint": "",
+      "url": "",
+      "note": "Suspicious 2026-06-30 (1 DB; CrossRef returned spurious best_match — DOI confirmed by user metadata)",
+      "venue": "Journal of Forecasting",
+      "category": "algorithm_aversion",
+      "concepts": [
+        "algorithm_aversion",
+        "advice_discounting",
+        "perceived_similarity"
+      ],
+      "has_pdf": true,
+      "pdf_path": "defense_project\\reference_materials\\papers_originals\\algorithm_aversion\\PrahlVanSwol2017.pdf",
+      "pdf_size_kb": 947,
+      "cited_in": []
+    },
+    {
+      "key": "LongoniBonezziMorewedge2019",
+      "type": "article",
+      "title": "Resistance to Medical Artificial Intelligence",
+      "authors": [
+        "Longoni, Chiara",
+        "Bonezzi, Andrea",
+        "Morewedge, Carey K."
+      ],
+      "authors_raw": "Longoni, Chiara and Bonezzi, Andrea and Morewedge, Carey K.",
+      "year": "2019",
+      "journal": "Journal of Consumer Research",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "46",
+      "number": "4",
+      "pages": "629--650",
+      "doi": "10.1093/jcr/ucz013",
+      "eprint": "",
+      "url": "",
+      "note": "Verified 2026-06-30 (2+ DBs); uniqueness-neglect mechanism for AI resistance",
+      "venue": "Journal of Consumer Research",
+      "category": "algorithm_aversion",
+      "concepts": [
+        "AI_resistance",
+        "medical_AI",
+        "uniqueness_neglect"
+      ],
+      "has_pdf": false,
+      "cited_in": []
+    },
+    {
+      "key": "VodrahalliEtAl2021",
+      "type": "article",
+      "title": "Do Humans Trust Advice More if It Comes from AI? An Analysis of Human-AI Interactions",
+      "authors": [
+        "Vodrahalli, Kailas",
+        "Daneshjou, Roxana",
+        "Gerstenberg, Tobias",
+        "Zou, James"
+      ],
+      "authors_raw": "Vodrahalli, Kailas and Daneshjou, Roxana and Gerstenberg, Tobias and Zou, James",
+      "year": "2021",
+      "journal": "",
+      "booktitle": "",
+      "publisher": "",
+      "volume": "",
+      "number": "",
+      "pages": "",
+      "doi": "",
+      "eprint": "2107.07015",
+      "url": "",
+      "note": "Suspicious 2026-06-30 (1 DB; OpenAlex-only preprint — title 75\\% similarity; PDF downloaded 2026-06-29 from arXiv)",
+      "venue": "",
+      "category": "algorithms_trust_hci",
+      "concepts": [
+        "human_AI_advice",
+        "activation_integration_model",
+        "AI_advice_use"
+      ],
+      "has_pdf": true,
+      "pdf_path": "defense_project\\reference_materials\\papers_originals\\algorithms_trust_hci\\VodrahalliEtAl2021.pdf",
+      "pdf_size_kb": 3442,
+      "cited_in": []
+    }
+  ]
+}

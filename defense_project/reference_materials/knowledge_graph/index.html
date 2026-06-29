@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledge Graph Viewer</title>
+
+  <!-- vis-network v9.1.9 (must be loaded BEFORE the inline script) -->
+  <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+
+  <style>
+    /* ===== Global ===== */
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #222;
+      background: #fff;
+    }
+    body { display: flex; flex-direction: column; overflow: hidden; }
+
+    /* ===== Top toolbar ===== */
+    .toolbar {
+      height: 60px;
+      background: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+    .toolbar input,
+    .toolbar select {
+      height: 32px;
+      padding: 4px 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 13px;
+      background: #fff;
+    }
+    .toolbar input[type="number"] { width: 90px; }
+    .toolbar input[type="text"] { width: 220px; }
+    .toolbar label { font-size: 12px; color: #555; }
+    .toolbar .group { display: flex; align-items: center; gap: 6px; }
+    .toolbar button {
+      height: 32px;
+      padding: 0 14px;
+      border: 1px solid #ccc;
+      background: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .toolbar button:hover { background: #eef3ff; border-color: #4A90E2; }
+
+    /* ===== Tab nav ===== */
+    .tabs {
+      height: 50px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      flex-shrink: 0;
+    }
+    .tab {
+      padding: 0 22px;
+      height: 50px;
+      line-height: 50px;
+      cursor: pointer;
+      background: #fafafa;
+      color: #666;
+      border-right: 1px solid #eee;
+      font-size: 14px;
+      user-select: none;
+    }
+    .tab:hover { background: #f0f0f0; }
+    .tab.active {
+      background: #fff;
+      border-bottom: 3px solid #4A90E2;
+      font-weight: 600;
+      color: #222;
+    }
+
+    /* ===== Main area ===== */
+    .main {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+    .network {
+      flex: 1;
+      height: calc(100vh - 110px);
+      position: relative;
+      background: #fff;
+    }
+    #networkCanvas { width: 100%; height: 100%; }
+
+    /* ===== Right detail panel ===== */
+    .panel {
+      width: 320px;
+      padding: 20px;
+      overflow-y: auto;
+      background: #fafafa;
+      border-left: 1px solid #ddd;
+      font-size: 13px;
+    }
+    .panel h3 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    .panel .meta {
+      color: #666;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .panel .meta a { color: #1967d2; text-decoration: none; }
+    .panel .meta a:hover { text-decoration: underline; }
+    .panel .placeholder { color: #999; font-style: italic; }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      background: #eee;
+      color: #333;
+      border-radius: 10px;
+      font-size: 11px;
+      margin: 4px 0 8px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      margin: 3px;
+      background: #e8f0fe;
+      color: #1967d2;
+      border-radius: 12px;
+      font-size: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .tag:hover { background: #d2e3fc; }
+
+    .paper-item {
+      padding: 6px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 2px 0;
+    }
+    .paper-item:hover { background: #e8f0fe; }
+
+    .pdf-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background: #4A90E2;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 12px;
+      border: none;
+      cursor: pointer;
+    }
+    .pdf-btn:hover { background: #357ABD; }
+
+    /* ===== Loading / Error overlay ===== */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      font-size: 16px;
+      color: #555;
+    }
+    .overlay.error { color: #b00020; white-space: pre-wrap; padding: 20px; }
+  </style>
+</head>
+<body>
+
+  <!-- Loading overlay (replaced/removed when data ready) -->
+  <div id="overlay" class="overlay">Loading knowledge graph...</div>
+
+  <!-- Top toolbar -->
+  <div class="toolbar">
+    <div class="group">
+      <label for="search">Search:</label>
+      <input type="text" id="search" placeholder="title, author, concept..." />
+    </div>
+    <div class="group">
+      <label for="catFilter">Category:</label>
+      <select id="catFilter" multiple size="1" style="height:32px;min-width:160px;"></select>
+    </div>
+    <div class="group">
+      <label>Year:</label>
+      <input type="number" id="yearMin" placeholder="min" />
+      <span>–</span>
+      <input type="number" id="yearMax" placeholder="max" />
+    </div>
+    <button id="resetBtn">Reset</button>
+    <div style="flex:1"></div>
+    <div id="stats" style="font-size:12px;color:#666;"></div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <div class="tab active" data-tab="concept">1. Concept Co-occurrence</div>
+    <div class="tab" data-tab="category">2. Category Hierarchy</div>
+    <div class="tab" data-tab="temporal">3. Temporal Evolution</div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <div class="network">
+      <div id="networkCanvas"></div>
+    </div>
+    <div class="panel" id="detailPanel">
+      <div class="placeholder">Click a node to see details.</div>
+    </div>
+  </div>
+
+  <script>
+  /* ========================================================================
+     Knowledge Graph Viewer
+     ------------------------------------------------------------------------
+     Loads papers.json, concepts.json, categories.json, edges_cocitation.csv
+     and renders three views with vis-network.
+     ======================================================================== */
+  (() => {
+    'use strict';
+
+    // ---------- Configuration ----------
+    const CATEGORY_COLORS = {
+      foundational_theory:      '#4A90E2',
+      information_acquisition:  '#7ED321',
+      algorithms_trust_hci:     '#F5A623',
+      recommender_genai:        '#BD10E0',
+      narrative_epistemic:      '#D0021B',
+      advice_taking:            '#50E3C2',
+      self_serving_attribution: '#9013FE',
+      overconfidence_control:   '#B8E986',
+      algorithm_aversion:       '#FF6B6B',
+      newly_added_candidates:   '#BDBDBD',
+      uncategorized:            '#B8B8B8'
+    };
+
+    // concept_groups first-word → color
+    const CONCEPT_GROUP_COLORS = {
+      bayesian:        '#4A90E2',
+      algorithm:       '#F5A623',
+      cognitive:       '#7ED321',
+      anthropomorphism:'#BD10E0'
+    };
+    const CONCEPT_DEFAULT_COLOR = '#B8B8B8';
+
+    // ID prefixes to avoid collisions across the three views
+    const ID = {
+      paper:    p => `p::${p}`,
+      concept:  c => `c::${c}`,
+      category: c => `cat::${c}`,
+      year:     y => `y::${y}`
+    };
+
+    // ---------- Data store ----------
+    const State = {
+      papers: [],          // array of paper objects
+      papersByKey: new Map(),
+      concepts: [],        // array of concept names
+      conceptGroups: {},   // first-word → [concept names]
+      conceptToPapers: {}, // concept name → [paper keys]
+      categoryToPapers: {},// category name → [paper keys]
+      categoryDescriptions: {},
+      cocitationEdges: [], // [{source, target, file, line}]
+      network: null,       // vis-network instance
+      nodesDS: null,
+      edgesDS: null,
+      currentTab: 'concept',
+      filters: { search: '', categories: new Set(), yearMin: null, yearMax: null }
+    };
+
+    // ---------- Utility helpers ----------
+    const $  = (sel, root = document) => root.querySelector(sel);
+    const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+    function firstAuthor(authors) {
+      if (!authors || !authors.length) return 'Unknown';
+      return authors[0].split(',')[0].trim();
+    }
+
+    function firstAuthorYear(paper) {
+      return `${firstAuthor(paper.authors)} ${paper.year}`;
+    }
+
+    /**
+     * Normalize a paper object: tolerate either `category` or `categories[]`,
+     * and derive cited_count from concept count when missing.
+     */
+    function normalizePaper(p) {
+      const category = p.category || (Array.isArray(p.categories) && p.categories[0]) || 'uncategorized';
+      const cited_count = (typeof p.cited_count === 'number')
+        ? p.cited_count
+        : (Array.isArray(p.cited_in) ? p.cited_in.length : 0);
+      return { ...p, category, cited_count };
+    }
+
+    function groupKey(concept) {
+      // Use first word (split on "_") to find the concept group.
+      const w = concept.split('_')[0].toLowerCase();
+      return w;
+    }
+
+    function groupColor(concept) {
+      const w = groupKey(concept);
+      return CONCEPT_GROUP_COLORS[w] || CONCEPT_DEFAULT_COLOR;
+    }
+
+    function categoryColor(cat) {
+      return CATEGORY_COLORS[cat] || '#B8B8B8';
+    }
+
+    function scaleRadius(value, minVal, maxVal, minR, maxR) {
+      if (maxVal === minVal) return (minR + maxR) / 2;
+      const t = (value - minVal) / (maxVal - minVal);
+      return minR + t * (maxR - minR);
+    }
+
+    function parseCSV(text) {
+      // Minimal CSV parser: assumes no quoted fields with commas.
+      const lines = text.split(/\r?\n/).filter(l => l.trim().length > 0);
+      const header = lines.shift().split(',');
+      return lines.map(line => {
+        const cells = line.split(',');
+        const obj = {};
+        header.forEach((h, i) => { obj[h] = cells[i]; });
+        return obj;
+      });
+    }
+
+    // ---------- Data loading ----------
+    async function loadData() {
+      const [papersResp, conceptsResp, categoriesResp, edgesResp] = await Promise.all([
+        fetch('papers.json'),
+        fetch('concepts.json'),
+        fetch('categories.json'),
+        fetch('edges_cocitation.csv')
+      ]);
+      if (!papersResp.ok)  throw new Error(`papers.json HTTP ${papersResp.status}`);
+      if (!conceptsResp.ok) throw new Error(`concepts.json HTTP ${conceptsResp.status}`);
+      if (!categoriesResp.ok) throw new Error(`categories.json HTTP ${categoriesResp.status}`);
+      if (!edgesResp.ok)     throw new Error(`edges_cocitation.csv HTTP ${edgesResp.status}`);
+
+      const [papersJson, conceptsJson, categoriesJson, edgesText] = await Promise.all([
+        papersResp.json(),
+        conceptsResp.json(),
+        categoriesResp.json(),
+        edgesResp.text()
+      ]);
+
+      State.papers   = papersJson.papers.map(normalizePaper);
+      State.papersByKey = new Map(State.papers.map(p => [p.key, p]));
+
+      State.conceptToPapers = conceptsJson.concept_to_papers || {};
+      State.concepts = Object.keys(State.conceptToPapers);
+
+      // Build concept groups from first word
+      State.conceptGroups = conceptsJson.concept_groups || {};
+      // In case concept_groups uses a different key convention, derive from concepts as well.
+      State.concepts.forEach(c => {
+        const w = groupKey(c);
+        if (!State.conceptGroups[w]) State.conceptGroups[w] = [];
+        if (!State.conceptGroups[w].includes(c)) State.conceptGroups[w].push(c);
+      });
+
+      State.categoryToPapers     = categoriesJson.category_to_papers || {};
+      State.categoryDescriptions = categoriesJson.category_descriptions || {};
+
+      State.cocitationEdges = parseCSV(edgesText);
+
+      $('#stats').textContent =
+        `${State.papers.length} papers · ${State.concepts.length} concepts · ${Object.keys(State.categoryToPapers).length} categories · ${State.cocitationEdges.length} cocitations`;
+    }
+
+    // ---------- View builders ----------
+    /** Build Tab 1: Concept Co-occurrence Network */
+    function buildConceptView() {
+      const cites = State.papers.map(p => p.cited_count);
+      const minCite = Math.min(...cites, 0);
+      const maxCite = Math.max(...cites, 1);
+
+      const nodes = [];
+      const edges = [];
+
+      // Paper nodes
+      State.papers.forEach(p => {
+        const r = scaleRadius(p.cited_count, minCite, maxCite, 8, 30);
+        nodes.push({
+          id: ID.paper(p.key),
+          label: firstAuthorYear(p),
+          title: p.title,
+          group: 'paper',
+          paperKey: p.key,
+          category: p.category,
+          shape: 'dot',
+          size: r,
+          color: { background: '#E8E8E8', border: '#555', highlight: { background: '#E8E8E8', border: '#000' } },
+          font: { size: 11, color: '#222' },
+          borderWidth: 1
+        });
+      });
+
+      // Concept nodes
+      const counts = State.concepts.map(c => State.conceptToPapers[c].length);
+      const minC = Math.min(...counts, 1);
+      const maxC = Math.max(...counts, 1);
+
+      State.concepts.forEach(c => {
+        const cnt = State.conceptToPapers[c].length;
+        const r = scaleRadius(Math.sqrt(cnt), Math.sqrt(minC), Math.sqrt(maxC), 6, 18);
+        const color = groupColor(c);
+        nodes.push({
+          id: ID.concept(c),
+          label: c.replace(/_/g, ' '),
+          title: `${c} (${cnt} papers)`,
+          group: 'concept',
+          conceptName: c,
+          shape: 'dot',
+          size: r,
+          color: { background: color, border: shade(color, -20), highlight: { background: color, border: '#000' } },
+          font: { size: 10, color: '#222' }
+        });
+      });
+
+      // Edges: paper -> concept
+      State.papers.forEach(p => {
+        (p.concepts || []).forEach(c => {
+          edges.push({
+            from: ID.paper(p.key),
+            to: ID.concept(c),
+            color: { color: '#999', opacity: 0.6 },
+            width: 1,
+            smooth: { type: 'continuous' }
+          });
+        });
+      });
+
+      return {
+        nodes,
+        edges,
+        options: {
+          physics: {
+            enabled: true,
+            solver: 'barnesHut',
+            barnesHut: { gravitationalConstant: -8000, centralGravity: 0.3, springLength: 120, springConstant: 0.04 }
+          },
+          interaction: { hover: true, tooltipDelay: 150, navigationButtons: true, keyboard: true }
+        }
+      };
+    }
+
+    /** Build Tab 2: Category Hierarchy */
+    function buildCategoryView() {
+      const nodes = [];
+      const edges = [];
+
+      Object.keys(State.categoryToPapers).forEach(cat => {
+        if (cat === 'uncategorized') return; // skip empty bucket
+        nodes.push({
+          id: ID.category(cat),
+          label: cat.replace(/_/g, ' '),
+          title: State.categoryDescriptions[cat] || cat,
+          group: 'category',
+          categoryName: cat,
+          shape: 'dot',
+          size: 35,
+          color: { background: categoryColor(cat), border: shade(categoryColor(cat), -25), highlight: { background: categoryColor(cat), border: '#000' } },
+          font: { size: 14, color: '#fff', face: 'arial', bold: { color: '#fff', size: 14, mod: 'bold' } },
+          borderWidth: 2
+        });
+        State.categoryToPapers[cat].forEach(pKey => {
+          const p = State.papersByKey.get(pKey);
+          if (!p) return;
+          nodes.push({
+            id: ID.paper(pKey),
+            label: firstAuthorYear(p),
+            title: p.title,
+            group: 'paper',
+            paperKey: pKey,
+            category: cat,
+            shape: 'dot',
+            size: 12,
+            color: { background: categoryColor(cat), border: shade(categoryColor(cat), -25), highlight: { background: categoryColor(cat), border: '#000' } },
+            font: { size: 10, color: '#222' }
+          });
+          edges.push({ from: ID.category(cat), to: ID.paper(pKey), color: { color: '#bbb' }, width: 1, arrows: { to: { enabled: false } } });
+        });
+      });
+
+      return {
+        nodes,
+        edges,
+        options: {
+          layout: {
+            hierarchical: {
+              enabled: true,
+              direction: 'UD',
+              sortMethod: 'directed',
+              nodeSpacing: 150,
+              levelSeparation: 100
+            }
+          },
+          physics: { enabled: false },
+          interaction: { hover: true, tooltipDelay: 150, navigationButtons: true, keyboard: true }
+        }
+      };
+    }
+
+    /** Build Tab 3: Temporal Evolution */
+    function buildTemporalView() {
+      const nodes = [];
+      const edges = [];
+
+      // Group by year
+      const yearGroups = {};
+      State.papers.forEach(p => {
+        (yearGroups[p.year] = yearGroups[p.year] || []).push(p);
+      });
+      const years = Object.keys(yearGroups).sort();
+
+      // Year "strata" nodes (invisible anchors for clean left-right stratification)
+      years.forEach(y => {
+        nodes.push({
+          id: ID.year(y),
+          label: String(y),
+          group: 'year',
+          year: y,
+          shape: 'text',
+          font: { size: 18, color: '#888', bold: { mod: 'bold' } },
+          color: { background: 'rgba(0,0,0,0)', border: 'rgba(0,0,0,0)' },
+          size: 1
+        });
+      });
+
+      // Paper nodes (level set by year for hierarchical LR layout)
+      State.papers.forEach(p => {
+        nodes.push({
+          id: ID.paper(p.key),
+          label: firstAuthorYear(p),
+          title: p.title,
+          group: 'paper',
+          paperKey: p.key,
+          category: p.category,
+          year: p.year,
+          shape: 'dot',
+          size: 14,
+          color: { background: categoryColor(p.category), border: shade(categoryColor(p.category), -25), highlight: { background: categoryColor(p.category), border: '#000' } },
+          font: { size: 10, color: '#222' }
+        });
+      });
+
+      // Cocitation edges
+      State.cocitationEdges.forEach(e => {
+        edges.push({
+          from: ID.paper(e.source_key),
+          to:   ID.paper(e.target_key),
+          color: { color: '#888' },
+          width: 2,
+          smooth: { type: 'continuous' }
+        });
+      });
+
+      return {
+        nodes,
+        edges,
+        options: {
+          layout: {
+            hierarchical: {
+              enabled: true,
+              direction: 'LR',
+              sortMethod: 'directed',
+              nodeSpacing: 80,
+              levelSeparation: 200
+            }
+          },
+          physics: { enabled: false },
+          interaction: { hover: true, tooltipDelay: 150, navigationButtons: true, keyboard: true }
+        }
+      };
+    }
+
+    // ---------- Color shading helper ----------
+    function shade(hex, percent) {
+      // Lighten (percent > 0) or darken (percent < 0) a hex color.
+      const h = hex.replace('#','');
+      const r = parseInt(h.substring(0,2), 16);
+      const g = parseInt(h.substring(2,4), 16);
+      const b = parseInt(h.substring(4,6), 16);
+      const adj = (c) => Math.max(0, Math.min(255, Math.round(c + (percent/100) * 255)));
+      return '#' + [adj(r), adj(g), adj(b)].map(v => v.toString(16).padStart(2,'0')).join('');
+    }
+
+    // ---------- Filter application ----------
+    function applyFilters(view) {
+      // Returns arrays of {id, hidden} updates to apply incrementally.
+      const { search, categories, yearMin, yearMax } = State.filters;
+      const updates = [];
+
+      view.nodes.forEach(n => {
+        let hidden = false;
+        if (n.group === 'paper') {
+          const p = State.papersByKey.get(n.paperKey);
+          if (!p) { hidden = true; }
+          else {
+            // Category filter
+            if (categories && categories.size > 0 && !categories.has(p.category)) hidden = true;
+            // Year filter
+            const y = parseInt(p.year, 10);
+            if (Number.isFinite(yearMin) && y < yearMin) hidden = true;
+            if (Number.isFinite(yearMax) && y > yearMax) hidden = true;
+            // Search filter (only hides when search is non-empty and doesn't match)
+            if (search) {
+              const hay = `${p.title} ${(p.authors||[]).join(' ')} ${(p.concepts||[]).join(' ')}`.toLowerCase();
+              if (!hay.includes(search)) hidden = true;
+            }
+          }
+        } else if (n.group === 'concept') {
+          if (search) {
+            if (!n.conceptName.toLowerCase().includes(search)) hidden = true;
+          }
+        } else if (n.group === 'category') {
+          if (categories && categories.size > 0 && !categories.has(n.categoryName)) hidden = true;
+        } else if (n.group === 'year') {
+          if (Number.isFinite(yearMin) || Number.isFinite(yearMax)) {
+            const y = parseInt(n.year, 10);
+            if (Number.isFinite(yearMin) && y < yearMin) hidden = true;
+            if (Number.isFinite(yearMax) && y > yearMax) hidden = true;
+          }
+        }
+        updates.push({ id: n.id, hidden });
+      });
+      return updates;
+    }
+
+    // ---------- Detail panel rendering ----------
+    function renderPaperDetail(paper) {
+      const panel = $('#detailPanel');
+      const authors = (paper.authors || []).join(', ');
+      const doi = paper.doi && paper.doi !== 'nan' && paper.doi.length > 0
+        ? `<div class="meta"><a href="https://doi.org/${paper.doi}" target="_blank" rel="noopener">doi:${paper.doi}</a></div>`
+        : '';
+      const pdfBtn = paper.has_pdf
+        ? `<button class="pdf-btn" data-key="${paper.key}" data-cat="${paper.category}">📄 Open PDF</button>`
+        : '';
+      const conceptTags = (paper.concepts || []).map(c =>
+        `<span class="tag" data-concept="${c}">${c.replace(/_/g,' ')}</span>`
+      ).join('');
+      panel.innerHTML = `
+        <h3>${escapeHtml(paper.title)}</h3>
+        <div class="meta">${escapeHtml(authors)}</div>
+        <div class="meta">${escapeHtml(paper.year)} · ${escapeHtml(paper.venue || '')}</div>
+        ${doi}
+        <div><span class="badge">${escapeHtml(paper.category)}</span></div>
+        <div style="margin-top:10px;"><strong>Concepts</strong></div>
+        <div>${conceptTags || '<span class="placeholder">none</span>'}</div>
+        ${pdfBtn}
+      `;
+      // Wire up handlers
+      $$('.tag', panel).forEach(t => {
+        t.addEventListener('click', () => {
+          const c = t.getAttribute('data-concept');
+          switchToTab('concept');
+          focusConcept(c);
+        });
+      });
+      const btn = $('.pdf-btn', panel);
+      if (btn) btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-key');
+        const cat = btn.getAttribute('data-cat');
+        // best-effort file:// URL (relative path)
+        const url = `../papers_originals/${cat}/${key}.pdf`;
+        window.open(url, '_blank');
+      });
+    }
+
+    function renderConceptDetail(conceptName) {
+      const panel = $('#detailPanel');
+      const papers = State.conceptToPapers[conceptName] || [];
+      const group = groupKey(conceptName);
+      const items = papers.map(k => {
+        const p = State.papersByKey.get(k);
+        if (!p) return '';
+        return `<div class="paper-item" data-key="${k}">${escapeHtml(firstAuthorYear(p))} — ${escapeHtml(p.title)}</div>`;
+      }).join('');
+      panel.innerHTML = `
+        <h3>${escapeHtml(conceptName.replace(/_/g,' '))}</h3>
+        <div class="meta">group: <strong>${escapeHtml(group)}</strong></div>
+        <div class="meta">paper count: <strong>${papers.length}</strong></div>
+        <div style="margin-top:10px;"><strong>Papers</strong></div>
+        <div>${items || '<span class="placeholder">none</span>'}</div>
+      `;
+      $$('.paper-item', panel).forEach(el => {
+        el.addEventListener('click', () => {
+          const k = el.getAttribute('data-key');
+          focusPaper(k);
+        });
+      });
+    }
+
+    function renderCategoryDetail(cat) {
+      const panel = $('#detailPanel');
+      const papers = State.categoryToPapers[cat] || [];
+      const desc = State.categoryDescriptions[cat] || '';
+      const items = papers.map(k => {
+        const p = State.papersByKey.get(k);
+        if (!p) return '';
+        return `<div class="paper-item" data-key="${k}">${escapeHtml(firstAuthorYear(p))} — ${escapeHtml(p.title)}</div>`;
+      }).join('');
+      panel.innerHTML = `
+        <h3>${escapeHtml(cat.replace(/_/g,' '))}</h3>
+        <div class="meta">${escapeHtml(desc)}</div>
+        <div class="meta">paper count: <strong>${papers.length}</strong></div>
+        <div style="margin-top:10px;"><strong>Papers</strong></div>
+        <div>${items || '<span class="placeholder">none</span>'}</div>
+      `;
+      $$('.paper-item', panel).forEach(el => {
+        el.addEventListener('click', () => {
+          const k = el.getAttribute('data-key');
+          focusPaper(k);
+        });
+      });
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+      }[c]));
+    }
+
+    // ---------- Focus helpers ----------
+    function focusConcept(conceptName) {
+      if (!State.network) return;
+      const id = ID.concept(conceptName);
+      // Unhide if hidden
+      State.nodesDS.update({ id, hidden: false });
+      State.network.selectNodes([id]);
+      State.network.fit({ nodes: [id], animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+    }
+
+    function focusPaper(paperKey) {
+      if (!State.network) return;
+      const id = ID.paper(paperKey);
+      State.nodesDS.update({ id, hidden: false });
+      State.network.selectNodes([id]);
+      State.network.fit({ nodes: [id], animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+    }
+
+    // ---------- Tab switching ----------
+    function switchToTab(name) {
+      if (State.currentTab === name) return;
+      State.currentTab = name;
+      $$('.tab').forEach(t => t.classList.toggle('active', t.getAttribute('data-tab') === name));
+      renderCurrentView();
+    }
+
+    // ---------- Render entry point ----------
+    function renderCurrentView() {
+      let view;
+      if (State.currentTab === 'concept')  view = buildConceptView();
+      else if (State.currentTab === 'category') view = buildCategoryView();
+      else view = buildTemporalView();
+
+      // Apply current filters as hidden flags
+      const updates = applyFilters(view);
+      view.nodes.forEach((n, i) => { n.hidden = updates[i].hidden; });
+
+      State.nodesDS = new vis.DataSet(view.nodes);
+      State.edgesDS = new vis.DataSet(view.edges);
+
+      const container = document.getElementById('networkCanvas');
+      State.network = new vis.Network(container, { nodes: State.nodesDS, edges: State.edgesDS }, view.options);
+
+      State.network.on('click', params => {
+        const id = params.nodes[0];
+        if (!id) return;
+        if (id.startsWith('p::'))      renderPaperDetail(State.papersByKey.get(id.slice(3)));
+        else if (id.startsWith('c::')) renderConceptDetail(id.slice(3));
+        else if (id.startsWith('cat::')) renderCategoryDetail(id.slice(5));
+        else if (id.startsWith('y::')) {/* year node - ignore */ }
+      });
+    }
+
+    // ---------- Toolbar wiring ----------
+    function setupToolbar() {
+      // Populate category select
+      const cats = Object.keys(State.categoryToPapers).filter(c => c !== 'uncategorized');
+      const sel = $('#catFilter');
+      sel.innerHTML = cats.map(c => `<option value="${c}">${c}</option>`).join('');
+      sel.size = Math.min(cats.length, 6);
+
+      $('#search').addEventListener('input', e => {
+        State.filters.search = e.target.value.trim().toLowerCase();
+        applyAndRefresh();
+      });
+      sel.addEventListener('change', () => {
+        State.filters.categories = new Set(
+          Array.from(sel.selectedOptions).map(o => o.value)
+        );
+        applyAndRefresh();
+      });
+      $('#yearMin').addEventListener('input', e => {
+        const v = parseInt(e.target.value, 10);
+        State.filters.yearMin = Number.isFinite(v) ? v : null;
+        applyAndRefresh();
+      });
+      $('#yearMax').addEventListener('input', e => {
+        const v = parseInt(e.target.value, 10);
+        State.filters.yearMax = Number.isFinite(v) ? v : null;
+        applyAndRefresh();
+      });
+      $('#resetBtn').addEventListener('click', () => {
+        State.filters = { search: '', categories: new Set(), yearMin: null, yearMax: null };
+        $('#search').value = '';
+        $('#yearMin').value = '';
+        $('#yearMax').value = '';
+        Array.from(sel.options).forEach(o => o.selected = false);
+        applyAndRefresh();
+      });
+
+      $$('.tab').forEach(t => {
+        t.addEventListener('click', () => switchToTab(t.getAttribute('data-tab')));
+      });
+    }
+
+    function applyAndRefresh() {
+      if (!State.network) return;
+      // Update only hidden flags in-place to preserve layout
+      const view = (State.currentTab === 'concept')  ? buildConceptView()
+                : (State.currentTab === 'category') ? buildCategoryView()
+                : buildTemporalView();
+      const updates = applyFilters(view);
+      updates.forEach(u => {
+        if (State.nodesDS.get(u.id)) State.nodesDS.update({ id: u.id, hidden: u.hidden });
+      });
+    }
+
+    // ---------- Boot ----------
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        if (typeof vis === 'undefined' || !vis.Network) {
+          throw new Error('vis-network failed to load from CDN');
+        }
+        await loadData();
+        setupToolbar();
+        renderCurrentView();
+        // Remove overlay
+        const ov = $('#overlay');
+        if (ov) ov.remove();
+      } catch (err) {
+        console.error(err);
+        const ov = $('#overlay');
+        ov.classList.add('error');
+        ov.textContent = 'Failed to load knowledge graph data.\n\n' + (err && err.message ? err.message : err);
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

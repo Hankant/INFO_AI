@@ -1,0 +1,1020 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-30",
+  "concept_count": 184,
+  "concept_to_papers": {
+    "automation_use_abuse": [
+      "ParasuramanRiley1997"
+    ],
+    "automation_paradox": [
+      "ParasuramanRiley1997"
+    ],
+    "human_factors": [
+      "ParasuramanRiley1997"
+    ],
+    "trust_in_automation": [
+      "LeeSee2004"
+    ],
+    "appropriate_reliance": [
+      "LeeSee2004"
+    ],
+    "trust_calibration": [
+      "LeeSee2004"
+    ],
+    "algorithm_aversion": [
+      "Dietvorst2015",
+      "PrahlVanSwol2017"
+    ],
+    "algorithm_error": [
+      "Dietvorst2015"
+    ],
+    "forecast_algorithm": [
+      "Dietvorst2015"
+    ],
+    "algorithm_appreciation": [
+      "Logg2019"
+    ],
+    "algorithmic_judgment": [
+      "Logg2019"
+    ],
+    "AI_advice": [
+      "Logg2019"
+    ],
+    "recommender_systems": [
+      "ResnickVarian1997"
+    ],
+    "collaborative_filtering": [
+      "ResnickVarian1997"
+    ],
+    "information_filtering": [
+      "ResnickVarian1997"
+    ],
+    "recommender_systems_survey": [
+      "AdomaviciusTuzhilin2005"
+    ],
+    "next_generation_recommender": [
+      "AdomaviciusTuzhilin2005"
+    ],
+    "algorithmic_bias": [
+      "Bozdag2013"
+    ],
+    "filter_bubble": [
+      "Bozdag2013"
+    ],
+    "personalization_ethics": [
+      "Bozdag2013"
+    ],
+    "transformer": [
+      "Vaswani2017"
+    ],
+    "attention_mechanism": [
+      "Vaswani2017"
+    ],
+    "self_supervised_learning": [
+      "Vaswani2017"
+    ],
+    "few_shot_learning": [
+      "Brown2020"
+    ],
+    "GPT_3": [
+      "Brown2020"
+    ],
+    "language_model": [
+      "Brown2020"
+    ],
+    "in_context_learning": [
+      "Brown2020"
+    ],
+    "RLHF": [
+      "Ouyang2022"
+    ],
+    "instruction_tuning": [
+      "Ouyang2022"
+    ],
+    "InstructGPT": [
+      "Ouyang2022"
+    ],
+    "bayesian_persuasion": [
+      "KamenicaGentzkow2011",
+      "AlonsoCamara2016"
+    ],
+    "information_design": [
+      "KamenicaGentzkow2011",
+      "BergemannMorris2019"
+    ],
+    "signal_structure": [
+      "KamenicaGentzkow2011"
+    ],
+    "unified_framework": [
+      "BergemannMorris2019"
+    ],
+    "posterior_beliefs": [
+      "BergemannMorris2019"
+    ],
+    "non_bayesian_persuasion": [
+      "deClippelZhang2022"
+    ],
+    "distortion_function": [
+      "deClippelZhang2022"
+    ],
+    "signal_design": [
+      "deClippelZhang2022"
+    ],
+    "rational_inattention": [
+      "Sims2003",
+      "CaplinDean2015"
+    ],
+    "information_cost": [
+      "Sims2003"
+    ],
+    "entropy": [
+      "Sims2003"
+    ],
+    "costly_information_acquisition": [
+      "CaplinDean2015"
+    ],
+    "revealed_preference": [
+      "CaplinDean2015"
+    ],
+    "adaptive_decision_maker": [
+      "PayneBettmanJohnson1993"
+    ],
+    "judgment_strategies": [
+      "PayneBettmanJohnson1993"
+    ],
+    "decision_process": [
+      "PayneBettmanJohnson1993"
+    ],
+    "confirmation_bias": [
+      "Nickerson1998"
+    ],
+    "belief_persistence": [
+      "Nickerson1998"
+    ],
+    "biased_assimilation": [
+      "LordRossLepper1979"
+    ],
+    "attitude_polarization": [
+      "LordRossLepper1979"
+    ],
+    "prior_beliefs": [
+      "LordRossLepper1979"
+    ],
+    "CASA": [
+      "ReevesNass1996"
+    ],
+    "media_equation": [
+      "ReevesNass1996"
+    ],
+    "human_computer_interaction": [
+      "ReevesNass1996"
+    ],
+    "mindlessness": [
+      "NassMoon2000"
+    ],
+    "social_response_to_computers": [
+      "NassMoon2000"
+    ],
+    "anthropomorphism": [
+      "EpleyWaytzCacioppo2007",
+      "Waytz2010",
+      "Shanahan2024"
+    ],
+    "three_factor_theory": [
+      "EpleyWaytzCacioppo2007"
+    ],
+    "mind_attribution": [
+      "EpleyWaytzCacioppo2007"
+    ],
+    "individual_differences": [
+      "Waytz2010"
+    ],
+    "narrative_transportation": [
+      "GreenBrock2000"
+    ],
+    "persuasion": [
+      "GreenBrock2000"
+    ],
+    "narrative_belief": [
+      "GreenBrock2000"
+    ],
+    "stochastic_parrots": [
+      "Bender2021"
+    ],
+    "language_model_limits": [
+      "Bender2021"
+    ],
+    "linguistic_form_vs_meaning": [
+      "Bender2021"
+    ],
+    "information_seeking": [
+      "Edwards1965"
+    ],
+    "optimal_strategy": [
+      "Edwards1965"
+    ],
+    "urn_experiment": [
+      "Edwards1965"
+    ],
+    "correlation_neglect": [
+      "EnkeZimmermann2019"
+    ],
+    "belief_formation": [
+      "EnkeZimmermann2019",
+      "RabinSchrag1999"
+    ],
+    "subjective_beliefs": [
+      "EnkeZimmermann2019"
+    ],
+    "epistemic_agency": [
+      "WoodruffHewitt2026"
+    ],
+    "LLM_design_principles": [
+      "WoodruffHewitt2026"
+    ],
+    "knowledge_building_AI": [
+      "WoodruffHewitt2026"
+    ],
+    "LLM_evidence_based_medicine": [
+      "QiPan2026"
+    ],
+    "epistemic_limits": [
+      "QiPan2026"
+    ],
+    "LLM_judgment": [
+      "QiPan2026"
+    ],
+    "heterogeneous_priors": [
+      "AlonsoCamara2016"
+    ],
+    "exposure_diverse_news": [
+      "BakshyMessingAdamic2015"
+    ],
+    "facebook": [
+      "BakshyMessingAdamic2015"
+    ],
+    "ideological_diversity": [
+      "BakshyMessingAdamic2015"
+    ],
+    "probabilistic_reasoning_errors": [
+      "Benjamin2019"
+    ],
+    "judgment_biases": [
+      "Benjamin2019"
+    ],
+    "behavioral_econ_review": [
+      "Benjamin2019"
+    ],
+    "foundation_models": [
+      "BommasaniEtAl2021"
+    ],
+    "transfer_learning": [
+      "BommasaniEtAl2021"
+    ],
+    "emergence": [
+      "BommasaniEtAl2021"
+    ],
+    "homogenization": [
+      "BommasaniEtAl2021"
+    ],
+    "task_dependent_algorithm_aversion": [
+      "CasteloBosLehmann2019"
+    ],
+    "subjective_vs_objective_tasks": [
+      "CasteloBosLehmann2019"
+    ],
+    "optimal_persuasion": [
+      "DworczakMartini2019"
+    ],
+    "simple_economics": [
+      "DworczakMartini2019"
+    ],
+    "conservatism": [
+      "Edwards1968"
+    ],
+    "information_processing": [
+      "Edwards1968"
+    ],
+    "behavioral_inattention": [
+      "Gabaix2019"
+    ],
+    "inattention_models": [
+      "Gabaix2019"
+    ],
+    "bayes_rule_descriptive": [
+      "Grether1980"
+    ],
+    "representativeness_heuristic": [
+      "Grether1980"
+    ],
+    "human_machine_communication": [
+      "GuzmanLewis2020"
+    ],
+    "AI_communication_agenda": [
+      "GuzmanLewis2020"
+    ],
+    "ChatGPT": [
+      "HicksHumphriesSlater2024"
+    ],
+    "bullshit": [
+      "HicksHumphriesSlater2024"
+    ],
+    "AI_truthfulness": [
+      "HicksHumphriesSlater2024"
+    ],
+    "philosophy_of_AI": [
+      "HicksHumphriesSlater2024"
+    ],
+    "hallucination": [
+      "JiEtAl2023"
+    ],
+    "NLG_survey": [
+      "JiEtAl2023"
+    ],
+    "factuality": [
+      "JiEtAl2023"
+    ],
+    "prediction_psychology": [
+      "KahnemanTversky1973"
+    ],
+    "intuitive_forecast": [
+      "KahnemanTversky1973"
+    ],
+    "calibration": [
+      "KahnemanTversky1973",
+      "Goodie2003"
+    ],
+    "AI_distort_beliefs": [
+      "KiddBirhane2023"
+    ],
+    "Science_commentary": [
+      "KiddBirhane2023"
+    ],
+    "cognitive_closure": [
+      "Kruglanski2004"
+    ],
+    "closed_mindedness": [
+      "Kruglanski2004"
+    ],
+    "freezing": [
+      "Kruglanski2004"
+    ],
+    "Alexa": [
+      "PuringtonEtAl2017"
+    ],
+    "smart_speaker": [
+      "PuringtonEtAl2017"
+    ],
+    "personification": [
+      "PuringtonEtAl2017"
+    ],
+    "social_roles": [
+      "PuringtonEtAl2017"
+    ],
+    "first_impressions": [
+      "RabinSchrag1999"
+    ],
+    "confirmatory_bias": [
+      "RabinSchrag1999"
+    ],
+    "LLM_reasoning": [
+      "Shanahan2024"
+    ],
+    "LLM_dialogue": [
+      "Shanahan2024"
+    ],
+    "source_orientation": [
+      "SundarNass2000"
+    ],
+    "HCI": [
+      "SundarNass2000"
+    ],
+    "social_actor": [
+      "SundarNass2000"
+    ],
+    "automation_bias": [
+      "WingerterStraubSchweitzer2025"
+    ],
+    "AI_nudges": [
+      "WingerterStraubSchweitzer2025"
+    ],
+    "cognitive_reflection": [
+      "WingerterStraubSchweitzer2025"
+    ],
+    "advice_taking": [
+      "YanivKleinberger2000",
+      "BonaccioDalal2006",
+      "HarveyFischer1997"
+    ],
+    "egocentric_discounting": [
+      "YanivKleinberger2000"
+    ],
+    "advisor_reputation": [
+      "YanivKleinberger2000"
+    ],
+    "judge_advisor_paradigm": [
+      "YanivKleinberger2000"
+    ],
+    "review": [
+      "BonaccioDalal2006"
+    ],
+    "advice_utilization": [
+      "BonaccioDalal2006"
+    ],
+    "advisor_expertise": [
+      "BonaccioDalal2006"
+    ],
+    "judge_advisor_system": [
+      "SniezekBuckley1995"
+    ],
+    "cognitive_conflict": [
+      "SniezekBuckley1995"
+    ],
+    "advice_cueing": [
+      "SniezekBuckley1995"
+    ],
+    "role_differentiation": [
+      "SniezekBuckley1995"
+    ],
+    "judgment_improvement": [
+      "HarveyFischer1997"
+    ],
+    "responsibility_sharing": [
+      "HarveyFischer1997"
+    ],
+    "weight_of_advice": [
+      "HarveyFischer1997"
+    ],
+    "judgment_revision": [
+      "SollLarrick2009"
+    ],
+    "advice_weighting": [
+      "SollLarrick2009"
+    ],
+    "averaging_vs_choosing": [
+      "SollLarrick2009"
+    ],
+    "wisdom_of_crowds": [
+      "SollLarrick2009"
+    ],
+    "self_serving_bias": [
+      "MillerRoss1975",
+      "CampbellSedikides1999",
+      "ShepperdMaloneSweeny2008"
+    ],
+    "attribution": [
+      "MillerRoss1975"
+    ],
+    "success_failure_asymmetry": [
+      "MillerRoss1975",
+      "Bradley1978"
+    ],
+    "self_protection": [
+      "MillerRoss1975"
+    ],
+    "self_serving_attribution": [
+      "Bradley1978",
+      "MezulisEtAl2004"
+    ],
+    "defensive_attribution": [
+      "Bradley1978"
+    ],
+    "attribution_theory": [
+      "Weiner1985"
+    ],
+    "locus_stability_controllability": [
+      "Weiner1985"
+    ],
+    "achievement_motivation": [
+      "Weiner1985"
+    ],
+    "self_threat": [
+      "CampbellSedikides1999"
+    ],
+    "meta_analysis": [
+      "CampbellSedikides1999",
+      "MezulisEtAl2004"
+    ],
+    "positivity_bias": [
+      "MezulisEtAl2004"
+    ],
+    "motivated_reasoning": [
+      "ShepperdMaloneSweeny2008"
+    ],
+    "self_enhancement": [
+      "ShepperdMaloneSweeny2008"
+    ],
+    "illusion_of_control": [
+      "Langer1975",
+      "ThompsonArmstrongThomas1998"
+    ],
+    "perceived_control": [
+      "Langer1975"
+    ],
+    "choice_familiarity": [
+      "Langer1975"
+    ],
+    "control_heuristic": [
+      "ThompsonArmstrongThomas1998"
+    ],
+    "intentionality_connection": [
+      "ThompsonArmstrongThomas1998"
+    ],
+    "overestimation": [
+      "MooreHealy2008"
+    ],
+    "overplacement": [
+      "MooreHealy2008",
+      "LarrickBursonSoll2007"
+    ],
+    "overprecision": [
+      "MooreHealy2008"
+    ],
+    "overconfidence": [
+      "MooreHealy2008"
+    ],
+    "social_comparison": [
+      "LarrickBursonSoll2007"
+    ],
+    "better_than_average_effect": [
+      "LarrickBursonSoll2007"
+    ],
+    "control": [
+      "Goodie2003"
+    ],
+    "betting": [
+      "Goodie2003"
+    ],
+    "decision_value": [
+      "Goodie2003"
+    ],
+    "advice_discounting": [
+      "PrahlVanSwol2017"
+    ],
+    "perceived_similarity": [
+      "PrahlVanSwol2017"
+    ],
+    "AI_resistance": [
+      "LongoniBonezziMorewedge2019"
+    ],
+    "medical_AI": [
+      "LongoniBonezziMorewedge2019"
+    ],
+    "uniqueness_neglect": [
+      "LongoniBonezziMorewedge2019"
+    ],
+    "human_AI_advice": [
+      "VodrahalliEtAl2021"
+    ],
+    "activation_integration_model": [
+      "VodrahalliEtAl2021"
+    ],
+    "AI_advice_use": [
+      "VodrahalliEtAl2021"
+    ]
+  },
+  "concept_groups": {
+    "automation": [
+      "automation_use_abuse",
+      "automation_paradox",
+      "automation_bias"
+    ],
+    "human": [
+      "human_factors",
+      "human_computer_interaction",
+      "human_machine_communication",
+      "human_AI_advice"
+    ],
+    "trust": [
+      "trust_in_automation",
+      "trust_calibration"
+    ],
+    "appropriate": [
+      "appropriate_reliance"
+    ],
+    "algorithm": [
+      "algorithm_aversion",
+      "algorithm_error",
+      "algorithm_appreciation"
+    ],
+    "forecast": [
+      "forecast_algorithm"
+    ],
+    "algorithmic": [
+      "algorithmic_judgment",
+      "algorithmic_bias"
+    ],
+    "AI": [
+      "AI_advice",
+      "AI_communication_agenda",
+      "AI_truthfulness",
+      "AI_distort_beliefs",
+      "AI_nudges",
+      "AI_resistance",
+      "AI_advice_use"
+    ],
+    "recommender": [
+      "recommender_systems",
+      "recommender_systems_survey"
+    ],
+    "collaborative": [
+      "collaborative_filtering"
+    ],
+    "information": [
+      "information_filtering",
+      "information_design",
+      "information_cost",
+      "information_seeking",
+      "information_processing"
+    ],
+    "next": [
+      "next_generation_recommender"
+    ],
+    "filter": [
+      "filter_bubble"
+    ],
+    "personalization": [
+      "personalization_ethics"
+    ],
+    "transformer": [
+      "transformer"
+    ],
+    "attention": [
+      "attention_mechanism"
+    ],
+    "self": [
+      "self_supervised_learning",
+      "self_serving_bias",
+      "self_protection",
+      "self_serving_attribution",
+      "self_threat",
+      "self_enhancement"
+    ],
+    "few": [
+      "few_shot_learning"
+    ],
+    "GPT": [
+      "GPT_3"
+    ],
+    "language": [
+      "language_model",
+      "language_model_limits"
+    ],
+    "in": [
+      "in_context_learning"
+    ],
+    "RLHF": [
+      "RLHF"
+    ],
+    "instruction": [
+      "instruction_tuning"
+    ],
+    "InstructGPT": [
+      "InstructGPT"
+    ],
+    "bayesian": [
+      "bayesian_persuasion"
+    ],
+    "signal": [
+      "signal_structure",
+      "signal_design"
+    ],
+    "unified": [
+      "unified_framework"
+    ],
+    "posterior": [
+      "posterior_beliefs"
+    ],
+    "non": [
+      "non_bayesian_persuasion"
+    ],
+    "distortion": [
+      "distortion_function"
+    ],
+    "rational": [
+      "rational_inattention"
+    ],
+    "entropy": [
+      "entropy"
+    ],
+    "costly": [
+      "costly_information_acquisition"
+    ],
+    "revealed": [
+      "revealed_preference"
+    ],
+    "adaptive": [
+      "adaptive_decision_maker"
+    ],
+    "judgment": [
+      "judgment_strategies",
+      "judgment_biases",
+      "judgment_improvement",
+      "judgment_revision"
+    ],
+    "decision": [
+      "decision_process",
+      "decision_value"
+    ],
+    "confirmation": [
+      "confirmation_bias"
+    ],
+    "belief": [
+      "belief_persistence",
+      "belief_formation"
+    ],
+    "biased": [
+      "biased_assimilation"
+    ],
+    "attitude": [
+      "attitude_polarization"
+    ],
+    "prior": [
+      "prior_beliefs"
+    ],
+    "CASA": [
+      "CASA"
+    ],
+    "media": [
+      "media_equation"
+    ],
+    "mindlessness": [
+      "mindlessness"
+    ],
+    "social": [
+      "social_response_to_computers",
+      "social_roles",
+      "social_actor",
+      "social_comparison"
+    ],
+    "anthropomorphism": [
+      "anthropomorphism"
+    ],
+    "three": [
+      "three_factor_theory"
+    ],
+    "mind": [
+      "mind_attribution"
+    ],
+    "individual": [
+      "individual_differences"
+    ],
+    "narrative": [
+      "narrative_transportation",
+      "narrative_belief"
+    ],
+    "persuasion": [
+      "persuasion"
+    ],
+    "stochastic": [
+      "stochastic_parrots"
+    ],
+    "linguistic": [
+      "linguistic_form_vs_meaning"
+    ],
+    "optimal": [
+      "optimal_strategy",
+      "optimal_persuasion"
+    ],
+    "urn": [
+      "urn_experiment"
+    ],
+    "correlation": [
+      "correlation_neglect"
+    ],
+    "subjective": [
+      "subjective_beliefs",
+      "subjective_vs_objective_tasks"
+    ],
+    "epistemic": [
+      "epistemic_agency",
+      "epistemic_limits"
+    ],
+    "LLM": [
+      "LLM_design_principles",
+      "LLM_evidence_based_medicine",
+      "LLM_judgment",
+      "LLM_reasoning",
+      "LLM_dialogue"
+    ],
+    "knowledge": [
+      "knowledge_building_AI"
+    ],
+    "heterogeneous": [
+      "heterogeneous_priors"
+    ],
+    "exposure": [
+      "exposure_diverse_news"
+    ],
+    "facebook": [
+      "facebook"
+    ],
+    "ideological": [
+      "ideological_diversity"
+    ],
+    "probabilistic": [
+      "probabilistic_reasoning_errors"
+    ],
+    "behavioral": [
+      "behavioral_econ_review",
+      "behavioral_inattention"
+    ],
+    "foundation": [
+      "foundation_models"
+    ],
+    "transfer": [
+      "transfer_learning"
+    ],
+    "emergence": [
+      "emergence"
+    ],
+    "homogenization": [
+      "homogenization"
+    ],
+    "task": [
+      "task_dependent_algorithm_aversion"
+    ],
+    "simple": [
+      "simple_economics"
+    ],
+    "conservatism": [
+      "conservatism"
+    ],
+    "inattention": [
+      "inattention_models"
+    ],
+    "bayes": [
+      "bayes_rule_descriptive"
+    ],
+    "representativeness": [
+      "representativeness_heuristic"
+    ],
+    "ChatGPT": [
+      "ChatGPT"
+    ],
+    "bullshit": [
+      "bullshit"
+    ],
+    "philosophy": [
+      "philosophy_of_AI"
+    ],
+    "hallucination": [
+      "hallucination"
+    ],
+    "NLG": [
+      "NLG_survey"
+    ],
+    "factuality": [
+      "factuality"
+    ],
+    "prediction": [
+      "prediction_psychology"
+    ],
+    "intuitive": [
+      "intuitive_forecast"
+    ],
+    "calibration": [
+      "calibration"
+    ],
+    "Science": [
+      "Science_commentary"
+    ],
+    "cognitive": [
+      "cognitive_closure",
+      "cognitive_reflection",
+      "cognitive_conflict"
+    ],
+    "closed": [
+      "closed_mindedness"
+    ],
+    "freezing": [
+      "freezing"
+    ],
+    "Alexa": [
+      "Alexa"
+    ],
+    "smart": [
+      "smart_speaker"
+    ],
+    "personification": [
+      "personification"
+    ],
+    "first": [
+      "first_impressions"
+    ],
+    "confirmatory": [
+      "confirmatory_bias"
+    ],
+    "source": [
+      "source_orientation"
+    ],
+    "HCI": [
+      "HCI"
+    ],
+    "advice": [
+      "advice_taking",
+      "advice_utilization",
+      "advice_cueing",
+      "advice_weighting",
+      "advice_discounting"
+    ],
+    "egocentric": [
+      "egocentric_discounting"
+    ],
+    "advisor": [
+      "advisor_reputation",
+      "advisor_expertise"
+    ],
+    "judge": [
+      "judge_advisor_paradigm",
+      "judge_advisor_system"
+    ],
+    "review": [
+      "review"
+    ],
+    "role": [
+      "role_differentiation"
+    ],
+    "responsibility": [
+      "responsibility_sharing"
+    ],
+    "weight": [
+      "weight_of_advice"
+    ],
+    "averaging": [
+      "averaging_vs_choosing"
+    ],
+    "wisdom": [
+      "wisdom_of_crowds"
+    ],
+    "attribution": [
+      "attribution",
+      "attribution_theory"
+    ],
+    "success": [
+      "success_failure_asymmetry"
+    ],
+    "defensive": [
+      "defensive_attribution"
+    ],
+    "locus": [
+      "locus_stability_controllability"
+    ],
+    "achievement": [
+      "achievement_motivation"
+    ],
+    "meta": [
+      "meta_analysis"
+    ],
+    "positivity": [
+      "positivity_bias"
+    ],
+    "motivated": [
+      "motivated_reasoning"
+    ],
+    "illusion": [
+      "illusion_of_control"
+    ],
+    "perceived": [
+      "perceived_control",
+      "perceived_similarity"
+    ],
+    "choice": [
+      "choice_familiarity"
+    ],
+    "control": [
+      "control_heuristic",
+      "control"
+    ],
+    "intentionality": [
+      "intentionality_connection"
+    ],
+    "overestimation": [
+      "overestimation"
+    ],
+    "overplacement": [
+      "overplacement"
+    ],
+    "overprecision": [
+      "overprecision"
+    ],
+    "overconfidence": [
+      "overconfidence"
+    ],
+    "better": [
+      "better_than_average_effect"
+    ],
+    "betting": [
+      "betting"
+    ],
+    "medical": [
+      "medical_AI"
+    ],
+    "uniqueness": [
+      "uniqueness_neglect"
+    ],
+    "activation": [
+      "activation_integration_model"
+    ]
+  }
+}

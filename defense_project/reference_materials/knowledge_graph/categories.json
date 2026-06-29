@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-30",
+  "category_count": 10,
+  "category_to_papers": {
+    "algorithms_trust_hci": [
+      "ParasuramanRiley1997",
+      "LeeSee2004",
+      "Dietvorst2015",
+      "Logg2019",
+      "ReevesNass1996",
+      "NassMoon2000",
+      "EpleyWaytzCacioppo2007",
+      "Waytz2010",
+      "Bender2021",
+      "PuringtonEtAl2017",
+      "SundarNass2000",
+      "VodrahalliEtAl2021"
+    ],
+    "recommender_genai": [
+      "ResnickVarian1997",
+      "AdomaviciusTuzhilin2005",
+      "Bozdag2013",
+      "Vaswani2017",
+      "Brown2020",
+      "Ouyang2022",
+      "BommasaniEtAl2021",
+      "HicksHumphriesSlater2024",
+      "JiEtAl2023",
+      "Shanahan2024",
+      "WingerterStraubSchweitzer2025"
+    ],
+    "foundational_theory": [
+      "KamenicaGentzkow2011",
+      "BergemannMorris2019",
+      "deClippelZhang2020",
+      "deClippelZhang2022"
+    ],
+    "information_acquisition": [
+      "Sims2003",
+      "CaplinDean2015",
+      "PayneBettmanJohnson1993",
+      "Nickerson1998",
+      "LordRossLepper1979",
+      "Edwards1965",
+      "EnkeZimmermann2019"
+    ],
+    "narrative_epistemic": [
+      "GreenBrock2000",
+      "WoodruffHewitt2026",
+      "QiPan2026"
+    ],
+    "newly_added_candidates": [
+      "AlonsoCamara2016",
+      "BakshyMessingAdamic2015",
+      "Benjamin2019",
+      "CasteloBosLehmann2019",
+      "DworczakMartini2019",
+      "Edwards1968",
+      "Gabaix2019",
+      "Grether1980",
+      "GuzmanLewis2020",
+      "KahnemanTversky1973",
+      "KiddBirhane2023",
+      "Kruglanski2004",
+      "RabinSchrag1999"
+    ],
+    "advice_taking": [
+      "YanivKleinberger2000",
+      "BonaccioDalal2006",
+      "SniezekBuckley1995",
+      "HarveyFischer1997",
+      "SollLarrick2009"
+    ],
+    "self_serving_attribution": [
+      "MillerRoss1975",
+      "Bradley1978",
+      "Weiner1985",
+      "CampbellSedikides1999",
+      "MezulisEtAl2004",
+      "ShepperdMaloneSweeny2008"
+    ],
+    "overconfidence_control": [
+      "Langer1975",
+      "ThompsonArmstrongThomas1998",
+      "MooreHealy2008",
+      "LarrickBursonSoll2007",
+      "Goodie2003"
+    ],
+    "algorithm_aversion": [
+      "PrahlVanSwol2017",
+      "LongoniBonezziMorewedge2019"
+    ]
+  },
+  "category_descriptions": {
+    "foundational_theory": "Bayesian persuasion, information design, rational inattention",
+    "information_acquisition": "Sequential sampling, belief updating, evidence weighting",
+    "algorithms_trust_hci": "Algorithm aversion/appreciation, trust in automation, CASA, anthropomorphism",
+    "recommender_genai": "Recommender systems, transformers, LLMs, RLHF, foundation models",
+    "narrative_epistemic": "Narrative persuasion, epistemic agency, LLM epistemic limits",
+    "newly_added_candidates": "Background literature candidates added to references.bib",
+    "advice_taking": "Judge-advisor paradigm, advice discounting, weight of advice (2026-06-29 batch)",
+    "self_serving_attribution": "Self-serving bias, attribution theory, self-protection (2026-06-29 batch)",
+    "overconfidence_control": "Overconfidence, illusion of control, perceived control (2026-06-29 batch)",
+    "algorithm_aversion": "Algorithm/AI aversion and resistance mechanisms (2026-06-29 batch)",
+    "uncategorized": "Awaiting manual categorization"
+  }
+}
