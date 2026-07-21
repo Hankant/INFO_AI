@@ -1,49 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Knowledge Graph Viewer</title>
+  <title>LLM Wiki · 知识图谱查看器</title>
 
-  <!-- vis-network v9.1.9 (must be loaded BEFORE the inline script) -->
+  <!-- vis-network v9.1.9 must load BEFORE the inline script -->
   <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
 
   <style>
-    /* ===== Global ===== */
+    /* ================================================================
+       Theme tokens (CSS variables)
+       ================================================================ */
+    :root {
+      --bg: #fafafa;
+      --fg: #222;
+      --border: #ddd;
+      --accent: #4A90E2;
+      --accent-hover: #357ABD;
+      --card-bg: #fff;
+      --tag-bg: #e8f0fe;
+      --tag-fg: #1967d2;
+      --muted: #888;
+      --highlight-bg: #fff3a0;
+    }
+
+    /* ================================================================
+       Global reset + layout
+       ================================================================ */
     * { box-sizing: border-box; }
     html, body {
       height: 100%;
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: #222;
-      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                   'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      color: var(--fg);
+      background: var(--bg);
     }
-    body { display: flex; flex-direction: column; overflow: hidden; }
+    body {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
 
-    /* ===== Top toolbar ===== */
+    /* ================================================================
+       Top toolbar
+       ================================================================ */
     .toolbar {
-      height: 60px;
-      background: #f5f5f5;
-      border-bottom: 1px solid #ddd;
-      padding: 12px 20px;
+      height: 56px;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 0 20px;
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
       flex-shrink: 0;
     }
-    .toolbar input,
-    .toolbar select {
+    .toolbar .brand {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      margin-right: 8px;
+    }
+    .toolbar .group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .toolbar label {
+      font-size: 12px;
+      color: #555;
+    }
+    .toolbar input[type="text"] {
       height: 32px;
-      padding: 4px 8px;
+      padding: 4px 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 13px;
+      width: 240px;
       background: #fff;
     }
-    .toolbar input[type="number"] { width: 90px; }
-    .toolbar input[type="text"] { width: 220px; }
-    .toolbar label { font-size: 12px; color: #555; }
-    .toolbar .group { display: flex; align-items: center; gap: 6px; }
+    .toolbar input[type="text"]:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
     .toolbar button {
       height: 32px;
       padding: 0 14px;
@@ -52,109 +93,296 @@
       border-radius: 4px;
       cursor: pointer;
       font-size: 13px;
+      color: var(--fg);
     }
-    .toolbar button:hover { background: #eef3ff; border-color: #4A90E2; }
+    .toolbar button:hover {
+      background: #eef3ff;
+      border-color: var(--accent);
+    }
+    .toolbar .spacer { flex: 1; }
+    #stats {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
 
-    /* ===== Tab nav ===== */
+    /* ================================================================
+       Tabs (view switcher)
+       ================================================================ */
     .tabs {
-      height: 50px;
+      height: 44px;
       background: #fff;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid var(--border);
       display: flex;
       flex-shrink: 0;
+      overflow-x: auto;
     }
     .tab {
-      padding: 0 22px;
-      height: 50px;
-      line-height: 50px;
+      padding: 0 18px;
+      height: 44px;
+      line-height: 44px;
       cursor: pointer;
       background: #fafafa;
       color: #666;
       border-right: 1px solid #eee;
       font-size: 14px;
       user-select: none;
+      white-space: nowrap;
     }
     .tab:hover { background: #f0f0f0; }
     .tab.active {
       background: #fff;
-      border-bottom: 3px solid #4A90E2;
+      border-bottom: 3px solid var(--accent);
       font-weight: 600;
-      color: #222;
+      color: var(--fg);
     }
 
-    /* ===== Main area ===== */
+    /* ================================================================
+       Main viewport
+       ================================================================ */
     .main {
       flex: 1;
       display: flex;
       min-height: 0;
+      overflow: hidden;
     }
-    .network {
+    .view-pane {
       flex: 1;
-      height: calc(100vh - 110px);
-      position: relative;
-      background: #fff;
+      display: none;
+      min-width: 0;
+      min-height: 0;
     }
-    #networkCanvas { width: 100%; height: 100%; }
+    .view-pane.active { display: flex; }
 
-    /* ===== Right detail panel ===== */
-    .panel {
-      width: 320px;
-      padding: 20px;
+    /* ================================================================
+       Catalog view
+       ================================================================ */
+    .catalog {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+    .cat-rail {
+      width: 240px;
+      background: var(--card-bg);
+      border-right: 1px solid var(--border);
       overflow-y: auto;
-      background: #fafafa;
-      border-left: 1px solid #ddd;
+      flex-shrink: 0;
+    }
+    .cat-rail-header {
+      padding: 12px 14px 8px;
+      font-weight: 700;
+      font-size: 13px;
+      color: #444;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--card-bg);
+    }
+    .cat-rail-item {
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 13px;
+      border-left: 3px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cat-rail-item:hover { background: #f4f7fb; }
+    .cat-rail-item.active {
+      background: #eef3ff;
+      border-left-color: var(--accent);
+      font-weight: 600;
+    }
+    .cat-rail-item .swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .cat-rail-item .count {
+      margin-left: auto;
+      font-size: 11px;
+      color: var(--muted);
+      background: #f0f0f0;
+      padding: 1px 7px;
+      border-radius: 8px;
+    }
+
+    .cat-center {
+      flex: 1;
+      overflow-y: auto;
+      padding: 18px 24px;
+      background: var(--bg);
+    }
+    .cat-center h2 {
+      margin: 0 0 4px;
+      font-size: 18px;
+    }
+    .cat-center .cat-desc {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 14px;
+    }
+    .row {
+      padding: 10px 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: box-shadow 0.15s;
+    }
+    .row:hover {
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      border-color: var(--accent);
+    }
+    .row.selected {
+      border-color: var(--accent);
+      background: #f6f9ff;
+    }
+    .row .row-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .row .row-summary {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .row .row-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .row .badge {
+      display: inline-block;
+      padding: 2px 7px;
+      background: #f0f0f0;
+      color: #555;
+      border-radius: 8px;
+      font-size: 10px;
+    }
+    .row .badge.pdf { background: #d4edda; color: #155724; }
+    .row .badge.warn { background: #fff3cd; color: #856404; }
+    .row .badge.hot { background: #fde2e2; color: #b00020; }
+
+    .empty-state {
+      padding: 40px;
+      text-align: center;
+      color: var(--muted);
       font-size: 13px;
     }
-    .panel h3 {
-      margin: 0 0 8px 0;
-      font-size: 16px;
-      line-height: 1.3;
-    }
-    .panel .meta {
-      color: #666;
-      font-size: 12px;
-      margin-bottom: 6px;
-    }
-    .panel .meta a { color: #1967d2; text-decoration: none; }
-    .panel .meta a:hover { text-decoration: underline; }
-    .panel .placeholder { color: #999; font-style: italic; }
 
-    .badge {
+    /* ================================================================
+       Detail card (right rail in Catalog, used standalone elsewhere)
+       ================================================================ */
+    .cat-right {
+      width: 340px;
+      background: var(--card-bg);
+      border-left: 1px solid var(--border);
+      overflow-y: auto;
+      flex-shrink: 0;
+      padding: 0;
+    }
+    .card-empty {
+      padding: 60px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-style: italic;
+      font-size: 13px;
+    }
+    .card {
+      padding: 18px 20px;
+    }
+    .card .card-type {
       display: inline-block;
-      padding: 2px 8px;
-      background: #eee;
-      color: #333;
-      border-radius: 10px;
       font-size: 11px;
-      margin: 4px 0 8px 0;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 4px 10px;
-      margin: 3px;
+      padding: 2px 9px;
+      border-radius: 10px;
       background: #e8f0fe;
       color: #1967d2;
-      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .card .card-meta {
       font-size: 12px;
+      color: #555;
+      margin-bottom: 4px;
+      line-height: 1.6;
+    }
+    .card .card-meta a { color: var(--accent); text-decoration: none; }
+    .card .card-meta a:hover { text-decoration: underline; }
+    .card pre.frontmatter {
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 8px 10px;
+      font-size: 11px;
+      line-height: 1.5;
+      font-family: 'SF Mono', Consolas, Menlo, monospace;
+      color: #444;
+      overflow-x: auto;
+      margin: 8px 0 12px;
+      white-space: pre-wrap;
+    }
+    .card .section-label {
+      margin-top: 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #444;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .card .summary {
+      font-size: 13px;
+      color: #333;
+      line-height: 1.6;
+      margin-top: 4px;
+    }
+    .card .wiki-link {
+      display: inline-block;
+      padding: 3px 9px;
+      margin: 3px 5px 0 0;
+      background: var(--tag-bg);
+      color: var(--tag-fg);
+      border-radius: 10px;
+      font-size: 11px;
       cursor: pointer;
       user-select: none;
     }
-    .tag:hover { background: #d2e3fc; }
-
-    .paper-item {
-      padding: 6px 8px;
-      border-radius: 4px;
-      cursor: pointer;
-      margin: 2px 0;
+    .card .wiki-link:hover { background: #d2e3fc; }
+    .card .related {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 0;
     }
-    .paper-item:hover { background: #e8f0fe; }
+    .card .related li {
+      font-size: 12px;
+      padding: 4px 0;
+      cursor: pointer;
+      color: #333;
+      border-bottom: 1px dashed #eee;
+    }
+    .card .related li:hover { color: var(--accent); }
+    .card .related .rel-type {
+      display: inline-block;
+      font-size: 10px;
+      color: var(--muted);
+      margin-right: 6px;
+    }
 
     .pdf-btn {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 8px;
       padding: 6px 12px;
-      background: #4A90E2;
+      background: var(--accent);
       color: #fff;
       border-radius: 4px;
       text-decoration: none;
@@ -162,9 +390,267 @@
       border: none;
       cursor: pointer;
     }
-    .pdf-btn:hover { background: #357ABD; }
+    .pdf-btn:hover { background: var(--accent-hover); }
 
-    /* ===== Loading / Error overlay ===== */
+    /* ================================================================
+       Graph view
+       ================================================================ */
+    .graph-pane {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+    .graph-canvas-wrap {
+      flex: 1;
+      position: relative;
+      min-width: 0;
+    }
+    #networkCanvas {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+    }
+    .graph-legend {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 11px;
+      line-height: 1.6;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      z-index: 5;
+    }
+    .graph-legend .legend-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .graph-legend .legend-swatch {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .graph-controls {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 5;
+    }
+    .graph-controls button {
+      padding: 4px 8px;
+      font-size: 11px;
+    }
+
+    /* ================================================================
+       Timeline view
+       ================================================================ */
+    .timeline-pane {
+      flex: 1;
+      overflow-y: auto;
+      padding: 30px 40px;
+      background: var(--bg);
+    }
+    .timeline-year {
+      margin-bottom: 28px;
+    }
+    .timeline-year h2 {
+      font-size: 28px;
+      color: var(--accent);
+      margin: 0 0 8px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 4px;
+      display: inline-block;
+    }
+    .timeline-card {
+      display: grid;
+      grid-template-columns: 100px 1fr 100px;
+      gap: 14px;
+      padding: 10px 14px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 6px;
+      cursor: pointer;
+      align-items: center;
+    }
+    .timeline-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .timeline-card .yr { font-weight: 700; color: #666; }
+    .timeline-card .ttl { font-size: 13px; }
+    .timeline-card .meta { font-size: 11px; color: var(--muted); text-align: right; }
+
+    /* ================================================================
+       Wiki view
+       ================================================================ */
+    .wiki-pane {
+      flex: 1;
+      overflow-y: auto;
+      padding: 30px 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+      width: 100%;
+      background: var(--bg);
+    }
+    .wiki-header h1 {
+      font-size: 26px;
+      margin: 0 0 6px;
+      line-height: 1.2;
+    }
+    .wiki-header .wiki-subtitle {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+    .wiki-empty {
+      text-align: center;
+      padding: 80px 20px;
+      color: var(--muted);
+    }
+
+    /* ================================================================
+       Lint view
+       ================================================================ */
+    .lint-pane {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 40px;
+      background: var(--bg);
+    }
+    .lint-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+    .lint-section-header {
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .lint-section-header:hover { background: #f8f9fb; }
+    .lint-section-header .count-badge {
+      margin-left: auto;
+      background: #fde2e2;
+      color: #b00020;
+      padding: 2px 9px;
+      border-radius: 10px;
+      font-size: 11px;
+    }
+    .lint-section-header .count-badge.ok {
+      background: #d4edda;
+      color: #155724;
+    }
+    .lint-section-body {
+      padding: 0;
+    }
+    .lint-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .lint-row:last-child { border-bottom: none; }
+    .lint-row:hover { background: #f8f9fb; }
+    .lint-row .lr-emoji { font-size: 14px; }
+    .lint-row .lr-title { flex: 1; }
+    .lint-row .lr-meta { font-size: 11px; color: var(--muted); }
+    .lint-row .lr-ignore {
+      font-size: 11px;
+      color: var(--muted);
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid var(--border);
+      padding: 2px 7px;
+      border-radius: 8px;
+    }
+    .lint-row .lr-ignore:hover { background: #f0f0f0; }
+
+    /* ================================================================
+       Query view
+       ================================================================ */
+    .query-pane {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+    .query-main {
+      flex: 1;
+      padding: 24px 32px;
+      overflow-y: auto;
+    }
+    .query-main h2 { margin: 0 0 12px; font-size: 18px; }
+    .query-input {
+      width: 100%;
+      height: 42px;
+      padding: 8px 14px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .query-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .query-hits {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+    }
+    .query-hit {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    .query-hit:hover {
+      border-color: var(--accent);
+    }
+    .query-hit .qh-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .query-hit mark.hl {
+      background: var(--highlight-bg);
+      padding: 0 2px;
+    }
+    .query-hit .qh-meta {
+      font-size: 11px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .query-hit .qh-score {
+      float: right;
+      font-size: 11px;
+      padding: 2px 8px;
+      background: var(--tag-bg);
+      color: var(--tag-fg);
+      border-radius: 8px;
+    }
+
+    /* ================================================================
+       Loading overlay
+       ================================================================ */
     .overlay {
       position: fixed;
       inset: 0;
@@ -176,159 +662,279 @@
       font-size: 16px;
       color: #555;
     }
-    .overlay.error { color: #b00020; white-space: pre-wrap; padding: 20px; }
+    .overlay.error {
+      color: #b00020;
+      white-space: pre-wrap;
+      padding: 20px;
+      text-align: left;
+    }
+
+    /* ================================================================
+       Utilities
+       ================================================================ */
+    .highlight-pulse {
+      animation: pulse 1.2s ease-out;
+    }
+    @keyframes pulse {
+      0%   { background: var(--highlight-bg); }
+      100% { background: transparent; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Loading overlay (replaced/removed when data ready) -->
-  <div id="overlay" class="overlay">Loading knowledge graph...</div>
+  <!-- Loading overlay -->
+  <div id="overlay" class="overlay">正在加载知识图谱...</div>
 
-  <!-- Top toolbar -->
+  <!-- ================================================================
+       Top toolbar
+       ================================================================ -->
   <div class="toolbar">
+    <span class="brand">LLM Wiki</span>
     <div class="group">
-      <label for="search">Search:</label>
-      <input type="text" id="search" placeholder="title, author, concept..." />
+      <label for="search">搜索</label>
+      <input type="text" id="search" placeholder="标题 / 作者 / 概念 / 期刊..." />
     </div>
-    <div class="group">
-      <label for="catFilter">Category:</label>
-      <select id="catFilter" multiple size="1" style="height:32px;min-width:160px;"></select>
-    </div>
-    <div class="group">
-      <label>Year:</label>
-      <input type="number" id="yearMin" placeholder="min" />
-      <span>–</span>
-      <input type="number" id="yearMax" placeholder="max" />
-    </div>
-    <button id="resetBtn">Reset</button>
-    <div style="flex:1"></div>
-    <div id="stats" style="font-size:12px;color:#666;"></div>
+    <button id="resetBtn">重置</button>
+    <div class="spacer"></div>
+    <div id="stats"></div>
   </div>
 
-  <!-- Tabs -->
+  <!-- ================================================================
+       Tabs (view switcher)
+       ================================================================ -->
   <div class="tabs">
-    <div class="tab active" data-tab="concept">1. Concept Co-occurrence</div>
-    <div class="tab" data-tab="category">2. Category Hierarchy</div>
-    <div class="tab" data-tab="temporal">3. Temporal Evolution</div>
+    <div class="tab active" data-view="catalog">📚 目录</div>
+    <div class="tab" data-view="graph">🕸 图谱</div>
+    <div class="tab" data-view="timeline">📅 时间轴</div>
+    <div class="tab" data-view="wiki">📄 详情</div>
+    <div class="tab" data-view="lint">🔍 检查</div>
+    <div class="tab" data-view="query">🔎 搜索</div>
   </div>
 
-  <!-- Main content -->
+  <!-- ================================================================
+       Main viewport
+       ================================================================ -->
   <div class="main">
-    <div class="network">
-      <div id="networkCanvas"></div>
+
+    <!-- V1: Catalog -->
+    <div class="view-pane active" data-view="catalog">
+      <div class="catalog">
+        <div class="cat-rail" id="catRail">
+          <div class="cat-rail-header">📂 类别导航</div>
+        </div>
+        <div class="cat-center" id="catCenter">
+          <div class="empty-state">正在加载...</div>
+        </div>
+        <div class="cat-right" id="catRight">
+          <div class="card-empty">点击节点查看详情。</div>
+        </div>
+      </div>
     </div>
-    <div class="panel" id="detailPanel">
-      <div class="placeholder">Click a node to see details.</div>
+
+    <!-- V2: Graph -->
+    <div class="view-pane" data-view="graph">
+      <div class="graph-pane">
+        <div class="graph-canvas-wrap">
+          <div id="networkCanvas"></div>
+          <div class="graph-legend" id="graphLegend"></div>
+          <div class="graph-controls">
+            <button id="graphFitBtn">📐 适应窗口</button>
+            <button id="graphStabilizeBtn">⚙ 重新布局</button>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- V3: Timeline -->
+    <div class="view-pane" data-view="timeline">
+      <div class="timeline-pane" id="timelinePane">
+        <div class="empty-state">正在加载...</div>
+      </div>
+    </div>
+
+    <!-- V4: Wiki -->
+    <div class="view-pane" data-view="wiki">
+      <div class="wiki-pane" id="wikiPane">
+        <div class="wiki-empty">从目录或图谱点击一个节点，此处将显示完整 wiki 详情。</div>
+      </div>
+    </div>
+
+    <!-- V5: Lint -->
+    <div class="view-pane" data-view="lint">
+      <div class="lint-pane" id="lintPane">
+        <div class="empty-state">点击 "🔍 检查" 标签以加载健康报告。</div>
+      </div>
+    </div>
+
+    <!-- V6: Query -->
+    <div class="view-pane" data-view="query">
+      <div class="query-pane">
+        <div class="query-main">
+          <h2>🔎 全文搜索</h2>
+          <input class="query-input" id="queryInput"
+                 placeholder="搜索任意关键词：标题、作者、概念、期刊..." />
+          <ul class="query-hits" id="queryHits"></ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script>
   /* ========================================================================
-     Knowledge Graph Viewer
+     Karpathy-style LLM Wiki Viewer
      ------------------------------------------------------------------------
-     Loads papers.json, concepts.json, categories.json, edges_cocitation.csv
-     and renders three views with vis-network.
+     Single IIFE module. No globals. Data → State → Views.
+     Eight node types: paper | concept | category | entity | overview |
+                       synthesis | log_entry | edge_type
+     Six views: catalog | graph | timeline | wiki | lint | query
      ======================================================================== */
   (() => {
     'use strict';
 
-    // ---------- Configuration ----------
+    /* ====================================================================
+       1. Configuration
+       ==================================================================== */
+
+    // Category color palette
     const CATEGORY_COLORS = {
-      foundational_theory:      '#4A90E2',
-      information_acquisition:  '#7ED321',
-      algorithms_trust_hci:     '#F5A623',
-      recommender_genai:        '#BD10E0',
-      narrative_epistemic:      '#D0021B',
-      advice_taking:            '#50E3C2',
-      self_serving_attribution: '#9013FE',
-      overconfidence_control:   '#B8E986',
-      algorithm_aversion:       '#FF6B6B',
-      newly_added_candidates:   '#BDBDBD',
-      uncategorized:            '#B8B8B8'
+      foundational_theory:        '#4A90E2',
+      information_acquisition:    '#7ED321',
+      algorithms_trust_hci:       '#F5A623',
+      recommender_genai:          '#BD10E0',
+      narrative_epistemic:        '#D0021B',
+      advice_taking:              '#50E3C2',
+      self_serving_attribution:   '#9013FE',
+      overconfidence_control:     '#B8E986',
+      algorithm_aversion:         '#FF6B6B',
+      newly_added_candidates:     '#BDBDBD',
+      uncategorized:              '#B8B8B8',
+      accountability_delegation:  '#417505'
     };
 
-    // concept_groups first-word → color
+    const CATEGORY_DISPLAY_NAMES = {
+      algorithms_trust_hci:       'Algorithm Trust & HCI',
+      recommender_genai:          'Recommender & GenAI',
+      foundational_theory:        'Foundational Theory',
+      information_acquisition:    'Information Acquisition',
+      narrative_epistemic:        'Narrative & Epistemic',
+      advice_taking:              'Advice Taking',
+      self_serving_attribution:   'Self-Serving Attribution',
+      overconfidence_control:     'Overconfidence & Control',
+      algorithm_aversion:         'Algorithm Aversion',
+      newly_added_candidates:     'Newly Added Candidates',
+      accountability_delegation:  'Accountability & Delegation',
+      uncategorized:              'Uncategorized'
+    };
+
+    // Concept group color (first token of snake_case name)
     const CONCEPT_GROUP_COLORS = {
-      bayesian:        '#4A90E2',
-      algorithm:       '#F5A623',
-      cognitive:       '#7ED321',
-      anthropomorphism:'#BD10E0'
+      bayesian:         '#4A90E2',
+      algorithm:        '#F5A623',
+      cognitive:        '#7ED321',
+      anthropomorphism: '#BD10E0'
     };
     const CONCEPT_DEFAULT_COLOR = '#B8B8B8';
 
-    // ID prefixes to avoid collisions across the three views
+    // Fixed colors for the seven non-data node types
+    const TYPE_COLORS = {
+      entity:      '#9013FE',
+      overview:    '#50E3C2',
+      synthesis:   '#D0021B',
+      log_entry:   '#BDBDBD',
+      edge_type:   '#999'
+    };
+
+    /* ====================================================================
+       2. ID namespace
+       ==================================================================== */
     const ID = {
-      paper:    p => `p::${p}`,
-      concept:  c => `c::${c}`,
-      category: c => `cat::${c}`,
-      year:     y => `y::${y}`
+      paper:     k  => `paper::${k}`,
+      concept:   c  => `concept::${c}`,
+      category:  c  => `cat::${c}`,
+      entity:    a  => `entity::${a}`,
+      overview:  o  => `overview::${o}`,
+      synthesis: s  => `synth::${s}`,
+      log:       d  => `log::${d}`,
+      edge:      e  => `edge::${e}`
+    };
+    const parseId = id => {
+      const idx = id.indexOf('::');
+      return { type: id.substring(0, idx), key: id.substring(idx + 2) };
     };
 
-    // ---------- Data store ----------
+    /* ====================================================================
+       3. Central application state
+       ==================================================================== */
     const State = {
-      papers: [],          // array of paper objects
-      papersByKey: new Map(),
-      concepts: [],        // array of concept names
-      conceptGroups: {},   // first-word → [concept names]
-      conceptToPapers: {}, // concept name → [paper keys]
-      categoryToPapers: {},// category name → [paper keys]
-      categoryDescriptions: {},
-      cocitationEdges: [], // [{source, target, file, line}]
-      network: null,       // vis-network instance
-      nodesDS: null,
-      edgesDS: null,
-      currentTab: 'concept',
-      filters: { search: '', categories: new Set(), yearMin: null, yearMax: null }
+      // Raw data
+      papers:                    [],
+      papersByKey:               new Map(),
+      concepts:                  [],          // sorted list
+      conceptGroups:             {},          // first word → [concept]
+      conceptToPapers:           {},          // concept → [paper keys]
+      categoryToPapers:          {},
+      categoryDescriptions:      {},
+      cocitationEdges:           [],
+      thesisCitations:           [],
+      // Derived index
+      entities:                  new Map(),   // author string → {name, papers[]}
+      paperToEntities:           new Map(),   // paperKey → [author string]
+      // UI state
+      selectedNode:              null,        // {type, key}
+      selectedCategory:          null,        // category key
+      currentView:               'catalog',
+      filters:                   { search: '' },
+      ignoredLints:              new Set(JSON.parse(localStorage.getItem('wiki_ignored_lints') || '[]')),
+      // Vis instances
+      network:                   null,
+      nodesDS:                   null,
+      edgesDS:                   null
     };
 
-    // ---------- Utility helpers ----------
+    /* ====================================================================
+       4. Utility helpers
+       ==================================================================== */
     const $  = (sel, root = document) => root.querySelector(sel);
     const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-    function firstAuthor(authors) {
-      if (!authors || !authors.length) return 'Unknown';
-      return authors[0].split(',')[0].trim();
-    }
+    const escapeHtml = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[c]));
 
-    function firstAuthorYear(paper) {
-      return `${firstAuthor(paper.authors)} ${paper.year}`;
-    }
+    const truncate = (str, n) => !str ? ''
+      : str.length <= n ? str
+      : str.substring(0, n) + '…';
 
-    /**
-     * Normalize a paper object: tolerate either `category` or `categories[]`,
-     * and derive cited_count from concept count when missing.
-     */
-    function normalizePaper(p) {
-      const category = p.category || (Array.isArray(p.categories) && p.categories[0]) || 'uncategorized';
-      const cited_count = (typeof p.cited_count === 'number')
-        ? p.cited_count
-        : (Array.isArray(p.cited_in) ? p.cited_in.length : 0);
-      return { ...p, category, cited_count };
-    }
+    const capitalize = s => s.charAt(0).toUpperCase() + s.slice(1);
 
-    function groupKey(concept) {
-      // Use first word (split on "_") to find the concept group.
-      const w = concept.split('_')[0].toLowerCase();
-      return w;
-    }
-
-    function groupColor(concept) {
-      const w = groupKey(concept);
-      return CONCEPT_GROUP_COLORS[w] || CONCEPT_DEFAULT_COLOR;
+    function categoryDisplayName(cat) {
+      if (CATEGORY_DISPLAY_NAMES[cat]) return CATEGORY_DISPLAY_NAMES[cat];
+      return cat.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
     }
 
     function categoryColor(cat) {
       return CATEGORY_COLORS[cat] || '#B8B8B8';
     }
 
-    function scaleRadius(value, minVal, maxVal, minR, maxR) {
-      if (maxVal === minVal) return (minR + maxR) / 2;
-      const t = (value - minVal) / (maxVal - minVal);
-      return minR + t * (maxR - minR);
+    function groupKey(concept) {
+      return concept.split('_')[0].toLowerCase();
+    }
+    function groupColor(concept) {
+      return CONCEPT_GROUP_COLORS[groupKey(concept)] || CONCEPT_DEFAULT_COLOR;
+    }
+
+    function shade(hex, percent) {
+      const h = (hex || '#888').replace('#','');
+      const r = parseInt(h.substring(0,2), 16);
+      const g = parseInt(h.substring(2,4), 16);
+      const b = parseInt(h.substring(4,6), 16);
+      const adj = c => Math.max(0, Math.min(255, Math.round(c + (percent/100) * 255)));
+      return '#' + [adj(r), adj(g), adj(b)].map(v => v.toString(16).padStart(2,'0')).join('');
     }
 
     function parseCSV(text) {
-      // Minimal CSV parser: assumes no quoted fields with commas.
       const lines = text.split(/\r?\n/).filter(l => l.trim().length > 0);
       const header = lines.shift().split(',');
       return lines.map(line => {
@@ -339,513 +945,1120 @@
       });
     }
 
-    // ---------- Data loading ----------
+    function normalizeAuthor(s) {
+      // "Kamenica, Emir" -> "Kamenica, E."
+      if (!s) return null;
+      const parts = s.split(',').map(x => x.trim());
+      const last = parts[0] || s.trim();
+      const given = parts[1] || '';
+      const initial = given ? given.charAt(0).toUpperCase() + '.' : '';
+      return `${last}, ${initial}`.replace(/, $/, '').trim();
+    }
+
+    function firstAuthorName(authors) {
+      if (!authors || !authors.length) return 'Unknown';
+      return authors[0];
+    }
+
+    function paperYearInt(p) {
+      const y = parseInt(p.year, 10);
+      return Number.isFinite(y) ? y : 0;
+    }
+
+    /* ====================================================================
+       5. Data loading
+       ==================================================================== */
     async function loadData() {
-      const [papersResp, conceptsResp, categoriesResp, edgesResp] = await Promise.all([
+      const [papersResp, conceptsResp, categoriesResp,
+             edgesResp, citationsResp] = await Promise.all([
         fetch('papers.json'),
         fetch('concepts.json'),
         fetch('categories.json'),
-        fetch('edges_cocitation.csv')
+        fetch('edges_cocitation.csv'),
+        fetch('citations_in_thesis.csv')
       ]);
-      if (!papersResp.ok)  throw new Error(`papers.json HTTP ${papersResp.status}`);
-      if (!conceptsResp.ok) throw new Error(`concepts.json HTTP ${conceptsResp.status}`);
-      if (!categoriesResp.ok) throw new Error(`categories.json HTTP ${categoriesResp.status}`);
-      if (!edgesResp.ok)     throw new Error(`edges_cocitation.csv HTTP ${edgesResp.status}`);
+      if (!papersResp.ok)    throw new Error('papers.json HTTP ' + papersResp.status);
+      if (!conceptsResp.ok)  throw new Error('concepts.json HTTP ' + conceptsResp.status);
+      if (!categoriesResp.ok) throw new Error('categories.json HTTP ' + categoriesResp.status);
+      if (!edgesResp.ok)     throw new Error('edges_cocitation.csv HTTP ' + edgesResp.status);
+      if (!citationsResp.ok) throw new Error('citations_in_thesis.csv HTTP ' + citationsResp.status);
 
-      const [papersJson, conceptsJson, categoriesJson, edgesText] = await Promise.all([
-        papersResp.json(),
-        conceptsResp.json(),
-        categoriesResp.json(),
-        edgesResp.text()
+      const [papersJson, conceptsJson, categoriesJson,
+             edgesText, citationsText] = await Promise.all([
+        papersResp.json(), conceptsResp.json(), categoriesResp.json(),
+        edgesResp.text(), citationsResp.text()
       ]);
 
-      State.papers   = papersJson.papers.map(normalizePaper);
+      // Papers + category normalization
+      State.papers = papersJson.papers.map(p => {
+        const category = p.category
+          || (Array.isArray(p.categories) && p.categories[0])
+          || 'uncategorized';
+        const cited_count = (typeof p.cited_count === 'number')
+          ? p.cited_count
+          : (Array.isArray(p.cited_in) ? p.cited_in.length : 0);
+        return Object.assign({}, p, { category, cited_count });
+      });
       State.papersByKey = new Map(State.papers.map(p => [p.key, p]));
 
+      // Concepts + groups
       State.conceptToPapers = conceptsJson.concept_to_papers || {};
-      State.concepts = Object.keys(State.conceptToPapers);
-
-      // Build concept groups from first word
+      State.concepts = Object.keys(State.conceptToPapers).sort();
       State.conceptGroups = conceptsJson.concept_groups || {};
-      // In case concept_groups uses a different key convention, derive from concepts as well.
       State.concepts.forEach(c => {
         const w = groupKey(c);
         if (!State.conceptGroups[w]) State.conceptGroups[w] = [];
         if (!State.conceptGroups[w].includes(c)) State.conceptGroups[w].push(c);
       });
 
+      // Categories
       State.categoryToPapers     = categoriesJson.category_to_papers || {};
       State.categoryDescriptions = categoriesJson.category_descriptions || {};
 
+      // Edges + citations
       State.cocitationEdges = parseCSV(edgesText);
+      State.thesisCitations = parseCSV(citationsText);
 
+      // Derived entities (authors)
+      State.papers.forEach(p => {
+        const auths = (p.authors || []).map(normalizeAuthor).filter(Boolean);
+        State.paperToEntities.set(p.key, auths);
+        auths.forEach(a => {
+          if (!State.entities.has(a)) {
+            State.entities.set(a, { name: a, papers: [] });
+          }
+          State.entities.get(a).papers.push(p.key);
+        });
+      });
+
+      // Stats badge
+      const numAuthors = State.entities.size;
       $('#stats').textContent =
-        `${State.papers.length} papers · ${State.concepts.length} concepts · ${Object.keys(State.categoryToPapers).length} categories · ${State.cocitationEdges.length} cocitations`;
+        `📚 ${State.papers.length} 篇论文 · 💡 ${State.concepts.length} 个概念 · ` +
+        `📂 ${Object.keys(State.categoryToPapers).length} 个类别 · ` +
+        `👤 ${numAuthors} 位作者`;
     }
 
-    // ---------- View builders ----------
-    /** Build Tab 1: Concept Co-occurrence Network */
-    function buildConceptView() {
-      const cites = State.papers.map(p => p.cited_count);
-      const minCite = Math.min(...cites, 0);
-      const maxCite = Math.max(...cites, 1);
-
-      const nodes = [];
-      const edges = [];
-
-      // Paper nodes
-      State.papers.forEach(p => {
-        const r = scaleRadius(p.cited_count, minCite, maxCite, 8, 30);
-        nodes.push({
-          id: ID.paper(p.key),
-          label: firstAuthorYear(p),
-          title: p.title,
-          group: 'paper',
-          paperKey: p.key,
-          category: p.category,
-          shape: 'dot',
-          size: r,
-          color: { background: '#E8E8E8', border: '#555', highlight: { background: '#E8E8E8', border: '#000' } },
-          font: { size: 11, color: '#222' },
-          borderWidth: 1
-        });
-      });
-
-      // Concept nodes
-      const counts = State.concepts.map(c => State.conceptToPapers[c].length);
-      const minC = Math.min(...counts, 1);
-      const maxC = Math.max(...counts, 1);
-
-      State.concepts.forEach(c => {
-        const cnt = State.conceptToPapers[c].length;
-        const r = scaleRadius(Math.sqrt(cnt), Math.sqrt(minC), Math.sqrt(maxC), 6, 18);
-        const color = groupColor(c);
-        nodes.push({
-          id: ID.concept(c),
-          label: c.replace(/_/g, ' '),
-          title: `${c} (${cnt} papers)`,
-          group: 'concept',
-          conceptName: c,
-          shape: 'dot',
-          size: r,
-          color: { background: color, border: shade(color, -20), highlight: { background: color, border: '#000' } },
-          font: { size: 10, color: '#222' }
-        });
-      });
-
-      // Edges: paper -> concept
-      State.papers.forEach(p => {
-        (p.concepts || []).forEach(c => {
-          edges.push({
-            from: ID.paper(p.key),
-            to: ID.concept(c),
-            color: { color: '#999', opacity: 0.6 },
-            width: 1,
-            smooth: { type: 'continuous' }
-          });
-        });
-      });
-
-      return {
-        nodes,
-        edges,
-        options: {
-          physics: {
-            enabled: true,
-            solver: 'barnesHut',
-            barnesHut: { gravitationalConstant: -8000, centralGravity: 0.3, springLength: 120, springConstant: 0.04 }
-          },
-          interaction: { hover: true, tooltipDelay: 150, navigationButtons: true, keyboard: true }
-        }
-      };
+    /* ====================================================================
+       6. Node label helpers (Karpathy-style)
+       ==================================================================== */
+    function paperNodeLabel(paper) {
+      const title = truncate(paper.title || '(无标题)', 40);
+      return `📄 (${paper.year}) ${title}`;
     }
-
-    /** Build Tab 2: Category Hierarchy */
-    function buildCategoryView() {
-      const nodes = [];
-      const edges = [];
-
-      Object.keys(State.categoryToPapers).forEach(cat => {
-        if (cat === 'uncategorized') return; // skip empty bucket
-        nodes.push({
-          id: ID.category(cat),
-          label: cat.replace(/_/g, ' '),
-          title: State.categoryDescriptions[cat] || cat,
-          group: 'category',
-          categoryName: cat,
-          shape: 'dot',
-          size: 35,
-          color: { background: categoryColor(cat), border: shade(categoryColor(cat), -25), highlight: { background: categoryColor(cat), border: '#000' } },
-          font: { size: 14, color: '#fff', face: 'arial', bold: { color: '#fff', size: 14, mod: 'bold' } },
-          borderWidth: 2
-        });
-        State.categoryToPapers[cat].forEach(pKey => {
-          const p = State.papersByKey.get(pKey);
-          if (!p) return;
-          nodes.push({
-            id: ID.paper(pKey),
-            label: firstAuthorYear(p),
-            title: p.title,
-            group: 'paper',
-            paperKey: pKey,
-            category: cat,
-            shape: 'dot',
-            size: 12,
-            color: { background: categoryColor(cat), border: shade(categoryColor(cat), -25), highlight: { background: categoryColor(cat), border: '#000' } },
-            font: { size: 10, color: '#222' }
-          });
-          edges.push({ from: ID.category(cat), to: ID.paper(pKey), color: { color: '#bbb' }, width: 1, arrows: { to: { enabled: false } } });
-        });
-      });
-
-      return {
-        nodes,
-        edges,
-        options: {
-          layout: {
-            hierarchical: {
-              enabled: true,
-              direction: 'UD',
-              sortMethod: 'directed',
-              nodeSpacing: 150,
-              levelSeparation: 100
-            }
-          },
-          physics: { enabled: false },
-          interaction: { hover: true, tooltipDelay: 150, navigationButtons: true, keyboard: true }
-        }
-      };
-    }
-
-    /** Build Tab 3: Temporal Evolution */
-    function buildTemporalView() {
-      const nodes = [];
-      const edges = [];
-
-      // Group by year
-      const yearGroups = {};
-      State.papers.forEach(p => {
-        (yearGroups[p.year] = yearGroups[p.year] || []).push(p);
-      });
-      const years = Object.keys(yearGroups).sort();
-
-      // Year "strata" nodes (invisible anchors for clean left-right stratification)
-      years.forEach(y => {
-        nodes.push({
-          id: ID.year(y),
-          label: String(y),
-          group: 'year',
-          year: y,
-          shape: 'text',
-          font: { size: 18, color: '#888', bold: { mod: 'bold' } },
-          color: { background: 'rgba(0,0,0,0)', border: 'rgba(0,0,0,0)' },
-          size: 1
-        });
-      });
-
-      // Paper nodes (level set by year for hierarchical LR layout)
-      State.papers.forEach(p => {
-        nodes.push({
-          id: ID.paper(p.key),
-          label: firstAuthorYear(p),
-          title: p.title,
-          group: 'paper',
-          paperKey: p.key,
-          category: p.category,
-          year: p.year,
-          shape: 'dot',
-          size: 14,
-          color: { background: categoryColor(p.category), border: shade(categoryColor(p.category), -25), highlight: { background: categoryColor(p.category), border: '#000' } },
-          font: { size: 10, color: '#222' }
-        });
-      });
-
-      // Cocitation edges
-      State.cocitationEdges.forEach(e => {
-        edges.push({
-          from: ID.paper(e.source_key),
-          to:   ID.paper(e.target_key),
-          color: { color: '#888' },
-          width: 2,
-          smooth: { type: 'continuous' }
-        });
-      });
-
-      return {
-        nodes,
-        edges,
-        options: {
-          layout: {
-            hierarchical: {
-              enabled: true,
-              direction: 'LR',
-              sortMethod: 'directed',
-              nodeSpacing: 80,
-              levelSeparation: 200
-            }
-          },
-          physics: { enabled: false },
-          interaction: { hover: true, tooltipDelay: 150, navigationButtons: true, keyboard: true }
-        }
-      };
-    }
-
-    // ---------- Color shading helper ----------
-    function shade(hex, percent) {
-      // Lighten (percent > 0) or darken (percent < 0) a hex color.
-      const h = hex.replace('#','');
-      const r = parseInt(h.substring(0,2), 16);
-      const g = parseInt(h.substring(2,4), 16);
-      const b = parseInt(h.substring(4,6), 16);
-      const adj = (c) => Math.max(0, Math.min(255, Math.round(c + (percent/100) * 255)));
-      return '#' + [adj(r), adj(g), adj(b)].map(v => v.toString(16).padStart(2,'0')).join('');
-    }
-
-    // ---------- Filter application ----------
-    function applyFilters(view) {
-      // Returns arrays of {id, hidden} updates to apply incrementally.
-      const { search, categories, yearMin, yearMax } = State.filters;
-      const updates = [];
-
-      view.nodes.forEach(n => {
-        let hidden = false;
-        if (n.group === 'paper') {
-          const p = State.papersByKey.get(n.paperKey);
-          if (!p) { hidden = true; }
-          else {
-            // Category filter
-            if (categories && categories.size > 0 && !categories.has(p.category)) hidden = true;
-            // Year filter
-            const y = parseInt(p.year, 10);
-            if (Number.isFinite(yearMin) && y < yearMin) hidden = true;
-            if (Number.isFinite(yearMax) && y > yearMax) hidden = true;
-            // Search filter (only hides when search is non-empty and doesn't match)
-            if (search) {
-              const hay = `${p.title} ${(p.authors||[]).join(' ')} ${(p.concepts||[]).join(' ')}`.toLowerCase();
-              if (!hay.includes(search)) hidden = true;
-            }
-          }
-        } else if (n.group === 'concept') {
-          if (search) {
-            if (!n.conceptName.toLowerCase().includes(search)) hidden = true;
-          }
-        } else if (n.group === 'category') {
-          if (categories && categories.size > 0 && !categories.has(n.categoryName)) hidden = true;
-        } else if (n.group === 'year') {
-          if (Number.isFinite(yearMin) || Number.isFinite(yearMax)) {
-            const y = parseInt(n.year, 10);
-            if (Number.isFinite(yearMin) && y < yearMin) hidden = true;
-            if (Number.isFinite(yearMax) && y > yearMax) hidden = true;
-          }
-        }
-        updates.push({ id: n.id, hidden });
-      });
-      return updates;
-    }
-
-    // ---------- Detail panel rendering ----------
-    function renderPaperDetail(paper) {
-      const panel = $('#detailPanel');
+    function paperNodeTooltip(paper) {
       const authors = (paper.authors || []).join(', ');
-      const doi = paper.doi && paper.doi !== 'nan' && paper.doi.length > 0
-        ? `<div class="meta"><a href="https://doi.org/${paper.doi}" target="_blank" rel="noopener">doi:${paper.doi}</a></div>`
-        : '';
-      const pdfBtn = paper.has_pdf
-        ? `<button class="pdf-btn" data-key="${paper.key}" data-cat="${paper.category}">📄 Open PDF</button>`
-        : '';
-      const conceptTags = (paper.concepts || []).map(c =>
-        `<span class="tag" data-concept="${c}">${c.replace(/_/g,' ')}</span>`
-      ).join('');
-      panel.innerHTML = `
-        <h3>${escapeHtml(paper.title)}</h3>
-        <div class="meta">${escapeHtml(authors)}</div>
-        <div class="meta">${escapeHtml(paper.year)} · ${escapeHtml(paper.venue || '')}</div>
-        ${doi}
-        <div><span class="badge">${escapeHtml(paper.category)}</span></div>
-        <div style="margin-top:10px;"><strong>Concepts</strong></div>
-        <div>${conceptTags || '<span class="placeholder">none</span>'}</div>
-        ${pdfBtn}
-      `;
-      // Wire up handlers
-      $$('.tag', panel).forEach(t => {
-        t.addEventListener('click', () => {
-          const c = t.getAttribute('data-concept');
-          switchToTab('concept');
-          focusConcept(c);
+      return `<b>${escapeHtml(paper.title || '')}</b><br>` +
+             `${escapeHtml(authors)}<br>` +
+             `${escapeHtml(paper.year)}` +
+             (paper.venue ? ` · ${escapeHtml(paper.venue)}` : '') +
+             `<br>category: ${escapeHtml(paper.category)}` +
+             ` · cited ${paper.cited_count}`;
+    }
+    function conceptNodeLabel(c) {
+      return '💡 ' + capitalize(c.replace(/_/g, ' '));
+    }
+    function categoryNodeLabel(cat) {
+      return '📂 ' + categoryDisplayName(cat);
+    }
+    function entityNodeLabel(a) {
+      return '👤 ' + escapeHtml(a);
+    }
+    function conceptDescription(c) {
+      const papers = State.conceptToPapers[c] || [];
+      return `概念"${c.replace(/_/g,' ')}"出现在 ${papers.length} 篇论文中。`;
+    }
+    function entityDescription(name) {
+      const ent = State.entities.get(name);
+      if (!ent) return '';
+      return `作者 ${name} 共参与 ${ent.papers.length} 篇论文。`;
+    }
+
+    /* ====================================================================
+       7. View: Catalog
+       ==================================================================== */
+    function renderCatalog() {
+      renderCategoryRail();
+      renderCatalogCenter(State.selectedCategory || firstCategory());
+    }
+
+    function firstCategory() {
+      const keys = Object.keys(State.categoryToPapers)
+        .filter(c => c !== 'uncategorized');
+      return keys.length ? keys[0] : null;
+    }
+
+    function renderCategoryRail() {
+      const rail = $('#catRail');
+      const cats = Object.keys(State.categoryToPapers)
+        .filter(c => c !== 'uncategorized');
+      const active = State.selectedCategory || cats[0];
+      const header = rail.querySelector('.cat-rail-header') ||
+                     Object.assign(document.createElement('div'),
+                       { className: 'cat-rail-header', textContent: '📂 类别导航' });
+      rail.innerHTML = '';
+      rail.appendChild(header);
+      cats.forEach(cat => {
+        const item = document.createElement('div');
+        item.className = 'cat-rail-item' +
+          (cat === active ? ' active' : '');
+        item.dataset.cat = cat;
+        item.innerHTML =
+          `<span class="swatch" style="background:${categoryColor(cat)}"></span>` +
+          `<span>${escapeHtml(categoryDisplayName(cat))}</span>` +
+          `<span class="count">${(State.categoryToPapers[cat]||[]).length}</span>`;
+        item.addEventListener('click', () => {
+          State.selectedCategory = cat;
+          renderCategoryRail();
+          renderCatalogCenter(cat);
         });
-      });
-      const btn = $('.pdf-btn', panel);
-      if (btn) btn.addEventListener('click', () => {
-        const key = btn.getAttribute('data-key');
-        const cat = btn.getAttribute('data-cat');
-        // best-effort file:// URL (relative path)
-        const url = `../papers_originals/${cat}/${key}.pdf`;
-        window.open(url, '_blank');
+        rail.appendChild(item);
       });
     }
 
-    function renderConceptDetail(conceptName) {
-      const panel = $('#detailPanel');
+    function renderCatalogCenter(cat) {
+      const center = $('#catCenter');
+      const papers = State.categoryToPapers[cat] || [];
+      const desc = State.categoryDescriptions[cat] || '';
+      center.innerHTML =
+        `<h2>${categoryNodeLabel(cat)}</h2>` +
+        `<div class="cat-desc">${escapeHtml(desc || '无描述。')}</div>` +
+        `<div style="margin-bottom:14px;color:var(--muted);font-size:12px;">共 ${papers.length} 篇论文</div>`;
+
+      if (!papers.length) {
+        center.insertAdjacentHTML('beforeend',
+          '<div class="empty-state">此类别下暂无论文。</div>');
+        return;
+      }
+      papers.forEach(pKey => {
+        const p = State.papersByKey.get(pKey);
+        if (!p) return;
+        const isSel = State.selectedNode
+          && State.selectedNode.type === 'paper'
+          && State.selectedNode.key === pKey;
+        const row = document.createElement('div');
+        row.className = 'row' + (isSel ? ' selected' : '');
+        row.dataset.paper = pKey;
+        const summary =
+          `${(p.authors || []).slice(0,3).join(' · ')} · ${p.venue || '—'}`;
+        const hasPdf = p.has_pdf
+          ? '<span class="badge pdf">PDF</span>' : '';
+        const hotBadge = p.cited_count >= 5
+          ? `<span class="badge hot">高引 ${p.cited_count}</span>`
+          : `<span class="badge">引 ${p.cited_count}</span>`;
+        const conceptBadge = (p.concepts && p.concepts.length)
+          ? `<span class="badge">${p.concepts.length} 概念</span>` : '';
+        row.innerHTML =
+          `<div class="row-title">${paperNodeLabel(p)}</div>` +
+          `<div class="row-summary">${escapeHtml(summary)}</div>` +
+          `<div class="row-meta">${hasPdf}${hotBadge}${conceptBadge}</div>`;
+        row.addEventListener('click', () => {
+          State.selectedNode = { type: 'paper', key: pKey };
+          highlightSelectedRow();
+          renderRightCard();
+        });
+        center.appendChild(row);
+      });
+    }
+
+    function highlightSelectedRow() {
+      $$('.row', $('#catCenter')).forEach(r => r.classList.remove('selected'));
+      if (!State.selectedNode) return;
+      if (State.selectedNode.type === 'paper') {
+        const r = $(`.row[data-paper="${State.selectedNode.key}"]`, $('#catCenter'));
+        if (r) r.classList.add('selected');
+      }
+    }
+
+    /* ====================================================================
+       8. Right-rail card renderer
+       ==================================================================== */
+    function renderRightCard() {
+      const right = $('#catRight');
+      if (!State.selectedNode) {
+        right.innerHTML = '<div class="card-empty">点击节点查看详情。</div>';
+        return;
+      }
+      const sel = State.selectedNode;
+      if (sel.type === 'paper') {
+        const p = State.papersByKey.get(sel.key);
+        if (!p) { right.innerHTML = '<div class="card-empty">未找到该论文。</div>'; return; }
+        right.innerHTML = renderPaperCard(p);
+        wireCardActions(right);
+      } else if (sel.type === 'concept') {
+        right.innerHTML = renderConceptCard(sel.key);
+        wireCardActions(right);
+      } else if (sel.type === 'category') {
+        right.innerHTML = renderCategoryCard(sel.key);
+        wireCardActions(right);
+      } else if (sel.type === 'entity') {
+        right.innerHTML = renderEntityCard(sel.key);
+        wireCardActions(right);
+      } else {
+        right.innerHTML = '<div class="card-empty">此节点类型尚未支持。</div>';
+      }
+    }
+
+    function frontmatterPaper(p) {
+      const lines = [
+        `key: ${p.key}`,
+        `title: "${(p.title || '').replace(/"/g, '\\"')}"`,
+        `authors: [${(p.authors || []).map(a => `"${a}"`).join(', ')}]`,
+        `year: ${p.year}`,
+        `venue: "${p.venue || ''}"`,
+        `category: ${p.category}`,
+        `concepts: [${(p.concepts || []).map(c => `"${c}"`).join(', ')}]`,
+        `cited_count: ${p.cited_count}`,
+        `has_pdf: ${p.has_pdf}`
+      ];
+      return lines.join('\n');
+    }
+
+    function renderPaperCard(p) {
+      const doi = p.doi && p.doi !== 'nan' && p.doi.length > 0
+        ? `<div class="card-meta"><strong>DOI:</strong> <a href="https://doi.org/${escapeHtml(p.doi)}" target="_blank" rel="noopener">${escapeHtml(p.doi)}</a></div>` : '';
+      const pdf = p.has_pdf
+        ? `<button class="pdf-btn" data-key="${escapeHtml(p.key)}" data-cat="${escapeHtml(p.category)}">📄 打开 PDF</button>` : '';
+      const conceptLinks = (p.concepts || []).map(c =>
+        `<span class="wiki-link" data-concept="${escapeHtml(c)}">${escapeHtml(c.replace(/_/g,' '))}</span>`
+      ).join('');
+      const entityLinks = (p.authors || []).map(a => normalizeAuthor(a)).filter(Boolean).map(a =>
+        `<span class="wiki-link" data-entity="${escapeHtml(a)}">${escapeHtml(a)}</span>`
+      ).join('');
+      const citedIn = (p.cited_in && p.cited_in.length)
+        ? p.cited_in.map(c => `<div class="card-meta">· ${escapeHtml(c.file || '')}:${escapeHtml(String(c.line||''))}</div>`).join('')
+        : '<div class="card-meta" style="color:var(--muted);">未找到论文</div>';
+      const summary = conceptDescription((p.concepts || [])[0] || '') || '';
+      const relatedCited = relatedCitingPapers(p);
+
+      return `
+        <div class="card">
+          <div class="card-type">📄 论文 / paper</div>
+          <h3>${escapeHtml(p.title || '')}</h3>
+          <div class="card-meta"><strong>作者:</strong> ${escapeHtml((p.authors||[]).join(', '))}</div>
+          <div class="card-meta"><strong>年份:</strong> ${escapeHtml(p.year)} · <strong>期刊/会议:</strong> ${escapeHtml(p.venue || '—')}</div>
+          ${doi}
+          <div class="card-meta"><strong>类别:</strong> ${escapeHtml(categoryDisplayName(p.category))}</div>
+          <pre class="frontmatter">${escapeHtml(frontmatterPaper(p))}</pre>
+          <div class="section-label">摘要</div>
+          <div class="summary">${escapeHtml(summary)}</div>
+          <div class="section-label">概念 (${(p.concepts || []).length})</div>
+          <div>${conceptLinks || '<span class="card-meta" style="color:var(--muted);">无</span>'}</div>
+          <div class="section-label">作者 (${(p.authors || []).length})</div>
+          <div>${entityLinks || '<span class="card-meta" style="color:var(--muted);">无</span>'}</div>
+          <div class="section-label">在 thesis 中被引于</div>
+          <div>${citedIn}</div>
+          ${relatedCited ? `<div class="section-label">相关论文</div><ul class="related">${relatedCited}</ul>` : ''}
+          ${pdf}
+        </div>
+      `;
+    }
+
+    function relatedCitingPapers(p) {
+      // Find papers that cocite this one AND papers in same concepts
+      const myConcs = new Set(p.concepts || []);
+      const coPapers = State.papers.filter(q =>
+        q.key !== p.key && (q.concepts || []).some(c => myConcs.has(c))
+      ).slice(0, 5);
+      if (!coPapers.length) return '';
+      return coPapers.map(q =>
+        `<li data-paper="${escapeHtml(q.key)}"><span class="rel-type">${escapeHtml(q.year)}</span>${escapeHtml(q.title || '')}</li>`
+      ).join('');
+    }
+
+    function renderConceptCard(conceptName) {
       const papers = State.conceptToPapers[conceptName] || [];
       const group = groupKey(conceptName);
       const items = papers.map(k => {
         const p = State.papersByKey.get(k);
         if (!p) return '';
-        return `<div class="paper-item" data-key="${k}">${escapeHtml(firstAuthorYear(p))} — ${escapeHtml(p.title)}</div>`;
+        return `<li data-paper="${escapeHtml(k)}"><span class="rel-type">${escapeHtml(p.year)}</span>${escapeHtml(p.title || '')}</li>`;
       }).join('');
-      panel.innerHTML = `
-        <h3>${escapeHtml(conceptName.replace(/_/g,' '))}</h3>
-        <div class="meta">group: <strong>${escapeHtml(group)}</strong></div>
-        <div class="meta">paper count: <strong>${papers.length}</strong></div>
-        <div style="margin-top:10px;"><strong>Papers</strong></div>
-        <div>${items || '<span class="placeholder">none</span>'}</div>
+      return `
+        <div class="card">
+          <div class="card-type">💡 概念 / concept · 分组:${escapeHtml(group)}</div>
+          <h3>${escapeHtml(conceptName.replace(/_/g,' '))}</h3>
+          <div class="section-label">描述</div>
+          <div class="summary">${escapeHtml(conceptDescription(conceptName))}</div>
+          <div class="section-label">论文列表 (${papers.length})</div>
+          <ul class="related">${items || '<li><span style="color:var(--muted);">无</span></li>'}</ul>
+        </div>
       `;
-      $$('.paper-item', panel).forEach(el => {
-        el.addEventListener('click', () => {
-          const k = el.getAttribute('data-key');
-          focusPaper(k);
-        });
-      });
     }
 
-    function renderCategoryDetail(cat) {
-      const panel = $('#detailPanel');
+    function renderCategoryCard(cat) {
       const papers = State.categoryToPapers[cat] || [];
       const desc = State.categoryDescriptions[cat] || '';
       const items = papers.map(k => {
         const p = State.papersByKey.get(k);
         if (!p) return '';
-        return `<div class="paper-item" data-key="${k}">${escapeHtml(firstAuthorYear(p))} — ${escapeHtml(p.title)}</div>`;
+        return `<li data-paper="${escapeHtml(k)}"><span class="rel-type">${escapeHtml(p.year)}</span>${escapeHtml(p.title || '')}</li>`;
       }).join('');
-      panel.innerHTML = `
-        <h3>${escapeHtml(cat.replace(/_/g,' '))}</h3>
-        <div class="meta">${escapeHtml(desc)}</div>
-        <div class="meta">paper count: <strong>${papers.length}</strong></div>
-        <div style="margin-top:10px;"><strong>Papers</strong></div>
-        <div>${items || '<span class="placeholder">none</span>'}</div>
+      return `
+        <div class="card">
+          <div class="card-type">📂 类别 / category</div>
+          <h3>${escapeHtml(categoryDisplayName(cat))}</h3>
+          <div class="summary">${escapeHtml(desc)}</div>
+          <div class="section-label">论文列表 (${papers.length})</div>
+          <ul class="related">${items || '<li><span style="color:var(--muted);">无</span></li>'}</ul>
+        </div>
       `;
-      $$('.paper-item', panel).forEach(el => {
+    }
+
+    function renderEntityCard(name) {
+      const ent = State.entities.get(name);
+      if (!ent) {
+        return '<div class="card"><div class="card-empty">未找到该作者。</div></div>';
+      }
+      const items = ent.papers.map(k => {
+        const p = State.papersByKey.get(k);
+        if (!p) return '';
+        return `<li data-paper="${escapeHtml(k)}"><span class="rel-type">${escapeHtml(p.year)}</span>${escapeHtml(p.title || '')}</li>`;
+      }).join('');
+      return `
+        <div class="card">
+          <div class="card-type">👤 作者 / entity</div>
+          <h3>${escapeHtml(name)}</h3>
+          <div class="summary">${escapeHtml(entityDescription(name))}</div>
+          <div class="section-label">参与论文 (${ent.papers.length})</div>
+          <ul class="related">${items || '<li><span style="color:var(--muted);">无</span></li>'}</ul>
+        </div>
+      `;
+    }
+
+    function wireCardActions(root) {
+      $$('.wiki-link[data-concept]', root).forEach(el => {
         el.addEventListener('click', () => {
-          const k = el.getAttribute('data-key');
-          focusPaper(k);
+          const c = el.getAttribute('data-concept');
+          State.selectedNode = { type: 'concept', key: c };
+          switchView('catalog');
+          renderRightCard();
+          scrollToConcept(c);
         });
       });
+      $$('.wiki-link[data-entity]', root).forEach(el => {
+        el.addEventListener('click', () => {
+          const a = el.getAttribute('data-entity');
+          State.selectedNode = { type: 'entity', key: a };
+          renderRightCard();
+        });
+      });
+      $$('.related li[data-paper]', root).forEach(el => {
+        el.addEventListener('click', () => {
+          const k = el.getAttribute('data-paper');
+          State.selectedNode = { type: 'paper', key: k };
+          renderRightCard();
+          jumpToPaperInGraph(k);
+        });
+      });
+      const pdfBtn = $('.pdf-btn', root);
+      if (pdfBtn) {
+        pdfBtn.addEventListener('click', () => {
+          const key = pdfBtn.getAttribute('data-key');
+          const cat = pdfBtn.getAttribute('data-cat');
+          const url = `../papers_originals/${cat}/${key}.pdf`;
+          window.open(url, '_blank');
+        });
+      }
     }
 
-    function escapeHtml(s) {
-      return String(s).replace(/[&<>"']/g, c => ({
-        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-      }[c]));
+    function scrollToConcept(c) {
+      // Not implemented as a scroll; place selection state and let user explore.
+      // Kept as a hook for future use.
     }
 
-    // ---------- Focus helpers ----------
-    function focusConcept(conceptName) {
-      if (!State.network) return;
-      const id = ID.concept(conceptName);
-      // Unhide if hidden
-      State.nodesDS.update({ id, hidden: false });
-      State.network.selectNodes([id]);
-      State.network.fit({ nodes: [id], animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+    /* ====================================================================
+       9. View: Graph (vis-network)
+       ==================================================================== */
+    function buildAllGraph() {
+      const nodes = [];
+      const edges = [];
+
+      // Papers
+      const cites = State.papers.map(p => p.cited_count);
+      const minC = Math.min(...cites, 0);
+      const maxC = Math.max(...cites, 1);
+      State.papers.forEach(p => {
+        const col = categoryColor(p.category);
+        nodes.push({
+          id: ID.paper(p.key),
+          label: paperNodeLabel(p),
+          title: paperNodeTooltip(p),
+          shape: 'box',
+          size: scaleSize(p.cited_count, minC, maxC, 14, 36),
+          color: { background: col, border: shade(col,-25),
+                   highlight: { background: col, border: '#000' } },
+          font: { size: 11, color: '#222', face: 'sans-serif', multi: false },
+          borderWidth: 1,
+          _type: 'paper',
+          _key: p.key,
+          margin: 6
+        });
+      });
+
+      // Concepts
+      const cCounts = State.concepts.map(c => State.conceptToPapers[c].length);
+      const minCC = Math.min(...cCounts, 1);
+      const maxCC = Math.max(...cCounts, 1);
+      State.concepts.forEach(c => {
+        const cnt = State.conceptToPapers[c].length;
+        const col = groupColor(c);
+        nodes.push({
+          id: ID.concept(c),
+          label: conceptNodeLabel(c),
+          title: `${c} (${cnt} papers)`,
+          shape: 'dot',
+          size: scaleSize(cnt, minCC, maxCC, 6, 18),
+          color: { background: col, border: shade(col,-25),
+                   highlight: { background: col, border: '#000' } },
+          font: { size: 9, color: '#222' },
+          _type: 'concept',
+          _key: c
+        });
+      });
+
+      // Categories
+      Object.keys(State.categoryToPapers).forEach(cat => {
+        if (cat === 'uncategorized') return;
+        const col = categoryColor(cat);
+        nodes.push({
+          id: ID.category(cat),
+          label: categoryNodeLabel(cat),
+          title: (State.categoryDescriptions[cat] || cat),
+          shape: 'diamond',
+          size: 28,
+          color: { background: col, border: shade(col,-25),
+                   highlight: { background: col, border: '#000' } },
+          font: { size: 14, color: '#fff', face: 'sans-serif', bold: 'bold' },
+          borderWidth: 2,
+          _type: 'category',
+          _key: cat
+        });
+      });
+
+      // Entities (author nodes) — derived from papers
+      State.entities.forEach((ent, name) => {
+        const count = ent.papers.length;
+        if (count < 2) return; // skip one-off authors
+        const col = TYPE_COLORS.entity;
+        nodes.push({
+          id: ID.entity(name),
+          label: entityNodeLabel(name),
+          title: `${name} — ${count} papers`,
+          shape: 'star',
+          size: 12 + Math.min(20, count * 3),
+          color: { background: col, border: shade(col,-25),
+                   highlight: { background: col, border: '#000' } },
+          font: { size: 10, color: '#222' },
+          _type: 'entity',
+          _key: name
+        });
+      });
+
+      // Edge: paper -> concept
+      State.papers.forEach(p => {
+        (p.concepts || []).forEach(c => {
+          edges.push({
+            from: ID.paper(p.key), to: ID.concept(c),
+            color: { color: '#999', opacity: 0.55 },
+            width: 1, smooth: { type: 'continuous' },
+            _type: 'paper_concept'
+          });
+        });
+      });
+
+      // Edge: paper -> category
+      State.papers.forEach(p => {
+        if (p.category === 'uncategorized') return;
+        edges.push({
+          from: ID.paper(p.key), to: ID.category(p.category),
+          color: { color: categoryColor(p.category), opacity: 0.65 },
+          width: 2, smooth: { type: 'continuous' },
+          _type: 'paper_category'
+        });
+      });
+
+      // Edge: paper -> entity
+      State.paperToEntities.forEach((authors, paperKey) => {
+        authors.forEach(a => {
+          if (!State.entities.has(a)) return;
+          if (State.entities.get(a).papers.length < 2) return;
+          edges.push({
+            from: ID.paper(paperKey), to: ID.entity(a),
+            color: { color: '#C5A3FF', opacity: 0.7 },
+            width: 1.5, smooth: { type: 'continuous' },
+            _type: 'paper_entity'
+          });
+        });
+      });
+
+      // Edge: paper <-> paper cocitation
+      State.cocitationEdges.forEach(e => {
+        edges.push({
+          from: ID.paper(e.source_key), to: ID.paper(e.target_key),
+          color: { color: '#444', opacity: 0.75 },
+          width: 2, smooth: { type: 'continuous' },
+          _type: 'cocitation'
+        });
+      });
+
+      return { nodes, edges };
     }
 
-    function focusPaper(paperKey) {
-      if (!State.network) return;
-      const id = ID.paper(paperKey);
-      State.nodesDS.update({ id, hidden: false });
-      State.network.selectNodes([id]);
-      State.network.fit({ nodes: [id], animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+    function scaleSize(value, minV, maxV, minS, maxS) {
+      if (maxV === minV) return (minS + maxS) / 2;
+      const t = (value - minV) / (maxV - minV);
+      return minS + t * (maxS - minS);
     }
 
-    // ---------- Tab switching ----------
-    function switchToTab(name) {
-      if (State.currentTab === name) return;
-      State.currentTab = name;
-      $$('.tab').forEach(t => t.classList.toggle('active', t.getAttribute('data-tab') === name));
-      renderCurrentView();
-    }
+    function renderGraph() {
+      const { nodes, edges } = buildAllGraph();
+      State.nodesDS = new vis.DataSet(nodes);
+      State.edgesDS = new vis.DataSet(edges);
 
-    // ---------- Render entry point ----------
-    function renderCurrentView() {
-      let view;
-      if (State.currentTab === 'concept')  view = buildConceptView();
-      else if (State.currentTab === 'category') view = buildCategoryView();
-      else view = buildTemporalView();
-
-      // Apply current filters as hidden flags
-      const updates = applyFilters(view);
-      view.nodes.forEach((n, i) => { n.hidden = updates[i].hidden; });
-
-      State.nodesDS = new vis.DataSet(view.nodes);
-      State.edgesDS = new vis.DataSet(view.edges);
-
-      const container = document.getElementById('networkCanvas');
-      State.network = new vis.Network(container, { nodes: State.nodesDS, edges: State.edgesDS }, view.options);
+      const container = $('#networkCanvas');
+      // Clear before re-init
+      container.innerHTML = '';
+      State.network = new vis.Network(container,
+        { nodes: State.nodesDS, edges: State.edgesDS },
+        {
+          physics: {
+            enabled: true,
+            solver: 'barnesHut',
+            barnesHut: { gravitationalConstant: -12000, centralGravity: 0.25,
+                        springLength: 110, springConstant: 0.04,
+                        damping: 0.4 }
+          },
+          interaction: { hover: true, tooltipDelay: 150,
+                         navigationButtons: true, keyboard: true,
+                         multiselect: false, zoomSpeed: 0.6 },
+          nodes: { chosen: true },
+          edges: { chosen: true, smooth: { enabled: true, type: 'continuous' } }
+        }
+      );
 
       State.network.on('click', params => {
         const id = params.nodes[0];
         if (!id) return;
-        if (id.startsWith('p::'))      renderPaperDetail(State.papersByKey.get(id.slice(3)));
-        else if (id.startsWith('c::')) renderConceptDetail(id.slice(3));
-        else if (id.startsWith('cat::')) renderCategoryDetail(id.slice(5));
-        else if (id.startsWith('y::')) {/* year node - ignore */ }
+        const { type, key } = parseId(id);
+        State.selectedNode = { type, key };
+        renderRightCard();
+        if (type === 'paper') highlightSelectedRow();
+      });
+
+      State.network.on('stabilizationIterationsDone', () => {
+        // No-op: layout settles.
+      });
+
+      renderGraphLegend();
+    }
+
+    function renderGraphLegend() {
+      const legend = $('#graphLegend');
+      const rows = [
+        ['#4A90E2', '📄 论文'],
+        ['#F5A623', '💡 概念'],
+        ['#50E3C2', '📂 类别'],
+        ['#9013FE', '👤 作者'],
+        ['#999', 'covers'],
+        ['#4A90E2', 'in_category'],
+        ['#C5A3FF', 'authored_by'],
+        ['#444', 'cocited_with']
+      ];
+      legend.innerHTML =
+        '<div style="font-weight:700;margin-bottom:6px;">图例</div>' +
+        rows.map(([c, l]) =>
+          `<div class="legend-row"><span class="legend-swatch" style="background:${c}"></span><span>${l}</span></div>`
+        ).join('');
+    }
+
+    function rebuildGraph() {
+      State.network.setOptions({ physics: { enabled: true } });
+      State.network.stabilize(80);
+    }
+
+    function jumpToPaperInGraph(paperKey) {
+      const id = ID.paper(paperKey);
+      if (!State.nodesDS.get(id)) return;
+      State.nodesDS.update({ id, hidden: false });
+      State.network.selectNodes([id]);
+      State.network.fit({ nodes: [id], animation: { duration: 500 } });
+    }
+
+    /* ====================================================================
+       10. View: Timeline
+       ==================================================================== */
+    function renderTimeline() {
+      const pane = $('#timelinePane');
+      pane.innerHTML = '';
+      const byYear = new Map();
+      State.papers.forEach(p => {
+        const y = paperYearInt(p);
+        if (!byYear.has(y)) byYear.set(y, []);
+        byYear.get(y).push(p);
+      });
+      const years = Array.from(byYear.keys()).filter(y => y > 0).sort((a,b) => a - b);
+      if (!years.length) {
+        pane.innerHTML = '<div class="empty-state">无数据。</div>';
+        return;
+      }
+      years.forEach(y => {
+        const papers = byYear.get(y).sort((a,b) =>
+          (a.title || '').localeCompare(b.title || ''));
+        const sec = document.createElement('div');
+        sec.className = 'timeline-year';
+        sec.innerHTML = `<h2>${y}</h2>`;
+        papers.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'timeline-card';
+          card.dataset.paper = p.key;
+          const col = categoryColor(p.category);
+          card.innerHTML =
+            `<div class="yr">${escapeHtml(p.year)} · <span style="color:${col};">${escapeHtml(categoryDisplayName(p.category))}</span></div>` +
+            `<div class="ttl"><b>${escapeHtml(p.title || '')}</b><br>` +
+            `<span style="color:#555;">${escapeHtml((p.authors||[]).slice(0,3).join(' · '))}</span></div>` +
+            `<div class="meta">引 ${p.cited_count}${p.has_pdf ? ' · PDF' : ''}</div>`;
+          card.addEventListener('click', () => {
+            State.selectedNode = { type: 'paper', key: p.key };
+            renderWiki();
+            switchView('wiki');
+          });
+          sec.appendChild(card);
+        });
+        pane.appendChild(sec);
       });
     }
 
-    // ---------- Toolbar wiring ----------
-    function setupToolbar() {
-      // Populate category select
-      const cats = Object.keys(State.categoryToPapers).filter(c => c !== 'uncategorized');
-      const sel = $('#catFilter');
-      sel.innerHTML = cats.map(c => `<option value="${c}">${c}</option>`).join('');
-      sel.size = Math.min(cats.length, 6);
+    /* ====================================================================
+       11. View: Wiki (full-page)
+       ==================================================================== */
+    function renderWiki() {
+      const pane = $('#wikiPane');
+      if (!State.selectedNode) {
+        pane.innerHTML = '<div class="wiki-empty">从目录、图谱或时间轴点击一个节点。</div>';
+        return;
+      }
+      const sel = State.selectedNode;
+      // Build a wider layout by reusing renderRightCard HTML wrapped in header
+      let body = '';
+      if (sel.type === 'paper') {
+        const p = State.papersByKey.get(sel.key);
+        if (!p) { pane.innerHTML = '<div class="wiki-empty">未找到节点。</div>'; return; }
+        body = renderPaperCard(p);
+      } else if (sel.type === 'concept') {
+        body = renderConceptCard(sel.key);
+      } else if (sel.type === 'category') {
+        body = renderCategoryCard(sel.key);
+      } else if (sel.type === 'entity') {
+        body = renderEntityCard(sel.key);
+      }
+      pane.innerHTML = `
+        <div class="wiki-header">
+          <div class="wiki-subtitle">Full Wiki 详情</div>
+        </div>
+        ${body}
+      `;
+      wireCardActions(pane);
+    }
 
-      $('#search').addEventListener('input', e => {
-        State.filters.search = e.target.value.trim().toLowerCase();
-        applyAndRefresh();
+    /* ====================================================================
+       12. View: Lint (six rules)
+       ==================================================================== */
+    function computeLint() {
+      const currentYear = 2026;
+      const rules = [];
+
+      // Rule 1: Orphan nodes (paper in-degree == 0)
+      const referenced = new Set();
+      State.cocitationEdges.forEach(e => {
+        referenced.add(e.source_key);
+        referenced.add(e.target_key);
       });
-      sel.addEventListener('change', () => {
-        State.filters.categories = new Set(
-          Array.from(sel.selectedOptions).map(o => o.value)
+      State.thesisCitations.forEach(c => referenced.add(c.bib_key));
+      const orphans = State.papers.filter(p => !referenced.has(p.key));
+      rules.push({
+        id: 'orphan',
+        title: '孤儿节点 (in-degree = 0)',
+        emoji: '🕸',
+        items: orphans.map(p => ({
+          type: 'paper', key: p.key, label: paperNodeLabel(p),
+          meta: `共引:${p.cited_count} · ${categoryDisplayName(p.category)}`
+        }))
+      });
+
+      // Rule 2: Low quality (no PDF AND cited_count == 0)
+      const lowQual = State.papers.filter(p => !p.has_pdf && p.cited_count === 0);
+      rules.push({
+        id: 'low_quality',
+        title: '低质量 (无 PDF 且未被引)',
+        emoji: '📉',
+        items: lowQual.map(p => ({
+          type: 'paper', key: p.key, label: paperNodeLabel(p),
+          meta: `${categoryDisplayName(p.category)}`
+        }))
+      });
+
+      // Rule 3: Potential duplicates (similar titles / same first author + year)
+      const dupBuckets = [];
+      const seenDupKey = new Set();
+      State.papers.forEach((p, i) => {
+        const t1 = (p.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        State.papers.slice(i + 1).forEach(q => {
+          if (p.key === q.key) return;
+          if (firstAuthorName(p.authors) !== firstAuthorName(q.authors)) return;
+          if (p.year !== q.year) return;
+          const t2 = (q.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+          if (!t1 || !t2) return;
+          // crude similarity: shared-prefix length
+          let common = 0;
+          while (common < t1.length && common < t2.length &&
+                 t1[common] === t2[common]) common++;
+          const sim = common / Math.max(t1.length, t2.length);
+          if (sim > 0.5 && !seenDupKey.has(p.key + q.key)) {
+            seenDupKey.add(p.key + q.key);
+            dupBuckets.push([p, q]);
+          }
+        });
+      });
+      const dupItems = [];
+      dupBuckets.forEach(([p, q]) => {
+        dupItems.push({ type:'paper', key: p.key, label: paperNodeLabel(p), meta: `vs ${q.year} ${escapeHtml(truncate(q.title||'',30))}` });
+        dupItems.push({ type:'paper', key: q.key, label: paperNodeLabel(q), meta: `vs ${p.year} ${escapeHtml(truncate(p.title||'',30))}` });
+      });
+      rules.push({
+        id: 'duplicate',
+        title: '疑似重复 (同作者同年份 + 标题相似)',
+        emoji: '🧬',
+        items: dupItems
+      });
+
+      // Rule 4: Stale (>5 years old AND not cited)
+      const stale = State.papers.filter(p => {
+        const y = paperYearInt(p);
+        return currentYear - y > 5 && p.cited_count === 0;
+      });
+      rules.push({
+        id: 'stale',
+        title: `过期未引 (>${currentYear-5} 年前且未被引)`,
+        emoji: '⏳',
+        items: stale.map(p => ({
+          type:'paper', key: p.key, label: paperNodeLabel(p),
+          meta: `${currentYear - paperYearInt(p)} 年前 · ${categoryDisplayName(p.category)}`
+        }))
+      });
+
+      // Rule 5: High-value candidates (frequently cited concept without entity node)
+      const hotConcepts = State.concepts
+        .map(c => ({ c, n: (State.conceptToPapers[c]||[]).length }))
+        .filter(o => o.n >= 5)
+        .sort((a,b) => b.n - a.n)
+        .slice(0, 10);
+      rules.push({
+        id: 'high_value',
+        title: '高价值候选 (高频概念 / 高产作者)',
+        emoji: '⭐',
+        items: hotConcepts.map(o => ({
+          type: 'concept', key: o.c,
+          label: conceptNodeLabel(o.c),
+          meta: `${o.n} 篇论文`
+        }))
+      });
+
+      // Rule 6: Concept-paper imbalance (covered by >10 or <2)
+      const big = State.concepts
+        .map(c => ({ c, n: (State.conceptToPapers[c]||[]).length }))
+        .filter(o => o.n > 10);
+      const tiny = State.concepts
+        .map(c => ({ c, n: (State.conceptToPapers[c]||[]).length }))
+        .filter(o => o.n > 0 && o.n < 2);
+      const imbalance = [
+        ...big.map(o => ({ type:'concept', key:o.c,
+          label: conceptNodeLabel(o.c), meta: `过多 ${o.n} 篇` })),
+        ...tiny.map(o => ({ type:'concept', key:o.c,
+          label: conceptNodeLabel(o.c), meta: `仅 ${o.n} 篇` }))
+      ];
+      rules.push({
+        id: 'imbalance',
+        title: '概念失衡 (covered by >10 或 <2)',
+        emoji: '⚖',
+        items: imbalance
+      });
+
+      return rules;
+    }
+
+    function renderLint() {
+      const pane = $('#lintPane');
+      const rules = computeLint();
+      pane.innerHTML = '';
+      rules.forEach(rule => {
+        const visible = rule.items.filter(it =>
+          !State.ignoredLints.has(rule.id + '::' + it.type + '::' + it.key)
         );
-        applyAndRefresh();
+        const sec = document.createElement('div');
+        sec.className = 'lint-section';
+        const header = document.createElement('div');
+        header.className = 'lint-section-header';
+        const countCls = visible.length === 0 ? 'count-badge ok' : 'count-badge';
+        const countTxt = visible.length === 0 ? '✓ 0' : `${visible.length}`;
+        header.innerHTML = `<span>${rule.emoji}</span><span>${escapeHtml(rule.title)}</span>` +
+          `<span class="${countCls}">${countTxt}</span>`;
+        sec.appendChild(header);
+        const body = document.createElement('div');
+        body.className = 'lint-section-body';
+        if (visible.length === 0) {
+          body.innerHTML = '<div class="lint-row"><span class="lr-title">无问题。</span></div>';
+        } else {
+          visible.forEach(item => {
+            const row = document.createElement('div');
+            row.className = 'lint-row';
+            row.innerHTML =
+              `<span class="lr-emoji">${
+                item.type === 'paper'   ? '📄' :
+                item.type === 'concept' ? '💡' :
+                item.type === 'category'? '📂' : '👤'
+              }</span>` +
+              `<span class="lr-title">${escapeHtml(item.label)}</span>` +
+              `<span class="lr-meta">${escapeHtml(item.meta)}</span>` +
+              `<button class="lr-ignore">忽略</button>`;
+            row.querySelector('.lr-title').addEventListener('click', () => {
+              State.selectedNode = { type: item.type, key: item.key };
+              switchView(item.type === 'paper' || item.type === 'concept' || item.type === 'category' ? 'catalog' : 'wiki');
+              if (item.type === 'concept') scrollToConcept(item.key);
+              renderRightCard();
+            });
+            row.querySelector('.lr-ignore').addEventListener('click', e => {
+              e.stopPropagation();
+              State.ignoredLints.add(rule.id + '::' + item.type + '::' + item.key);
+              localStorage.setItem('wiki_ignored_lints',
+                JSON.stringify(Array.from(State.ignoredLints)));
+              renderLint();
+            });
+            body.appendChild(row);
+          });
+        }
+        sec.appendChild(body);
+        pane.appendChild(sec);
       });
-      $('#yearMin').addEventListener('input', e => {
-        const v = parseInt(e.target.value, 10);
-        State.filters.yearMin = Number.isFinite(v) ? v : null;
-        applyAndRefresh();
+    }
+
+    /* ====================================================================
+       13. View: Query (full-text search)
+       ==================================================================== */
+    function indexForSearch() {
+      // Per-row index: { key, type, label, meta, hay, score }
+      const rows = [];
+      State.papers.forEach(p => {
+        rows.push({
+          key: p.key, type: 'paper',
+          label: p.title || '',
+          meta: `${(p.authors || []).slice(0,3).join(' · ')} · ${p.year} · ${p.venue || ''}`,
+          hay: `${p.title} ${(p.authors || []).join(' ')} ${(p.concepts || []).join(' ')} ${p.venue || ''}`.toLowerCase(),
+          link: { type: 'paper', key: p.key }
+        });
       });
-      $('#yearMax').addEventListener('input', e => {
-        const v = parseInt(e.target.value, 10);
-        State.filters.yearMax = Number.isFinite(v) ? v : null;
-        applyAndRefresh();
+      State.concepts.forEach(c => {
+        const npapers = (State.conceptToPapers[c] || []).length;
+        rows.push({
+          key: c, type: 'concept',
+          label: c.replace(/_/g, ' '),
+          meta: `${npapers} 篇论文 · 分组 ${groupKey(c)}`,
+          hay: `${c} ${npapers} ${groupKey(c)}`.toLowerCase(),
+          link: { type: 'concept', key: c }
+        });
       });
+      Object.keys(State.categoryToPapers).forEach(cat => {
+        rows.push({
+          key: cat, type: 'category',
+          label: categoryDisplayName(cat),
+          meta: `${(State.categoryToPapers[cat]||[]).length} 篇论文 · ${State.categoryDescriptions[cat] || ''}`,
+          hay: `${cat} ${categoryDisplayName(cat)} ${State.categoryDescriptions[cat]||''}`.toLowerCase(),
+          link: { type: 'category', key: cat }
+        });
+      });
+      State.entities.forEach((ent, name) => {
+        rows.push({
+          key: name, type: 'entity',
+          label: name,
+          meta: `${ent.papers.length} 篇论文`,
+          hay: `${name}`.toLowerCase(),
+          link: { type: 'entity', key: name }
+        });
+      });
+      return rows;
+    }
+
+    function renderQuery(query) {
+      const list = $('#queryHits');
+      list.innerHTML = '';
+      const q = (query || '').trim().toLowerCase();
+      if (!q) {
+        list.innerHTML = '<li class="empty-state">输入关键词以开始搜索。</li>';
+        return [];
+      }
+      const idx = indexForSearch();
+      const hits = [];
+      for (const row of idx) {
+        // Score = number of occurrences in hay
+        let pos = 0, score = 0;
+        while (true) {
+          const found = row.hay.indexOf(q, pos);
+          if (found === -1) break;
+          score++;
+          pos = found + q.length;
+        }
+        if (score > 0) hits.push(Object.assign({}, row, { score }));
+      }
+      hits.sort((a, b) => b.score - a.score);
+      const top = hits.slice(0, 10);
+      top.forEach((h, i) => {
+        const li = document.createElement('li');
+        li.className = 'query-hit';
+        li.innerHTML =
+          `<span class="qh-score">#${i+1} · ${h.score}</span>` +
+          `<div class="qh-title">${highlightHtml(h.label, q)}</div>` +
+          `<div class="qh-meta">${highlightHtml(h.meta, q)}</div>` +
+          `<div class="qh-meta" style="color:var(--muted);">${
+            h.type === 'paper'    ? '📄 论文' :
+            h.type === 'concept'  ? '💡 概念' :
+            h.type === 'category' ? '📂 类别' : '👤 作者'
+          }</div>`;
+        li.addEventListener('click', () => {
+          State.selectedNode = h.link;
+          if (h.type === 'paper') {
+            switchView('catalog');
+            State.selectedCategory = State.papersByKey.get(h.key).category;
+            renderCategoryRail();
+            renderCatalogCenter(State.selectedCategory);
+            highlightSelectedRow();
+            renderRightCard();
+            const row = $(`.row[data-paper="${h.key}"]`, $('#catCenter'));
+            if (row) row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else if (h.type === 'concept') {
+            switchView('catalog');
+            renderRightCard();
+          } else if (h.type === 'category') {
+            switchView('catalog');
+            State.selectedCategory = h.key;
+            renderCategoryRail();
+            renderCatalogCenter(h.key);
+          } else if (h.type === 'entity') {
+            switchView('wiki');
+            renderWiki();
+          }
+        });
+        list.appendChild(li);
+      });
+      if (top.length === 0) {
+        list.innerHTML = `<li class="empty-state">无匹配: "${escapeHtml(query)}"</li>`;
+      }
+      return top;
+    }
+
+    function highlightHtml(text, q) {
+      if (!q) return escapeHtml(text);
+      const escaped = escapeHtml(text);
+      const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      return escaped.replace(re, '<mark class="hl">$1</mark>');
+    }
+
+    /* ====================================================================
+       14. Toolbar wiring + View switcher
+       ==================================================================== */
+    function setupToolbar() {
+      // Global search box (filters Catalog by visible title; for full search use Query tab)
+      let searchTimer;
+      $('#search').addEventListener('input', e => {
+        const v = e.target.value.trim().toLowerCase();
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(() => {
+          State.filters.search = v;
+          if (State.currentView === 'catalog') applyCatalogFilter();
+        }, 100);
+      });
+
       $('#resetBtn').addEventListener('click', () => {
-        State.filters = { search: '', categories: new Set(), yearMin: null, yearMax: null };
         $('#search').value = '';
-        $('#yearMin').value = '';
-        $('#yearMax').value = '';
-        Array.from(sel.options).forEach(o => o.selected = false);
-        applyAndRefresh();
+        $('#queryInput').value = '';
+        State.filters.search = '';
+        State.selectedNode = null;
+        if (State.currentView === 'catalog') {
+          renderRightCard();
+          applyCatalogFilter();
+        } else if (State.currentView === 'graph') {
+          renderGraph();
+        } else if (State.currentView === 'timeline') {
+          renderTimeline();
+        } else if (State.currentView === 'query') {
+          renderQuery('');
+        } else if (State.currentView === 'wiki') {
+          State.selectedNode = null;
+          renderWiki();
+        } else if (State.currentView === 'lint') {
+          renderLint();
+        }
       });
 
+      // Tab click handlers
       $$('.tab').forEach(t => {
-        t.addEventListener('click', () => switchToTab(t.getAttribute('data-tab')));
+        t.addEventListener('click', () => switchView(t.getAttribute('data-view')));
+      });
+
+      // Graph controls
+      $('#graphFitBtn').addEventListener('click', () => {
+        if (State.network) State.network.fit({ animation: { duration: 400 } });
+      });
+      $('#graphStabilizeBtn').addEventListener('click', () => {
+        if (State.network) rebuildGraph();
+      });
+
+      // Query input
+      let qTimer;
+      $('#queryInput').addEventListener('input', e => {
+        const v = e.target.value;
+        clearTimeout(qTimer);
+        qTimer = setTimeout(() => renderQuery(v), 80);
       });
     }
 
-    function applyAndRefresh() {
-      if (!State.network) return;
-      // Update only hidden flags in-place to preserve layout
-      const view = (State.currentTab === 'concept')  ? buildConceptView()
-                : (State.currentTab === 'category') ? buildCategoryView()
-                : buildTemporalView();
-      const updates = applyFilters(view);
-      updates.forEach(u => {
-        if (State.nodesDS.get(u.id)) State.nodesDS.update({ id: u.id, hidden: u.hidden });
+    function applyCatalogFilter() {
+      const q = State.filters.search;
+      $$('.row', $('#catCenter')).forEach(row => {
+        const paperKey = row.dataset.paper;
+        const p = State.papersByKey.get(paperKey);
+        if (!p) return;
+        if (!q) { row.style.display = ''; return; }
+        const hay = `${p.title} ${(p.authors||[]).join(' ')} ${(p.concepts||[]).join(' ')} ${p.venue||''}`.toLowerCase();
+        row.style.display = hay.includes(q) ? '' : 'none';
       });
     }
 
-    // ---------- Boot ----------
+    function switchView(viewId) {
+      State.currentView = viewId;
+      $$('.tab').forEach(t => t.classList.toggle('active',
+        t.getAttribute('data-view') === viewId));
+      $$('.view-pane').forEach(p => p.classList.toggle('active',
+        p.getAttribute('data-view') === viewId));
+
+      if (viewId === 'catalog') {
+        renderCatalog();
+        renderRightCard();
+      } else if (viewId === 'graph') {
+        renderGraph();
+      } else if (viewId === 'timeline') {
+        renderTimeline();
+      } else if (viewId === 'wiki') {
+        renderWiki();
+      } else if (viewId === 'lint') {
+        renderLint();
+      } else if (viewId === 'query') {
+        renderQuery($('#queryInput').value);
+      }
+    }
+
+    /* ====================================================================
+       15. Boot
+       ==================================================================== */
     document.addEventListener('DOMContentLoaded', async () => {
       try {
         if (typeof vis === 'undefined' || !vis.Network) {
@@ -853,15 +2066,18 @@
         }
         await loadData();
         setupToolbar();
-        renderCurrentView();
-        // Remove overlay
+        // Initial render of the default view
+        renderCatalog();
+        renderRightCard();
         const ov = $('#overlay');
         if (ov) ov.remove();
       } catch (err) {
         console.error(err);
         const ov = $('#overlay');
-        ov.classList.add('error');
-        ov.textContent = 'Failed to load knowledge graph data.\n\n' + (err && err.message ? err.message : err);
+        if (ov) {
+          ov.classList.add('error');
+          ov.textContent = '加载知识图谱数据失败。\n\n' + (err && err.message ? err.message : err);
+        }
       }
     });
   })();

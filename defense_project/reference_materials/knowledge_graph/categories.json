@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generated_at": "2026-06-30",
-  "category_count": 10,
+  "category_count": 11,
   "category_to_papers": {
     "algorithms_trust_hci": [
       "ParasuramanRiley1997",
@@ -90,6 +90,19 @@
     "algorithm_aversion": [
       "PrahlVanSwol2017",
       "LongoniBonezziMorewedge2019"
+    ],
+    "accountability_delegation": [
+      "AleksovskaSchillemansGrimmelikhuijsen2019",
+      "ChevrierTeixeira2024",
+      "HallFrinkBuckley2017",
+      "KirchkampStrobel2019",
+      "KobisBonnefonRahwan2025",
+      "KrakowskiLugerRaisch2026",
+      "LernerTetlock1999",
+      "RaischKrakowski2021",
+      "ShresthaBenMenahemVonKrogh2019",
+      "SteffelWilliamsPerrmannGraham2016",
+      "YinNgiamTanTeo2025"
     ]
   },
   "category_descriptions": {
