@@ -55,6 +55,17 @@ defense_project/
 
 ---
 
+### Paper 2 / EWA 可点击子集合（2026-08-03）
+
+- [中文总结与原文导航](../../主Agent/文章项目/02_AI授权_EWA/Paper2_EWA_参考文献导航.md)
+- [批次状态清单](./paper2_ewa/manifest.csv)
+- [批次入库记录](./paper2_ewa/batch_2026-08-03_summary.md)
+- [本地 PDF 目录](./papers_originals/paper2_ewa/)
+
+本批覆盖 50 个唯一 DOI，12 篇已有本地 PDF，其余条目保留 DOI/出版社入口。原 Paper 2 Markdown 的参考文献行已可直接跳转到中文卡片与原文。
+
+---
+
 ## 二、入库流程（每次拿到新摘要时执行）
 
 > 触发条件：你给我一段文献摘要 / 标题 / 作者 / DOI / 链接，要求"入库"。
@@ -134,23 +145,25 @@ grep -ohE '\\cite[a-z]*\{[^}]+\}' \
 
 ## 四、当前状态（动态更新）
 
-> 上次核查：2026-06-30（citation_checker.py，第 4 轮，含 2026-06-29 批次 19 条新文献）
+> 索引重建：2026-08-01（在 2026-07-29 的 39 条批次基础上，新增信息暴露—信念—态度与意见动力学核心文献 2 条）。
+>
+> 最近一次全库 citation checker 快照：2026-07-06；下表中的 verified/suspicious 数量仍对应当时的 79 条基线。
 
 | 项目 | 数量 |
 |------|------|
-| `references.bib` 条目总数 | **68**（原 49 + 新 19） |
-| ✅ Verified (≥2 sources) | 31 + 9 = **40*** |
-| ⚠️ Suspicious (1 source)  | 18 + 10 = **28*** |
-| ❌ Not found (0 source)  | **0**\* |
-| 已下载 PDF | **10** |
+| `references.bib` 条目总数 | **166** |
+| ✅ Verified (≥2 sources) | **48***（2026-07-06 全库快照；2026-07-29 新增 39 条另经官方来源交叉核验） |
+| ⚠️ Suspicious (1 source) | **30***（2026-07-06 全库快照） |
+| ❌ Not found (0 source) | **0**\* |
+| 已下载 PDF | **49** |
 | 🚩 红旗告警 | **0**（全部修复） |
-| 类别 | **10** |
-| 唯一概念标签 | **184** |
+| 类别 | **15** |
+| 唯一概念标签 | **302** |
 | 在 thesis 中被引用 | **29** |
 
 \* 第一轮运行（无 API 限流）测得的稳定值。后续因为 Semantic Scholar 限流，verified/suspicious 数字有较大波动。**not_found 始终为 0** 是核心不变信号。
 
-### 已下载的 PDF（10 篇）
+### 基线 PDF 示例（10 篇；完整 38 篇清单见 `knowledge_graph/papers.json`）
 
 ```
 Vaswani2017 (recommender_genai)

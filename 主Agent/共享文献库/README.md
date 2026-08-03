@@ -9,6 +9,7 @@
 - 2026-06-29：完成 Self vs AI 等文献批次、健康报告、链接核查和部分 PDF 归档。
 - 2026-07-06：完成 accountability / AI delegation 11 条核验与 Bib 入库，并重建知识图谱。详见 `defense_project/reference_materials/batch_2026-07-06_summary.md`。
 - 2026-07-21：另有 5 篇行为经济学文献下载到 `behavioral_economics_belief_search_literature/pdf/`，但尚未完成正式并库记录。
+- 2026-08-01：完成 Nyhan et al. (2023) 与 Perra and Rocha (2019) 的元数据核验、BibTeX、出版商 PDF、文献清单与知识图谱入库；新增构念证据说明，专门区分信息暴露、事实信念、政治态度与 ABM 中的抽象意见状态。
 
 当前待办：由文献入库 Agent 核验并合并 2026-07-21 候选批次，处理 `references_new.bib`、`references_2026-07-06_batch.bib` 与主 `references.bib` 的关系，并更新知识图谱。
 

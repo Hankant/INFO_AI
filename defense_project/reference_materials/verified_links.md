@@ -50,3 +50,48 @@ These official or primary-source links were used to verify several bibliography 
 ---
 
 The rest of the cited works are already listed in `to_collect.md` and `../latex/references.bib`.
+
+---
+
+## Political attitudes, deliberation, and LLM persuasion (verified 2026-07-29)
+
+- `FisherEtAl2025PoliticalDecision` — ACL Anthology and Crossref
+  https://aclanthology.org/2025.acl-long.328/
+  https://doi.org/10.18653/v1/2025.acl-long.328
+
+- `TesslerEtAl2024CommonGround` — Science and Crossref
+  https://www.science.org/doi/10.1126/science.adq2852
+  https://doi.org/10.1126/science.adq2852
+
+- `HuqClaggettShirado2025` — arXiv v2 and DataCite DOI
+  https://arxiv.org/abs/2510.21984
+  https://doi.org/10.48550/arXiv.2510.21984
+  v1 used the title *From Social Division to Cohesion with AI Message Suggestions in Online Chat Groups*.
+
+- `SalviEtAl2025ConversationalPersuasion` — Nature Human Behaviour and Crossref
+  https://www.nature.com/articles/s41562-025-02194-6
+  https://doi.org/10.1038/s41562-025-02194-6
+
+- `LinEtAl2025PersuadingVoters` — Nature and Crossref
+  https://www.nature.com/articles/s41586-025-09771-9
+  https://doi.org/10.1038/s41586-025-09771-9
+
+---
+
+## Echo chambers, beliefs, attitudes, and opinion dynamics (verified 2026-08-01)
+
+- `NyhanEtAl2023` — Nature, Crossref, and user-provided publisher PDF
+  https://www.nature.com/articles/s41586-023-06297-w
+  https://doi.org/10.1038/s41586-023-06297-w
+  Local PDF SHA256: `4B27C3F6553AE06CEFA6D1E3001940AAC80BF7F706729ED999CC89BC72480FE5`
+
+- `PerraRocha2019` — Scientific Reports, Crossref, and user-provided publisher PDF
+  https://www.nature.com/articles/s41598-019-43830-2
+  https://doi.org/10.1038/s41598-019-43830-2
+  Local PDF SHA256: `C35C245DE2180ABEB801FDDA6D44E7A92582DA6BBD0F01FBDFB5552751EAA3CE`
+
+## Paper 2 / EWA DOI 核验（2026-08-03）
+
+50 个唯一 DOI 均由 DOI/Crossref/OpenAlex 元数据确认存在。逐条 DOI、题名、出版年份、本地 PDF 状态及来源 Markdown 见 [paper2_ewa/manifest.csv](./paper2_ewa/manifest.csv)。
+
+部分 INFORMS 文献在项目旧稿中使用 online-first 年份，而 Crossref 当前使用卷期出版年份；导航卡片已逐条提示，不自动改写正文年份。

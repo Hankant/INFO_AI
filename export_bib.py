@@ -6,6 +6,7 @@ Run from project root: PYTHONIOENCODING=utf-8 py -3 e:/Info_AI/export_bib.py
 import json
 import re
 import os
+from datetime import date
 from pathlib import Path
 from collections import defaultdict
 
@@ -14,28 +15,79 @@ LATEX = REPO / "defense_project" / "latex"
 REFS = LATEX / "references.bib"
 KG = REPO / "defense_project" / "reference_materials" / "knowledge_graph"
 KG.mkdir(parents=True, exist_ok=True)
+GENERATED_AT = date.today().isoformat()
 
 # ---------- 1. Parse references.bib ----------
+def parse_fields(body):
+    """Parse BibTeX fields while preserving balanced braces inside values."""
+    fields = {}
+    i = 0
+    n = len(body)
+
+    while i < n:
+        while i < n and (body[i].isspace() or body[i] == ","):
+            i += 1
+        match = re.match(r"(\w+)\s*=", body[i:])
+        if not match:
+            i += 1
+            continue
+
+        field_name = match.group(1).lower()
+        i += match.end()
+        while i < n and body[i].isspace():
+            i += 1
+
+        if i < n and body[i] == "{":
+            depth = 1
+            start = i + 1
+            i += 1
+            while i < n and depth:
+                escaped = i > 0 and body[i - 1] == "\\"
+                if body[i] == "{" and not escaped:
+                    depth += 1
+                elif body[i] == "}" and not escaped:
+                    depth -= 1
+                i += 1
+            value = body[start:i - 1] if depth == 0 else body[start:i]
+        elif i < n and body[i] == '"':
+            start = i + 1
+            i += 1
+            while i < n:
+                if body[i] == '"' and body[i - 1] != "\\":
+                    break
+                i += 1
+            value = body[start:i]
+            i += 1
+        else:
+            start = i
+            while i < n and body[i] not in ",\r\n":
+                i += 1
+            value = body[start:i]
+
+        fields[field_name] = value.strip().strip(",").strip()
+
+    return fields
+
+
+def clean_title(value):
+    """Remove simple BibTeX capitalization guards from display titles."""
+    return re.sub(r"\{([A-Za-z0-9][A-Za-z0-9-]*)\}", r"\1", value)
+
+
 def parse_bib(path):
     text = path.read_text(encoding="utf-8")
     entry_pat = re.compile(r"@(\w+)\{([^,\s]+)\s*,(.*?)\n\}", re.DOTALL)
-    field_pat = re.compile(r"(\w+)\s*=\s*\{([^}]*)\}|(\w+)\s*=\s*([^\s,]+)")
     entries = []
     for m in entry_pat.finditer(text):
         etype, key, body = m.group(1).lower(), m.group(2), m.group(3)
-        fields = {}
-        for fm in field_pat.finditer(body):
-            fn = fm.group(1) or fm.group(3)
-            fv = fm.group(2) or fm.group(4)
-            if fn and fv:
-                fields[fn.lower()] = fv.strip().strip(',').strip()
+        fields = parse_fields(body)
         # Clean authors for parsing
         authors_raw = fields.get("author", "")
         authors = [a.strip() for a in re.split(r"\s+and\s+", authors_raw) if a.strip()]
         entries.append({
             "key": key,
             "type": etype,
-            "title": fields.get("title", ""),
+            "title": clean_title(fields.get("title", "")),
             "authors": authors,
             "authors_raw": authors_raw,
             "year": fields.get("year", ""),
@@ -133,6 +185,63 @@ CATEGORY_MAP = {
     "Goodie2003": "overconfidence_control",
     "PrahlVanSwol2017": "algorithm_aversion",
     "LongoniBonezziMorewedge2019": "algorithm_aversion",
+    # Accountability / AI Delegation (2026-07-06 batch)
+    "AleksovskaSchillemansGrimmelikhuijsen2019": "accountability_delegation",
+    "ChevrierTeixeira2024": "accountability_delegation",
+    "HallFrinkBuckley2017": "accountability_delegation",
+    "KirchkampStrobel2019": "accountability_delegation",
+    "KobisBonnefonRahwan2025": "accountability_delegation",
+    "KrakowskiLugerRaisch2026": "accountability_delegation",
+    "LernerTetlock1999": "accountability_delegation",
+    "RaischKrakowski2021": "accountability_delegation",
+    "ShresthaBenMenahemVonKrogh2019": "accountability_delegation",
+    "SteffelWilliamsPerrmannGraham2016": "accountability_delegation",
+    "YinNgiamTanTeo2025": "accountability_delegation",
+    # Group information homogeneity and collective intelligence (2026-07-29)
+    "JiangEtAl2025ArtificialHivemind": "collective_intelligence_homogeneity",
+    "FugenerGrahlGuptaKetter2021": "collective_intelligence_homogeneity",
+    "DoshiHauser2024": "collective_intelligence_homogeneity",
+    "AndersonShahKreminski2024": "collective_intelligence_homogeneity",
+    "BommasaniCreelKumarEtAl2022": "collective_intelligence_homogeneity",
+    "StasserTitus1985": "collective_intelligence_homogeneity",
+    "LorenzRauhutSchweitzerHelbing2011": "collective_intelligence_homogeneity",
+    "BaiVoelkelMuldowneyEtAl2025": "collective_intelligence_homogeneity",
+    "BurtonEtAl2024": "collective_intelligence_homogeneity",
+    "PescetelliRutherfordRahwan2021": "collective_intelligence_homogeneity",
+    "KimGargPengGarg2025": "collective_intelligence_homogeneity",
+    "AshkinazeEtAl2025": "collective_intelligence_homogeneity",
+    "KleinbergRaghavan2021": "collective_intelligence_homogeneity",
+    "FisherEtAl2025PoliticalDecision": "collective_intelligence_homogeneity",
+    "TesslerEtAl2024CommonGround": "collective_intelligence_homogeneity",
+    "HuqClaggettShirado2025": "collective_intelligence_homogeneity",
+    "SalviEtAl2025ConversationalPersuasion": "collective_intelligence_homogeneity",
+    "LinEtAl2025PersuadingVoters": "collective_intelligence_homogeneity",
+    "NyhanEtAl2023": "collective_intelligence_homogeneity",
+    # Opinion dynamics and epistemic-network ABMs
+    "LazerFriedman2007": "opinion_dynamics_abm",
+    "Zollman2007": "opinion_dynamics_abm",
+    "GolubJackson2010": "opinion_dynamics_abm",
+    "HegselmannKrause2002": "opinion_dynamics_abm",
+    "DeGroot1974": "opinion_dynamics_abm",
+    "PirolliCard1999": "opinion_dynamics_abm",
+    "GrimEtAl2024Juries": "opinion_dynamics_abm",
+    "PerraRocha2019": "opinion_dynamics_abm",
+    # LLM-agent social simulation
+    "ArgyleEtAl2023": "llm_social_simulation",
+    "ParkEtAl2023GenerativeAgents": "llm_social_simulation",
+    "ChuangEtAl2024": "llm_social_simulation",
+    "LiuEtAl2024FakeNews": "llm_social_simulation",
+    "TangEtAl2025GenSim": "llm_social_simulation",
+    "ParkEtAl2024SelfReports": "llm_social_simulation",
+    "VezhnevetsEtAl2023Concordia": "llm_social_simulation",
+    "PiaoEtAl2025AgentSociety": "llm_social_simulation",
+    "ZhangEtAl2025SocioVerse": "llm_social_simulation",
+    # Simulation validity and reporting
+    "BisbeeEtAl2024": "simulation_validation",
+    "WangMorgensternDickerson2025": "simulation_validation",
+    "GrimmEtAl2020ODD": "simulation_validation",
+    "NudoEtAl2025": "simulation_validation",
+    "NeumannDeArteagaFazelpour2026": "simulation_validation",
 }
 
 # Concept tags (from the user-provided summaries, plus our own tags)
@@ -219,12 +328,69 @@ CONCEPT_TAGS = {
     "CasteloBosLehmann2019": ["task_dependent_algorithm_aversion", "subjective_vs_objective_tasks"],
     # Misc
     "WingerterStraubSchweitzer2025": ["automation_bias", "AI_nudges", "cognitive_reflection"],
+    # Group information homogeneity, opinion dynamics, and LLM-agent simulation
+    "JiangEtAl2025ArtificialHivemind": ["LLM_homogeneity", "open_ended_generation", "model_correlation"],
+    "FugenerGrahlGuptaKetter2021": ["human_AI_collaboration", "wisdom_of_crowds", "information_homogeneity", "personalized_advice"],
+    "DoshiHauser2024": ["generative_AI", "individual_creativity", "collective_diversity"],
+    "AndersonShahKreminski2024": ["LLM_ideation", "creative_homogenization", "human_AI_experiment"],
+    "BommasaniCreelKumarEtAl2022": ["algorithmic_monoculture", "outcome_homogenization", "systemic_risk"],
+    "StasserTitus1985": ["hidden_profile", "shared_information_bias", "group_decision_making"],
+    "LorenzRauhutSchweitzerHelbing2011": ["social_influence", "wisdom_of_crowds", "opinion_diversity"],
+    "BaiVoelkelMuldowneyEtAl2025": ["LLM_persuasion", "policy_attitudes", "political_communication"],
+    "BurtonEtAl2024": ["collective_intelligence", "LLM_review", "human_AI_systems"],
+    "PescetelliRutherfordRahwan2021": ["network_modularity", "information_gathering", "collective_diversity"],
+    "KimGargPengGarg2025": ["correlated_errors", "LLM_ecosystem", "model_diversity"],
+    "AshkinazeEtAl2025": ["AI_exposure", "idea_diversity", "dynamic_experiment", "counterevidence"],
+    "KleinbergRaghavan2021": ["algorithmic_monoculture", "social_welfare", "correlated_decisions"],
+    "FisherEtAl2025PoliticalDecision": ["partisan_bias", "LLM_persuasion", "political_decision_making", "interactive_experiment"],
+    "TesslerEtAl2024CommonGround": ["AI_mediation", "democratic_deliberation", "opinion_convergence", "minority_voice"],
+    "HuqClaggettShirado2025": ["AI_mediated_communication", "political_discussion", "group_segregation", "relational_assistance"],
+    "SalviEtAl2025ConversationalPersuasion": ["personalized_persuasion", "GPT_4", "political_debate", "attitude_change"],
+    "LinEtAl2025PersuadingVoters": ["political_persuasion", "voter_attitudes", "human_AI_dialogue", "factual_accuracy"],
+    "LazerFriedman2007": ["network_structure", "exploration_exploitation", "collective_learning"],
+    "Zollman2007": ["epistemic_networks", "communication_structure", "scientific_consensus"],
+    "GolubJackson2010": ["social_learning", "wisdom_of_crowds", "network_influence"],
+    "HegselmannKrause2002": ["bounded_confidence", "opinion_dynamics", "agent_based_model"],
+    "DeGroot1974": ["consensus", "opinion_averaging", "social_influence"],
+    "PirolliCard1999": ["information_foraging", "search_behavior", "information_scent"],
+    "ArgyleEtAl2023": ["silicon_sampling", "synthetic_populations", "LLM_simulation"],
+    "ParkEtAl2023GenerativeAgents": ["generative_agents", "memory_reflection_planning", "social_simulation"],
+    "ChuangEtAl2024": ["LLM_agents", "opinion_dynamics", "network_simulation"],
+    "LiuEtAl2024FakeNews": ["fake_news", "attitude_dynamics", "LLM_agents"],
+    "TangEtAl2025GenSim": ["LLM_agent_platform", "social_simulation", "infrastructure"],
+    "BisbeeEtAl2024": ["synthetic_survey_data", "validation", "bias"],
+    "WangMorgensternDickerson2025": ["identity_flattening", "synthetic_participants", "representational_harm"],
+    "GrimmEtAl2020ODD": ["ODD_protocol", "ABM_reporting", "replication"],
+    "ParkEtAl2024SelfReports": ["generative_agents", "survey_grounding", "behavioral_simulation"],
+    "VezhnevetsEtAl2023Concordia": ["generative_ABM", "LLM_agents", "simulation_framework"],
+    "PiaoEtAl2025AgentSociety": ["large_scale_simulation", "LLM_agents", "social_behavior"],
+    "ZhangEtAl2025SocioVerse": ["world_model", "large_scale_agents", "population_simulation"],
+    "NudoEtAl2025": ["generative_exaggeration", "persona_consistency", "toxicity"],
+    "NeumannDeArteagaFazelpour2026": ["opinion_simulation", "quality_checks", "deliberation"],
+    "GrimEtAl2024Juries": ["epistemic_diversity", "jury_ABM", "collective_judgment"],
+    "NyhanEtAl2023": ["echo_chambers", "like_minded_exposure", "beliefs_and_attitudes", "political_polarization", "field_experiment"],
+    "PerraRocha2019": ["opinion_dynamics", "algorithmic_personalisation", "echo_chambers", "binary_opinion", "agent_based_model"],
 }
 
 for e in entries:
     e["category"] = CATEGORY_MAP.get(e["key"], "uncategorized")
     e["concepts"] = CONCEPT_TAGS.get(e["key"], [])
     e["has_pdf"] = False  # filled in later
+
+# Concepts for accountability/delegation papers (2026-07-06 batch)
+CONCEPT_TAGS.update({
+    "AleksovskaSchillemansGrimmelikhuijsen2019": ["accountability_review", "experimental_research", "systematic_review"],
+    "ChevrierTeixeira2024": ["algorithm_delegation", "responsibility_attribution", "blame_programmer"],
+    "HallFrinkBuckley2017": ["felt_accountability", "accountability_review", "meta_synthesis"],
+    "KirchkampStrobel2019": ["responsibility_sharing", "human_machine_decision", "moral_distance"],
+    "KobisBonnefonRahwan2025": ["AI_delegation", "dishonest_behavior", "moral_license", "AI_assistance"],
+    "KrakowskiLugerRaisch2026": ["human_centered_AI", "field_experiment", "AI_deployment", "AI_design"],
+    "LernerTetlock1999": ["accountability_effects", "accountability_bias", "decision_quality"],
+    "RaischKrakowski2021": ["automation_augmentation_paradox", "AI_management", "AMR"],
+    "ShresthaBenMenahemVonKrogh2019": ["organizational_decision_making", "AI_structure", "AI_governance"],
+    "SteffelWilliamsPerrmannGraham2016": ["passing_the_buck", "delegation", "blame_avoidance", "responsibility"],
+    "YinNgiamTanTeo2025": ["AI_advice_timing", "diagnostic_decisions", "AI_design", "human_AI_collaboration"],
+})
 
 # ---------- 3. Detect downloaded PDFs ----------
 PAPERS_DIR = REPO / "defense_project" / "reference_materials" / "papers_originals"
@@ -274,7 +440,7 @@ for tex in (LATEX / "sections").rglob("*.tex"):
 with open(KG / "papers.json", "w", encoding="utf-8") as f:
     json.dump({
         "schema_version": "1.0",
-        "generated_at": "2026-06-30",
+        "generated_at": GENERATED_AT,
         "source_bib": str(REFS.relative_to(REPO)),
         "paper_count": len(entries),
         "categories": sorted(set(CATEGORY_MAP.values())),
@@ -337,7 +503,7 @@ for c in concept_to_papers:
 with open(KG / "concepts.json", "w", encoding="utf-8") as f:
     json.dump({
         "schema_version": "1.0",
-        "generated_at": "2026-06-30",
+        "generated_at": GENERATED_AT,
         "concept_count": len(concept_to_papers),
         "concept_to_papers": dict(concept_to_papers),
         "concept_groups": dict(concept_groups),
@@ -351,7 +517,7 @@ for e in entries:
 with open(KG / "categories.json", "w", encoding="utf-8") as f:
     json.dump({
         "schema_version": "1.0",
-        "generated_at": "2026-06-30",
+        "generated_at": GENERATED_AT,
         "category_count": len(cat_to_papers),
         "category_to_papers": dict(cat_to_papers),
         "category_descriptions": {
@@ -365,6 +531,10 @@ with open(KG / "categories.json", "w", encoding="utf-8") as f:
             "self_serving_attribution": "Self-serving bias, attribution theory, self-protection (2026-06-29 batch)",
             "overconfidence_control": "Overconfidence, illusion of control, perceived control (2026-06-29 batch)",
             "algorithm_aversion": "Algorithm/AI aversion and resistance mechanisms (2026-06-29 batch)",
+            "collective_intelligence_homogeneity": "LLM or algorithmic homogeneity, correlated error, collective intelligence, and human-AI experiments",
+            "opinion_dynamics_abm": "Opinion dynamics, epistemic networks, social learning, and agent-based models",
+            "llm_social_simulation": "LLM-based agents, synthetic populations, and large-scale social simulation",
+            "simulation_validation": "Validation, representational limits, and reporting standards for LLM/agent-based simulation",
             "uncategorized": "Awaiting manual categorization",
         },
     }, f, indent=2, ensure_ascii=False)

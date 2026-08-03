@@ -2,7 +2,7 @@
 
 These are the works already represented in `../latex/references.bib`. This folder can be used to store their PDFs and your reading notes for the defense.
 
-> Latest update: 2026-06-30 (added 19 entries from Self vs AI literature batch, see `self_vs_ai_literature_review_2026-06-29.md`)
+> Latest update: 2026-08-01 (added two verified belief/attitude and opinion-dynamics papers; both publisher PDFs archived)
 
 ## Foundational Theory
 
@@ -104,6 +104,46 @@ These are the works already represented in `../latex/references.bib`. This folde
 - Prahl and Van Swol (2017), *Understanding Algorithm Aversion* — **PDF downloaded**
 - Longoni, Bonezzi, and Morewedge (2019), *Resistance to Medical Artificial Intelligence*
 
+## Accountability / AI Delegation (2026-07-06 batch)
+
+> 详见 `batch_2026-07-06_summary.md`
+
+- Aleksovska, Schillemans, and Grimmelikhuijsen (2019), *Lessons from Five Decades of Experimental and Behavioral Research on Accountability*
+- Chevrier and Teixeira (2024), *Algorithm Delegation and Responsibility* (GREDEG Working Paper, no DOI)
+- Hall, Frink, and Buckley (2017), *An Accountability Account*
+- Kirchkamp and Strobel (2019), *Sharing Responsibility with a Machine*
+- Köbis, Bonnefon, and Rahwan (2025), *Delegation to Artificial Intelligence Can Increase Dishonest Behaviour* (Nature)
+- Krakowski, Luger, and Raisch (2026), *Human-Centered Artificial Intelligence: A Field Experiment* (Management Science, online-first)
+- Lerner and Tetlock (1999), *Accounting for the Effects of Accountability*
+- Raisch and Krakowski (2021), *Artificial Intelligence and Management: The Automation–Augmentation Paradox*
+- Shrestha, Ben-Menahem, and von Krogh (2019), *Organizational Decision-Making Structures in the Age of Artificial Intelligence*
+- Steffel, Williams, and Perrmann-Graham (2016), *Passing the Buck*
+- Yin, Ngiam, Tan, and Teo (2025), *Designing AI-Based Work Processes*
+
+## Political Attitudes, Deliberation, and LLM Persuasion (2026-07-29 follow-up)
+
+> 已写入 `references.bib` 并核验元数据。按当前要求，本批暂不下载 PDF。
+
+- Fisher et al. (2025), *Biased LLMs Can Influence Political Decision-Making* — ACL 2025
+- Tessler et al. (2024), *AI Can Help Humans Find Common Ground in Democratic Deliberation* — Science
+- Huq, Claggett, and Shirado (2025), *AI-Mediated Communication Reshapes Social Structure in Opinion-Diverse Groups* — arXiv v2, preprint
+- Salvi et al. (2025), *On the Conversational Persuasiveness of GPT-4* — Nature Human Behaviour
+- Lin et al. (2025), *Persuading Voters Using Human–Artificial Intelligence Dialogues* — Nature
+
+## Echo Chambers, Beliefs, Attitudes, and Opinion Dynamics (2026-08-01)
+
+> 已写入 `references.bib`，完成 Crossref、期刊页面与出版商 PDF 三重核验。
+
+- Nyhan et al. (2023), *Like-Minded Sources on Facebook Are Prevalent but Not Polarizing* — **PDF downloaded**
+- Perra and Rocha (2019), *Modelling Opinion Dynamics in the Age of Algorithmic Personalisation* — **PDF downloaded**
+
 ## Pending (incomplete metadata)
 
 - **Bailey et al. (2022/2023)** — *A meta-analysis of the weight of advice in decision-making* (Current Psychology). Author list and year/issue incomplete. Not in references.bib.
+
+## Paper 2 / EWA 批次（2026-08-03）
+
+- 唯一 DOI：50
+- 已保存本地 PDF：12
+- 尚无本地 PDF、保留 DOI/出版社入口：38
+- 逐条状态：[paper2_ewa/manifest.csv](./paper2_ewa/manifest.csv)

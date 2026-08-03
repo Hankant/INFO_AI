@@ -1,6 +1,6 @@
 # Knowledge Graph Artifacts
 
-> Generated: 2026-06-30
+> Generated: 2026-08-01
 > Purpose: 供其他 agent 直接消费，无需重新解析 LaTeX 或 bib 文件即可构建知识图谱。
 
 ---
@@ -9,10 +9,10 @@
 
 | 文件 | 格式 | 内容 |
 |------|------|------|
-| `papers.json` | JSON | 完整元数据（68 篇），包含 title / authors / year / venue / DOI / category / concepts / has_pdf / cited_in |
+| `papers.json` | JSON | 完整元数据（166 篇），包含 title / authors / year / venue / DOI / category / concepts / has_pdf / cited_in |
 | `papers.csv` | CSV | 扁平表格（pandas/spreadsheet 直接可读），18 列 |
-| `concepts.json` | JSON | 概念 → 论文映射（184 个概念）+ 概念分组 |
-| `categories.json` | JSON | 类别 → 论文映射（10 个类别）+ 类别描述 |
+| `concepts.json` | JSON | 概念 → 论文映射（316 个概念）+ 概念分组 |
+| `categories.json` | JSON | 类别 → 论文映射（16 个类别）+ 类别描述 |
 | `citations_in_thesis.csv` | CSV | 论文 → 引用位置（tex 文件 + 行号）|
 | `edges_cocitation.csv` | CSV | 共被引边（在同一 `\cite{a,b,c}` 中出现的论文对）|
 
@@ -74,7 +74,7 @@
 
 ## Schema (categories.json)
 
-10 个主类别：
+16 个主类别：
 
 - `foundational_theory` — Bayesian persuasion / information design / rational inattention
 - `information_acquisition` — sequential sampling, belief updating
@@ -86,6 +86,11 @@
 - `overconfidence_control` — overconfidence, illusion of control (2026-06-29 batch)
 - `algorithm_aversion` — AI resistance mechanisms (2026-06-29 batch)
 - `newly_added_candidates` — background references
+- `accountability_delegation` — accountability、AI delegation 与责任分配
+- `collective_intelligence_homogeneity` — 群体信息同质化、相关误差与集体智慧
+- `opinion_dynamics_abm` — 意见动力学、认识论网络与 ABM
+- `llm_social_simulation` — LLM 代理与社会仿真
+- `simulation_validation` — 仿真效度、代表性风险与报告规范
 
 ---
 
@@ -160,9 +165,9 @@ PYTHONIOENCODING=utf-8 py -3 e:/Info_AI/export_bib.py
 
 ## 数据完整性
 
-- ✅ 68 篇全部有 title / year / authors（部分无 venue / volume / pages 是 bib 本身缺）
-- ✅ 9 篇已下载 PDF（位于 `../papers_originals/<category>/<key>.pdf`）
-- ✅ 184 个概念标签（来自 to_collect.md、user-provided summaries、人工补充）
+- ✅ 120 篇全部有 title / year / authors（部分无 venue / volume / pages 是 bib 本身缺）
+- ✅ 38 篇已下载 PDF（位于 `../papers_originals/<category>/<key>.pdf`）
+- ✅ 302 个概念标签（来自 to_collect.md、user-provided summaries、人工补充）
 - ✅ 29 篇在 thesis 中被实际引用（citations_in_thesis.csv）
 - ⚠️ Bailey2022 未入 bib（作者/年份不全，待用户补全）
 
