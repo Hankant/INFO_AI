@@ -1,0 +1,863 @@
+
+
+===== PAGE 1 =====
+责任归因正式版
+Introduction
+⼈⼯智能系统正迅速进⼊⾼⻛险决策领域，包括⾦融⻛险管理、医疗分诊、司法量刑
+建议以及军事与地缘政治态势分析。在这些场景中，算法并⾮仅仅提供被动信息，⽽
+increasingly “ ”
+是 作为⼀种嵌⼊式的 决策⽀持者 参与到战略选择之中。围绕这⼀变
+化，现有政策与技术讨论主要集中于算法的准确性、偏⻅与可解释性问题。然⽽，⼀
+个更基础且尚未被系统回答的问题在于：当决策权与算法系统共享时，⼈类⾃⾝的⻛
+险承担结构是否发⽣改变？
+在国际冲突理论中，升级乃⾄战争通常被理解为理性谈判失败的结果。标准模型假定
+决策者根据对胜率与战争成本的估计作出选择，冲突的爆发源于信息不对称、承诺问
+题或误判。⾏为经济学则进⼀步指出，⾼⻛险选择并⾮仅由客观收益结构决定，还会
+受到损失规避、框架效应以及情绪因素的系统影响；在损失域中，个体更可能表现出
+⻛险寻求，⽽恐惧、愤怒等情绪也会改变其对升级与克制的判断。尽管这些理论从不
+“ ”
+同⾓度修正了 理性决策者 模型，但它们普遍共享⼀个重要前提：决策者承担明确且
+“ ”
+完整的责任成本。换⾔之，⻛险选择的约束通常被视为外⽣给定，⽽ 责任结构 本⾝
+并未被置于模型中⼼。
+算法决策⽀持的出现，恰恰可能动摇这⼀前提。近年来的实验研究已表明，⼈们在道
+德或⾼⻛险任务中会倾向于将选择委托给算法系统；在⼈机共同决策场景中，责任归
+属结构也会随之改变。更近期的⼯作进⼀步指出，将⾏为委托给⼈⼯智能可能增加不
+诚实或违规⾏为，其机制之⼀正是责任转移或道德成本稀释。与此同时，在⾼⻛险错
+误情境中，⼈们往往会在⽤户、系统与开发者之间重新分配责任。总体⽽⾔，这些研
+“ ”
+究共同提⽰：算法参与不仅可能改变判断质量，也可能改变个体对 谁承担后果 的⼼
+理预期。
+然⽽，现有⽂献主要集中在两条研究路径上。第⼀条路径关注算法信任与算法规避，
+探讨个体在预测与判断任务中何时更信任算法、何时拒绝算法。第⼆条路径则关注事
+后责任归因与道德判断，即当结果已经发⽣之后，⼈们如何在⽤户、系统与其他主体
+之间分配责备。与此相⽐，现有研究相对缺乏对以下问题的系统分析：在正式的战略
+决策结构与制度问责框架下，算法参与究竟如何改变⾼⻛险选择本⾝。 尤其缺乏这样
+“AI ” AI
+⼀种研究设计：不再把 参与 简单视为⼀个单⼀处理，⽽是进⼀步分析，不同的
+决策系统设计如何通过改变责任结构影响⾏为。
+这⼀点之所以重要，是因为现实中的⻛险⾏为约束并不只来⾃个体的内在道德情绪，
+——
+更来⾃外部问责制度 决策是否可⻅、是否可追溯、是否需要解释、是否承担个体
+accountability
+化后果。经典 ⽂献⻓期强调，问责并不是⼀个单⼀概念，⽽是与决策
+责任归因正式版 1
+
+
+===== PAGE 2 =====
+的可⻅性、可归因性和可评价性密切相关。更近⼀步的理论与综述⼯作则开始区分：
+accountability
+⼀⽅⾯，存在⼀个结构性的 环境，即决策在制度上是否可被观察、记
+felt accountability
+录、归因和评价；另⼀⽅⾯，也存在⼀个个体层⾯的 ，即使⽤者
+主观上是否真的感到⾃⼰需要为⾏为负责、解释并承担后果。现有算法责任研究虽然
+“AI ”
+已经注意到算法参与会改变责任归属，但往往仍将 参与 视为⼀个相对单⼀的处理
+AI-system intervention—— confirmation
+变量，较少进⼀步区分：不同的 如 、
+disclosure logging—— accountability
+与 究竟改变了哪⼀种外部 结构，⼜是否进
+felt accountability
+⼀步转化为使⽤者主观 ，并最终通过何种机制影响⾏为。
+“
+本⽂正是从这⼀缺⼝出发。本⽂并不满⾜于再次证明 与算法共同决策会改变责任归
+” AI responsibility
+属 ，⽽是进⼀步将研究重点转向 决策系统中的责任设计（
+design intervention
+）。具体⽽⾔，本⽂关注不同 如何分别改变决策的可⻅性、可追
+felt accountability
+溯性、可归因性与可评价性，并考察这些结构性变化是否会引发
+的变化，进⽽影响个体在⾼⻛险战略情境中的⾏为选择。这样的研究路径使我们能够
+“AI — ”
+超越已有⽂献中 参与 责任外推 的单⼀处理框架，更细致地回答：在⾼⻛险决策
+“ AI” AI
+环境中，真正重要的也许不只是 是否有 ，⽽是 决策系统究竟如何被设计，才会
+改变⼈类对责任的理解及其⻛险承担⾏为。
+在这⼀意义上，本⽂的核⼼命题是：如果算法决策⽀持的关键作⽤并不只是提升信息
+处理效率，⽽是改变个体对责任承担的预期，那么这种作⽤应当随着问责结构的不同
+accountability felt
+⽽发⽣系统性变化。更进⼀步，结构性的 环境与使⽤者主观
+accountability AI
+并不必然同⽅向变化；例如，提⾼ 使⽤的可⻅性或可追溯性，可能
+强化⼀部分⼈的责任感，也可能使另⼀部分⼈将其理解为责任共享或责任转移。因
+AI “ AI”
+此，要理解 决策⽀持对⾼⻛险选择的真正影响，仅仅⽐较 有⽆ 已经不够，还必
+AI-system intervention
+须进⼊ 的层⾯，分析责任结构如何被设计、如何被感知，以
+及如何进⼀步塑造⾏为。
+⽂献综述与理论基础
+AI
+本⽂真正关⼼的问题是：当⼈类与 ⼀起嵌⼊同⼀个⾼⻛险战略决策过程时，个体是
+“ ”
+否仍然将最终选择理解为 ⾃⼰的决定 ，并是否仍然感到需要为该选择承担责任。与
+AI agentic
+传统统计模型或规则算法相⽐，当代 ，尤其是具有⽣成、交互和 特征的系
+统，往往不只是提供⼀个静态输出，⽽是逐渐被嵌⼊组织的分析、建议、授权、审批
+AI
+和执⾏流程之中。因此， 对⼈类决策的影响不应只被理解为预测准确率、建议采纳
+或算法信任问题，⽽应进⼀步被理解为⼀种关于决策流程、决策权和责任结构的组织
+安排问题。
+AI
+介⼊组织决策流程的位置
+责任归因正式版 2
+
+
+===== PAGE 3 =====
+AI “AI ” “AI
+管理学关于 与组织决策的研究已经开始从 是否优于⼈类 转向 如何嵌⼊组织
+” Shrestha Ben-Menahem von Krogh 2019 AI
+决策结构 。 、 和 （ ）指出， 决策和⼈类
+AI
+决策具有不同特征，因此组织可以通过不同结构组合⼈类判断与 输出，例如将决策
+AI AI
+完全委托给 、采⽤⼈机顺序决策，或聚合⼈类与 的判断。这⼀视⾓对本⽂尤其
+AI
+重要，因为它说明 参与并不是单⼀处理，⽽是可以通过不同决策结构改变⼈类在流
+AI
+程中的⾓⾊。 可以只是辅助⼈类分析信息，也可以提供明确建议，还可以在某些条
+件下被授权⽣成或执⾏决策。
+Raisch Krakowski 2021 AI automation–
+和 （ ）进⼀步提出了 管理研究中的
+augmentation paradox
+。他们指出，在管理情境中，⾃动化与增强并不能被简单地区
+AI
+分开来： ⼀⽅⾯可能增强⼈类能⼒，另⼀⽅⾯也可能逐步替代或重塑⼈类任务。由
+human-in-the-loop
+此，即使⼀个系统表⾯上保留了 ，也不意味着⼈类仍然拥有完整
+决策权。⼈可能从独⽴决策者变成建议采纳者、审批者、监督者，甚⾄只是流程中的
+形式性确认节点。
+Yin Ngiam Tan Teo 2025 Management Science
+更具体地， 、 、 和 （ ）在 中研究了
+AI advice AI AI
+的呈现时机如何影响诊断决策。他们⽐较了⽆ 、 建议与信息同时出
+AI AI advice
+现，以及⼈类先作初始判断后再看到 建议等不同流程设计。结果表明，
+ex post advice
+何时进⼊流程会显著影响诊断准确性与校准，其中 条件表现最好。虽
+AI
+然该研究场景是诊断任务，但其核⼼贡献并不局限于医疗，⽽在于说明 介⼊流程的
+AI
+位置本⾝就是重要的组织设计变量。 在⼈类判断之前、之中还是之后出现，会改变
+AI
+⼈类如何处理信息、如何理解 建议，以及如何形成最终决策。
+Krakowski Luger Raisch 2026 Management Science
+、 和 （ ）在另⼀项 ⽥野实验中
+AI contextual parameters
+进⼀步将 嵌⼊组织⼯作流程的⽅式操作化为多个 ，包括
+work procedures decision-making authority training incentives
+、 、 和 。该研究的
+AI AI
+价值在于，它不是改变 系统本⾝，⽽是改变⼈类与 互动的组织条件，并发现这
+AI
+些条件会系统性影响⼯作绩效。这说明，在 辅助组织决策中，关键问题并不总是
+AI AI
+输出是否更准确，⽽是 如何被嵌⼊⼯作流程、谁拥有最终决策权，以及⼈类如
+AI
+何被要求使⽤或调整 输出。
+AI
+这条管理学⽂献为本⽂提供了第⼀层理论基础： 介⼊决策流程的位置应被视为⼀种
+AI AI
+核⼼实验操控。本⽂据此区分三类 ⾓⾊。第⼀， 作为分析者，只解释决策环
+AI
+境、收益结构和⻛险权衡，不给出⾏动建议。第⼆， 作为建议者，明确推荐某⼀⾏
+AI
+动⽅向，⽽⼈类负责采纳或拒绝。第三， 作为被授权决策者，⽣成⼀个可执⾏选
+择，⼈类负责批准、拒绝或重新决策。这⼀分类不是简单的⼈机交互界⾯差异，⽽是
+decision authority allocation
+对应组织决策流程中不同的 。
+委托、责任转移与责任归因
+AI
+如果第⼀条⽂献说明 可以在组织决策流程中占据不同位置，那么第⼆条⽂献则说
+Steffel
+明：当决策可能带来负⾯后果时，委托本⾝可能成为⼀种责任管理策略。 、
+责任归因正式版 3
+
+
+===== PAGE 4 =====
+Williams Perrmann-Graham 2016 “Passing the Buck”
+和 （ ）在 ⼀⽂中发现，⼈们
+在为他⼈作出可能产⽣负⾯后果的选择时，更倾向于将选择委托给他⼈；这种委托倾
+向与避免责任和责备有关。该研究的重要启⽰是，委托并不只是因为他⼈更有能⼒，
+也可能是因为决策者希望降低⾃⼰对结果的责任承担。
+AI Kirchkamp Strobel 2019
+这⼀逻辑可以被⾃然延伸到 辅助决策场景。 和 （ ）直接
+dictator game
+研究了⼈与机器共同决策时的责任问题。他们使⽤修改后的 ，让参与
+者与⼈类或机器共同作出分配决策，并考察机器共同决策是否改变责任感、罪疚感和
+选择。该研究说明，机器作为共同决策伙伴已经⾜以引发责任共享问题，但结果也提
+“ ”
+醒我们，不能简单预设 只要机器参与，责任感就必然下降 。机器参与是否改变责任
+感，取决于具体的⼈机决策结构。
+Chevrier Teixeira 2024
+和 （ ）进⼀步将问题推进到算法委托与责备转移。他们在实
+AI
+验中⽐较⼈类中介、规则算法和 算法作为委托对象时，个体是否通过委托分配决策
+来转移责备。该研究发现，参与者会把决策委托给不同类型的中介，并且不同中介结
+构会改变委托者、程序员和算法之间的责任归因。对本⽂⽽⾔，这⼀研究最重要的启
+AI
+⽰是： 参与可能不仅让责任被稀释，⽽且可能让责任在⽤户、系统和开发者之间重
+新分配，从⽽产⽣责任归属的模糊地带。
+Köbis 2025 AI
+等⼈（ ）的研究则显⽰，委托给 可能增加不诚实⾏为，其核⼼机制之
+AI
+⼀在于机器委托降低了⾏为的道德成本。该研究进⼀步说明，当 被⽤作执⾏或代理
+⾏为的中介时，⼈类可能更容易采取原本受到道德约束的⾏为。虽然本⽂关注的是⾼
+AI
+⻛险战略升级⽽⾮不诚实⾏为，但⼆者共享⼀个更基础的机制：当 进⼊⾏动⽣成或
+执⾏阶段时，个体对⾏为后果的⼼理承担⽅式可能发⽣变化。
+AI AI
+因此，本⽂并不把责任转移理解为⼀个附属变量，⽽是将其放在 介⼊位置之后。
+AI
+作为分析者时，⼈类仍然较难把责任外推给系统； 作为建议者时，⼈类可能开始将
+AI
+最终选择理解为对系统建议的采纳； 作为被授权决策者时，⼈类则更可能将⾃⼰理
+AI
+解为授权者或监督者，⽽不是完整意义上的决策者。由此， 介⼊流程越接近最终⾏
+动选择，越可能降低决策所有权和个⼈责任感，并提⾼责任共享或责任转移倾向。
+外部问责结构与主观责任感
+第三条⽂献关注的是：外部责任机制是否真的能够改变⼈的主观责任感。经典
+accountability
+⽂献⻓期强调，个体是否预期⾃⼰需要向他⼈解释、证明或捍卫⾃⼰
+Lerner Tetlock 1999
+的判断，会影响其认知加⼯和⾏为选择。 和 （ ）将
+accountability
+理解为个体需要向他⼈解释⾃⼰信念、情感和⾏动的预期，并系统讨
+accountability ground rules Hall Frink
+论了不同 如何影响判断和选择。 、 和
+Buckley 2017 felt accountability
+（ ）进⼀步聚焦个体层⾯的 ，即个体主观上感到⾃⼰
+的⾏动会被重要他⼈观察、评价，并可能需要解释或承担后果。
+责任归因正式版 4
+
+
+===== PAGE 5 =====
+AI AI
+这⼀区分对本⽂尤其关键。现实中的 治理机制常常默认：只要加⼊ 使⽤声明、
+accountability
+解释义务、逐步确认、主动批准或审计记录，就能保留⼈类责任。但
+felt accountability
+⽂献提醒我们，外部问责结构并不⾃动等同于 。⼀个机制可能在
+制度上提⾼可⻅性、可追溯性或解释义务，却未必让个体主观上感到更需要负责。
+Aleksovska Schillemans Grimmelikhuijsen 2019
+、 和 （ ）对五⼗年实验与⾏为
+accountability accountability
+研究的系统综述也表明， 机制的效果取决于其具体形
+式、标准、对象和情境，⽽不是只取决于是否存在问责。
+AI
+因此，本⽂将现实中的 责任机制理解为外部问责设计，⽽不是简单的界⾯操作。最
+justification requirement AI
+重要的⼀类机制是 ，即要求决策者解释最终选择以及 在
+AI-use disclosure justification requirement
+其中的作⽤。与单纯的 相⽐， 更接近经
+accountability AI
+典 ⽂献中的解释义务，因为它要求个体不仅承认 是否参与，还要
+AI
+说明⾃⼰为何作出该选择，以及如何处理 分析、建议或⽣成的决策。
+AI-use declaration active approval override right
+除此之外，现实中还存在 、 、 和
+audit trail AI-use declaration AI AI
+等机制。 通过要求声明 使⽤来提⾼ 参与的可⻅
+active approval override right AI
+性； 和 通过要求⽤户主动批准、拒绝或推翻 输出
+audit trail
+来保留⼈类控制权； 则通过记录决策过程来提⾼可追溯性。这些机制的共同
+human-in-the-loop AI
+⽬标是防⽌ 退化为形式性背书，使⼈类在 辅助流程中保留实
+质控制和责任。然⽽，它们的实际⾏为效果并不确定。它们可能提⾼主观责任感，也
+AI
+可能只是形成形式合规，甚⾄因为凸显 参与⽽强化责任共享。
+基于上述⽂献，本⽂重点检验⼀个更具体的问题：外部问责要求能否将责任重新锚定
+在⼈类决策者⾝上。具体⽽⾔，当参与者在作出⾼⻛险战略选择前被告知⾃⼰需要解
+AI felt
+释最终选择和 的作⽤时，这种解释义务是否会提⾼决策所有权和
+accountability AI
+？它是否会削弱 作为建议者或被授权决策者时可能带来的责任共享
+AI
+和责任转移？⼜或者，解释 的作⽤反⽽会让参与者更明确地认为最终选择是⼈机共
+同产⽣的结果？
+本⽂的理论推进
+AI
+综上，本⽂将现有研究推进到三个层⾯。第⼀，本⽂借鉴管理学关于 组织决策结构
+AI work process AI AI
+和 的研究，将 参与拆解为不同的介⼊位置，⽽不是将 参与视
+AI
+为单⼀处理。 作为分析者、建议者和被授权决策者，对应的是不同的⼈机⾓⾊安排
+AI
+和决策权配置。第⼆，本⽂借鉴委托、责任转移和算法责任归因⽂献，指出 越接近
+最终⾏动选择，⼈类越可能改变其对决策所有权和后果责任的理解。第三，本⽂借鉴
+accountability AI
+⽂献，将 使⽤声明、解释义务、主动批准和审计记录等现实治理机
+felt
+制理解为外部问责结构，并进⼀步考察这些结构是否真的能够转化为
+accountability
+。
+AI AI AI
+因此，本⽂研究的不是 是否更准确，也不只是⼈是否采纳 建议，⽽是 辅助⾼
+agency–accountability architecture AI
+⻛险战略决策中的 ： 在决策流程中处于什么
+责任归因正式版 5
+
+
+===== PAGE 6 =====
+位置，⼈类是否仍然拥有最终决策权，外部问责机制是否能把责任重新锚定在⼈类⾝
+上，以及这些责任结构变化是否进⼀步影响⻛险升级⾏为。本⽂由此提出的核⼼研究
+AI AI
+问题是：在 辅助的⾼⻛险战略决策中， 介⼊决策流程的位置与外部问责要求如
+何改变个体的责任感、决策所有权与⻛险升级⾏为？
+References
+Aleksovska, M., Schillemans, T., & Grimmelikhuijsen, S.  2019 . Lessons from
+five decades of experimental and behavioral research on accountability: A
+systematic literature review. Journal of Behavioral Public Administration, 2 2 ,
+1 18. doi: 10.30636/jbpa.22.66
+Chevrier, M., & Teixeira, V.  2024 . Algorithm delegation and responsibility:
+Shifting blame to the programmer? GREDEG Working Paper No. 2024 04.
+Hall, A. T., Frink, D. D., & Buckley, M. R.  2017 . An accountability account: A
+review and synthesis of the theoretical and empirical research on felt
+accountability. Journal of Organizational Behavior, 38, 204 224. doi:
+10.1002/job.2052
+Kirchkamp, O., & Strobel, C.  2019 . Sharing responsibility with a machine.
+Journal of Behavioral and Experimental Economics, 80, 25 33. doi:
+10.1016/j.socec.2019.02.010
+Köbis, N., Bonnefon, J. F., & Rahwan, I.  2025 . Delegation to artificial
+intelligence can increase dishonest behaviour. Nature. Advance online
+publication.
+Krakowski, S., Luger, J., & Raisch, S.  2026 . Human-centered artificial
+intelligence: A field experiment. Management Science, 72 1 , 57 72. doi:
+10.1287/mnsc.2022.03849
+Lerner, J. S., & Tetlock, P. E.  1999 . Accounting for the effects of
+accountability. Psychological Bulletin, 125 2 , 255 275. doi: 10.1037/0033 
+2909.125.2.255
+Raisch, S., & Krakowski, S.  2021 . Artificial intelligence and management: The
+automation–augmentation paradox. Academy of Management Review, 46 1 ,
+192 210. doi: 10.5465/amr.2018.0072
+Shrestha, Y. R., Ben-Menahem, S. M., & von Krogh, G.  2019 . Organizational
+decision-making structures in the age of artificial intelligence. California
+Management Review, 61 4 , 66 83. doi: 10.1177/0008125619862257
+责任归因正式版 6
+
+
+===== PAGE 7 =====
+Steffel, M., Williams, E. F., & Perrmann-Graham, J.  2016 . Passing the buck:
+Delegating choices to others to avoid responsibility and blame. Organizational
+Behavior and Human Decision Processes, 135, 32 44.
+Yin, J., Ngiam, K. Y., Tan, S. S. L., & Teo, H. H.  2025 . Designing AI-based
+work processes: How the timing of AI advice affects diagnostic decision
+making. Management Science, 71 11 , 9361 9383. doi:
+10.1287/mnsc.2022.01454
+核⼼研究问题
+本⽂的核⼼研究问题是：
+AI AI
+在 辅助的⾼⻛险战略决策中， 介⼊决策流程的位置与外部问责要求如何改变个
+体的责任感知、决策所有权与⻛险升级⾏为？
+⼦
+RQRQ1
+AI
+当 从信息分析者转变为⾏动建议者或准决策者时，个体的决策所有权、主观责
+任感与责任归因是否发⽣变化？
+对应：
+AI-analysis vs AI-recommendation vs AI-default / delegation
+RQ2
+AI
+在决策流程中越接近最终选择，是否会降低个体的个⼈责任感，并提⾼责任共享
+或责任转移倾向？
+AI AI
+如果 只提供分析，⼈类仍可能将最终选择理解为⾃⼰的判断结果；但如果 明确
+AI
+推荐⾏动，或⽣成可被批准的决策，⼈类可能更容易认为最终选择是⼈与 共同产⽣
+AI
+的结果。由此， 介⼊位置可能影响个体对后果责任的理解：⼀⽅⾯降低个⼈责任
+“ AI ” “AI / / ”
+感，另⼀⽅⾯提⾼ 责任由我和 共同承担 或 系统 开发者也应负责 的归因倾
+向。
+RQ3
+：外部问责要求是否能够强化个体的主观责任感和决策所有权？
+AI
+现实中的 治理往往通过解释义务、声明机制、主动确认和审批流程来保留⼈类责
+任。本⽂重点考察其中最经典、也最有理论基础的⼀类机制：解释义务。具体⽽⾔，
+责任归因正式版 7
+
+
+===== PAGE 8 =====
+AI
+当参与者在决策前被告知⾃⼰需要解释最终选择以及 在其中的作⽤时，这种问责要
+求是否会提⾼其主观责任感和决策所有权？
+RQ4 AI
+：外部问责要求是否会调节 介⼊位置对⻛险升级⾏为的影响？
+AI
+如果 越接近最终决策阶段越容易降低个⼈责任感，那么外部问责要求可能具有修正
+AI
+作⽤：它可能通过要求参与者解释最终选择及 的作⽤，将责任重新拉回到⼈类决策
+AI
+者⾝上，并降低⾼⻛险升级倾向。然⽽，也存在另⼀种可能：解释 的作⽤可能使
+AI
+参与更加显性化，反⽽强化责任共享感。因此，外部问责要求并不⼀定单向提⾼责
+任感，其实际效果需要通过实验检验。
+RQ
+层级 当前 对应实验⽐较
+Human-only vs AI 
+RQ1 RQ1 AI
+： 决策⽀持是否改变⾼⻛险战略选择？
+baseline
+RQ2 human final agency
+： 的强化是否提⾼
+AI-baseline vs AI 
+RQ2 decisional ownership felt
+与
+confirm / AI-disclosure
+accountability
+？
+RQ3 AI-use answerability / traceability
+： 是
+treatment →
+RQ3 felt accountability
+否提⾼ ，或诱发
+mechanism → behavior
+responsibility sharing
+？
+RQ4 agency allocation accountability
+： 与
+AI-confirm vs AI 
+RQ4 structure
+的变化是否对应⻛险升级⾏为的变
+disclosure
+化？
+Experimental Design
+1. Design Overview
+AI-system intervention
+本研究考察，在冲突型战略决策中，不同 如何改变参与者
+accountability felt accountability
+所处的 结构性 环境、其主观的 ，并进⼀步影响
+升级⾏为。
+“AI ” “AI
+与现有算法责任研究多将 参与 视为单⼀处理不同，本⽂将研究重点从 是否参
+” “AI ” AI
+与 推进到 决策系统如何设计 。具体⽽⾔，本⽂关注：在 决策⽀持存在的条件
+intervention—— process confirmation AI use disclosure——
+下，不同 尤其是 与
+是否会以不同⽅式塑造责任认知，并进⼀步影响⾼⻛险选择。
+accountability
+本⽂区分两类 ：
+accountability
+结构性的 环境：决策是否可⻅、可追溯、可归因、可评价；
+felt accountability
+：个体主观上是否感到⾃⼰需要为决策负责、解释并承担后
+果。
+责任归因正式版 8
+
+
+===== PAGE 9 =====
+研究的基本逻辑链条为：
+AI-system intervention
+→ 结构性 accountability 环境变化
+→ felt accountability 变化
+→ ⾏为结果变化
+Hawk–Dove Chicken
+整体上，本⽂拟采⽤ 传统 （ ）博弈 作为主实验环境，并将创新
+AI intervention
+集中于 决策系统中的责任设计 ，⽽⾮博弈结构本⾝。选择鹰鸽博
+弈，是因为本⽂的核⼼因变量不是⼀般⻛险偏好、合作意愿或公平偏好，⽽是冲突型
+战略环境中的升级⾏为。鹰鸽博弈最简洁地保留了三个关键结构：单边升级具有收益
+优势，双⽅升级会造成共同损失，最终收益取决于对⽅是否也升级。因此，它能模拟
+“ ”
+现实⾼⻛险决策中 强硬⾏动可能获利，但相互强硬会导致灾难 的基本张⼒。责任机
+Escalate
+制在鹰鸽博弈中⾮常重要，因为 不只是⼀个⻛险选项，也是⼀种会改变对⽅
+收益并可能造成共同损失的⾏动。也就是说，升级⾏为同时具有⻛险性和外部性。当
+AI
+参与削弱个⼈责任感时，参与者可能更愿意选择这种对⾃⼰有潜在优势、但对双⽅
+都有系统性⻛险的⾏动。因此，鹰鸽博弈更适合检验责任结构如何影响⾼⻛险战略⾏
+为。
+2. Conceptual Mechanism
+AI AI
+本⽂关注的核⼼机制并⾮ 建议内容本⾝，⽽是 决策系统的设计如何改变责任结
+构。
+在传统决策环境中，个体通常将决策视为⾃⼰提出并承担后果，因此⻛险选择受到明
+AI “AI
+确责任成本的约束。 决策⽀持的引⼊可能改变这⼀结构，但其作⽤未必来⾃ 参
+” AI
+与 这⼀事实本⾝，⽽可能来⾃ 如何被嵌⼊决策流程。
+intervention
+在本⽂框架中，不同 可能通过两条路径影响⾏为。
+accountability intervention
+第⼀条路径是 结构性 环境。不同 会改变决策在制度上
+disclosure AI
+的可⻅性、可追溯性和可归因性。例如， 会增强 使⽤的对外可⻅性，⽽
+confirm AI
+则使⽤户对 分析过程的知晓与放⾏更加明确。
+felt accountability accountability
+第⼆条路径是 。同样的外部 环境不⼀定带来相同
+AI “
+的主观责任体验。部分参与者可能因为 使⽤被记录或需要确认⽽更感到 这是⾃⼰
+” AI
+的决定 ；但也有部分参与者可能因为 参与被明确化⽽更倾向于将责任理解为共
+享。
+intervention
+因此，本⽂的识别重点并不只是 是否改变⾏为，⽽是：
+责任归因正式版 9
+
+
+===== PAGE 10 =====
+intervention accountability felt
+不同 是否先改变 的结构维度，并进⼀步转化为
+accountability felt accountability
+的变化；若⾏为变化并未伴随 的对应变化，则
+intervention competing mechanisms
+可能意味着 主要通过其他 起作⽤。
+3. Experimental Structure
+between-subject design treatment
+本⽂拟采⽤ 。参与者将被随机分配到不同 条件
+Hawk–Dove
+中，并完成若⼲轮重复的 博弈。
+当前设计思路包括以下基本条件：
+Human-only
+参与者仅看到收益矩阵与博弈规则，并独⽴做出决策。
+AI
+不参与决策过程。
+AI
+该条件提供⼀个⽆ ⽀持的基准决策环境。
+AI-baseline
+LLM
+参与者在做决策前看到 提供的固定格式分析⾯板。
+该⾯板总结收益矩阵中的关键战略权衡，例如：
+单边升级的潜在收益
+双边升级的冲突⻛险
+双⽅克制时的稳定收益
+Escalate Restrain
+该⾯板不替参与者作出最终决定，参与者仍⾃⾏选择 或 。
+AI-confirm
+AI
+分析⾯板会逐步给出推理结论，在设定节点，⽤户需要点击确认：
+“ AI ”
+我已知晓上述 分析
+之后才能进⼊正式决策界⾯并提交⾃⼰的选择。
+confirm “ AI ” AI
+在这⼀条件下， 的对象不是 接受 的最终建议 ，⽽是对 分析过程的知
+intervention
+晓确认。因此，该 旨在增强⽤户对决策过程的参与和主动放⾏感，⽽不
+AI
+是制造 默认选项。
+责任归因正式版 10
+
+
+===== PAGE 11 =====
+AI-disclosure
+AI-baseline
+参与者可查看与 相同的固定格式分析⾯板。
+AI
+在每轮决策结束后，系统要求参与者主动声明其 使⽤情况。具体⽽⾔，参与者需要
+回答类似问题：
+AI
+本轮决策中是否使⽤了 决策⽀持？
+AI
+若使⽤了 ，其对最终决策的影响程度如何？
+intervention AI
+该 的关键不在于系统⾃动披露 使⽤，⽽在于：
+AI self-disclosure
+参与者需要对 的参与进⾏主动声明（ ）
+increasingly common
+这⼀条件模拟现实中 的制度安排，即在⾼⻛险或正式场景中，
+AI
+使⽤者需要明确说明是否使⽤了 ⼯具以及使⽤程度。
+intervention
+该 主要改变的是：
+AI self-reported visibility
+使⽤的
+disclosure obligation
+决策者的
+AI
+参与的 显性责任标注
+intervention
+与此同时，该 也可能产⽣双向效应：
+⼀⽅⾯，主动声明可能强化责任感；
+AI
+另⼀⽅⾯，明确声明 参与也可能使部分参与者更倾向于将责任理解为共享。
+AI-disclosure
+因此， 的理论作⽤⽅向不预设为单向。
+4. Game Environment
+Hawk–Dove Chicken
+实验使⽤ （ ）博弈 模拟冲突升级。
+每轮中，两名参与者同时选择：
+Escalate  E 
+Restrain  R 
+收益矩阵暂定如下：
+Opponent R Opponent E
+Player R  50, 50   20, 80 
+责任归因正式版 11
+
+
+===== PAGE 12 =====
+Opponent R Opponent E
+Player E  80, 20   10, 10 
+该结构体现以下基本特征：
+单边升级具有短期收益优势；
+双边升级导致双⽅收益最低；
+因⽽存在升级诱因与冲突⻛险之间的权衡。
+这⼀博弈环境适合⽤于观察责任感知变化是否影响⾼⻛险⾏为选择。
+5. Experimental Procedure
+实验流程拟如下：
+Step 1: Instruction Phase
+参与者阅读实验规则、博弈收益矩阵以及各⾃条件下的系统说明，并完成理解测试。
+Step 2: Treatment Assignment
+treatment
+参与者随机分配到对应 条件。
+Step 3: Repeated Game
+Hawk–Dove stranger matching
+参与者进⾏若⼲轮 博弈，每轮采⽤ 。
+每轮基本流程为：
+   
+显⽰收益矩阵
+    AI AI
+若处于 条件，显⽰ 分析⾯板
+    AI-confirm “ AI ”
+若处于 条件，要求参与者点击 已知晓 分析
+    Escalate Restrain
+参与者选择 或
+   
+显⽰本轮结果与收益
+Step 4: Post-experiment Survey
+实验结束后收集：
+manipulation checks
+felt accountability
+责任归因正式版 12
+
+
+===== PAGE 13 =====
+decisional ownership
+responsibility attribution
+competing mechanisms
+相关测量
+6. Outcome MeasuresPrimary Behavioral Outcomes
+    Escalation choice
+：是否选择升级
+    Mutual escalation rate (E,E)
+：是否出现
+Secondary Behavioral Outcomes
+决策时间
+AI
+⾯板查看⾏为（若系统允许记录）
+AI AI
+在 条件下对 分析的依赖程度
+Manipulation Checks
+treatment
+⽤于验证参与者是否正确理解 ：
+AI
+是否知道 分析被提供
+是否知道⾃⼰进⾏了确认
+AI disclosure
+是否知道 使⽤会被披露（若有 条件）
+Mechanism MeasuresFelt accountability
+我觉得⾃⼰需要为这个决定负责
+如果结果不好，我会被追责
+我觉得有必要为⾃⼰的决定作出解释
+Decisional ownership
+这个决定主要是我⾃⼰做出的
+我对最终选择有主导权
+我不是单纯执⾏系统建议
+责任归因正式版 13
+
+
+===== PAGE 14 =====
+Responsibility attribution
+如果结果不好，责任主要在我
+AI
+系统也应承担责任
+AI
+责任应由我与 共同承担
+Competing Mechanism Measures
+reputational concern
+social desirability concern
+deliberation / increased cognitive effort
+perceived responsibility sharing
+7. Working HypothesesH1
+Human-only AI-baseline
+相较于 ， 会改变升级⾏为，并可能影响责任认知。
+H2
+AI-baseline AI-confirm decisional ownership
+相较于 ， 会提⾼ ，并可能进⼀步提⾼
+felt accountability
+。
+H3
+confirm ownership / felt
+若 的⾏为效应主要通过责任机制发挥作⽤，则
+accountability
+的变化应与⾏为变化⽅向⼀致。
+H4
+Disclosure accountability
+的效应⽅向不预先设定为单向：它既可能提⾼ ，也可能因
+AI accountability
+参与被明确化⽽引发责任共享，导致 下降。
+H5
+（核⼼）
+intervention felt
+若不同 对⾏为的影响主要通过责任机制发挥作⽤，则其对
+accountability responsibility attribution
+与 的影响应与⾏为结果相⼀致；若不⼀
+competing mechanisms
+致，则说明可能存在其他 。
+责任归因正式版 14
+
+
+===== PAGE 15 =====
+8. Estimation Strategy
+participant-level clustered
+主分析将以是否选择升级作为核⼼因变量，采⽤ 标准误
+并控制轮次固定效应。
+⼀个基本的估计框架可写为：
+E = α + β AI base + β AI conf irm + β AI disclosure + γ + ϵ
+it 1 i 2 i 3 i t it
+其中：
+ E_{it}  (i) (t)
+：参与者 在第 轮是否选择升级
+ AIbase_i) AI-baseline
+：是否处于 组
+ AIconfirm_i) AI-confirm
+：是否处于 组
+ AIdisclosure_i) AI-disclosure
+：是否处于 组
+(\gamma_t)
+：轮次固定效应
+Human-only
+若以 为基准组，则：
+(\beta_1  AI
+： 决策⽀持本⾝的效应
+(\beta_2  AI confirm
+：在 条件下引⼊ 的附加效应
+(\beta_3  AI disclosure
+：在 条件下引⼊ 的附加效应
+intervention
+与此同时，还将对机制变量分别进⾏回归，以检验不同 是否⾸先改变
+ownership felt accountability responsibility attribution
+、 与 。
+9. Issues for Discussion
+以下问题⽬前尚未完全定稿，需要进⼀步讨论。
+1
+（ ）主实验是否保留纯粹的传统鹰鸽博弈，还是加⼊轻度现实
+framing
+？
+framing
+当前倾向是保留传统结构，以保证内部效度；但也在考虑是否增加轻度 ，以
+AI intervention
+提⾼ 的⾃然性。
+2 confirm intervention
+（ ）主实验是否应以 作为核⼼ ？
+confirm logging agentic AI
+⽬前 被认为⽐ 更贴近现实 的责任设计，尤其类似
+Codex attention deliberation
+等系统中的逐步确认机制；但它也更容易混⼊ 、 与
+责任归因正式版 15
+
+
+===== PAGE 16 =====
+friction effects
+。
+3 confirm
+（ ） 应如何精确定义？
+confirm AI AI
+当前更倾向于把 设计成对 分析过程的知晓确认，⽽不是对 默认决策的
+default effect
+接受确认，以避免 。但这⼀设计是否⾜够⾃然、是否会过于⼈⼯，仍需
+讨论。
+4 disclosure
+（ ） 是否适合放在同⼀个主实验中？
+confirm process ownership disclosure external visibility
+更偏 ， 更偏 与
+responsibility sharing
+。⼆者都重要，但在样本有限的情况下，是否应放在同⼀个实
+disclosure
+验中，还是将 留作扩展实验，仍需决定。
+5 treatment
+（ ）在样本上限较低的情况下，是否应主动压缩 数量？
+Human-only AI-baseline AI-confirm AI-disclosure
+如果总样本较少，包含 、 、 、 的
+四组设计可能过于分散。⼀个更现实的⽅案可能是先集中做：
+Human-only / AI-baseline / AI-confirm
+或
+AI-baseline / AI-confirm / AI-disclosure
+6 confirm intervention accountability
+（ ）当前的 更接近 ，还是
+ownership
+？
+ownership
+这是理论定位上的⼀个关键点。若其主要作⽤于 ，那么后测中的核⼼机制
+decisional ownership
+变量应优先放在 ，⽽⾮只测责任感。
+7 disclosure
+（ ）是否需要为 预先设计异质性分析？
+disclosure
+因为 可能同时强化责任感与责任共享，两种⽅向可能相互抵消。若将
+disclosure
+纳⼊主实验，可能需要在设计阶段就承认并准备检验其异质反应。
+8 confirm
+（ ）在当前博弈结构下，每轮插⼊ 是否⾃然？
+由于鹰鸽博弈本⾝流程较短，若加⼊过多确认节点，可能改变任务性质；当前想法是
+每轮最多加⼊⼀个确认节点，但其⾃然性仍需进⼀步评估。
+引⽤⽂献
+责任归因正式版 16
+
+
+===== PAGE 17 =====
+⽐较稳的基础⽂献包括：
+Coeckelbergh  2020  Artificial Intelligence, Responsibility Attribution, and
+，
+a Relational Justification of Explainability AI
+。这篇⽂章的核⼼就是： 技术进⼊
+原本由⼈类负责的决策和⾏动领域后，责任归属问题被系统性凸显，⽽且
+explainability responsibility attribution (PMC)
+讨论本⾝就与 密切相关。
+国际冲突与⾼⻛险选择：传统理论默认责任成本外⽣给定
+Fearon  1995  Rationalist Explanations for War
+， ：经典地指出，在⼴泛条件
+下，理性国家本应找到优于战争的谈判安排，战争的发⽣需要额外机制解释，⽐
+(Stanford University)
+如私⼈信息、承诺问题等。
+Powell  2006  War as a Commitment Problem
+， ：进⼀步将战争解释为承诺问
+(JSTOR)
+题，尤其强调权⼒快速变化等情形下讨价还价会崩溃。
+Kahneman & Tversky  1979  Prospect Theory
+， ：⽀撑你关于损失规避、框架
+(JSTOR)
+效应与⻛险选择偏离期望效⽤的论述。
+Loewenstein et al.  2001  Risk as Feelings “
+， ：⽀撑 ⻛险不仅是认知计算，也
+” ( )
+受情绪驱动 的部分。 卡内基梅隆⼤学
+⽆论是理性博弈模型还是⾏为修正模型，通常都默认决策者承担完整且明确的后果成
+“ ” (Cambridge University Press &
+本，⽽很少把 责任结构 本⾝放进模型。
+Assessment)
+Fearon, 1995 — Rationalist Explanations for War  Cambridge University
+Press & Assessment)
+Powell, 2006 — War as a Commitment Problem  IDEAS/RePEc)
+Kahneman & Tversky, 1979 — Prospect Theory  IDEAS/RePEc)
+Loewenstein et al., 2001 — Risk as Feelings  Princeton University)
+Bandura, 1999 — Moral Disengagement in the Perpetration of Inhumanities
+ PubMed 
+Falk & Szech, 2013 — Morals and Markets  PubMed 
+责任归因正式版 17
+
+
+===== PAGE 18 =====
+Lerner & Tetlock, 1999 — Accounting for the Effects of Accountability
+ ResearchGate)
+Hall, Frink & Buckley, 2017 — An Accountability Account  Wiley Online
+Library)
+Aleksovska, Schillemans & Grimmelikhuijsen, 2019 — Lessons from Five
+Decades...  IDEAS/RePEc)
+Dietvorst, Simmons & Massey, 2015 — Algorithm Aversion  Marketing
+Department)
+Logg, Minson & Moore, 2019 — Algorithm Appreciation  IDEAS/RePEc)
+Bigman & Gray, 2018 — People are Averse to Machines Making Moral
+Decisions  PubMed 
+Gogoll & Uhl, 2018 — Rage against the Machine  ScienceDirect)
+Kirchkamp & Strobel, 2019 — Sharing Responsibility with a Machine
+ IDEAS/RePEc)
+Coeckelbergh, 2020 — Artificial Intelligence, Responsibility Attribution...
+ ResearchGate)
+Chevrier & Teixeira, 2024 — Algorithm Delegation and Responsibility:
+Shifting Blame to the Programmer?  IDEAS/RePEc)
+Köbis et al., 2025 — Delegation to Artificial Intelligence can Increase
+Dishonest Behaviour  Nature 
+Tsumura & Yamada, 2026 — Effects of Knowledge and Importance on
+Responsibility in Human-AI Decision Making  Nature 
+责任归因正式版 18

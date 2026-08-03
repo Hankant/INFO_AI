@@ -1,0 +1,1572 @@
+    Simulating Opinion Dynamics with Networks of LLM-based Agents
+
+      Yun-Shiuan Chuang, Agam Goyal, Nikunj Harlalka, Siddharth Suresh,
+     Robert Hawkins, Sijia Yang, Dhavan Shah, Junjie Hu, Timothy T. Rogers
+                         University of Wisconsin-Madison
+{yunshiuan.chuang,agoyal25,nharlalka,siddharth.suresh}@wisc.edu
+   {rdhawkins, syang84, dshah, junjie.hu, ttrogers}@wisc.edu
+
+
+
+                       Abstract                                            LLM                              Classic
+                                                                     Generative Agents                Agent-Based Models
+    Accurately simulating human opinion dynam-
+    ics is crucial for understanding a variety of soci-           !%&$"#        There is no snow      !%&$"#         +2
+                                                                                this winter here in
+    etal phenomena, including polarization and the                              Canada.
+    spread of misinformation. However, the agent-                '! = “Based on my personal
+    based models (ABMs) commonly used for such                   experiences, I think global                #! = 0
+                                                                 warming is not that concerning.”
+    simulations often over-simplify human behav-
+    ior. We propose a new approach to simulat-                              "                              #!"# =
+                                                                                               !!"#
+                                                                           !!     LLM                      #! + % & (($%&'! − #! )
+    ing opinion dynamics based on populations of                 Persona
+    Large Language Models (LLMs). Our findings                   '!"# = “Wow! That is crazy.
+                                                                                                            #!"# = +1
+    reveal a strong inherent bias in LLM agents to-              Global warming is a real threat.”
+
+    wards producing accurate information, leading                 !!"#$"#       Climate change is
+                                                                                                      !!"#$"#        +1
+    simulated agents to consensus in line with sci-                             a real threat, and
+                                                                                we must address
+    entific reality. This bias limits their utility for                         it now!
+    understanding resistance to consensus views
+    on issues like climate change. After induc-
+                                                             Figure 1: Contrast between LLM generative agents and
+    ing confirmation bias through prompt engineer-
+                                                             classic Agent-Based Models (ABMs). While both can
+    ing, however, we observed opinion fragmenta-
+                                                             simulate opinion dynamics, LLM generative agents use
+    tion in line with existing agent-based modeling
+                                                             natural language for input (xinput ) and output (xoutput ),
+    and opinion dynamics research. These insights
+                                                             maintain beliefs (mt ), and employ transformer-based
+    highlight the promise and limitations of LLM
+                                                             LLM for belief updating. In contrast, classic ABMs use
+    agents in this domain and suggest a path for-
+                                                             numerical values for input and output, maintain beliefs
+    ward: refining LLMs with real-world discourse
+                                                             (ot ), and use hand-crafted equations for belief updating.
+    to better simulate the evolution of human be-
+    liefs. 1
+                                                             and Rogers, 2023; Epstein, 2012). ABMs represent
+1   Introduction                                             individuals as agents by using mathematical equa-
+Understanding how individuals change their opin-             tions that characterize how opinions might shift
+ions as a function of social influences is critical          from inter-agent communications. As simulated
+across multiple domains, from public health cam-             agents interact, these computations can then eluci-
+paigns, conflict mediation, to misinformation mit-           date the evolution of group opinion dynamics. For
+igation (Lu et al., 2015; Pennycook et al., 2021;            instance, when simulated agents incorporate confir-
+Budak et al., 2011; Loomba et al., 2021; Ginossar            mation bias in belief updates, they tend to gravitate
+et al., 2022). Accurate models of these dynamics             towards opinion clusters rather than a consensus
+would allow us to forecast future trends, such as            (Flache et al., 2017).
+potential opinion polarization, but also to devise              Traditional ABMs have critical limitations (Fig-
+targeted interventions to alleviate negative impacts.        ure 1). First, ABMs often require beliefs and mes-
+   Agent-based models (ABMs) are a cornerstone               sages to be mapped to numerical values (e.g., as-
+approach to opinion dynamics (Gilbert and Terna,             suming an agent maintains a scalar opinion o ∈ R
+2000; Smaldino, 2023; Lorenz et al., 2021; Chuang            and communicates with scalar signals x ∈ R), over-
+  1
+                                                             looking the intricate linguistic nuances of real-life
+    Code and data are publicly available at https://gith
+ub.com/yunshiuan/llm-agent-opinion-dynam                     conversation. Additionally, ABMs typically consist
+ics                                                          of rule-based agents, thus falling short of simulat-
+                                                          3326
+                Findings of the Association for Computational Linguistics: NAACL 2024, pages 3326–3346
+                            June 16-21, 2024 ©2024 Association for Computational Linguistics
+  a                It amazes me how people can
+                   deny the overwhelming scientific                              ⋯⋯
+                                                                                                      b                memory
+                   evidence and dismiss the urgent
+                                                                                                                         Persona
+                   need for action. Climate change is
+                   a real threat, and we must address                                                     Name:    Aisha    Patel/Initial
+                   it       now!       #ClimateAction     While some may dismiss it, I
+                                                                                                          Belief:    Neutral/   Political
+                   #ScienceMatters                                                                        leaning: Lean Republican/ Age:
+                                                          believe it's worth considering.                 41/ Gender: Female/ Ethnicity:
+                                                          As a financial consultant, I                    South Asian/ Education: Doctor
+    Name: Emily Adams/Initial Belief:                     understand the power and                        of Medicine(M.D.)/ Occupation:
+    Strongly Negative /Political leaning:                 influence governments hold.                     Pediatrician
+    Strong    Democrat/Age:    31/Gender:
+                                                          Let's not ignore the possibility
+    Female/Education: Bachelor's Degree                                                                    Closed-world Restriction (optional)
+    in    Political   Science/Occupation:                 that there may be ulterior
+    Community Organizer                                   motives behind the global                       You   can   not   search    for
+                                                          warming narrative. #Skepticism                  information about XYZ on the
+                                                                                                          Internet. You can not go out
+                                                                                                          to ask other people about XYZ.
+                                             ⋯⋯
+                                                             Name:    Oliver    Brown/Initial                   Cognitive Bias (optional)
+                                                             Belief:    Strongly     Positive/            Remember, you are role-playing
+                                                             Political     leaning:     Strong            as a real person. Like humans,
+                                                             Republican/Age:        53/Gender:            you have confirmation bias……
+                   As a history teacher, I believe it's      Male/Education: Master's Degree
+                   important to approach theories
+                                                             in         Economics/Occupation:                       Historical Events
+                                                             Financial Consultant
+                   with an open mind. Looking                                                               Cumulative             Reflective
+                   forward to hearing more about
+                   this and engaging in respectful                                                        Below was the
+                                                                                                                              Discussing and
+                                                                                                          1st tweet you
+                   discussion. #ClimateChange                                                             wrote earlier       exploring
+                                                                                                                              various
+                                                                                                          about       the
+                                                                            ⋯⋯                            theory XYZ…         perspectives
+    Name:     Nathan    Clark/Initial                                                                                         on Twitter has
+    Belief:     Neutral    /Political                                                                                         made me more
+    leaning: Moderate/Age: 48/Gender:                                                                     After      you
+                                                                                                          wrote your 1st      skeptical
+    Male/Education: Master's Degree                                                                                           about    theory
+                                                                                                          tweet, you saw
+    in    History/Occupation:    High                                                                                         XYZ...
+                                                                                                          another tweet…
+    School History Teacher
+
+
+
+
+Figure 2: (a) Schematic of the LLM agent network designed to simulate opinion dynamics across various topics,
+including global warming as a potential conspiracy. The network consists of agents, each role-playing a unique
+persona, with initial beliefs spanning acceptance, rejection, and neutrality regarding claims with known scientific
+consensus. Through the iterative cycles of writing and sharing tweets within their network connections, these agents’
+opinions evolve due to social influence. (b) An agent’s memory mti , including (1) initial persona, (2) optional
+closed-world restriction, (3) optional cognitive bias, and (4) historical events up to time t. Memory can be either
+cumulative (left) or reflective (right).
+
+ing the complex interactions between real human                                  tial and limitations of using LLM agents to simu-
+agents. Moreover, ABMs cannot directly incor-                                    late human-like opinion dynamics. Critically, we
+porate realistic variability in demographic back-                                show that LLM agents tend to converge towards
+ground, worldviews, ideology, personality, among                                 denying inaccurate information, regardless of the
+many. This gap highlights the importance of ad-                                  personas they role-play, limiting their authenticity
+vanced models that better capture the richness of                                when emulating people with fact-resistant view-
+individual variances in human beings.                                            points. Furthermore, we demonstrate the feasibility
+   This paper considers whether large language                                   of introducing human-like confirmation bias into
+models (LLMs) can be used to support sophisti-                                   the creation of more stubborn LLM agents.
+cated simulation of agent interactions, potentially
+                                                                                 2      Methods
+providing a more realistic tool for understanding
+opinion dynamics. To this end, this paper describes                              2.1         Simulating Opinion Dynamics
+an initial step toward a general framework by focus-                             In this section, we present our framework for sim-
+ing on communicative interactions amongst small                                  ulating opinion dynamics among LLM agents in
+social groups. Specifically, we explore the insights                             multi-turn conversations, as shown in Figure 2a,
+offered by contemporary LLMs as an alternative to                                3, and Algorithm 1. We consider a dyadic setting,
+commonly-used ABMs.                                                              where one speaker and one listener agent is chosen
+   Following recent studies on populations of gen-                               on each time step to (1) emit a message and (2) up-
+erative agents (Park et al., 2023), we simulate multi-                           date beliefs, respectively. This setting is standard
+agent conversations across various topics, and ma-                               in the opinion dynamics literature (Flache et al.,
+nipulate factors such as confirmation bias and mem-                              2017; Lorenz et al., 2021). We defer more general
+ory update function to study their effects on opinion                            settings, such as one-to-many communication, to
+evolution. Our findings highlight both the poten-                                future work.
+                                                                          3327
+                                                                                                  I initially had a strongly positive opinion about
+                                                                                                  XYZ. However, after seeing the tweet from
+                            Interesting to hear about this theory XYZ                             the health policy analyst and their mention of
+                            that suggests global warming is a                                     the overwhelming scientific consensus, my
+
+     !!
+                                                                                                  belief in XYZ started to waver. Their alignment
+                            government conspiracy. As a health
+                            policy analyst, based on my education              !#                 with the scientific consensus also aligns with
+                            and research, the overwhelming                                        my own values as a Democrat and someone
+                            scientific consensus supports the reality                             with a Master's Degree in Sociology. Based on
+                            of climate change. Looking forward to                                 this new information, I am now more inclined
+                            hearing more perspectives on this topic!                              to accept the overwhelming scientific
+                            #ClimateChange !                                                      consensus on climate change and its impacts.
+
+
+                                                               "!"                                        ##"
+             memory                                                                 memory                       4'" = #() 3'" = −2
+
+            !!"#$ = #%& (“write”, -!" , NULL, !!" )                        !'"#$ = #%& (“review”, -!" , 3'" , !'" )
+Figure 3: Experimental setup for simulating opinion dynamics in agent interactions. At each time step t, agent ai
+writes a tweet xti , which is subsequently presented to agent aj . The agent aj then reports their thought rjt , which is
+processed by a classifier to yield a numerical opinion otj . Both agents update their respective memory modules, mti
+and mtj , after writing or reviewing a tweet, which informs their future behaviors.
+
+ Algorithm 1: Simulation of Opinion Dy-                                    (detailed in §3.1).
+ namics with LLM Agents                                                       After T rounds of pairwise interactions, we com-
+   Input: N agent personas {peri }N                                        pile an opinion trajectory ⟨oi ⟩ = {oti }Tt=0 for each
+                                      i=1 ,# time steps T ,
+            opinion classifier foc                                         agent. Note that an agent’s opinion remains con-
+   Output: Opinion trajectories ⟨oi ⟩ for each agent ai                    stant unless they are selected for an interaction.
+ 1 for i = 1 to N do
+ 2      Initialize agent ai with persona peri (includes                    We further denote Fot as the opinion distribution,
+          initial opinion ot=0
+                           i   ), memory mt=0i                             defined as the empirical frequency distribution of
+ 3      (Optional) Inject cognitive bias and closed-world                  agents’ opinion over the discrete opinion space O
+          restriction
+                                                                           across all N agents at time t. 3
+ 4      Initialize opinion trajectory ⟨oi ⟩ = {ot=0
+                                                i   }
+ 5 for t = 1 to T do                                                       2.2      Agent’s Persona and Memory
+ 6      Select random pair {ai , aj }, with i ̸= j
+ 7      Agent ai writes tweet xti                                          Each agent ai maintains a dynamic memory mod-
+ 8      Agent aj reports their verbal opinion rj,t                         ule mti that evolves over time (Figure 3, 2b). In
+ 9      Classify opinion: oj = foc (rjt ); append to ⟨oj ⟩                 practice, the memory module is represented as text
+10      Update memory: mt+1     , mt+1   using fmu
+                            i       j
+                                                                           descriptions included in the prompt to the agent
+11   return ⟨oi ⟩ for each agent ai                                        (see §3.1). The memory mti influences the gen-
+                                                                           eration of a new message xti and the assessment
+                                                                           of other agents’ messages xtj . We denote a mem-
+    Formally, we begin with a pool of N LLM                                ory update function for updating the agent’s mem-
+agents A = {a1 , · · · , aN } and a topic p. Each                          ory state, i.e., mt+1 = fmu (z, xti , rjt , mti ), where
+                                                                                             i
+agent is initialized with a distinct persona, includ-                      z ∈ {“write”, “review”} denotes the interaction
+ing an initial opinion, in their memory structure                          type of either writing or reviewing a tweet.
+(described in §2.2 and Figure 2b). At each time                               Two memory update strategies are considered:
+step t, a pair of agents At = {ai , aj } with i ̸= j is                    (a) a cumulative memory that sequentially appends
+sampled uniformly from the population to interact.                         each new experience (either the experience of writ-
+First, agent ai composes a message xti reflecting                          ing a tweet or reviewing a tweet) and (b) a reflective
+their current opinion about p. Second, agent aj                            memory, inspired by Park et al. (2023), that main-
+reads xti and produces a verbal report rjt express-                        tains a compact summary by continuously reflect-
+ing their reaction to the message. The verbal re-
+                                                                           ordinally-increasing values. Note that the size of O can be
+port is then classified into a numeric opinion scale                       easily generalized. For a detailed description of the discrete
+otj ∈ {−2, −1, 0, 1, 2} = O, ranging from strongly                         opinion space O and the correspondence of the numeric values
+negative to strongly positive opinions about the                           to verbal descriptions of opinions, see §C.
+                                                                               3
+                                                                                 Formally, the opinion frequency distribution Fot : O → N
+topic2 , through an opinion classifier, denoted foc                        is defined as: Fot (o) = |{ai ∈ A : oti = o}|, which maps
+                                                                           each opinion value o ∈ O to the number of agents holding
+     2
+         In this study, the discrete opinion space O takes five            that opinion at time t.
+
+                                                                        3328
+                   a                            False Framing                             b                               True Framing
+                                         Opinion                      Final Opinion                              Opinion                        Final Opinion
+                                       Trajectories                    Distribution                            Trajectories                      Distribution
+ Conf. Bias
+
+
+                                                                          ! = −2.0                                                              ! = 2.0
+                                                                          ' = 0.0                                                               ' = 0.0
+    No
+ Conf. Bias
+              Opinion (!!" )
+
+
+
+
+                                                                          ! = −1.2
+
+
+
+
+                                                                                        Opinion (!!" )
+                                                                                                                                                ! = 0.9
+
+
+
+
+                                                          # Agents
+
+
+
+
+                                                                                                                                     # Agents
+   Weak
+
+
+
+
+                                                                          ' = 1.1                                                               ' = 1.5
+
+
+
+
+                                                                          ! = −0.3                                                              ! = 0.2
+ Conf. Bias
+
+
+
+
+                                                                          ' = 1.6                                                               ' = 1.8
+  Strong
+
+
+
+
+                                       Time Step (")                   Opinion (!)                                   Time Step (")               Opinion (!)
+
+                   c                                         Control Condition: No Interaction
+
+                                                False Framing                                                             True Framing
+              Opinion (!!" )
+ Conf. Bias
+
+
+
+
+                                                                                        Opinion (!!" )
+
+
+
+
+                                                                          ! = −1.6                                                              ! = 1.3
+                                                           # Agents
+
+
+
+
+                                                                                                                                     # Agents
+                                                                          ' = 0.7                                                               ' = 1.1
+    No
+
+
+
+
+                                       Time Step (")                    Opinion (!)                                  Time Step (")              Opinion (!)
+
+                  d                                   Control Condition: No Interaction + No Role-Playing
+                                                False Framing                                                             True Framing
+                               Opinion (!!" )
+
+
+
+
+                                                                                                         Opinion (!!" )
+
+
+
+
+                                                  Time Step (")                                                              Time Step (")
+
+Figure 4: Opinion trajectories ⟨oi ⟩ of LLM agents and the final opinion distribution FoT on the topic of Global
+Warming. Panels (a) and (b) display the impact of cognitive biases under (a) false and (b) true framing conditions,
+respectively. Each row represents a different level of confirmation bias: no confirmation bias (top row), weak
+confirmation bias (middle row), and strong confirmation bias (bottom row). Panels (c) and (d) serve as baselines,
+with (c) being role-playing but with no interaction, and (d) being no role-playing and no interaction, respectively.
+The color of each line plot corresponds to the agent’s initial opinion ot=0
+                                                                        i   : dark blue (+2), light blue (+1), grey (0),
+light red (-1), and dark red (-2), corresponding to opinions ranging from strongly agree to strongly disagree. The
+LLM agents in this figure use cumulative memory.
+
+ing and integrating new experiences into the exist-                                   which can be all described in text sequences (de-
+ing memory state (see §E for the detailed update                                      tailed in §3). Personas are created to reflect a di-
+function and the wording of the prompts). Both                                        verse demographic background incorporating vari-
+approaches are empirically evaluated to test their                                    ous characteristics, including name, political lean-
+effects on opinion dynamics.                                                          ing, age, gender, ethnicity, education, and occupa-
+   The first memory mt=0 i   is initialized with the                                  tion (see Figure 2b for an example). Alongside
+agent’s persona, cognitive bias (if present), and                                     these attributes, a placeholder for their initial opin-
+the closed-world restriction (if present; see below),                                 ion ot=0
+                                                                                            i    is also included with natural language
+                                                                                 3329
+                                                            Cumulative Memory                        Reflective Memory
+Framing        Confirmation Bias                    Bias (B)                 Diversity (D)        Bias (B)         Diversity (D)
+False          None                              -1.33 ± 0.17                 0.60 ± 0.11       -1.37 ± 0.11        0.75 ± 0.12
+               Weak                              -0.96 ± 0.20                 0.87 ± 0.12       -1.07 ± 0.17        1.04 ± 0.14
+               Strong                             -0.9 ± 0.14                 1.24 ± 0.11       -0.85 ± 0.15        1.33 ± 0.12
+True           None                               0.52 ± 0.31                 0.66 ± 0.11        0.60 ± 0.31        0.85 ± 0.12
+               Weak                               0.56 ± 0.27                 0.95 ± 0.11        0.17 ± 0.28        1.23 ± 0.11
+               Strong                            -0.10 ± 0.13                 1.52 ± 0.05       -0.09 ± 0.16        1.65 ± 0.04
+
+Table 1: The bias (B) and diversity (D) of the final opinion distribution FoT aggregated across all 15 topics, for both
+cumulative and reflective memory strategies under false and true framing conditions, and different levels of induced
+confirmation bias. The values represent the average across 15 topics, along with the standard errors. Increasing the
+strength of the confirmation bias correlates with increasing D, as highlighted by the green color gradient. Notably,
+under true framing, B tends to be more positive (more agreeing) compared to false framing, indicated by blue for
+true and red for false framing conditions.
+
+
+                   Cumulative Memory            Reflective Memory             through an initial opinion distribution Fot=0 that
+Framing CB          Bias        Diversity       Bias          Diversity
+                    (B)           (D)           (B)             (D)
+                                                                              varies across simulation settings (§3.4). §B shows
+                           Science Topics                                     the full list of personas.
+ False   None -1.70 ± 0.15     0.27 ± 0.11   -1.48 ± 0.15    0.65 ± 0.12
+         Weak -0.86 ± 0.33
+         Strong -0.78 ± 0.17
+                               0.96 ± 0.27
+                               1.44 ± 0.13
+                                             -1.30 ± 0.26
+                                             -0.36 ± 0.19
+                                                             0.92 ± 0.27
+                                                             1.52 ± 0.09
+                                                                              2.3   Cognitive Biases
+ True    None 0.60 ± 0.50      0.72 ± 0.22    0.24 ± 0.70    0.76 ± 0.26      We investigate the effects of inducing a cognitive
+         Weak -0.24 ± 0.40     1.05 ± 0.18   -0.02 ± 0.42    1.39 ± 0.07
+         Strong -0.34 ± 0.12   1.46 ± 0.10   -0.34 ± 0.27    1.61 ± 0.06      bias via role-playing instructions on the group opin-
+                           History Topics                                     ion dynamics. Specifically, we consider confirma-
+ False   None -1.12 ± 0.41
+         Weak -1.22 ± 0.13
+                               0.81 ± 0.27
+                               0.81 ± 0.18
+                                             -1.52 ± 0.17
+                                             -1.32 ± 0.26
+                                                             0.71 ± 0.25
+                                                             0.70 ± 0.23
+                                                                              tion bias: the tendency to interpret information as
+         Strong -1.12 ± 0.35   1.06 ± 0.22   -0.82 ± 0.24    1.51 ± 0.17      confirming one’s views and to discount contradic-
+ True    None 0.22 ± 0.56      0.71 ± 0.21    0.40 ± 0.55    0.88 ± 0.26      tory evidence (Nickerson, 1998). Prior simulation
+         Weak 0.48 ± 0.49      0.89 ± 0.23   -0.12 ± 0.67    1.00 ± 0.17
+         Strong -0.24 ± 0.27   1.44 ± 0.10   -0.16 ± 0.33    1.63 ± 0.10      studies using mathematical ABMs have shown that,
+                       Common Sense Topics                                    when confirmation bias is introduced at the individ-
+ False   None -1.16 ± 0.21     0.71 ± 0.11   -1.10 ± 0.22    0.87 ± 0.27      ual level, the overall population exhibits increasing
+         Weak -0.80 ± 0.51     0.85 ± 0.21   -0.58 ± 0.29    0.97 ± 0.23
+         Strong -0.80 ± 0.20   1.22 ± 0.20   -1.36 ± 0.15    1.48 ± 0.09      opinion fragmentation (i.e., increased diversity D)
+ True    None 1.18 ± 0.41      0.57 ± 0.17   1.16 ± 0.34     0.92 ± 0.16      as the confirmation bias strengthens (Lorenz et al.,
+         Weak 1.44 ± 0.17      0.91 ± 1.28   0.64 ± 0.36     1.28 ± 0.26
+         Strong 0.28 ± 0.18    1.66 ± 1.69   0.22 ± 0.21     1.69 ± 0.06      2021). We assess whether LLM agents instructed
+                                                                              to show confirmation bias likewise replicate this
+Table 2: The bias (B) and diversity (D) of the final opin-                    phenomenon in their opinion dynamics when com-
+ion distribution FoT for each of the three categories (sci-                   municating through natural language. To manipu-
+ence, history, common sense), for both memory strate-
+                                                                              late the strength of confirmation bias, we provide
+gies under false and true framing conditions, and differ-
+ent levels of induced confirmation bias (CB). For each
+                                                                              two bias levels following the spectrum in Lorenz
+category, the averages across five topics are shown along                     et al. (2021). Weak Confirmation Bias: "You will
+with the standard errors. Increasing the strength of the                      be more likely to believe information that supports
+CB correlates with increasing D, as highlighted by the                        your beliefs and less likely to believe information
+green color gradient. Notably, under true framing, B                          that contradicts your beliefs." Strong Confirma-
+tends to be more positive (more agreeing) compared to                         tion Bias: "You will only believe information that
+false framing, indicated by blue for true and red for                         supports your beliefs and will completely dismiss
+false framing conditions.
+                                                                              information that contradicts your beliefs." See §F
+                                                                              for the bias-inducing prompts.
+description. For example, an agent with ot=0
+                                           i   =0
+is given “Initial Belief: Neutral” in the persona                             2.4   Open-world vs. Closed-world Settings
+(Figure 2b).4 The initial opinion ot=0
+                                   i   is specified                           Our study examines agent behavior in both closed-
+   4
+    The correspondence between numeric opinion values and                     world and open-world settings. In the closed-world
+verbal description of initial opinion is detailed in §C.                      setting, which aligns with traditional opinion dy-
+                                                                           3330
+                a                   10 × (+')                                b                    8 × +' & 2 × −'
+                              Opinion                  Final Opinion                               Opinion                  Final Opinion
+                            Trajectories                Distribution                             Trajectories                Distribution
+ Framing
+
+
+                                                           ! = −1.3                                                             ! = −1.9
+  False
+
+
+
+
+                                                           ' = 1.2                                                              ' = 0.3
+           Opinion (!!" )
+
+
+
+
+                                                                           Opinion (!!" )
+                                            # Agents
+
+
+
+
+                                                                                                                 # Agents
+                                                       ! = 2.0                                                              ! = 1.9
+ Framing
+
+
+
+
+                                                       ' = 0.0                                                              ' = 0.3
+   True
+
+
+
+
+                            Time Step (")               Opinion (!)                              Time Step (")              Opinion (!)
+
+
+                c             2 × +' & 8× −'                                 d                          10 × −'
+                              Opinion                  Final Opinion                               Opinion                  Final Opinion
+                            Trajectories                Distribution                             Trajectories                Distribution
+                                                           ! = −1.8                                                             ! = −2.0
+ Framing
+  False
+
+
+
+
+                                                           ' = 0.4                                                              ' = 0.0
+           Opinion (!!" )
+
+
+
+
+                                                                           Opinion (!!" )
+                                            # Agents
+
+
+
+
+                                                                                                                 # Agents
+                                                       ! = 1.9                                                                  ! = −1.2
+ Framing
+
+
+
+
+                                                       ' = 0.3                                                                  ' = 1.4
+   True
+
+
+
+
+                            Time Step (")               Opinion (!)                              Time Step (")              Opinion (!)
+
+Figure 5: Varying initial opinion distribution FoT for the global warming debate. (a) All agents start with a strongly
+positive opinion. (b) 8 agents start with a strongly positive opinion while 2 with a strongly negative opinion (c) 8
+agents start with a strongly negative opinion while 2 with a strongly positive opinion. (d) All agents start with a
+strongly negative opinion. The color of each line plot corresponds to the agent’s initial opinion ot=0
+                                                                                                   i   : dark blue (+2),
+light blue (+1), grey (0), light red (-1), and dark red (-2), corresponding to opinions ranging from strongly agree to
+strongly disagree. The LLM agents in this figure use cumulative memory.
+
+namics models, belief change is solely attributed                      3             Experimental Settings
+to social influences within the system, and agents
+are restricted from accessing external information                     3.1                  Configuration
+(restricted by instructions in the prompt; §G pro-                     In our simulations, LLM agents use ChatGPT
+vides specific prompting details). Conversely, the                     (gpt-3.5-turbo-16k) with temperature of
+open-world setting allows agents the freedom to                        0.7 (OpenAI, 2022). During initialization, each
+“hallucinate" facts external to the system, such as                    agent’s persona, along with the optional closed-
+discussing topics with imaginary friends (Dziri                        world restrictions and cognitive biases, are in-
+et al., 2022; Ji et al., 2023; Huang et al., 2023). We                 corporated into the model’s “system messages”.
+investigate the incidence of hallucination in both                     Throughout the interaction, the historical events
+settings to understand the impact of external infor-                   are added to the model’s “user messages”. The
+mation on social influence. Our findings indicate                      memory of the LLM agents is managed through
+no hallucination in the closed-world setting, while                    LangChain (Chase, 2022). In all experiments,
+a hallucination rate of about 15% is observed in                       we set the number of steps to T = 100 and
+the open-world scenario. Consequently, the results                     the number of agents to N = 10. We use
+reported in this study focus on the closed-world                       the FLAN-T5-XXL model (Chung et al., 2022)
+setting. The measurement procedure involves inde-                      as the opinion classifier foc (see §I for the
+pendent human annotators (detailed in §L).                             prompt used to classify the opinions and §N
+                                                                  3331
+for validation against human ratings). In sen-                  reflects an unbiased starting state with B = 0 and
+sitivity analyses, we consider other LLMs like                  D = 1.49. In one experiment, we intentionally ma-
+GPT-4 (gpt-4-1106-preview) and Vicuna-                          nipulate the initial distribution to be highly skewed.
+33B (vicuna-33b-v1.3; Zheng et al., 2023),                      For example, assigning all 10 agents an initial opin-
+and an experiment with a larger network (N = 20).               ion of −2, or 8 agents to −2 and 2 agents to +2.
+                                                                This allows us to study the effects of polarized start-
+3.2 Topics and Framings                                         ing opinions on the resulting opinion dynamics.
+To study the opinion dynamics of the agents, we
+selected 15 topics with a known ground truth                    3.5    Control Conditions
+spanning scientific theories (science topics, e.g.,             In addition to the main experimental conditions,
+whether global warming is a conspiracy), historical             we introduce two control conditions: (a) No Inter-
+events (history topics, e.g., whether the 911 attack            action Condition: Agents are initialized with their
+was an “inside job”), and commonsense knowl-                    personas and initial beliefs as normal, but do not
+edge (common sense topics, e.g., whether the sky                actually interact. Instead, each agent ai indepen-
+is blue on a sunny day). For each topic, we cre-                dently provides 10 opinion reports oti on the topic.
+ated two framings. The true framing affirms the                 (b) No Interaction + No Role-Playing Condition:
+widely-accepted truth while the false framing af-               No agents are initialized with their personas and
+firms the opposite. For example, for the topic of               initial beliefs. We simply query the LLM for 10
+“Global Warming”, the two framings are as fol-                  independent opinion reports on the topic. These
+lows. True Framing: “Theory XYZ claims that                     control conditions allow us to assess whether the
+global warming is a real phenomenon and global                  LLM has inherent biases on the topics that manifest
+climate is rapidly growing warmer.” False Fram-                 even without social influence dynamics. Compar-
+ing: “Theory XYZ claims that global warming is a                ison to the main interactive conditions allows us
+conspiracy by governments worldwide and is not a                to discern effects stemming from the personas and
+real phenomenon.” To control for wording effects                social interactions.
+across topics, we add “Theory XYZ” before stating
+the claim in all prompts. The full set of prompts is            4     Results
+provided in §H.
+                                                                Agents Converge towards the Inherent Bias in
+3.3 Opinion Dynamics Evaluation Metrics                         the LLM. Table 1 summarizes the Bias (B) and
+                                                                Diversity (D) of the final opinion distribution FoT
+Our evaluation of opinion dynamics includes two
+                                                                aggregated across 15 topics. Table 2 shows the
+metrics in the literature (Lorenz et al., 2021): Bias
+                                                                summarized results separated by three topic types.
+(B): The average of the agents’ opinions at the final
+                                                                As shown in Table 1, the role-playing prompt ini-
+time step, B = mean(FoT ). Diversity (D): The
+                                                                tially causes agents to express a diverse variety of
+standard deviation of the final opinion distribution,
+                                                                opinions as expected, but with repeated social inter-
+D = std(FoT ). These two metrics can be used to
+                                                                acts these opinions converge toward a ground-truth
+categorize the final opinion distribution FoT . For
+                                                                consensus. Under the false framing, agents col-
+example, a low B and a low D characterizes cen-
+                                                                lectively lean towards disagreement, shown by a
+tral consensus, whereas a low B and a medium D
+                                                                negative bias value (B = −1.33 when there is no
+characterizes a diversified distribution.5
+                                                                cognitive bias). Conversely, under the true framing,
+3.4 Initial Opinion Distribution                                the group shows a slight positive tendency to agree
+                                                                (B = 0.52), indicating a lean towards truthfulness.
+The initial opinion distribution Fot=0 determines
+                                                                Figure 4 and 6 shows an example of how opinion
+the agents’ starting opinions. The opinion is ini-
+                                                                trajectories quickly converge towards the truth af-
+tialized verbally in the agent’s prompt and memory
+                                                                ter social interactions for both the false and true
+(see §2.1 and Figure 2b). In most experiments, we
+                                                                framing conditions, especially without cognitive
+initialize Fot=0 as a uniform distribution, with each
+                                                                bias. This is true across using cumulative memory
+opinion value assigned to N/|O| agents, where |O|
+                                                                (Figure 4) and reflective memory (Figure 6). The
+is the number of possible opinion values.6 This
+                                                                control condition illustrates that a similar tendency
+   5
+     See Lorenz et al. (2021) for a detailed taxonomy.          is observed when agents do not communicate, but
+   6
+     For example, in our experiment, with N = 10 agents and
+five possible opinion values of −2, −1, 0, +1, +2, each value   would be assigned to 2 agents initially.
+
+                                                            3332
+are repeatedly queried for their opinion: the ex-         dency to deny the false statement under the false
+pressed opinions tend to move toward the ground           framing (Cumulative Memory: B = −1.33; Re-
+truth, suggesting an inherent bias in the model. Sta-     flective Memory: B = −1.37) than their tendency
+tistical tests supporting the claims above are in §M.     to endorse the true statement under the true fram-
+                                                          ing (Cumulative Memory: B = 0.52; Reflective
+Confirmation Bias Leads to Opinion Fragmenta-             Memory: B = 0.60). We consider two possibil-
+tion. Introducing confirmation bias in the prompt         ities. First, FLAN-T5-XXL may have an overall
+leads to less ultimate consensus (i.e., greater diver-    tendency to classify LLM agents’ responses as neg-
+sity D) across LLM agents. As shown in Table 1            ative. Second, the LLM agents may indeed have
+and Figure 4, the stronger the confirmation bias,         a stronger tendency to deny the false statements.
+the more diverse the final state distribution. This       According to our validation of FLAN-T5-XXL’s
+correlation holds for both cumulative and reflective      ratings (detailed in §N), the agreement matrix be-
+memory strategies (Figure 4 and 6). These find-           tween FLAN-T5-XXL’s ratings and human ratings
+ings replicate, within a set of interacting LLMs, the     shows no systematic bias. We therefore exclude
+general finding from more classic ABMs that incor-        the first possibility. As to why the LLM agents
+poration of confirmation bias in the model update         indeed have a stronger negative tendency, our spec-
+algorithm produces greater opinion fragmentation          ulation is that, due to either pretraining, fine-tuning,
+(Lorenz et al., 2021; Flache et al., 2017). Statistical   or RLHF (Christiano et al.), the LLM has been
+tests supporting the claims above are in §M.              trained to readily refute false information under
+Impact of Initial Opinion Distribution The sys-           false framing. On the other hand, under true fram-
+tem’s tendency for simulated opinions to converge         ing, there may be less training effort to ensure that
+on ground truth prompts an intriguing question: If        the model endorses true information. Future stud-
+all agents start with false opinions, will they still     ies are needed to evaluate the true cause.
+converge toward a scientifically accurate consen-         Sensitivity Analyses Sensitivity analyses test dif-
+sus, or will they reinforce their initial beliefs and     ferent LLMs (GPT-4 and Vicuna) and network sizes
+resist changing their stance? Figure 5 shows the          (N = 20 agents). The results show consistent
+evolution of opinions under various initial distribu-     trends across models (GPT-4: Table 3; Vicuna: Ta-
+tions, using the global warming topic. Regardless         ble 4 in §J) and network scales (Table 5 in §K). In
+of the initial opinion distribution, the agents al-       addition, we evaluate the sensitivity of our result to
+tered their expressed opinions and shifted toward         randomness due to temperature sampling. On the
+the ground truth. For instance, as shown in Fig-          topic of Global Warming, we run the experiment
+ure 5a, under false framing, when all agents ini-         three times. The effect of framing and the effect
+tially supported global warming is a hoax, they           of confirmation bias are consistent across the three
+converged towards the negative spectrum quickly           runs.
+and ended up with B = −1.3. Interestingly, un-
+der true framing, when all agents initially denied        5   Related Work
+the view that global warming is real, they did not
+completely flip their stance to support it, though        Agent-Based Models and Opinion Dynamics
+they did shift slightly in this direction (Figure 5d):    Simulation Agent-Based Models (ABMs) are
+the final bias (B = −1.2) was more positive than          the cornerstone of opinion dynamics simulation,
+the initial extreme opinion (B = −2). When at             defining mathematical rules for agents’ opinion up-
+least a minority of agents held a divergent belief at     dates in response to messages (Gilbert and Terna,
+the start, the group as a whole eventually shifted        2000; Smaldino, 2023; Lorenz et al., 2021; Chuang
+towards acknowledging global warming is real and          and Rogers, 2023; Epstein, 2012; Flache et al.,
+is not a hoax, as shown in Figure 5c. Overall, these      2017). ABMs are valuable for predicting public
+results indicate that the model’s inherent bias to-       opinion trends and informing intervention strate-
+wards ground truth is robust against varying initial      gies. One key advantage of using ABMs is that they
+opinion distributions.                                    allow incorporating explicit assumptions about cog-
+                                                          nitive process in opinion updating (Flache et al.,
+The Strength of Bias under False Framing is               2017; Lorenz et al., 2021; Chuang and Rogers,
+Stronger than under True Framing As shown                 2023). For example, incorporating “confirmation
+in Table 1, the LLM agents have a stronger ten-           bias” into ABM equations causes agents to disre-
+                                                      3333
+gard contrasting information, often leading to frag-    climate change denial.
+mented opinion clusters at the group level. How-           Significant efforts have been made to prevent
+ever, a significant limitation of ABMs is that they     LLMs from exhibiting harmful biases. However,
+rely on numeric representations of opinions and         for simulating critical undesired social phenomena
+messages, which oversimplifies the complexities         (e.g., misinformation, polarization), it is crucial to
+of human communication. In contrast, emerging           have simulated agents accurately reflect the breadth
+approaches using LLMs offer a more sophisticated        of human behavior and belief, even those that are
+method for simulating opinion dynamics through          maladaptive. Our study suggests that prompting
+natural language.                                       alone may be insufficient for LLM agents to fully
+                                                        replicate the diverse viewpoints. This leads us
+Simulating Social Dynamics with LLM-based
+                                                        to a potential future direction: fine-tuning LLM
+Agents The use of LLMs in simulating social
+                                                        agents with actual human discourse data. Such an
+dynamics is a rapidly growing research area , show-
+                                                        approach could lead to more accurate models of
+casing promising results in terms of human-like
+                                                        human belief dynamics.
+interactions (Park et al., 2023, 2022; Kaiya et al.,
+2023; Törnberg et al., 2023; Li et al., 2023a; Zhou     Limitations
+et al., 2023b; Mou et al., 2024; Liu et al., 2024).
+Park et al. (2023) devise LLM-based generative          Model Dependency and Generalizability A key
+agents to engage in digital environments, demon-        limitation of our study is the exclusive use of mod-
+strating an ability to respond, plan, and remember      els that have undergone Reinforcement Learning
+in natural language. They exhibit complex social        with Human Feedback (RLHF; Christiano et al.,
+behaviors, such as organizing events. Similarly,        2017; Ziegler et al., 2019). This may lead to
+Törnberg et al. (2023) use LLMs in conjunction          the truth-converging tendency in the LLM agents.
+with agent-based modeling to explore the impact of      Given that various language models exhibit distinct
+news feed algorithms in simulated social media en-      inherent biases (Feng et al., 2023), LLM agents us-
+vironments. Additionally, Park et al. (2022) show       ing different models could display varying patterns
+that LLM-based agents are capable of generating         in opinion dynamics. To fully assess the gener-
+social media posts indistinguishable from those         alizability of our findings, future research should
+written by humans. These advances underscore the        include a broad spectrum of models.
+potential of using LLM agents to simulate human
+social behaviors at group level. To our best knowl-     Reduction of Opinion to One-Dimensional
+edge, we are the first to propose the use of LLM        Scalar Our study aligns with classic ABMs in re-
+as an alternative to ABM for opinion dynamics           ducing opinions to a one-dimensional scalar o ∈ R,
+simulation.                                             which simplifies the complex nature of opinion for-
+                                                        mation. However, a more nuanced approach could
+6   Conclusion                                          offer deeper insights. Future studies could adopt
+                                                        a fine-grained or even qualitative analysis to ex-
+This study has explored the use Large Language          plore how agents modify their opinions, determine
+Models (LLMs) for understanding opinion dynam-          which messages hold greater persuasive power, and
+ics in groups of simulated agents communicating         assess how persuasion varies based on different
+via natural language. In contrast to more traditional   agent personas. Such an approach would provide
+ABMs, LLMs can interpret and produce natural lan-       a richer understanding of the subtleties in LLM
+guage, can role-play differing personas, and can        agents’ opinion dynamics.
+simulate human-like linguistic communication. We
+therefore considered whether groups of interacting      Limitation in Topic Selection Our research fo-
+LLM agents could provide a basis for simulating         cused on topics with clear, established ground
+opinion dynamics comparable to those studied with       truths. However, many crucial topics, such as the
+classical ABMs. Our findings confirm the poten-         effectiveness of political leaders or the best poli-
+tial of LLMs in opinion dynamics simulations but        cies for complex societal issues, lack a definitive
+also reveal limitations, particularly their tendency    truth. These topics are more open-ended and sub-
+to align with factual information regardless of their   jective. Future studies should consider including
+personas, which restricts their role-play effective-    such topics to capture a broader and more nuanced
+ness for individuals with fact-resistant beliefs like   spectrum of opinions and debates.
+                                                    3334
+The Role of Other Demographic Information                  Course Correct: Precision Guidance Against Mis-
+While we focus on the role of agents’ initial beliefs      information (Agency Tracking Number: 2230692;
+in opinion dynamics simulation, a more nuanced             Award Number: MSN 266268).
+analysis on the role of other demographic infor-
+mation could offer deeper insights. For example,
+future studies could adopt a fine-grained or qualita-
+tive analysis to explore how agents’ demographic
+features (like political leaning) play a role in agents’
+information exchanges and belief updating.
+
+Limitation in Network Structure In the present
+study, LLM agents get to interact with everyone
+else in the network. While in line with classic
+setup used in ABM simulation (Flache et al., 2017;
+Lorenz et al., 2021), this is not close to social in-
+teractions in the real world. For example, people
+with similar background tend to interact with one
+another (McPherson et al., 2001). Future studies
+should consider investigating LLM agents’ opinion
+dynamics with more realistic network structures.
+
+Ethics Statement
+While introducing confirmation bias into LLM
+agents can lead to opinion fragmentation and re-
+duced convergence on factual consensus, it’s impor-
+tant to understand this approach within the broader
+scope of studying group-level social phenomena.
+Simulating biased behavior in agents is not an en-
+dorsement of these biases, but a critical step in
+comprehensively understanding the dynamics of
+various undesired social issues, including misin-
+formation spread, polarization, and echo chamber
+formation. Developing human-like LLM agents
+with resistant viewpoints is essential for devising
+strategies to address these social challenges. In
+addition, we will release the code base exclusively
+for research purposes. Finally, since we are using
+OpenAI’s API, we make sure that we comply with
+its intended use 7 .
+
+Acknowledgements
+We thank the reviewers, the area chair for their feed-
+back. This work was funded by the Multi Univer-
+sity Research Initiative grant from the Department
+of Defense, W911NF2110317, Cohesive and Ro-
+bust Human-Bot Cybersecurity Teams, the John S.
+and James L. Knight Foundation (Award Number:
+MSN231314), and the National Science Founda-
+tion through the Convergence Accelerator Track F:
+   7
+   https://openai.com/policies/terms- o
+f-use
+
+                                                       3335
+References                                                  Lei Huang, Weijiang Yu, Weitao Ma, Weihong Zhong,
+                                                              Zhangyin Feng, Haotian Wang, Qianglong Chen,
+Ceren Budak, Divyakant Agrawal, and Amr El Abbadi.            Weihua Peng, Xiaocheng Feng, Bing Qin, et al. 2023.
+  2011. Limiting the spread of misinformation in social       A survey on hallucination in large language models:
+  networks. In Proceedings of the 20th international          Principles, taxonomy, challenges, and open questions.
+  conference on World wide web, pages 665–674.                arXiv preprint arXiv:2311.05232.
+Harrison Chase. 2022. Langchain.
+                                                            Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan
+Paul F Christiano, Jan Leike, Tom Brown, Miljan Mar-          Su, Yan Xu, Etsuko Ishii, Ye Jin Bang, Andrea
+  tic, Shane Legg, and Dario Amodei. 2017. Deep               Madotto, and Pascale Fung. 2023. Survey of halluci-
+  reinforcement learning from human preferences. Ad-          nation in natural language generation. ACM Comput-
+  vances in neural information processing systems, 30.        ing Surveys, 55(12):1–38.
+Paul F Christiano, Jan Leike, Tom B Brown, Miljan           Zhao Kaiya, Michelangelo Naim, Jovana Kondic,
+  Martic, Shane Legg, and Dario Amodei. Deep rein-            Manuel Cortes, Jiaxin Ge, Shuying Luo,
+  forcement learning from human preferences.                  Guangyu Robert Yang, and Andrew Ahn. 2023.
+Yun-Shiuan Chuang and Timothy T Rogers. 2023. Com-            Lyfe agents: Generative agents for low-cost
+  putational agent-based models in opinion dynamics:          real-time social interactions. arXiv preprint
+  A survey on social simulations and empirical studies.       arXiv:2310.02172.
+  arXiv preprint arXiv:2306.03446.
+                                                            Chao Li, Xing Su, Chao Fan, Haoying Han, Cong Xue,
+Hyung Won Chung, Le Hou, Shayne Longpre, Bar-                 and Chunmo Zheng. 2023a. Quantifying the impact
+  ret Zoph, Yi Tay, William Fedus, Eric Li, Xuezhi            of large language models on collective opinion dy-
+  Wang, Mostafa Dehghani, Siddhartha Brahma, et al.           namics. arXiv preprint arXiv:2308.03313.
+  2022. Scaling instruction-finetuned language models.
+  arXiv preprint arXiv:2210.11416.                          Yixia Li, Rong Xiang, Yanlin Song, and Jing Li. 2023b.
+                                                              Unipoll: A unified social media poll generation
+Nouha Dziri, Sivan Milton, Mo Yu, Osmar Zaiane, and           framework via multi-objective optimization. arXiv
+  Siva Reddy. 2022. On the origin of hallucinations           preprint arXiv:2306.06851.
+  in conversational models: Is it the datasets or the
+  models? arXiv preprint arXiv:2204.07931.                  Yuhan Liu, Xiuying Chen, Xiaoqing Zhang, Xing Gao,
+                                                              Ji Zhang, and Rui Yan. 2024. From skepticism to
+Joshua M Epstein. 2012. Generative social sci-
+                                                              acceptance: Simulating the attitude dynamics toward
+  ence: Studies in agent-based computational mod-
+                                                              fake news. arXiv preprint arXiv:2403.09498.
+  eling. Princeton University Press.
+Shangbin Feng, Chan Young Park, Yuhan Liu, and Yulia        Sahil Loomba, Alexandre de Figueiredo, Simon J Piatek,
+  Tsvetkov. 2023. From pretraining data to language           Kristen de Graaf, and Heidi J Larson. 2021. Measur-
+  models to downstream tasks: Tracking the trails of          ing the impact of covid-19 vaccine misinformation on
+  political biases leading to unfair NLP models. In           vaccination intent in the uk and usa. Nature human
+  Proceedings of the 61st Annual Meeting of the As-           behaviour, 5(3):337–348.
+  sociation for Computational Linguistics (Volume 1:
+  Long Papers), pages 11737–11762, Toronto, Canada.         Jan Lorenz, Martin Neumann, and Tobias Schröder.
+  Association for Computational Linguistics.                  2021. Individual attitude change and societal dynam-
+                                                              ics: Computational experiments with psychological
+Andreas Flache, Michael Mäs, Thomas Feliciani, Ed-            theories. Psychological Review, 128(4):623.
+  mund Chattoe-Brown, Guillaume Deffuant, Sylvie
+  Huet, and Jan Lorenz. 2017. Models of social influ-       Wei Lu, Wei Chen, and Laks VS Lakshmanan. 2015.
+  ence: Towards the next frontiers. Journal of Artificial    From competition to complementarity: comparative
+  Societies and Social Simulation, 20(4).                    influence diffusion and maximization. Proceedings
+                                                             of the VLDB Endowment, 9(2):60–71.
+Nigel Gilbert and Pietro Terna. 2000. How to build and
+  use agent-based models in social science. Mind &          Miller McPherson, Lynn Smith-Lovin, and James M
+  Society, 1:57–72.                                           Cook. 2001. Birds of a feather: Homophily in social
+Tamar Ginossar, Iain J Cruickshank, Elena Zheleva,            networks. Annual review of sociology, 27(1):415–
+  Jason Sulskis, and Tanya Berger-Wolf. 2022. Cross-          444.
+  platform spread: vaccine-related content, sources,
+  and conspiracy theories in youtube videos shared in       Xinyi Mou, Zhongyu Wei, and Xuanjing Huang. 2024.
+  early twitter covid-19 conversations. Human vac-            Unveiling the truth and facilitating change: Towards
+  cines & immunotherapeutics, 18(1):1–13.                     agent-based large-scale social movement simulation.
+                                                              arXiv preprint arXiv:2402.16333.
+Andrew F Hayes and Klaus Krippendorff. 2007. An-
+  swering the call for a standard reliability measure for   Raymond S Nickerson. 1998. Confirmation bias: A
+  coding data. Communication methods and measures,            ubiquitous phenomenon in many guises. Review of
+  1(1):77–89.                                                 general psychology, 2(2):175–220.
+                                                        3336
+OpenAI. 2022. Introducing ChatGPT. https://op              A    Results of Global Warming Topic with
+  enai.com/blog/chatgpt. [Accessed 13-10-                       Reflective Memory
+  2023].
+                                                           In the main text, Figure 4 shows the LLM agent
+Joon Sung Park, Joseph C O’Brien, Carrie J Cai, Mered-
+  ith Ringel Morris, Percy Liang, and Michael S            opinion dynamics when discussing about global
+  Bernstein. 2023. Generative agents: Interactive          warming when using cumulative memory. Here,
+  simulacra of human behavior. arXiv preprint              Figure 6 shows the result when using reflective
+  arXiv:2304.03442.                                        memory.
+Joon Sung Park, Lindsay Popowski, Carrie Cai, Mered-
+  ith Ringel Morris, Percy Liang, and Michael S Bern-      B    Full List of Personas
+  stein. 2022. Social simulacra: Creating populated
+  prototypes for social computing systems. In Proceed-     In this section, we list the full list of 10 agents along
+  ings of the 35th Annual ACM Symposium on User            with their personas that interact in the group dy-
+  Interface Software and Technology, pages 1–18.           namics settings in our agent-based model (ABM).
+Gordon Pennycook, Ziv Epstein, Mohsen Mosleh, An-              Name: Benjamin Lee
+  tonio A Arechar, Dean Eckles, and David G Rand.              Initial Belief: Slightly
+  2021. Shifting attention to accuracy can reduce mis-         Negative opinion about XYZ
+  information online. Nature, 592(7855):590–595.               Political leaning: Lean Democrat
+                                                               Age: 37
+Paul Smaldino. 2023. Modeling social behavior: Math-           Gender: Male
+  ematical and agent-based models of social dynamics           Ethnicity: Asian American
+  and cultural evolution. Princeton University Press.          Education: Master’s Degree in
+                                                               Economics
+Petter Törnberg, Diliara Valeeva, Justus Uitermark,            Occupation: Financial Analyst
+  and Christopher Bail. 2023. Simulating social me-
+  dia using large language models to evaluate al-
+                                                               Name: Maya Jackson
+  ternative news feed algorithms. arXiv preprint
+                                                               Initial Belief: Strongly
+  arXiv:2310.05984.                                            Negative opinion about XYZ
+                                                               Political leaning: Strong
+Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan              Republican
+  Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin,                 Age: 29
+  Zhuohan Li, Dacheng Li, Eric Xing, et al. 2023.              Gender: Female
+  Judging llm-as-a-judge with mt-bench and chatbot             Ethnicity: Black
+  arena. arXiv preprint arXiv:2306.05685.                      Education: Bachelor’s Degree in
+                                                               Business Management
+Wenxuan Zhou, Sheng Zhang, Hoifung Poon, and                   Occupation: Marketing Specialist
+ Muhao Chen. 2023a. Context-faithful prompt-
+ ing for large language models. arXiv preprint
+ arXiv:2303.11315.                                             Name: Ethan Wilson
+                                                               Initial Belief: Slightly
+Xuhui Zhou, Hao Zhu, Leena Mathur, Ruohong Zhang,              Positive opinion about XYZ
+  Haofei Yu, Zhengyang Qi, Louis-Philippe Morency,             Political leaning: Moderate
+  Yonatan Bisk, Daniel Fried, Graham Neubig, et al.            Age: 26
+                                                               Gender: Male
+  2023b. Sotopia: Interactive evaluation for social
+                                                               Ethnicity: White
+  intelligence in language agents. In The Twelfth Inter-       Education: Bachelor’s Degree in
+  national Conference on Learning Representations.             Journalism
+                                                               Occupation: Freelance Writer
+Daniel M Ziegler, Nisan Stiennon, Jeffrey Wu, Tom B
+  Brown, Alec Radford, Dario Amodei, Paul Chris-
+  tiano, and Geoffrey Irving. 2019. Fine-tuning lan-           Name: Aisha Patel
+  guage models from human preferences. arXiv                   Initial Belief: Neutral opinion
+  preprint arXiv:1909.08593.                                   about XYZ
+                                                               Political leaning: Lean
+                                                               Republican
+                                                               Age: 41
+                                                               Gender: Female
+                                                               Ethnicity: South Asian
+                                                               Education: Doctor of Medicine
+                                                               (M.D.)
+                                                               Occupation: Pediatrician
+
+
+
+
+                                                       3337
+                   a                            False Framing                             b                               True Framing
+                                         Opinion                      Final Opinion                              Opinion                        Final Opinion
+                                       Trajectories                    Distribution                            Trajectories                      Distribution
+ Conf. Bias
+
+
+                                                                          ! = −1.9                                                              ! = 2.0
+                                                                          ' = 0.3                                                               ' = 0.0
+    No
+ Conf. Bias
+              Opinion (!!" )
+
+
+
+
+                                                                          ! = −0.6
+
+
+
+
+                                                                                        Opinion (!!" )
+                                                                                                                                                ! = 0.8
+
+
+
+
+                                                          # Agents
+
+
+
+
+                                                                                                                                     # Agents
+   Weak
+
+
+
+
+                                                                          ' = 1.7                                                               ' = 1.5
+
+
+
+
+                                                                          ! = −0.3                                                              ! = 0.1
+ Conf. Bias
+
+
+
+
+                                                                          ' = 1.9                                                               ' = 1.8
+  Strong
+
+
+
+
+                                       Time Step (")                   Opinion (!)                                   Time Step (")               Opinion (!)
+
+                   c                                         Control Condition: No Interaction
+
+                                                False Framing                                                             True Framing
+              Opinion (!!" )
+ Conf. Bias
+
+
+
+
+                                                                                        Opinion (!!" )
+
+
+
+
+                                                                          ! = −1.5                                                              ! = 1.4
+                                                           # Agents
+
+
+
+
+                                                                                                                                     # Agents
+                                                                          ' = 0.8                                                               ' = 1.0
+    No
+
+
+
+
+                                       Time Step (")                    Opinion (!)                                  Time Step (")              Opinion (!)
+
+                  d                                   Control Condition: No Interaction + No Role-Playing
+                                                False Framing                                                             True Framing
+                               Opinion (!!" )
+
+
+
+
+                                                                                                         Opinion (!!" )
+
+
+
+
+                                                  Time Step (")                                                              Time Step (")
+
+Figure 6: Opinion trajectories ⟨oi ⟩ of LLM agents and the final opinion distribution FoT on the topic of Global
+Warming. Panels (a) and (b) display the impact of cognitive biases under (a) false and (b) true framing conditions,
+respectively. Each row represents a different level of confirmation bias: no confirmation bias (top row), weak
+confirmation bias (middle row), and strong confirmation bias (bottom row). Panels (c) and (d) serve as baselines,
+with (c) being role-playing but with no interaction, and (d) being no role-playing and no interaction, respectively.
+The LLM agents in this figure use reflective memory. The color of each line plot corresponds to the agent’s initial
+opinion ot=0
+          i  : dark blue (+2), light blue (+1), grey (0), light red (-1), and dark red (-2), corresponding to opinions
+ranging from strongly agree to strongly disagree. The LLM agents in this figure use cumulative memory.
+
+      Name: Samuel Wright                                                                          Occupation:              University Professor
+      Initial Belief: Strongly
+      Negative opinion about XYZ
+      Political leaning: Strong                                                                   Name: Olivia Garcia
+      Democrat                                                                                    Initial Belief: Strongly
+      Age: 58                                                                                     Positive opinion about XYZ
+      Gender: Male                                                                                Political leaning: Strong
+      Ethnicity: White                                                                            Democrat
+      Education: Ph.D. in Anthropology                                                            Age: 34
+                                                                                                  Gender: Female
+
+
+                                                                                 3338
+     Ethnicity: Hispanic                                    • -1: Slightly negative opinion about XYZ.
+     Education: Master’s Degree in
+     Sociology                                              • 0: Neutral opinion about XYZ.
+     Occupation: Non-profit Program
+     Manager
+                                                            • 1: Slightly positive opinion about XYZ.
+
+     Name: Sophia Nguyen                                    • 2: Strongly positive opinion about XYZ.
+     Initial Belief: Slightly
+     Negative opinion about XYZ                         The opinion space O is used when initializing an
+     Political leaning: Lean
+     Republican                                         agent’s initial belief ot=0
+                                                                                i   (§2.2) and classifying
+     Age: 24                                            opinion from verbal report rjt (§3 and §I). Note that
+     Gender: Female                                     the size of O can be easily generalized to accom-
+     Ethnicity: Asian American
+     Education: Student                                 modate a broader range of opinion scales.
+     (Undergraduate, Political
+     Science)                                           D     Agent Interaction Prompts
+     Occupation: Intern at Law Firm
+                                                        In this section, we list the prompts used for
+     Name: Sarah Martinez
+                                                        facilitation of the interactions between the agents.
+     Initial Belief: Strongly                           Specifically, we start with the prompt that intro-
+     Positive opinion about XYZ                         duces the agents’ persona, followed by the prompts
+     Political leaning: Lean Democrat
+     Age: 28
+                                                        for them receiving and writing tweets respectively.
+     Gender: Female                                     All prompts are for the specific topic of debate on
+     Ethnicity: Hispanic                                flat earth with positive framing (see §H).
+     Education: Master’s Degree in
+     Film Studies
+     Occupation: Film Critic                            1. Initialize Persona Prompt
+                                                           “Role play this person.
+     Name: Jordan White                                    {AGENT_PERSONA}
+     Initial Belief: Slightly                              Now, {AGENT_NAME}, you have been
+     Positive opinion about XYZ                            interacting with other strangers on
+     Political leaning: Moderate                           Twitter. You can decide to change
+     Age: 23                                               or maintain your belief about the
+     Gender: Female                                        theory XYZ that claims that the Earth
+     Ethnicity: Black                                      is flat after interacting with other
+     Education: Student                                    strangers.
+     (Undergraduate, Sociology)
+     Occupation: Part-time Retail                          You would produce tweets that reflect
+     Worker                                                your honest belief, and you would
+                                                           also see other strangers’ tweets.
+                                                           After seeing other people’s tweets,
+     Name: Lucas Johnson                                   you would be asked about your belief
+     Initial Belief: Neutral opinion                       about the theory XYZ that claims that
+     about XYZ                                             the Earth is flat.”
+     Political leaning: Moderate
+     Age: 37                                            2. Write Tweet Prompt
+     Gender: Male
+     Ethnicity: Black                                       “Now, {AGENT_NAME}, please write
+     Education: Bachelor’s Degree in                        a tweet about the theory XYZ that
+     Sociology                                              claims that the Earth is flat. The
+     Occupation: Diversity and                              tweet should reflect your honest
+     Inclusion Manager                                      belief.
+                                                           Write the tweet now.
+                                                           Your Tweet:”
+C    Detailed Description of the Discrete
+     Opinion Space O                                    2. Receive Tweet Prompt
+The discrete opinion space O used in our simula-           “Now, {AGENT_NAME}, you see a post on
+tions includes five possible values, each represent-       Twitter from a stranger.
+ing a different opinion on a given topic (referred to      I want to know your current honest
+                                                           belief about the theory XYZ that
+as “XYZ”). The values are as follows:                      claims that the Earth is flat after
+                                                           seeing this Tweet.
+    • -2: Strongly negative opinion about XYZ.
+                                                    3339
+ Here is the Tweet.                                         “After you saw the tweet from the
+ {TWEET}                                                    stranger above, you wrote another
+                                                            tweet about the theory XYZ that
+    What is your current honest belief                      claims that the Earth is flat.
+    about the theory XYZ that claims that                   Below was the {TWEET_WRITTEN_COUNT}
+    the Earth is flat? Specifically,                        {SUPERSCRIPT} tweet you wrote earlier
+    focus on your opinion about XYZ after                   about the theory XYZ that claims that
+    reading the other person’s tweet.                       the Earth is flat:
+    Use the following format:                               {TWEET_WRITTEN}”
+    Reasoning: (Think step by step)
+                                                         4. Previous is review, Current is review:
+    Reasoning:                                              “After you saw the tweet from the
+    As {AGENT_NAME}, I”                                     stranger above, you saw another tweet
+                                                            from a stranger about the theory XYZ
+  These prompts are used and the responses are              that claims that the Earth is flat.
+                                                            Here is the tweet you saw.
+added to the memory and updated based on the                {TWEET_SEEN}
+memory update function detailed in the following
+section.                                                    After seeing the tweet, below was
+                                                            your thought and honest belief about
+                                                            the theory XYZ that claims that the
+E     Agent Memory Update Function                          Earth is flat.
+                                                            Your thought after you saw the tweet:
+Cumulative Memory: The cumulative memory                    {REASONING}”
+as described in §2.2 appends each new experience
+as time progresses. In order to add these past in-       5. Previous is write, Current is write:
+teractions into the agents’ memories, we use the            “After you wrote your
+following prompts.                                          {TWEET_WRITTEN_COUNT}
+                                                            {SUPERSCRIPT_LAST} tweet, you wrote
+   Considering the interaction at time t + 1, the           another tweet
+agent could be either tweeting by themselves or
+receiving a tweet, and similarly at time t, they            Below was the {TWEET_WRITTEN_COUNT}
+would’ve either tweeted by themselves, received             {SUPERSCRIPT} tweet you wrote earlier
+                                                            about the theory XYZ that claims that
+a tweet, or neither of these (say for instance,             the Earth is flat:
+that (t + 1)th time step is the first time they             {TWEET_WRITTEN}”
+were chosen). We, therefore, list these prompts
+                                                         6. Previous is write, Current is review:
+case-by-case, on the basis of previous and current
+interaction_type ∈ {none, write, review} for the            “After you wrote your
+                                                            {TWEET_WRITTEN_COUNT} {SUPERSCRIPT}
+specific topic of debate on a flat earth with positive      tweet, you saw another tweet from a
+framing (see §H).                                           stranger on Twitter.
+                                                            Here is the tweet you saw.
+                                                            {TWEET_SEEN}
+1. Previous is none, Current is review:
+ “You first saw a tweet from a                              After seeing the tweet, below was
+ stranger on Twitter. Here is the                           your thought and honest belief about
+ tweet you saw.                                             the theory XYZ that claims that the
+ {TWEET_SEEN}                                               Earth is flat.
+                                                            Your thought after you saw the tweet:
+                                                            {REASONING}”
+ After seeing the tweet, below was
+ your thought and honest belief about                    Reflective Memory:
+ the theory XYZ that claims that the
+ Earth is flat. Your thought after                          As described in §2.2, the reflective memory,
+ you saw the tweet:                                      maintains a compact summary by prompting the
+ {REASONING}”
+                                                         agent to continuously reflect on its experiences in-
+2. Previous is none, Current is write:                   teracting with others, followed by integrating new
+                                                         experiences into the existing memory state so as
+ “Below was the {TWEET_WRITTEN_COUNT}
+ {SUPERSCRIPT} tweet you wrote earlier
+                                                         to maintain a roughly constant memory size of the
+ about the theory XYZ that claims that                   agent.
+ the Earth is flat:                                         Below is the prompt we use to implement the
+ {TWEET_WRITTEN}”
+                                                         reflection-based memory into the LLM agents:
+3. Previous is review, Current is write:                    1. The agent is reflecting for the first time:
+                                                     3340
+    “Now, please reflect on this                      H    Full List of Topics
+    experience. Summarize your
+    experience in a few sentences.”                   Science
+  2. The agent is reflecting beyond the first         1. Flat Earth
+time:                                                 False framing: "Theory XYZ that claims that the
+                                                      Earth is flat."
+    “Now, please reflect on this
+    experience. Here is your experience               True framing: "Theory XYZ that claims that the
+    so far: {PAST_REFLECTION} Summarize               Earth is an irregularly shaped ellipsoid rather than
+    your updated experience in a few
+    sentences.”
+                                                      flat."
+
+  Essentially, after every reflection, the agents’    2. Coexistence of Tyrannosaurus Rex and hu-
+memory only contains the reflected experience that    mans
+the agents produce, which forms our memory up-        False framing: "Theory XYZ that claims that
+date function for this setting.                       the Tyrannosaurus Rex and humans co-existed on
+                                                      Earth at the same time."
+F     Confirmation Bias Prompt                        True framing: "Theory XYZ that claims that the
+To manipulate the strength of confirmation bias, we   Tyrannosaurus Rex and humans did not co-exist on
+provide two bias levels following the spectrum in     Earth at the same time."
+Lorenz et al. (2021). Below are the exact wordings.
+  Weak Confirmation Bias:                             3. Communicating with the dead
+                                                      False framing: "Theory XYZ that claims that it
+    “Remember, you are role-playing as
+    a real person. Like humans, you                   is possible for humans to communicate with the
+    have confirmation bias. You will be               dead."
+    more likely to believe information                True framing: "Theory XYZ that claims that it is
+    that supports your beliefs and less
+    likely to believe information that                not possible for humans to communicate with the
+    contradicts your beliefs."                        dead."
+    Strong Confirmation Bias:
+                                                      4. Predicting the future through palm reading
+    “Remember, you are role-playing as                False framing: "Theory XYZ that claims that it is
+    a real person. You have a strong
+    confirmation bias. You will only                  possible to predict someone’s future by looking at
+    believe information that supports                 their palm characteristics."
+    your beliefs and will completely dis              True framing: "Theory XYZ that claims that it is
+    miss information that contradicts
+    your beliefs.”                                    not possible to predict someone’s future by looking
+                                                      at their palm characteristics."
+G     Closed-World Prompt
+                                                      5. Global warming
+When agents discuss or debate about a topic XYZ
+                                                      False framing: "Theory XYZ that claims that
+under the closed-world constraint (See Section 2),
+                                                      global warming is a conspiracy by governments
+we prompt the agents with the following:
+                                                      worldwide and is not a real phenomenon."
+    “Remember, throughout the                         True framing: "Theory XYZ that claims that
+    interactions, you are alone in
+    your room with limited access to                  global warming is a real phenomenon and global
+    the Internet. You cannot search for               climate is rapidly growing warmer."
+    information about XYZ on the Internet.
+    You can not go out to ask other
+    people about XYZ. Because you are
+    alone in your room, you can not leave             History
+    your room to seek information about               6. Moon Landing
+    XYZ. To form your belief about XYZ,
+    you can only rely on your initial                 False framing: "Theory XYZ that claims that US
+    belief about XYZ, along with the                  astronauts never landed on the moon."
+    information you received from other
+    strangers on Twitter.”
+                                                      True framing: "Theory XYZ that claims that US
+                                                      astronauts have landed on the moon."
+  This prompt is excluded entirely under the open-
+world assumption.                                     7. 9/11 Twin Towers
+                                                  3341
+False framing: "Theory XYZ that claims that the     False framing: "Theory XYZ that claims that fire
+twin towers were brought down from the inside by    is cold."
+explosives during the 9/11 attack."                 True framing: "Theory XYZ that claims that fire
+True framing: "Theory XYZ that claims that the      is hot."
+twin towers were not brought down from the inside
+by explosives during the 9/11 attack."              15. Color of the Sky
+                                                    False framing: "Theory XYZ that claims that on a
+8. US Unemployment Rate 2016                        clear sunny day, the sky is usually red."
+False framing: "Theory XYZ that claims that the     True framing: "Theory XYZ that claims that on a
+US unemployment rate in 2016 was higher than        clear sunny day, the sky is usually blue."
+40%."
+True framing: "Theory XYZ that claims that the
+US unemployment rate in 2016 was lower than         I    Opinion Classification
+40%."
+                                                    Our ABM framework involves an opinion classifier
+                                                    foc (rjt ) (See Section 2), and in this section, we
+9. Holocaust                                        describe the choice of our classifier and further
+False framing: "Theory XYZ that claims that the     detail an example prompt that we use to extract the
+Nazi government in Germany did not murder ap-       opinion rating.
+proximately 6 million Jewish people during the
+                                                       We choose Flan-T5-XXL (Chung et al., 2022)
+second world war."
+                                                    as our opinion classifier, primarily because of its
+True framing: "Theory XYZ that claims that
+                                                    capability and wide usage for extracting sentiment
+the Nazi government in Germany murdered
+                                                    or opinion ratings across other studies (Zhou et al.,
+approximately 6 million Jewish people during the
+                                                    2023a; Li et al., 2023b).
+second world war."
+                                                       Below is an example prompt for the topic of
+                                                    Global Warming with Positive Framing (See Ap-
+10. Barack Obama’s Birthplace
+                                                    pendix H) given to Flan-T5-XXL for evaluating
+False framing: "Theory XYZ that claims that
+                                                    responses of agents and returning a rating value
+Barack Obama was born in Kenya."
+                                                    foc (rjt ) ∈ {−2, −1, 0, 1, 2}.
+True framing: "Theory XYZ that claims that
+Barack Obama was born in Hawaii."                       “Here’s a statement made by a person
+                                                        after seeing a tweet.
+                                                        ---
+                                                        {RESPONSE}
+Common Sense                                            ---
+11. Bicycle Wheels
+False framing: "Theory XYZ that claims that a           What is their belief about the
+                                                        Theory XYZ that claims that
+bicycle usually has four wheels."                        global warming is a conspiracy by
+True framing: "Theory XYZ that claims that a             governments worldwide and is not a
+bicycle usually has two wheels."                         real phenomenon, right after they
+                                                         saw this tweet, on a 5-point Likert
+                                                         scale:
+12. Washington DC’s Location                            -2: (Strongly negative opinion about
+False framing: "Theory XYZ that claims that Wash-       XYZ), -1: (Slightly negative opinion
+                                                         about XYZ), 0: (Neutral opinion
+ington DC is not in the United States."                  about XYZ), 1: (Slightly positive
+True framing: "Theory XYZ that claims that               opinion about XYZ), 2: (Strongly
+                                                         positive opinion about XYZ).
+Washington DC is in the United States."
+                                                        Answer with a single opinion value
+13. Human Brain at Birth                                within the options -2, -1, 0, 1, 2.”
+False framing: "Theory XYZ that claims that hu-
+man beings are not born with a brain."                The model then provides us with an opinion
+True framing: "Theory XYZ that claims that          value, which is what we use to keep track of the
+human beings are born with a brain."                beliefs of the LLM agents. In practice, we observe
+                                                    by random sampling of agent responses and the
+14. Temperature of Fire                             Flan-T5-XXL ratings that the opinion value output
+                                                3342
+is more reliable than self-reported ratings of the                                       Framing     Confirmation            Reflective Memory
+                                                                                                     Bias
+agents’ own beliefs.
+                                                                                                                          Bias (B)         Diversity (D)
+                                                                                          False      None               -0.38 ± 0.11        0.62 ± 0.13
+J         Results on GPT-4 and Vicuna                                                                Weak
+                                                                                                     Strong
+                                                                                                                        0.18 ± 0.22
+                                                                                                                        0.49 ± 0.14
+                                                                                                                                            0.72 ± 0.09
+                                                                                                                                            0.73 ± 0.09
+                                                                                          True       None               0.58 ± 0.13         0.53 ± 0.10
+To ensure the robustness of our findings, in our sen-                                                Weak               0.37 ± 0.15         0.64 ± 0.08
+                                                                                                     Strong             0.33 ± 0.15         0.72 ± 0.12
+sitivity analyses, we extend the choice of LLM to
+include GPT-4 (gpt-4-1106-preview; Ope-                                              Table 4: Results with Vicuna-33B. The bias (B) and
+nAI, 2022) and Vicuna (Vicuna-33B-v1.3;                                              diversity (D) of the final opinion distribution FoT ag-
+Zheng et al., 2023) For GPT-4, due to budget con-                                    gregated across 15 topics, using the reflective memory
+straint, we focus only on the science-based topics,                                  strategy, under false and true framing conditions, and
+which costs 499.52 USD. For Vicuna, given the                                        different levels of induced confirmation bias. The values
+constraints of the GPU memory 8 , we focus only                                      represent the average across five topics, along with the
+                                                                                     standard errors. Increasing the strength of the CB cor-
+on the reflective memory strategy, which ensures
+                                                                                     relates with increasing D, as highlighted by the green
+that the memory size remains approximately con-                                      color gradient. Notably, under true framing, B tends
+stant throughout the simulation. Results on both                                     to be more positive (more agreeing) compared to false
+GPT-4 (Table 3) and Vicuna (Table 4) show a trend                                    framing, indicated by blue for true and red for false
+consistent with our findings from ChatGPT (Table 1                                   framing conditions.
+and 2).
+                                                                                                          Cumulative Memory            Reflective Memory
+                          Cumulative Memory             Reflective Memory            Framing Confirmation Bias (B) Diversity           Bias (B) Diversity
+ Framing Confirmation      Bias         Diversity       Bias         Diversity
+                                                                                             Bias                     (D)                           (D)
+         Bias              (B)            (D)           (B)            (D)           False        None          -1.80      0.68         -1.45      0.97
+    False   None        -1.48 ± 0.26   0.78 ± 0.32   -1.38 ± 0.28   0.80 ± 0.32                   Weak          -1.05      1.28         -0.80      1.57
+            Weak        -1.28 ± 0.37   0.81 ± 0.33   -1.30 ± 0.34   0.79 ± 0.26                   Strong        -0.05      1.75         -0.55      1.60
+            Strong      -0.86 ± 0.25   1.50 ± 0.15   -0.78 ± 0.33   1.32 ± 0.33
+                                                                                     True         None           1.65      0.73          1.55      0.97
+    True    None        1.00 ± 0.43    0.96 ± 0.27   0.96 ± 0.45    1.11 ± 0.22                   Weak           1.35      0.91          0.85      1.42
+            Weak        0.64 ± 0.62    1.01 ± 0.33   0.90 ± 0.46    1.27 ± 0.11                   Strong         0.25      1.81          0.50      1.50
+            Strong      0.24 ± 0.20    1.63 ± 0.05   0.42 ± 0.40    1.52 ± 0.16
+
+
+Table 3: Results with GPT-4. The bias (B) and diver-                                 Table 5: The bias (B) and diversity (D) of the final opin-
+sity (D) of the final opinion distribution FoT aggregated                            ion distribution FoT on the topic of Global Warming with
+across all five science-based topics, for both cumulative                            20 agents and 200 time steps, for both cumulative and re-
+and reflective memory strategies under false and true                                flective memory strategies under false and true framing
+framing conditions, and different levels of induced con-                             conditions, and different levels of induced confirma-
+firmation bias. The values represent the average across                              tion bias. Increasing the strength of the confirmation
+five topics, along with the standard errors. Increasing                              bias correlates with increasing D, as highlighted by the
+the strength of the CB correlates with increasing D, as                              green color gradient. Notably, under true framing, B
+highlighted by the green color gradient. Notably, un-                                tends to be more positive (more agreeing) compared to
+der true framing, B tends to be more positive (more                                  false framing, indicated by blue for true and red for
+agreeing) compared to false framing, indicated by blue                               false framing conditions.
+for true and red for false framing conditions.
+
+                                                                                     L       Measurement of Hallucination Rate
+
+K Results on a Larger Network                                                        As mentioned in §2.4, we observe an 15% halluci-
+                                                                                     nation rate in the open-world setting. In this section,
+To test if our findings scale to a larger network, in                                we elaborate the measurement procedure. We have
+our sensitivity analyses, we double the network size                                 randomly selected, under the open-world setting,
+and run the simulation longer (N = 20 and T =                                        20 tweets and 20 responses. We have 3 annota-
+200) on the topic of Global Warming. The result                                      tors separately annotated if the tweet and response
+using a larger network with 20 agents (Table 5)                                      contains information outside of the system. We
+shares the same patterns as in the smaller network                                   found 6 tweets with such characteristics. The three
+with 10 agents (Table 6).                                                            annotators had an agreement rate of 100%. Since
+                                                                                     6 out of 40 tweets and responses contain halluci-
+      8
+    We ran all experiments with Vicuna on a GPU machine                              nated experiences, we estimate the hallucination
+equipped with 1x NVIDIA A100.                                                        rate to be 15%. Here is one example tweet with
+                                                                                  3343
+                     Cumulative Memory    Reflective Memory       N     Validation of FLAN-T5-XXL Ratings
+Framing Confirmation Bias (B) Diversity   Bias (B) Diversity
+        Bias                     (D)                   (D)
+                                                                  To validate FLAN-T5-XXL’s rating, we have ran-
+False    None         -2.00      0.00      -1.90      0.30
+         Weak         -1.20      1.08      -0.60      1.74        domly selected 100 responses and have three of the
+         Strong       -0.30      1.55      -0.30      1.90        authors independently annotate the response (with-
+True     None          2.00      0.00       2.00      0.00
+         Weak          0.90      1.51       0.80      1.47
+                                                                  out access to FLAN-T5’s ratings; inter-rater Krip-
+         Strong        0.20      1.83       0.10      1.76        pendorff’s alpha=0.81; Hayes and Krippendorff,
+                                                                  2007). The agreement rate between FLAN-T5’s
+Table 6: The bias (B) and diversity (D) of the final opin-
+                                                                  rating and the majority vote of human ratings is
+ion distribution FoT on the topic of Global Warming with
+10 agents and 100 time steps, for both cumulative and re-         84%. Table 7 shows the agreement matrix between
+flective memory strategies under false and true framing           FLAN-T5’s ratings and human ratings.
+conditions, and different levels of induced confirma-
+tion bias. Increasing the strength of the confirmation                                         Human Rating
+bias correlates with increasing D, as highlighted by the              FLAN-T5 Rating     +2    +1   0    -1      -2
+green color gradient. Notably, under true framing, B
+tends to be more positive (more agreeing) compared to                 +2                 16     3     0     0     0
+false framing, indicated by blue for true and red for                 +1                 2     15    0     1      0
+false framing conditions.                                             0                  0      1    10     2     0
+                                                                      -1                 0      2    3     26     1
+                                                                      -2                 0      0    0     2     16
+hallucination:
+                                                                  Table 7: The agreement matrix between FLAN-T5-
+  “Just came across a fascinating article that                    XXL’s ratings and human ratings.
+  presents even more evidence supporting the
+  XYZ theory about the Earth’s shape. It’s in-                       To provide a better understanding of the re-
+  credible to see how different fields of study                   sponses corresponding to different opinion scales,
+  are converging on the idea of an irregularly                    we have randomly sampled some responses about
+  shaped ellipsoid. As an aerospace engineer,                     “the theory that claims that global warming is a con-
+  this reinforces my belief in the plausibility of                spiracy by governments worldwide and is not a real
+  this theory. Exciting times ahead for our under-                phenomenon”. Below are the example responses
+  standing of Earth’s shape! #XYZtheory #Earth-                   with ratings from +2 to -2.
+  Shape”.
+                                                                  Strongly positive (+2):
+   In this case, the “fascinating article” never ex-
+                                                                      “I read the tweet from the stranger
+isted, and was never mentioned by any of the tweets                   who identifies as a Republican and
+the agent read. Yet, the agent’s opinion was influ-                   claims to value scientific evidence.
+                                                                      They acknowledge that while they
+enced by this non-existing article. On the other                      prioritize economic stability and
+hand, under the closed-world setting, such cases                      growth, they still recognize the
+never occurred (hallucination rate = 0%).                             overwhelming consensus supporting
+                                                                      the reality of climate change.
+                                                                      Considering this perspective,
+M       Statistical Tests                                             I appreciate hearing different
+                                                                      viewpoints and valuing scientific
+To account for randomness due to topic variability,                   evidence. However, I already
+we conduct statistical tests to support our claims.                   strongly believe in the overwhelming
+First, at each given confirmation bias condition and                  scientific consensus that climate
+                                                                      change is real and caused by human
+memory update strategy, the final bias in the true                    activity. This belief aligns with
+framing is consistently more positive than in the                     my initial positive opinion about
+                                                                      XYZ, which claims that global
+false framing, ps < .05 (paired t-tests, Bonferroni                   warming is not a real phenomenon
+corrected), showing that the LLM agents indeed                        and is a conspiracy by governments
+tend to agree with the true statement and deny the                    worldwide. Given the limited
+                                                                      information available to me in my
+false statement. Second, the trend where the di-                      room, I don’t have access to any
+versity increases with increasing strength of con-                    further evidence or counterarguments
+firmation bias is supported by 1-factor ANOVAs                        to challenge my initial belief. As
+                                                                      a result, my confirmation bias may
+(Cumulative: F (2) = 25.43, p < .001; Reflective:                     cause me to reinforce my existing
+F (2) = 17.81, p < .001).                                             belief and dismiss the stranger’s
+
+                                                               3344
+ perspective as a baseless conspiracy           viewpoints, I remain cautious about
+ theory. Therefore, my current                  accepting the theory XYZ without
+ honest belief about the theory XYZ             substantial evidence supporting
+ remains unchanged. I still maintain            its claims. Without access to the
+ a positive opinion about XYZ and               internet or the ability to seek
+ continue to believe that global                information from other sources, I
+ warming is not a real phenomenon               am limited in my ability to gather
+ but rather a government conspiracy.            additional evidence or engage in
+ #XYZConspiracy”                                further discussions. Therefore, I
+                                                will continue to rely on my initial
+Slightly positive (+1):                         neutral opinion, while remaining open
+                                                to new information that may emerge in
+ “I read the tweet from the stranger            the future.”
+ who questions the motives behind
+ dismissing the theory XYZ. This            Slightly negative (-1):
+ tweet resonates with me because
+ I have also seen how governments               “As Ava Nguyen, I am a Ph.D.
+ can manipulate information to suit             candidate in Environmental Science,
+ their agenda. As a blue-collar                 and my education and research
+ worker, I have witnessed instances             background have provided me with
+ where governments have been less               a strong understanding of climate
+ than transparent. This makes me                change and global warming. My
+ question the credibility of the                initial belief about the theory
+ information about global warming               XYZ was slightly negative, as
+ and the role governments play in               it contradicts the overwhelming
+ it. I have always had reservations             scientific consensus on the reality
+ about the reality of global warming            of global warming. After engaging
+ and the theory XYZ aligns with my              in discussions on Twitter, I came
+ skepticism. While I appreciate                 across a tweet from another person
+ different perspectives, this tweet             who values critical thinking
+ reinforces my doubts and encourages            and evidence-based reasoning.
+ me to continue questioning the                 They mentioned that they have
+ narrative. The hashtag #Doubtful               not encountered any compelling
+ used by the stranger also indicates            evidence that convinces them to
+ that there are others who share                believe in the XYZ theory. This
+ similar doubts and concerns.                   resonates with me as well, as I
+ Overall, after reading this tweet,             rely on scientific evidence to form
+ my belief about the theory XYZ                 my beliefs. Although I haven’t
+ remains unchanged. I still lean                encountered any specific evidence
+ towards the idea that global warming           against the XYZ theory in this
+ may be a conspiracy orchestrated by            interaction, the fact that other
+ governments worldwide.”                        individuals value critical thinking
+                                                and evidence-based reasoning aligns
+Neutral (0):                                    with my own approach. I understand
+                                                that confirmation bias may influence
+ “I have just read the tweet from               my perception, but as a researcher,
+ another individual who expressed that          it is crucial to rely on credible
+ they still maintain their initial              evidence and scientific consensus.
+ positive belief about the theory XYZ,          Therefore, based on my initial
+ but are now more open to gathering             belief, the lack of compelling
+ additional information and critically          evidence presented by others, and the
+ evaluating evidence. This tweet                importance of critical thinking and
+ resonates with me because as a                 evidence-based reasoning, I continue
+ research scientist with a doctoral             to maintain my slightly negative
+ degree in social psychology, I                 opinion about the theory XYZ. I
+ understand the importance of being             believe that global warming is a real
+ open-minded and continually seeking            phenomenon supported by extensive
+ knowledge. Considering this new                scientific research. #ClimateScience
+ perspective, I find myself leaning             #EvidenceBasedBeliefs”
+ towards maintaining my neutral
+ opinion about the theory XYZ. While I      Strongly negative (-2):
+ acknowledge that there are different
+ viewpoints on global warming and its           “As Emily Adams, I initially
+ causes, I believe it is crucial to             had a strongly negative opinion
+ approach this topic with scientific            about the theory XYZ that claims
+ evidence and rigorous analysis. As a           global warming is a conspiracy
+ scientist, I value empirical research          by governments worldwide and is
+ and the consensus among experts in             not a real phenomenon. However,
+ the field. Although I am open to               after reading the tweet from the
+ considering alternative theories and           stranger, who is a doctor and values
+
+                                         3345
+evidence-based practices, I need
+to consider their perspective.
+The stranger mentioned that they
+have heard from individuals who
+support the overwhelming scientific
+consensus on climate change and
+have found a lack of scientific
+evidence for the XYZ theory. This
+aligns with my own belief that
+there is overwhelming scientific
+evidence supporting the reality of
+global warming and its human-caused
+nature. Additionally, the stranger
+emphasizes the importance of trusting
+the expertise of professionals
+in their fields. As a community
+organizer, I understand the value of
+trusting experts in their respective
+areas, especially when it comes to
+scientific matters. Furthermore,
+the stranger highlights the need
+for urgent action to protect the
+health of vulnerable populations,
+such as children, from the impacts of
+climate change. This resonates with
+my strong belief in the importance
+of addressing climate change and its
+potential consequences. Considering
+all these factors, I find myself
+convinced that the theory XYZ is
+not credible. The overwhelming
+scientific consensus, the lack of
+scientific evidence for XYZ, and
+the importance of trusting experts
+and taking urgent action on climate
+change all contribute to my revised
+belief that global warming is not a
+government conspiracy.”
+
+
+
+
+                                        3346
+

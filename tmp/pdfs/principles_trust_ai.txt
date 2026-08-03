@@ -1,0 +1,997 @@
+nature reviews psychology                                                                                https://doi.org/10.1038/s44159-026-00562-1
+
+
+
+
+Review article                                                                                                                         Check for updates
+
+
+
+
+Principles for understanding
+trust in artificial intelligence
+Jim A. C. Everett      1
+                           , Scott Claessens1, Tim-Dorian Knöchel                1
+                                                                                     & Madeline G. Reinecke         2
+
+
+Abstract                                                                                                                Sections
+
+
+Artificial intelligence (AI) increasingly performs tasks once reserved                                                  Introduction
+
+for humans, raising questions about when, why and how people                                                            Defining ‘trust in AI’
+trust machines — and whether they should do so in the first place.                                                      Principles for understanding
+In this Review, we identify six principles that help to structure an                                                    trust in AI
+understanding of trust in AI and highlight its socially embedded                                                        Ethical considerations
+nature: that trust in AI is inferred; that trustworthiness, trust and
+                                                                                                                        Summary and future
+trusting behaviour are distinct; that trust in AI is about both morality                                                directions
+and performance; and that trust in AI is agent-specific; individually
+variable; and strategically motivated. The inferred, multidimensional,
+dynamic and contextual nature of trust in AI illustrates that ‘trust in
+AI’ is not one thing, but varies across different systems, individuals
+and contexts. We end by considering broader ethical implications of
+studying trust in AI and argue that trust in AI requires both studying
+how people think and reflecting on the kind of world that trust in AI
+serves to create.
+
+
+
+
+School of Psychology, University of Kent, Canterbury, UK. 2Uehiro Oxford Institute, University of Oxford, Oxford, UK.
+1
+
+
+  e-mail: J.A.C.Everett@kent.ac.uk
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                          388
+Review article
+
+
+Introduction                                                                    the same way, and even the same person might trust the same AI system
+Artificial intelligence (AI) systems are increasingly being used to assist —    differently in different contexts according to their strategic motiva-
+or even take over — tasks that were once the preserve of humans. It is          tions and goals. All of these factors play out against a broader ethical
+therefore no surprise that questions about trust in AI have moved to the        background concerning — perhaps paradoxically — whether trust in AI
+centre of public and scientific debate. Computer scientists are building        is a desirable goal for society.
+AI in ways they hope will mean AI can be trusted, to ensure adoption                  In this Review, we combine classic perspectives on trust with
+and drive uptake1. Psychologists are studying the antecedents of trust          the contemporary perspectives and empirical findings that are
+in AI2,3, validating self-report scales of trust in AI4,5, and exploring how    emerging in a rapidly evolving landscape of AI trust research. Trust
+people trust and use AI in applied settings6,7. Ethicists are outlining prin-   in AI has been widely considered across multiple disciplines, includ-
+ciples for ‘trustworthy AI’ to ensure that AI is safe and effective8,9, and     ing psychology, philosophy and computer science. Large-scale
+the European Union has official guidelines for building trustworthy AI10.       reviews and meta-analyses have already compiled a literature on
+     Determining when, why and how people trust machines, what                  trust in AI generally2,11–15 as well as on aversion to AI16,17, AI in moral
+trust in AI means in the first place and what kind of trust is desirable,       decision-making18,19, AI in managerial decision-making20,21 and trust
+however, is far from straightforward, in part because ‘trust’ can mean          in autonomous vehicles22. Here we take a different approach. Instead
+different things (Box 1). ‘Trust’ includes an assessment of performance         of attempting the Sisyphean task of presenting all of the available
+or reliability, but also more psychologically driven inferences about           literature in a fast-moving landscape, we identify guiding principles
+intentions and good motivations. ‘Trustworthiness’ is both a normative          to structure insight into the topic and understand how it is changing.
+assessment of whether trust is warranted and a psychologically inferred         First, we discuss the definition of ‘trust in AI’. Next, we combine insights
+process that leads to an attitude and behaviour of trust. People do not         from psychology and other disciplines to identify six principles that
+trust all AI systems equally, not all people trust the same AI system in        can guide an understanding of trust in AI. These principles are not
+                                                                                intended as hard-and-fast rules, but as a framework for considering
+                                                                                trust in AI and avenues for future research. Fundamentally, trust in AI is
+ Box 1 | Trust terminology                                                      not a single attitude or feature, but a dynamic, context-dependent and
+                                                                                socially embedded process. We then consider the ethical implications
+ Actual trustworthiness                                                         of studying trust in AI and conclude with directions for future research.
+ Trustworthiness based on objective characteristics that make
+ someone or something worthy of trust.                                          Defining ‘trust in AI’
+                                                                                ‘Artificial intelligence’ can mean different things to different people.
+ Perceived trustworthiness                                                      Here we adopt a typical understanding of AI as referring to machines or
+ Trustworthiness based on the perception of characteristics that                systems that use any kind of algorithm or statistical model to perform
+ make someone or something worthy of trust.                                     tasks or make decisions that usually require human intelligence23.
+                                                                                      ‘Trust in AI’ can also mean different things. For example, when
+ Attitudinal trust                                                              someone says they trust a specific AI tool, they might be expressing a
+ Trust as an attitude that reflects a willingness to rely on someone or         belief that the AI has good performance and does things reliably and
+ something in a situation characterized by uncertainty.                         competently; they could mean that they think they could rely on the
+                                                                                AI in cases of uncertainty; they could mean something richer, as when
+ Cognitive trust                                                                people say they trust another person, meaning that they think the AI is
+ Trust as rationally concluded on the basis of evidence of someone’s            sincere or ‘good’ in some way; or they could mean that they actually use
+ or something’s capacities.                                                     the AI tool and that it has some influence on their behaviour.
+                                                                                      In the psychology literature, trust is usually understood as “the
+ Affective trust                                                                willingness of a party to be vulnerable to the actions of another party”24,
+ Trust based on an emotional response to someone or something.                  or “the willingness of a party to be vulnerable to the actions of another
+                                                                                party based on the expectation that the other will perform a particular
+ Performance trust                                                              action”25. Drawing on these ideas, one of the most frequently cited
+ Trust in the reliability, ability and performance of someone or                definitions of ‘trust in AI’ defines trust as “the attitude that an agent
+ something.                                                                     will help achieve an individual’s goals in a situation characterized by
+                                                                                uncertainty and vulnerability”26.
+ Moral trust                                                                          Although researchers and the public discuss trust in AI, some
+ Trust in someone or something to be ethical, sincere, genuine and              philosophers have argued that trust in AI is “conceptual nonsense”27,
+ authentic, follow moral norms and principles, and seek to do good.             because “people trust people, not technology”28. The standard philo-
+                                                                                sophical claim (which comes out of decades of philosophical work on
+ Calibrated trust                                                               trust29,30) is that genuine trust requires rich interpersonal attitudes
+ Trust that is appropriate to the degree to which the object of trust is        between a trustor and a trustee. These depend on agentic capacities,
+ trustworthy.                                                                   such as being motivated by good will or responding to normative
+                                                                                commitments31–33. Therefore, although AI can be relied upon just as
+ Trusting behaviour                                                             someone might be able to rely on a chair or a computer, it does not
+ Behaviour that reflects a trusting attitude towards someone or                 make sense to talk about genuinely trusting AI, because AI simply does
+ something.                                                                     not have the kind of mental states and motivations required for the
+                                                                                interpersonal relationship of trust31,32. According to such arguments,
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                             389
+Review article
+
+
+trust in AI is merely reliance on AI, and the idea of trust in AI is mistaken,   trustworthiness is “an objective attribute of the trustee”, distinct from
+misleading or even potentially dangerous27,32–34.                                trust, which is “a subjective attitude and attribute of the vulnerable
+      Even if these philosophical arguments are correct, and AI is not           party”45. By contrast, other work treats trustworthiness as a psychologi-
+the kind of thing that could genuinely participate in an interpersonal           cal and inferred characteristic. For example, much of the psychological
+relationship of trust, whether people nevertheless treat AI systems              literature on trust in AI draws on an influential model of organizational
+as social agents that can be meaningfully trusted is an entirely sepa-           trust25 and treats trustworthiness as a perceived assessment of the
+rate question. Indeed, evidence suggests that they do. In line with the          characteristics of the agent that forms the basis of trust3,25,26.
+­‘computers as social actors’ framework35–37, people apply social rules                 Importantly, whether a system objectively has characteristics that
+ and expectations to machines38 and perceive computer personalities39.           make it worthy of trust (actual trustworthiness) and whether people
+ People also anthropomorphize AI in much the same way that they                  perceive that the system has those characteristics (perceived trustwor-
+ anthropomorphize other non-human agents40 and align their moral                 thiness) are separate. A system can be actually trustworthy while not
+ character judgements with those expressed by AI avatars in virtual              being perceived as trustworthy, and a system can lack actual trustwor-
+ reality, just as they do when making moral judgements about a group             thiness but still be perceived as trustworthy46,47. Thus, although engi-
+ of other humans41. Most pertinently, evidence suggests that people              neers might be able to program AI systems that are objectively safe and
+ do think that AI is the kind of thing that can have good intentions and         reliable, they cannot program trust. Indeed, trust is not something that
+ be trusted, like other social agents, with participants reporting that          can be identified in computer code or governance regulations because
+ it makes sense and is natural to say “I trust the AI” but not “I trust the      it is a product of human impression formation. These impressions are
+ moon” or “I trust the number five”42.                                           influenced by objective features of the system, but these objective
+      In sum, ‘trust in AI’ can mean different things, and is perhaps even,      features are interpreted and inferred by humans.
+ strictly speaking, a conceptual mistake32. But it is also psychologically              Psychology research shows that people form judgements of com-
+ meaningful, intensely debated and therefore pragmatically ­indispensable        petence and morality from minimal cues to build an overall picture of
+ for understanding the ways in which people interact with AI systems.            someone’s character48,49. These inferences are made heuristically and
+                                                                                 often automatically50,51 and people can be misled by irrelevant features
+Principles for understanding trust in AI                                         such as attractiveness52. When AI systems are posited to be and treated
+In this section we identify six principles that can guide understanding          as social or quasi-social actors, people extend these same inferential
+of trust in AI. First, we discuss how trust in AI cannot be engineered,          mechanisms to them53. Thus, people form implicit and explicit impres-
+into a machine because it is inferred. Second, we highlight how trust-           sions of AI54 on the basis of limited information that is not necessarily
+worthiness, trust and trusting behaviour are connected but distinct              driven by an AI’s actual trustworthiness. Even the assessment of seem-
+constructs. Third, we show that trust in AI is multidimensional and              ingly objective AI system characteristics, such as its accuracy, varies
+includes assumptions of competence and ability as well as broader                between observers55.
+perceptions of the system’s morality. Fourth, we show that the richness                 One example of a mismatch between actual trustworthiness and
+of understanding trust in AI is likely to come not from generalities, but        perceived trustworthiness comes from work on interpretability. Many
+from recognizing the agent-specificity of trust in AI: just as people do         contemporary AI systems can work as ‘black boxes’: with internal pro-
+not trust all humans in the same way, people do not trust all AI systems         cesses that are largely inscrutable. This lack of transparency has raised
+in the same way. Fifth, we discuss how even the same AI system can be            concerns about the ethical risks and safety of using such systems, which
+trusted in different ways by different people, because trust is influ-           has led to a focus on designing explainable AI56. But interpretability will
+enced by various individual and cultural differences. Finally, and most          not necessarily increase trust in practice, because trust is an inferred
+underexplored in the current literature, we discuss how people might             process, not a feature of the machine. Indeed, the evidence on whether
+trust AI systems differently depending on their specific strategic goals         interpretability actually increases trust in AI is mixed57–60. These results
+and motivations in different kinds of interaction.                               highlight the tension between what should make a system trustworthy
+                                                                                 and what people actually trust.
+Trust in AI is inferred                                                                 In sum, developers can focus on building normatively trustworthy
+Trustworthiness can be understood as a normative, evaluative q   ­ uestion:      systems, which is likely to increase people’s trust in their products.
+is this entity worthy of trust? In the context of AI, the normative aspect       However, these points are distinct: the fact that something has char-
+of trustworthiness often leads to a prevailing assumption in AI eth-             acteristics that increase its actual trustworthiness does not guarantee
+ics and governance that trustworthiness is something that can and                that people will perceive it as such, and the fact that people perceive
+should be engineered into machines to enhance trust. The European                a system as trustworthy does not mean that it is actually trustworthy.
+Commission’s ‘Ethics guidelines for trustworthy AI’ has argued that
+“trustworthiness is a prerequisite for people and societies to develop,          Trustworthiness, trust and trusting behaviour are distinct
+deploy and use AI systems”10. Scholars have highlighted numerous prin-           Most psychology research on trust in AI draws on the tripartite model of
+ciples for what would make AI trustworthy43, including the European              interpersonal trust25, which has since been adapted to the AI context26.
+Commission guidelines positing that a trustworthy system is one that             This model can be drawn on to distinguish between perceived trustwor-
+is lawful, ethical and robust. This framing assumes that trustworthiness         thiness, trust and trusting behaviour: an assessment of trustworthiness
+is something that can be built. Consequently, computer scientists,               leads to an attitude of trust, which can in turn translate to a behaviour of
+developers and regulators have become interested in understanding                trust (Fig. 1). Correspondingly, trustworthiness is typically understood
+how these principles can be translated into practice1,44.                        as the basis of trust, or as a perceived assessment of the characteris-
+      Some work treats trustworthiness as an objective ­characteristic.          tics of the agent that forms the basis of trust3,25,26, whereas trust is an
+For example, in AI ethics, trustworthiness is conceptualized as a                attitude or belief indicating a willingness to rely on the agent25. Some
+­normative question that refers to capacities of the system, such that           research subdivides this attitude or belief further, and distinguishes
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                              390
+Review article
+
+
+                                                                  Strategic goals and motivations
+
+                 Actual trustworthiness           Perceived trustworthiness                       Trust                           Trusting behaviour
+
+                   Objective attribute               Subjective attribute                        Attitude                                Behaviour
+
+                Does this system actually            Do I think this system               Am I willing to rely on              Will I actually rely on this
+                  deserve users' trust?              deserves users' trust?                   this system?                       system in practice?
+
+
+                                    Impression formation                 Propensity to trust                Perceived risks and stakes
+
+Fig. 1 | Trustworthiness, trust and trusting behaviour. The relationship between trustworthiness, trust and trusting behaviour as typically understood, based on the
+tripartite model of trust25 and its adaptation to trust in AI26,47.
+
+
+
+
+rational trust that is based on evidence of the other person’s capaci-                moving from attitudes to behaviour25, and researchers have long known
+ties (cognitive trust) from a more irrational expression of trust that is             that behaviour does not always directly follow from attitudes76,77.
+based on an emotional response to the other person (affective trust)61.               Indeed, much research has highlighted situations in which people
+      However, the distinction between trustworthiness and attitudinal                report that they trust an AI system but do not actually use the technol-
+trust is complicated by how the latter is typically measured. Although                ogy in practice47,63,78. This disconnect between trusting attitudes and
+attitudinal trust can be measured by direct self-report with questions                behaviour might occur when people are anxious about new technolo-
+such as “Do you trust ChatGPT?”, it is also measured by a plethora of                 gies or perceive high levels of risk in using the AI system79–81. There is
+multi-item self-report scales (Table 1) that often ask participants both              also emerging evidence for an opposite and less explored pattern: that
+about whether they trust AI and about the perceived capabilities or                   people might hold explicit attitudes about AI being untrustworthy, but
+trustworthiness of the system (for example, “Is ChatGPT reliable?”)4,5.               still engage in trusting behaviour such as updating their judgements
+Such questions are clearly about the characteristics that would form                  on the basis of AI moral advice82. A cross-cultural study presented in
+a basis of trust (perceived trustworthiness), but they also reflect an                a preprint found that people reported trusting AI moral advisors less
+overall attitude that can be referred to as trust itself.                             than human advisors, but updated their judgements similarly on the
+      Indeed, it is difficult — and perhaps not even desirable — to distin-           basis of advice from AI and humans66. These findings underscore the
+guish expectations of the capacities of a system from trust simpliciter4.             need for conceptual clarity in the measurement and discussion of trust
+Often, attitudinal trust is not separate from an assessment of perfor-                in AI, as well as consideration of how increasing use of AI could reshape
+mance, and the performance assessment itself can be meaningfully                      classic debates about attitude–behaviour mismatches.
+understood as trust4. At the same time, however, it is clear that attitu-                   In sum, ‘trust’ can refer to an assessment of the capacities of an
+dinal trust is not identical to perceived trustworthiness, because even               agent, an expression of a willingness to rely on it in cases of uncertainty,
+perceptions of an AI’s ability do not perfectly correlate with ratings of             and a behavioural manifestation. All these meanings are justifiably
+attitudinal trust and other factors, such as general propensity to trust62.           referred to under the umbrella of ‘trust’ and are included in measures
+‘Trust’ can therefore refer to both an assessment of the capacities of                of trust, but they can also meaningfully diverge (Fig. 2). The difficul-
+the AI system and a self-reported willingness to rely on the system.                  ties associated with broad and competing understandings of trust and
+      Trust in AI can also manifest behaviourally63. Trusting behaviour is            trustworthiness is a barrier to understanding in the literature on trust
+captured with behavioural measures such as people’s decisions to rely                 in AI47,63,78. It is therefore important that researchers are clear about
+on an AI system64, delegate to a system65 or update their judgements                  what is meant by ‘trust’ (assessments of trustworthiness or capacities,
+following a system’s recommendations66. The latter is often discussed                 a self-reported attitude about trust or trusting behaviour).
+as persuasion, not a manifestation of behavioural trust itself67,68, high-
+lighting a potential jingle-jangle fallacy69–71 (using the same term to               Trust in AI is about both morality and performance
+mean different things and/or different terms to mean similar things).                 When a user asks themselves whether they should trust an AI system,
+Some researchers have measured behavioural trust in AI by adapting                    in one sense they are simply asking “Can I rely on this system to func-
+the incentivized trust game72 from experimental economics in which                    tion reliably and accurately?”. This dimension of trust that focuses
+one player (trustor) sends some amount of money to another player                     on reliability, ability or performance (performance trust) has been
+(trustee), who then decides how much money to return to the first                     suggested to be the primary driver of trust in AI15,26,83. Indeed, the per-
+player. In the adapted game, an AI is placed in the position of the trustee           ceived performance capability of an AI system is a key predictor of
+instead of a human73–75. Although the trust game has been widely used                 trust in that system83, and trust in an AI system quickly declines when
+as a behavioural measure of trust (how much the trustor gives to the                  algorithms are shown to perform incorrectly, especially on tasks that
+trustee) and trustworthiness (how much the trustee returns) between                   are considered easy84,85.
+humans, AI systems are unlikely to value money in the same way that                        It might have made sense to focus on performance trust for early
+humans do, which highlights potential challenges with applying stand-                 AI systems that had limited functionality. However, the rise of more
+ard behavioural methods for assessing human–human interactions to                     complex and socially situated AI systems has made clear that thinking
+human–AI interactions.                                                                about trust in AI requires the consideration of more than performance
+      According to the classic model of interpersonal trust, perceived                capabilities. For example, with enhanced sensors, autonomous weap-
+trustworthiness leads to attitudinal trust, which then leads to trust-                ons could be more efficient than humans on the battlefield. However,
+ing behaviour25 (with actual trustworthiness feeding into perceived                   people strongly distrust and disapprove of autonomous weapons being
+trustworthiness). But this is far from a rule. Risk and stakes play a part in         used in military strikes, largely because they are seen as less moral86.
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                                      391
+Review article
+
+
+Table 1 | Selected scales used to measure trust in AI
+
+ Scale name         Number     Items          Subscales or          Example items                                          Internal        Selected other scale
+                    of items   relating to    subdimensions                                                                consistencya    validationb
+                               performance
+                               and morality
+
+ System             15         Noc            Performance           “The system performs the task accurately”              α = 0.87–0.95   Reliability (Cronbach’s
+ trustworthiness                                                                                                                           alpha)
+ scale185                                     Purpose               “The system is programmed specifically to              α = 0.80–0.90
+                                                                    complete this task”                                                    Structural validity (EFA; CFA)
+                                                                                                                                           Construct validity
+                                              Process               “I understand how the system is supposed               α = 0.82–0.92   (convergent validity;
+                                                                    to work”                                                               divergent validity;
+                                              –                     –                                                      Overall:        criterion validity through
+                                                                                                                                           experimental manipulation)
+                                                                                                                           Not assessed
+ Human–             12         Yes            Benevolence           “I believe that (—) will act in my best interest”      α = 0.83–0.84   Reliability (Cronbach’s
+ computer                                                                                                                                  alpha; CR)
+ trust scale186                               Competence            “I think that (—) is competent and effective in (—)”   α = 0.84–0.88
+                                                                                                                                           Structural validity (partial
+                                              Perceived risk        “I believe that there could be negative                α = 0.86–0.90   least square structural
+                                                                    consequences when using (—)”                                           equation modelling)
+                                              Trust                 “I can trust the information presented to              α = 0.84–0.89
+                                                                    me by (—)”
+                                              –                     –                                                      Overall:
+                                                                                                                           Not assessed
+ Trust in auto­     12         Yes            None                  “The system is deceptive”                              Not assessed    Structural validity
+ mation scale5                                                      “I am confident in the system” (reverse coded)                         (PCA; cluster analysis)
+
+ Trust in           19         No             Reliability/          “The system is capable of interpreting                 ωt = 0.92       Reliability (omega;
+ automation                                   competence            situations correctly”                                                  Cronbach’s alpha;
+ questionnaire187                                                                                                                          Spearman–Brown
+                                              Understandability/    “I was able to understand why things                   ωt = 0.81       coefficient)
+                                              predictability        happened”
+                                                                                                                                           Structural validity (EFA with
+                                              Familiarity           “I have already used similar systems”                  rSB = 0.83      parallel analysis; model fit
+                                                                                                                                           evaluated with CFA-type
+                                              Intention of          “The developers are trustworthy”                       rSB = 0.79      indices)
+                                              developers
+                                                                                                                                           Construct validity
+                                              Propensity to trust   “I rather trust a system than I mistrust it”           ωt = 0.78       (convergent validity
+                                                                                                                                           with single trust item;
+                                              [General] trust in    “I trust the system”                                   α = 0.63–0.85   criterion validity through
+                                              automation                                                                                   experimental manipulation;
+                                              –                     –                                                      Overall:        predictive validity)
+                                                                                                                           Not assessed
+ Trust attitude     16         No             Understandability     “I understand how the AI system works and              α = 0.79        Reliability (Cronbach’s
+ measurement                                                        I feel confident I will be able to use it in                           alpha; omega; test–retest
+ instrument188                                                      the future”                                                            reliability; CR)
+                                              Technical             “The AI system uses appropriate methods to             α = 0.84        Structural validity (CFA)
+                                              competence            get results based on the information I input”                          Construct validity (content
+                                                                                                                                           validity through experts and
+                                              Reliability           “The AI system consistently provides the               α = 0.72        content validity index)
+                                                                    results it is expected to produce”
+                                              Helpfulness           “When I need help, the AI system responds to           α = 0.87
+                                                                    my needs effectively and responsively”
+                                              Personal              “I like using the AI system because it suits me,       α = 0.84
+                                              attachment            and always want to use it”
+                                              User autonomy         “I feel in control when operating the various          α = 0.83
+                                                                    functions and features of the AI system”
+                                              Faith                 “When I am unsure about the AI system’s result,        α = 0.83
+                                                                    I believe in the AI system rather than myself”
+                                              Institutional         “I feel assured using the AI system because            α = 0.91
+                                              credibility           it is made by a reputable institution and
+                                                                    therefore already went through a credible
+                                                                    regulation”
+                                              –                     –                                                      Overall:
+                                                                                                                           α = 0.95
+
+
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                                            392
+Review article
+
+
+Table 1 (continued) | Selected scales used to measure trust in AI
+
+ Scale name          Number     Items          Subscales or        Example items                                            Internal       Selected other scale
+                     of items   relating to    subdimensions                                                                consistencya   validationb
+                                performance
+                                and morality
+
+ Human–              25         No             Reliability         “I can rely on the system to function properly”          α = 0.85       Reliability (Cronbach’s
+ computer                                                                                                                                  alpha)
+ trust189                                      Technical           “The system uses appropriate methods to                  α = 0.74
+                                               competence          reach decisions”                                                        Structural validity (PCA)
+                                                                                                                                           Construct validity (content
+                                               Understandability   “It is easy to follow what the system does”              α = 0.84       validity through nominal
+                                               Faith               “I believe advice from the system even when I            α = 0.88       group technique)
+                                                                   don’t know for certain that it is correct”                              Other (inter-rater reliability)
+
+                                               Personal            “I like using the system for decision making”            α = 0.90
+                                               attachment
+                                               –                   –                                                        Overall:
+                                                                                                                            α = 0.94
+ Multi-              16         Yes            Performance         “Can count on”                                           α = 0.92       Reliability (Cronbach’s
+ dimensional                                   dimension:                                                                                  alpha)
+ measure of                                    reliability                                                                                 Structural validity (PCA)
+ trust4
+                                               Performance         “Skilled”                                                α = 0.92       Construct validity (content
+                                               dimension:                                                                                  validity through sorting task;
+                                               capability                                                                                  criterion validity through
+                                                                                                                                           experimental manipulation)
+                                               Moral dimension:    “Authentic”                                              α = 0.79
+                                               sincerity
+                                               Moral dimension:    “Has integrity”                                          α = 0.81
+                                               ethicality
+                                               –                                                                            Overall:
+                                                                                                                            Not assessed
+ Short trust in      3          No             No                  “I am confident in the AI assistant”                     Overall:       Reliability (Cronbach’s
+ automation                                                        “The AI assistant is reliable”                           α = 0.97       alpha)
+ scale190                                                                                                                                  Construct validity
+                                                                                                                                           (convergent validity
+                                                                                                                                           with other scales;
+                                                                                                                                           criterion validity through
+                                                                                                                                           experimental manipulation;
+                                                                                                                                           predictive validity)
+ Trust               40         Yes            No                  “What percentage of the time will this                   Not assessed   Structural validity (PCA)
+ perception                                                        robot (...) function successfully or protect                            Construct validity
+ scale —                                                           people”                                                                 (content validity through
+ human–robot                                                                                                                               experts and content
+ interaction191d                                                                                                                           validity ratio; convergent
+                                                                                                                                           validity with other scales;
+                                                                                                                                           criterion validity through
+                                                                                                                                           experimental manipulation)
+ AI trust score192   4          No             No                  “[The AI feature] will help me do my job more            Overall:       Reliability (Cronbach’s alpha)
+                                                                   efficiently and effectively”                             α = 0.70       Structural validity (EFA)
+                                                                   “I understand how and when to use [the AI                               Construct validity
+                                                                   feature]”                                                               (convergent validity;
+                                                                                                                                           content validity through
+                                                                                                                                           qualitative data; predictive
+                                                                                                                                           validity)
+ Human–              9          Yes            Benevolence         “I believe that artificial intelligence                  CR = 0.81      Reliability (Cronbach’s
+ generative                                                        (such as ChatGPT, ERNIE Bo, and so on)                                  alpha; CR)
+ artificial                                                        acts in my best interest”                                               Structural validity
+ intelligence                                                                                                                              (ESEM; CFA)
+ trust scale193                                Competence          “I believe that artificial intelligence (…) is capable   CR = 0.81
+                                                                   of effectively supporting my learning process”                          Construct validity
+                                                                                                                                           (convergent validity;
+                                               Reciprocity         “If I use artificial intelligence (…), I believe I       CR = 0.81      criterion validity; content
+                                                                   can fully rely on it”                                                   validity through translations)
+                                               –                   –                                                        Overall:
+                                                                                                                            α = 0.89;
+                                                                                                                            CR = 0.93
+
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                                             393
+Review article
+
+
+Table 1 (continued) | Selected scales used to measure trust in AI
+
+ Scale name            Number        Items               Subscales or              Example items                                             Internal            Selected other scale
+                       of items      relating to         subdimensions                                                                       consistencya        validationb
+                                     performance
+                                     and morality
+
+ Trust in AI           30            Yes                 Global trust              “I trust %system%”                                        α = 0.92–0.94       Reliability (Cronbach’s
+ scale194                                                                                                                                                        alpha)
+                                                         Vigilance                 “I am careful when using %system%”                        α = 0.90–0.91
+                                                                                                                                                                 Structural validity (EFA; CFA)
+                                                         Unbiasedness              “%system% was designed to be responsible”                 α = 0.79–0.90       Construct validity
+                                                         Integrity                 “%system% is sincere”                                     α = 0.91–0.93       (convergent validity)
+                                                                                                                                                                 Other (measurement
+                                                         Transparency              “The inner workings of %system% are                       α = 0.84–0.86       invariance)
+                                                                                   comprehensible”
+                                                         Ability                   “%system% is capable”                                     α = 0.95–0.96
+                                                         –                         –                                                         Overall:
+                                                                                                                                             Not assessed
+α, Cronbach’s alpha; rSB, Spearman–Brown coefficient; ωt, omega total; CR, composite reliability; EFA, exploratory factor analysis; CFA, confirmatory factor analysis; ESEM, exploratory
+structural equation modelling; PCA, principal components analysis. aAlthough we report internal consistency measurements taken from the cited publications, it is important to place these
+values within our broader arguments about the agent-specificity, multi-dimensionality and even temporal validity of trust in AI. Some scales have been developed with a specific AI type in
+mind (for example, chatbots) and might not show the same internal consistency for other types of AI, and reliability estimates for scales with only performance items may be higher than those
+with moral trust items. bThere are different methods and approaches to scale validation, and similar terms can be used in different ways (for example, convergent validity typically refers to
+whether scores on a scale converge with other established scales, but in some work it can instead be used to refer to whether the individual subscales are correlated). We present a selection
+of validation approaches often used in order to highlight their diversity, not to critique or compare scales. cThe system trustworthiness scale follows the adaptation of the tripartite trust model
+based on ability, benevolence and integrity25 to distinguish trust in AI based on performance, purpose and process26. However, the items in the purpose subscale here are more focused
+on whether the machine is designed for a specific purpose by its developers, not whether the system necessarily has good intentions or morality. A system can be designed with unethical
+intentions in mind and used in that way, but that does not mean the system would be (perceived as) being benevolent or having a good purpose. dThis scale includes a short 14-item version
+which can be used to measure change in trust over time or in an assessment with multiple trials, which focuses on the functional capabilities of the system.
+
+
+     According to classic tripartite models of human interpersonal                                  generative large language model (LLM) products such as ChatGPT, given
+trust, trust and trustworthiness are based not only on perceived ability,                           their reputation for ‘lying’ to users by producing factually false outputs93.
+but also on the integrity and benevolence of the trustee25. Others have                                  Meta-analytic work shows that both performance and perceptions
+identified competence and responsibility87, ability and intentions88,89,                            of benevolent rule-following influence trust in AI systems2. Other work
+and expertise and motivation to lie90 as dimensions of trust, in line with                          shows that the perceived ability, benevolence and integrity of a virtual
+theories of impression formation showing that people care not only                                  chatbot agent form a latent factor of trustworthiness that influences
+about whether a person is competent, but also whether they are warm,                                trust3, that the perceived authenticity of healthcare chatbots influences
+moral and trustworthy48,50.                                                                         trust94, and that people perceive AI as more trustworthy both when its
+     Trust in AI depends not only on perceptions of performance                                     morality increases and when its performance increases95.
+or ability (“Does it get the job done?”), but also on concerns about                                     Although there is moderate consensus that trust in AI can be driven
+moral trust4, or the system’s purpose and process26 (“Is it ‘good’?”).                              by both performance and moral elements, the literature does not
+Research on trust in AI does not consistently distinguish between                                   consistently distinguish between performance and moral dimensions
+performance and ability versus purpose and process (or morality)15,91,92.                           of trust15,91,92. Similarly, many scales of trust in AI include items related
+People can, do and should care about the ability and performance of                                 to both morality and performance, broadly construed, although they
+AI systems4,26,83 because these characteristics enable the truster to                               are rarely referred to with the same terminology and are not always
+have confidence in the trustee’s skills. But people also can, do and                                explicitly distinguished in separate dimensions or subscales (Table 1).
+should care about the system’s process and purpose26, benevolence                                   For example, the widely used trust in automation scale includes items
+and integrity25, and ethicality4; that is, whether the perceived inten-                             related to both performance (for example, “The system is reliable”) and
+tions and motivations of the trusted system are good. An AI system can                              morality (for example, “The system has integrity”) within a single scale5.
+be highly capable but deceptive, reliable but unethical, or ethically                                    In sum, both morality and performance drive trust in AI, but they
+aligned yet unreliable.                                                                             are also distinct: there is no guarantee that an AI that is more intelligent
+     One multidimensional model of trust in AI distinguishes between                                will necessarily be more moral95–97, and no guarantee that perceiv-
+performance trust and moral trust4. As a psychological inference, moral                             ing an AI as more reliable means that it is perceived as more ethical,
+trust does not require that the AI is a moral agent or genuinely has benevo-                        given the multidimensional nature of trust4,25,98. It will be important
+lence, integrity or honesty. Instead, moral trust depends on whether                                for future research to investigate the independent — and perhaps even
+people treat the AI as a moral agent and evaluate it not only for its per-                          competing — roles that perceptions of performance and morality play
+formance but also for its potential to do harm. Thus, moral trust involves                          in shaping trust in AI.
+assessing whether the AI is ethical (follows moral norms and adheres to
+principles that seek to do good) and whether it is sincere (is genuine and                          Trust in AI is agent-specific
+authentic). Sincerity has received less attention than integrity and benevo-                        Much existing work has focused on people’s trust in AI in general, and
+lence (here broadly analogous to the ethical subdimension) in work on                               have identified principles of trustworthy AI that should be generally appli-
+interpersonal trust4, and was potentially less relevant for early algorithmic                       cable to any autonomous system or agent8,9. However, there are many
+systems. However, sincerity is increasingly important in discussions of                             different types of AI system with different characteristics that are used for
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                                                                     394
+Review article
+
+
+
+                                                                                                                        (5) Trust
+
+                               (1) Trustworthiness                                                   (4) Trust
+
+                                                                (2) Perceived trustworthiness
+
+                                                                        Performance
+                         Actual trustworthiness                                                            (3) Attitudinal                 Trusting behaviour
+                                                                                                                trust
+                                                                           Morality
+
+
+
+
+Fig. 2 | The meaning of ‘trust in AI’. (1) Trustworthiness can refer to an actual        measured by explicit questions such as “I can trust the system”61. (4) Trust can
+assessment of whether the system is deserving of trust1,9,21,44 or a perception of       be an attitude reflecting or including the perception of the system’s capabilities
+whether the system deserves trust12. (2) Perceived trustworthiness can be driven         that would enable someone to rely on it in a situation of uncertainty, measured by
+by expectations of both performance (for example, reliability or capability) and         questions such as “The system is reliable” and “The system is ethical”3,61. (5) Trust
+morality (for example, ethicality, sincerity or benevolence)3,13,82, which can also      can be used broadly to refer to all of the psychological aspects of trust, including
+be called bases of trust. (3) Trust can be an attitude reflecting a willingness to       an assessment of the system, a self-reported willingness to rely on the system and
+rely on another in a situation characterized by uncertainty (attitudinal trust)11,12,    a behaviour, distinct only from actual trustworthiness4,34,45.
+
+
+
+
+different purposes, and it is far from clear that people’s trust in general AI                Moreover, when AI systems are designed for different contexts, their
+develops and extends in the same way across, for instance, GPS naviga-                  perceived capabilities might or might not align with the traits that are
+tion systems, LLM chatbots and AIs used in drone warfare. Moreover,                     expected for that specific context. For example, a survey of 10,000 par-
+variables that are known to influence trust in AI in general (such as trans-            ticipants across 20 countries found that people were more fearful of AI
+parency or interpretability56–59,99 and degree of anthropomorphism100,101)              the more their expectations about its abilities were misaligned with the
+might have different effects on trust for different systems. For example,               abilities required for the occupation in which it was being deployed105.
+­better interpretability enabling a human to evaluate a machine’s internal              Thus, trust in different AI systems is not only dependent on which
+ ­processes is likely to be more important for trust in an AI system that               ­capacities they have, but on how these capacities match the context.
+  makes consequential decisions about parole recommendations than                             In sum, although much existing work has focused on trust in
+  for an AI system such as DALL-E that creates images57.                                 AI as a broad umbrella category, research shows that trust in AI is
+       Given this variability in AI systems, the tendency to generalize                  agent-specific. People trust specific AI systems differently depending
+  across empirical findings has been argued to be one of the greatest                    on their particular functions, capacities and domains of application.
+  challenges in the study of trust in AI45; the question ‘Do people trust
+  AI?’ must be qualified: ‘Trust which AI to do what?’ For example, a                   Trust in AI is individually variable
+  large global survey (n = 48,340) found that although almost half of                   People differ in their general propensity to trust others (for example,
+  respondents reported being willing to trust an AI overall, there were                 their agreement with the statement “most people can be counted on
+  notable differences in their willingness to trust AI built for specific               to do what they promise to do”), and this disposition tends to be more
+  contexts102, such that people trusted healthcare AI more than genera-                 trusting in collectivist societies106. Such dispositional tendencies pro-
+  tive AI and AI used for human resource management. Other empirical                    vide a foundation for how individuals form trust judgements towards
+  studies show that people are more averse to machines making moral                     both humans and non-humans. However, the individual propensity to
+  decisions than to machines making other kinds of decision103, and                     trust automation (defined as a general tendency to trust technologies
+  people even trust AI systems differently based on the AI’s recom-                     such as robots, autonomous vehicles and AI-based systems) is corre-
+  mendations in moral dilemmas66,104. Thus, people’s ratings of trust in                lated with, but conceptually distinct from, the propensity to trust other
+  AI generally can differ substantially from their rated trust in specific              humans107. Specifically, it has been suggested that the propensity to
+  AI applications.                                                                      trust other humans forms the broader dispositional basis from which
+       The agent-specificity of trust in AI means not only that people trust            trust in automated technology emerges107; this hierarchical relationship
+  systems differently depending on their characteristics and domain                     is supported by moderate correlations between the two constructs
+  of use, but also that there are different bases of trust for different                in England (r ≈ 0.45; but see ref. 108 for more modest correlations in
+  systems. For example, a meta-analysis found that AI performance                       Germany and Singapore).
+  predicted trust across five categories of AI, but the performance of                       Further large-scale evidence demonstrates the heterogeneity of
+  the system was relatively more predictive of trust in general algo-                   individuals’ trust in artificial systems. A systematic review of over 500
+  rithms and automated vehicles than of trust in socially situated robots               empirical studies across 62 countries identified a range of individual
+  and chatbots2. Similarly, according to a non-peer-reviewed preprint,                  characteristics (for example, personality traits, self-efficacy, tech-
+  although performance and moral indicators were positively related to                  nological experience and risk orientation) as being among the most
+  overall trust across 20 AI systems, their relative importance varied such             consistent antecedents of trust in AI12. In general, people high in extra-
+  that performance was a stronger indicator of trust for some systems                   version, openness and agreeableness tend to trust different AI s­ ystems
+  (such as Google Maps AI), whereas morality was a stronger indicator                   more readily109. For example, people higher in extraversion report
+  of trust for others (such as autonomous killer drones)98.                             greater trust in AI-enabled user interfaces110; people higher in openness
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                                              395
+Review article
+
+
+report greater trust in robots111 and autonomous vehicles112; and people         such biases even affect how people perceive risk122. In particular, people
+higher in agreeableness report greater trust in conversational AI113. It is      often exhibit motivated social cognition: they act less like scientists seek-
+therefore possible to identify personality profiles for potential users of       ing the truth and more like lawyers confirming existing intuitions123–125.
+autonomous vehicles114. In addition, people with higher AI competence            Applied to trust in AI, such motivated social cognition suggests that an
+self-report more trust in AI in general115, whereas people with higher           individual might trust even the same AI differently depending on their
+attachment anxiety report lower trust in different AI systems116.                strategic goals and motivations in a particular situation.
+       Other individual difference variables, such as age and gender,                   AI products such as ChatGPT or ‘AI mode’ for Google Search might
+have also been examined as predictors of trust in artificial systems.            be intended to provide information, even if there are reasons to doubt the
+However, meta-analytic evidence reveals inconsistencies or even null             reliability of their answers93. How people seek out and use information
+effects across studies2,12. This variation in the literature might reflect       can be influenced by strategic motivations, biases or demands that are
+the fact that trust in AI is agent-specific. For instance, women trusted         separate from the system itself. For instance, trust in AI is more likely when
+an autonomous ‘robo-cop’ more than did men117, whereas a study of                there are higher task demands that reduce cognitive resources126,127. This
+older adults’ acceptance of ‘assistive social robots’ showed the opposite        finding dovetails with an extensive literature on confirmation biases128,
+gender effect (more trust among men than women)118.                              according to which people pay more attention to information that
+       Effects of age and gender also vary in size across cultures119. Indeed,   favours their beliefs129 and neglect information that undermines their
+there are robust cross-cultural differences in how people trust AI. For          initial view130. In the same way, people tend to search for information with
+example, one systematic review found striking variation across coun-             AI in biased ways that can foster inaccurate beliefs131. A preprint suggests
+tries’ average trust in AI systems, with scores ranging from 47.39 in Spain      that these biases can be exacerbated by ‘sycophantic’ AI tools, which are
+to 79.80 in Malaysia (on a standardized scale from 0–100, with 100 indi-         also seen as more intelligent and moral132; other work finds that people
+cating complete trust)12. These results reveal that global trust in AI is far    are persuaded by AI giving moral advice in the absence of good reasons,
+from uniform. Participants in many Asian and Middle Eastern nations              as if they are applying a heuristic of ‘this advice seems good enough’82.
+(including Malaysia, Singapore and Iraq) reported higher baseline trust                 There are reasons to expect that people might seek out and trust
+than participants in Western European and East Asian nations (such               AI in motivated ways in other cases beyond information retrieval.
+as Germany, Spain and Japan). Participants in the USA and Canada fell            We know that using AI shapes perceptions of the user themselves,
+between these extremes, indicating cautious but generally optimistic             highlighting how trust in AI is not just about using the system, but
+attitudes toward AI. The authors attribute these differences to distinct         the message that sends133. Although morality dominates impression
+cultural value systems and societal experiences with technology, such            formation in general48, and people preferentially seek out information
+as different levels of uncertainty avoidance, power distance and expo-           about others’ moral character134, there are exceptions: sometimes
+sure to automation12. Other global investigations found higher trust in          people might prefer to seek information about a partner’s willingness
+AI in countries with emerging economies102 (such as Nigeria, India and           to break rules or be less moral. For example, there is evidence that
+Egypt) or lower prevalence of English (such as Indonesia, Malaysia and           people prioritize less moral partners if there is a strategic reason to do
+Thailand)120. These findings might reflect participants’ trust in their          so, such as when selecting a defence lawyer135. Regarding trust in AI, the
+governments to regulate AI development effectively.                              evidence suggests that people are more trusting of self-driving cars
+       Cross-cultural experiments further support the role of cultural val-      for other people than they are for themselves136 and trust self-driving
+ues in trust in AI. For instance, although overall trust levels were similar     cars that protect themselves as passengers more than cars that protect
+between participants from the USA and India, the underlying drivers              pedestrians137. People are less likely to perceive an AI as immoral or
+of trust differed121: concerns about uniqueness neglect (the feeling             unjust when they personally benefit from the AI’s unfair decision138,
+that algorithms overlook individual distinctiveness) were associated             and some people might be more persuaded by an AI that gives selfish
+with lower trust among participants in the USA, whereas familiarity              rather than altruistic advice82. Other work suggests that people are
+with the algorithm was associated with lower aversion and increased              more likely to engage in dishonest behaviour in a die-rolling task when
+acceptance among participants in India. These findings suggest that              they can delegate their decision-making to an opaque algorithm139.
+cultural frameworks can influence not only the extent to which people            These effects could be partly explained by the combination of psy-
+trust AI, but also why they come to do so.                                       chological distance140, plausible deniability141 and deflection of moral
+       In sum, trust in artificial intelligence can vary across a host of        responsibility142 that AI systems offer their users. These findings raise
+individual and cultural characteristics. All else being equal, a single AI       concerns that people might not only trust AI because they perceive
+system might inspire trust in some and scepticism in others. However,            it as a good, reliable system but because that system aligns with their
+it is important to recognize that the results of cross-cultural surveys          incentives, and they might therefore over-rely on AI in situations where
+and experiments can be difficult to interpret because they might reflect         there is an incentive to engage in ethically questionable behaviour18.
+sampling biases, differences in response styles, and a potential lack of                In sum, the idea that trust in AI systems might be strategically moti-
+measurement invariance for scale items across cultures.                          vated has received less attention than the other principles. However,
+                                                                                 exploring how trust in AI is dependent on a motivated assessment of its
+Trust in AI is strategically motivated                                           alignment with strategic incentives, needs and motives is a particularly
+It is often either implicitly or explicitly assumed that there is a linear       promising area of future research. Even the same person could trust the
+relationship between trust and trustworthiness: an AI that is ‘better’           same AI differently in different contexts, depending on their motives
+(or objectively worthy of trust) will be perceived as more trustworthy,          in that particular situation.
+which will generally lead to a higher attitude of trust. Such a linear
+relationship would be rational, but people take the risk of trust in a given     Ethical considerations
+situation into account25 and, of course, humans rarely display full ration-      Trust in AI is a multifaceted, multidimensional, agent-specific, individu-
+ality. Instead, humans are influenced by a range of cognitive biases, and        ally variable and motivated phenomenon. By reviewing evidence from
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                                396
+Review article
+
+
+multiple disciplines, we have sought to document how, when and why             user alone168. Consistent with this interpretation, people perceived
+people might trust AI. But such evidence does not speak to how much            themselves to have less responsibility for decisions in a simulated
+people should trust AI in the first place, or how much researchers and         drone-strike task when they received AI assistance compared to when
+policymakers should focus on increasing trust in AI.                           they did not169.
+      AI clearly has the potential to do good in society. AI tools can be            When people learn about new concepts, labels assigned to that
+used to increase agricultural yields and improve food security143–145,         concept influence perceptions of concept valence170, and research
+deliver faster disaster management in crises146,147, monitor extreme           from cognitive linguistics suggests that when a familiar word is used
+weather and climate events148, assist conservation efforts149,150 and          in an unconventional manner, people tend to import features of the
+create breakthroughs in protein folding to discover new drugs151,152.          word’s primary meaning171,172. Thus, the concept of ‘trustworthy AI’
+Given these potential societal benefits, it is unsurprising that there is      might itself influence people’s perceptions of trust and responsibil-
+so much focus on trust in AI: trust is valued, important and necessary         ity. People imbue AI with agential capacities that it does not have42,
+in the human social world, and the potential benefits of AI tools will         suggesting that considering AI to be trustworthy agents may shape
+be achieved only if people trust those systems. However, trust is also         perceptions of responsibility.
+dangerous when misplaced.                                                            At the most abstract level, there are ethical debates about whether
+      For all the potential benefits of AI systems, blind trust in AI is not   trust in AI — even appropriately calibrated trust — is desirable in the
+the right goal, and it is important that researchers avoid the trap of         first place. Put differently, even if it became clear that a proprietary AI
+assuming that more trust is better153. Empirical work has documented           could be trusted to deliver teaching and to grade student assignments
+concerning effects of over-trust in AI in different domains, including         to the same standard as human teachers, it is not automatically a given
+risky financial decisions154, threat-identification of enemy combatants        that the goal should be to ensure that students, parents and administra-
+versus civilians155 and food-identification tasks156. It is therefore more     tions use these systems in lieu of human teachers. Scholars have raised
+important that AI is trustworthy (that is, the system has the capacities       concerns about the threat of ‘algocracy’, in which the proliferation of
+that make it worthy of trust) rather than trusted (that is, people per-        algorithm-based systems structures and constrains opportunities for
+ceive the system as good and are willing to rely on it)34. Just as people      human participation173, leads to a technologically advanced but ethi-
+can be epistemically and ethically misled and even harmed by placing           cally deskilled society174, and prioritizes technological innovation at
+trust in other humans who are not worthy of that trust, people can be          the expense of human flourishing175.
+misled and harmed by placing trust in AI systems that are not worthy                 Although rarely discussed in the context of psychological work,
+of that trust. Trust should therefore be appropriately calibrated such         discussion of trust in AI can never be fully isolated from the context
+that an AI is trusted to the degree that the system is trustworthy157 and      in which AI is developed and used — a context in which technology
+designed to be relied upon in a particular situation26. For this reason,       companies can use their money and influence to change policies to
+regulation and oversight are needed to ensure that system limitations          align with their own economic interests176, where AI systems harm
+are acknowledged158,159 and that this information is used to foster an         the most vulnerable people in society177, where AI systems have stark
+appropriate level of trust160.                                                 environmental effects178, and where the labour of training systems is
+      However, even if researchers or policymakers focus on appropriate        often outsourced to underpaid and exploited workers in the global
+or calibrated trust, there are deeper potential ethical implications of        south179. These ethical and political contexts cannot be fully isolated
+‘trust in AI’, because the concept is inherently value-laden. Concerns         from the task of understanding trust in AI, because they constitute the
+have been raised about the commodification of trust161, whereby the            conditions under which trust judgements are formed and expressed.
+banner of ‘trustworthy AI’ can serve as a form of ethics-washing: corpo-             Psychologists studying trust are not — and should not be — held
+rations and governments can signal moral responsibility while avoiding         responsible for this ethically fraught background. At the same time, it
+substantive ethical or regulatory commitments or enquiry27,162. Critics        is impossible to divorce values from science completely, because ethi-
+have argued that frameworks such as the European Commission guide-             cal, political and social assumptions shape not only which questions
+lines on trustworthy AI10 function less as true safeguards and instead         are asked, but how the results are interpreted and used. For example,
+as “elegant public decorations for a large-scale investment strategy”27.       research that identifies features that increase trust in AI systems could
+Even badges or certification labels for ‘trustworthy’ AI could be misused      easily be interpreted as guidance for designing systems that are more
+by developers to drive unwarranted trust in a form of ‘machine wash-           trusted, even though being more trusted does not correspond to being
+ing’, just as companies can greenwash by presenting products as more           more trustworthy. Researchers studying trust in AI should therefore
+environmentally friendly than they are163.                                     reflect on the potential uses and misuses of their findings, distinguish
+      Others have argued that describing AI as something that can              clearly between trust and trustworthiness in their framing of results,
+be trusted assigns capacities to AI that it does not have, in essence          reflect on how their results exist within a broader context, and, where
+implicitly treating AI as a moral subject with rights and responsibili-        suitable, make explicit the assumptions and values that guide their
+ties rather than a tool42,164. Framing AI as a trustworthy agent might         research. Practices such as greater reflection on researcher perspec-
+obscure and shift responsibility away from AI developers to the systems        tives and, where appropriate, the use of positionality statements might
+themselves32,165. This form of ‘agency laundering’166 focuses attention        help to make these influences more transparent.
+on the responsibilities of AI as agents rather than the responsibilities of
+the developers, users and regulators, and the ways in which AI systems         Summary and future directions
+can and do cause harm to people167. Empirically, there is evidence that        Drawing from research in psychology, philosophy, behavioural eco-
+having AI recommendations led to more errors of commission and                 nomics, human–computer interaction and AI ethics, we have formu-
+omission in simulated flight tasks than when AI recommendations                lated six key principles that underlie the burgeoning literature on trust
+were not provided, suggesting that people feel less accountable when           in AI. The emerging picture is that trust in AI is not a static or unitary phe-
+responsibility can be assigned to AI than when it lies in the hands of the     nomenon. Instead, trust in AI is composed of multiple dimensions and
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                               397
+Review article
+
+
+Table 2 | Implications for understanding, building and regulating AI
+
+ Principle                      Meaning                         Implications for researchers      Implications for developers                     Implications for
+                                                                                                                                                  policymakers
+
+ Trust in AI is inferred        Trust is a psychologically      Theory and measurement            Designing trustworthy systems                   Regulation should not
+                                inferred process based on       should distinguish between        does not guarantee that they will be            assume that certified
+                                social cognition; it does not   actual trustworthiness and        perceived as trustworthy by users;              or compliant AI will
+                                lie in computer code            perceived trustworthiness         systems should be designed to be                automatically be trusted
+                                                                                                  trustworthy, not trusted                        by the public
+ Trustworthiness, trust and     Trust in AI can manifest in     Theory and measurement            User trust might not translate                  AI use should not be taken
+ trusting behaviour are         conceptually and empirically    should distinguish between        into use, and use might occur                   as evidence of public trust
+ distinct                       different ways                  trustworthiness, trust and        without trust                                   or acceptance
+                                                                trusting behaviour
+ Trust in AI is                 Trust in AI depends on          Research should explore           Improving performance alone                     Governance frameworks
+ multidimensional               perceptions of both             performance and moral             might not increase moral trust in               should address ethical
+                                performance and morality        dimensions of trust separately    an AI system                                    concerns, not just technical
+                                                                                                                                                  performance
+ Trust in AI is                 People trust different AI       Findings about trust in AI        Trust cues vary across specific                 Regulation should take
+ agent-specific                 systems differently depending   might not generalize across       domains of AI application                       domain differences into
+                                on context, purpose and         different systems and                                                             account rather than treating
+                                domain                          applications                                                                      all AI systems as the same
+ Trust in AI is individually    Trust in AI varies across       Research should account for       AI designers should anticipate                  Regulation should account
+ variable                       individuals and cultures        and explore individual and        diverse trust responses rather than             for the fact that trust in AI
+                                                                cultural differences when         a single user profile                           will not be uniform across
+                                                                studying trust in AI                                                              populations
+ Trust in AI is strategically   People might trust or rely on   Research should explore           Developers should anticipate                    Regulation should address
+ motivated                      AI on the basis of strategic    how strategic motivations         that users might over-rely on                   strategic misuse or
+                                motivations, incentives         shape trust and reliance on       AI in situations where reduced                  over-reliance
+                                and goals                       AI systems                        responsibility or effort are desirable
+
+
+
+constructs, is dynamically inferred, and varies substantially depending              of algorithm aversion just a decade ago84, are very different from the
+on the characteristics of the particular AI system, the individual doing             kinds of LLM that people routinely interact with today. For this reason,
+the trusting, the cultural context and the strategic affordances of the              scholars have highlighted a temporal validity problem180,181 and have
+situation. Our Review is by no means exhaustive, and the literature on               questioned whether empirical findings in this space might have an
+trust in AI is growing every day. However, recognizing the theoretical               expiration date182. Moreover, research suggests that people’s general
+and empirical work underlying these principles and their interplay, as               attitudes towards AI are evolving as these technologies become ever
+well as the ethical and practical challenges of studying trust in AI, has            more embedded in daily life183,184. Future research should use longitu-
+implications for researchers, developers and policymakers (Table 2).                 dinal methods and developmental approaches to explore how trust
+     Although some aspects of trust in AI have been heavily studied,                 in AI is changing over time, what predicts these changes in trust, and
+important areas are receiving less attention. There is a wealth of research          whether longitudinal changes vary across individuals and cultures.
+on individual and cultural differences in trust in AI or characteristics                  Finally, and perhaps most importantly, the study of trust in AI must
+that might influence trust in AI in general. However, there is much less             be placed in context. Fully understanding the behavioural science of
+research on people’s strategic motivations for trusting AI, how per-                 trust in AI requires a consideration of interdisciplinary and critical per-
+formance and moral trust might diverge for different agents, or how                  spectives on what trust does. Considering trust in isolation, away from
+characteristics of the AI will be differentially important for different             the social and political context in which it occurs, risks unintentional
+systems depending on the perceived degree of fit. Understanding of                   ethics-washing by reinforcing a discursive space in which talking about
+trust in AI could also be enhanced by exploring the interplay between the            how to increase trust in AI implicitly supports the idea that a world of
+different principles we outlined here, such as how people might trust the            algorithms is desirable in the first place. Understanding trust in AI
+same system in different ways, how even the same system may be trusted               requires not only studying how people think, but also reflecting on the
+differently by different people in different contexts, and how the same              kind of world that trust in AI serves to create.
+predictor or characteristic may lead to trust in different ways across dif-
+ferent systems. For example, one global report found that relative trust             Published online: 29 April 2026
+rankings for different AI systems vary substantially across cultures102.
+                                                                                     References
+Future work should extend this finding by investigating whether there are            1.   Li, B. et al. Trustworthy AI: from principles to practices. ACM Comput. Surv. 55, 1–46
+individual and cultural differences in how people prioritize performance                  (2023).
+                                                                                     2.   Kaplan, A. D., Kessler, T. T., Brill, J. C. & Hancock, P. A. Trust in artificial intelligence:
+and moral trust in AI, the cues that people use to infer the trustworthiness
+                                                                                          meta-analytic findings. Hum. Factors 65, 337–359 (2023).
+of different AI systems, and people’s strategic trust in AI.                         3.   Lalot, F. & Bertram, A.-M. When the bot walks the talk: investigating the foundations of
+     Much of the research cited in this Review is cross-sectional.                        trust in an artificial intelligence (AI) chatbot. J. Exp. Psychol. Gen. 154, 533–551 (2025).
+                                                                                     4.   Malle, B. F. & Ullman, D. in Trust in Human–Robot Interaction (eds Nam, C. S. & Lyons, J. B.)
+However, this is a fast-moving space, and new AI systems are released
+                                                                                          3–25 (Elsevier Academic, 2021).
+every day. The types of machine system that discussions of automa-                   5.   Jian, J.-Y., Bisantz, A. M. & Drury, C. G. Foundations for an empirically determined scale of
+tion focused on two decades ago26, or that were included in studies                       trust in automated systems. Int. J. Cogn. Ergon. 4, 53–71 (2000).
+
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                                                        398
+Review article
+
+
+6.    Jermutus, E., Kneale, D., Thomas, J. & Michie, S. Influences on user trust in healthcare          44. Liu, H. et al. Trustworthy AI: a computational perspective. ACM Trans. Intell. Syst. Technol.
+      artificial intelligence: a systematic review. Wellcome Open Res. 7, 65 (2022).                        14, 4 (2023).
+7.    Bach, T. A., Khan, A., Hallock, H., Beltrão, G. & Sousa, S. A systematic literature review of     45. Zerilli, J., Bhatt, U. & Weller, A. How transparency modulates trust in artificial intelligence.
+      user trust in AI-enabled systems: an HCI perspective. Int. J. Human–Computer Interact.                Patterns 3, 100455 (2022).
+      40, 1251–1266 (2024).                                                                             46. Schlicker, N. & Langer, M. Towards warranted trust: a model on the relation between
+8.    Floridi, L. & Cowls, J. A unified framework of five principles for AI in society. Harv. Data          actual and perceived system trustworthiness. In Proc. Mensch und Computer
+      Sci. Rev. https://doi.org/10.1162/99608f92.8cd550d1 (2019).                                           (MuC ’21) (eds Schneegass, S. et al.) 325–329 (Association for Computing
+9.    Thiebes, S., Lins, S. & Sunyaev, A. Trustworthy artificial intelligence. Electron. Mark. 31,          Machinery, 2021).
+      447–464 (2021).                                                                                   47. Schlicker, N. et al. How do we assess the trustworthiness of AI? introducing the
+10.   Ethics guidelines for trustworthy AI. European Commission https://digital-strategy.                   trustworthiness assessment model (TrAM). Comput. Hum. Behav. 170, 108671
+      ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai (2019).                                      (2025).
+11.   Afroogh, S., Akbari, A., Malone, E., Kargar, M. & Alambeigi, H. Trust in AI: progress,            48. Brambilla, M., Sacchi, S., Rusconi, P. & Goodwin, G. P. in Advances in Experimental Social
+      challenges, and future directions. Humanities Soc. Sci. Commun. 11, 1568 (2024).                      Psychology (ed. Gawronski, B.) Vol. 64, 187–262 (Elsevier Academic, 2021).
+12.   Dang, Q. & Li, G. Unveiling trust in AI: the interplay of antecedents, consequences, and          49. Cuddy, A. J. C., Fiske, S. T. & Glick, P. in Advances in Experimental Social Psychology
+      cultural dynamics. AI Soc. 41, 669–692 (2025).                                                        (ed. Zanna, M. P.) Vol. 40, 61–149 (Elsevier Academic, 2008).
+13.   Li, Y., Wu, B., Huang, Y. & Luan, S. Developing trustworthy artificial intelligence: insights     50. Fiske, S. T., Cuddy, A. J. C. & Glick, P. Universal dimensions of social cognition: warmth
+      from research on interpersonal, human-automation, and human–AI trust. Front. Psychol.                 and competence. Trends Cogn. Sci. 11, 77–83 (2007).
+      15, 1382693 (2024).                                                                               51. Willis, J. & Todorov, A. First impressions: making up your mind after a 100-ms exposure to
+14.   Mehrotra, S., Degachi, C., Vereschak, O., Jonker, C. M. & Tielman, M. L. A systematic                 a face. Psychol. Sci. 17, 592–598 (2006).
+      review on fostering appropriate trust in human–AI interaction: trends, opportunities and          52. Dion, K., Berscheid, E. & Walster, E. What is beautiful is good. J. Pers. Soc. Psychol. 24,
+      challenges. ACM J. Responsible Comput. 1, 26 (2024).                                                  285–290 (1972).
+15.   Hoff, K. A. & Bashir, M. Trust in automation: integrating empirical evidence on factors that      53. McKee, K. R., Bai, X. & Fiske, S. T. Humans perceive warmth and competence in artificial
+      influence trust. Hum. Factors 57, 407–434 (2015).                                                     intelligence. iScience 26, 107256 (2023).
+16.   Burton, J. W., Stein, M. & Jensen, T. B. A systematic review of algorithm aversion in             54. Surdel, N. et al. Judging robot ability: how people form implicit and explicit impressions
+      augmented decision making. J. Behav. Decis. Mak. 33, 220–239 (2020).                                  of robot competence. J. Exp. Psychol. Gen. 153, 1309–1335 (2024).
+17.   Mahmud, H., Islam, A. K. M. N., Ahmed, S. I. & Smolander, K. What influences algorithmic          55. Papenmeier, A., Kern, D., Hienert, D., Kammerer, Y. & Seifert, C. How accurate does it
+      decision-making? A systematic literature review on algorithm aversion. Technol.                       feel? —Human perception of different types of classification mistakes. In Proc. 2022 CHI
+      Forecast. Soc. Change 175, 121390 (2022).                                                             Conf. Human Factors in Computing Systems (eds Barbosa, S. et al.) 180 (Association for
+18.   Köbis, N., Bonnefon, J.-F. & Rahwan, I. Bad machines corrupt good morals. Nat. Hum.                   Computing Machinery, 2022).
+      Behav. 5, 679–685 (2021).                                                                         56. Dwivedi, R. et al. Explainable AI (XAI): core ideas, techniques, and solutions.
+19.   Bonnefon, J.-F., Rahwan, I. & Shariff, A. The moral psychology of artificial intelligence.            ACM Comput. Surv. 55, 1–33 (2023).
+      Annu. Rev. Psychol. 75, 653–675 (2024).                                                           57. Nussberger, A.-M., Luo, L., Celis, L. E. & Crockett, M. J. Public attitudes value interpretability
+20.   Marocco, S., Barbieri, B. & Talamo, A. Exploring facilitators and barriers to managers’               but prioritize accuracy in artificial intelligence. Nat. Commun. 13, 5821 (2022).
+      adoption of AI-based systems in decision making: a systematic review. AI 5, 2538–2567             58. Wright, J. L., Chen, J. Y. C. & Lakhmani, S. G. Agent transparency and reliability in
+      (2024).                                                                                               human–robot interaction: the influence on user confidence and perceived reliability.
+21.   Montealegre-López, N. Exploring the role of trust in AI-driven decision-making: a systematic          IEEE Trans. Human–Machine Syst. 50, 254–263 (2020).
+      literature review. Manag. Rev. Q. https://doi.org/10.1007/s11301-025-00526-4 (2025).              59. Schmidt, P., Biessmann, F. & Teubner, T. Transparency and trust in artificial intelligence
+22.   Jing, P., Xu, G., Chen, Y., Shi, Y. & Zhan, F. The determinants behind the acceptance of              systems. J. Decis. Syst. 29, 260–278 (2020).
+      autonomous vehicles: a systematic review. Sustainability 12, 1719 (2020).                         60. Leichtmann, B., Hinterreiter, A., Humer, C., Streit, M. & Mara, M. Explainable artificial
+23.   Rahwan, I. et al. Machine behaviour. Nature 568, 477–486 (2019).                                      intelligence improves human decision-making: results from a mushroom picking
+24.   Rousseau, D., Sitkin, S., Burt, R. & Camerer, C. Not so different after all: a cross-discipline       experiment at a public art festival. Int. J. Human–Computer Interact. 40, 4787–4804
+      view of trust. Acad. Manag. Rev. 23, 393–404 (1998).                                                  (2024).
+25.   Mayer, R. C., Davis, J. H. & Schoorman, F. D. An integrative model of organizational trust.       61. McAllister, D. J. Affect- and cognition-based trust as foundations for interpersonal
+      Acad. Manag. Rev. 20, 709–734 (1995).                                                                 cooperation in organizations. Acad. Manag. J. 38, 24–59 (1995).
+26.   Lee, J. D. & See, K. A. Trust in automation: designing for appropriate reliance. Hum. Factors     62. Nannestad, P. What have we learned about generalized trust, if anything? Annu. Rev.
+      46, 50–80 (2004).                                                                                     Polit. Sci. 11, 413–436 (2008).
+27.   Metzinger, T. EU guidelines: ethics washing made in Europe. Tagesspiegel https://                 63. Vereschak, O., Bailly, G. & Caramiaux, B. How to evaluate trust in AI-assisted decision
+      www.tagesspiegel.de/politik/ethics-washing-made-in-europe-5937028.html (8 April 2019).                making? A survey of empirical methodologies. Proc. ACM Human–Computer Interact.
+28.   Friedman, B., Khan, P. H. & Howe, D. C. Trust online. Commun. ACM 43, 34–40 (2000).                   5, 327 (2021).
+29.   Baier, A. Trust and antitrust. Ethics 96, 231–260 (1986).                                         64. Rice, S. Examining single- and multiple-process theories of trust in automation. J. Gen.
+30.   Hawley, K. Trust, distrust and commitment. Noûs 48, 1–20 (2014).                                      Psychol. 136, 303–322 (2009).
+31.   Viehoff, J. Making trust safe for AI? Non-agential trust as a conceptual engineering              65. Xie, Y., Bodala, I. P., Ong, D. C., Hsu, D. & Soh, H. Robot capability and intention in
+      problem. Phil. Technol. 36, 64 (2023).                                                                trust-based decisions across tasks. In 14th ACM/IEEE Int. Conf. Human–Robot Interaction
+32.   Ryan, M. In AI we trust: ethics, artificial intelligence, and reliability. Sci. Eng. Ethics 26,       (HRI) (eds Kim, J. et al.) 39–47 (IEEE, 2019).
+      2749–2767 (2020).                                                                                 66. Claessens, S. et al. Trust in artificial moral advisors across cultures. Preprint at PsyArXiv
+33.   Freiman, O. Making sense of the conceptual nonsense ‘trustworthy AI’. AI Ethics 3,                    https://doi.org/10.31234/osf.io/sfe9u_v1 (2026).
+      1351–1360 (2023).                                                                                 67. Costello, T. H., Pennycook, G. & Rand, D. G. Durably reducing conspiracy beliefs through
+34.   Zanotti, G. AI systems should be trustworthy, not trusted. AI Soc. https://doi.org/10.1007/           dialogues with AI. Science 385, eadq1814 (2024).
+      s00146-025-02728-6 (2025).                                                                        68. Lin, H. et al. Persuading voters using human–artificial intelligence dialogues. Nature 648,
+35.   Nass, C. & Lee, K. M. Does computer-synthesized speech manifest personality?                          394–401 (2025).
+      Experimental tests of recognition, similarity-attraction, and consistency-attraction.             69. Kelley, T. L. Interpretation of Educational Measurements (World Book, 1927).
+      J. Exp. Psychol. Appl. 7, 171–181 (2001).                                                         70. Gonzalez, O., MacKinnon, D. P. & Muniz, F. B. Extrinsic convergent validity evidence to
+36.   Nass, C., Steuer, J. & Tauber, E. R. Computers are social actors. In Proc. SIGCHI Human               prevent jingle and jangle fallacies. Multivar. Behav. Res. 56, 3–19 (2021).
+      Factors In Computing Systems (CHI ’94) 72–78 (ACM Press, 1994).                                   71. Marsh, H. W. et al. The murky distinction between self-concept and self-efficacy: beware
+37.   Reeves, B. & Nass, C. I. The Media Equation: How People Treat Computers, Television, and              of lurking jingle-jangle fallacies. J. Educ. Psychol. 111, 331–353 (2019).
+      New Media like Real People and Places xiv, 305 (Cambridge Univ. Press, 1996).                     72. Berg, J., Dickhaut, J. & McCabe, K. Trust, reciprocity, and social history. Games Econ. Behav.
+38.   Nass, C. & Moon, Y. Machines and mindlessness: social responses to computers.                         10, 122–142 (1995).
+      J. Soc. Issues 56, 81–103 (2000).                                                                 73. Ishowo-Oloko, F. et al. Behavioural evidence for a transparency–efficiency tradeoff in
+39.   Nass, C., Moon, Y., Fogg, B. J., Reeves, B. & Dryer, D. C. Can computer personalities be              human–machine cooperation. Nat. Mach. Intell. 1, 517–521 (2019).
+      human personalities? Int. J. Human–Computer Stud. 43, 223–239 (1995).                             74. Makovi, K., Sargsyan, A., Li, W., Bonnefon, J.-F. & Rahwan, T. Trust within human–machine
+40.   Epley, N., Waytz, A. & Cacioppo, J. T. On seeing human: a three-factor theory of                      collectives depends on the perceived consensus about cooperative norms.
+      anthropomorphism. Psychol. Rev. 114, 864–886 (2007).                                                  Nat. Commun. 14, 3108 (2023).
+41.   Bocian, K., Gonidis, L. & Everett, J. A. C. Moral conformity in a digital world: human and        75. von Schenk, A., Klockmann, V. & Köbis, N. Social preferences toward humans and
+      nonhuman agents as a source of social pressure for judgments of moral character.                      machines: a systematic experiment on the role of machine payoffs. Persp. Psychol. Sci.
+      PLoS ONE 19, e0298293 (2024).                                                                         20, 165–181 (2025).
+42.   Landes, E., Claessens, S. & Everett, J. A. C. Trust in AI is not a conceptual confusion. Ergo     76. Ajzen, I. & Fishbein, M. A Bayesian analysis of attribution processes. Psychol. Bull. 82,
+      (in the press).                                                                                       261–277 (1975).
+43.   Jobin, A., Ienca, M. & Vayena, E. The global landscape of AI ethics guidelines. Nat. Mach.        77. Ajzen, I. & Fishbein, M. Understanding Attitudes and Predicting Social Behavior
+      Intell. 1, 389–399 (2019).                                                                            (Prentice-Hall, 2002).
+
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                                                                             399
+Review article
+
+
+78.  Visser, R., Peters, T. M., Scharlau, I. & Hammer, B. Trust, distrust, and appropriate reliance     112. Zhang, T. et al. Automated vehicle acceptance in China: social influence and initial trust
+     in (X)AI: a conceptual clarification of user trust and survey of its empirical evaluation.              are key determinants. Transp. Res. C 112, 220–233 (2020).
+     Cogn. Syst. Res. 91, 101357 (2025).                                                                113. Müller, L., Mattke, J., Maier, C., Weitzel, T. & Graser, H. Chatbot acceptance: a latent
+79. Bhaskar, P., Misra, P. & Chopra, G. Shall I use ChatGPT? A study on perceived trust and                  profile analysis on individuals’ trust in conversational agents. In Proc. 2019 Conf.
+     perceived risk towards ChatGPT usage by teachers at higher education institutions.                      Computers and People Research (eds Joseph, D. et al.) 35–42 (Association for Computing
+     Int. J. Inf. Learn. Technol. 41, 428–447 (2024).                                                        Machinery, 2019).
+80. Dekkal, M., Arcand, M., Prom Tep, S., Rajaobelina, L. & Ricard, L. Factors affecting user           114. Schandl, F., Fischer, P. & Hudecek, M. F. C. Predicting acceptance of autonomous shuttle
+     trust and intention in adopting chatbots: the moderating role of technology anxiety in                  buses by personality profiles: a latent profile analysis. Transportation 52, 1015–1038
+     insurtech. J. Financ. Serv. Mark. 29, 699–728 (2024).                                                   (2025).
+81. Shi, S., Gong, Y. & Gursoy, D. Antecedents of trust and adoption intention toward                   115. Montag, C., Kraus, J., Baumann, M. & Rozgonjuk, D. The propensity to trust in (automated)
+     artificially intelligent recommendation systems in travel planning: a heuristic–systematic              technology mediates the links between technology self-efficacy and fear and
+     model. J. Travel. Res. 60, 1714–1734 (2021).                                                            acceptance of artificial intelligence. Comput. Hum. Behav. Rep. 11, 100315 (2023).
+82. Landes, E., Francis, K. B. & Everett, J. A. C. People defer to AI moral advice, but not blindly.    116. Gillath, O. et al. Attachment and trust in artificial intelligence. Comput. Hum. Behav. 115,
+     Cognition 272, 106504 (2026).                                                                           106607 (2021).
+83. Hancock, P. A. et al. A meta-analysis of factors affecting trust in human–robot interaction.        117. Gallimore, D., Lyons, J. B., Vo, T., Mahoney, S. & Wynne, K. T. Trusting robocop:
+     Hum. Factors 53, 517–527 (2011).                                                                        gender-based effects on trust of an autonomous robot. Front. Psychol. 10, 482 (2019).
+84. Dietvorst, B. J., Simmons, J. P. & Massey, C. Algorithm aversion: people erroneously avoid          118. Heerink, M. Exploring the influence of age, gender, education and computer experience
+     algorithms after seeing them err. J. Exp. Psychol. Gen. 144, 114–126 (2015).                            on robot acceptance by older adults. In Proc. 6th Int. Conf. Human–Robot Interaction
+85. Madhavan, P., Wiegmann, D. A. & Lacson, F. C. Automation failures on tasks easily performed              (eds Billard, A. et al.) 147–148 (Association for Computing Machinery, 2011).
+     by operators undermine trust in automated aids. Hum. Factors 48, 241–256 (2006).                   119. Rahman, M. M., Babiker, A. & Ali, R. Motivation, concerns, and attitudes towards AI:
+86. Rosendorf, O., Smetana, M. & Vranka, M. Autonomous weapons and ethical judgments:                        differences by gender, age, and culture. In Proc. Web Information Systems Engineering
+     experimental evidence on attitudes toward the military use of “killer robots”.                          (WISE 2024) (eds Barhamgi, M. et al.) 375–391 (Springer Nature, 2025).
+     Peace Confl. 28, 177–183 (2022).                                                                   120. Booth, R. English-speaking countries more nervous about rise of AI, polls suggest.
+87. Barber, B. The Logic and Limits of Trust (Rutgers Univ. Press, 1983).                                    The Guardian https://www.theguardian.com/technology/2025/jun/05/english-speaking-
+88. Cook, J. & Wall, T. New work attitude measures of trust, organizational commitment and                   countries-more-nervous-about-rise-of-ai-polls-suggest (5 June 2025).
+     personal need non-fulfilment. J. Occup. Psychol. 53, 39–52 (1980).                                 121. Liu, N. T. Y., Kirshner, S. N. & Lim, E. T. K. Is algorithm aversion WEIRD? A cross-country
+89. Deutsch, M. The effect of motivational orientation upon trust and suspicion. Hum. Relat.                 comparison of individual-differences and algorithm aversion. J. Retail. Consum. Serv. 72,
+     13, 123–139 (1960).                                                                                     103259 (2023).
+90. Hovland, C. I., Janis, I. L. & Kelley, H. H. Communication and Persuasion; Psychological            122. Simon, M., Houghton, S. M. & Aquino, K. Cognitive biases, risk perception, and venture
+     Studies of Opinion Change xii, 315 (Yale Univ. Press, 1953).                                            formation: how individuals decide to start companies. J. Bus. Ventur. 15, 113–134 (2000).
+91. Glikson, E. & Woolley, A. W. Human trust in artificial intelligence: review of empirical            123. Tetlock, P. E. Social functionalist frameworks for judgment and choice: intuitive
+     research. Acad. Manag. Ann. 14, 627–660 (2020).                                                         politicians, theologians, and prosecutors. Psychol. Rev. 109, 451–471 (2002).
+92. Schaefer, K. E., Chen, J. Y. C., Szalma, J. L. & Hancock, P. A. A meta-analysis of factors          124. Ditto, P. H., Pizarro, D. A. & Tannenbaum, D. Motivated moral reasoning. Psychol. Learn. Motiv.
+     influencing the development of trust in automation. Hum. Factors https://doi.org/                       50, 307–338 (2009).
+     10.1177/0018720816634228 (2016).                                                                   125. Haidt, J. The emotional dog and its rational tail: a social intuitionist approach to moral
+93. Hicks, M. T., Humphries, J. & Slater, J. ChatGPT is bullshit. Ethics Inf. Technol. 26, 38 (2024).        judgment. Psychol. Rev. 108, 814–834 (2001).
+94. Phan, T. A. & Bui, V. D. AI with a heart: how perceived authenticity and warmth shape trust         126. Parasuraman, R. & Manzey, D. H. Complacency and bias in human use of automation: an
+     in healthcare chatbots. J. Mark. Commun. https://doi.org/10.1080/13527266.2025.2508887                  attentional integration. Hum. Factors 52, 381–410 (2010).
+     (2025).                                                                                            127. Goddard, K., Roudsari, A. & Wyatt, J. C. Automation bias: a systematic review of
+95. Myers, S. & Everett, J. A. C. Is an intelligent machine a moral machine? Exp. Philos.                    frequency, effect mediators, and mitigators. J. Am. Med. Inform. Assoc. 19, 121–127 (2012).
+     (in the press).                                                                                    128. Klayman, J. in Psychology of Learning and Motivation (eds Busemeyer, J. et al.) Vol. 32,
+96. Armstrong, S. General purpose intelligence: arguing the orthogonality thesis.                            385–418 (Academic, 1995).
+     Anal. Metaphys. 12, 68–84 (2013).                                                                  129. Kuhn, D. & Lao, J. Effects of evidence on attitudes: is polarization the norm? Psychol. Sci.
+97. Bostrom, N. The superintelligent will: motivation and instrumental rationality in                        7, 115–120 (1996).
+     advanced artificial agents. Minds Mach. 22, 71–85 (2012).                                          130. Lord, C. G., Ross, L. & Lepper, M. R. Biased assimilation and attitude polarization: the
+98. Claessens, S. & Everett, J. A. C. Trust in artificial intelligence is agent-specific and                 effects of prior theories on subsequently considered evidence. J. Pers. Soc. Psychol. 37,
+     multidimensional. Preprint at PsyArXiv https://osf.io/preprints/psyarxiv/4y6xw_v1 (2026).               2098–2109 (1979).
+99. Langer, M. et al. What do we want from explainable artificial intelligence (XAI)? — a               131. Leung, E. & Urminsky, O. The narrow search effect and how broadening search promotes
+     stakeholder perspective on XAI and a conceptual model guiding interdisciplinary XAI                     belief updating. Proc. Natl Acad. Sci. 122, e2408175122 (2025).
+     research. Artif. Intell. 296, 103473 (2021).                                                       132. Rathje, S. et al. Sycophantic AI increases attitude extremity and overconfidence. Preprint
+100. de Visser, E. J. et al. Almost human: anthropomorphism increases trust resilience in                    at PsyArXiv https://doi.org/10.31234/osf.io/vmyek_v1 (2025).
+     cognitive agents. J. Exp. Psychol. Appl. 22, 331–349 (2016).                                       133. Claessens, S., Veitch, P. & Everett, J. A. C. Negative perceptions of outsourcing to artificial
+101. Gomes, S., Lopes, J. M. & Nogueira, E. Anthropomorphism in artificial intelligence:                     intelligence. Comput. Hum. Behav. 177, 108894 (2025).
+     a game-changer for brand marketing. Future Bus. J. 11, 2 (2025).                                   134. Brambilla, M., Rusconi, P., Sacchi, S. & Cherubini, P. Looking for honesty: the primary
+102. Gillespie, N., Lockey, S., Ward, T., Macdade, A. & Hassed, G. T Trust, attitudes and                    role of morality (vs. sociability and competence) in information gathering. Eur. J. Soc.
+     use of artificial intelligence: a global study 2025. KPMG https://kpmg.com/xx/en/                       Psychol. 41, 135–143 (2011).
+     our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html (2025).                          135. Melnikoff, D. E. & Bailey, A. H. Preferences for moral vs. immoral traits in others are
+103. Bigman, Y. E. & Gray, K. People are averse to machines making moral decisions. Cognition                conditional. Proc. Natl Acad. Sci. 115, E592–E600 (2018).
+     181, 21–34 (2018).                                                                                 136. Bonnefon, J.-F., Shariff, A. & Rahwan, I. The social dilemma of autonomous vehicles.
+104. Myers, S. & Everett, J. A. C. People expect artificial moral advisors to be more utilitarian            Science 352, 1573–1576 (2016).
+     and distrust utilitarian moral advisors. Cognition 256, 106028 (2025).                             137. Ng, Y.-L. Understanding passenger acceptance of autonomous vehicles through the
+105. Dong, M., Conway, J. R., Bonnefon, J.-F., Shariff, A. & Rahwan, I. Fears about artificial               prism of the trolley dilemma. Int. J. Human–Computer Interact. 40, 2185–2194 (2024).
+     intelligence across 20 countries and six domains of application. Am. Psychol. 81, 53–67            138. Miazek, K. & Bocian, K. When AI is fairer than humans: the role of egocentrism in moral
+     (2024).                                                                                                 and fairness judgments of AI and human decisions. Comput. Hum. Behav. Rep. 19,
+106. Westjohn, S. A., Magnusson, P., Franke, G. R. & Peng, Y. Trust propensity across cultures:              100719 (2025).
+     the role of collectivism. J. Int. Mark. 30, 1–17 (2022).                                           139. Köbis, N. et al. Delegation to artificial intelligence can increase dishonest behaviour.
+107. Scholz, D. D., Kraus, J. & Miller, L. Measuring the propensity to trust in automated                    Nature 646, 126–134 (2025).
+     technology: examining similarities to dispositional trust in other humans and validation           140. Trope, Y. & Liberman, N. Construal-level theory of psychological distance. Psychol. Rev.
+     of the PTT-a scale. Int. J. Human–Computer Interact. 41, 970–993 (2025).                                117, 440–463 (2010).
+108. Montag, C., Becker, B. & Li, B. J. On trust in humans and trust in artificial intelligence:        141. King, T. C., Aggarwal, N., Taddeo, M. & Floridi, L. Artificial intelligence crime: an
+     a study with samples from Singapore and Germany extending recent research. Comput.                      interdisciplinary analysis of foreseeable threats and solutions. Sci. Eng. Ethics 26, 89–120
+     Hum. Behav. Artif. Humans 2, 100070 (2024).                                                             (2020).
+109. Riedl, R. Is trust in artificial intelligence systems related to user personality? Review of       142. Paharia, N., Kassam, K. S., Greene, J. D. & Bazerman, M. H. Dirty work, clean hands: the
+     empirical evidence and future research directions. Electron. Mark. 32, 2021–2051 (2022).                moral psychology of indirect agency. Organ. Behav. Hum. Decis. Process. 109, 134–141
+110. Böckle, M., Yeboah-Antwi, K. & Kouris, I. in Artificial Intelligence in HCI (eds Degen, H.              (2009).
+     & Ntoa, S.) 3–20 (Springer International, 2021).                                                   143. Jha, K., Doshi, A., Patel, P. & Shah, M. A comprehensive review on automation in
+111. Aliasghari, P., Ghafurian, M., Nehaniv, C. L. & Dautenhahn, K. Effect of domestic trainee               agriculture using artificial intelligence. Artif. Intell. Agric. 2, 1–12 (2019).
+     robots’ errors on human teachers’ trust. In 30th IEEE Int. Conf. Robot & Human Interactive         144. Javaid, M., Haleem, A., Khan, I. H. & Suman, R. Understanding the potential applications
+     Communication (RO-MAN) (eds. Rossi, S. & Soh, H.) 81–88 (IEEE, 2021).                                   of artificial intelligence in agriculture sector. Adv. Agrochem. 2, 15–30 (2023).
+
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                                                                           400
+Review article
+
+
+145. van Klompenburg, T., Kassahun, A. & Catal, C. Crop yield prediction using machine                  176. Zuboff, S. The Age of Surveillance Capitalism: The Fight for a Human Future at the New
+     learning: a systematic literature review. Comput. Electron. Agric. 177, 105709 (2020).                  Frontier of Power (Profile Books, 2019).
+146. Abid, S. K. et al. Toward an integrated disaster management approach: how artificial               177. Birhane, A. Algorithmic injustice: a relational ethics approach. Patterns 2, 100205 (2021).
+     intelligence can boost disaster management. Sustainability 13, 12560 (2021).                       178. Crawford, K. Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence
+147. Sun, W., Bocchini, P. & Davison, B. D. Applications of artificial intelligence for disaster             (Yale Univ. Press, 2021).
+     management. Nat. Hazards 103, 2631–2689 (2020).                                                    179. Muldoon, J. & Wu, B. A. Artificial intelligence in the colonial matrix of power.
+148. Camps-Valls, G. et al. Artificial intelligence for modeling and understanding extreme                   Phil. Technol. 36, 80 (2023).
+     weather and climate events. Nat. Commun. 16, 1919 (2025).                                          180. Rahwan, I., Shariff, A. & Bonnefon, J.-F. The science fiction science method. Nature 644,
+149. Fergus, P. et al. Harnessing artificial intelligence for wildlife conservation. Conservation            51–58 (2025).
+     4, 685–702 (2024).                                                                                 181. Munger, K. Temporal validity as meta-science. Res. Polit. 10, 20531680231187271 (2023).
+150. Isabelle, D. A., Westerlund, M. A review and categorization of artificial intelligence-based       182. Messeri, L. & Crockett, M. J. Artificial intelligence and illusions of understanding in
+     opportunities in wildlife, ocean and land conservation. Sustainability 14, 1979 (2022).                 scientific research. Nature 627, 49–58 (2024).
+151. Serrano, D. R. et al. Artificial intelligence (AI) applications in drug discovery and drug         183. Daly, S. J., Wiewiora, A. & Hearn, G. Shifting attitudes and trust in AI: influences on
+     delivery: revolutionizing personalized medicine. Pharmaceutics 16, 1328 (2024).                         organizational AI adoption. Technol. Forecast. Soc. Change 215, 124108 (2025).
+152. Yang, Z., Zeng, X., Zhao, Y. & Chen, R. AlphaFold2 and its applications in the fields of           184. Modhvadia, R., Sippy, T., Field Reid, O. & Margetts, H. How do people feel about AI?
+     biology and medicine. Signal. Transduct. Target. Ther. 8, 115 (2023).                                   The Alan Turing Institute/Ada Lovelace Institute https://attitudestoai.uk/ (2025).
+153. Kahr, P. & Bernstein, A. Enough with trust! why we must move beyond a convenient but               185. Alarcon, G. M. et al. Development and validation of the system trustworthiness scale.
+     insufficient concept in AI-supported decision-making research. In Proc. 1st Int. Conf.                  Hum. Factors 66, 1893–1913 (2024).
+     Computer Interaction in the Alps (eds. Bauer, C. et al.) 109–113 (ACM, 2026).                      186. Gulati, S., Sousa, S. & Lamas, D. Design, development and evaluation of a human–computer
+154. Klingbeil, A., Grützner, C. & Schreck, P. Trust and reliance on AI — an experimental study              trust scale. Behav. Inf. Technol. 38, 1004–1015 (2019).
+     on the extent and costs of overreliance on AI. Comput. Hum. Behav. 160, 108352 (2024).             187. Körber, M. Theoretical considerations and development of a questionnaire to measure
+155. Holbrook, C., Holman, D., Clingo, J. & Wagner, A. R. Overtrust in AI recommendations                    trust in automation. In Proc. 20th Cong. International Ergonomics Association (IEA 2018)
+     about whether or not to kill: evidence from two human–robot interaction studies.                        (eds Bagnara, S. et al.) 13–30 (Springer International, 2019).
+     Sci. Rep. 14, 19751 (2024).                                                                        188. Larasati, R. Human and AI trust: trust attitude measurement instrument. Preprint at arXiv
+156. Buçinca, Z., Malaya, M. B. & Gajos, K. Z. To trust or to think: cognitive forcing functions             https://doi.org/10.48550/arXiv.2510.21535 (2025).
+     can reduce overreliance on AI in AI-assisted decision-making. Proc. ACM Human–Computer             189. Madsen, M. & Gregor, S. Measuring human–computer trust. In Proc. 11th Australasian
+     Interact. 5, 1–21 (2021).                                                                               Conf. Information Systems (eds. Gable, G. G. & Vitale, M. R.) 53 (Queensland Univ.
+157. Narayanan, A. & Kapoor, S. AI Snake Oil (Princeton Univ. Press, 2024).                                  Technology, 2000).
+158. Buiten, M. C. Towards intelligent regulation of artificial intelligence. Eur. J. Risk Regul. 10,   190. McGrath, M. J., Lack, O., Tisch, J. & Duenser, A. Measuring trust in artificial intelligence:
+     41–59 (2019).                                                                                           validation of an established scale and its short form. Front. Artif. Intell. 8, 1582880 (2025).
+159. Woersdoerfer, M. Ten reasons why — the case for more and better AI regulation. AI Ethics           191. Schaefer, K. E. in Robust Intelligence and Trust in Autonomous Systems (eds Mittu, R.
+     6, 62 (2025).                                                                                           et al.) 191–218 (Springer US, 2016).
+160. Scharowski, N., Benk, M., Kühne, S. J., Wettstein, L. & Brühlmann, F. Certification labels         192. Wang, J. & Moulden, A. AI trust score: a user-centered approach to building, designing,
+     for trustworthy AI: insights from an empirical mixed-method study. In Proc. 2023 ACM                    and measuring the success of intelligent workplace features. In Extended Abstr. CHI
+     Conf. Fairness, Accountability, and Transparency 248–260 (Association for Computing                     Conf. Human Factors in Computing Systems (eds Kitamura, Y. et al.) 54 (Association for
+     Machinery, 2023).                                                                                       Computing Machinery, 2021).
+161. Krüger, S. & Wilson, C. The problem with trust: on the discursive commodification of trust         193. Wang, P. et al. A validation of the human-generative artificial intelligence trust scale.
+     in AI. AI Soc. 38, 1753–1761 (2023).                                                                    Int. J. Human–Comput. Interact. 42, 4808–4821 (2025).
+162. Schultz, M. D., Conti, L. G. & Seele, P. Digital ethicswashing: a systematic review and a          194. Wischnewski, M., Doebler, P. & Krämer, N. Development and validation of the Trust in AI
+     process–perception–outcome framework. AI Ethics 5, 805–818 (2025).                                      Scale (TAIS). Preprint at PsyArXiv https://doi.org/10.31234/osf.io/eqa9y_v1 (2025).
+163. Seele, P. & Schultz, M. D. From greenwashing to machinewashing: a model and future
+     directions derived from reasoning by analogy. J. Bus. Ethics 178, 1063–1089 (2022).                Acknowledgements
+164. Sedlakova, J. & Trachsel, M. Conversational artificial intelligence in psychotherapy: a new        This work was generously supported by funding from a UKRI Horizon Guarantee
+     therapeutic tool or agent? Am. J. Bioeth. 23, 4–13 (2023).                                         (EP/Y00440X/1, awarded to J.A.C.E.). M.G.R. is supported in part by the Wellcome Trust
+165. Duenser, A. & Douglas, D. M. Whom to trust, how and why: untangling artificial                     (226801).
+     intelligence ethics principles, trustworthiness, and trust. IEEE Intell. Syst. 38, 19–26
+     (2023).                                                                                            Author contributions
+166. Rubel, A., Castro, C. & Pham, A. Agency laundering and information technologies.                   J.A.C.E.: conceptualization, writing original draft, writing final draft, funding acquisition. S.C.,
+     Ethical Theory Moral. Pract. 22, 1017–1041 (2019).                                                 T.-D.K. and M.G.R.: writing original draft, writing final draft.
+167. Bryson, J. J. in Close Engagements with Artificial Companions: Key Social, Psychological,
+     Ethical and Design Issues (ed. Wilks, Y.) 63–74 (John Benjamins, 2010).                            Competing interests
+168. Skitka, L. J., Mosier, K. L. & Burdick, M. Does automation bias decision-making? Int. J.           The authors declare no competing interests.
+     Human–Computer Stud. 51, 991–1006 (1999).
+169. Salatino, A., Prével, A., Caspar, E. & Lo Bue, S. Influence of AI behavior on human moral          Additional information
+     decisions, agency, and responsibility. Sci. Rep. 15, 12329 (2025).                                 Peer review information Nature Reviews Psychology thanks Shenghua Luan and the other,
+170. Landes, E. Is it a tastytaste or a greedgrab? The importance of label choice in language           anonymous, reviewer(s) for their contribution to the peer review of this work.
+     design. Phil. Psychol. https://doi.org/10.1080/09515089.2025.2531401 (2025).
+171. Fischer, E. & Sytsma, J. Zombie intuitions. Cognition 215, 104807 (2021).                          Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in
+172. Fischer, E. Conceptual control: on the feasibility of conceptual engineering. Inquiry 68,          published maps and institutional affiliations.
+     3043–3071 (2025).
+173. Danaher, J. The threat of algocracy: reality, resistance and accommodation. Phil. Technol.         Springer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this
+     29, 245–268 (2016).                                                                                article under a publishing agreement with the author(s) or other rightsholder(s); author
+174. Vallor, S. The AI Mirror: How to Reclaim Our Humanity in an Age of Machine Thinking                self-archiving of the accepted manuscript version of this article is solely governed by the
+     (Oxford Univ. Press, 2024).                                                                        terms of such publishing agreement and applicable law.
+175. Landes, E. & Everett, J. A. C. in Empathy and Artificial Intelligence: Challenges, Advances,
+     and Ethical Considerations (eds Perry, A. & Cameron, C. D.) (Cambridge Univ. Press, in the         © Springer Nature America, Inc. 2026
+     press).
+
+
+
+
+Nature Reviews Psychology | Volume 5 | June 2026 | 388–401                                                                                                                                              401
+

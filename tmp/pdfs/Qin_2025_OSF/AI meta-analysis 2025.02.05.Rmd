@@ -1,0 +1,260 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE)
+```
+
+```{r}
+library(dplyr)
+library(metafor)
+AId <- openxlsx::read.xlsx("data_2025_02_05.xlsx")
+
+# Calculate the sampling variance for raw score (not change score) separately for independent-groups design (IG) and repeated-measures design (RM) based on Morris & DeShon (2002)
+
+# Calculate the sampling variance for IG 
+IG0 <- subset(AId, between_or_within==1) 
+
+biasFunction <- function(x){return(1-3/(4*(x)-1))}
+rawScore <- function(x, y, z){
+  tn=(x*y)/(x+y)
+  N=x+y
+  delta_s=mean(z)^2
+  result <- (1/tn) * ((N-2)/(N-4)) * (1+tn*delta_s) - delta_s/(biasFunction(N-2)^2)
+  return(result)
+  }
+
+IG0$RawVarIG <- rawScore(IG0$n_human, IG0$n_ai, IG0$cohend)
+
+# Calculate the sampling variance for RM
+RM1 <- subset(AId, between_or_within==0)
+
+# Use another data set to calculate the variance of RM
+correlations.among.dv <- openxlsx::read.xlsx("correlations among dv.xlsx") 
+
+rprepost_dv <- escalc(measure="ZCOR", ri=r, ni=sample_size, data=correlations.among.dv, vtype="LS")
+rprepost_dv
+res_dv <- rma.mv(yi, vi, random=~1 | article_id, method="ML", data=rprepost_dv)
+res_dv
+pre_res_dv <- predict(res_dv, transf=transf.ztor)$pred 
+
+rawScore2 <- function(n, z, p){
+  k=2*(1-p)
+  delta_s=mean(z)^2
+  result <- (k/n) * ((n-1)/(n-3)) * (1+n/k*delta_s) - delta_s/(biasFunction(n-1)^2)
+  return(result)
+  }
+
+RM1$RawVarIG <- rawScore2(RM1$n_ai, RM1$cohend, pre_res_dv)
+
+# Combine separate IG and RM calculations, and sort Cohen's d in descending order
+AId <- rbind(IG0, RM1)
+AId <- AId[order(-AId$cohend), ]
+
+# Meta-analysis of all effect sizes
+res_all <- rma.mv(cohend, RawVarIG, random=~1 | study_id, method="ML", data=AId)
+res_all
+predict(res_all, digits=2, level=80) # 80% prediction interval
+
+# I2 (https://www.metafor-project.org/doku.php/tips:i2_multilevel_multivariate)
+W <- diag(1/res_all$vi)
+X <- model.matrix(res_all)
+P <- W - W %*% X %*% solve(t(X) %*% W %*% X) %*% t(X) %*% W 
+100 * sum(res_all$sigma2)/(sum(res_all$sigma2) + (res_all$k-res_all$p)/sum(diag(P))) 
+
+# Sample size, need to use unique ID
+AId[!duplicated(AId$study_id), ]$sample_size %>% sum()
+```
+
+# Capability-Personalization Framework
+```{r}
+AId <- subset(AId, is.na(quadrant_analyses_exclude))
+
+res_quadrants <- rma.mv(cohend, RawVarIG, random=~1 | study_id, mods=~factor(quadrant), method="ML", data=AId)
+res_quadrants
+
+AId[!duplicated(AId$study_id), ]$sample_size %>% sum()
+```
+
+# QI analyses
+```{r QI}
+# QI low personalization & high AI capability
+QI <- subset(AId, quadrant==1)
+res_QI <- rma.mv(cohend, RawVarIG, random=~1 | study_id, method="ML", data=QI)
+res_QI
+
+predict(res_QI, digits=2, level=80) # 80% prediction interval
+
+# I2 (https://www.metafor-project.org/doku.php/tips:i2_multilevel_multivariate)
+W <- diag(1/res_QI$vi)
+X <- model.matrix(res_QI)
+P <- W - W %*% X %*% solve(t(X) %*% W %*% X) %*% t(X) %*% W 
+100 * sum(res_QI$sigma2)/(sum(res_QI$sigma2) + (res_QI$k-res_QI$p)/sum(diag(P)))
+
+# QI sample size
+QI[!duplicated(QI$study_id), ]$sample_size %>% sum()
+
+# Publication bias analysis
+# Egger's regression
+res_QI_egger <- rma(cohend, RawVarIG, data=QI)
+res_QI_egger
+reg_QI_egger <- regtest(res_QI_egger)
+reg_QI_egger
+
+# Publication status analysis
+res_QI_pub <- rma.mv(cohend, RawVarIG, mods=~publication_status, random=~1 | study_id, method="ML", data=QI)
+res_QI_pub
+
+# PET-PEESE analyses
+res_QI_pet <- rma.mv(cohend, RawVarIG, mods=~sqrt(RawVarIG), random=~1 | study_id, method="ML", data=QI)
+res_QI_pet
+
+res_QI_peese <- rma.mv(cohend, RawVarIG, mods=~RawVarIG, random=~1 | study_id, method="ML", data=QI)
+res_QI_peese
+
+# Moderation analysis
+res_QI_mod <- rma.mv(cohend, RawVarIG, random=~1 | study_id, mods= ~ai_type
+                     + behavior_or_attitude + between_or_within + std_study_quality + convert
+                     + female_ratio + crowdsource
+                     + publication_status + publication_year,
+                     method="ML", data=QI)
+res_QI_mod
+
+res_QI_mod_con <- rma.mv(cohend, RawVarIG, random=~1 | study_id, mods= ~ai_type 
+                     + behavior_or_attitude + between_or_within + std_study_quality + convert
+                     + female_ratio + crowdsource
+                     + publication_status + publication_year
+                     + unemployment_rate + log_gdp_per_capita + college_percentage + internet_use_percentage,
+                     method="ML", data=QI)
+res_QI_mod_con
+
+# Sample size
+QIni <- QI[complete.cases(QI[, c("ai_type", 
+                                 "behavior_or_attitude", "between_or_within", "std_study_quality", "convert",
+                                 "female_ratio", "crowdsource", 
+                                 "publication_status", "publication_year")]), ]
+QIni[!duplicated(QIni$study_id), ]$sample_size %>% sum()
+
+QIni_sub <- QIni[complete.cases(QIni[, c("unemployment_rate",
+                                     "log_gdp_per_capita",
+                                     "college_percentage",
+                                     "internet_use_percentage")]), ]
+QIni_sub[!duplicated(QIni_sub$study_id), ]$sample_size %>% sum()
+```
+
+# QII analyses
+```{r QII}
+# QII high personalization & high AI capability
+QII <- subset(AId, quadrant==2)
+res_QII <- rma.mv(cohend, RawVarIG, random=~1 | study_id, method="ML", data=QII)
+res_QII
+
+predict(res_QII, digits=2, level=80) # 80% prediction interval
+
+# I2 (https://www.metafor-project.org/doku.php/tips:i2_multilevel_multivariate)
+W <- diag(1/res_QII$vi)
+X <- model.matrix(res_QII)
+P <- W - W %*% X %*% solve(t(X) %*% W %*% X) %*% t(X) %*% W 
+100 * sum(res_QII$sigma2)/(sum(res_QII$sigma2) + (res_QII$k-res_QII$p)/sum(diag(P)))
+
+# QII sample size
+QII[!duplicated(QII$study_id), ]$sample_size %>% sum()
+```
+
+# QIII analyses
+```{r QIII}
+# QIII high personalization & low AI capability
+QIII <- subset(AId, quadrant==3)
+res_QIII <- rma.mv(cohend, RawVarIG, random=~1 | study_id, method="ML", data=QIII)
+res_QIII
+
+predict(res_QIII, digits=2, level=80) # 80% prediction interval
+
+# I2 (https://www.metafor-project.org/doku.php/tips:i2_multilevel_multivariate)
+W <- diag(1/res_QIII$vi)
+X <- model.matrix(res_QIII)
+P <- W - W %*% X %*% solve(t(X) %*% W %*% X) %*% t(X) %*% W 
+100 * sum(res_QIII$sigma2)/(sum(res_QIII$sigma2) + (res_QIII$k-res_QIII$p)/sum(diag(P)))
+
+# QIII sample size
+QIII[!duplicated(QIII$study_id), ]$sample_size %>% sum()
+```
+
+# QIV analyses
+```{r QIV}
+# QIV low personalization & low AI capability
+QIV <- subset(AId, quadrant==4)
+res_QIV <- rma.mv(cohend, RawVarIG, random=~1 | study_id, method="ML", data=QIV)
+res_QIV
+
+predict(res_QIV, digits=2, level=80) # 80% prediction interval
+
+# I2 (https://www.metafor-project.org/doku.php/tips:i2_multilevel_multivariate)
+W <- diag(1/res_QIV$vi)
+X <- model.matrix(res_QIV)
+P <- W - W %*% X %*% solve(t(X) %*% W %*% X) %*% t(X) %*% W 
+100 * sum(res_QIV$sigma2)/(sum(res_QIV$sigma2) + (res_QIV$k-res_QIV$p)/sum(diag(P)))
+
+# QIV sample size
+QIV[!duplicated(QIV$study_id), ]$sample_size %>% sum()
+```
+
+# QII to IV analyses
+```{r QIItoIV}
+# Quadrant II to IV
+QIItoIV <- subset(AId, quadrant!=1)
+res_QIItoIV <- rma.mv(cohend, RawVarIG, random=~1 | study_id, method="ML", data=QIItoIV)
+res_QIItoIV
+
+predict(res_QIItoIV, digits=2, level=80) # 80% prediction interval
+
+# I2 (https://www.metafor-project.org/doku.php/tips:i2_multilevel_multivariate)
+W <- diag(1/res_QIItoIV$vi)
+X <- model.matrix(res_QIItoIV)
+P <- W - W %*% X %*% solve(t(X) %*% W %*% X) %*% t(X) %*% W 
+100 * sum(res_QIItoIV$sigma2)/(sum(res_QIItoIV$sigma2) + (res_QIItoIV$k-res_QIItoIV$p)/sum(diag(P)))
+
+# Publication bias analysis
+# Egger's regression
+res_QIItoIV_egger <- rma(cohend, RawVarIG, data=QIItoIV)
+res_QIItoIV_egger
+reg_QIItoIV_egger <- regtest(res_QIItoIV_egger)
+reg_QIItoIV_egger
+
+# Publication status analysis
+res_QIItoIV_pub <- rma.mv(cohend, RawVarIG, mods=~publication_status, random=~1 | study_id, method="ML", data=QIItoIV)
+res_QIItoIV_pub
+
+# PET-PEESE analyses
+res_QIItoIV_pet <- rma.mv(cohend, RawVarIG, mods=~sqrt(RawVarIG), random=~1 | study_id, method="ML", data=QIItoIV)
+res_QIItoIV_pet
+
+res_QIItoIV_peese <- rma.mv(cohend, RawVarIG, mods=~RawVarIG, random=~1 | study_id, method="ML", data=QIItoIV)
+res_QIItoIV_peese
+
+# Moderation analysis
+res_QIItoIV_mod <- rma.mv(cohend, RawVarIG, random=~1 | study_id, mods= ~ai_type 
+                     + behavior_or_attitude + between_or_within + std_study_quality + convert
+                     + female_ratio + crowdsource
+                     + publication_status + publication_year,
+                     method="ML", data=QIItoIV)
+res_QIItoIV_mod
+
+res_QIItoIV_mod_con <- rma.mv(cohend, RawVarIG, random=~1 | study_id, mods= ~ai_type 
+                     + behavior_or_attitude + between_or_within + std_study_quality + convert
+                     + female_ratio + crowdsource
+                     + publication_status + publication_year
+                     + unemployment_rate + log_gdp_per_capita + college_percentage + internet_use_percentage,
+                     method="ML", data=QIItoIV)
+res_QIItoIV_mod_con 
+
+# Sample size
+QIItoIVni <- QIItoIV[complete.cases(QIItoIV[, c("ai_type", 
+                                 "behavior_or_attitude", "between_or_within", "std_study_quality", "convert",
+                                 "female_ratio", "crowdsource",
+                                 "publication_status", "publication_year")]), ]
+QIItoIVni[!duplicated(QIItoIVni$study_id), ]$sample_size %>% sum()
+
+QIItoIVni_sub <- QIItoIVni[complete.cases(QIItoIVni[, c("unemployment_rate",
+                                                    "log_gdp_per_capita",
+                                                    "college_percentage",
+                                                    "internet_use_percentage")]), ]
+QIItoIVni_sub[!duplicated(QIItoIVni_sub$study_id), ]$sample_size %>% sum()
+```
