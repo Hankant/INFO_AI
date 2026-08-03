@@ -1,0 +1,55 @@
+{
+  "_embedded" : {
+    "bitstreams" : [ {
+      "id" : "4d24c079-228b-47bd-ba8c-166eeddee8de",
+      "uuid" : "4d24c079-228b-47bd-ba8c-166eeddee8de",
+      "name" : "Algorithm_aversion_People_erroneously_avoid_algorithms_after_seeing_them_err.pdf",
+      "handle" : null,
+      "metadata" : {
+        "dc.title" : [ {
+          "value" : "Algorithm_aversion_People_erroneously_avoid_algorithms_after_seeing_them_err.pdf",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "bundleName" : "ORIGINAL",
+      "sizeBytes" : 690748,
+      "checkSum" : {
+        "checkSumAlgorithm" : "MD5",
+        "value" : "f70f923d9ee894338c4252b182cef836"
+      },
+      "sequenceId" : 2,
+      "type" : "bitstream",
+      "_links" : {
+        "content" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bitstreams/4d24c079-228b-47bd-ba8c-166eeddee8de/content"
+        },
+        "bundle" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bitstreams/4d24c079-228b-47bd-ba8c-166eeddee8de/bundle"
+        },
+        "format" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bitstreams/4d24c079-228b-47bd-ba8c-166eeddee8de/format"
+        },
+        "thumbnail" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bitstreams/4d24c079-228b-47bd-ba8c-166eeddee8de/thumbnail"
+        },
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bitstreams/4d24c079-228b-47bd-ba8c-166eeddee8de"
+        }
+      }
+    } ]
+  },
+  "page" : {
+    "number" : 0,
+    "size" : 20,
+    "totalPages" : 1,
+    "totalElements" : 1
+  },
+  "_links" : {
+    "self" : {
+      "href" : "https://repository.upenn.edu/server/api/core/bundles/b5aec331-d19e-44b3-aff5-b92eb7b488df/bitstreams"
+    }
+  }
+}

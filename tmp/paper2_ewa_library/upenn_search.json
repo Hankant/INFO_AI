@@ -1,0 +1,1876 @@
+{
+  "id" : null,
+  "scope" : null,
+  "query" : "\"Algorithm Aversion\"",
+  "appliedFilters" : null,
+  "sort" : null,
+  "configuration" : null,
+  "type" : "discover",
+  "_links" : {
+    "self" : {
+      "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522"
+    }
+  },
+  "_embedded" : {
+    "searchResult" : {
+      "_embedded" : {
+        "objects" : [ {
+          "hitHighlights" : {
+            "dc.description.abstract" : [ "Although evidence-based algorithms consistently outperform human forecasters, people often fail to use them after learning that they are imperfect, a phenomenon known as <em>algorithm</em> <em>aversion</em>. In this paper, we present three studies investigating how", " to reduce <em>algorithm</em> <em>aversion</em>. In incentivized forecasting tasks, participants chose between using their own forecasts or those of an algorithm that was built by experts. Participants were considerably more likely to choose to use an imperfect algorithm when" ],
+            "dc.title" : [ "Overcoming <em>Algorithm</em> <em>Aversion</em>: People will Use Imperfect Algorithms If They Can (Even Slightly) Modify Them" ]
+          },
+          "type" : "discover",
+          "_links" : {
+            "indexableObject" : {
+              "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed"
+            }
+          },
+          "_embedded" : {
+            "indexableObject" : {
+              "id" : "efa4aa48-17e3-4606-a105-2adcec3885ed",
+              "uuid" : "efa4aa48-17e3-4606-a105-2adcec3885ed",
+              "name" : "Overcoming Algorithm Aversion: People will Use Imperfect Algorithms If They Can (Even Slightly) Modify Them",
+              "handle" : "20.500.14332/39569",
+              "metadata" : {
+                "dc.contributor.author" : [ {
+                  "value" : "Dietvorst, Berkeley J",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "Simmons, Joseph P",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                }, {
+                  "value" : "Massey, Cade",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 2
+                } ],
+                "dc.date" : [ {
+                  "value" : "2023-05-17T20:06:04.000",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.accessioned" : [ {
+                  "value" : "2023-05-22T23:43:42Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.available" : [ {
+                  "value" : "2023-05-22T23:43:42Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.issued" : [ {
+                  "value" : "2016-01-01",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.submitted" : [ {
+                  "value" : "2018-05-22T11:21:40-07:00",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.description.abstract" : [ {
+                  "value" : "Although evidence-based algorithms consistently outperform human forecasters, people often fail to use them after learning that they are imperfect, a phenomenon known as algorithm aversion. In this paper, we present three studies investigating how to reduce algorithm aversion. In incentivized forecasting tasks, participants chose between using their own forecasts or those of an algorithm that was built by experts. Participants were considerably more likely to choose to use an imperfect algorithm when they could modify its forecasts, and they performed better as a result. Notably, the preference for modifiable algorithms held even when participants were severely restricted in the modifications they could make (Stuides 1-3). In fact, our results suggest that participants' preference for modifiable algorithms was indicative of a desire for some control over the forecasting outcome, and not for a desire for greater control over the forecasting outcome, as participants' preference for modifiable was relatively insensitive to the magnitude of the modifications they were able to make (Study 2). Additionally, we found that giving participants the freedom to modify an imperfect algorithm made them feel more satisfied with the forecasting process, more likely to believe that the algorithm was superior, and more likely to choose to use an algorithm to make subsequent forecasts (Study 3). This research suggests that one can reduce algorithm aversion by giving people some control—even a slight amount—over an imperfect algorithm's forecast.",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.identifier.uri" : [ {
+                  "value" : "https://repository.upenn.edu/handle/20.500.14332/39569",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.articleid" : [ {
+                  "value" : "1303",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.fields" : [ {
+                  "value" : "10.1287/mnsc.2016.2643",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.fulltexturl" : [ {
+                  "value" : "https://repository.upenn.edu/cgi/viewcontent.cgi?article=1303&amp;context=marketing_papers&amp;unstamped=1",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.rights" : [ {
+                  "value" : "Originally published in Management Science © 2016 INFORMS This is a pre-final version of the article. The final version can be found at http://dx.doi.org/10.1287/mnsc.2016.2643",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.beginpage" : [ {
+                  "value" : "1155",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.endpage" : [ {
+                  "value" : "1170",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.issue" : [ {
+                  "value" : "389",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "3",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                } ],
+                "dc.source.journal" : [ {
+                  "value" : "Marketing Papers",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.journaltitle" : [ {
+                  "value" : "Management Science",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.peerreviewed" : [ {
+                  "value" : "true",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.status" : [ {
+                  "value" : "published",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.volume" : [ {
+                  "value" : "64",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.subject.other" : [ {
+                  "value" : "Decision making",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "decision aids",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                }, {
+                  "value" : "heuristics and biases",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 2
+                }, {
+                  "value" : "forecasting",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 3
+                }, {
+                  "value" : "confidence",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 4
+                }, {
+                  "value" : "Applied Behavior Analysis",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 5
+                }, {
+                  "value" : "Behavioral Economics",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 6
+                }, {
+                  "value" : "Business",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 7
+                }, {
+                  "value" : "Cognition and Perception",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 8
+                }, {
+                  "value" : "Cognitive Psychology",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 9
+                }, {
+                  "value" : "Marketing",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 10
+                } ],
+                "dc.title" : [ {
+                  "value" : "Overcoming Algorithm Aversion: People will Use Imperfect Algorithms If They Can (Even Slightly) Modify Them",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.type" : [ {
+                  "value" : "Report",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.contributor.author" : [ {
+                  "value" : "Dietvorst, Berkeley J",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "Simmons, Joseph P",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                }, {
+                  "value" : "Massey, Cade",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 2
+                } ],
+                "digcom.identifier" : [ {
+                  "value" : "marketing_papers/389",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier.contextkey" : [ {
+                  "value" : "12173231",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier.submissionpath" : [ {
+                  "value" : "marketing_papers/389",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.type" : [ {
+                  "value" : "report",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dspace.entity.type" : [ {
+                  "value" : "Publication",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "upenn.schoolDepartmentCenter" : [ {
+                  "value" : "Marketing Papers",
+                  "language" : null,
+                  "authority" : "marketing_papers",
+                  "confidence" : 600,
+                  "place" : 0
+                } ]
+              },
+              "inArchive" : true,
+              "discoverable" : true,
+              "withdrawn" : false,
+              "lastModified" : "2023-12-12T16:14:41.046+00:00",
+              "entityType" : "Publication",
+              "type" : "item",
+              "_links" : {
+                "accessStatus" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed/accessStatus"
+                },
+                "bundles" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed/bundles"
+                },
+                "identifiers" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed/identifiers"
+                },
+                "mappedCollections" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed/mappedCollections"
+                },
+                "owningCollection" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed/owningCollection"
+                },
+                "relationships" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed/relationships"
+                },
+                "version" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed/version"
+                },
+                "templateItemOf" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed/templateItemOf"
+                },
+                "thumbnail" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed/thumbnail"
+                },
+                "self" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/efa4aa48-17e3-4606-a105-2adcec3885ed"
+                }
+              }
+            }
+          }
+        }, {
+          "hitHighlights" : {
+            "dc.description.abstract" : [ ". This phenomenon, which we call <em>algorithm</em> <em>aversion</em>, is costly, and it is important to understand its causes. In Chapter 1, we show that people are especially averse to algorithmic forecasters after seeing them perform, even when they see them outperform a human" ],
+            "dc.title" : [ "<em>Algorithm</em> <em>Aversion</em>" ]
+          },
+          "type" : "discover",
+          "_links" : {
+            "indexableObject" : {
+              "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2"
+            }
+          },
+          "_embedded" : {
+            "indexableObject" : {
+              "id" : "53e2030a-bf26-43f8-a63d-f28be4ed70e2",
+              "uuid" : "53e2030a-bf26-43f8-a63d-f28be4ed70e2",
+              "name" : "Algorithm Aversion",
+              "handle" : "20.500.14332/28523",
+              "metadata" : {
+                "dc.contributor.advisor" : [ {
+                  "value" : "Joseph P. Simmons",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.contributor.author" : [ {
+                  "value" : "Dietvorst, Berkeley Jay",
+                  "language" : null,
+                  "authority" : "virtual::9476",
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date" : [ {
+                  "value" : "2023-05-17T15:54:56.000",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.accessioned" : [ {
+                  "value" : "2023-05-22T16:43:49Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.available" : [ {
+                  "value" : "2016-03-31T00:00:00Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.copyright" : [ {
+                  "value" : "2016",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.issued" : [ {
+                  "value" : "2016-01-01",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.submitted" : [ {
+                  "value" : "2016-11-29T13:00:08-08:00",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.description.abstract" : [ {
+                  "value" : "Research shows that evidence-based algorithms more accurately predict the future than do human forecasters. Yet when forecasters are deciding whether to use a human forecaster or a statistical algorithm, they often choose the human forecaster. This phenomenon, which we call algorithm aversion, is costly, and it is important to understand its causes. In Chapter 1, we show that people are especially averse to algorithmic forecasters after seeing them perform, even when they see them outperform a human forecaster. This is because people more quickly lose confidence in algorithmic than human forecasters after seeing them make the same mistake. In Chapter 2, we investigate how aversion to imperfect algorithms might be overcome. We find that people are considerably more likely to choose to use an imperfect algorithm, and thus perform better, when they can modify its forecasts. Importantly, this is true even when they are severely restricted in the modifications they can make. Moreover, we find that people’s decision to use a modifiable algorithm is relatively insensitive to the magnitude of the modifications they are able to make. Finally, we find that giving people the freedom to modify an imperfect algorithm makes them feel more satisfied with the forecasting process, more likely to believe that the algorithm is superior, and more likely to choose to use an algorithm to make subsequent forecasts.",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.description.degree" : [ {
+                  "value" : "Doctor of Philosophy (PhD)",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.format.extent" : [ {
+                  "value" : "91 p.",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.format.mimetype" : [ {
+                  "value" : "application/pdf",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.identifier.uri" : [ {
+                  "value" : "https://repository.upenn.edu/handle/20.500.14332/28523",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.language" : [ {
+                  "value" : "en",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.articleid" : [ {
+                  "value" : "3472",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.fulltexturl" : [ {
+                  "value" : "https://repository.upenn.edu/cgi/viewcontent.cgi?article=3472&amp;context=edissertations&amp;unstamped=1",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.provenance" : [ {
+                  "value" : "Received from ProQuest",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.relation.url" : [ {
+                  "value" : "https://repository.upenn.edu/cgi/viewcontent.cgi?filename=0&article=3472&context=edissertations&type=additional",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "https://repository.upenn.edu/cgi/viewcontent.cgi?filename=1&article=3472&context=edissertations&type=additional",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                } ],
+                "dc.rights" : [ {
+                  "value" : "Berkeley Jay Dietvorst",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.issue" : [ {
+                  "value" : "1686",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.journal" : [ {
+                  "value" : "Publicly Accessible Penn Dissertations",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.status" : [ {
+                  "value" : "published",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.subject.other" : [ {
+                  "value" : "Confidence",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "Decision aids",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                }, {
+                  "value" : "Decision making",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 2
+                }, {
+                  "value" : "Forecasting",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 3
+                }, {
+                  "value" : "Heuristics and biases",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 4
+                }, {
+                  "value" : "Prediction",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 5
+                }, {
+                  "value" : "Advertising and Promotion Management",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 6
+                }, {
+                  "value" : "Business Administration, Management, and Operations",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 7
+                }, {
+                  "value" : "Management Sciences and Quantitative Methods",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 8
+                }, {
+                  "value" : "Marketing",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 9
+                }, {
+                  "value" : "Psychology",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 10
+                } ],
+                "dc.title" : [ {
+                  "value" : "Algorithm Aversion",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.type" : [ {
+                  "value" : "Dissertation/Thesis",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.date.embargo" : [ {
+                  "value" : "2016-03-31T00:00:00-07:00",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier" : [ {
+                  "value" : "edissertations/1686",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier.contextkey" : [ {
+                  "value" : "9424496",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier.submissionpath" : [ {
+                  "value" : "edissertations/1686",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.type" : [ {
+                  "value" : "dissertation",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dspace.entity.type" : [ {
+                  "value" : "Publication",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "relation.isAuthorOfPublication" : [ {
+                  "value" : "17e8a5e3-f76b-44ba-ae30-6021c3450fad",
+                  "language" : null,
+                  "authority" : "virtual::9476",
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "relation.isAuthorOfPublication.latestForDiscovery" : [ {
+                  "value" : "17e8a5e3-f76b-44ba-ae30-6021c3450fad",
+                  "language" : null,
+                  "authority" : "virtual::9476",
+                  "confidence" : -1,
+                  "place" : -1
+                } ],
+                "upenn.graduate.group" : [ {
+                  "value" : "Operations & Information Management",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ]
+              },
+              "inArchive" : true,
+              "discoverable" : true,
+              "withdrawn" : false,
+              "lastModified" : "2026-01-09T02:51:04.480+00:00",
+              "entityType" : "Publication",
+              "type" : "item",
+              "_links" : {
+                "accessStatus" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2/accessStatus"
+                },
+                "bundles" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2/bundles"
+                },
+                "identifiers" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2/identifiers"
+                },
+                "mappedCollections" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2/mappedCollections"
+                },
+                "owningCollection" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2/owningCollection"
+                },
+                "relationships" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2/relationships"
+                },
+                "version" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2/version"
+                },
+                "templateItemOf" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2/templateItemOf"
+                },
+                "thumbnail" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2/thumbnail"
+                },
+                "self" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/53e2030a-bf26-43f8-a63d-f28be4ed70e2"
+                }
+              }
+            }
+          }
+        }, {
+          "hitHighlights" : {
+            "dc.description.abstract" : [ ". This phenomenon, which we call <em>algorithm</em> <em>aversion</em>, is costly, and it is important to understand its causes. We show that people are especially averse to algorithmic forecasters after seeing them perform, even when they see them outperform a human forecaster" ],
+            "dc.title" : [ "<em>Algorithm</em> <em>Aversion</em>: People Erroneously Avoid Algorithms after Seeing Them Err" ]
+          },
+          "type" : "discover",
+          "_links" : {
+            "indexableObject" : {
+              "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a"
+            }
+          },
+          "_embedded" : {
+            "indexableObject" : {
+              "id" : "a9f701d1-9023-403d-a5b9-3658d262704a",
+              "uuid" : "a9f701d1-9023-403d-a5b9-3658d262704a",
+              "name" : "Algorithm Aversion: People Erroneously Avoid Algorithms after Seeing Them Err",
+              "handle" : "20.500.14332/34552",
+              "metadata" : {
+                "dc.contributor.author" : [ {
+                  "value" : "Dietvorst, Berkeley J",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "Simmons, Joseph P",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                }, {
+                  "value" : "Massey, Cade",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 2
+                } ],
+                "dc.date" : [ {
+                  "value" : "2023-05-17T17:53:06.000",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.accessioned" : [ {
+                  "value" : "2023-05-22T19:17:21Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.available" : [ {
+                  "value" : "2023-05-22T19:17:21Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.issued" : [ {
+                  "value" : "2015-02-01",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.submitted" : [ {
+                  "value" : "2017-08-25T08:35:54-07:00",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.description.abstract" : [ {
+                  "value" : "Research shows that evidence-based algorithms more accurately predict the future than do human forecasters. Yet when forecasters are deciding whether to use a human forecaster or a statistical algorithm, they often choose the human forecaster. This phenomenon, which we call algorithm aversion, is costly, and it is important to understand its causes. We show that people are especially averse to algorithmic forecasters after seeing them perform, even when they see them outperform a human forecaster. This is because people more quickly lose confidence in algorithmic than human forecasters after seeing them make the same mistake. In 5 studies, participants either saw an algorithm make forecasts, a human make forecasts, both, or neither. They then decided whether to tie their incentives to the future predictions of the algorithm or the human. Participants who saw the algorithm perform were less confident in it, and less likely to choose it over an inferior human forecaster. This was true even among those who saw the algorithm outperform the human.",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.identifier.uri" : [ {
+                  "value" : "https://repository.upenn.edu/handle/20.500.14332/34552",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.articleid" : [ {
+                  "value" : "1392",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.fields" : [ {
+                  "value" : "10.1037/xge0000033",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.fulltexturl" : [ {
+                  "value" : "https://repository.upenn.edu/cgi/viewcontent.cgi?article=1392&amp;context=fnce_papers&amp;unstamped=1",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.rights" : [ {
+                  "value" : "©American Psychological Association, 2015. This paper is not the copy of record and may not exactly replicate the authoritative document published in the APA journal. Please do not copy or cite without author's permission. The final article is available, upon publication, at: http://dx.doi.org/10.1037/xge0000033",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.beginpage" : [ {
+                  "value" : "114",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.endpage" : [ {
+                  "value" : "126",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.issue" : [ {
+                  "value" : "58",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "1",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                } ],
+                "dc.source.journal" : [ {
+                  "value" : "Finance Papers",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.journaltitle" : [ {
+                  "value" : "Journal of Experimental Psychology: General",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.peerreviewed" : [ {
+                  "value" : "true",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.status" : [ {
+                  "value" : "published",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.volume" : [ {
+                  "value" : "144",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.subject.other" : [ {
+                  "value" : "Finance and Financial Management",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "Social and Behavioral Sciences",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                } ],
+                "dc.title" : [ {
+                  "value" : "Algorithm Aversion: People Erroneously Avoid Algorithms after Seeing Them Err",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.type" : [ {
+                  "value" : "Article",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.contributor.author" : [ {
+                  "value" : "Dietvorst, Berkeley J",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "Simmons, Joseph P",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                }, {
+                  "value" : "Massey, Cade",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 2
+                } ],
+                "digcom.identifier" : [ {
+                  "value" : "fnce_papers/58",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier.contextkey" : [ {
+                  "value" : "10658983",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier.submissionpath" : [ {
+                  "value" : "fnce_papers/58",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.type" : [ {
+                  "value" : "article",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dspace.entity.type" : [ {
+                  "value" : "Publication",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "upenn.schoolDepartmentCenter" : [ {
+                  "value" : "Finance Papers",
+                  "language" : null,
+                  "authority" : "fnce_papers",
+                  "confidence" : 600,
+                  "place" : 0
+                } ]
+              },
+              "inArchive" : true,
+              "discoverable" : true,
+              "withdrawn" : false,
+              "lastModified" : "2023-12-12T16:17:08.773+00:00",
+              "entityType" : "Publication",
+              "type" : "item",
+              "_links" : {
+                "accessStatus" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a/accessStatus"
+                },
+                "bundles" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a/bundles"
+                },
+                "identifiers" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a/identifiers"
+                },
+                "mappedCollections" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a/mappedCollections"
+                },
+                "owningCollection" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a/owningCollection"
+                },
+                "relationships" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a/relationships"
+                },
+                "version" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a/version"
+                },
+                "templateItemOf" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a/templateItemOf"
+                },
+                "thumbnail" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a/thumbnail"
+                },
+                "self" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a"
+                }
+              }
+            }
+          }
+        }, {
+          "hitHighlights" : null,
+          "type" : "discover",
+          "_links" : {
+            "indexableObject" : {
+              "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6"
+            }
+          },
+          "_embedded" : {
+            "indexableObject" : {
+              "id" : "1602257b-3467-4331-b4f7-b1626752e2f6",
+              "uuid" : "1602257b-3467-4331-b4f7-b1626752e2f6",
+              "name" : "Millennial Attitudes Towards Financial Advisors and Emerging Investment Technologies",
+              "handle" : "20.500.14332/49216",
+              "metadata" : {
+                "dc.contributor.advisor" : [ {
+                  "value" : "Keith Niedermeier",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.contributor.author" : [ {
+                  "value" : "Robillard, Joseph",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date" : [ {
+                  "value" : "2023-05-17T21:20:29.000",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.accessioned" : [ {
+                  "value" : "2023-05-23T04:47:53Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.available" : [ {
+                  "value" : "2023-05-23T04:47:53Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.issued" : [ {
+                  "value" : "2018-01-01",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.submitted" : [ {
+                  "value" : "2018-10-24T08:16:16-07:00",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.description.abstract" : [ {
+                  "value" : "The Millennial cohort has been subject to many generalities regarding their behaviors and preferences when considering investing their wealth. Through use of a factor analysis and k-means cluster segmentation, five distinct clusters of potential investors emerged, each unique in their activity (or lack thereof) towards their portfolios, as well as their desired investment horizon. These clusters further differed in their desire for a traditional financial advisor as opposed to emerging investment algorithms; namely, Cluster 2 prefers the conjunction of an experienced advisor with advanced algorithms as opposed to exclusive use of either option. Further, regarding degrees of control, each Cluster preferred a different degree of control (from Limited to Total) as well as abilities to Adjust or Change an algorithm’s parameters. Finally, upon examination of any mediating variables, such as degree of control on portfolio distribution, it was determined that very little statistical significance existed.",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.identifier.uri" : [ {
+                  "value" : "https://repository.upenn.edu/handle/20.500.14332/49216",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.articleid" : [ {
+                  "value" : "1175",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.fulltexturl" : [ {
+                  "value" : "https://repository.upenn.edu/cgi/viewcontent.cgi?article=1175&amp;context=wharton_research_scholars&amp;unstamped=1",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.issue" : [ {
+                  "value" : "171",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.journal" : [ {
+                  "value" : "Wharton Research Scholars",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.status" : [ {
+                  "value" : "published",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.subject.other" : [ {
+                  "value" : "Finance",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "Investment",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                }, {
+                  "value" : "Decision Making",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 2
+                }, {
+                  "value" : "Consumer Choice",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 3
+                }, {
+                  "value" : "FinTech",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 4
+                }, {
+                  "value" : "Algorithms",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 5
+                }, {
+                  "value" : "Business",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 6
+                } ],
+                "dc.title" : [ {
+                  "value" : "Millennial Attitudes Towards Financial Advisors and Emerging Investment Technologies",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.type" : [ {
+                  "value" : "Dissertation/Thesis",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.contributor.author" : [ {
+                  "value" : "Robillard, Joseph",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier" : [ {
+                  "value" : "wharton_research_scholars/171",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier.contextkey" : [ {
+                  "value" : "13153897",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier.submissionpath" : [ {
+                  "value" : "wharton_research_scholars/171",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.type" : [ {
+                  "value" : "thesis",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dspace.entity.type" : [ {
+                  "value" : "Publication",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "upenn.schoolDepartmentCenter" : [ {
+                  "value" : "Wharton Research Scholars",
+                  "language" : null,
+                  "authority" : "wharton_research_scholars",
+                  "confidence" : 600,
+                  "place" : 0
+                } ]
+              },
+              "inArchive" : true,
+              "discoverable" : true,
+              "withdrawn" : false,
+              "lastModified" : "2023-06-16T08:39:05.298+00:00",
+              "entityType" : "Publication",
+              "type" : "item",
+              "_links" : {
+                "accessStatus" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6/accessStatus"
+                },
+                "bundles" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6/bundles"
+                },
+                "identifiers" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6/identifiers"
+                },
+                "mappedCollections" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6/mappedCollections"
+                },
+                "owningCollection" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6/owningCollection"
+                },
+                "relationships" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6/relationships"
+                },
+                "version" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6/version"
+                },
+                "templateItemOf" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6/templateItemOf"
+                },
+                "thumbnail" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6/thumbnail"
+                },
+                "self" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/1602257b-3467-4331-b4f7-b1626752e2f6"
+                }
+              }
+            }
+          }
+        }, {
+          "hitHighlights" : null,
+          "type" : "discover",
+          "_links" : {
+            "indexableObject" : {
+              "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9"
+            }
+          },
+          "_embedded" : {
+            "indexableObject" : {
+              "id" : "b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9",
+              "uuid" : "b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9",
+              "name" : "A Distance Framework to Understand the Academia-Practicioner Gap",
+              "handle" : "20.500.14332/37895",
+              "metadata" : {
+                "dc.contributor.advisor" : [ {
+                  "value" : "Peter S. Fader",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.contributor.author" : [ {
+                  "value" : "Ranginani, Anika Usha",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date" : [ {
+                  "value" : "2023-05-17T23:03:51.000",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.accessioned" : [ {
+                  "value" : "2023-05-22T23:10:54Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.available" : [ {
+                  "value" : "2023-05-22T23:10:54Z",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.issued" : [ {
+                  "value" : "2019-05-01",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.date.submitted" : [ {
+                  "value" : "2019-11-13T08:41:49-08:00",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.description.abstract" : [ {
+                  "value" : "This paper lays out a framework for understanding the academia-practitioner gap. In this framework, there are three dimensions of distance between academia and practice: (1) Product, (2) Mindset, and (3) Process. Within each category, there are multiple elements that can be used as a comprehensive way to identify all the challenges in transferring academic research to practice. This approach is both firmly grounded in and distinct from existing frameworks like Rogers’ Diffusion of Innovation, Roberts’ Marketing Science Value Chain, Wierenga’s Success of Marketing Management Support Systems and Lilien’s analysis of Bridging the Academic-Practitioner divide. After describing the framework, the paper looks at how researchers can better understand the role of intermediaries in bridging the gap between academia and practice by identifying which types of distance they help close.",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.identifier.uri" : [ {
+                  "value" : "https://repository.upenn.edu/handle/20.500.14332/37895",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.articleid" : [ {
+                  "value" : "1068",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.legacy.fulltexturl" : [ {
+                  "value" : "https://repository.upenn.edu/cgi/viewcontent.cgi?article=1068&amp;context=joseph_wharton_scholars&amp;unstamped=1",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.issue" : [ {
+                  "value" : "75",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.journal" : [ {
+                  "value" : "Joseph Wharton Scholars",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.source.status" : [ {
+                  "value" : "published",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.subject.other" : [ {
+                  "value" : "academia-practitioner gap",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                }, {
+                  "value" : "decision support systems",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 1
+                }, {
+                  "value" : "intermediaries",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 2
+                }, {
+                  "value" : "diffusion of innovation",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 3
+                }, {
+                  "value" : "Business",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 4
+                } ],
+                "dc.title" : [ {
+                  "value" : "A Distance Framework to Understand the Academia-Practicioner Gap",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dc.type" : [ {
+                  "value" : "Dissertation/Thesis",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.contributor.author" : [ {
+                  "value" : "Ranginani, Anika Usha",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier" : [ {
+                  "value" : "joseph_wharton_scholars/75",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier.contextkey" : [ {
+                  "value" : "15765739",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.identifier.submissionpath" : [ {
+                  "value" : "joseph_wharton_scholars/75",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "digcom.type" : [ {
+                  "value" : "thesis",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "dspace.entity.type" : [ {
+                  "value" : "Publication",
+                  "language" : null,
+                  "authority" : null,
+                  "confidence" : -1,
+                  "place" : 0
+                } ],
+                "upenn.schoolDepartmentCenter" : [ {
+                  "value" : "Joseph Wharton Scholars",
+                  "language" : null,
+                  "authority" : "joseph_wharton_scholars",
+                  "confidence" : 600,
+                  "place" : 0
+                } ]
+              },
+              "inArchive" : true,
+              "discoverable" : true,
+              "withdrawn" : false,
+              "lastModified" : "2023-06-16T09:34:10.808+00:00",
+              "entityType" : "Publication",
+              "type" : "item",
+              "_links" : {
+                "accessStatus" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9/accessStatus"
+                },
+                "bundles" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9/bundles"
+                },
+                "identifiers" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9/identifiers"
+                },
+                "mappedCollections" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9/mappedCollections"
+                },
+                "owningCollection" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9/owningCollection"
+                },
+                "relationships" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9/relationships"
+                },
+                "version" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9/version"
+                },
+                "templateItemOf" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9/templateItemOf"
+                },
+                "thumbnail" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9/thumbnail"
+                },
+                "self" : {
+                  "href" : "https://repository.upenn.edu/server/api/core/items/b8e5fba7-0fa6-45ec-b848-a5d6b1a4dfb9"
+                }
+              }
+            }
+          }
+        } ]
+      },
+      "page" : {
+        "number" : 0,
+        "size" : 20,
+        "totalPages" : 1,
+        "totalElements" : 5
+      },
+      "_links" : {
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%22Algorithm%20Aversion%22"
+        }
+      }
+    },
+    "facets" : [ {
+      "name" : "author",
+      "facetType" : "text",
+      "facetLimit" : 5,
+      "minValue" : "A.J. Marshall",
+      "maxValue" : "Žilková, Zuzana",
+      "page" : {
+        "number" : 0,
+        "size" : 5
+      },
+      "_links" : {
+        "next" : {
+          "href" : "https://repository.upenn.edu/server/api/discover/facets/author?query=%22Algorithm%20Aversion%22&page=1&size=5"
+        },
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/discover/facets/author?query=%22Algorithm%20Aversion%22&size=5"
+        }
+      },
+      "_embedded" : {
+        "values" : [ {
+          "label" : "Dietvorst, Berkeley J",
+          "count" : 2,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.author=Dietvorst,%20Berkeley%20J,equals"
+            }
+          }
+        }, {
+          "label" : "Massey, Cade",
+          "count" : 2,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.author=Massey,%20Cade,equals"
+            }
+          }
+        }, {
+          "label" : "Simmons, Joseph P",
+          "count" : 2,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.author=Simmons,%20Joseph%20P,equals"
+            }
+          }
+        }, {
+          "label" : "Dietvorst, Berkeley Jay",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.author=Dietvorst,%20Berkeley%20Jay,equals"
+            }
+          }
+        }, {
+          "label" : "Ranginani, Anika Usha",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.author=Ranginani,%20Anika%20Usha,equals"
+            }
+          }
+        } ]
+      }
+    }, {
+      "name" : "subject",
+      "facetType" : "hierarchical",
+      "facetLimit" : 5,
+      "_links" : {
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/discover/facets/subject?query=%22Algorithm%20Aversion%22"
+        }
+      },
+      "_embedded" : {
+        "values" : [ ]
+      }
+    }, {
+      "name" : "dateIssued",
+      "facetType" : "date",
+      "facetLimit" : 5,
+      "minValue" : "1635",
+      "maxValue" : "2026-12-15",
+      "page" : {
+        "number" : 0,
+        "size" : 5
+      },
+      "_links" : {
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/discover/facets/dateIssued?query=%22Algorithm%20Aversion%22&size=5"
+        }
+      },
+      "_embedded" : {
+        "values" : [ {
+          "label" : "2000 - 2026",
+          "count" : 5,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.dateIssued=%5B2000%20TO%202026%5D,equals"
+            }
+          }
+        } ]
+      }
+    }, {
+      "name" : "entityType",
+      "facetType" : "text",
+      "facetLimit" : 5,
+      "page" : {
+        "number" : 0,
+        "size" : 5
+      },
+      "_links" : {
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/discover/facets/entityType?query=%22Algorithm%20Aversion%22&size=5"
+        }
+      },
+      "_embedded" : {
+        "values" : [ {
+          "label" : "Publication",
+          "count" : 5,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.entityType=Publication,equals"
+            }
+          }
+        } ]
+      }
+    }, {
+      "name" : "itemtype",
+      "facetType" : "text",
+      "facetLimit" : 10,
+      "page" : {
+        "number" : 0,
+        "size" : 10
+      },
+      "_links" : {
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/discover/facets/itemtype?query=%22Algorithm%20Aversion%22&size=10"
+        }
+      },
+      "_embedded" : {
+        "values" : [ {
+          "label" : "Dissertation/Thesis",
+          "count" : 3,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.itemtype=Dissertation/Thesis,equals"
+            }
+          }
+        }, {
+          "label" : "Article",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.itemtype=Article,equals"
+            }
+          }
+        }, {
+          "label" : "Report",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.itemtype=Report,equals"
+            }
+          }
+        } ]
+      }
+    }, {
+      "name" : "orgunit",
+      "facetType" : "hierarchical",
+      "facetLimit" : 5,
+      "page" : {
+        "number" : 0,
+        "size" : 5
+      },
+      "_links" : {
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/discover/facets/orgunit?query=%22Algorithm%20Aversion%22&size=5"
+        }
+      },
+      "_embedded" : {
+        "values" : [ {
+          "label" : "Finance Papers",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.orgunit=Finance%20Papers,equals"
+            }
+          }
+        }, {
+          "label" : "Joseph Wharton Scholars",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.orgunit=Joseph%20Wharton%20Scholars,equals"
+            }
+          }
+        }, {
+          "label" : "Marketing Papers",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.orgunit=Marketing%20Papers,equals"
+            }
+          }
+        }, {
+          "label" : "Wharton Research Scholars",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.orgunit=Wharton%20Research%20Scholars,equals"
+            }
+          }
+        } ]
+      }
+    }, {
+      "name" : "other",
+      "facetType" : "hierarchical",
+      "facetLimit" : 5,
+      "page" : {
+        "number" : 0,
+        "size" : 5
+      },
+      "_links" : {
+        "next" : {
+          "href" : "https://repository.upenn.edu/server/api/discover/facets/other?query=%22Algorithm%20Aversion%22&page=1&size=5"
+        },
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/discover/facets/other?query=%22Algorithm%20Aversion%22&size=5"
+        }
+      },
+      "_embedded" : {
+        "values" : [ {
+          "label" : "Business",
+          "count" : 3,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.other=Business,equals"
+            }
+          }
+        }, {
+          "label" : "Decision making",
+          "count" : 2,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.other=Decision%20making,equals"
+            }
+          }
+        }, {
+          "label" : "Marketing",
+          "count" : 2,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.other=Marketing,equals"
+            }
+          }
+        }, {
+          "label" : "academia-practitioner gap",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.other=academia-practitioner%20gap,equals"
+            }
+          }
+        }, {
+          "label" : "Advertising and Promotion Management",
+          "count" : 1,
+          "authorityKey" : null,
+          "type" : "discover",
+          "_links" : {
+            "search" : {
+              "href" : "https://repository.upenn.edu/server/api/discover/search/objects?query=%2522Algorithm%2520Aversion%2522&f.other=Advertising%20and%20Promotion%20Management,equals"
+            }
+          }
+        } ]
+      }
+    } ]
+  }
+}

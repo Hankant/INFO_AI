@@ -1,0 +1,128 @@
+{
+  "_embedded" : {
+    "bundles" : [ {
+      "uuid" : "194d1da7-ee01-494e-8805-9f567d0a4f90",
+      "name" : "SOURCE",
+      "handle" : null,
+      "metadata" : {
+        "dc.title" : [ {
+          "value" : "SOURCE",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "bundle",
+      "_links" : {
+        "item" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/194d1da7-ee01-494e-8805-9f567d0a4f90/item"
+        },
+        "bitstreams" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/194d1da7-ee01-494e-8805-9f567d0a4f90/bitstreams"
+        },
+        "primaryBitstream" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/194d1da7-ee01-494e-8805-9f567d0a4f90/primaryBitstream"
+        },
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/194d1da7-ee01-494e-8805-9f567d0a4f90"
+        }
+      }
+    }, {
+      "uuid" : "b5aec331-d19e-44b3-aff5-b92eb7b488df",
+      "name" : "ORIGINAL",
+      "handle" : null,
+      "metadata" : {
+        "dc.title" : [ {
+          "value" : "ORIGINAL",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "bundle",
+      "_links" : {
+        "item" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/b5aec331-d19e-44b3-aff5-b92eb7b488df/item"
+        },
+        "bitstreams" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/b5aec331-d19e-44b3-aff5-b92eb7b488df/bitstreams"
+        },
+        "primaryBitstream" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/b5aec331-d19e-44b3-aff5-b92eb7b488df/primaryBitstream"
+        },
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/b5aec331-d19e-44b3-aff5-b92eb7b488df"
+        }
+      }
+    }, {
+      "uuid" : "0729fc07-44a9-490f-b5c7-1da7ec8b8bf5",
+      "name" : "TEXT",
+      "handle" : null,
+      "metadata" : {
+        "dc.title" : [ {
+          "value" : "TEXT",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "bundle",
+      "_links" : {
+        "item" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/0729fc07-44a9-490f-b5c7-1da7ec8b8bf5/item"
+        },
+        "bitstreams" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/0729fc07-44a9-490f-b5c7-1da7ec8b8bf5/bitstreams"
+        },
+        "primaryBitstream" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/0729fc07-44a9-490f-b5c7-1da7ec8b8bf5/primaryBitstream"
+        },
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/0729fc07-44a9-490f-b5c7-1da7ec8b8bf5"
+        }
+      }
+    }, {
+      "uuid" : "b39df31d-8ef3-4cf2-ad86-d2c29d9aaf6e",
+      "name" : "THUMBNAIL",
+      "handle" : null,
+      "metadata" : {
+        "dc.title" : [ {
+          "value" : "THUMBNAIL",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "bundle",
+      "_links" : {
+        "item" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/b39df31d-8ef3-4cf2-ad86-d2c29d9aaf6e/item"
+        },
+        "bitstreams" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/b39df31d-8ef3-4cf2-ad86-d2c29d9aaf6e/bitstreams"
+        },
+        "primaryBitstream" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/b39df31d-8ef3-4cf2-ad86-d2c29d9aaf6e/primaryBitstream"
+        },
+        "self" : {
+          "href" : "https://repository.upenn.edu/server/api/core/bundles/b39df31d-8ef3-4cf2-ad86-d2c29d9aaf6e"
+        }
+      }
+    } ]
+  },
+  "page" : {
+    "number" : 0,
+    "size" : 20,
+    "totalPages" : 1,
+    "totalElements" : 4
+  },
+  "_links" : {
+    "self" : {
+      "href" : "https://repository.upenn.edu/server/api/core/items/a9f701d1-9023-403d-a5b9-3658d262704a/bundles"
+    }
+  }
+}
