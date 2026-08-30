@@ -1,6 +1,4 @@
-% !TeX program = xelatex
-% !TeX encoding = UTF-8
-\documentclass[11pt]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[a4paper,margin=2.35cm]{geometry}
 % Overleaf-compatible font setup. The document can be compiled with
 % pdfLaTeX, XeLaTeX, or LuaLaTeX; no proprietary system fonts are required.
@@ -15,16 +13,17 @@
   \setmainfont{TeX Gyre Termes}
   \setsansfont{TeX Gyre Heros}[Scale=0.92]
 \fi
-\usepackage{microtype}
+\usepackage[nopatch=footnote]{microtype}
 \usepackage{amsmath,amssymb,mathtools}
 \ifPDFTeX
   \usepackage{newtxmath}
 \fi
 \usepackage{booktabs,longtable,array,tabularx}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 \usepackage{enumitem}
 \usepackage{xcolor}
-\usepackage{hyperref}
 \usepackage[round,authoryear]{natbib}
+\usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{caption}
@@ -35,19 +34,12 @@
 
 \definecolor{navy}{HTML}{17324D}
 \definecolor{midgray}{HTML}{5F6870}
-\hypersetup{
-  colorlinks=true,
-  linkcolor=navy,
-  urlcolor=navy,
-  citecolor=navy,
-  pdfauthor={Research Proposal},
-  pdftitle={AI Decision Agents, Conflict Escalation, and Responsibility Attribution in Intergroup Conflict}
-}
-
 \titleformat{\section}{\Large\bfseries\color{navy}}{\thesection.}{0.6em}{}
 \titleformat{\subsection}{\large\bfseries\color{navy}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{navy}}{\thesubsubsection}{0.6em}{}
 \titlespacing*{\section}{0pt}{1.3em}{0.55em}
 \titlespacing*{\subsection}{0pt}{1.0em}{0.4em}
+\titlespacing*{\subsubsection}{0pt}{0.8em}{0.3em}
 \setlist{leftmargin=1.6em,itemsep=0.3em,topsep=0.4em}
 \renewcommand{\arraystretch}{1.2}
 \setlength{\parindent}{0pt}
@@ -56,41 +48,50 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small\color{midgray}AI Decision Agents and Intergroup Conflict}
 \fancyhead[R]{\small\color{midgray}Research Proposal}
 \fancyfoot[C]{\thepage}
 \setlength{\headheight}{14pt}
 
+\setlength{\emergencystretch}{2em}
+\setlength{\bibhang}{1.5em}
+\setlength{\bibsep}{0.6em}
+\renewcommand{\bibfont}{\small\RaggedRight}
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+\captionsetup[table]{font=small,labelfont=bf,skip=6pt}
+\setlength{\LTpre}{0.6em}
+\setlength{\LTpost}{0.6em}
+\newcommand{\term}[1]{\textit{#1}}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,citecolor=navy,pdfauthor={Xiangyu Xu},pdftitle={Delegating Conflict to AI: Escalation and Responsibility Attribution in Intergroup Conflict}}
+\fancyhead[L]{\small\color{midgray}AI Decision Agents and Intergroup Conflict}
 \newcommand{\AI}{\textit{AI}}
 \newcommand{\Baseline}{\textbf{C0 Baseline}}
 \newcommand{\AID}{\textbf{C1 AI Delegation}}
-\newcommand{\term}[1]{\textit{#1}}
-\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 
 \begin{document}
 
 \begin{titlepage}
 \centering
-\vspace*{3.0cm}
-\vspace{1.15cm}
-{\sffamily\bfseries\Huge Delegating Conflict to AI: Escalation and Responsibility Attribution in Intergroup Conflict
-\par}
-\vspace{0.18cm}
-\vspace{0.55cm}
-{\sffamily\Large Xiangyu Xu \par}
-\vspace{2.0cm}
+\vspace*{2.5cm}
+{\sffamily\bfseries\color{navy}\LARGE Research Proposal\par}
+\vspace{1.2cm}
+{\sffamily\bfseries\Huge Delegating Conflict to AI: Escalation and Responsibility Attribution in Intergroup Conflict\par}
+\vspace{1.5cm}
+{\sffamily\Large Xiangyu Xu\par}
+\vspace{0.8cm}
+{\sffamily\small Revised 30 August 2026\par}
+\vspace{0.2cm}
+{\sffamily\small Research proposal; design and measures remain to be validated\par}
 \vfill
-
-\vspace*{1.2cm}
 \end{titlepage}
 
 \section*{Abstract}
 
 AI decision agents may alter both conflict behavior and subsequent judgments of responsibility. Research on delegation examines whether people transfer decision authority and whether delegation changes behavior. Research on AI responsibility examines how people evaluate humans and AI after an outcome occurs. Research on AI in conflict mainly studies whether AI analysis, advice, or model decisions affect the use of force and conflict escalation. The representative studies reviewed in this proposal cover different stages of the decision process, but they do not jointly explain what happens when a human can voluntarily transfer final authority to AI and real group members subsequently judge responsibility from positions of benefit or harm.
 
-This proposal contains two connected experiments. Study 1 uses a group-based Hawk--Dove game and randomly compares two decision environments. In \Baseline{}, a human must make the final conflict choice. In \AID{}, the human may retain final authority or transfer it to an AI decision agent. Once delegation is confirmed, the AI choice is binding: the human cannot preview, modify, veto, or reconfirm it. Study 1 identifies the overall effect of making AI delegation available on final conflict escalation and separately records actual delegation. Study 2 uses matched decision records. It holds the rules, actions, and outcome constant while randomly varying whether the final choice is recorded as having been made by the human or by AI. This design identifies the effect of final authority on responsibility ratings.
+This proposal contains two connected experiments. Study 1 uses a group-based Hawk--Dove game and randomly compares two decision environments. In \Baseline{}, a human must make the final conflict choice. In \AID{}, the human may retain final authority or transfer it to an AI decision agent. Once delegation is confirmed, the AI choice is binding: the human cannot preview, modify, veto, or reconfirm it. Study 1 identifies the overall effect of making AI delegation available on final conflict escalation and separately records actual delegation. Study 2 uses matched decision records. It holds the rules, actions, and outcome constant while randomly varying whether the final choice is recorded as having been made by the human or by AI. This design identifies the effect of the recorded delegation and final-decision arrangement on responsibility ratings.
 
-Responsibility is measured with two independent ratings from 0 to 100: one for the human decision-maker and one for the AI decision agent. The ratings are not constrained to sum to 100, allowing both actors to be held responsible at the same time. Members of benefiting and harmed groups evaluate their own group's human and AI. The two studies answer separate behavioral and attribution questions. The proposal does not treat post-outcome responsibility ratings as a causal mediator of earlier delegation or escalation.
+Where AI is available, responsibility is measured with two independent ratings from 0 to 100: one for the human decision-maker and one for the AI decision agent. The human-only Study 1 baseline collects only the human rating; an absent AI rating is not coded as zero. The ratings are not constrained to sum to 100, allowing both actors to be held responsible at the same time. Study 1 members evaluate their own group's decision-makers after real payoff consequences. Study 2 compares benefiting and harmed records; their connection to evaluators' actual bonuses remains to be specified. The two studies answer separate behavioral and attribution questions. The proposal does not treat post-outcome responsibility ratings as a causal mediator of earlier delegation or escalation.
 
 \textbf{Keywords:} AI delegation; decision agents; conflict escalation; responsibility attribution; intergroup conflict; Hawk--Dove game
 
@@ -126,11 +127,11 @@ In intergroup conflict, does the introduction of an AI decision agent change con
 
 The main question is divided into three specific research questions:
 
-\textbf{RQ1 --- Delegation.} When an AI decision agent is available, are humans willing to transfer final authority to AI?
+\textbf{RQ1: Delegation.} When an AI decision agent is available, are humans willing to transfer final authority to AI?
 
-\textbf{RQ2 --- Escalation.} Does making AI delegation available change final conflict escalation?
+\textbf{RQ2: Escalation.} Does making AI delegation available change final conflict escalation?
 
-\textbf{RQ3 --- Responsibility attribution.} After the conflict outcome, how do benefiting and harmed groups evaluate the responsibility of their own human decision-maker and AI decision agent?
+\textbf{RQ3: Responsibility attribution.} After the conflict outcome, how do benefiting and harmed groups evaluate the responsibility of their own human decision-maker and AI decision agent?
 
 RQ1 records actual delegation within the AI Delegation condition. RQ2 uses randomized availability of AI delegation to identify an overall change in escalation. RQ3 compares independent responsibility ratings for the human and AI and uses a matched-record study to identify the effect of final authority. The decision-maker's ratings of self and AI are reported as a supplementary comparison and are not pooled with the main benefiting-versus-harmed comparison. The three questions belong to the same real-world process, but they do not form a fully identified causal mediation chain.
 
@@ -164,7 +165,7 @@ The inequity-aversion model of \citet{FehrSchmidt1999} allows individual utility
 
 The research process is summarized as follows:
 
-\begin{equation}
+\begin{equation*}
 \underbrace{T}_{\substack{\text{random availability of}\\\text{AI delegation}}}
 \longrightarrow
 \underbrace{D}_{\substack{\text{actual}\\\text{delegation}}}
@@ -174,17 +175,17 @@ The research process is summarized as follows:
 \underbrace{P}_{\substack{\text{payoff}\\\text{position}}}
 \longrightarrow
 \underbrace{R}_{\substack{\text{responsibility}\\\text{rating}}}.
-\end{equation}
+\end{equation*}
 
 $T$ is the randomized treatment in Study 1, $D$ is the participant's voluntary delegation choice, $E$ is the final escalation outcome, $P$ is the benefiting or harmed payoff position, and $R$ is the responsibility rating of the human or AI. The sequence describes the order of the study; it does not imply that every arrow is causally identified. Study 1 supports a causal interpretation of $T\rightarrow E$. Study 2 supports a causal interpretation of final decision-maker $F\rightarrow R$. Actual delegation $D$ is not randomized in Study 1.
 
 \subsection{Hypotheses}
 
-\textbf{H1 --- AI delegation availability and conflict escalation.} Relative to \Baseline{}, \AID{} will change the probability of choosing escalation. The direction depends on actual delegation uptake and the AI decision rule fixed before the experiment. A directional prediction will be preregistered after the AI rule and pilot results are fixed.
+\textbf{H1: AI delegation availability and conflict escalation.} Relative to \Baseline{}, \AID{} will change the probability of choosing escalation. The direction depends on actual delegation uptake, the fixed AI decision rule, and possible changes in human choices among those who decline delegation. A directional prediction will be preregistered after the AI rule and pilot results are fixed.
 
-\textbf{H2 --- Final decision-maker and rated target.} Holding the final action and outcome constant, an AI-made final choice will produce a higher AI responsibility rating than the same choice recorded as having been made by a human.
+\textbf{H2: Final decision-maker and rated target.} Holding the final action and outcome constant, an AI-made final choice will produce a higher AI responsibility rating than the same choice recorded as having been made by a human.
 
-H2 allows three competing empirical patterns:
+The joint ratings may display the following patterns. The third would not support H2; these patterns are not exhaustive:
 
 \begin{itemize}
 \item \textbf{Responsibility transfer:} AI responsibility increases and human responsibility decreases.
@@ -194,7 +195,7 @@ H2 allows three competing empirical patterns:
 
 These labels describe the joint movement of two responsibility ratings. They are not presented as three established psychological constructs, and they do not assume a fixed total amount of responsibility.
 
-\textbf{H3 --- Interaction between payoff position and rated target.} Benefiting and harmed groups will form different human--AI responsibility-rating profiles. Existing evidence does not determine which group will necessarily assign more responsibility to AI. The hypothesis therefore concerns the interaction and does not impose a directional prediction.
+\textbf{H3: Interaction between payoff position and rated target.} Benefiting and harmed groups will form different human--AI responsibility-rating profiles. Existing evidence does not determine which group will necessarily assign more responsibility to AI. This hypothesis concerns $P\times Q$, the difference in rating profiles by payoff position. The separate $F\times P\times Q$ contrast tests whether the effect of the recorded final-decision arrangement on the two ratings differs by position. Their primary or supplementary status will be specified before confirmatory analysis; neither comparison imposes a directional prediction.
 
 \section{Research Design}
 
@@ -215,7 +216,7 @@ The randomized independent variable in Study 1 is the availability of AI delegat
 
 \subsection{Group-based Hawk--Dove game}
 
-The conflict task is a Hawk--Dove game. Hawk represents escalation and Dove represents restraint. The standard payoff structure is shown in Table~\ref{tab:hawk-dove}, where $V$ is the value of the contested resource and $C$ is the cost of mutual escalation, with $C>V>0$ \citep{MaynardSmithPrice1973}.
+The conflict task is a Hawk--Dove game. Hawk represents escalation and Dove represents restraint. The standard payoff structure is shown in Table~\ref{tab:hawk-dove}, where $V$ is the value of the contested resource and $C$ is the cost of mutual escalation, with $C>V>0$~\citep{MaynardSmithPrice1973}.
 
 \begin{table}[H]
 \centering
@@ -223,7 +224,7 @@ The conflict task is a Hawk--Dove game. Hawk represents escalation and Dove repr
 \label{tab:hawk-dove}
 \begin{tabular}{lcc}
 \toprule
-Focal group choice & Opponent chooses Dove & Opponent chooses Hawk\\
+\textbf{Focal group choice} & \textbf{Opponent chooses Dove} & \textbf{Opponent chooses Hawk}\\
 \midrule
 Dove & $(V/2,V/2)$ & $(0,V)$\\
 Hawk & $(V,0)$ & $((V-C)/2,(V-C)/2)$\\
@@ -238,12 +239,12 @@ The task supplies three features required by the proposal. Unilateral escalation
 \begin{enumerate}
 \item Participants complete informed consent, role instructions, and comprehension checks.
 \item Participants are randomly assigned to two three-person groups, and one decision-maker is randomly selected in each group.
-\item All participants receive the payoff rules, information boundaries, and decision-authority rules.
+\item All participants receive the payoff rules, information boundaries, and decision-authority rules. Group members do not communicate during the decision task.
 \item Decision-makers are randomly assigned to C0 or C1.
 \item C0 decision-makers choose Hawk or Dove directly. C1 decision-makers either retain control or delegate to AI.
 \item Both groups' final actions are implemented simultaneously, and group payoffs are realized.
 \item Participants observe their own authorization record, both final actions, and the payoff outcome.
-\item Members without decision authority rate the responsibility of their own human and AI. Decision-makers rate their own responsibility and the responsibility of AI.
+\item In C0, members rate only their human decision-maker. In C1, they rate the human and AI separately; when delegation is declined, the record states that AI did not make the final choice. Decision-makers provide corresponding self-ratings separately. Missing AI ratings in C0 are not coded as zero.
 \item Participants complete final comprehension checks and supplementary measures.
 \end{enumerate}
 
@@ -251,7 +252,7 @@ The first-round between-subject comparison provides the primary test. If a secon
 
 \subsection{Study 2: Responsibility ratings for matched records}
 
-Study 2 identifies the effect of final authority on responsibility ratings. Participants view a completed conflict record concerning their own side. The payoff rule, focal action, opponent action, and focal outcome are held constant. Only the recorded final decision-maker is randomized:
+Study 2 identifies the effect of the recorded delegation and final-decision arrangement on responsibility ratings. Participants view a completed conflict record presented as concerning their side. The source of these records and whether and how their payoffs affect evaluators' actual bonuses remain to be specified. A described benefiting or harmed role is not, by itself, a real financial position. Until the payment link is implemented, Study 2 claims are restricted to evaluations of assigned records. If participants' own Study 1 records are used, the protocol must also resolve how randomized record information relates to events they already observed. The payoff rule, focal action, opponent action, and focal outcome are held constant. Only the recorded final decision-maker is randomized:
 
 \begin{itemize}
 \item the human retained final authority and personally made the choice; or
@@ -264,7 +265,7 @@ Both versions state that AI delegation had been available, so participants rate 
 
 Responsibility refers to the evaluator's judgment of how much each actor should be held responsible for the group's final conflict choice. It is a judgment rating, not a measure of legal liability, compensation, organizational sanction, or experimental punishment.
 
-Participants answer two questions:
+In Study 1, C0 participants receive only the human item; C1 participants receive both items. Both Study 2 conditions describe AI delegation as available and include both items. The questions are:
 
 \begin{quote}
 For the final conflict choice made by your group, how much responsibility should the group's human decision-maker bear?
@@ -276,21 +277,25 @@ For the final conflict choice made by your group, how much responsibility should
 
 Both ratings range from 0 (no responsibility at all) to 100 (full responsibility), and question order is randomized. The ratings are independent and are not constrained to sum to 100. \citet{AwadEtAl2020} separately assessed blame assigned to humans and automated systems in shared control. \citet{ShankEtAl2019} separately assessed the moral fault of humans and AI, while \citet{DongBocian2024} measured moral responsibility attributed to AI. These studies support treating the human and AI as separate targets of evaluation. The present responsibility items are not claimed to replicate any one of these existing measures exactly.
 
+Payoff position is produced by the group's shared outcome and recorded for each evaluator; members of one group are not independent assignments to a payoff condition. The reference payoff, records included in the primary benefit--harm comparison, and treatment of mutual escalation or mutual restraint will be fixed before confirmatory analysis. These symmetric outcomes are reported separately rather than pooled into an undefined ``joint outcome.''
+
 \subsection{Core variables}
+
+Table~\ref{tab:core-variables} summarizes the variables and their interpretation.
 
 \begin{table}[H]
 \centering
 \small
 \caption{Core variables and their roles}
 \label{tab:core-variables}
-\begin{tabularx}{\textwidth}{@{}p{0.18\textwidth}p{0.22\textwidth}YY@{}}
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}p{0.18\textwidth}>{\RaggedRight\arraybackslash}p{0.22\textwidth}YY@{}}
 \toprule
-Variable role & Variable & Operationalization or measure & Interpretive scope\\
+\textbf{Variable role} & \textbf{Variable} & \textbf{Operationalization or measure} & \textbf{Interpretive scope}\\
 \midrule
 Randomized independent variable & AI delegation availability, $T$ & C0 versus C1 & Study 1 treatment\\
 Behavioral outcome & Actual delegation, $D$ & Human control versus AI delegation within C1 & Voluntary choice; no independent causal interpretation\\
 Primary behavioral dependent variable & Final escalation, $E$ & Dove versus Hawk & RQ2\\
-Outcome position & Payoff position, $P$ & Benefit, harm, or joint outcome & Jointly produced by both groups' actions\\
+Outcome position & Payoff position, $P$ & Benefit/harm records; symmetric outcomes reported separately & Jointly produced by both groups' actions\\
 Randomized independent variable & Final decision-maker, $F$ & Human versus AI & Study 2 treatment\\
 Repeated-measures factor & Rated target, $Q$ & Human versus AI & Distinguishes the two responsibility targets\\
 Primary attribution dependent variable & Responsibility rating, $R$ & Independent 0--100 rating & RQ3\\
@@ -305,39 +310,43 @@ Supplementary comparison & Decision-maker self-rating & Decision-maker rates sel
 
 Actual delegation is reported only within C1, including its overall rate, confidence interval, and associations with preregistered measures. Because delegation is a voluntary choice, comparisons between delegators and non-delegators receive descriptive rather than causal interpretation.
 
-The primary Study 1 model is:
+The primary Study 1 model is given in Equation~\ref{eq:study_1}:
 
 \begin{equation}
 E_{gs}=\alpha_1+\beta_TT_{gs}+u_s+\varepsilon_{gs}.
+\label{eq:study_1}
 \end{equation}
 
 $E_{gs}$ is the final escalation outcome of group $g$ in experimental session $s$, $T_{gs}$ indicates whether AI delegation is available, and $u_s$ captures session-level variation. The main parameter, $\beta_T$, is the intention-to-treat effect of making AI delegation available on final escalation. It is not the causal effect of actual delegation.
 
 Because both groups' actions jointly determine the conflict outcome, standard errors will be clustered at least at the conflict-pair or experimental-session level. Mutual escalation, mutual restraint, and asymmetric action profiles are reported as pair-level supplementary outcomes.
 
+Study 1 also compares human responsibility ratings between C0 and C1. Within C1, joint human and AI ratings are described in relation to actual delegation, group payoff position, and rated target. These conditional associations do not identify the independent causal effects of delegation or payoff position. Evaluator, group, and session dependence will be represented in the analysis; absent C0 AI ratings are never replaced by zeros.
+
 \subsection{Study 2: Responsibility ratings}
 
-The primary Study 2 model is:
+The primary Study 2 model is given in Equation~\ref{eq:study_2}:
 
 \begin{equation}
 R_{igt}=\alpha_2+\boldsymbol{\beta}^{\mathsf{T}}\mathbf{X}_{igt}+u_i+\varepsilon_{igt}.
+\label{eq:study_2}
 \end{equation}
 
-$R_{igt}$ is evaluator $i$'s responsibility rating of target $t$ in record $g$. The vector $\mathbf{X}_{igt}$ contains final decision-maker $F$, payoff position $P$, rated target $Q$, all two-way interactions, and the three-way interaction. The $F\times Q$ interaction tests whether responsibility shifts between the human and AI when the final decision-maker changes. The $F\times P\times Q$ interaction tests whether this shift differs between benefiting and harmed positions.
+$R_{igt}$ is evaluator $i$'s responsibility rating of target $t$ in record $g$. The vector $\mathbf{X}_{igt}$ contains final decision-maker $F$, payoff position $P$, rated target $Q$, all two-way interactions, and the three-way interaction. The $F\times Q$ interaction tests whether the effect of the recorded arrangement differs between human and AI ratings. Its significance alone does not establish that one rating rises while the other falls; joint marginal means determine that pattern. The $F\times P\times Q$ interaction tests whether this shift differs between benefiting and harmed positions.
 
-Study 2 randomizes the final decision-maker within each payoff position. The effect of final decision-maker on responsibility ratings can therefore receive a causal interpretation. The contrast between benefiting and harmed records remains a position comparison because the two positions correspond to different payoff outcomes.
+Study 2 randomizes the final decision-maker within each payoff position. The effect of the randomized record arrangement can therefore receive a causal interpretation. This arrangement jointly changes whether the human delegated and who made the final choice; it does not isolate decision control as a separate psychological mechanism. The contrast between benefiting and harmed records remains a position comparison because the two positions correspond to different payoff outcomes.
 
 \subsection{Joint interpretation of responsibility ratings}
 
-Responsibility transfer, shared responsibility, and responsibility not fully taken up are classified from the joint movement of the human and AI ratings. The analysis will use preregistered marginal means, confidence intervals, and a smallest effect size of interest. Claims of no meaningful change will rely on equivalence tests or a preregistered smallest effect size rather than a nonsignificant $p$-value. The study will not interpret the simple sum of the two ratings as an objective total amount of responsibility.
+Responsibility transfer, shared responsibility, and responsibility not fully taken up are classified from the joint movement of the human and AI ratings. The analysis will use preregistered marginal means, confidence intervals, and a smallest effect size of interest. Claims of no meaningful change will rely on equivalence tests or a preregistered smallest effect size rather than a nonsignificant $p$-value. The analysis compares the two ratings jointly and does not compare their simple sum across conditions. The ratings do not measure an objective total amount of responsibility.
 
 \section{Expected Contributions}
 
-First, the proposal places AI delegation, conflict escalation, and post-outcome responsibility judgments within the same group-conflict process. Study 1 identifies the overall effect of making AI delegation available on escalation, while Study 2 identifies the effect of final authority on responsibility ratings. The two studies provide separate evidence about behavioral and attribution outcomes.
+First, the proposal places AI delegation, conflict escalation, and post-outcome responsibility judgments within the same group-conflict process. Study 1 identifies the overall effect of making AI delegation available on escalation, while Study 2 identifies the effect of the recorded delegation and final-decision arrangement on responsibility ratings. The two studies provide separate evidence about behavioral and attribution outcomes.
 
-Second, the proposal measures human and AI responsibility independently. The design can distinguish responsibility transfer, shared responsibility, and responsibility not fully taken up without mechanically forcing one rating to rise when the other falls.
+Second, the proposal measures human and AI responsibility independently. The design can distinguish responsibility transfer, shared responsibility, and responsibility not fully taken up without mechanically forcing one rating to rise when the other falls. The joint ratings test whether transferring final authority is accompanied by lower human responsibility or continued responsibility for both actors. Continued human responsibility is consistent with responsibility for authorization, but does not by itself identify that mechanism.
 
-Third, the proposal asks benefiting and harmed groups to evaluate their own decision system from positions created by real payoff consequences. This design moves AI-responsibility research beyond neutral observers and abstract scenarios and tests whether the responsibility effect of final authority differs by payoff position.
+Third, Study 1 collects responsibility judgments from members whose groups receive real payoff consequences. Study 2 tests whether the effect of the recorded decision arrangement differs between benefiting and harmed records. Extending the latter result to actual financial positions requires a specified and implemented link between the record and the evaluator's bonus.
 
 These contributions have clear limits. The absence of a human-agent condition means that the study cannot establish an effect unique to AI rather than delegation more generally. Actual delegation in Study 1 is self-selected, so differences between delegators and non-delegators cannot be interpreted as the independent causal effect of delegation. The two studies also do not establish that post-outcome responsibility judgments caused earlier delegation or escalation.
 
@@ -349,91 +358,56 @@ Pilot testing will assess comprehension of the payoff matrix, AI-delegation upta
 
 
 
+
+\begingroup
+\RaggedRight
 \begin{thebibliography}{99}
+\RaggedRight
+\interlinepenalty=10000
 
 \bibitem[Alicke(2000)]{Alicke2000}
-Alicke, M. D. (2000).
-Culpable control and the psychology of blame.
-\textit{Psychological Bulletin, 126}(4), 556--574.
-\url{https://doi.org/10.1037/0033-2909.126.4.556}
+Alicke, M. D. (2000). Culpable control and the psychology of blame. \textit{Psychological Bulletin, 126}(4), 556--574. \url{https://doi.org/10.1037/0033-2909.126.4.556}
 
 \bibitem[Arnestad et al.(2024)]{ArnestadEtAl2024}
-Arnestad, M. N., Meyers, S., Gray, K., \& Bigman, Y. E. (2024).
-The existence of manual mode increases human blame for AI mistakes.
-\textit{Cognition, 252}, 105931.
-\url{https://doi.org/10.1016/j.cognition.2024.105931}
+Arnestad, M. N., Meyers, S., Gray, K., et al. (2024). The existence of manual mode increases human blame for AI mistakes. \textit{Cognition, 252}, 105931. \url{https://doi.org/10.1016/j.cognition.2024.105931}
 
 \bibitem[Awad et al.(2020)]{AwadEtAl2020}
-Awad, E., Levine, S., Kleiman-Weiner, M., Dsouza, S., Tenenbaum, J. B., Shariff, A., Bonnefon, J.-F., \& Rahwan, I. (2020).
-Drivers are blamed more than their automated cars when both make mistakes.
-\textit{Nature Human Behaviour, 4}(2), 134--143.
-\url{https://doi.org/10.1038/s41562-019-0762-8}
+Awad, E., Levine, S., Kleiman-Weiner, M., et al. (2020). Drivers are blamed more than their automated cars when both make mistakes. \textit{Nature Human Behaviour, 4}(2), 134--143. \url{https://doi.org/10.1038/s41562-019-0762-8}
 
 \bibitem[Bartling and Fischbacher(2012)]{BartlingFischbacher2012}
-Bartling, B., \& Fischbacher, U. (2012).
-Shifting the blame: On delegation and responsibility.
-\textit{The Review of Economic Studies, 79}(1), 67--87.
-\url{https://doi.org/10.1093/restud/rdr023}
+Bartling, B., \& Fischbacher, U. (2012). Shifting the blame: On delegation and responsibility. \textit{The Review of Economic Studies, 79}(1), 67--87. \url{https://doi.org/10.1093/restud/rdr023}
 
 \bibitem[Dong and Bocian(2024)]{DongBocian2024}
-Dong, M., \& Bocian, K. (2024).
-Responsibility gaps and self-interest bias: People attribute moral responsibility to AI for their own but not others' transgressions.
-\textit{Journal of Experimental Social Psychology, 111}, 104584.
-\url{https://doi.org/10.1016/j.jesp.2023.104584}
+Dong, M., \& Bocian, K. (2024). Responsibility gaps and self-interest bias: People attribute moral responsibility to AI for their own but not others' transgressions. \textit{Journal of Experimental Social Psychology, 111}, 104584. \url{https://doi.org/10.1016/j.jesp.2023.104584}
 
 \bibitem[Fehr and Schmidt(1999)]{FehrSchmidt1999}
-Fehr, E., \& Schmidt, K. M. (1999).
-A theory of fairness, competition, and cooperation.
-\textit{The Quarterly Journal of Economics, 114}(3), 817--868.
-\url{https://doi.org/10.1162/003355399556151}
+Fehr, E., \& Schmidt, K. M. (1999). A theory of fairness, competition, and cooperation. \textit{The Quarterly Journal of Economics, 114}(3), 817--868. \url{https://doi.org/10.1162/003355399556151}
 
 \bibitem[Horowitz and Lin-Greenberg(2022)]{HorowitzLinGreenberg2022}
-Horowitz, M. C., \& Lin-Greenberg, E. (2022).
-Algorithms and influence: Artificial intelligence and crisis decision-making.
-\textit{International Studies Quarterly, 66}(4), sqac069.
-\url{https://doi.org/10.1093/isq/sqac069}
+Horowitz, M. C., \& Lin-Greenberg, E. (2022). Algorithms and influence: Artificial intelligence and crisis decision-making. \textit{International Studies Quarterly, 66}(4), sqac069. \url{https://doi.org/10.1093/isq/sqac069}
 
 \bibitem[K\"{o}bis et al.(2025)]{KobisEtAl2025}
-K\"{o}bis, N., Rahwan, Z., Rilla, R., Supriyatno, B. I., Bersch, C., Ajaj, T., Bonnefon, J.-F., \& Rahwan, I. (2025).
-Delegation to artificial intelligence can increase dishonest behaviour.
-\textit{Nature, 646}(8083), 126--134.
-\url{https://doi.org/10.1038/s41586-025-09505-x}
+K\"{o}bis, N., Rahwan, Z., Rilla, R., et al. (2025). Delegation to artificial intelligence can increase dishonest behaviour. \textit{Nature, 646}(8083), 126--134. \url{https://doi.org/10.1038/s41586-025-09505-x}
 
 \bibitem[Malle et al.(2014)]{MalleEtAl2014}
-Malle, B. F., Guglielmo, S., \& Monroe, A. E. (2014).
-A theory of blame.
-\textit{Psychological Inquiry, 25}(2), 147--186.
-\url{https://doi.org/10.1080/1047840X.2014.877340}
+Malle, B. F., Guglielmo, S., \& Monroe, A. E. (2014). A theory of blame. \textit{Psychological Inquiry, 25}(2), 147--186. \url{https://doi.org/10.1080/1047840X.2014.877340}
 
 \bibitem[Maynard Smith and Price(1973)]{MaynardSmithPrice1973}
-Maynard Smith, J., \& Price, G. R. (1973).
-The logic of animal conflict.
-\textit{Nature, 246}, 15--18.
-\url{https://doi.org/10.1038/246015a0}
+Maynard Smith, J., \& Price, G. R. (1973). The logic of animal conflict. \textit{Nature, 246}, 15--18. \url{https://doi.org/10.1038/246015a0}
 
 \bibitem[Rabin(1993)]{Rabin1993}
-Rabin, M. (1993).
-Incorporating fairness into game theory and economics.
-\textit{American Economic Review, 83}(5), 1281--1302.
+Rabin, M. (1993). Incorporating fairness into game theory and economics. \textit{American Economic Review, 83}(5), 1281--1302.
 
 \bibitem[Rivera et al.(2024)]{RiveraEtAl2024}
-Rivera, J.-P., Mukobi, G., Reuel, A., Lamparth, M., Smith, C., \& Schneider, J. (2024).
-Escalation risks from language models in military and diplomatic decision-making.
-In \textit{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency} (pp. 836--898).
-\url{https://doi.org/10.1145/3630106.3658942}
+Rivera, J.-P., Mukobi, G., Reuel, A., et al. (2024). Escalation risks from language models in military and diplomatic decision-making. In \textit{Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency} (pp. 836--898). \url{https://doi.org/10.1145/3630106.3658942}
 
 \bibitem[Schlenker et al.(1994)]{SchlenkerEtAl1994}
-Schlenker, B. R., Britt, T. W., Pennington, J., Murphy, R., \& Doherty, K. (1994).
-The triangle model of responsibility.
-\textit{Psychological Review, 101}(4), 632--652.
-\url{https://doi.org/10.1037/0033-295X.101.4.632}
+Schlenker, B. R., Britt, T. W., Pennington, J., et al. (1994). The triangle model of responsibility. \textit{Psychological Review, 101}(4), 632--652. \url{https://doi.org/10.1037/0033-295X.101.4.632}
 
 \bibitem[Shank et al.(2019)]{ShankEtAl2019}
-Shank, D. B., DeSanti, A., \& Maninger, T. (2019).
-When are artificial intelligence versus human agents faulted for wrongdoing? Moral attributions after individual and joint decisions.
-\textit{Information, Communication \& Society, 22}(5), 648--663.
-\url{https://doi.org/10.1080/1369118X.2019.1568515}
+Shank, D. B., DeSanti, A., \& Maninger, T. (2019). When are artificial intelligence versus human agents faulted for wrongdoing? Moral attributions after individual and joint decisions. \textit{Information, Communication \& Society, 22}(5), 648--663. \url{https://doi.org/10.1080/1369118X.2019.1568515}
 
 \end{thebibliography}
+\endgroup
 
 \end{document}
