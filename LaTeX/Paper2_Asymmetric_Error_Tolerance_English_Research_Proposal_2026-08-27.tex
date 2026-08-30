@@ -1,0 +1,704 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.35cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{hanging}
+\usepackage{ragged2e}
+\usepackage{setspace}
+
+\definecolor{navy}{HTML}{17324D}
+\definecolor{midgray}{HTML}{5F6870}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,citecolor=navy,pdfauthor={Research Proposal},pdftitle={Asymmetric Error Tolerance}}
+\titleformat{\section}{\Large\bfseries\color{navy}}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries\color{navy}}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.3em}{0.55em}
+\titlespacing*{\subsection}{0pt}{1.0em}{0.4em}
+\setlist{leftmargin=1.6em,itemsep=0.3em,topsep=0.4em}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\onehalfspacing
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{midgray}Asymmetric Error Tolerance}
+\fancyhead[R]{\small\color{midgray}Research Proposal}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+
+\newcommand{\Human}{\textit{Human}}
+\newcommand{\AI}{\textit{AI}}
+\newcommand{\term}[1]{\textit{#1}}
+\newcommand{\condition}[1]{\textbf{#1}}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{3.2cm}
+{\sffamily\bfseries\color{navy}\LARGE RESEARCH PROPOSAL\par}
+\vspace{1.2cm}
+{\sffamily\bfseries\Huge Asymmetric Error Tolerance\par}
+\vspace{0.35cm}
+{\sffamily\Large Measuring and Explaining the Relative Weight of AI Errors\par}
+\vspace{2.2cm}
+{\large English research proposal\par}
+\vfill
+\begin{tabular}{rl}
+Date: & August 27, 2026\\
+Status: & Formal proposal; measurement and explanation framework\\
+Research stage: & Parameter recovery and validity require pilot testing\\
+Primary fields: & Behavioral decision research; AI adoption; management and public policy
+\end{tabular}
+\vfill
+\end{titlepage}
+
+\section*{Abstract}
+
+The deployment of medical AI, autonomous vehicles, and public-sector algorithms involves a choice between AI and a real Human alternative; a zero-error system is rarely available. Existing studies document algorithm aversion, algorithm appreciation, and overreliance. These findings imply that tolerance for AI errors may be lower than, equal to, or higher than tolerance for equivalent Human errors. Yet most existing measures report an average adoption difference or an acceptable error rate in one direction. They do not place all three outcomes on a common scale or explain why the difference arises.
+
+This proposal uses the relevant Human alternative as the comparison benchmark and introduces a single signed parameter, $\alpha$, to measure the additional or reduced behavioral weight assigned to an AI error relative to an equivalent Human error. A positive $\alpha$ indicates excess intolerance, $\alpha=0$ indicates source-neutral error weighting, and a negative $\alpha$ indicates excess tolerance. Stage 1 uses a slot-machine task with known objective probabilities to recover $\alpha$ from choice thresholds when both Human and AI accuracy are disclosed. It then tests parameter stability and out-of-sample prediction. Stage 2 randomly varies whether both accuracy benchmarks are disclosed and manipulates the objective loss from an error, $L$. The total absolute error in perceived task accuracy, $M_i^{A4}$, tests whether overall performance misperception explains $|\alpha|$. If it does, the AI and Human components are examined separately. A signed relative error, $R_i^{A4}$, explains the direction of $\alpha$. The contribution proceeds in three steps: introduce $\alpha$, establish whether it is behaviorally measurable, and explain why it varies.
+
+\textbf{Keywords:} asymmetric error tolerance; AI adoption; Human counterfactual; source choice; behavioral parameter; performance misperception
+
+\section{Research Positioning}
+
+\subsection{Object of analysis}
+
+The object of analysis is how an individual decision maker evaluates and selects between Human and AI sources that perform the same task. \Human{} denotes the aggregate human source that AI would replace or supplement, such as the population of human drivers or physicians. It is neither the participant nor an abstract perfect expert. \AI{} denotes a system whose performance is measured on the same task, target population, and statistical metric.
+
+The primary level of analysis is the individual: beliefs about source performance and the subsequent source choice. Organizational adoption and public regulation are possible institutional consequences of these individual judgments. They are not treated as observed institutional behavior without organizational or regulatory data.
+
+\subsection{Type of contribution}
+
+This study is a measurement and modeling contribution with an explanatory extension. It does not claim that unequal tolerance for Human and AI errors is newly discovered. Previous studies have already measured differences in acceptable error rates and performance thresholds. The present study instead proposes a common signed parameter, tests whether it can be recovered from behavior, and then examines whether errors in perceived Human and AI accuracy and changes in objective stakes explain its magnitude and direction.
+
+\subsection{One-sentence positioning}
+
+\begin{quote}
+This study examines why people tolerate comparable Human and AI errors differently and uses $\alpha$ to measure the direction and magnitude of that difference.
+\end{quote}
+
+\subsection{Analytical structure}
+
+\begin{longtable}{p{0.18\textwidth}p{0.31\textwidth}p{0.43\textwidth}}
+\toprule
+Level & Concept & Role in the study\\
+\midrule
+Research phenomenon & \term{Asymmetric Error Tolerance} & Describes unequal effects of comparable Human and AI errors on source choice.\\
+Core parameter & Relative AI error-weighting deviation, $\alpha$ & Recovered from choice thresholds in Stage 1; summarizes the source difference left unexplained by the rational benchmark.\\
+Explanatory path & $(q_a,q_h)\rightarrow(\widehat q_{a,i},\widehat q_{h,i})\rightarrow(M_i^{A4},R_i^{A4})\rightarrow(|\alpha|,\alpha)$ & $M_i^{A4}$ explains the magnitude of asymmetric tolerance; $R_i^{A4}$ explains its direction.\\
+Context & Objective loss from an error, $L$, and deployment costs & Enter the objective choice benchmark; $L$ also tests whether the recovered $\alpha$ changes with stakes.\\
+Research domain & Behavioral decision research and AI adoption research & The first supplies the choice benchmark and identification logic; the second supplies the Human-AI decision context.\\
+\bottomrule
+\end{longtable}
+
+The argument therefore proceeds in a fixed order: establish a source-neutral rational benchmark, identify $\alpha$ from source choice, and then explain why $\alpha$ varies. The observed outcome is called \term{source choice}. The study does not rename it \term{trusting behavior}, because choice may also reflect costs, losses, and other action constraints.
+
+\section{The Practical Problem: Compared with Whom?}
+
+AI deployment is often framed as a question of whether an AI system is sufficiently accurate. That framing omits a necessary counterfactual: who performs the task if AI is not used? In medical diagnosis, the alternative may be a human physician; in autonomous driving, a human driver; in public-sector prediction, a manual review process. The absolute AI error rate is therefore insufficient by itself. Deployment also depends on the performance of the relevant Human alternative, the consequences of error, costs, reviewability, and responsibility conditions.
+
+Ignoring this benchmark can produce two mirror-image errors. First, AI may objectively outperform Human yet face a stricter requirement because of its source identity, producing under-adoption. Second, AI may perform worse than Human, or have greater uncertainty, yet face a more lenient requirement because of automation authority, technological optimism, or other source cues, producing over-adoption. Neither problem can be resolved by maximizing or minimizing trust in AI.
+
+The evaluative standard in this proposal is therefore whether deployment is judged relative to the real Human alternative while controlling conditions that can rationally alter risk evaluation. The standard does not require mechanical equality across all institutional settings. Different thresholds may be justified when Human and AI differ in correlated failures, reviewability, responsibility, appeal, or the distribution of harm.
+
+\section{Theoretical Background}
+
+\subsection{Trust calibration as a normative boundary}
+
+Lee and See (2004) define the objective of trust in automation as appropriate reliance: relying on automation when it is suitable and rejecting or overriding it when it is not. Everett et al. (2026) distinguish actual trustworthiness, perceived trustworthiness, attitudinal trust, and trusting behavior, and define calibrated trust as trust that is appropriate to the trustworthiness of its object. Mehrotra et al. (2024) similarly stress that beliefs, intentions, and actions should not be conflated.
+
+Meta-analytic research shows that user, system, and contextual factors predict trust in automation and AI, but such average antecedent effects do not establish whether the resulting reliance is supported by actual performance (Schaefer et al., 2016; Kaplan et al., 2023). This proposal therefore uses calibration relative to a real Human alternative as a normative boundary. However, its empirical design does not measure perceived trustworthiness or attitudinal trust. It measures perceived task accuracy and source choice. The trust literature is used to maintain the conceptual boundary between a numerical performance belief and a trust construct.
+
+\subsection{Performance beliefs and observable choice}
+
+The framework separates three levels. First, $q_a$ and $q_h$ are objective task-performance conditions. Second, $\widehat q_{a,i}$ and $\widehat q_{h,i}$ are the participant's numerical estimates of those accuracies. Third, source choice is the observable decision to keep one's own answer or adopt the AI recommendation.
+
+These levels are not interchangeable. A participant may misestimate AI accuracy, Human accuracy, or both. Even when both accuracies are correctly understood, source choice may still reflect costs, convenience, or other unmodeled conditions. The analysis therefore first asks whether performance misperception explains $\alpha$, rather than interpreting $\alpha$ as a psychological trust measure.
+
+The two-stage sequence is:
+
+\begin{equation}
+\underbrace{\text{Objective benchmark}+\text{Source choice}}_{\text{Stage 1}}
+\longrightarrow \alpha,
+\end{equation}
+
+\begin{equation}
+\underbrace{(q_a,q_h)}_{\text{objective task accuracy}}
+\longrightarrow
+\underbrace{(\widehat q_{a,i},\widehat q_{h,i})}_{\text{perceived task accuracy}}
+\longrightarrow
+\underbrace{M_i^{A4}}_{\text{total absolute error}}
+\longrightarrow
+\underbrace{|\alpha|}_{\text{magnitude of asymmetry}}.
+\end{equation}
+
+Stage 1 asks only whether $\alpha$ can be measured from behavior. Stage 2 calculates signed judgment errors for AI and Human. Their absolute values form $M_i^{A4}$, which captures the extent to which Assumption A4 is violated and explains $|\alpha|$. A signed relative error, $R_i^{A4}$, explains the direction of $\alpha$. Both are descriptive derived variables created to test the model assumption; neither is an established trust construct.
+
+\subsection{Algorithm aversion, appreciation, and automation bias}
+
+Dietvorst et al. (2015) show that participants may lose confidence in an algorithm more quickly than in a human forecaster after observing both make errors, even when the algorithm performs better overall. Logg et al. (2019) find that participants in several estimation and forecasting tasks may weight algorithmic advice more than human advice. Automation-bias research describes excessive adherence to automation despite warnings or automation errors (Goddard et al., 2012). Task subjectivity also changes the direction and magnitude of algorithm aversion (Castelo et al., 2019).
+
+These literatures study the same broad practical problem but report aversion, appreciation, overreliance, or no difference in separate task settings. They do not yield a stable one-directional prediction. This proposal therefore keeps the sign of the source effect open and represents the opposing outcomes with one signed parameter.
+
+\subsection{Acceptable error rates and minimum performance thresholds}
+
+Lenskjold et al. (2023) directly asked radiology employees about acceptable error rates for Human and AI reports and found lower average tolerance for AI errors. Shariff et al. (2021) found that respondents may demand a safety threshold from autonomous vehicles that exceeds the threshold applied to human drivers. Rebitschek et al. (2021), however, did not find a uniform difference in error estimates or tolerance between algorithms and human experts. These studies show that threshold differences can be measured but are not directionally stable.
+
+They do not fully separate three processes: participants may believe that AI performs worse, may apply a fixed source discount unrelated to the error level, or may assign a different marginal weight to an equivalent AI error. Longoni et al. (2019) separate source, accuracy, and price utility in medical AI, but their main result is closer to a fixed automation-source discount than to a direct identification of different error-risk slopes. Reporting only how much lower the acceptable AI error rate is cannot distinguish these processes.
+
+\subsection{Evaluability and the Human benchmark}
+
+The evaluability hypothesis holds that some attributes are difficult to interpret in separate evaluation because they lack a reference point; joint evaluation can change their evaluability and decision weight (Hsee, 1996). An isolated AI accuracy value may not tell a decision maker whether performance is sufficient. Presenting a Human performance benchmark measured on the same task and metric may make the evidence easier to interpret.
+
+This theory supports a limited prediction: disclosing comparable Human and AI performance may move judgment closer to a source-neutral comparison. It does not imply that all source differences will disappear, or that current Human performance is necessarily socially optimal.
+
+\section{Literature Gap}
+
+Prior research studies AI errors and compares Human with AI, but it lacks a common framework that links measurement to explanation. The required framework should:
+
+\begin{enumerate}
+\item use the real Human alternative rather than a perfect system as the benchmark;
+\item represent excess intolerance, source-neutral weighting, and excess tolerance on one signed scale;
+\item establish that the parameter can be recovered from a behavioral threshold and can predict source choice;
+\item calculate errors in perceived Human and AI accuracy separately, use their absolute sum to explain $|\alpha|$, and use their signed relative difference to explain the direction of $\alpha$; and
+\item use Assumptions A1-A5 to examine risk responses and other unmodeled source differences.
+\end{enumerate}
+
+Accordingly, Asymmetric Error Tolerance is the focal phenomenon, $\alpha$ is the focal measurement object, performance-misperception magnitude and direction are the principal empirical checks of A4, and objective error loss is the focal contextual factor.
+
+\section{Core Concepts and Variable Boundaries}
+
+\subsection{Asymmetric Error Tolerance}
+
+Asymmetric Error Tolerance is defined here as a difference in how equivalent Human and AI errors affect source choice when the task, objective performance metric, error consequences, and relevant costs are comparable.
+
+It is first a behavioral difference, not a type of trust defined by Everett et al. (2026). It can run in either direction: participants may require AI to exceed Human performance, or may continue selecting AI when it performs worse. The signed parameter $\alpha$ represents the direction and magnitude of this difference on a common scale.
+
+\subsection{Human counterfactual}
+
+The Human counterfactual is the human source that would actually perform the task if AI were not deployed, evaluated on the same target population, task definition, time horizon, and performance metric. It is a normative comparison benchmark rather than a psychological scale or an established theoretical construct.
+
+It is valid only when the task and input distribution, error metric, error consequences, correlated failures, opportunities for review and correction, costs, responsibility, and appeal conditions are comparable. Any unmatched difference may rationally justify different thresholds.
+
+\subsection{Variables}
+
+\begin{longtable}{p{0.17\textwidth}p{0.25\textwidth}p{0.50\textwidth}}
+\toprule
+Symbol & Name & Meaning and model position\\
+\midrule
+$q_a$ & Objective AI task accuracy & AI accuracy under a specified task and test condition; an exogenous technical condition and objective benchmark.\\
+$q_h$ & Objective aggregate Human task accuracy & Aggregate Human accuracy under the same task, sample, and scoring rule; the objective Human counterfactual.\\
+$e_a=1-q_a$ & Objective AI error rate & Derived objective error rate entering the expected-cost and adoption models.\\
+$e_h=1-q_h$ & Objective aggregate Human error rate & Derived Human error rate entering the expected-cost and adoption models.\\
+$\widehat q_{a,i},\widehat q_{h,i}$ & Perceived AI/Human task accuracy & Participant $i$'s numerical estimates of AI and Human accuracy; direct checks of A4.\\
+$G_{a,i}^{acc}$ & Signed AI accuracy judgment error & $\widehat q_{a,i}-q_a$; overestimation, underestimation, or accurate estimation of AI performance.\\
+$G_{h,i}^{acc}$ & Signed Human accuracy judgment error & $\widehat q_{h,i}-q_h$; overestimation, underestimation, or accurate estimation of Human performance.\\
+$M_{a,i}^{A4}$ & Absolute AI accuracy judgment error & $|G_{a,i}^{acc}|$; the AI component of total A4 violation.\\
+$M_{h,i}^{A4}$ & Absolute Human accuracy judgment error & $|G_{h,i}^{acc}|$; the Human component of total A4 violation.\\
+$M_i^{A4}$ & Total absolute error in perceived task accuracy & $M_{a,i}^{A4}+M_{h,i}^{A4}$; the principal Stage 2 explanation of $|\alpha|$.\\
+$R_i^{A4}$ & Signed relative error in perceived task accuracy & $G_{a,i}^{acc}-G_{h,i}^{acc}$; explains the direction of $\alpha$.\\
+$S_{it}$ & Confidence in one's own answer & Reported probability that one's answer is correct before seeing AI advice; controls private information and self-confidence.\\
+$Y_{it}$ & Source choice / AI adoption & Keep own answer ($0$) or adopt AI answer ($1$); behavioral data used to identify the choice threshold and $\alpha_i$.\\
+$\alpha_i$ & Relative AI error-weighting deviation & Reduced-form behavioral parameter: the AI error weight is $1+\alpha_i$. It is measured in Stage 1 and explained in Stage 2.\\
+\bottomrule
+\end{longtable}
+
+Objective task accuracy is an indicator of performance-related actual trustworthiness, not a complete measure of actual trustworthiness. Perceived task accuracy is a numerical performance belief, not perceived trustworthiness. $M_i^{A4}$ and $R_i^{A4}$ are derived measures of judgment error, not calibrated trust. Source choice is behavioral data for identifying $\alpha$ and is not automatically a measure of trusting behavior.
+
+The Human benchmark should preferably be estimated in an independent pretest using the same task, information, and scoring rule, and then fixed as the aggregate benchmark in the main experiment. Participants in the main experiment choose between their own answer and the AI recommendation; no second Human provides a competing answer. Therefore, $q_h$ is a prior aggregate benchmark and cannot replace a participant's item-specific probability of being correct. The design measures $S_{it}$ before AI advice and uses practice and main-task performance to examine individual differences around the aggregate benchmark.
+
+The $\alpha$ recovered in Stage 1 is initially a reduced-form behavioral parameter. It summarizes residual choice differences relative to the current rational benchmark. These differences may arise from psychological bias or from reasonable source differences omitted by the researchers. Only after A1-A5, alternative explanations, recovery, stability, and prediction have been examined may $\alpha$ be interpreted as a stable source-dependent error weight.
+
+\section{Research Questions}
+
+\textbf{Main research question}
+
+\begin{quote}
+Why do people exhibit asymmetric error tolerance toward Human and AI errors?
+\end{quote}
+
+\condition{RQ1 - Measurement.} Can $\alpha$ measure Asymmetric Error Tolerance from behavioral choice thresholds?
+
+\condition{RQ2 - Explanation.} How do errors in perceived Human and AI accuracy and the objective loss from an error explain the magnitude and direction of $\alpha$?
+
+RQ1 is the measurement precondition for RQ2. If $\alpha$ cannot be recovered reliably from behavioral thresholds, the study cannot examine why it varies. Stage 2 first tests whether
+
+\begin{equation}
+M_i^{A4}=|\widehat q_{a,i}-q_a|+|\widehat q_{h,i}-q_h|
+\end{equation}
+
+explains $|\alpha|$. If the association is supported, the AI and Human error components are then examined separately. The signed measure $R_i^{A4}$ tests whether relative overestimation or underestimation explains the direction of $\alpha$. The objective error consequence $L$ is then examined as a contextual determinant.
+
+\section{Theoretical Framework}
+
+\subsection{Notation and rational adoption rule}
+
+A principal chooses between a Human agent $H$ and an AI system $A$. Define objective task accuracy as
+
+\begin{equation}
+q_a=\text{objective AI task accuracy},\qquad
+q_h=\text{objective aggregate Human task accuracy},
+\end{equation}
+
+and objective error rates as
+
+\begin{equation}
+e_a=1-q_a,\qquad e_h=1-q_h.
+\end{equation}
+
+Let $L>0$ be the objective loss from an error, and let $c_h,c_a\geq0$ denote Human and AI deployment costs. For $j\in\{h,a\}$, expected total cost is
+
+\begin{equation}
+C_j=e_jL+c_j.
+\end{equation}
+
+A source-neutral rational decision maker chooses AI if and only if
+
+\begin{equation}
+C_a<C_h,
+\end{equation}
+
+or equivalently,
+
+\begin{equation}
+e_h-e_a>\frac{c_a-c_h}{L}.
+\label{eq:rational-rule}
+\end{equation}
+
+Equation~\ref{eq:rational-rule} is the objective comparison benchmark and contains no psychological variable. Here, $L$ is the objective consequence of one error; it is unrelated to a machine-learning loss function.
+
+\subsection{Model assumptions}
+
+\condition{A1. Comparable alternatives.} Human and AI perform the same task and are evaluated with the same performance metric. The same type of error has the same objective consequence:
+
+\begin{equation}
+L_h=L_a=L.
+\end{equation}
+
+Any other source-specific difference that rationally affects choice must be matched or explicitly represented in $c_h$ and $c_a$.
+
+\condition{A2. Risk neutrality.} The principal minimizes expected total cost.
+
+\condition{A3. Independent errors.} Errors are independent draws.
+
+\condition{A4. Costless evaluation.} The principal observes $e_h$ and $e_a$ accurately.
+
+\condition{A5. Stationary environment.} The parameters $e_h,e_a,L,c_h,c_a$ remain fixed within each decision block.
+
+These are maintained conditions of the rational benchmark, not hypotheses that $\alpha$ must be positive, zero, or negative.
+
+\subsection{Representing Asymmetric Error Tolerance with $\alpha$}
+
+The framework introduces one departure from the objective benchmark. The behavioral weight on a Human error is normalized to one, and the behavioral weight on an AI error is $1+\alpha$:
+
+\begin{equation}
+\widetilde L_h=L,\qquad \widetilde L_a=(1+\alpha)L.
+\end{equation}
+
+Expected behavioral costs become
+
+\begin{equation}
+\widetilde C_h=e_hL+c_h,
+\end{equation}
+
+\begin{equation}
+\widetilde C_a=(1+\alpha)e_aL+c_a,
+\qquad \alpha\in(-1,\infty).
+\end{equation}
+
+The term $\widetilde L_a$ is the effective behavioral weight placed on an AI error in the choice model. It does not alter the objective consequence $L$. The AI choice rule becomes
+
+\begin{equation}
+e_h-e_a-\alpha e_a>\frac{c_a-c_h}{L}.
+\label{eq:alpha-rule}
+\end{equation}
+
+The parameter has the following signed interpretation:
+
+\begin{equation}
+\begin{cases}
+\alpha>0, & \text{AI errors receive greater decision weight: excess intolerance},\\
+\alpha=0, & \text{Human and AI errors receive source-neutral weight},\\
+\alpha<0, & \text{AI errors receive lower decision weight: excess tolerance}.
+\end{cases}
+\end{equation}
+
+The parameter is named the \term{relative AI error-weighting deviation}. This name describes its function in the model. The research phenomenon remains Asymmetric Error Tolerance. The parameter is not equivalent to trust and does not presuppose a psychological mechanism.
+
+\subsection{Identifying $\alpha$ from behavioral thresholds}
+
+Let $e_{a,i}^{*}$ denote the highest objective AI error rate that participant $i$ is willing to accept. At the indifference threshold,
+
+\begin{equation}
+(1+\alpha_i)e_{a,i}^{*}L+c_a=e_hL+c_h.
+\end{equation}
+
+Therefore,
+
+\begin{equation}
+\alpha_i=\frac{e_hL+c_h-c_a}{e_{a,i}^{*}L}-1.
+\label{eq:alpha-recovery}
+\end{equation}
+
+When $c_h=c_a$,
+
+\begin{equation}
+\alpha_i=\frac{e_h}{e_{a,i}^{*}}-1.
+\end{equation}
+
+This expression allows $\alpha$ to be calculated from an objective Human benchmark and an individual AI acceptance threshold. Stage 1 asks whether $\alpha$ can be recovered from choices across multiple AI-performance levels, whether it is stable within participant or condition, and whether it predicts held-out source choices. No trust label is required for this calculation.
+
+\subsection{Stage 2: Explaining variation in $\alpha$}
+
+Stage 1 presents both $q_h$ and $q_a$ and verifies comprehension. This condition approximates A4 and yields an estimate of the additional or reduced weight placed on an AI error when objective performance is known. Stage 2 randomly varies comparative performance information. The disclosed condition presents both $q_h$ and $q_a$; the non-disclosed condition presents neither. This factor is crossed with the objective error loss $L$ in a $2\times2$ design.
+
+Within each block, participants observe several practice rounds, report their own answer and confidence $S_{it}$, observe AI advice, and make a source choice. The study measures $\widehat q_{a,i}$ and $\widehat q_{h,i}$, uses $M_i^{A4}$ to explain $|\widehat\alpha_i|$, uses $R_i^{A4}$ to explain the direction of $\widehat\alpha_i$, and tests whether $L$ further changes asymmetric tolerance.
+
+\begin{longtable}{p{0.20\textwidth}p{0.34\textwidth}p{0.38\textwidth}}
+\toprule
+Benchmark assumption & Potential problem & Empirical check\\
+\midrule
+A1 Comparable alternatives & Participants perceive other Human-AI differences that rationally affect choice. & Match objective conditions and measure understanding of error consequences, costs, review, and relevant source conditions.\\
+A2 Risk neutrality & Choice depends on more than mean loss, particularly under high consequences. & Manipulate $L$ with real bonuses; separate its direct choice effect from any additional change in $\alpha$.\\
+A3 Independent errors & One AI error is interpreted as a signal of later errors. & State the draw rule and measure whether one error changes beliefs about subsequent error rates.\\
+A4 Costless evaluation & Participants do not accurately understand Human or AI accuracy. & Manipulate joint disclosure; compare $\widehat q_{a,i},\widehat q_{h,i}$ with $q_a,q_h$ and calculate magnitude and direction of misperception.\\
+A5 Stationary environment & Participants believe ability changes across rounds. & Fix parameters within each decision block and record round-level performance estimates and choices.\\
+\bottomrule
+\end{longtable}
+
+The direct checks of A4 are
+
+\begin{equation}
+\widehat q_{a,i}=\text{perceived AI task accuracy},\qquad
+\widehat q_{h,i}=\text{perceived Human task accuracy}.
+\end{equation}
+
+The signed judgment errors are
+
+\begin{equation}
+G_{a,i}^{acc}=\widehat q_{a,i}-q_a,
+\qquad
+G_{h,i}^{acc}=\widehat q_{h,i}-q_h.
+\end{equation}
+
+Their absolute components are
+
+\begin{equation}
+M_{a,i}^{A4}=|G_{a,i}^{acc}|=|\widehat q_{a,i}-q_a|,
+\qquad
+M_{h,i}^{A4}=|G_{h,i}^{acc}|=|\widehat q_{h,i}-q_h|,
+\end{equation}
+
+and total performance misperception is
+
+\begin{equation}
+M_i^{A4}=M_{a,i}^{A4}+M_{h,i}^{A4}
+=|\widehat q_{a,i}-q_a|+|\widehat q_{h,i}-q_h|.
+\label{eq:M}
+\end{equation}
+
+The absolute values prevent offsetting errors, such as simultaneous overestimation of AI and underestimation of Human. If $M_i^{A4}$ explains $|\alpha|$, the subsequent component model includes $M_{a,i}^{A4}$ and $M_{h,i}^{A4}$ jointly to determine which judgment contributes more.
+
+Direction is preserved with
+
+\begin{equation}
+R_i^{A4}=G_{a,i}^{acc}-G_{h,i}^{acc}
+=(\widehat q_{a,i}-q_a)-(\widehat q_{h,i}-q_h).
+\label{eq:R}
+\end{equation}
+
+A positive $R_i^{A4}$ indicates relative overestimation of AI; a negative value indicates relative underestimation; zero indicates that the perceived Human-AI performance difference matches the objective difference. Neither $M_i^{A4}$ nor $R_i^{A4}$ is a trust construct.
+
+The total experimental effect on asymmetry magnitude is estimated as
+
+\begin{equation}
+|\widehat\alpha_i|
+=\delta_0+\delta_1N_i^{Info}+\delta_2L_i^{High}
++\delta_3(N_i^{Info}L_i^{High})+u_i,
+\label{eq:treatment}
+\end{equation}
+
+where $N_i^{Info}=1$ when neither Human nor AI objective accuracy is disclosed, and $L_i^{High}=1$ in the high-stakes condition. A parallel model with signed $\widehat\alpha_i$ determines whether a condition moves behavior toward excess tolerance or excess intolerance.
+
+The magnitude model is
+
+\begin{equation}
+|\widehat\alpha_i|
+=\gamma_0+\gamma_1M_i^{A4}+\gamma_2L_i
++\gamma_3M_i^{A4}L_i+\gamma_4\overline S_i+\varepsilon_i.
+\label{eq:magnitude}
+\end{equation}
+
+Here, $M_i^{A4}$ tests whether overall performance misperception explains asymmetry magnitude. $L_i$ tests whether the objective consequence changes asymmetric tolerance after its direct role in expected cost and choice has been represented. $\overline S_i$ controls average self-confidence and item-level private information. No necessary sign is imposed on $\gamma_1$.
+
+If $M_i^{A4}$ is significantly associated with $|\widehat\alpha_i|$, the component model is
+
+\begin{equation}
+|\widehat\alpha_i|
+=\kappa_0+\kappa_aM_{a,i}^{A4}+\kappa_hM_{h,i}^{A4}
++\kappa_2L_i+\kappa_3\overline S_i+\nu_i.
+\label{eq:components}
+\end{equation}
+
+The coefficients $\kappa_a$ and $\kappa_h$ represent the associations of AI and Human accuracy-judgment errors with asymmetry magnitude. Their sizes must be compared using standardized variables or a joint coefficient test, not by comparing raw unstandardized coefficients alone.
+
+The signed direction model is
+
+\begin{equation}
+\widehat\alpha_i
+=\theta_0+\theta_1R_i^{A4}+\theta_2L_i
++\theta_3R_i^{A4}L_i+\theta_4\overline S_i+\xi_i.
+\label{eq:direction}
+\end{equation}
+
+Given the sign definition, relative overestimation of AI should generally correspond to a lower $\alpha$, so $\theta_1<0$ is expected. This directional prediction belongs only to the $R_i^{A4}$ model, not to the $M_i^{A4}$ magnitude model.
+
+Together, these models decompose the reduced-form parameter. $M_i^{A4}$ explains magnitude, its AI and Human components identify the source of misperception, and $R_i^{A4}$ explains direction. If performance misperception explains $|\widehat\alpha_i|$ and its sign, observed Asymmetric Error Tolerance is primarily attributable to a violation of A4. If $\widehat\alpha_i$ remains stably different from zero after these controls, A4 is insufficient and A1, A2, A3, and A5 must be examined further.
+
+The explanatory sequence is therefore:
+
+\begin{enumerate}
+\item compare perceived and objective Human and AI accuracy, while recording $S_{it}$;
+\item test whether $M_i^{A4}$ explains $|\alpha|$, and decompose the AI and Human components if it does;
+\item test whether $R_i^{A4}$ explains the sign of $\alpha$;
+\item determine whether $L$ affects choice only through the benchmark or also changes $\alpha$; and
+\item examine residual differences under A1, A3, and A5.
+\end{enumerate}
+
+The parameter can accommodate both psychological and nonpsychological explanations, but these explanations must not all be called irrationality. Until alternatives are ruled out, $\alpha$ is only the source difference unexplained by the current model. Likewise, $\alpha=0$ indicates source-neutral weighting of equivalent errors; it does not by itself establish complete calibrated trust.
+
+\subsection{Boundary of the regulatory extension}
+
+The same logic can be mapped to a minimum deployment-performance threshold or maximum acceptable error rate. A positive $\alpha$ may create an overly strict AI threshold, whereas a negative $\alpha$ may create an overly lenient threshold. Data from the general public support conclusions about deployment thresholds or regulatory preferences. Claims about regulation itself require data from actual regulators, formal rules, or institutions.
+
+\section{Parameter Outcomes and Explanatory Paths}
+
+\subsection{Directional competition}
+
+\condition{CP0 - Source-neutral evaluation.} After objective performance, error consequences, and deployment costs are matched, $\alpha=0$. Human-AI choice differences are explained by objective conditions.
+
+\condition{CP1 - Excess intolerance.} Under comparable conditions, $\alpha>0$. AI errors receive greater decision weight than equivalent Human errors and may produce under-adoption.
+
+\condition{CP2 - Excess tolerance.} Under comparable conditions, $\alpha<0$. AI errors receive lower decision weight than equivalent Human errors and may produce over-adoption.
+
+\subsection{A4 checks and structural interpretation}
+
+\condition{Violation of A4.} If $\widehat q_{a,i}$ or $\widehat q_{h,i}$ differs materially from its objective value, costless evaluation is unsupported. A positive $M_i^{A4}$ indicates that at least one accuracy is misperceived; a nonzero $R_i^{A4}$ indicates that perceived relative performance differs from objective relative performance. A descriptive $\alpha$ can still be calculated, but its deviation from zero cannot be fully attributed to source identity.
+
+\condition{Residual source difference.} If A4 is supported and $\alpha$ remains stably different from zero, performance misperception is insufficient. A1, A2, A3, and A5 must still be checked. Only if these alternatives are also insufficient should the residual difference be interpreted as a stable source-dependent error weight.
+
+\subsection{Recovery and behavioral meaning}
+
+The slot-machine task provides known and repeatable objective probabilities, allowing the study to distinguish algebraic calculability from behavioral identification. At minimum, $\alpha$ must be recoverable from choices across multiple performance levels, show acceptable stability within condition, predict held-out source choices, and not be fully explained by misunderstanding objective probabilities. Only then can it be interpreted as a candidate structural parameter rather than a descriptive threshold difference.
+
+\subsection{Misperception and stakes}
+
+The central explanatory path is objective task accuracy $\rightarrow$ perceived task accuracy $\rightarrow(M_i^{A4},R_i^{A4})\rightarrow(|\alpha|,\alpha)$. The loss $L$ represents an objective consequence of error and $c_h,c_a$ represent source costs. Changes in $L$ or costs first affect choice through the rational adoption rule. Only if recovered $\alpha$ differs across $L$ conditions after this direct effect is modeled can the study conclude that stakes change Asymmetric Error Tolerance.
+
+The possible findings are therefore separated. First, a relationship between $M_i^{A4}$ and $|\alpha|$ would indicate that overall performance misperception explains asymmetry magnitude; the component model would then identify whether AI or Human misperception contributes more. Second, if performance is accurately understood but $\alpha$ remains nonzero, misperception is insufficient and other source differences must be considered. Third, if $\alpha$ varies with $L$ after the benchmark effect is represented, stakes are associated with the behavioral asymmetry itself.
+
+\subsection{Benchmark prediction}
+
+Under the evaluability hypothesis, jointly displaying Human and AI accuracy for the same task and metric should improve the evaluability of performance evidence. The proposal therefore predicts:
+
+\begin{quote}
+Compared with disclosing neither accuracy, jointly disclosing comparable Human and AI accuracy will reduce $|\alpha|$.
+\end{quote}
+
+This prediction concerns distance from zero. It does not assume that disclosure only increases AI adoption. Disclosure may reduce excess intolerance or excess tolerance, depending on the initial direction.
+
+\section{Empirical Research Framework}
+
+\subsection{General design}
+
+The study uses an abstract slot-machine task and does not require continuous allocation across three channels. Each decision block contains three slot machines. Their objective winning probabilities are controlled by the researchers, and the complete outcome sequence is generated before the experiment. Researchers therefore know every realized outcome; participants see only outcomes that have already occurred.
+
+Each block has two parts. First, participants complete four or five observation or practice rounds. They inspect the machines' histories, search for patterns, make practice judgments, observe AI advice, and then see the round outcome. Second, they complete one consequential bet. Participants first judge which machine will win and report confidence $S_{it}$. They then see the AI recommendation and decide whether to keep their answer or adopt the AI answer. Correct and incorrect consequential bets change the real experimental bonus, so $L$ has an actual payment consequence rather than being a purely verbal vignette.
+
+The Human benchmark $q_h$ is estimated in an independent pretest under the same task, information, and scoring rules, and is described as the average accuracy of previous participants. It is aggregate information rather than an answer supplied by another person. AI accuracy $q_a$ is controlled through a pre-generated AI-advice sequence. Multiple independent blocks vary $q_a$ to identify the acceptance threshold; a single consequential choice cannot recover individual $\alpha$.
+
+Stage 1 jointly discloses $q_h$ and $q_a$ under low stakes and includes comprehension checks. Stage 2 varies whether both benchmarks are disclosed and crosses this factor with $L$. Because disclosed performance information cannot later be made unknown to the same participant, comparative accuracy disclosure should normally be assigned between participants. Stakes may be assigned between participants or varied within participants; if varied within participants, order must be randomized or counterbalanced.
+
+\subsection{Core $2\times2$ design}
+
+\begin{longtable}{p{0.20\textwidth}p{0.145\textwidth}p{0.145\textwidth}p{0.09\textwidth}p{0.25\textwidth}}
+\toprule
+Condition & Human accuracy $q_h$ & AI accuracy $q_a$ & Loss $L$ & Identification role\\
+\midrule
+Control & Disclosed & Disclosed & Low & Benchmark $\alpha$ when both performance values are known.\\
+T1: neither disclosed & Not disclosed & Not disclosed & Low & Tests whether missing Human and AI benchmarks changes $\alpha$.\\
+T2: high stakes & Disclosed & Disclosed & High & Tests whether greater error consequences change $\alpha$.\\
+T3: neither disclosed, high stakes & Not disclosed & Not disclosed & High & Tests the joint effect of misperception opportunity and high stakes.\\
+\bottomrule
+\end{longtable}
+
+All four conditions use the same slot probabilities, outcome sequences, objective AI-accuracy levels, item-order rules, and bonus calculation. The study does not provide false Human or AI performance information; the information manipulation changes only whether true values are disclosed. Every condition includes multiple AI-accuracy levels to identify $e_{a,i}^{*}$ rather than treating a single AI choice as $\alpha$.
+
+\subsection{Measures}
+
+\begin{longtable}{p{0.16\textwidth}p{0.28\textwidth}p{0.47\textwidth}}
+\toprule
+Variable & Measurement & Role\\
+\midrule
+$q_h$ & Mean accuracy from an independent pretest using the same task & Objective Human benchmark; disclosed only in the disclosure condition.\\
+$q_a$ & Researcher-controlled proportion of correct AI recommendations & Objective AI performance; varied across blocks.\\
+$\widehat q_{h,i}$ & Participant's reported estimate of Human accuracy & Human performance belief; component of $M_i^{A4}$ and $R_i^{A4}$.\\
+$\widehat q_{a,i}$ & Participant's reported estimate of AI accuracy & AI performance belief; component of $M_i^{A4}$ and $R_i^{A4}$.\\
+$S_{it}$ & Reported confidence before AI advice & Controls self-confidence and item-level private information.\\
+$L$ & Low or high consequential stake affecting real bonus & Experimental independent variable and check of A2.\\
+$Y_{it}$ & Keep own answer ($0$) or adopt AI answer ($1$) & Behavioral data for estimating the AI acceptance threshold.\\
+$e_{a,i}^{*}$ & Switching point across multiple $q_a$ levels & Maximum acceptable objective AI error rate.\\
+$\widehat\alpha_i$ & Recovered from $e_h$ and $e_{a,i}^{*}$ & Stage 2 outcome to be explained.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Minimum identification conditions}
+
+\begin{enumerate}
+\item Slot probabilities and all round outcomes must be fixed before participant choice; outcomes cannot be changed ex post.
+\item Consequential bets must affect the real bonus. High and low stakes must change $L$, not merely the wording.
+\item AI accuracy must have multiple levels. One $q_a$ produces one choice and cannot identify a threshold or $\alpha$.
+\item The Human benchmark must come from an independent pretest or an explicitly specified experimental source under the same task and scoring rule.
+\item Because the participant chooses between their own answer and AI advice, $S_{it}$ must be measured before AI advice.
+\item $\widehat q_{a,i}$ and $\widehat q_{h,i}$ must be measured directly; neither can be replaced by a trust scale.
+\item The four conditions must be identical except for joint accuracy disclosure and $L$.
+\item The initial four or five observation rounds require pilot validation. If estimates are noisy because too little evidence is available, observation information must be increased rather than interpreting sampling noise as a stable bias.
+\item An AI-specific claim would require a later rules-based-algorithm condition. The current core experiment identifies the difference between a participant's own judgment and AI advice.
+\end{enumerate}
+
+\subsection{Parameters to estimate}
+
+The study has one focal parameter, $\alpha$. The control condition first recovers $\alpha$ from source choices across multiple $q_a$ levels and reports its mean, distribution, and proportions above, near, and below zero. It then re-estimates $\alpha$ in T1-T3 to test whether joint performance disclosure and high stakes alter its magnitude or direction. A mean near zero can indicate source neutrality or offsetting positive and negative individual parameters; therefore, the mean alone is insufficient.
+
+Stage 2 uses both $|\widehat\alpha_i|$ and $\widehat\alpha_i$ as outcomes. The magnitude model tests the effects of non-disclosure, high stakes, and their interaction on $|\alpha|$, and uses $M_i^{A4}$ to explain overall misperception. If the latter is significant, the AI and Human components are compared. The signed model uses $R_i^{A4}$ to explain direction. Perceived task accuracy and $S_{it}$ are not additional structural parameters.
+
+\subsection{Falsification criteria}
+
+The following findings would limit or falsify the central claims:
+
+\begin{itemize}
+\item $\alpha$ cannot be recovered from multilevel choices or cannot predict held-out source choices;
+\item $\alpha$ remains near zero under matched evidence, indicating no repeatable source-dependent error weight;
+\item $M_i^{A4}$ and $R_i^{A4}$ fully explain the magnitude and direction of $\alpha$, leaving no independent source-dependent tolerance effect;
+\item Human and AI performance disclosure does not reduce $|\alpha|$;
+\item a single $\alpha$ cannot describe behavior across performance levels;
+\item AI and a rules-based algorithm do not differ in a later comparison, limiting any AI-specific interpretation; or
+\item sign reversals across domains cannot be explained by prespecified task differences and therefore remain unmodeled contextual heterogeneity.
+\end{itemize}
+
+\section{Theoretical Contributions}
+
+\subsection{Behavioral decision and measurement research}
+
+First, the study uses the real Human alternative as a benchmark and introduces a signed $\alpha$ that represents excess intolerance, source-neutral weighting, and excess tolerance on a common scale. Algorithm aversion, algorithm appreciation, and overreliance can therefore be compared in a two-sided behavioral space.
+
+Second, the study separates proposing a parameter from identifying it. The probability task tests whether $\alpha$ can be recovered from choice thresholds, whether it is stable, and whether it predicts subsequent choices. These tests determine whether the parameter has behavioral meaning beyond its algebraic definition.
+
+Third, the study converts A1-A5 from formal premises into identification checks and alternative explanations. Stage 1 measures $\alpha$. Stage 2 uses $M_i^{A4}$ to test the magnitude of performance misperception, the AI and Human components to identify its source, $R_i^{A4}$ to test direction, and $L$ to test whether objective consequences change the parameter.
+
+\subsection{AI adoption research}
+
+First, the study separates objective performance, numerical performance beliefs, and source choice. It therefore avoids naming the observed choice as trust before its non-trust determinants are represented.
+
+Second, the study distinguishes the magnitude, source, and direction of performance misperception. $M_i^{A4}$ measures total misperception, $M_{a,i}^{A4}$ and $M_{h,i}^{A4}$ identify whether the AI or Human judgment contributes more, and $R_i^{A4}$ identifies relative direction.
+
+Third, the framework shows why observed adoption differences do not directly reveal a source preference. The same source choice may arise from objective performance, incorrect performance beliefs, stakes, costs, or a residual source-dependent error weight.
+
+\subsection{Management and public policy}
+
+First, the study reframes AI adoption from whether AI meets an absolute standard to how AI errors are weighted relative to a real Human alternative.
+
+Second, it maps source weighting to both under-adoption and over-adoption rather than treating greater AI use as the management objective.
+
+Third, the framework offers a criterion for evaluating comparative performance disclosure: whether a common Human-AI benchmark reduces unsupported source-dependent differences rather than simply increasing AI adoption.
+
+\section{Expected Management and Policy Implications}
+
+\begin{enumerate}
+\item AI performance disclosure should report the comparable performance of the relevant Human alternative. An isolated accuracy value may be difficult to evaluate.
+\item Evaluation systems should monitor both overly strict and overly lenient source standards. Correcting only algorithm aversion may increase overreliance, while emphasizing only AI risk may entrench under-adoption.
+\item Different Human and AI thresholds require correction only when task and institutional conditions are comparable. Systemic failure, limited reviewability, responsibility gaps, and lack of appeal may rationally justify different thresholds.
+\item Members of the public, managers, professionals, and regulators may have different $\alpha$ values. Research should compare their distance from the source-neutral benchmark without assuming that one group is necessarily more conservative.
+\end{enumerate}
+
+\section{Feasibility and Sequence of Implementation}
+
+The implementation follows the logic of measurement before explanation:
+
+\begin{enumerate}
+\item determine how multiple objective probabilities, error consequences, and choice thresholds are presented in the slot-machine task;
+\item use parameter-recovery simulation and pilot testing to establish whether $\alpha$ can be recovered from source choice and predicts held-out choices;
+\item measure perceived Human and AI accuracy and test whether $M_i^{A4}$ explains $|\widehat\alpha_i|$, then compare the error components and use $R_i^{A4}$ to explain direction;
+\item manipulate or compare $L$ to separate its direct effect on choice from any additional effect on $\alpha$;
+\item re-estimate $\alpha$ in domains such as medicine and autonomous driving only after identification in the abstract task is established; and
+\item extend the framework to managers, professionals, or regulatory materials only after reliable individual-level measurement.
+\end{enumerate}
+
+The current proposal does not specify a sample size by convention. The final number should be determined through parameter-recovery simulation, pilot distributions, and a preregistered minimum detectable effect.
+
+\section{Boundaries and Limitations}
+
+First, the Human counterfactual is a real comparison benchmark, not a socially optimal benchmark. If current Human performance is inefficient or unjust, source symmetry may still preserve absolute miscalibration.
+
+Second, $\alpha$ is initially a reduced-form behavioral parameter. It may absorb correlated errors, reviewability, responsibility, or other source differences that have not been adequately controlled. Before recovery and stability are demonstrated and these factors are separated, it must not be named as a single psychological mechanism or established structural parameter.
+
+Third, the current experiment measures numerical performance beliefs and source choice, not perceived trustworthiness, performance trust, or attitudinal trust. It therefore cannot make a direct claim about the psychological content of trust. Its contribution is to measure behavioral error tolerance and test performance misperception as one explanation.
+
+Fourth, contextual studies of individuals measure personal evaluations and policy preferences, not actual organizational decisions or regulation. Regulation should enter the final title only if supported by formal theory and institutional evidence.
+
+Fifth, broad domains increase practical relevance but also introduce background knowledge and value conflict. Cross-domain results should be compared only after identification is established within each domain.
+
+\section{Ethics and Open Science}
+
+Studies involving human participants will obtain ethics approval and informed consent before data collection. High-risk medical and autonomous-driving scenarios must be identified as research materials so that hypothetical performance information is not mistaken for real product guidance. The study will preregister the focal constructs, exclusion rules, parameter signs, model comparisons, and falsification criteria. Materials, anonymized data, and analysis code will be shared where ethics and privacy permit.
+
+\section{Condensed Argument}
+
+Existing studies report algorithm aversion, algorithm appreciation, and overreliance, but lack a behavioral parameter that represents these opposing directions on a common scale. This study uses the relevant Human alternative as the benchmark and introduces the signed parameter $\alpha$ to measure Asymmetric Error Tolerance. Stage 1 recovers $\alpha$ from behavioral thresholds when both Human and AI objective accuracies are disclosed. Stage 2 varies whether both accuracies are disclosed and measures participants' estimates of each source's accuracy. $M_i^{A4}$ tests whether total performance misperception explains $|\alpha|$, the AI and Human components identify the source of misperception, and $R_i^{A4}$ explains the direction of $\alpha$. The objective loss $L$ tests whether stakes further change asymmetric tolerance. The proposal therefore follows one complete argument: introduce $\alpha$, establish whether it can be measured from behavior, and explain why it varies.
+
+\section*{References}
+\addcontentsline{toc}{section}{References}
+\begin{hangparas}{1.5em}{1}
+Castelo, N., Bos, M. W., \& Lehmann, D. R. (2019). Task-dependent algorithm aversion. \textit{Journal of Marketing Research, 56}(5), 809-825. \url{https://doi.org/10.1177/0022243719851788}
+
+Dietvorst, B. J., \& Bharti, S. (2020). People reject algorithms in uncertain decision domains because they have diminishing sensitivity to forecasting error. \textit{Psychological Science, 31}(10), 1302-1314. \url{https://doi.org/10.1177/0956797620948841}
+
+Dietvorst, B. J., Simmons, J. P., \& Massey, C. (2015). Algorithm aversion: People erroneously avoid algorithms after seeing them err. \textit{Journal of Experimental Psychology: General, 144}(1), 114-126. \url{https://doi.org/10.1037/xge0000033}
+
+Everett, J. A. C., Claessens, S., Knochel, T.-D., \& Reinecke, M. G. (2026). Principles for understanding trust in artificial intelligence. \textit{Nature Reviews Psychology, 5}(6), 388-401. \url{https://doi.org/10.1038/s44159-026-00562-1}
+
+Goddard, K., Roudsari, A., \& Wyatt, J. C. (2012). Automation bias: A systematic review of frequency, effect mediators, and mitigators. \textit{Journal of the American Medical Informatics Association, 19}(1), 121-127. \url{https://doi.org/10.1136/amiajnl-2011-000089}
+
+Hsee, C. K. (1996). The evaluability hypothesis: An explanation for preference reversals between joint and separate evaluations of alternatives. \textit{Organizational Behavior and Human Decision Processes, 67}(3), 247-257. \url{https://doi.org/10.1006/obhd.1996.0077}
+
+Kaplan, A. D., Kessler, T. T., Brill, J. C., \& Hancock, P. A. (2023). Trust in artificial intelligence: Meta-analytic findings. \textit{Human Factors, 65}(2), 337-359. \url{https://doi.org/10.1177/00187208211013988}
+
+Lee, J. D., \& See, K. A. (2004). Trust in automation: Designing for appropriate reliance. \textit{Human Factors, 46}(1), 50-80. \url{https://doi.org/10.1518/hfes.46.1.50_30392}
+
+Lenskjold, A., Nybing, J. U., Trampedach, C., Galsgaard, A., Brejnebol, M. W., Raaschou, H., Rose, M. H., \& Boesen, M. (2023). Should artificial intelligence have lower acceptable error rates than humans? \textit{BJR Open, 5}(1), 20220053. \url{https://doi.org/10.1259/bjro.20220053}
+
+Logg, J. M., Minson, J. A., \& Moore, D. A. (2019). Algorithm appreciation: People prefer algorithmic to human judgment. \textit{Organizational Behavior and Human Decision Processes, 151}, 90-103. \url{https://doi.org/10.1016/j.obhdp.2018.12.005}
+
+Longoni, C., Bonezzi, A., \& Morewedge, C. K. (2019). Resistance to medical artificial intelligence. \textit{Journal of Consumer Research, 46}(4), 629-650. \url{https://doi.org/10.1093/jcr/ucz013}
+
+Mehrotra, S., Degachi, C., Vereschak, O., Jonker, C. M., \& Tielman, M. L. (2024). A systematic review on fostering appropriate trust in human-AI interaction: Trends, opportunities and challenges. \textit{ACM Journal on Responsible Computing, 1}(4), Article 26, 1-45. \url{https://doi.org/10.1145/3696449}
+
+Rebitschek, F. G., Gigerenzer, G., \& Wagner, G. G. (2021). People underestimate the errors made by algorithms for credit scoring and recidivism prediction but accept even fewer errors. \textit{Scientific Reports, 11}, 20171. \url{https://doi.org/10.1038/s41598-021-99802-y}
+
+Schaefer, K. E., Chen, J. Y. C., Szalma, J. L., \& Hancock, P. A. (2016). A meta-analysis of factors influencing the development of trust in automation: Implications for understanding autonomy in future systems. \textit{Human Factors, 58}(3), 377-400. \url{https://doi.org/10.1177/0018720816634228}
+
+Shariff, A., Bonnefon, J.-F., \& Rahwan, I. (2021). How safe is safe enough? Psychological mechanisms underlying extreme safety demands for self-driving cars. \textit{Transportation Research Part C: Emerging Technologies, 126}, 103069. \url{https://doi.org/10.1016/j.trc.2021.103069}
+\end{hangparas}
+
+\end{document}
