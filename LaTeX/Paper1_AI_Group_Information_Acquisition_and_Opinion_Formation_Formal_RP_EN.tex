@@ -1,9 +1,22 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[a4paper,margin=25mm,headheight=15pt]{geometry}
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
-\setsansfont{Arial}
+% Overleaf-compatible font setup. The document can be compiled with
+% pdfLaTeX, XeLaTeX, or LuaLaTeX; no proprietary system fonts are required.
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{newtxtext}
+  \usepackage[scaled=0.92]{helvet}
+\else
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+  \setsansfont{TeX Gyre Heros}[Scale=0.92]
+\fi
 \usepackage{amsmath,amssymb,mathtools}
+\ifPDFTeX
+  \usepackage{newtxmath}
+\fi
 \usepackage{microtype}
 \usepackage{setspace}
 \usepackage{titlesec}

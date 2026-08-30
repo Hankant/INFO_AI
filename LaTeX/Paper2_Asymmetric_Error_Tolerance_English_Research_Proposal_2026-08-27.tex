@@ -1,10 +1,23 @@
 \documentclass[11pt]{article}
 \usepackage[a4paper,margin=2.35cm]{geometry}
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
-\setsansfont{Arial}
+% Overleaf-compatible font setup. The document can be compiled with
+% pdfLaTeX, XeLaTeX, or LuaLaTeX; no proprietary system fonts are required.
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{newtxtext}
+  \usepackage[scaled=0.92]{helvet}
+\else
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+  \setsansfont{TeX Gyre Heros}[Scale=0.92]
+\fi
 \usepackage{microtype}
 \usepackage{amsmath,amssymb,mathtools}
+\ifPDFTeX
+  \usepackage{newtxmath}
+\fi
 \usepackage{booktabs,longtable,array,tabularx}
 \usepackage{enumitem}
 \usepackage{xcolor}
@@ -669,6 +682,8 @@ Existing studies report algorithm aversion, algorithm appreciation, and overreli
 
 \section*{References}
 \addcontentsline{toc}{section}{References}
+\RaggedRight
+\sloppy
 \begin{hangparas}{1.5em}{1}
 Castelo, N., Bos, M. W., \& Lehmann, D. R. (2019). Task-dependent algorithm aversion. \textit{Journal of Marketing Research, 56}(5), 809-825. \url{https://doi.org/10.1177/0022243719851788}
 
