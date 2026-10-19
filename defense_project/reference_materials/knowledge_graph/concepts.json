@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-03",
-  "concept_count": 316,
+  "generated_at": "2026-09-08",
+  "concept_count": 568,
   "concept_to_papers": {
     "automation_use_abuse": [
       "ParasuramanRiley1997"
@@ -131,10 +131,12 @@
       "Sims2003"
     ],
     "costly_information_acquisition": [
-      "CaplinDean2015"
+      "CaplinDean2015",
+      "GabaixEtAl2006"
     ],
     "revealed_preference": [
-      "CaplinDean2015"
+      "CaplinDean2015",
+      "CaplinDeanMartin2011"
     ],
     "adaptive_decision_maker": [
       "PayneBettmanJohnson1993"
@@ -146,7 +148,8 @@
       "PayneBettmanJohnson1993"
     ],
     "confirmation_bias": [
-      "Nickerson1998"
+      "Nickerson1998",
+      "FryerHarmsJackson2013"
     ],
     "belief_persistence": [
       "Nickerson1998"
@@ -221,7 +224,8 @@
     ],
     "belief_formation": [
       "EnkeZimmermann2019",
-      "RabinSchrag1999"
+      "RabinSchrag1999",
+      "GraeberRothZimmermann2024"
     ],
     "subjective_beliefs": [
       "EnkeZimmermann2019"
@@ -293,7 +297,8 @@
       "Edwards1968"
     ],
     "information_processing": [
-      "Edwards1968"
+      "Edwards1968",
+      "MalleGuglielmoMonroe2014"
     ],
     "behavioral_inattention": [
       "Gabaix2019"
@@ -378,7 +383,8 @@
       "RabinSchrag1999"
     ],
     "LLM_reasoning": [
-      "Shanahan2024"
+      "Shanahan2024",
+      "Payne2026"
     ],
     "LLM_dialogue": [
       "Shanahan2024"
@@ -416,7 +422,10 @@
       "YanivKleinberger2000"
     ],
     "review": [
-      "BonaccioDalal2006"
+      "BonaccioDalal2006",
+      "BonnefonRahwanShariff2024",
+      "WoolleyAggarwalMalone2015",
+      "Centola2022"
     ],
     "advice_utilization": [
       "BonaccioDalal2006"
@@ -437,10 +446,12 @@
       "SniezekBuckley1995"
     ],
     "judgment_improvement": [
-      "HarveyFischer1997"
+      "HarveyFischer1997",
+      "HerzogHertwig2009"
     ],
     "responsibility_sharing": [
-      "HarveyFischer1997"
+      "HarveyFischer1997",
+      "KirchkampStrobel2019"
     ],
     "weight_of_advice": [
       "HarveyFischer1997"
@@ -458,7 +469,14 @@
       "SollLarrick2009",
       "FugenerGrahlGuptaKetter2021",
       "LorenzRauhutSchweitzerHelbing2011",
-      "GolubJackson2010"
+      "GolubJackson2010",
+      "Galton1907",
+      "Surowiecki2004",
+      "LarrickSoll2006",
+      "BeckerBrackbillCentola2017",
+      "NavajasEtAl2018",
+      "BeckerPorterCentola2019",
+      "DavisStoberEtAl2014"
     ],
     "self_serving_bias": [
       "MillerRoss1975",
@@ -480,7 +498,8 @@
       "MezulisEtAl2004"
     ],
     "defensive_attribution": [
-      "Bradley1978"
+      "Bradley1978",
+      "Burger1981"
     ],
     "attribution_theory": [
       "Weiner1985"
@@ -496,13 +515,17 @@
     ],
     "meta_analysis": [
       "CampbellSedikides1999",
-      "MezulisEtAl2004"
+      "MezulisEtAl2004",
+      "ZhouEtAl2026",
+      "Burger1981",
+      "QinEtAl2025"
     ],
     "positivity_bias": [
       "MezulisEtAl2004"
     ],
     "motivated_reasoning": [
-      "ShepperdMaloneSweeny2008"
+      "ShepperdMaloneSweeny2008",
+      "DongBocian2024"
     ],
     "self_enhancement": [
       "ShepperdMaloneSweeny2008"
@@ -575,6 +598,109 @@
     "AI_advice_use": [
       "VodrahalliEtAl2021"
     ],
+    "accountability_review": [
+      "AleksovskaSchillemansGrimmelikhuijsen2019",
+      "HallFrinkBuckley2017"
+    ],
+    "experimental_research": [
+      "AleksovskaSchillemansGrimmelikhuijsen2019"
+    ],
+    "systematic_review": [
+      "AleksovskaSchillemansGrimmelikhuijsen2019",
+      "HuangSuang2024",
+      "TokPowellGuellai2026",
+      "ThellmanDeGraafZiemke2022"
+    ],
+    "algorithm_delegation": [
+      "ChevrierTeixeira2024"
+    ],
+    "responsibility_attribution": [
+      "ChevrierTeixeira2024",
+      "HuangSuang2024",
+      "Burger1981",
+      "TsumuraYamada2026",
+      "Franklin2025",
+      "Gill2020"
+    ],
+    "blame_programmer": [
+      "ChevrierTeixeira2024"
+    ],
+    "felt_accountability": [
+      "HallFrinkBuckley2017"
+    ],
+    "meta_synthesis": [
+      "HallFrinkBuckley2017"
+    ],
+    "human_machine_decision": [
+      "KirchkampStrobel2019",
+      "AwadEtAl2020"
+    ],
+    "moral_distance": [
+      "KirchkampStrobel2019"
+    ],
+    "human_centered_AI": [
+      "KrakowskiLugerRaisch2026"
+    ],
+    "field_experiment": [
+      "KrakowskiLugerRaisch2026",
+      "NyhanEtAl2023"
+    ],
+    "AI_deployment": [
+      "KrakowskiLugerRaisch2026"
+    ],
+    "AI_design": [
+      "KrakowskiLugerRaisch2026",
+      "YinNgiamTanTeo2025"
+    ],
+    "accountability_effects": [
+      "LernerTetlock1999"
+    ],
+    "accountability_bias": [
+      "LernerTetlock1999"
+    ],
+    "decision_quality": [
+      "LernerTetlock1999"
+    ],
+    "automation_augmentation_paradox": [
+      "RaischKrakowski2021"
+    ],
+    "AI_management": [
+      "RaischKrakowski2021"
+    ],
+    "AMR": [
+      "RaischKrakowski2021"
+    ],
+    "organizational_decision_making": [
+      "ShresthaBenMenahemVonKrogh2019"
+    ],
+    "AI_structure": [
+      "ShresthaBenMenahemVonKrogh2019"
+    ],
+    "AI_governance": [
+      "ShresthaBenMenahemVonKrogh2019"
+    ],
+    "passing_the_buck": [
+      "SteffelWilliamsPerrmannGraham2016"
+    ],
+    "delegation": [
+      "SteffelWilliamsPerrmannGraham2016"
+    ],
+    "blame_avoidance": [
+      "SteffelWilliamsPerrmannGraham2016"
+    ],
+    "responsibility": [
+      "SteffelWilliamsPerrmannGraham2016"
+    ],
+    "AI_advice_timing": [
+      "YinNgiamTanTeo2025"
+    ],
+    "diagnostic_decisions": [
+      "YinNgiamTanTeo2025"
+    ],
+    "human_AI_collaboration": [
+      "YinNgiamTanTeo2025",
+      "FugenerGrahlGuptaKetter2021"
+    ],
     "LLM_homogeneity": [
       "JiangEtAl2025ArtificialHivemind"
     ],
@@ -582,10 +708,8 @@
       "JiangEtAl2025ArtificialHivemind"
     ],
     "model_correlation": [
-      "JiangEtAl2025ArtificialHivemind"
-    ],
-    "human_AI_collaboration": [
-      "FugenerGrahlGuptaKetter2021"
+      "JiangEtAl2025ArtificialHivemind",
+      "ErikssonEtAl2026"
     ],
     "information_homogeneity": [
       "FugenerGrahlGuptaKetter2021"
@@ -623,7 +747,8 @@
       "BommasaniCreelKumarEtAl2022"
     ],
     "hidden_profile": [
-      "StasserTitus1985"
+      "StasserTitus1985",
+      "SteinelUtzKoning2010"
     ],
     "shared_information_bias": [
       "StasserTitus1985"
@@ -633,7 +758,10 @@
     ],
     "social_influence": [
       "LorenzRauhutSchweitzerHelbing2011",
-      "DeGroot1974"
+      "DeGroot1974",
+      "FriedkinJohnsen1990",
+      "BeckerBrackbillCentola2017",
+      "BeckerPorterCentola2019"
     ],
     "opinion_diversity": [
       "LorenzRauhutSchweitzerHelbing2011"
@@ -649,7 +777,11 @@
       "BaiVoelkelMuldowneyEtAl2025"
     ],
     "collective_intelligence": [
-      "BurtonEtAl2024"
+      "BurtonEtAl2024",
+      "EngelEtAl2014",
+      "WoolleyAggarwalMalone2015",
+      "RiedlEtAl2021",
+      "Centola2022"
     ],
     "LLM_review": [
       "BurtonEtAl2024"
@@ -691,7 +823,8 @@
       "KleinbergRaghavan2021"
     ],
     "network_structure": [
-      "LazerFriedman2007"
+      "LazerFriedman2007",
+      "Centola2022"
     ],
     "exploration_exploitation": [
       "LazerFriedman2007"
@@ -720,11 +853,13 @@
     "opinion_dynamics": [
       "HegselmannKrause2002",
       "ChuangEtAl2024",
-      "PerraRocha2019"
+      "PerraRocha2019",
+      "FriedkinJohnsen1990"
     ],
     "agent_based_model": [
       "HegselmannKrause2002",
-      "PerraRocha2019"
+      "PerraRocha2019",
+      "ChoiBowles2007"
     ],
     "consensus": [
       "DeGroot1974"
@@ -933,163 +1068,779 @@
     "political_polarization": [
       "NyhanEtAl2023"
     ],
-    "field_experiment": [
-      "NyhanEtAl2023"
-    ],
     "algorithmic_personalisation": [
       "PerraRocha2019"
     ],
     "binary_opinion": [
       "PerraRocha2019"
     ],
-    "paper2_ewa": [
-      "Anderson2019",
-      "Balakrishnan2026",
-      "Benabou2016",
-      "Bockstedt2026",
-      "Bonner2002",
-      "Brunnermeier2005",
-      "Camerer1999",
-      "Caro2026",
-      "Cheng2026",
-      "Choi2026",
-      "Dargnies2026",
-      "Dietvorst2015",
-      "Dietvorst2018",
-      "Draws2021",
-      "Epley2004",
-      "Epley2016",
-      "Everett2026",
-      "Festinger1959",
-      "Greiner2026",
-      "Grossman1981",
-      "Hancock2021",
-      "Hoff2015",
-      "Jiao2020",
-      "Kaplan2023",
-      "Kim2004",
-      "Klingbeil2024",
+    "AI_delegation": [
       "Kobis2025",
-      "Kreps2023",
-      "Kunda1990",
-      "Landes2026",
-      "LeeSee2004",
-      "Logg2019",
-      "Lu2026",
-      "Luo2019",
-      "Mayer1995",
-      "Mckenna2024",
-      "Mehrotra2024",
-      "Miazek2025",
-      "Milgrom1981",
-      "Pareek2024",
-      "Schaefer2016",
-      "Schanke2026",
-      "Sprinkle2003",
-      "Vaccaro2024",
-      "Wischnewski2022",
-      "Xu2026",
-      "Xu2026a",
-      "Yang2026",
-      "YinNgiamTanTeo2025",
-      "deVisser2020"
+      "XuEtAl2026"
     ],
-    "trust_calibration_foundations": [
-      "Everett2026",
-      "Hancock2021",
-      "Hoff2015",
-      "Kaplan2023",
-      "LeeSee2004",
-      "Mayer1995",
-      "Mckenna2024",
-      "Mehrotra2024",
-      "Schaefer2016",
-      "deVisser2020"
+    "dishonest_behavior": [
+      "Kobis2025"
     ],
-    "algorithm_aversion_appreciation": [
-      "Dietvorst2015",
-      "Dietvorst2018",
-      "Logg2019"
+    "moral_license": [
+      "Kobis2025"
     ],
-    "human_algorithm_collaboration": [
-      "Balakrishnan2026",
-      "Bockstedt2026",
-      "Caro2026",
-      "Dargnies2026",
-      "Vaccaro2024",
-      "Yang2026",
-      "YinNgiamTanTeo2025"
+    "AI_assistance": [
+      "Kobis2025"
     ],
-    "dynamic_learning_ewa": [
-      "Camerer1999"
+    "human_agent_interaction": [
+      "ZhouEtAl2026"
     ],
-    "performance_information_transparency": [
-      "Lu2026"
+    "trust": [
+      "ZhouEtAl2026"
     ],
-    "disclosure_governance": [
-      "Grossman1981",
-      "Luo2019",
-      "Milgrom1981",
-      "Schanke2026",
-      "Xu2026a"
+    "prosocial_behavior": [
+      "ZhouEtAl2026"
     ],
-    "feedback_performance_incentives": [
-      "Anderson2019",
-      "Bonner2002",
-      "Greiner2026",
-      "Sprinkle2003"
+    "human_AI_dyads": [
+      "ZhouEtAl2026"
     ],
-    "trust_repair": [
-      "Kim2004",
-      "Pareek2024"
+    "AI_service": [
+      "HuangSuang2024"
     ],
-    "motivated_beliefs": [
-      "Benabou2016",
-      "Brunnermeier2005",
-      "Epley2016",
-      "Festinger1959",
-      "Jiao2020",
-      "Kunda1990",
-      "Wischnewski2022"
+    "joint_service": [
+      "HuangSuang2024"
     ],
-    "trust_use_separation": [
-      "Kreps2023"
+    "perceived_moral_agency": [
+      "TokPowellGuellai2026"
     ],
-    "self_interest_fairness_judgment": [
-      "Choi2026",
-      "Draws2021",
-      "Epley2004",
-      "Miazek2025"
+    "artificial_agents": [
+      "TokPowellGuellai2026",
+      "Franklin2025"
     ],
-    "untrustworthy_ai_reliance": [
-      "Cheng2026",
-      "Klingbeil2024",
-      "Landes2026"
+    "moral_psychology": [
+      "TokPowellGuellai2026",
+      "AwadEtAl2020"
     ],
-    "ai_delegation_responsibility": [
-      "Kobis2025",
-      "Xu2026"
+    "moral_psychology_AI": [
+      "BonnefonRahwanShariff2024"
+    ],
+    "moral_agent": [
+      "BonnefonRahwanShariff2024"
+    ],
+    "moral_patient": [
+      "BonnefonRahwanShariff2024"
+    ],
+    "moral_proxy": [
+      "BonnefonRahwanShariff2024"
+    ],
+    "mental_state_attribution": [
+      "ThellmanDeGraafZiemke2022"
+    ],
+    "robots": [
+      "ThellmanDeGraafZiemke2022"
+    ],
+    "mind_perception": [
+      "ThellmanDeGraafZiemke2022",
+      "Joo2024"
+    ],
+    "moral_delegation": [
+      "TangEtAl2026_MoralDelegation"
+    ],
+    "AI_ethics": [
+      "TangEtAl2026_MoralDelegation"
+    ],
+    "decision_making_framework": [
+      "TangEtAl2026_MoralDelegation"
+    ],
+    "agent_evaluator": [
+      "TangEtAl2026_MoralDelegation"
+    ],
+    "culpable_control": [
+      "Alicke2000"
+    ],
+    "blame_validation": [
+      "Alicke2000"
+    ],
+    "spontaneous_evaluation": [
+      "Alicke2000"
+    ],
+    "personal_control": [
+      "Alicke2000"
+    ],
+    "severity_similarity": [
+      "Burger1981"
+    ],
+    "path_model_of_blame": [
+      "MalleGuglielmoMonroe2014"
+    ],
+    "theory_of_blame": [
+      "MalleGuglielmoMonroe2014"
+    ],
+    "moral_judgment": [
+      "MalleGuglielmoMonroe2014"
+    ],
+    "moral_scapegoating": [
+      "Joo2024"
+    ],
+    "AI_blame": [
+      "Joo2024",
+      "ArnestadEtAl2024"
+    ],
+    "experiment": [
+      "Joo2024",
+      "TsumuraYamada2026",
+      "Gill2020",
+      "ArnestadEtAl2024"
+    ],
+    "knowledge_importance": [
+      "TsumuraYamada2026"
+    ],
+    "human_AI_decision": [
+      "TsumuraYamada2026"
+    ],
+    "anchoring_saturation": [
+      "Franklin2025"
+    ],
+    "blame_diffusion": [
+      "Franklin2025"
+    ],
+    "intention_based_reciprocity": [
+      "Rabin1993"
+    ],
+    "fairness_equilibrium": [
+      "Rabin1993"
+    ],
+    "kindness_function": [
+      "Rabin1993"
+    ],
+    "game_theory": [
+      "Rabin1993"
+    ],
+    "sequential_reciprocity": [
+      "DufwenbergKirchsteiger2004"
+    ],
+    "extensive_form": [
+      "DufwenbergKirchsteiger2004"
+    ],
+    "reciprocity_equilibrium": [
+      "DufwenbergKirchsteiger2004"
+    ],
+    "kindness": [
+      "DufwenbergKirchsteiger2004"
+    ],
+    "guilt_aversion": [
+      "BattigalliDufwenberg2007",
+      "VanBaarEtAl2019"
+    ],
+    "simple_guilt": [
+      "BattigalliDufwenberg2007"
+    ],
+    "guilt_from_blame": [
+      "BattigalliDufwenberg2007"
+    ],
+    "psychological_games": [
+      "BattigalliDufwenberg2007"
+    ],
+    "inequity_aversion": [
+      "FehrSchmidt1999",
+      "VanBaarEtAl2019"
+    ],
+    "fairness": [
+      "FehrSchmidt1999"
+    ],
+    "cooperation": [
+      "FehrSchmidt1999",
+      "Jervis1978"
+    ],
+    "altruism_explanation": [
+      "FehrSchmidt1999"
+    ],
+    "parochial_altruism": [
+      "ChoiBowles2007"
+    ],
+    "intergroup_conflict": [
+      "ChoiBowles2007"
+    ],
+    "coevolution": [
+      "ChoiBowles2007"
+    ],
+    "moral_opportunism": [
+      "VanBaarEtAl2019"
+    ],
+    "fMRI": [
+      "VanBaarEtAl2019"
+    ],
+    "computational_modeling": [
+      "VanBaarEtAl2019"
+    ],
+    "social_exchange_motives": [
+      "IgweEtAl2024"
+    ],
+    "machine_learning": [
+      "IgweEtAl2024"
+    ],
+    "ingroup_reciprocity": [
+      "IgweEtAl2024"
+    ],
+    "C_HMM": [
+      "IgweEtAl2024"
+    ],
+    "security_dilemma": [
+      "Jervis1978"
+    ],
+    "offense_defense_balance": [
+      "Jervis1978"
+    ],
+    "anarchy": [
+      "Jervis1978"
+    ],
+    "bargaining_model_of_war": [
+      "Fearon1995"
+    ],
+    "private_information": [
+      "Fearon1995"
+    ],
+    "commitment_problems": [
+      "Fearon1995"
+    ],
+    "rational_war": [
+      "Fearon1995"
+    ],
+    "AI_crisis_decision": [
+      "HorowitzLinGreenberg2022"
+    ],
+    "national_security": [
+      "HorowitzLinGreenberg2022"
+    ],
+    "survey_experiment": [
+      "HorowitzLinGreenberg2022"
+    ],
+    "algorithm_influence": [
+      "HorowitzLinGreenberg2022"
+    ],
+    "AI_prediction_judgment": [
+      "GoldfarbLindsay2022"
+    ],
+    "military_AI": [
+      "GoldfarbLindsay2022"
+    ],
+    "data_judgment_complements": [
+      "GoldfarbLindsay2022"
+    ],
+    "strategic_stability": [
+      "GoldfarbLindsay2022"
+    ],
+    "inadvertent_escalation": [
+      "Johnson2021"
+    ],
+    "nuclear_risk": [
+      "Johnson2021"
+    ],
+    "AI_brittleness": [
+      "Johnson2021"
+    ],
+    "opacity": [
+      "Johnson2021"
+    ],
+    "Posen_framework": [
+      "Johnson2021"
+    ],
+    "leader_culpability": [
+      "Croco2011"
+    ],
+    "war_outcomes": [
+      "Croco2011"
+    ],
+    "domestic_punishment": [
+      "Croco2011"
+    ],
+    "decider_dilemma": [
+      "Croco2011"
+    ],
+    "AI_arms_influence": [
+      "Payne2026"
+    ],
+    "frontier_models": [
+      "Payne2026"
+    ],
+    "nuclear_crisis": [
+      "Payne2026"
+    ],
+    "arXiv": [
+      "Payne2026"
+    ],
+    "LLM_escalation": [
+      "RiveraEtAl2024"
+    ],
+    "military_decision": [
+      "RiveraEtAl2024"
+    ],
+    "diplomatic_decision": [
+      "RiveraEtAl2024"
+    ],
+    "FAccT": [
+      "RiveraEtAl2024"
+    ],
+    "unpredictable_escalation": [
+      "RiveraEtAl2024"
+    ],
+    "AI_nuclear_risk": [
+      "SIPRI2025"
+    ],
+    "decision_support": [
+      "SIPRI2025"
+    ],
+    "counterforce": [
+      "SIPRI2025"
+    ],
+    "entanglement": [
+      "SIPRI2025"
+    ],
+    "SIPRI": [
+      "SIPRI2025"
+    ],
+    "nuclear_first_use": [
+      "Larsen2024"
+    ],
+    "asymmetric_deterrence": [
+      "Larsen2024"
+    ],
+    "game_theoretic": [
+      "Larsen2024"
+    ],
+    "conflict": [
+      "Larsen2024"
+    ],
+    "genAI_crisis": [
+      "Johnson2026"
+    ],
+    "synthetic_foresight": [
+      "Johnson2026"
+    ],
+    "nuclear_decision": [
+      "Johnson2026"
+    ],
+    "self_reinforcing_dynamics": [
+      "Johnson2026"
+    ],
+    "control_accountability_alignment": [
+      "GroteParkerCrowston2026"
+    ],
+    "AI_autonomy": [
+      "GroteParkerCrowston2026"
+    ],
+    "developer_user_interdependence": [
+      "GroteParkerCrowston2026"
+    ],
+    "theory": [
+      "GroteParkerCrowston2026"
+    ],
+    "management": [
+      "GroteParkerCrowston2026"
+    ],
+    "blame_allocation": [
+      "AwadEtAl2020"
+    ],
+    "shared_control": [
+      "AwadEtAl2020"
+    ],
+    "self_driving_car": [
+      "Gill2020"
+    ],
+    "selfish_choice": [
+      "Gill2020"
+    ],
+    "blame_shift": [
+      "Gill2020"
+    ],
+    "algorithmic_outrage_deficit": [
+      "BigmanEtAl2023"
+    ],
+    "algorithmic_discrimination": [
+      "BigmanEtAl2023",
+      "AlonBarkatEtAl2025"
+    ],
+    "moral_outrage": [
+      "BigmanEtAl2023"
+    ],
+    "legal_responsibility": [
+      "BigmanEtAl2023"
+    ],
+    "manual_mode": [
+      "ArnestadEtAl2024"
+    ],
+    "control_appearance": [
+      "ArnestadEtAl2024"
+    ],
+    "actual_control": [
+      "ArnestadEtAl2024"
+    ],
+    "responsibility_gap": [
+      "DongBocian2024"
+    ],
+    "self_interest_bias": [
+      "DongBocian2024"
+    ],
+    "strategic_blame_shift": [
+      "DongBocian2024"
+    ],
+    "public_administration": [
+      "AlonBarkatEtAl2025"
+    ],
+    "organizational_boundaries": [
+      "AlonBarkatEtAl2025"
+    ],
+    "outsourcing": [
+      "AlonBarkatEtAl2025"
+    ],
+    "responsibility_avoidance": [
+      "XuEtAl2026"
+    ],
+    "loss_aversion": [
+      "XuEtAl2026"
+    ],
+    "public_evaluation": [
+      "XuEtAl2026"
+    ],
+    "difficult_decision": [
+      "XuEtAl2026"
+    ],
+    "AI_induced_responsibility": [
+      "NyilasyEtAl2026"
+    ],
+    "constrained_implementer": [
+      "NyilasyEtAl2026"
+    ],
+    "human_discretion": [
+      "NyilasyEtAl2026"
+    ],
+    "AI_human_team": [
+      "NyilasyEtAl2026"
+    ],
+    "preprint": [
+      "NyilasyEtAl2026"
+    ],
+    "bounded_rationality": [
+      "GabaixEtAl2006"
+    ],
+    "experimental_economics": [
+      "GabaixEtAl2006"
+    ],
+    "directed_cognition": [
+      "GabaixEtAl2006"
+    ],
+    "search": [
+      "CaplinDeanMartin2011"
+    ],
+    "satisficing": [
+      "CaplinDeanMartin2011"
+    ],
+    "choice_theory": [
+      "CaplinDeanMartin2011"
+    ],
+    "belief_updating": [
+      "FryerHarmsJackson2013"
+    ],
+    "ambiguous_evidence": [
+      "FryerHarmsJackson2013"
+    ],
+    "polarization": [
+      "FryerHarmsJackson2013"
+    ],
+    "information_provision": [
+      "HaalandRothWohlfart2023"
+    ],
+    "experimental_design": [
+      "HaalandRothWohlfart2023"
+    ],
+    "survey_methodology": [
+      "HaalandRothWohlfart2023"
+    ],
+    "belief_elicitation": [
+      "HaalandRothWohlfart2023"
+    ],
+    "stories": [
+      "GraeberRothZimmermann2024"
+    ],
+    "statistics": [
+      "GraeberRothZimmermann2024"
+    ],
+    "memory": [
+      "GraeberRothZimmermann2024"
+    ],
+    "narrative_persuasion": [
+      "GraeberRothZimmermann2024"
+    ],
+    "repeated_games": [
+      "HyndmanOzbaySchotterEhrblatt2012"
+    ],
+    "learning": [
+      "HyndmanOzbaySchotterEhrblatt2012"
+    ],
+    "convergence": [
+      "HyndmanOzbaySchotterEhrblatt2012"
+    ],
+    "EWA": [
+      "HyndmanOzbaySchotterEhrblatt2012"
+    ],
+    "teaching": [
+      "HyndmanOzbaySchotterEhrblatt2012"
+    ],
+    "AI_aversion": [
+      "QinEtAl2025"
+    ],
+    "AI_appreciation": [
+      "QinEtAl2025"
+    ],
+    "capability_personalization": [
+      "QinEtAl2025"
+    ],
+    "human_AI_interaction": [
+      "QinEtAl2025"
+    ],
+    "condorcet_jury_theorem": [
+      "Condorcet1785",
+      "HaggstromKalaiMossel2004"
+    ],
+    "majority_rule": [
+      "Condorcet1785"
+    ],
+    "judgment_aggregation": [
+      "Condorcet1785",
+      "HaggstromKalaiMossel2004",
+      "ListPettit2002"
+    ],
+    "voting": [
+      "Condorcet1785"
+    ],
+    "weighted_majority": [
+      "HaggstromKalaiMossel2004"
+    ],
+    "law_of_large_numbers": [
+      "HaggstromKalaiMossel2004"
+    ],
+    "estimation_aggregation": [
+      "Galton1907"
+    ],
+    "vox_populi": [
+      "Galton1907"
+    ],
+    "book": [
+      "Surowiecki2004"
+    ],
+    "aggregation_conditions": [
+      "Surowiecki2004"
+    ],
+    "averaging_principle": [
+      "LarrickSoll2006"
+    ],
+    "bracketing": [
+      "LarrickSoll2006"
+    ],
+    "combining_opinions": [
+      "LarrickSoll2006"
+    ],
+    "functional_diversity": [
+      "HongPage2004"
+    ],
+    "problem_solving": [
+      "HongPage2004"
+    ],
+    "diversity_trumps_ability": [
+      "HongPage2004"
+    ],
+    "surprisingly_popular": [
+      "PrelecSeungMcCoy2017"
+    ],
+    "crowd_wisdom": [
+      "PrelecSeungMcCoy2017"
+    ],
+    "single_question": [
+      "PrelecSeungMcCoy2017"
+    ],
+    "prediction_of_others": [
+      "PrelecSeungMcCoy2017"
+    ],
+    "information_sharing": [
+      "SteinelUtzKoning2010"
+    ],
+    "social_motivation": [
+      "SteinelUtzKoning2010"
+    ],
+    "deception": [
+      "SteinelUtzKoning2010"
+    ],
+    "collective_intelligence_factor": [
+      "WoolleyEtAl2010"
+    ],
+    "c_factor": [
+      "WoolleyEtAl2010",
+      "EngelEtAl2014",
+      "WoolleyAggarwalMalone2015",
+      "RiedlEtAl2021"
+    ],
+    "group_performance": [
+      "WoolleyEtAl2010",
+      "WoolleyAggarwalMalone2015"
+    ],
+    "social_sensitivity": [
+      "WoolleyEtAl2010"
+    ],
+    "interpersonal_influence": [
+      "FriedkinJohnsen1990"
+    ],
+    "network": [
+      "FriedkinJohnsen1990"
+    ],
+    "informational_cascade": [
+      "BikhchandaniHirshleiferWelch1992"
+    ],
+    "herding": [
+      "BikhchandaniHirshleiferWelch1992"
+    ],
+    "sequential_decision_making": [
+      "BikhchandaniHirshleiferWelch1992"
+    ],
+    "decentralized_network": [
+      "BeckerBrackbillCentola2017"
+    ],
+    "accuracy": [
+      "BeckerBrackbillCentola2017"
+    ],
+    "aggregated_knowledge": [
+      "NavajasEtAl2018"
+    ],
+    "debate": [
+      "NavajasEtAl2018"
+    ],
+    "nested_aggregation": [
+      "NavajasEtAl2018"
+    ],
+    "partisan": [
+      "BeckerPorterCentola2019"
+    ],
+    "political_estimates": [
+      "BeckerPorterCentola2019"
+    ],
+    "LLM_assistant": [
+      "SchoeneggerEtAl2025"
+    ],
+    "human_forecasting": [
+      "SchoeneggerEtAl2025"
+    ],
+    "AI_augmentation": [
+      "SchoeneggerEtAl2025"
+    ],
+    "prediction": [
+      "SchoeneggerEtAl2025"
+    ],
+    "human_LLM_crowds": [
+      "AbelsLenaerts2025"
+    ],
+    "bias_mitigation": [
+      "AbelsLenaerts2025"
+    ],
+    "hybrid_aggregation": [
+      "AbelsLenaerts2025"
+    ],
+    "diversity": [
+      "AbelsLenaerts2025"
+    ],
+    "LLM": [
+      "ErikssonEtAl2026"
+    ],
+    "social_norms": [
+      "ErikssonEtAl2026"
+    ],
+    "public_opinion_estimation": [
+      "ErikssonEtAl2026"
+    ],
+    "crowd_within": [
+      "VulPashler2008",
+      "HerzogHertwig2009"
+    ],
+    "probabilistic_representation": [
+      "VulPashler2008"
+    ],
+    "single_individual": [
+      "VulPashler2008"
+    ],
+    "dialectical_bootstrapping": [
+      "HerzogHertwig2009"
+    ],
+    "impossibility_theorem": [
+      "ListPettit2002"
+    ],
+    "discursive_dilemma": [
+      "ListPettit2002"
+    ],
+    "select_crowds": [
+      "MannesSollLarrick2014"
+    ],
+    "aggregation": [
+      "MannesSollLarrick2014"
+    ],
+    "confidence_selection": [
+      "MannesSollLarrick2014"
+    ],
+    "boundary_conditions": [
+      "DavisStoberEtAl2014"
+    ],
+    "aggregation_theory": [
+      "DavisStoberEtAl2014"
+    ],
+    "theory_of_mind": [
+      "EngelEtAl2014"
+    ],
+    "online_teams": [
+      "EngelEtAl2014"
+    ],
+    "social_information": [
+      "JaylesEtAl2017"
+    ],
+    "estimation_accuracy": [
+      "JaylesEtAl2017"
+    ],
+    "human_groups": [
+      "JaylesEtAl2017",
+      "RiedlEtAl2021"
+    ],
+    "crowd_effect": [
+      "JaylesEtAl2017"
+    ],
+    "measurement": [
+      "RiedlEtAl2021"
+    ],
+    "network_science": [
+      "Centola2022"
     ]
   },
   "concept_groups": {
     "automation": [
       "automation_use_abuse",
       "automation_paradox",
-      "automation_bias"
+      "automation_bias",
+      "automation_augmentation_paradox"
     ],
     "human": [
       "human_factors",
       "human_computer_interaction",
       "human_machine_communication",
       "human_AI_advice",
+      "human_machine_decision",
+      "human_centered_AI",
       "human_AI_collaboration",
       "human_AI_experiment",
       "human_AI_systems",
-      "human_AI_dialogue"
+      "human_AI_dialogue",
+      "human_agent_interaction",
+      "human_AI_dyads",
+      "human_AI_decision",
+      "human_discretion",
+      "human_AI_interaction",
+      "human_forecasting",
+      "human_LLM_crowds",
+      "human_groups"
     ],
     "trust": [
       "trust_in_automation",
-      "trust_calibration"
+      "trust_calibration",
+      "trust"
     ],
     "appropriate": [
       "appropriate_reliance"
@@ -1097,7 +1848,9 @@
     "algorithm": [
       "algorithm_aversion",
       "algorithm_error",
-      "algorithm_appreciation"
+      "algorithm_appreciation",
+      "algorithm_delegation",
+      "algorithm_influence"
     ],
     "forecast": [
       "forecast_algorithm"
@@ -1106,7 +1859,9 @@
       "algorithmic_judgment",
       "algorithmic_bias",
       "algorithmic_monoculture",
-      "algorithmic_personalisation"
+      "algorithmic_personalisation",
+      "algorithmic_outrage_deficit",
+      "algorithmic_discrimination"
     ],
     "AI": [
       "AI_advice",
@@ -1116,9 +1871,31 @@
       "AI_nudges",
       "AI_resistance",
       "AI_advice_use",
+      "AI_deployment",
+      "AI_design",
+      "AI_management",
+      "AI_structure",
+      "AI_governance",
+      "AI_advice_timing",
       "AI_exposure",
       "AI_mediation",
-      "AI_mediated_communication"
+      "AI_mediated_communication",
+      "AI_delegation",
+      "AI_assistance",
+      "AI_service",
+      "AI_ethics",
+      "AI_blame",
+      "AI_crisis_decision",
+      "AI_prediction_judgment",
+      "AI_brittleness",
+      "AI_arms_influence",
+      "AI_nuclear_risk",
+      "AI_autonomy",
+      "AI_induced_responsibility",
+      "AI_human_team",
+      "AI_aversion",
+      "AI_appreciation",
+      "AI_augmentation"
     ],
     "recommender": [
       "recommender_systems",
@@ -1136,7 +1913,9 @@
       "information_homogeneity",
       "information_gathering",
       "information_foraging",
-      "information_scent"
+      "information_scent",
+      "information_provision",
+      "information_sharing"
     ],
     "next": [
       "next_generation_recommender"
@@ -1159,7 +1938,10 @@
       "self_protection",
       "self_serving_attribution",
       "self_threat",
-      "self_enhancement"
+      "self_enhancement",
+      "self_reinforcing_dynamics",
+      "self_driving_car",
+      "self_interest_bias"
     ],
     "few": [
       "few_shot_learning"
@@ -1204,7 +1986,8 @@
       "distortion_function"
     ],
     "rational": [
-      "rational_inattention"
+      "rational_inattention",
+      "rational_war"
     ],
     "entropy": [
       "entropy"
@@ -1222,18 +2005,24 @@
       "judgment_strategies",
       "judgment_biases",
       "judgment_improvement",
-      "judgment_revision"
+      "judgment_revision",
+      "judgment_aggregation"
     ],
     "decision": [
       "decision_process",
-      "decision_value"
+      "decision_value",
+      "decision_quality",
+      "decision_making_framework",
+      "decision_support"
     ],
     "confirmation": [
       "confirmation_bias"
     ],
     "belief": [
       "belief_persistence",
-      "belief_formation"
+      "belief_formation",
+      "belief_updating",
+      "belief_elicitation"
     ],
     "biased": [
       "biased_assimilation"
@@ -1264,7 +2053,12 @@
       "social_welfare",
       "social_learning",
       "social_simulation",
-      "social_behavior"
+      "social_behavior",
+      "social_exchange_motives",
+      "social_motivation",
+      "social_sensitivity",
+      "social_norms",
+      "social_information"
     ],
     "anthropomorphism": [
       "anthropomorphism"
@@ -1273,7 +2067,8 @@
       "three_factor_theory"
     ],
     "mind": [
-      "mind_attribution"
+      "mind_attribution",
+      "mind_perception"
     ],
     "individual": [
       "individual_differences",
@@ -1281,7 +2076,8 @@
     ],
     "narrative": [
       "narrative_transportation",
-      "narrative_belief"
+      "narrative_belief",
+      "narrative_persuasion"
     ],
     "persuasion": [
       "persuasion"
@@ -1325,10 +2121,14 @@
       "LLM_ecosystem",
       "LLM_simulation",
       "LLM_agents",
-      "LLM_agent_platform"
+      "LLM_agent_platform",
+      "LLM_escalation",
+      "LLM_assistant",
+      "LLM"
     ],
     "knowledge": [
-      "knowledge_building_AI"
+      "knowledge_building_AI",
+      "knowledge_importance"
     ],
     "heterogeneous": [
       "heterogeneous_priors"
@@ -1343,7 +2143,8 @@
       "ideological_diversity"
     ],
     "probabilistic": [
-      "probabilistic_reasoning_errors"
+      "probabilistic_reasoning_errors",
+      "probabilistic_representation"
     ],
     "behavioral": [
       "behavioral_econ_review",
@@ -1366,7 +2167,8 @@
       "task_dependent_algorithm_aversion"
     ],
     "simple": [
-      "simple_economics"
+      "simple_economics",
+      "simple_guilt"
     ],
     "conservatism": [
       "conservatism"
@@ -1399,7 +2201,9 @@
       "factuality"
     ],
     "prediction": [
-      "prediction_psychology"
+      "prediction_psychology",
+      "prediction_of_others",
+      "prediction"
     ],
     "intuitive": [
       "intuitive_forecast"
@@ -1467,13 +2271,18 @@
       "role_differentiation"
     ],
     "responsibility": [
-      "responsibility_sharing"
+      "responsibility_sharing",
+      "responsibility_attribution",
+      "responsibility",
+      "responsibility_gap",
+      "responsibility_avoidance"
     ],
     "weight": [
       "weight_of_advice"
     ],
     "averaging": [
-      "averaging_vs_choosing"
+      "averaging_vs_choosing",
+      "averaging_principle"
     ],
     "wisdom": [
       "wisdom_of_crowds"
@@ -1495,7 +2304,8 @@
       "achievement_motivation"
     ],
     "meta": [
-      "meta_analysis"
+      "meta_analysis",
+      "meta_synthesis"
     ],
     "positivity": [
       "positivity_bias"
@@ -1508,14 +2318,18 @@
     ],
     "perceived": [
       "perceived_control",
-      "perceived_similarity"
+      "perceived_similarity",
+      "perceived_moral_agency"
     ],
     "choice": [
-      "choice_familiarity"
+      "choice_familiarity",
+      "choice_theory"
     ],
     "control": [
       "control_heuristic",
-      "control"
+      "control",
+      "control_accountability_alignment",
+      "control_appearance"
     ],
     "intentionality": [
       "intentionality_connection"
@@ -1547,6 +2361,63 @@
     "activation": [
       "activation_integration_model"
     ],
+    "accountability": [
+      "accountability_review",
+      "accountability_effects",
+      "accountability_bias"
+    ],
+    "experimental": [
+      "experimental_research",
+      "experimental_economics",
+      "experimental_design"
+    ],
+    "systematic": [
+      "systematic_review"
+    ],
+    "blame": [
+      "blame_programmer",
+      "blame_avoidance",
+      "blame_validation",
+      "blame_diffusion",
+      "blame_allocation",
+      "blame_shift"
+    ],
+    "felt": [
+      "felt_accountability"
+    ],
+    "moral": [
+      "moral_distance",
+      "moral_license",
+      "moral_psychology",
+      "moral_psychology_AI",
+      "moral_agent",
+      "moral_patient",
+      "moral_proxy",
+      "moral_delegation",
+      "moral_judgment",
+      "moral_scapegoating",
+      "moral_opportunism",
+      "moral_outrage"
+    ],
+    "field": [
+      "field_experiment"
+    ],
+    "AMR": [
+      "AMR"
+    ],
+    "organizational": [
+      "organizational_decision_making",
+      "organizational_boundaries"
+    ],
+    "passing": [
+      "passing_the_buck"
+    ],
+    "delegation": [
+      "delegation"
+    ],
+    "diagnostic": [
+      "diagnostic_decisions"
+    ],
     "open": [
       "open_ended_generation"
     ],
@@ -1568,7 +2439,8 @@
       "collective_diversity",
       "collective_intelligence",
       "collective_learning",
-      "collective_judgment"
+      "collective_judgment",
+      "collective_intelligence_factor"
     ],
     "creative": [
       "creative_homogenization"
@@ -1583,11 +2455,13 @@
       "hidden_profile"
     ],
     "shared": [
-      "shared_information_bias"
+      "shared_information_bias",
+      "shared_control"
     ],
     "group": [
       "group_decision_making",
-      "group_segregation"
+      "group_segregation",
+      "group_performance"
     ],
     "opinion": [
       "opinion_diversity",
@@ -1605,13 +2479,16 @@
       "political_discussion",
       "political_debate",
       "political_persuasion",
-      "political_polarization"
+      "political_polarization",
+      "political_estimates"
     ],
     "network": [
       "network_modularity",
       "network_structure",
       "network_influence",
-      "network_simulation"
+      "network_simulation",
+      "network",
+      "network_science"
     ],
     "correlated": [
       "correlated_errors",
@@ -1636,16 +2513,19 @@
       "scientific_consensus"
     ],
     "bounded": [
-      "bounded_confidence"
+      "bounded_confidence",
+      "bounded_rationality"
     ],
     "agent": [
-      "agent_based_model"
+      "agent_based_model",
+      "agent_evaluator"
     ],
     "consensus": [
       "consensus"
     ],
     "search": [
-      "search_behavior"
+      "search_behavior",
+      "search"
     ],
     "silicon": [
       "silicon_sampling"
@@ -1653,10 +2533,12 @@
     "synthetic": [
       "synthetic_populations",
       "synthetic_survey_data",
-      "synthetic_participants"
+      "synthetic_participants",
+      "synthetic_foresight"
     ],
     "memory": [
-      "memory_reflection_planning"
+      "memory_reflection_planning",
+      "memory"
     ],
     "fake": [
       "fake_news"
@@ -1668,7 +2550,8 @@
       "validation"
     ],
     "bias": [
-      "bias"
+      "bias",
+      "bias_mitigation"
     ],
     "identity": [
       "identity_flattening"
@@ -1686,7 +2569,9 @@
       "replication"
     ],
     "survey": [
-      "survey_grounding"
+      "survey_grounding",
+      "survey_experiment",
+      "survey_methodology"
     ],
     "simulation": [
       "simulation_framework"
@@ -1717,7 +2602,8 @@
       "jury_ABM"
     ],
     "partisan": [
-      "partisan_bias"
+      "partisan_bias",
+      "partisan"
     ],
     "interactive": [
       "interactive_experiment"
@@ -1746,27 +2632,398 @@
     "beliefs": [
       "beliefs_and_attitudes"
     ],
-    "field": [
-      "field_experiment"
-    ],
     "binary": [
       "binary_opinion"
     ],
-    "paper2_ewa": [
-      "paper2_ewa",
-      "ai_delegation_responsibility",
-      "algorithm_aversion_appreciation",
-      "disclosure_governance",
-      "dynamic_learning_ewa",
-      "feedback_performance_incentives",
-      "human_algorithm_collaboration",
-      "motivated_beliefs",
-      "performance_information_transparency",
-      "self_interest_fairness_judgment",
-      "trust_calibration_foundations",
-      "trust_repair",
-      "trust_use_separation",
-      "untrustworthy_ai_reliance"
+    "dishonest": [
+      "dishonest_behavior"
+    ],
+    "prosocial": [
+      "prosocial_behavior"
+    ],
+    "joint": [
+      "joint_service"
+    ],
+    "artificial": [
+      "artificial_agents"
+    ],
+    "mental": [
+      "mental_state_attribution"
+    ],
+    "robots": [
+      "robots"
+    ],
+    "culpable": [
+      "culpable_control"
+    ],
+    "spontaneous": [
+      "spontaneous_evaluation"
+    ],
+    "personal": [
+      "personal_control"
+    ],
+    "severity": [
+      "severity_similarity"
+    ],
+    "path": [
+      "path_model_of_blame"
+    ],
+    "theory": [
+      "theory_of_blame",
+      "theory",
+      "theory_of_mind"
+    ],
+    "experiment": [
+      "experiment"
+    ],
+    "anchoring": [
+      "anchoring_saturation"
+    ],
+    "intention": [
+      "intention_based_reciprocity"
+    ],
+    "fairness": [
+      "fairness_equilibrium",
+      "fairness"
+    ],
+    "kindness": [
+      "kindness_function",
+      "kindness"
+    ],
+    "game": [
+      "game_theory",
+      "game_theoretic"
+    ],
+    "sequential": [
+      "sequential_reciprocity",
+      "sequential_decision_making"
+    ],
+    "extensive": [
+      "extensive_form"
+    ],
+    "reciprocity": [
+      "reciprocity_equilibrium"
+    ],
+    "guilt": [
+      "guilt_aversion",
+      "guilt_from_blame"
+    ],
+    "psychological": [
+      "psychological_games"
+    ],
+    "inequity": [
+      "inequity_aversion"
+    ],
+    "cooperation": [
+      "cooperation"
+    ],
+    "altruism": [
+      "altruism_explanation"
+    ],
+    "parochial": [
+      "parochial_altruism"
+    ],
+    "intergroup": [
+      "intergroup_conflict"
+    ],
+    "coevolution": [
+      "coevolution"
+    ],
+    "fMRI": [
+      "fMRI"
+    ],
+    "computational": [
+      "computational_modeling"
+    ],
+    "machine": [
+      "machine_learning"
+    ],
+    "ingroup": [
+      "ingroup_reciprocity"
+    ],
+    "C": [
+      "C_HMM"
+    ],
+    "security": [
+      "security_dilemma"
+    ],
+    "offense": [
+      "offense_defense_balance"
+    ],
+    "anarchy": [
+      "anarchy"
+    ],
+    "bargaining": [
+      "bargaining_model_of_war"
+    ],
+    "private": [
+      "private_information"
+    ],
+    "commitment": [
+      "commitment_problems"
+    ],
+    "national": [
+      "national_security"
+    ],
+    "military": [
+      "military_AI",
+      "military_decision"
+    ],
+    "data": [
+      "data_judgment_complements"
+    ],
+    "strategic": [
+      "strategic_stability",
+      "strategic_blame_shift"
+    ],
+    "inadvertent": [
+      "inadvertent_escalation"
+    ],
+    "nuclear": [
+      "nuclear_risk",
+      "nuclear_crisis",
+      "nuclear_first_use",
+      "nuclear_decision"
+    ],
+    "opacity": [
+      "opacity"
+    ],
+    "Posen": [
+      "Posen_framework"
+    ],
+    "leader": [
+      "leader_culpability"
+    ],
+    "war": [
+      "war_outcomes"
+    ],
+    "domestic": [
+      "domestic_punishment"
+    ],
+    "decider": [
+      "decider_dilemma"
+    ],
+    "frontier": [
+      "frontier_models"
+    ],
+    "arXiv": [
+      "arXiv"
+    ],
+    "diplomatic": [
+      "diplomatic_decision"
+    ],
+    "FAccT": [
+      "FAccT"
+    ],
+    "unpredictable": [
+      "unpredictable_escalation"
+    ],
+    "counterforce": [
+      "counterforce"
+    ],
+    "entanglement": [
+      "entanglement"
+    ],
+    "SIPRI": [
+      "SIPRI"
+    ],
+    "asymmetric": [
+      "asymmetric_deterrence"
+    ],
+    "conflict": [
+      "conflict"
+    ],
+    "genAI": [
+      "genAI_crisis"
+    ],
+    "developer": [
+      "developer_user_interdependence"
+    ],
+    "management": [
+      "management"
+    ],
+    "selfish": [
+      "selfish_choice"
+    ],
+    "legal": [
+      "legal_responsibility"
+    ],
+    "manual": [
+      "manual_mode"
+    ],
+    "actual": [
+      "actual_control"
+    ],
+    "public": [
+      "public_administration",
+      "public_evaluation",
+      "public_opinion_estimation"
+    ],
+    "outsourcing": [
+      "outsourcing"
+    ],
+    "loss": [
+      "loss_aversion"
+    ],
+    "difficult": [
+      "difficult_decision"
+    ],
+    "constrained": [
+      "constrained_implementer"
+    ],
+    "preprint": [
+      "preprint"
+    ],
+    "directed": [
+      "directed_cognition"
+    ],
+    "satisficing": [
+      "satisficing"
+    ],
+    "ambiguous": [
+      "ambiguous_evidence"
+    ],
+    "polarization": [
+      "polarization"
+    ],
+    "stories": [
+      "stories"
+    ],
+    "statistics": [
+      "statistics"
+    ],
+    "repeated": [
+      "repeated_games"
+    ],
+    "learning": [
+      "learning"
+    ],
+    "convergence": [
+      "convergence"
+    ],
+    "EWA": [
+      "EWA"
+    ],
+    "teaching": [
+      "teaching"
+    ],
+    "capability": [
+      "capability_personalization"
+    ],
+    "condorcet": [
+      "condorcet_jury_theorem"
+    ],
+    "majority": [
+      "majority_rule"
+    ],
+    "voting": [
+      "voting"
+    ],
+    "weighted": [
+      "weighted_majority"
+    ],
+    "law": [
+      "law_of_large_numbers"
+    ],
+    "estimation": [
+      "estimation_aggregation",
+      "estimation_accuracy"
+    ],
+    "vox": [
+      "vox_populi"
+    ],
+    "book": [
+      "book"
+    ],
+    "aggregation": [
+      "aggregation_conditions",
+      "aggregation",
+      "aggregation_theory"
+    ],
+    "bracketing": [
+      "bracketing"
+    ],
+    "combining": [
+      "combining_opinions"
+    ],
+    "functional": [
+      "functional_diversity"
+    ],
+    "problem": [
+      "problem_solving"
+    ],
+    "diversity": [
+      "diversity_trumps_ability",
+      "diversity"
+    ],
+    "surprisingly": [
+      "surprisingly_popular"
+    ],
+    "crowd": [
+      "crowd_wisdom",
+      "crowd_within",
+      "crowd_effect"
+    ],
+    "single": [
+      "single_question",
+      "single_individual"
+    ],
+    "deception": [
+      "deception"
+    ],
+    "c": [
+      "c_factor"
+    ],
+    "interpersonal": [
+      "interpersonal_influence"
+    ],
+    "informational": [
+      "informational_cascade"
+    ],
+    "herding": [
+      "herding"
+    ],
+    "decentralized": [
+      "decentralized_network"
+    ],
+    "accuracy": [
+      "accuracy"
+    ],
+    "aggregated": [
+      "aggregated_knowledge"
+    ],
+    "debate": [
+      "debate"
+    ],
+    "nested": [
+      "nested_aggregation"
+    ],
+    "hybrid": [
+      "hybrid_aggregation"
+    ],
+    "dialectical": [
+      "dialectical_bootstrapping"
+    ],
+    "impossibility": [
+      "impossibility_theorem"
+    ],
+    "discursive": [
+      "discursive_dilemma"
+    ],
+    "select": [
+      "select_crowds"
+    ],
+    "confidence": [
+      "confidence_selection"
+    ],
+    "boundary": [
+      "boundary_conditions"
+    ],
+    "online": [
+      "online_teams"
+    ],
+    "measurement": [
+      "measurement"
     ]
   }
 }

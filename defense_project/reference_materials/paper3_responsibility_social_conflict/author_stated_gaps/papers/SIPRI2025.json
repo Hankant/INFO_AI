@@ -1,0 +1,160 @@
+{
+  "status": "processed",
+  "bib_key": "SIPRI2025",
+  "title": "Impact of Military Artificial Intelligence on Nuclear Escalation Risk",
+  "year": "2025",
+  "doi": "10.55163/FZIW8544",
+  "domain": "ai_geopolitical_conflict",
+  "theory": "AI_nuclear_risk",
+  "source_pdf": "E:\\Info_AI\\defense_project\\reference_materials\\papers_originals\\ai_geopolitical_conflict\\SIPRI2025.pdf",
+  "model": "deepseek-v4-pro",
+  "processed_at": "2026-08-12T02:43:18+00:00",
+  "page_count": 12,
+  "chunk_count": 2,
+  "items": [
+    {
+      "category": "acknowledged_limitation_or_remaining_gap",
+      "verbatim_quote": "This paper initiates a deeper exploration of this fundamental question.",
+      "page": 2,
+      "section": "Introduction",
+      "author_claim_cn": "本文启动了对这一根本问题的更深入探索，暗示当前研究仅为初步探讨。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "future_research_direction",
+      "verbatim_quote": "Section III concludes by summarizing the findings and indicating a potential direction for future policy-oriented research aimed at addressing this risk through existing or novel risk-reduction measures.",
+      "page": 2,
+      "section": "Introduction",
+      "author_claim_cn": "作者指出第三节将总结发现并指出未来政策导向研究的潜在方向，旨在通过现有或新的风险降低措施应对这一风险。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "identified_research_gap",
+      "verbatim_quote": "Developing measures to mitigate the risk of nuclear use requires further examination of how military applications of AI can influence nuclear escalation risk in particular contexts and specific crisis scenarios.",
+      "page": 11,
+      "section": "Conclusions",
+      "author_claim_cn": "作者指出，需要进一步研究军事AI应用在特定情境和具体危机场景中如何影响核升级风险，以制定风险缓解措施。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "acknowledged_limitation_or_remaining_gap",
+      "verbatim_quote": "Assessing the effect of military AI on nuclear escalation risk is highly complex due to the potential for AI to be integrated in various systems and at various levels across the military domain. This complexity is compounded by the variety of drivers of nuclear escalation, sources of nuclear risk and the fragile balance of strategic stability.",
+      "page": 10,
+      "section": "Conclusions",
+      "author_claim_cn": "作者承认，评估军事AI对核升级风险的影响非常复杂，因为AI可能被整合到军事领域的各种系统和各个层面，且核升级的驱动因素、核风险来源和战略稳定性的脆弱平衡加剧了这种复杂性。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "future_research_direction",
+      "verbatim_quote": "Elaborating on scenarios in which AI influences nuclear escalation can help inform the adaptation of existing risk-reduction measures or the development of new ones at the AI–nuclear nexus.",
+      "page": 11,
+      "section": "Conclusions",
+      "author_claim_cn": "作者建议，详细阐述AI影响核升级的场景，有助于调整现有风险降低措施或开发AI-核交叉领域的新措施。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "future_research_direction",
+      "verbatim_quote": "These scenarios, for example, could highlight potential approaches to developing training standards for users of military AI.",
+      "page": 11,
+      "section": "Conclusions",
+      "author_claim_cn": "作者建议，这些场景可以突出制定军事AI用户培训标准的潜在方法。",
+      "target_of_critique": "",
+      "quote_verified": true
+    }
+  ],
+  "rejected_items": [
+    {
+      "reason": "quote_not_found_on_indicated_page",
+      "raw_item": {
+        "category": "identified_research_gap",
+        "verbatim_quote": "the ways in which military AI can influence the risk of nuclear escalation—even AI that is not directly integrated into nuclear systems—remain relatively underexplored.",
+        "page": 2,
+        "section": "Introduction",
+        "author_claim_cn": "军事人工智能影响核升级风险的方式——即使是未直接整合到核系统中的人工智能——仍然相对未被充分探索。",
+        "target_of_critique": ""
+      },
+      "chunk": 1,
+      "pages": "1-6"
+    },
+    {
+      "reason": "quote_not_found_on_indicated_page",
+      "raw_item": {
+        "category": "critique_of_prior_literature",
+        "verbatim_quote": "the ways in which military AI can influence the risk of nuclear escalation—even AI that is not directly integrated into nuclear systems—remain relatively underexplored.",
+        "page": 2,
+        "section": "Introduction",
+        "author_claim_cn": "作者批评现有文献对军事人工智能影响核升级风险的方式探索不足，尤其是未直接整合到核系统中的人工智能。",
+        "target_of_critique": "prior literature on military AI and nuclear escalation"
+      },
+      "chunk": 1,
+      "pages": "1-6"
+    },
+    {
+      "reason": "quote_not_found_on_indicated_page",
+      "raw_item": {
+        "category": "critique_of_prior_literature",
+        "verbatim_quote": "a 2024 study on fictional nuclear escalation scenarios found that large language models (LLMs)—a type of AI—often chose more escalatory options than human participants. This might be due to bias in training data or to the fact that AI lacks human empathy and may more readily make critical escalatory decisions as it is not subject to moral consideration or social norms, such as the nuclear use taboo. However, the lack of transparency in this system prevents understanding of why it selected the most escalatory options.",
+        "page": 7,
+        "section": "Military AI decision-support systems",
+        "author_claim_cn": "作者批评一项2024年的研究发现LLMs在核升级场景中比人类更倾向选择升级选项，指出这可能源于训练数据偏见或AI缺乏人类同理心，且系统缺乏透明度导致无法理解其选择原因。",
+        "target_of_critique": "a 2024 study on fictional nuclear escalation scenarios (Rivera et al., 2024)"
+      },
+      "chunk": 2,
+      "pages": "7-12"
+    },
+    {
+      "reason": "quote_not_found_on_indicated_page",
+      "raw_item": {
+        "category": "critique_of_prior_literature",
+        "verbatim_quote": "AI is good at solving puzzles (i.e. making sense of data and collating it in a way that makes sense for humans), but not so good at resolving mysteries (e.g. predicting intentions or national resolve).",
+        "page": 7,
+        "section": "Military AI decision-support systems",
+        "author_claim_cn": "作者批评AI在解决谜题（如整理数据）方面表现良好，但在解决奥秘（如预测意图或国家决心）方面表现不佳。",
+        "target_of_critique": "AI capabilities in predictive tasks (Goldfarb and Lindsay, 2021/22)"
+      },
+      "chunk": 2,
+      "pages": "7-12"
+    },
+    {
+      "reason": "quote_not_found_on_indicated_page",
+      "raw_item": {
+        "category": "future_research_direction",
+        "verbatim_quote": "Scenarios could also contribute to the development of additional transparency and confidence-building measures such as military hotlines and notification regimes that can help mitigate nuclear risk stemming from both AI-driven decision-support systems and the integration of AI in conventional systems with counterforce potential.",
+        "page": 11,
+        "section": "Conclusions",
+        "author_claim_cn": "作者建议，场景还可以促进额外的透明度和建立信任措施的发展，如军事热线和通知制度，以帮助减轻来自AI驱动决策支持系统和AI集成到具有反力量潜力的常规系统所带来的核风险。",
+        "target_of_critique": ""
+      },
+      "chunk": 2,
+      "pages": "7-12"
+    }
+  ],
+  "chunk_log": [
+    {
+      "chunk": 1,
+      "pages": "1-6",
+      "accepted": 2,
+      "rejected": 2,
+      "no_items_reason": ""
+    },
+    {
+      "chunk": 2,
+      "pages": "7-12",
+      "accepted": 4,
+      "rejected": 3,
+      "no_items_reason": ""
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10519,
+    "completion_tokens": 1511,
+    "total_tokens": 12030,
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 9495
+  }
+}

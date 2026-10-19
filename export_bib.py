@@ -190,7 +190,7 @@ CATEGORY_MAP = {
     "ChevrierTeixeira2024": "accountability_delegation",
     "HallFrinkBuckley2017": "accountability_delegation",
     "KirchkampStrobel2019": "accountability_delegation",
-    "KobisBonnefonRahwan2025": "accountability_delegation",
+    "Kobis2025": "accountability_delegation",
     "KrakowskiLugerRaisch2026": "accountability_delegation",
     "LernerTetlock1999": "accountability_delegation",
     "RaischKrakowski2021": "accountability_delegation",
@@ -242,6 +242,86 @@ CATEGORY_MAP = {
     "GrimmEtAl2020ODD": "simulation_validation",
     "NudoEtAl2025": "simulation_validation",
     "NeumannDeArteagaFazelpour2026": "simulation_validation",
+    # Paper 3 — Responsibility / Moral Agency (2026-08-11 batch)
+    "ZhouEtAl2026": "responsibility_moral_agency",
+    "HuangSuang2024": "responsibility_moral_agency",
+    "TokPowellGuellai2026": "responsibility_moral_agency",
+    "BonnefonRahwanShariff2024": "responsibility_moral_agency",
+    "ThellmanDeGraafZiemke2022": "responsibility_moral_agency",
+    "TangEtAl2026_MoralDelegation": "responsibility_moral_agency",
+    "Alicke2000": "responsibility_moral_agency",
+    "Burger1981": "responsibility_moral_agency",
+    "MalleGuglielmoMonroe2014": "responsibility_moral_agency",
+    "Joo2024": "responsibility_moral_agency",
+    "TsumuraYamada2026": "responsibility_moral_agency",
+    "Franklin2025": "responsibility_moral_agency",
+    # Paper 3 — Social Preferences / Intergroup Conflict (2026-08-11 batch)
+    "Rabin1993": "social_preferences_intergroup_conflict",
+    "DufwenbergKirchsteiger2004": "social_preferences_intergroup_conflict",
+    "BattigalliDufwenberg2007": "social_preferences_intergroup_conflict",
+    "FehrSchmidt1999": "social_preferences_intergroup_conflict",
+    "ChoiBowles2007": "social_preferences_intergroup_conflict",
+    "IgweEtAl2024": "social_preferences_intergroup_conflict",
+    "VanBaarEtAl2019": "social_preferences_intergroup_conflict",
+    # Paper 3 — AI / Geopolitical Conflict (2026-08-11 batch)
+    "Jervis1978": "ai_geopolitical_conflict",
+    "Fearon1995": "ai_geopolitical_conflict",
+    "HorowitzLinGreenberg2022": "ai_geopolitical_conflict",
+    "GoldfarbLindsay2022": "ai_geopolitical_conflict",
+    "Johnson2021": "ai_geopolitical_conflict",
+    "Croco2011": "ai_geopolitical_conflict",
+    "Payne2026": "ai_geopolitical_conflict",
+    "RiveraEtAl2024": "ai_geopolitical_conflict",
+    "SIPRI2025": "ai_geopolitical_conflict",
+    "Larsen2024": "ai_geopolitical_conflict",
+    "LinGreenberg2025": "ai_geopolitical_conflict",
+    "Johnson2026": "ai_geopolitical_conflict",
+    # Paper 3 — Control-Accountability Alignment / Blame Allocation (2026-08-13 batch)
+    "GroteParkerCrowston2026": "responsibility_moral_agency",
+    "AwadEtAl2020": "responsibility_moral_agency",
+    "Gill2020": "responsibility_moral_agency",
+    "BigmanEtAl2023": "responsibility_moral_agency",
+    "ArnestadEtAl2024": "responsibility_moral_agency",
+    "DongBocian2024": "responsibility_moral_agency",
+    "AlonBarkatEtAl2025": "responsibility_moral_agency",
+    "XuEtAl2026": "responsibility_moral_agency",
+    "NyilasyEtAl2026": "responsibility_moral_agency",
+    # Scattered-literature consolidation (2026-08-17 batch)
+    "GabaixEtAl2006": "information_acquisition",
+    "CaplinDeanMartin2011": "information_acquisition",
+    "FryerHarmsJackson2013": "information_acquisition",
+    "HaalandRothWohlfart2023": "information_acquisition",
+    "GraeberRothZimmermann2024": "information_acquisition",
+    "HyndmanOzbaySchotterEhrblatt2012": "information_acquisition",
+    "QinEtAl2025": "algorithm_aversion",
+    # Collective intelligence / wisdom of crowds topic (2026-09-08 batch)
+    "Condorcet1785": "collective_intelligence",
+    "HaggstromKalaiMossel2004": "collective_intelligence",
+    "Galton1907": "collective_intelligence",
+    "Surowiecki2004": "collective_intelligence",
+    "LarrickSoll2006": "collective_intelligence",
+    "HongPage2004": "collective_intelligence",
+    "PrelecSeungMcCoy2017": "collective_intelligence",
+    "SteinelUtzKoning2010": "collective_intelligence",
+    "WoolleyEtAl2010": "collective_intelligence",
+    "FriedkinJohnsen1990": "collective_intelligence",
+    "BikhchandaniHirshleiferWelch1992": "collective_intelligence",
+    "BeckerBrackbillCentola2017": "collective_intelligence",
+    "NavajasEtAl2018": "collective_intelligence",
+    "BeckerPorterCentola2019": "collective_intelligence",
+    "SchoeneggerEtAl2025": "collective_intelligence",
+    "AbelsLenaerts2025": "collective_intelligence",
+    "ErikssonEtAl2026": "collective_intelligence",
+    "VulPashler2008": "collective_intelligence",
+    "HerzogHertwig2009": "collective_intelligence",
+    "ListPettit2002": "collective_intelligence",
+    "MannesSollLarrick2014": "collective_intelligence",
+    "DavisStoberEtAl2014": "collective_intelligence",
+    "EngelEtAl2014": "collective_intelligence",
+    "WoolleyAggarwalMalone2015": "collective_intelligence",
+    "JaylesEtAl2017": "collective_intelligence",
+    "RiedlEtAl2021": "collective_intelligence",
+    "Centola2022": "collective_intelligence",
 }
 
 # Concept tags (from the user-provided summaries, plus our own tags)
@@ -372,18 +452,13 @@ CONCEPT_TAGS = {
     "PerraRocha2019": ["opinion_dynamics", "algorithmic_personalisation", "echo_chambers", "binary_opinion", "agent_based_model"],
 }
 
-for e in entries:
-    e["category"] = CATEGORY_MAP.get(e["key"], "uncategorized")
-    e["concepts"] = CONCEPT_TAGS.get(e["key"], [])
-    e["has_pdf"] = False  # filled in later
-
 # Concepts for accountability/delegation papers (2026-07-06 batch)
 CONCEPT_TAGS.update({
     "AleksovskaSchillemansGrimmelikhuijsen2019": ["accountability_review", "experimental_research", "systematic_review"],
     "ChevrierTeixeira2024": ["algorithm_delegation", "responsibility_attribution", "blame_programmer"],
     "HallFrinkBuckley2017": ["felt_accountability", "accountability_review", "meta_synthesis"],
     "KirchkampStrobel2019": ["responsibility_sharing", "human_machine_decision", "moral_distance"],
-    "KobisBonnefonRahwan2025": ["AI_delegation", "dishonest_behavior", "moral_license", "AI_assistance"],
+    "Kobis2025": ["AI_delegation", "dishonest_behavior", "moral_license", "AI_assistance"],
     "KrakowskiLugerRaisch2026": ["human_centered_AI", "field_experiment", "AI_deployment", "AI_design"],
     "LernerTetlock1999": ["accountability_effects", "accountability_bias", "decision_quality"],
     "RaischKrakowski2021": ["automation_augmentation_paradox", "AI_management", "AMR"],
@@ -392,15 +467,131 @@ CONCEPT_TAGS.update({
     "YinNgiamTanTeo2025": ["AI_advice_timing", "diagnostic_decisions", "AI_design", "human_AI_collaboration"],
 })
 
-# ---------- 3. Detect downloaded PDFs ----------
+# Paper 3 — Responsibility / Moral Agency concept tags (2026-08-11 batch)
+CONCEPT_TAGS.update({
+    "ZhouEtAl2026": ["human_agent_interaction", "meta_analysis", "trust", "prosocial_behavior", "human_AI_dyads"],
+    "HuangSuang2024": ["responsibility_attribution", "AI_service", "joint_service", "systematic_review"],
+    "TokPowellGuellai2026": ["perceived_moral_agency", "artificial_agents", "systematic_review", "moral_psychology"],
+    "BonnefonRahwanShariff2024": ["moral_psychology_AI", "moral_agent", "moral_patient", "moral_proxy", "review"],
+    "ThellmanDeGraafZiemke2022": ["mental_state_attribution", "robots", "mind_perception", "systematic_review"],
+    "TangEtAl2026_MoralDelegation": ["moral_delegation", "AI_ethics", "decision_making_framework", "agent_evaluator"],
+    "Alicke2000": ["culpable_control", "blame_validation", "spontaneous_evaluation", "personal_control"],
+    "Burger1981": ["defensive_attribution", "meta_analysis", "responsibility_attribution", "severity_similarity"],
+    "MalleGuglielmoMonroe2014": ["path_model_of_blame", "theory_of_blame", "moral_judgment", "information_processing"],
+    "Joo2024": ["moral_scapegoating", "mind_perception", "AI_blame", "experiment"],
+    "TsumuraYamada2026": ["responsibility_attribution", "knowledge_importance", "human_AI_decision", "experiment"],
+    "Franklin2025": ["responsibility_attribution", "artificial_agents", "anchoring_saturation", "blame_diffusion"],
+})
+
+# Paper 3 — Social Preferences / Intergroup Conflict concept tags (2026-08-11 batch)
+CONCEPT_TAGS.update({
+    "Rabin1993": ["intention_based_reciprocity", "fairness_equilibrium", "kindness_function", "game_theory"],
+    "DufwenbergKirchsteiger2004": ["sequential_reciprocity", "extensive_form", "reciprocity_equilibrium", "kindness"],
+    "BattigalliDufwenberg2007": ["guilt_aversion", "simple_guilt", "guilt_from_blame", "psychological_games"],
+    "FehrSchmidt1999": ["inequity_aversion", "fairness", "cooperation", "altruism_explanation"],
+    "ChoiBowles2007": ["parochial_altruism", "intergroup_conflict", "coevolution", "agent_based_model"],
+    "IgweEtAl2024": ["social_exchange_motives", "machine_learning", "ingroup_reciprocity", "C_HMM"],
+    "VanBaarEtAl2019": ["guilt_aversion", "inequity_aversion", "moral_opportunism", "fMRI", "computational_modeling"],
+})
+
+# Paper 3 — AI / Geopolitical Conflict concept tags (2026-08-11 batch)
+CONCEPT_TAGS.update({
+    "Jervis1978": ["security_dilemma", "offense_defense_balance", "cooperation", "anarchy"],
+    "Fearon1995": ["bargaining_model_of_war", "private_information", "commitment_problems", "rational_war"],
+    "HorowitzLinGreenberg2022": ["AI_crisis_decision", "national_security", "survey_experiment", "algorithm_influence"],
+    "GoldfarbLindsay2022": ["AI_prediction_judgment", "military_AI", "data_judgment_complements", "strategic_stability"],
+    "Johnson2021": ["inadvertent_escalation", "nuclear_risk", "AI_brittleness", "opacity", "Posen_framework"],
+    "Croco2011": ["leader_culpability", "war_outcomes", "domestic_punishment", "decider_dilemma"],
+    "Payne2026": ["AI_arms_influence", "frontier_models", "nuclear_crisis", "LLM_reasoning", "arXiv"],
+    "RiveraEtAl2024": ["LLM_escalation", "military_decision", "diplomatic_decision", "FAccT", "unpredictable_escalation"],
+    "SIPRI2025": ["AI_nuclear_risk", "decision_support", "counterforce", "entanglement", "SIPRI"],
+    "Larsen2024": ["nuclear_first_use", "asymmetric_deterrence", "game_theoretic", "conflict"],
+    "LinGreenberg2025": ["genAI_crisis", "synthetic_foresight", "nuclear_decision", "self_reinforcing_dynamics"],
+    "Johnson2026": ["genAI_crisis", "synthetic_foresight", "nuclear_decision", "self_reinforcing_dynamics"],
+})
+
+# Paper 3 — Control-Accountability Alignment / Blame Allocation concept tags (2026-08-13 batch)
+CONCEPT_TAGS.update({
+    "GroteParkerCrowston2026": ["control_accountability_alignment", "AI_autonomy", "developer_user_interdependence", "theory", "management"],
+    "AwadEtAl2020": ["blame_allocation", "shared_control", "human_machine_decision", "moral_psychology"],
+    "Gill2020": ["responsibility_attribution", "self_driving_car", "selfish_choice", "blame_shift", "experiment"],
+    "BigmanEtAl2023": ["algorithmic_outrage_deficit", "algorithmic_discrimination", "moral_outrage", "legal_responsibility"],
+    "ArnestadEtAl2024": ["manual_mode", "control_appearance", "actual_control", "AI_blame", "experiment"],
+    "DongBocian2024": ["responsibility_gap", "self_interest_bias", "motivated_reasoning", "strategic_blame_shift"],
+    "AlonBarkatEtAl2025": ["algorithmic_discrimination", "public_administration", "organizational_boundaries", "outsourcing"],
+    "XuEtAl2026": ["responsibility_avoidance", "AI_delegation", "loss_aversion", "public_evaluation", "difficult_decision"],
+    "NyilasyEtAl2026": ["AI_induced_responsibility", "constrained_implementer", "human_discretion", "AI_human_team", "preprint"],
+})
+
+# Scattered-literature consolidation concept tags (2026-08-17 batch)
+CONCEPT_TAGS.update({
+    "GabaixEtAl2006": ["costly_information_acquisition", "bounded_rationality", "experimental_economics", "directed_cognition"],
+    "CaplinDeanMartin2011": ["search", "satisficing", "revealed_preference", "choice_theory"],
+    "FryerHarmsJackson2013": ["belief_updating", "ambiguous_evidence", "polarization", "confirmation_bias"],
+    "HaalandRothWohlfart2023": ["information_provision", "experimental_design", "survey_methodology", "belief_elicitation"],
+    "GraeberRothZimmermann2024": ["stories", "statistics", "memory", "narrative_persuasion", "belief_formation"],
+    "HyndmanOzbaySchotterEhrblatt2012": ["repeated_games", "learning", "convergence", "EWA", "teaching"],
+    "QinEtAl2025": ["AI_aversion", "AI_appreciation", "meta_analysis", "capability_personalization", "human_AI_interaction"],
+})
+
+# Collective intelligence / wisdom of crowds topic concept tags (2026-09-08 batch)
+CONCEPT_TAGS.update({
+    "Condorcet1785": ["condorcet_jury_theorem", "majority_rule", "judgment_aggregation", "voting"],
+    "HaggstromKalaiMossel2004": ["weighted_majority", "condorcet_jury_theorem", "law_of_large_numbers", "judgment_aggregation"],
+    "Galton1907": ["wisdom_of_crowds", "estimation_aggregation", "vox_populi"],
+    "Surowiecki2004": ["wisdom_of_crowds", "book", "aggregation_conditions"],
+    "LarrickSoll2006": ["wisdom_of_crowds", "averaging_principle", "bracketing", "combining_opinions"],
+    "HongPage2004": ["functional_diversity", "problem_solving", "diversity_trumps_ability"],
+    "PrelecSeungMcCoy2017": ["surprisingly_popular", "crowd_wisdom", "single_question", "prediction_of_others"],
+    "SteinelUtzKoning2010": ["information_sharing", "hidden_profile", "social_motivation", "deception"],
+    "WoolleyEtAl2010": ["collective_intelligence_factor", "c_factor", "group_performance", "social_sensitivity"],
+    "FriedkinJohnsen1990": ["social_influence", "opinion_dynamics", "interpersonal_influence", "network"],
+    "BikhchandaniHirshleiferWelch1992": ["informational_cascade", "herding", "sequential_decision_making"],
+    "BeckerBrackbillCentola2017": ["wisdom_of_crowds", "social_influence", "decentralized_network", "accuracy"],
+    "NavajasEtAl2018": ["aggregated_knowledge", "debate", "nested_aggregation", "wisdom_of_crowds"],
+    "BeckerPorterCentola2019": ["wisdom_of_crowds", "partisan", "political_estimates", "social_influence"],
+    "SchoeneggerEtAl2025": ["LLM_assistant", "human_forecasting", "AI_augmentation", "prediction"],
+    "AbelsLenaerts2025": ["human_LLM_crowds", "bias_mitigation", "hybrid_aggregation", "diversity"],
+    "ErikssonEtAl2026": ["LLM", "social_norms", "public_opinion_estimation", "model_correlation"],
+    "VulPashler2008": ["crowd_within", "probabilistic_representation", "single_individual"],
+    "HerzogHertwig2009": ["dialectical_bootstrapping", "crowd_within", "judgment_improvement"],
+    "ListPettit2002": ["judgment_aggregation", "impossibility_theorem", "discursive_dilemma"],
+    "MannesSollLarrick2014": ["select_crowds", "aggregation", "confidence_selection"],
+    "DavisStoberEtAl2014": ["wisdom_of_crowds", "boundary_conditions", "aggregation_theory"],
+    "EngelEtAl2014": ["collective_intelligence", "theory_of_mind", "online_teams", "c_factor"],
+    "WoolleyAggarwalMalone2015": ["collective_intelligence", "group_performance", "review", "c_factor"],
+    "JaylesEtAl2017": ["social_information", "estimation_accuracy", "human_groups", "crowd_effect"],
+    "RiedlEtAl2021": ["collective_intelligence", "measurement", "c_factor", "human_groups"],
+    "Centola2022": ["network_science", "collective_intelligence", "network_structure", "review"],
+})
+
+# Assign categories and concepts AFTER all updates
+for e in entries:
+    e["category"] = CATEGORY_MAP.get(e["key"], "uncategorized")
+    e["concepts"] = CONCEPT_TAGS.get(e["key"], [])
+    e["has_pdf"] = False  # filled in later by PDF detection with header validation
+
+# ---------- 3. Detect downloaded PDFs with header validation ----------
 PAPERS_DIR = REPO / "defense_project" / "reference_materials" / "papers_originals"
+PDF_MIN_SIZE = 1024  # Minimum bytes for a valid PDF (rejects error pages)
 for pdf in PAPERS_DIR.rglob("*.pdf"):
-    key = pdf.stem  # filename without .pdf = bib key by convention
+    key = pdf.stem
+    file_size = pdf.stat().st_size
+    if file_size < PDF_MIN_SIZE:
+        continue  # too small — likely an error page, not a real PDF
+    # Verify PDF magic bytes (%PDF header)
+    try:
+        with open(pdf, "rb") as f:
+            header = f.read(4)
+        if header != b"%PDF":
+            continue  # not a valid PDF
+    except OSError:
+        continue
     for e in entries:
         if e["key"] == key:
             e["has_pdf"] = True
             e["pdf_path"] = str(pdf.relative_to(REPO))
-            e["pdf_size_kb"] = pdf.stat().st_size // 1024
+            e["pdf_size_kb"] = file_size // 1024
             break
 
 # ---------- 4. Parse .tex files for citation usage ----------
@@ -532,10 +723,14 @@ with open(KG / "categories.json", "w", encoding="utf-8") as f:
             "overconfidence_control": "Overconfidence, illusion of control, perceived control (2026-06-29 batch)",
             "algorithm_aversion": "Algorithm/AI aversion and resistance mechanisms (2026-06-29 batch)",
             "collective_intelligence_homogeneity": "LLM or algorithmic homogeneity, correlated error, collective intelligence, and human-AI experiments",
+            "collective_intelligence": "群体智慧与 Collective Intelligence：判断聚合、群体信息加工、社会影响与社会学习、概念定义与测量、人机协作（2026-09-08 batch）",
             "opinion_dynamics_abm": "Opinion dynamics, epistemic networks, social learning, and agent-based models",
             "llm_social_simulation": "LLM-based agents, synthetic populations, and large-scale social simulation",
             "simulation_validation": "Validation, representational limits, and reporting standards for LLM/agent-based simulation",
             "uncategorized": "Awaiting manual categorization",
+            "responsibility_moral_agency": "Responsibility attribution, blame, moral agency, culpable control, and AI moral delegation (Paper 3, 2026-08-11 batch)",
+            "social_preferences_intergroup_conflict": "Social preferences, reciprocity, guilt/inequity aversion, parochial altruism, and intergroup bias (Paper 3, 2026-08-11 batch)",
+            "ai_geopolitical_conflict": "Security dilemma, crisis decision-making, AI escalation, nuclear risk, and strategic stability (Paper 3, 2026-08-11 batch)",
         },
     }, f, indent=2, ensure_ascii=False)
 print(f"Wrote {KG / 'categories.json'}")

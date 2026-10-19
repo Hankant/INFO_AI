@@ -1,0 +1,62 @@
+[
+  {
+    "key": "TakayanagiEtAl2025",
+    "status": "PDF可读且题名匹配",
+    "url": "https://arxiv.org/pdf/2504.05862v2",
+    "pages": 11
+  },
+  {
+    "key": "HenningEtAl2025",
+    "status": "PDF可读且题名匹配",
+    "url": "https://arxiv.org/pdf/2502.15800v3",
+    "pages": 51
+  },
+  {
+    "key": "LiuEtAl2026SocialNetworks",
+    "status": "PDF可读且题名匹配",
+    "url": "https://arxiv.org/pdf/2607.03695v1",
+    "pages": 34
+  },
+  {
+    "key": "YangEtAl2026GeomHerd",
+    "status": "PDF可读且题名匹配",
+    "url": "https://arxiv.org/pdf/2605.11645v1",
+    "pages": 18
+  },
+  {
+    "key": "ShiHollifield2024",
+    "status": "PDF可读且题名匹配",
+    "url": "https://arxiv.org/pdf/2411.16569v1",
+    "pages": 9
+  },
+  {
+    "key": "XiaEtAl2026AgenticTrading",
+    "status": "PDF可读且题名匹配",
+    "url": "https://arxiv.org/pdf/2605.19337v2",
+    "pages": 59
+  },
+  {
+    "key": "ShapiraEtAl2024",
+    "status": "PDF可读且题名匹配",
+    "url": "https://arxiv.org/pdf/2401.17435v5",
+    "pages": 34
+  },
+  {
+    "key": "NeplenbroekEtAl2026",
+    "status": "PDF可读且题名匹配",
+    "url": "https://arxiv.org/pdf/2606.02776v5",
+    "pages": 44
+  },
+  {
+    "key": "LinEtAl2024Collusion",
+    "status": "PDF可读且题名匹配",
+    "url": "https://arxiv.org/pdf/2410.00031v2",
+    "pages": 17
+  },
+  {
+    "key": "YeeKoh2026",
+    "status": "PDF可读且题名匹配",
+    "url": "https://arxiv.org/pdf/2602.01022v3",
+    "pages": 22
+  }
+]

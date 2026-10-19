@@ -1,0 +1,205 @@
+{
+  "status": "processed",
+  "bib_key": "Joo2024",
+  "title": "It is the AI fault not mine: Mind perception increases blame attribution to AI",
+  "year": "2024",
+  "doi": "10.1371/journal.pone.0314559",
+  "domain": "responsibility_moral_agency",
+  "theory": "moral_scapegoating",
+  "source_pdf": "E:\\Info_AI\\defense_project\\reference_materials\\papers_originals\\responsibility_moral_agency\\Joo2024.pdf",
+  "model": "deepseek-v4-pro",
+  "processed_at": "2026-08-12T02:40:56+00:00",
+  "page_count": 14,
+  "chunk_count": 3,
+  "items": [
+    {
+      "category": "identified_research_gap",
+      "verbatim_quote": "Considerable scholarly attention has been paid to responsibility gap caused by accident involving autonomous vehicles (AVs), or moral dilemmas in AI decision-making [4–8]. However, comparatively little attention has been given to explicit moral transgressions instigated by AIs.",
+      "page": 2,
+      "section": "Introduction",
+      "author_claim_cn": "作者指出，现有研究多关注自动驾驶汽车事故或AI道德困境中的责任差距，但对AI引发的明确道德违规关注较少。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "identified_research_gap",
+      "verbatim_quote": "Shank et al., [23] measured mind perception in the context of AI moral transgression to examine the link between mind perception of AI and blame. They found that perceived mind in AI was linked to higher blame in AI. However, they did not manipulate the mind perception, and only included mind-perception as a covariate along with other manipulations, obscuring the clear causal path between mind perception and blame attribution.",
+      "page": 3,
+      "section": "Introduction",
+      "author_claim_cn": "作者指出，Shank等人虽测量了AI道德违规情境中的心智感知与责备的关系，但未操纵心智感知，仅将其作为协变量，未能明确心智感知与责备归因之间的因果关系。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "acknowledged_limitation_or_remaining_gap",
+      "verbatim_quote": "However, the study provides weak support for a causal relationship, as the data were correlational.",
+      "page": 6,
+      "section": "Study 1 Discussion",
+      "author_claim_cn": "作者承认，研究1的数据是相关性的，因此对因果关系的支持较弱。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "critique_of_prior_literature",
+      "verbatim_quote": "Shank et al., [23] measured mind perception in the context of AI moral transgression to examine the link between mind perception of AI and blame. They found that perceived mind in AI was linked to higher blame in AI. However, they did not manipulate the mind perception, and only included mind-perception as a covariate along with other manipulations, obscuring the clear causal path between mind perception and blame attribution.",
+      "page": 3,
+      "section": "Introduction",
+      "author_claim_cn": "作者批评Shank等人的研究未操纵心智感知，仅将其作为协变量，导致心智感知与责备归因之间的因果关系不明确。",
+      "target_of_critique": "Shank et al. (2020)",
+      "quote_verified": true
+    },
+    {
+      "category": "acknowledged_limitation_or_remaining_gap",
+      "verbatim_quote": "One limitation of Studies 1 and 2 was that only the AI was explicitly referenced as an agent within the scenario, in contrast to others (e.g., the programmer). Consequently, an alternative explanation may emerge, wherein the influence of mind perception on individuals’ tendency to attribute moral culpability to AI becomes confounded with their exclusive presence as agents within the scenario.",
+      "page": 8,
+      "section": "Discussion",
+      "author_claim_cn": "作者承认研究1和2的一个局限是只有AI被明确提及为场景中的行动者，而其他行动者（如程序员）则没有，这可能导致对AI的归因受到其作为唯一行动者的混淆。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "acknowledged_limitation_or_remaining_gap",
+      "verbatim_quote": "Despite these speculations, given the sensitivity of our results to how blame was measured, caution should be exercised in interpreting the findings.",
+      "page": 10,
+      "section": "General discussion",
+      "author_claim_cn": "作者指出，由于结果对责备测量方式敏感，在解释发现时应谨慎。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "acknowledged_limitation_or_remaining_gap",
+      "verbatim_quote": "Limitations of the current research must be acknowledged. Firstly, the stimuli utilized may not fully encompass the diverse array of scenarios found in real-world AI-related moral violations.",
+      "page": 11,
+      "section": "General discussion",
+      "author_claim_cn": "作者承认当前研究的局限：首先，使用的刺激材料可能无法完全涵盖现实世界中AI相关道德违规的多样化场景。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "acknowledged_limitation_or_remaining_gap",
+      "verbatim_quote": "Secondly, as inherent in vignette studies, there remains uncertainty regarding the extent to which participants’ judgments reflect their reactions in actual situations involving AI.",
+      "page": 11,
+      "section": "General discussion",
+      "author_claim_cn": "作者承认，作为情境研究固有的局限，参与者的判断在多大程度上反映他们在实际涉及AI的情境中的反应仍不确定。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "acknowledged_limitation_or_remaining_gap",
+      "verbatim_quote": "Also, this study focuses on blame as a cognitive process rather than as a negative affective response, such as anger or hostility.",
+      "page": 12,
+      "section": "General discussion",
+      "author_claim_cn": "作者指出，本研究关注的是作为认知过程的责备，而非愤怒或敌意等负面情感反应。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "acknowledged_limitation_or_remaining_gap",
+      "verbatim_quote": "We asked participants to distribute responsibility among various agents using a numerical scale based on previous studies [6,22]. However, this approach risks oversimplifying the complexities of the responsibility attribution process.",
+      "page": 12,
+      "section": "General discussion",
+      "author_claim_cn": "作者承认，使用数字量表让参与者在不同行动者之间分配责任可能过度简化了责任归因过程的复杂性。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "acknowledged_limitation_or_remaining_gap",
+      "verbatim_quote": "Moreover, the non-nationally representative sample used in the experiment may limit the generalizability of the findings, especially considering that online samples tend to comprise individuals with a certain level of technological literacy and comfort.",
+      "page": 12,
+      "section": "General discussion",
+      "author_claim_cn": "作者承认，实验使用的非全国代表性样本可能限制了研究结果的普遍性，尤其是在线样本往往由具有一定技术素养和舒适度的个体组成。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "future_research_direction",
+      "verbatim_quote": "Considering the increasing integration of AI into various aspects of our lives, future studies should aim to address this limitation by employing more comprehensive stimuli. For example, employing situational sampling techniques could facilitate the collection and categorization of a broader range of such incidents.",
+      "page": 11,
+      "section": "General discussion",
+      "author_claim_cn": "作者建议未来研究应采用更全面的刺激材料，例如使用情境抽样技术来收集和分类更广泛的AI道德违规事件。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "future_research_direction",
+      "verbatim_quote": "Since affective responses are often triggered by cognitive blame, future research should explore how emotional reactions fluctuate depending on mind perception.",
+      "page": 12,
+      "section": "General discussion",
+      "author_claim_cn": "作者建议未来研究应探索情绪反应如何随心智感知而波动。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "future_research_direction",
+      "verbatim_quote": "Future studies should further investigate the relationship between cognitive and affective components of blame, particularly in the context of AI moral transgressions.",
+      "page": 12,
+      "section": "General discussion",
+      "author_claim_cn": "作者建议未来研究应进一步探讨责备的认知和情感成分之间的关系，特别是在AI道德违规的背景下。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "future_research_direction",
+      "verbatim_quote": "Future studies should incorporate more comprehensive measures that capture the multidimensional nature of responsibility attribution, such as qualitative analyses of the reasons and amounts of blame assigned, as well as behavioral measures [10].",
+      "page": 12,
+      "section": "General discussion",
+      "author_claim_cn": "作者建议未来研究应采用更全面的测量方法，捕捉责任归因的多维性质，例如对责备原因和数量的定性分析以及行为测量。",
+      "target_of_critique": "",
+      "quote_verified": true
+    },
+    {
+      "category": "future_research_direction",
+      "verbatim_quote": "Therefore, future studies should strive to recruit more diverse and representative samples, such as through in-person community recruitment.",
+      "page": 12,
+      "section": "General discussion",
+      "author_claim_cn": "作者建议未来研究应努力招募更多样化和具有代表性的样本，例如通过面对面的社区招募。",
+      "target_of_critique": "",
+      "quote_verified": true
+    }
+  ],
+  "rejected_items": [
+    {
+      "reason": "quote_not_found_on_indicated_page",
+      "raw_item": {
+        "category": "future_research_direction",
+        "verbatim_quote": "Longitudinal studies or experiments conducted in naturalistic settings could provide further insights into participants’ responses to AI-related moral dilemmas.",
+        "page": 11,
+        "section": "General discussion",
+        "author_claim_cn": "作者建议进行纵向研究或在自然情境下的实验，以进一步了解参与者对AI相关道德困境的反应。",
+        "target_of_critique": ""
+      },
+      "chunk": 2,
+      "pages": "7-12"
+    }
+  ],
+  "chunk_log": [
+    {
+      "chunk": 1,
+      "pages": "1-6",
+      "accepted": 4,
+      "rejected": 0,
+      "no_items_reason": ""
+    },
+    {
+      "chunk": 2,
+      "pages": "7-12",
+      "accepted": 12,
+      "rejected": 1,
+      "no_items_reason": ""
+    },
+    {
+      "chunk": 3,
+      "pages": "13-14",
+      "accepted": 0,
+      "rejected": 0,
+      "no_items_reason": "The supplied pages (13-14) contain only author contributions, references, and publication metadata. No qualifying statements from the four categories are present."
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 15392,
+    "completion_tokens": 2230,
+    "total_tokens": 17622,
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 14880
+  }
+}
