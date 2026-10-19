@@ -1,2 +1,0 @@
-# Preserve archived source bytes so MANIFEST.json SHA256 remains valid on checkout.
-sources/*.md -text

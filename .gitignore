@@ -22,3 +22,7 @@ node_modules/
 
 # Generated presentation previews
 outputs/**/preview/
+
+# Independent experiment repository (2026-10-10)
+/projects/paper2-slot-prototype/
+/tmp/repository-split-20261010/
