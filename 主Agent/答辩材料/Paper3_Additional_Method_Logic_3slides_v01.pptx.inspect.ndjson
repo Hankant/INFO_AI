@@ -1,0 +1,99 @@
+{"kind":"deck","id":"pr/vzaeqh","name":"Deck"}
+{"kind":"layout","layoutId":"5667df56-0394-4474-aad7-d12cc480e6d0","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"6cbd3b25-2662-43c8-8bb0-8522925ea31e","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/qgwli5","slide":1,"title":"PAPER 3  ·  METHOD LOGIC","textShapes":17}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":1,"name":"eyebrow","text":"PAPER 3  ·  METHOD LOGIC","textPreview":"PAPER 3  ·  METHOD LOGIC","textChars":24,"textLines":1,"bbox":[90,74,360,24]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":1,"name":"title","text":"Why a Minimal Design?","textPreview":"Why a Minimal Design?","textChars":21,"textLines":1,"bbox":[90,116,890,64]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":1,"name":"subtitle","text":"The strategic game and AI analysis are held constant, while the responsibility architecture is varied.","textPreview":"The strategic game and AI analysis are held constant, while the responsibility architecture is varied.","textChars":102,"textLines":1,"bbox":[90,185,1030,44]}
+{"kind":"shape","id":"sh/4zidonyd","slide":1,"name":"top-rule","bbox":[90,246,1100,1.2]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":1,"name":"s1-h-0-box","bbox":[90,286,315,50]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":1,"name":"s1-h-0-text","text":"Held Constant","textPreview":"Held Constant","textChars":13,"textLines":1,"bbox":[108,300,279,26]}
+{"kind":"shape","id":"sh/fepkzupw","slide":1,"name":"s1-h-1-box","bbox":[405,286,315,50]}
+{"kind":"textbox","id":"sh/83itgfml","slide":1,"name":"s1-h-1-text","text":"Varied","textPreview":"Varied","textChars":6,"textLines":1,"bbox":[423,300,279,26]}
+{"kind":"shape","id":"sh/xobm58z2","slide":1,"name":"s1-h-2-box","bbox":[720,286,470,50]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":1,"name":"s1-h-2-text","text":"Identifies","textPreview":"Identifies","textChars":10,"textLines":1,"bbox":[738,300,434,26]}
+{"kind":"shape","id":"sh/kre1w7mp","slide":1,"name":"s1-r0-c0-box","bbox":[90,336,315,74]}
+{"kind":"textbox","id":"sh/val87ed8","slide":1,"name":"s1-r0-c0-text","text":"Same Hawk-Dove game","textPreview":"Same Hawk-Dove game","textChars":19,"textLines":1,"bbox":[108,350,279,50]}
+{"kind":"shape","id":"sh/6psfil0r","slide":1,"name":"s1-r0-c1-box","bbox":[405,336,315,74]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":1,"name":"s1-r0-c1-text","text":"Different accountability interventions","textPreview":"Different accountability interventions","textChars":38,"textLines":1,"bbox":[423,350,279,50]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":1,"name":"s1-r0-c2-box","bbox":[720,336,470,74]}
+{"kind":"textbox","id":"sh/vixczed8","slide":1,"name":"s1-r0-c2-text","text":"Responsibility architecture, not game incentives","textPreview":"Responsibility architecture, not game incentives","textChars":48,"textLines":1,"bbox":[738,350,434,50]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":1,"name":"s1-r1-c0-box","bbox":[90,410,315,74]}
+{"kind":"textbox","id":"sh/d0z61032","slide":1,"name":"s1-r1-c0-text","text":"Same AI analysis content","textPreview":"Same AI analysis content","textChars":24,"textLines":1,"bbox":[108,424,279,50]}
+{"kind":"shape","id":"sh/kf6dcbul","slide":1,"name":"s1-r1-c1-box","bbox":[405,410,315,74]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":1,"name":"s1-r1-c1-text","text":"Confirmation vs disclosure","textPreview":"Confirmation vs disclosure","textChars":26,"textLines":1,"bbox":[423,424,279,50]}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":1,"name":"s1-r1-c2-box","bbox":[720,410,470,74]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":1,"name":"s1-r1-c2-text","text":"Human passage, visibility, and responsibility sharing","textPreview":"Human passage, visibility, and responsibility sharing","textChars":53,"textLines":1,"bbox":[738,424,434,50]}
+{"kind":"shape","id":"sh/7qpg3ex0","slide":1,"name":"s1-r2-c0-box","bbox":[90,484,315,74]}
+{"kind":"textbox","id":"sh/wjudg7ad","slide":1,"name":"s1-r2-c0-text","text":"Same choices and payoff logic","textPreview":"Same choices and payoff logic","textChars":29,"textLines":1,"bbox":[108,498,279,50]}
+{"kind":"shape","id":"sh/p4r65wju","slide":1,"name":"s1-r2-c1-box","bbox":[405,484,315,74]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":1,"name":"s1-r2-c1-text","text":"Only the accountability layer changes","textPreview":"Only the accountability layer changes","textChars":37,"textLines":1,"bbox":[423,498,279,50]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":1,"name":"s1-r2-c2-box","bbox":[720,484,470,74]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":1,"name":"s1-r2-c2-text","text":"Clean identification, not AI quality or advice content","textPreview":"Clean identification, not AI quality or advice content","textChars":54,"textLines":1,"bbox":[738,498,434,50]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":1,"name":"bottom-takeaway","text":"Minimal does not mean thin: the source of variation is deliberately located in responsibility design.","textPreview":"Minimal does not mean thin: the source of variation is deliberately located in responsibility design.","textChars":101,"textLines":1,"bbox":[118,590,1040,34]}
+{"kind":"shape","id":"sh/fepkzupw","slide":1,"name":"bottom-rule","bbox":[90,648,1100,1.2]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":1,"name":"footer","text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[90,672,120,18]}
+{"kind":"notes","id":"nt/qgwli5","slide":1,"text":"This slide explains why the design is intentionally minimal. The experiment is not trying to vary the game, the payoff structure, or the quality of the AI analysis at the same time. Those are held constant. What changes is the responsibility architecture around the same decision. That is why the comparison is cleaner: if outcomes differ across conditions, the interpretation is not that one AI answer was better than another. It is that different accountability interventions changed how participants understood ownership, visibility, and responsibility."}
+{"kind":"slide","id":"sl/iub8n9","slide":2,"title":"PAPER 3  ·  METHOD LOGIC","textShapes":16}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":2,"name":"eyebrow","text":"PAPER 3  ·  METHOD LOGIC","textPreview":"PAPER 3  ·  METHOD LOGIC","textChars":24,"textLines":1,"bbox":[90,74,360,24]}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":2,"name":"title","text":"Mechanism: From System Design to Escalation","textPreview":"Mechanism: From System Design to Escalation","textChars":43,"textLines":1,"bbox":[90,116,890,64]}
+{"kind":"textbox","id":"sh/bulwval8","slide":2,"name":"subtitle","text":"AI-system interventions may change behavior by reshaping structural accountability and subjective responsibility.","textPreview":"AI-system interventions may change behavior by reshaping structural accountability and subjective responsibility.","textChars":113,"textLines":1,"bbox":[90,185,1030,44]}
+{"kind":"shape","id":"sh/032lszqt","slide":2,"name":"top-rule","bbox":[90,246,1100,1.2]}
+{"kind":"shape","id":"sh/tovahoza","slide":2,"name":"node-1","bbox":[90,304,242,182]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":2,"name":"node-1-title","text":"AI-system\nintervention","textPreview":"AI-system | intervention","textChars":22,"textLines":2,"bbox":[112,328,198,54]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":2,"name":"node-1-body","text":"confirmation\ndisclosure","textPreview":"confirmation | disclosure","textChars":23,"textLines":2,"bbox":[110,394,202,82]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":2,"name":"arrow-1","text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[340,378,30,40]}
+{"kind":"shape","id":"sh/tcj6tova","slide":2,"name":"node-2","bbox":[379,304,242,182]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":2,"name":"node-2-title","text":"Structural\naccountability","textPreview":"Structural | accountability","textChars":25,"textLines":2,"bbox":[401,328,198,54]}
+{"kind":"textbox","id":"sh/obm58z25","slide":2,"name":"node-2-body","text":"visibility\ntraceability\nattribution\nevaluability","textPreview":"visibility | traceability | attribution | evaluability","textChars":48,"textLines":4,"bbox":[399,394,202,82]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":2,"name":"arrow-2","text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[629,378,30,40]}
+{"kind":"shape","id":"sh/65wjudg7","slide":2,"name":"node-3","bbox":[668,304,242,182]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":2,"name":"node-3-title","text":"Subjective\nresponsibility","textPreview":"Subjective | responsibility","textChars":25,"textLines":2,"bbox":[690,328,198,54]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":2,"name":"node-3-body","text":"felt accountability\nownership\nresponsibility sharing","textPreview":"felt accountability | ownership | responsibility sharing","textChars":52,"textLines":3,"bbox":[688,394,202,82]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":2,"name":"arrow-3","text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[918,378,30,40]}
+{"kind":"shape","id":"sh/6xkf6dcb","slide":2,"name":"node-4","bbox":[957,304,242,182]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":2,"name":"node-4-title","text":"Escalatory\nchoice","textPreview":"Escalatory | choice","textChars":17,"textLines":2,"bbox":[979,328,198,54]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":2,"name":"node-4-body","text":"Escalate\nvs.\nRestrain","textPreview":"Escalate | vs. | Restrain","textChars":21,"textLines":3,"bbox":[977,394,202,82]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":2,"name":"mechanism-caption","text":"The mechanism claim is not that AI directly causes escalation. The claim is that system design can first reorganize accountability, and that change may travel into action.","textPreview":"The mechanism claim is not that AI directly causes escalation. The claim is that system design can first reorganize accountability, and t...","textChars":171,"textLines":1,"bbox":[130,536,1020,48]}
+{"kind":"shape","id":"sh/dg7adsji","slide":2,"name":"bottom-rule","bbox":[90,648,1100,1.2]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":2,"name":"footer","text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[90,672,120,18]}
+{"kind":"notes","id":"nt/iub8n9","slide":2,"text":"This is the mechanism slide. The paper is not saying that AI directly makes people escalate. The proposed chain is more specific. First, the system intervention changes the accountability environment. For example, disclosure changes visibility and traceability, while confirmation changes whether the human actively passes through the AI stage. Second, these structural changes may change subjective responsibility, such as felt accountability, decisional ownership, and responsibility sharing. Third, if those responsibility perceptions change, they may affect whether participants choose escalation or restraint."}
+{"kind":"slide","id":"sl/qr5007","slide":3,"title":"PAPER 3  ·  METHOD LOGIC","textShapes":20}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":3,"name":"eyebrow","text":"PAPER 3  ·  METHOD LOGIC","textPreview":"PAPER 3  ·  METHOD LOGIC","textChars":24,"textLines":1,"bbox":[90,74,360,24]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":3,"name":"title","text":"Method Map: What Each Contrast Identifies","textPreview":"Method Map: What Each Contrast Identifies","textChars":41,"textLines":1,"bbox":[90,116,890,64]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":3,"name":"subtitle","text":"Each comparison isolates a different component of AI responsibility design.","textPreview":"Each comparison isolates a different component of AI responsibility design.","textChars":75,"textLines":1,"bbox":[90,185,1030,44]}
+{"kind":"shape","id":"sh/6tovahoz","slide":3,"name":"top-rule","bbox":[90,246,1100,1.2]}
+{"kind":"shape","id":"sh/vahoza1g","slide":3,"name":"s3-h-0-box","bbox":[100,294,125,50]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":3,"name":"s3-h-0-text","text":"RQ","textPreview":"RQ","textChars":2,"textLines":1,"bbox":[118,308,89,26]}
+{"kind":"shape","id":"sh/dg7adsji","slide":3,"name":"s3-h-1-box","bbox":[225,294,410,50]}
+{"kind":"textbox","id":"sh/61032lsz","slide":3,"name":"s3-h-1-text","text":"Comparison","textPreview":"Comparison","textChars":10,"textLines":1,"bbox":[243,308,374,26]}
+{"kind":"shape","id":"sh/vmtwra5g","slide":3,"name":"s3-h-2-box","bbox":[635,294,545,50]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":3,"name":"s3-h-2-text","text":"Identifies","textPreview":"Identifies","textChars":10,"textLines":1,"bbox":[653,308,509,26]}
+{"kind":"shape","id":"sh/mhk3q5o7","slide":3,"name":"s3-r0-c0-box","bbox":[100,344,125,61]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":3,"name":"s3-r0-c0-text","text":"RQ1","textPreview":"RQ1","textChars":3,"textLines":1,"bbox":[118,358,89,37]}
+{"kind":"shape","id":"sh/4nap4r65","slide":3,"name":"s3-r0-c1-box","bbox":[225,344,410,61]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":3,"name":"s3-r0-c1-text","text":"Human-only vs AI-baseline","textPreview":"Human-only vs AI-baseline","textChars":25,"textLines":1,"bbox":[243,358,374,37]}
+{"kind":"shape","id":"sh/m58z25kb","slide":3,"name":"s3-r0-c2-box","bbox":[635,344,545,61]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":3,"name":"s3-r0-c2-text","text":"AI-supported decision environment effect","textPreview":"AI-supported decision environment effect","textChars":40,"textLines":1,"bbox":[653,358,509,37]}
+{"kind":"shape","id":"sh/4byhgn29","slide":3,"name":"s3-r1-c0-box","bbox":[100,405,125,61]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":3,"name":"s3-r1-c0-text","text":"RQ2","textPreview":"RQ2","textChars":3,"textLines":1,"bbox":[118,419,89,37]}
+{"kind":"shape","id":"sh/m1cfa9w3","slide":3,"name":"s3-r1-c1-box","bbox":[225,405,410,61]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":3,"name":"s3-r1-c1-text","text":"AI-baseline vs AI-confirm","textPreview":"AI-baseline vs AI-confirm","textChars":25,"textLines":1,"bbox":[243,419,374,37]}
+{"kind":"shape","id":"sh/jqh0fepk","slide":3,"name":"s3-r1-c2-box","bbox":[635,405,545,61]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":3,"name":"s3-r1-c2-text","text":"Human passage and decisional ownership","textPreview":"Human passage and decisional ownership","textChars":38,"textLines":1,"bbox":[653,419,509,37]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":3,"name":"s3-r2-c0-box","bbox":[100,466,125,61]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":3,"name":"s3-r2-c0-text","text":"RQ3","textPreview":"RQ3","textChars":3,"textLines":1,"bbox":[118,480,89,37]}
+{"kind":"shape","id":"sh/j2t83itg","slide":3,"name":"s3-r2-c1-box","bbox":[225,466,410,61]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":3,"name":"s3-r2-c1-text","text":"AI-baseline vs AI-disclosure","textPreview":"AI-baseline vs AI-disclosure","textChars":28,"textLines":1,"bbox":[243,480,374,37]}
+{"kind":"shape","id":"sh/18jqh0fe","slide":3,"name":"s3-r2-c2-box","bbox":[635,466,545,61]}
+{"kind":"textbox","id":"sh/ulwval87","slide":3,"name":"s3-r2-c2-text","text":"Visibility and responsibility sharing","textPreview":"Visibility and responsibility sharing","textChars":37,"textLines":1,"bbox":[653,480,509,37]}
+{"kind":"shape","id":"sh/j6tovaho","slide":3,"name":"s3-r3-c0-box","bbox":[100,527,125,61]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":3,"name":"s3-r3-c0-text","text":"RQ4","textPreview":"RQ4","textChars":3,"textLines":1,"bbox":[118,541,89,37]}
+{"kind":"shape","id":"sh/0bi9s36h","slide":3,"name":"s3-r3-c1-box","bbox":[225,527,410,61]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":3,"name":"s3-r3-c1-text","text":"Confirm vs disclosure + mechanisms","textPreview":"Confirm vs disclosure + mechanisms","textChars":34,"textLines":1,"bbox":[243,541,374,37]}
+{"kind":"shape","id":"sh/i5sneloj","slide":3,"name":"s3-r3-c2-box","bbox":[635,527,545,61]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":3,"name":"s3-r3-c2-text","text":"Whether responsibility perceptions explain escalation","textPreview":"Whether responsibility perceptions explain escalation","textChars":53,"textLines":1,"bbox":[653,541,509,37]}
+{"kind":"textbox","id":"sh/wjudg7ad","slide":3,"name":"bottom-note","text":"This keeps the method claim narrow: accountability design effects, not every possible AI role.","textPreview":"This keeps the method claim narrow: accountability design effects, not every possible AI role.","textChars":94,"textLines":1,"bbox":[118,612,1040,28]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":3,"name":"bottom-rule","bbox":[90,648,1100,1.2]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":3,"name":"footer","text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[90,672,120,18]}
+{"kind":"notes","id":"nt/qr5007","slide":3,"text":"This method map is meant to keep the identification logic very clear. RQ1 asks what changes when we move from a human-only environment to an AI-supported decision environment. RQ2 isolates the confirmation condition, which is about human passage and ownership. RQ3 isolates disclosure, which is about visibility and responsibility sharing. RQ4 then asks whether changes in responsibility perceptions are aligned with changes in escalation. This keeps the method claim narrow and defensible."}

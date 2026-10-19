@@ -7,6 +7,15 @@
 - `E:\Info_AI\主Agent\00_项目导航.md`
 - `E:\Info_AI\主Agent\01_Agent职责与成果台账.md`
 
+## 项目分区与 Git 默认规则（2026-10-10）
+
+总入口为 `E:\Info_AI\README.md`，仓库边界及同步步骤见 `E:\Info_AI\docs\REPOSITORY_MANAGEMENT.md`。
+实验工程 `projects/paper2-slot-prototype` 已拆为独立本地 Git 仓库，仍保留原路径；研究仓库忽略该目录，不能在根仓库提交实验代码。
+用户泛指“同步 Git”时优先检查、验证、提交和同步实验仓库；论文与国自然题目一、题目四按指定范围分别处理，不把研究材料与实验改动混在同一次提交中。
+实验仓库远端为 https://github.com/Hankant/paper2-slot-prototype.git（私有），main 跟踪 origin/main；不得推向研究仓库的 main。2026-10-10 已推送拆分历史，工作区未提交改动仍需另行审查和同步。详细状态以实际 Git 检查为准。
+
+会话默认（2026-09-21 用户声明）：用户说"项目进展"时，默认指 **Paper 2 的实验进展**（含研究设计线程与 `projects/paper2-slot-prototype` 工程线程），不是三篇文章的整体盘点；除非用户另行说明。
+
 ## 一、项目总结构
 
 当前项目不是单篇论文，而是围绕三篇文章与一套共享文献库、共享答辩材料展开。
@@ -74,19 +83,19 @@ Belief Formation
 | 论文 | 核心映射 | 核心机制 | 记忆点 |
 | --- | --- | --- | --- |
 | Paper 1 | evidence → belief | answer-first belief anchoring / 信息充分性感知与贝叶斯更新偏离 | Belief anchoring |
-| Paper 2 | belief / feedback → action threshold | AI-mediated reliance calibration / early AI error as calibration shock | Calibration shock |
+| Paper 2 | comparable performance evidence → comparative trust | Asymmetric Trust across Human and AI | Asymmetric Trust |
 | Paper 3 | action → responsibility | ownership dilution / responsibility sharing | Ownership dilution |
 
 统一性：
 
 - 三篇都研究 AI 如何作为 decision architecture 改变高风险人类决策。
-- 三篇共享一个过程链条：信念形成、依赖校准/行动阈值、责任归属。
+- 三篇共享一个过程链条：信念形成、来源评价与行动选择、责任归属。
 - 三篇共同回应现有文献常把 AI 效应混成总量结果，而较少区分信息路径、认知依赖路径和责任路径的问题。
 
 独立性：
 
 - 第一篇隔离 evidence-to-belief 机制。
-- 第二篇隔离 belief/feedback-to-action-threshold 机制。
+- 第二篇隔离 comparative-performance-to-source-choice 机制。
 - 第三篇隔离 action-to-responsibility 机制。
 - 三篇在任务结构、行为数据、因变量和识别策略上应明显不同，避免变成同质化 vignette experiments。
 
@@ -134,75 +143,80 @@ Paper 1“群体智慧”候选重构方向的主问题与行动约束见：
 
 注意：`defense_project/latex` 中仍有旧标题与旧表述，例如 Double Bayesian Distortion。制作 PPT 或讲稿时，应优先采用 `主Agent\文章项目\01_算法权威与信息校准\当前第一章_算法权威与信息校准_基准稿.md`，其次参考 `修改版本.md` 和上述“算法权威与信息校准”PDF 的新口径。
 
-### 第二篇：AI 授权 / EWA / 重复反馈依赖校准
+### 第二篇：Asymmetric Trust
 
 这是另一篇后续研究，不是第一篇。
 
-当前状态：
+截至 2026 年 8 月 23 日，当前优先推进的新方向为：
 
-- 旧的“重复策略信念任务 / beauty contest / repeated decision game”版本已被判断为与研究问题存在结构性错配，默认不再作为基准设计。
-- 第二篇真正要识别的核心不是高阶博弈推理本身，而是：在重复反馈中，即使 AI 与 human source 的总体表现相同，早期 AI 错误是否会引发更强、更持久的后续低依赖 / 低授权。
-- 后续版本应优先采用 repeated forecasting / judgment / social prediction with AI advice 的任务框架，而不是默认采用 beauty contest。
+- RP 构造思路：`E:\Info_AI\主Agent\文章项目\02_AI授权_EWA\研究计划构造思路_人类与AI错误的非对称权重_2026-08-23.md`
+- 项目进展说明：`E:\Info_AI\主Agent\文章项目\02_AI授权_EWA\Paper2_项目进展说明_2026-08-23.md`
+- 最新讨论总结：`E:\Info_AI\主Agent\文章项目\02_AI授权_EWA\AI_Human_Asymmetric_Error_Weighting_Discussion_Summary.md`
+- 最新评语：`E:\Info_AI\主Agent\文章项目\02_AI授权_EWA\Asymmetric_Tolerance_评语_2026-08-23.md`
+- 核心概念档案：`E:\Info_AI\主Agent\文章项目\02_AI授权_EWA\AI信任核心概念_Everett等2026_原文定义与文献来源_2026-08-22.md`
+- 导师 PPT 想法存档：`E:\Info_AI\主Agent\文章项目\02_AI授权_EWA\导师PPT_Asymmetric_Tolerance_想法存档_2026-08-18.md`
 
-当前建议题目与关键词：
+当前状态：`FRAMING AND RESEARCH-QUESTION DEVELOPMENT`。经济激励已退出 Paper 2 主线；当前核心概念为 `Asymmetric Trust`，优先确认研究问题、理论冲突与贡献边界，不展开具体 Study 架构。
 
-- Early AI Errors and Persistent Under-Reliance in Repeated Forecasting with Feedback
-- AI early errors
-- dynamic reliance calibration
-- source-specific learning
-- repeated feedback
-- reduced-form dynamic analysis
-- simplified EWA / experience-weighted reliance updating
+当前核心问题：
 
-用户偏好的 research gap：
+> Do people trust humans and AI differently under equivalent performance evidence?
 
-1. AI 错误与人类错误的不对称性。
-2. 多轮反馈或长期互动中的学习，而不是单轮 trust、advice adoption 或 calibration。
+当前理论结构：
 
-写作注意：
+1. `Asymmetric Trust` 暂定义为：可比任务绩效证据下，个体对 Human 与 AI 表现出的系统性信任差异。
+2. Human 表示人类总体来源类别，不是参与者本人，也不是必须存在的单一专家。
+3. 分开 objective task performance、perceived trustworthiness、attitudinal trust 与 trusting behaviour；不得把选择差异自动称为信任差异。
+4. “同一绩效标准”是诊断问题；`relative AI error weight lambda_A` 是候选机制；两者都不取代 `Asymmetric Trust` 的核心位置。
+5. 当前先回答差异出现在哪一层、由什么形成以及边界在哪里；函数形式和具体检验程序后置。
 
-- 不要把这篇带到金融学、行为金融学、投资决策或金融市场框架，除非用户明确要求。
-- 不要再把 beauty contest 当作默认任务骨架；除非用户明确要求保留，否则应改写为更干净的 repeated forecasting / judgment 任务。
-- 如果保留 EWA，只应保留其 attraction / weight-updating 思想，并尽量写成可估计的简化版本，而不是完整博弈学习模型。
-- 不要过度强调“责任”“高责任流程”“治理红线”等，除非明确是在写治理意义。
-- 如果实验只有约 20 轮，不要过度使用“长期锁定”或“长期稳态”。更合适的表述是“有限重复窗口”“20 轮窗口内的持续性低授权”。
-- 任务设计应尽量减少额外混淆，尤其要避免“参与者自己在学习任务结构”与“参与者在更新对 AI 的依赖”混在一起。
+当前必须遵守的术语：
 
-既有主要材料：
+- Human 与 AI 的实验表现称为 `objective aggregate human error rate` 与 `objective AI error rate`；不得直接称为 `actual trustworthiness`。
+- 参与者估计双方错误率称为 `perceived human/AI error rate`；它们是能力信念，不是信任构念。
+- Human–AI 选择称为 `source choice`；不得自动称为 trust 或 trusting behaviour。
+- `performance trust` 是独立量表构念，只用于 construct validity。
+- `relative AI error weight lambda_A` 与 `alpha=lambda_A-1` 是待识别结构参数，不是成熟 AI 信任构念。
 
-- `E:\Info_AI\outputs\真实多Agent重做版`
-- `E:\Info_AI\outputs\研究计划执行产出`
-- 当前用户修订后的项目内基准文件：
-  `E:\Info_AI\outputs\真实多Agent重做版\final\02_研究计划_当前基准版_2026-07-04.pdf`
-- 此前用户退回的旧基准附件：
-  `C:\Users\69596\.codex\attachments\90d4f461-ff0f-4214-a96b-05861a460641\pasted-text.txt`
+进入研究设计前的 framing 门：
 
-这些材料的使用边界：
+1. 确认 Asymmetric Trust 的核心结果优先落在 perceived trustworthiness、attitudinal trust，还是 trusting behaviour。
+2. 确认 trust calibration 与 algorithm aversion / appreciation 在 framing 中的主次关系。
+3. 确认绩效判断与来源依赖评价是必须区分的解释层次。
+4. 确认任务差异与 AI 特异性是当前论文的组成部分还是理论边界。
+5. 确认标题中的 theory、adoption 与 regulation 各自需要达到的证据边界；之后再讨论具体研究设计。
 
-- 新 PDF 是当前项目内基准；上述其余材料主要作为“被退回版本”和“可回收组件”的来源，而不是直接续写底稿。
-- 可保留的成分主要包括：early vs late vs distributed error 思路、AI/human performance parity、reduced-form 主分析、简化 EWA 机制检验。
-- 需要整体放弃或重写的成分主要包括：beauty contest 任务骨架、strategic belief game framing、五种复杂协作架构同时并列的设计。
+历史方向边界：
 
-注意：
-
-- 除非用户明确要求，不要继续沿用：
-  `E:\Info_AI\outputs\真实多Agent重做版\final\04_研究计划_20轮策略信念任务打磨版.md`
-- 默认也不要把 `E:\Info_AI\主Agent\文章项目\02_AI授权_EWA\README.md` 中旧版 strategic belief 口径视为现行设计；应以后续重构版本为准。
+- 早期 AI 错误、重复反馈和 EWA 路线目前暂缓，不再作为当前候选 RP 的直接设计。
+- `E:\Info_AI\outputs\真实多Agent重做版\final\02_研究计划_当前基准版_2026-07-04.pdf` 变更为历史基准。
+- Beauty contest、strategic belief game 和五种复杂协作架构继续列为已退回设计。
+- `研究计划：经济激励能否纠正 AI 非对称容忍？.md` 与 `RP_AI使用经济激励与性能信任校准_正式稿_2026-08-03.md` 均变更为历史稿；其中术语分离与参数识别审计可以回收。
 
 ### 第三篇：AIA 责任归因
 
-第三篇尚未正式展开，先保留项目空位。
+当前正式 Research Proposal 基准（用户于 2026-08-27 确认）：
 
-暂定方向：
+- `E:\Info_AI\主Agent\文章项目\03_AIA责任归因\Paper3_加入群体后的新实验推进稿_2026-08-17.md`
 
-- AIA / AI agent / AI-assisted action 中的责任归因。
-- 可能关注人在 AI 参与决策或行动后，如何归因责任、能力、意图、控制权和过错。
-- 后续需要单独确定理论框架、文献边界、实验设计和与前两篇的关系。
+当前研究围绕群体利益冲突中的 AI 决策代理、冲突升级与责任归因展开。后续修改默认在上述文件上推进；其他 proposal、实验笔记、材料地图、PPT 源稿和对话总结仅作为来源材料，不得被误称为现行基准。
 
-当前状态：
+“当前正式基准”表示项目内唯一现行 RP，仍保留 `UNVERIFIED DESIGN` 状态；不得据此声称实验已经验证、通过伦理审查或完成预注册。
 
-- 目录已预留：`E:\Info_AI\主Agent\文章项目\03_AIA责任归因`
-- 不要擅自替第三篇确定具体题目或理论主张。可以先建立问题清单和文献入口。
+### 候选 IDEA 档案：AI 错误不对称容忍与采用阈值
+
+当前入口：
+
+- `E:\Info_AI\主Agent\候选IDEA\01_AI错误不对称容忍与采用阈值\README.md`
+- 原始 PPT：`E:\Info_AI\主Agent\候选IDEA\01_AI错误不对称容忍与采用阈值\00_原始材料\Asymmetric_Tolerance_July30.pptx`
+
+当前状态与边界：
+
+- 该目录的核心模型已于 2026 年 8 月 18 日进入 Paper 2 的当前整合候选 RP。
+- 该目录继续保存导师原始 PPT、文献审计、实验草案和参数识别讨论，不单独称为 Paper 4。
+- 原 PPT 的 `asymmetric tolerance parameter α` 仍是自定义结构参数；并入 Paper 2 不等于其已成为成熟理论构念。
+- 必须继续分开：能力信念、固定来源折价 `delta`、来源依赖风险斜率 `alpha`、错误相关性、可纠正性、可追责性和一般算法来源效应。
+- 核心 AI 非替代性检验仍为 human / rules-based algorithm / AI 三方对照。若 AI 与规则算法无差异，只能报告一般算法或自动化来源效应。
 
 ## 三、共享文献库入口与边界
 
@@ -260,6 +274,14 @@ Paper 1“群体智慧”候选重构方向的主问题与行动约束见：
 - 要明确当前讲的是第几篇。
 - 讲稿要能直接开口讲。
 - 不要把讲稿写成摘要、文献综述或审稿意见。
+
+## 五〇、学术术语与表达禁令
+
+- 禁止把 Agent 临时组合的词语当作理论概念、构念、机制或变量。尤其禁止使用“规范行为线索”这类没有明确原始术语、理论定义和文献来源的表达。
+- 提出任何术语前，必须能够给出：文献使用的原始英文、来源论文、原文定义、分析层级、模型位置和经验测量。缺少其中任何一项时，不得将其写入研究问题、假设、理论模型、control 设计或论文正文。
+- 文献没有稳定概念时，直接使用普通句子描述可观察事实。例如写“AI 拒绝有害指令并解释拒绝理由”，不得自行概括为一个新的“线索”“机制”“效应”或“能力”。
+- 如果为了讨论方便必须使用临时描述，必须当场标明“这是描述性说法，不是文献构念”，并且不得沿用到正式研究材料。
+- 优先使用本领域读者能够直接理解的常用术语。生僻术语只有在原始理论确实使用、且它能区分竞争性解释时才能保留；首次出现必须用普通语言解释。
 
 ## 五、常见禁区
 

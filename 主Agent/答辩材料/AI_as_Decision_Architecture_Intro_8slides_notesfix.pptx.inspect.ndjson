@@ -1,0 +1,266 @@
+{"kind":"deck","id":"pr/39wzyo","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/2x4nap4r","slide":1,"title":"DOCTORAL PROJECT","textShapes":15}
+{"kind":"shape","id":"sh/nap4r65w","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/cvixczed","slide":1,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":1,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/udg7adsj","slide":1,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/nyd0z610","slide":1,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"name":"kicker-label","text":"DOCTORAL PROJECT","textPreview":"DOCTORAL PROJECT","textChars":16,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/54zidony","slide":1,"text":"The Puzzle That Motivates the Work","textPreview":"The Puzzle That Motivates the Work","textChars":34,"textLines":1,"bbox":[96,118,640,140]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":1,"text":"AI is entering more real decision settings, and the key question is how human judgment changes once AI becomes part of the decision process","textPreview":"AI is entering more real decision settings, and the key question is how human judgment changes once AI becomes part of the decision process","textChars":139,"textLines":1,"bbox":[96,260,620,80]}
+{"kind":"textbox","id":"sh/judg7ads","slide":1,"text":"Xu | Doctoral Project Intro | July 2026","textPreview":"Xu | Doctoral Project Intro | July 2026","textChars":39,"textLines":1,"bbox":[96,384,300,30]}
+{"kind":"shape","id":"sh/nyd0z610","slide":1,"bbox":[800,118,320,110]}
+{"kind":"shape","id":"sh/udg7adsj","slide":1,"bbox":[800,118,6,110]}
+{"kind":"textbox","id":"sh/54zidony","slide":1,"text":"REAL SETTINGS","textPreview":"REAL SETTINGS","textChars":13,"textLines":1,"bbox":[822,134,276,22]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"text":"Where AI is entering","textPreview":"Where AI is entering","textChars":20,"textLines":1,"bbox":[822,152,276,42]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":1,"text":"Crisis judgment, organizational governance, public administration, healthcare, and other high-risk settings.","textPreview":"Crisis judgment, organizational governance, public administration, healthcare, and other high-risk settings.","textChars":108,"textLines":1,"bbox":[822,198,276,22]}
+{"kind":"shape","id":"sh/upwb2hwf","slide":1,"bbox":[860,268,320,110]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":1,"bbox":[860,268,6,110]}
+{"kind":"textbox","id":"sh/cvixczed","slide":1,"text":"WHAT CHANGES","textPreview":"WHAT CHANGES","textChars":12,"textLines":1,"bbox":[882,284,276,22]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":1,"text":"Embedded decision chains","textPreview":"Embedded decision chains","textChars":24,"textLines":1,"bbox":[882,302,276,42]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":1,"text":"AI is no longer only a lab system or a stand-alone tool. It is becoming part of real organizational and institutional processes.","textPreview":"AI is no longer only a lab system or a stand-alone tool. It is becoming part of real organizational and institutional processes.","textChars":128,"textLines":1,"bbox":[882,348,276,22]}
+{"kind":"shape","id":"sh/25kb6xkf","slide":1,"bbox":[800,418,320,110]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":1,"bbox":[800,418,6,110]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":1,"text":"WHY THIS MATTERS","textPreview":"WHY THIS MATTERS","textChars":16,"textLines":1,"bbox":[822,434,276,22]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":1,"text":"Why study the human side","textPreview":"Why study the human side","textChars":24,"textLines":1,"bbox":[822,452,276,42]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":1,"text":"Once AI enters consequential decision chains, we need to understand what happens to people as they interpret, rely on, and act with AI.","textPreview":"Once AI enters consequential decision chains, we need to understand what happens to people as they interpret, rely on, and act with AI.","textChars":135,"textLines":1,"bbox":[822,498,276,22]}
+{"kind":"shape","id":"sh/0rqd4vmt","slide":1,"bbox":[960,228,60,40]}
+{"kind":"shape","id":"sh/byhgn29g","slide":1,"bbox":[960,378,60,40]}
+{"kind":"textbox","id":"sh/9knih4by","slide":1,"text":"The dissertation starts from that broader shift.","textPreview":"The dissertation starts from that broader shift.","textChars":48,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"notes","id":"nt/2x4nap4r","slide":1,"text":"Artificial intelligence is entering more and more decision-making contexts, including crisis assessment, organizational governance, public administration, medical diagnosis, judicial evaluation, and strategic interaction.\nAI is no longer just a technical system in the laboratory. It is increasingly embedded in organizational processes, public institutions, and high-stakes decision chains.\nFor this reason, AI governance cannot focus only on model performance, safety standards, and regulatory compliance.\nIt also needs to understand how AI changes human judgment, reliance, action, and responsibility."}
+{"kind":"slide","id":"sl/pg3ex0nu","slide":2,"title":"CURRENT RESEARCH","textShapes":16}
+{"kind":"shape","id":"sh/yxobm58z","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":2,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":2,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/r65wjudg","slide":2,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":2,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":2,"name":"kicker-label","text":"CURRENT RESEARCH","textPreview":"CURRENT RESEARCH","textChars":16,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":2,"text":"Existing research usually asks three separate questions","textPreview":"Existing research usually asks three separate questions","textChars":55,"textLines":1,"bbox":[96,96,700,110]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":2,"text":"Does AI improve judgment quality? Do people trust and rely on AI? How is responsibility assigned after AI-assisted decisions?","textPreview":"Does AI improve judgment quality? Do people trust and rely on AI? How is responsibility assigned after AI-assisted decisions?","textChars":125,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":2,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,258,24,58]}
+{"kind":"textbox","id":"sh/lwval87e","slide":2,"text":"The first question is whether AI improves human judgment quality or performance.","textPreview":"The first question is whether AI improves human judgment quality or performance.","textChars":80,"textLines":1,"bbox":[124,256,560,76]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":2,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,340,24,58]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":2,"text":"The second is whether people trust, adopt, or rely on AI advice.","textPreview":"The second is whether people trust, adopt, or rely on AI advice.","textChars":64,"textLines":1,"bbox":[124,338,560,76]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":2,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,422,24,58]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":2,"text":"The third is how responsibility should be allocated once AI is involved in decision-making.","textPreview":"The third is how responsibility should be allocated once AI is involved in decision-making.","textChars":91,"textLines":1,"bbox":[124,420,560,76]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":2,"bbox":[760,228,360,276]}
+{"kind":"shape","id":"sh/3itgfmlk","slide":2,"bbox":[760,228,6,276]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":2,"text":"THREE STREAMS","textPreview":"THREE STREAMS","textChars":13,"textLines":1,"bbox":[782,244,316,22]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":2,"text":"What they ask","textPreview":"What they ask","textChars":13,"textLines":1,"bbox":[782,262,316,42]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":2,"bbox":[810,290,260,42]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":2,"text":"Judgment quality","textPreview":"Judgment quality","textChars":16,"textLines":1,"bbox":[822,293,236,36]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":2,"bbox":[810,352,260,42]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":2,"text":"Trust / reliance","textPreview":"Trust / reliance","textChars":16,"textLines":1,"bbox":[822,355,236,36]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":2,"bbox":[810,414,260,42]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":2,"text":"Responsibility","textPreview":"Responsibility","textChars":14,"textLines":1,"bbox":[822,417,236,36]}
+{"kind":"textbox","id":"sh/7u54zido","slide":2,"text":"These questions are important, but they still tend to treat AI as an external tool.","textPreview":"These questions are important, but they still tend to treat AI as an external tool.","textChars":83,"textLines":1,"bbox":[96,576,1020,44]}
+{"kind":"notes","id":"nt/pg3ex0nu","slide":2,"text":"Existing research usually understands the impact of AI on human decision-making from three perspectives.\nThe first is whether AI improves judgment accuracy.\nThe second is whether people trust or adopt AI advice.\nThe third is how responsibility should be allocated when AI is involved in decision-making.\nThese questions are important, but they tend to treat AI as an external tool: AI provides information, gives advice, or creates responsibility disputes after failure."}
+{"kind":"slide","id":"sl/s72x4nap","slide":3,"title":"RESEARCH GAP","textShapes":16}
+{"kind":"shape","id":"sh/vmtwra5g","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":3,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/dsji5sne","slide":3,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":3,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/vy90je9c","slide":3,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"name":"kicker-label","text":"RESEARCH GAP","textPreview":"RESEARCH GAP","textChars":12,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"These literatures are important, but they still leave the process itself underexplained","textPreview":"These literatures are important, but they still leave the process itself underexplained","textChars":87,"textLines":1,"bbox":[96,96,760,110]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":3,"text":"They are analytically useful, but they rarely show how belief formation, reliance calibration, and responsibility unfold inside one connected decision process.","textPreview":"They are analytically useful, but they rarely show how belief formation, reliance calibration, and responsibility unfold inside one conne...","textChars":159,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"shape","id":"sh/vy90je9c","slide":3,"bbox":[96,246,428,138]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":3,"bbox":[96,246,6,138]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"Decision quality / calibration","textPreview":"Decision quality / calibration","textChars":30,"textLines":1,"bbox":[118,262,384,22]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"text":"Zhang et al., 2020; Ma et al., 2023; Vaccaro et al., 2024","textPreview":"Zhang et al., 2020; Ma et al., 2023; Vaccaro et al., 2024","textChars":57,"textLines":1,"bbox":[118,280,384,42]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":3,"text":"Research here asks whether AI improves joint judgment quality and calibration.","textPreview":"Research here asks whether AI improves joint judgment quality and calibration.","textChars":78,"textLines":1,"bbox":[118,326,384,50]}
+{"kind":"shape","id":"sh/61032lsz","slide":3,"bbox":[592,246,428,138]}
+{"kind":"shape","id":"sh/dsji5sne","slide":3,"bbox":[592,246,6,138]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":3,"text":"Trust / reliance","textPreview":"Trust / reliance","textChars":16,"textLines":1,"bbox":[614,262,384,22]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":3,"text":"Lee & See, 2004; Dietvorst et al., 2015; Logg et al., 2019","textPreview":"Lee & See, 2004; Dietvorst et al., 2015; Logg et al., 2019","textChars":58,"textLines":1,"bbox":[614,280,384,42]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":3,"text":"This stream studies appropriate reliance, algorithm aversion, and algorithm appreciation.","textPreview":"This stream studies appropriate reliance, algorithm aversion, and algorithm appreciation.","textChars":89,"textLines":1,"bbox":[614,326,384,50]}
+{"kind":"shape","id":"sh/epkzupwb","slide":3,"bbox":[96,420,428,138]}
+{"kind":"shape","id":"sh/7adsji5s","slide":3,"bbox":[96,420,6,138]}
+{"kind":"textbox","id":"sh/wval87ed","slide":3,"text":"Responsibility / ownership","textPreview":"Responsibility / ownership","textChars":26,"textLines":1,"bbox":[118,436,384,22]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":3,"text":"Kirchkamp & Strobel, 2019; Kobis et al., 2025; Chevrier & Teixeira, 2024","textPreview":"Kirchkamp & Strobel, 2019; Kobis et al., 2025; Chevrier & Teixeira, 2024","textChars":72,"textLines":1,"bbox":[118,454,384,42]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":3,"text":"This stream asks how responsibility is shared or reassigned after AI-assisted action.","textPreview":"This stream asks how responsibility is shared or reassigned after AI-assisted action.","textChars":85,"textLines":1,"bbox":[118,500,384,50]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":3,"bbox":[592,420,428,138]}
+{"kind":"shape","id":"sh/w7mp0bi9","slide":3,"bbox":[592,420,6,138]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":3,"text":"What is still missing","textPreview":"What is still missing","textChars":21,"textLines":1,"bbox":[614,436,384,22]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":3,"text":"Kidd & Birhane, 2023; Harvey & Fischer, 1997; Lee & See, 2004","textPreview":"Kidd & Birhane, 2023; Harvey & Fischer, 1997; Lee & See, 2004","textChars":61,"textLines":1,"bbox":[614,454,384,42]}
+{"kind":"textbox","id":"sh/7u54zido","slide":3,"text":"What is still missing is a process-level account of how these stages connect.","textPreview":"What is still missing is a process-level account of how these stages connect.","textChars":77,"textLines":1,"bbox":[614,500,384,50]}
+{"kind":"notes","id":"nt/s72x4nap","slide":3,"text":"A large body of research still treats AI as an extension of traditional algorithms, and continues to use frameworks such as algorithm aversion, algorithm appreciation, or advice-taking to explain human-AI interaction.\nThis is exactly the gap summarized on this slide: these streams are important, but they still leave the process itself underexplained."}
+{"kind":"slide","id":"sl/val87ed8","slide":4,"title":"WHY GENERATIVE AI","textShapes":15}
+{"kind":"shape","id":"sh/1gvy90je","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":4,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/je9cvixc","slide":4,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/87ed8bat","slide":4,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/xs72x4na","slide":4,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":4,"name":"kicker-label","text":"WHY GENERATIVE AI","textPreview":"WHY GENERATIVE AI","textChars":17,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":4,"text":"People increasingly treat AI as a source of judgment, not just a tool","textPreview":"People increasingly treat AI as a source of judgment, not just a tool","textChars":69,"textLines":1,"bbox":[96,96,760,110]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":4,"text":"In these interactions, AI does not simply give an answer. It shapes how people understand the problem itself.","textPreview":"In these interactions, AI does not simply give an answer. It shapes how people understand the problem itself.","textChars":109,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":4,"text":"Using AI as a tool","textPreview":"Using AI as a tool","textChars":18,"textLines":1,"bbox":[120,220,280,32]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":4,"text":"Using AI as a judgment source","textPreview":"Using AI as a judgment source","textChars":29,"textLines":1,"bbox":[690,220,320,32]}
+{"kind":"shape","id":"sh/jqh0fepk","slide":4,"bbox":[120,268,320,66]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":4,"bbox":[120,268,6,66]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":4,"text":"Search, calculate,\nor automate","textPreview":"Search, calculate, | or automate","textChars":30,"textLines":2,"bbox":[142,286,276,42]}
+{"kind":"shape","id":"sh/8nqxs72x","slide":4,"bbox":[120,360,320,66]}
+{"kind":"shape","id":"sh/j2t83itg","slide":4,"bbox":[120,360,6,66]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":4,"text":"Interpret the\nresult yourself","textPreview":"Interpret the | result yourself","textChars":29,"textLines":2,"bbox":[142,378,276,42]}
+{"kind":"shape","id":"sh/1cfa9w3m","slide":4,"bbox":[120,452,320,66]}
+{"kind":"shape","id":"sh/crmhk3q5","slide":4,"bbox":[120,452,6,66]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":4,"text":"The tool stays\noutside the judgment","textPreview":"The tool stays | outside the judgment","textChars":35,"textLines":2,"bbox":[142,470,276,42]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":4,"bbox":[690,268,360,66]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":4,"bbox":[690,268,6,66]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":4,"text":"Consult, discuss,\nor confirm","textPreview":"Consult, discuss, | or confirm","textChars":28,"textLines":2,"bbox":[712,286,316,42]}
+{"kind":"shape","id":"sh/orytsvu9","slide":4,"bbox":[690,360,360,66]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":4,"bbox":[690,360,6,66]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":4,"text":"Use AI to interpret\ncomplex situations","textPreview":"Use AI to interpret | complex situations","textChars":38,"textLines":2,"bbox":[712,378,316,42]}
+{"kind":"shape","id":"sh/z61032ls","slide":4,"bbox":[690,452,360,66]}
+{"kind":"shape","id":"sh/oza1gvy9","slide":4,"bbox":[690,452,6,66]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":4,"text":"Rely on its explanation\nand framing","textPreview":"Rely on its explanation | and framing","textChars":35,"textLines":2,"bbox":[712,470,316,42]}
+{"kind":"shape","id":"sh/0z61032l","slide":4,"bbox":[280,334,0,26]}
+{"kind":"shape","id":"sh/pkzupwb2","slide":4,"bbox":[280,426,0,26]}
+{"kind":"shape","id":"sh/je9cvixc","slide":4,"bbox":[870,334,0,26]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":4,"bbox":[870,426,0,26]}
+{"kind":"shape","id":"sh/7adsji5s","slide":4,"bbox":[442,322,182,120]}
+{"kind":"shape","id":"sh/epkzupwb","slide":4,"bbox":[442,322,6,120]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":4,"text":"SHIFT","textPreview":"SHIFT","textChars":5,"textLines":1,"bbox":[464,338,138,22]}
+{"kind":"textbox","id":"sh/wval87ed","slide":4,"text":"From tool use\nto judgment\ninteraction","textPreview":"From tool use | to judgment | interaction","textChars":37,"textLines":3,"bbox":[464,356,138,42]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":4,"text":"More and more users do not use AI only to search, calculate, or automate. They consult it, discuss with it, confirm with it, and sometimes rely on it.","textPreview":"More and more users do not use AI only to search, calculate, or automate. They consult it, discuss with it, confirm with it, and sometime...","textChars":150,"textLines":1,"bbox":[96,590,1060,44]}
+{"kind":"notes","id":"nt/val87ed8","slide":4,"text":"However, AI, especially large language models, has shown forms of human-AI interaction that are different from traditional algorithms.\nMore and more people no longer use AI only as a search engine, calculator, or automation tool.\nInstead, they treat it as a source of judgment that they can consult, discuss with, confirm with, and even rely on.\nPeople ask AI about career choices, emotional problems, medical risks, investment decisions, academic writing, legal documents, organizational management plans, and even social events or institutional rules that they do not fully understand.\nIn these interactions, AI is not simply giving an answer. It also shapes how users understand the problem itself through language style, explanatory structure, emotional response, and narrative framing."}
+{"kind":"slide","id":"sl/mlkjm1cf","slide":5,"title":"WHY LLMs FEEL DIFFERENT","textShapes":16}
+{"kind":"shape","id":"sh/vahoza1g","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ovahoza1","slide":5,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/dg7adsji","slide":5,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":5,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":5,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":5,"name":"kicker-label","text":"WHY LLMs FEEL DIFFERENT","textPreview":"WHY LLMs FEEL DIFFERENT","textChars":23,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":5,"text":"Large language models change interaction through language, explanation, and narrative","textPreview":"Large language models change interaction through language, explanation, and narrative","textChars":85,"textLines":1,"bbox":[96,96,700,110]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":5,"text":"Their Transformer architecture supports contextual integration, and later tuning makes them able to explain, respond, and interact continuously with users.","textPreview":"Their Transformer architecture supports contextual integration, and later tuning makes them able to explain, respond, and interact contin...","textChars":155,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":5,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,258,24,58]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":5,"text":"This means the difference is not only more accurate output.","textPreview":"This means the difference is not only more accurate output.","textChars":59,"textLines":1,"bbox":[124,256,560,76]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":5,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,340,24,58]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":5,"text":"The form of output and the mode of interaction also change.","textPreview":"The form of output and the mode of interaction also change.","textChars":59,"textLines":1,"bbox":[124,338,560,76]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":5,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,422,24,58]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":5,"text":"LLMs enter the cognitive process through natural language, explanation, and narrative framing.","textPreview":"LLMs enter the cognitive process through natural language, explanation, and narrative framing.","textChars":94,"textLines":1,"bbox":[124,420,560,76]}
+{"kind":"shape","id":"sh/58z25kb6","slide":5,"bbox":[760,228,360,276]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":5,"bbox":[760,228,6,276]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":5,"text":"WHAT THIS ENABLES","textPreview":"WHAT THIS ENABLES","textChars":17,"textLines":1,"bbox":[782,244,316,22]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":5,"text":"Why it matters","textPreview":"Why it matters","textChars":14,"textLines":1,"bbox":[782,262,316,42]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":5,"bbox":[810,290,260,42]}
+{"kind":"textbox","id":"sh/vixczed8","slide":5,"text":"Context integration","textPreview":"Context integration","textChars":19,"textLines":1,"bbox":[822,293,236,36]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":5,"bbox":[810,352,260,42]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":5,"text":"Continuous explanation","textPreview":"Continuous explanation","textChars":22,"textLines":1,"bbox":[822,355,236,36]}
+{"kind":"shape","id":"sh/6psfil0r","slide":5,"bbox":[810,414,260,42]}
+{"kind":"textbox","id":"sh/val87ed8","slide":5,"text":"Narrative influence","textPreview":"Narrative influence","textChars":19,"textLines":1,"bbox":[822,417,236,36]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":5,"text":"That is why people can be influenced not only by answers, but by the way answers are framed.","textPreview":"That is why people can be influenced not only by answers, but by the way answers are framed.","textChars":92,"textLines":1,"bbox":[96,576,1020,44]}
+{"kind":"notes","id":"nt/mlkjm1cf","slide":5,"text":"This change is closely related to the technical foundation and interaction form of large language models.\nLarge language models are not simply larger versions of traditional algorithms.\nTheir underlying Transformer architecture is based on the self-attention mechanism, which allows the model to integrate contextual information when generating text and supports large-scale language pretraining.\nOn this basis, the model learns semantic relations, expression patterns, and contextual structures from massive text data.\nAfter instruction tuning and human feedback fine-tuning, it becomes a language system that can follow instructions, generate explanations, and interact continuously with users."}
+{"kind":"slide","id":"sl/58z25kb6","slide":6,"title":"SHARED PROCESS","textShapes":31}
+{"kind":"shape","id":"sh/9cvixcze","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":6,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/r65wjudg","slide":6,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":6,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":6,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":6,"name":"kicker-label","text":"SHARED PROCESS","textPreview":"SHARED PROCESS","textChars":14,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":6,"text":"The key question is how AI reorganizes the decision-making process itself","textPreview":"The key question is how AI reorganizes the decision-making process itself","textChars":73,"textLines":1,"bbox":[96,96,860,110]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":6,"text":"Belief Formation -> Risk Appraisal / Reliance Calibration -> Responsibility","textPreview":"Belief Formation -> Risk Appraisal / Reliance Calibration -> Responsibility","textChars":75,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":6,"bbox":[96,238,330,342]}
+{"kind":"shape","id":"sh/onyd0z61","slide":6,"bbox":[96,238,6,342]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":6,"text":"STAGE 1","textPreview":"STAGE 1","textChars":7,"textLines":1,"bbox":[118,254,286,22]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":6,"text":"Belief formation","textPreview":"Belief formation","textChars":16,"textLines":1,"bbox":[118,272,286,42]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":6,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[116,314,24,56]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":6,"text":"information -> belief","textPreview":"information -> belief","textChars":21,"textLines":1,"bbox":[144,312,260,74]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":6,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[116,386,24,56]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":6,"text":"How is information presented and interpreted before people form a judgment?","textPreview":"How is information presented and interpreted before people form a judgment?","textChars":75,"textLines":1,"bbox":[144,384,260,74]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":6,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[116,458,24,56]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":6,"text":"AI can shape what feels sufficient, relevant, or already processed.","textPreview":"AI can shape what feels sufficient, relevant, or already processed.","textChars":67,"textLines":1,"bbox":[144,456,260,74]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":6,"text":"This is where beliefs are formed.","textPreview":"This is where beliefs are formed.","textChars":33,"textLines":1,"bbox":[116,526,286,44]}
+{"kind":"shape","id":"sh/94fu18jq","slide":6,"bbox":[460,238,330,342]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":6,"bbox":[460,238,6,342]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":6,"text":"STAGE 2","textPreview":"STAGE 2","textChars":7,"textLines":1,"bbox":[482,254,286,22]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":6,"text":"Reliance /\naction","textPreview":"Reliance / | action","textChars":17,"textLines":2,"bbox":[482,272,286,42]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":6,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[480,314,24,56]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":6,"text":"belief / feedback\n-> action","textPreview":"belief / feedback | -> action","textChars":27,"textLines":2,"bbox":[508,312,260,74]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":6,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[480,386,24,56]}
+{"kind":"textbox","id":"sh/kzupwb2h","slide":6,"text":"How are cognitive burden, risk perception, and action thresholds adjusted?","textPreview":"How are cognitive burden, risk perception, and action thresholds adjusted?","textChars":74,"textLines":1,"bbox":[508,384,260,74]}
+{"kind":"textbox","id":"sh/9knih4by","slide":6,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[480,458,24,56]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":6,"text":"People may rely, defer, or act differently once AI enters the process.","textPreview":"People may rely, defer, or act differently once AI enters the process.","textChars":70,"textLines":1,"bbox":[508,456,260,74]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":6,"text":"This is where reliance and action are recalibrated.","textPreview":"This is where reliance and action are recalibrated.","textChars":51,"textLines":1,"bbox":[480,526,286,44]}
+{"kind":"shape","id":"sh/xczed8v6","slide":6,"bbox":[824,238,330,342]}
+{"kind":"shape","id":"sh/8v6psfil","slide":6,"bbox":[824,238,6,342]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":6,"text":"STAGE 3","textPreview":"STAGE 3","textChars":7,"textLines":1,"bbox":[846,254,286,22]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":6,"text":"Responsibility","textPreview":"Responsibility","textChars":14,"textLines":1,"bbox":[846,272,286,42]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":6,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[844,314,24,56]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":6,"text":"action -> consequence","textPreview":"action -> consequence","textChars":21,"textLines":1,"bbox":[872,312,260,74]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":6,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[844,386,24,56]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":6,"text":"How are decision authority, ownership, and consequences understood after action?","textPreview":"How are decision authority, ownership, and consequences understood after action?","textChars":80,"textLines":1,"bbox":[872,384,260,74]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":6,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[844,458,24,56]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":6,"text":"AI can also reshape how responsibility is assigned once outcomes occur.","textPreview":"AI can also reshape how responsibility is assigned once outcomes occur.","textChars":71,"textLines":1,"bbox":[872,456,260,74]}
+{"kind":"textbox","id":"sh/obm58z25","slide":6,"text":"This is where responsibility is interpreted.","textPreview":"This is where responsibility is interpreted.","textChars":44,"textLines":1,"bbox":[844,526,286,44]}
+{"kind":"notes","id":"nt/58z25kb6","slide":6,"text":"Therefore, the difference between LLMs and traditional algorithms is not only that they may produce more accurate outputs.\nThe form of output and the mode of interaction have changed.\nTraditional algorithms usually influence decisions through scores, probabilities, recommendation lists, or classification labels.\nLLMs, by contrast, enter the human cognitive process through natural language.\nThey can organize complex situations through narrative, reduce uncertainty through explanation, and change risk perception through reassuring or authoritative language.\nIn this way, they influence how people form beliefs, calibrate reliance, and take action.\nIn this sense, the impact of AI on human decision-making should not be understood only as whether people adopt AI advice.\nIt should be understood as how AI reorganizes the decision-making process itself.\nWhen AI can search for information, summarize evidence, explain risks, generate reasons, provide advice, confirm judgments, and participate in responsibility allocation, it is no longer just an external input in the decision chain.\nIt begins to change the structural conditions of the decision environment: how information is presented, how cognitive burden is distributed, how action thresholds are adjusted, how decision authority is transferred, and how responsibility is understood."}
+{"kind":"slide","id":"sl/0z61032l","slide":7,"title":"DECISION ARCHITECTURE","textShapes":16}
+{"kind":"shape","id":"sh/qd4vmtwr","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":7,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":7,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/fa9w3m94","slide":7,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/qpg3ex0n","slide":7,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":7,"name":"kicker-label","text":"DECISION ARCHITECTURE","textPreview":"DECISION ARCHITECTURE","textChars":21,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":7,"text":"This dissertation narrows the broader problem into AI as decision architecture","textPreview":"This dissertation narrows the broader problem into AI as decision architecture","textChars":78,"textLines":1,"bbox":[96,96,760,110]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":7,"text":"Decision architecture is used here as an integrative framework, not as a fully settled theory.","textPreview":"Decision architecture is used here as an integrative framework, not as a fully settled theory.","textChars":94,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"shape","id":"sh/svu9knih","slide":7,"bbox":[96,246,428,138]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":7,"bbox":[96,246,6,138]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":7,"text":"INFORMATION FLOW","textPreview":"INFORMATION FLOW","textChars":16,"textLines":1,"bbox":[118,262,384,22]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":7,"text":"What reaches the person","textPreview":"What reaches the person","textChars":23,"textLines":1,"bbox":[118,280,384,42]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":7,"text":"AI can reorder evidence, summary, explanation, and verification.","textPreview":"AI can reorder evidence, summary, explanation, and verification.","textChars":64,"textLines":1,"bbox":[118,326,384,50]}
+{"kind":"shape","id":"sh/hoza1gvy","slide":7,"bbox":[592,246,428,138]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":7,"bbox":[592,246,6,138]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":7,"text":"COGNITIVE BURDEN","textPreview":"COGNITIVE BURDEN","textChars":16,"textLines":1,"bbox":[614,262,384,22]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":7,"text":"What must be processed","textPreview":"What must be processed","textChars":22,"textLines":1,"bbox":[614,280,384,42]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":7,"text":"It changes what people feel they need to inspect, infer, or own themselves.","textPreview":"It changes what people feel they need to inspect, infer, or own themselves.","textChars":75,"textLines":1,"bbox":[614,326,384,50]}
+{"kind":"shape","id":"sh/pg3ex0nu","slide":7,"bbox":[96,420,428,138]}
+{"kind":"shape","id":"sh/wval87ed","slide":7,"bbox":[96,420,6,138]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":7,"text":"ACTION THRESHOLDS","textPreview":"ACTION THRESHOLDS","textChars":17,"textLines":1,"bbox":[118,436,384,22]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":7,"text":"When action is triggered","textPreview":"When action is triggered","textChars":24,"textLines":1,"bbox":[118,454,384,42]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":7,"text":"It recalibrates reliance, delegation, and the point at which people act.","textPreview":"It recalibrates reliance, delegation, and the point at which people act.","textChars":72,"textLines":1,"bbox":[118,500,384,50]}
+{"kind":"shape","id":"sh/w7mp0bi9","slide":7,"bbox":[592,420,428,138]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":7,"bbox":[592,420,6,138]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":7,"text":"RESPONSIBILITY RELATIONS","textPreview":"RESPONSIBILITY RELATIONS","textChars":24,"textLines":1,"bbox":[614,436,384,22]}
+{"kind":"textbox","id":"sh/l0rqd4vm","slide":7,"text":"Who bears consequences","textPreview":"Who bears consequences","textChars":22,"textLines":1,"bbox":[614,454,384,42]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":7,"text":"It reshapes ownership, accountability, and responsibility sharing after action.","textPreview":"It reshapes ownership, accountability, and responsibility sharing after action.","textChars":79,"textLines":1,"bbox":[614,500,384,50]}
+{"kind":"notes","id":"nt/0z61032l","slide":7,"text":"Therefore, this dissertation uses decision architecture as an integrative analytical framework.\nHere, decision architecture is not understood as a fully mature theory with fixed boundaries.\nRather, it is used to describe how a decision environment organizes information flow, cognitive burden, action thresholds, decision authority, and responsibility relations.\nTraditional choice architecture mainly focuses on defaults, framing, feedback, complexity management, and incentive design.\nBut AI systems are different.\nThey do not only rearrange how choices are presented.\nThey can also search, summarize, explain, recommend, confirm, execute, record, and participate in responsibility allocation.\nIn the context of AI, decision architecture is therefore no longer only about how choices are presented.\nIt is also about how beliefs are formed, how risks are evaluated, and how the consequences of action are attributed."}
+{"kind":"slide","id":"sl/fu18jqh0","slide":8,"title":"PAPER MAP","textShapes":16}
+{"kind":"shape","id":"sh/1032lszq","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/u9knih4b","slide":8,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/judg7ads","slide":8,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/c7u54zid","slide":8,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/1orytsvu","slide":8,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":8,"name":"kicker-label","text":"PAPER MAP","textPreview":"PAPER MAP","textChars":9,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":8,"text":"The three papers isolate different mappings within the same decision process","textPreview":"The three papers isolate different mappings within the same decision process","textChars":76,"textLines":1,"bbox":[96,96,760,110]}
+{"kind":"textbox","id":"sh/cvixczed","slide":8,"text":"Unity comes from one process; independence comes from different mechanisms, tasks, and outcomes.","textPreview":"Unity comes from one process; independence comes from different mechanisms, tasks, and outcomes.","textChars":96,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"shape","id":"sh/18jqh0fe","slide":8,"bbox":[96,246,428,138]}
+{"kind":"shape","id":"sh/8nqxs72x","slide":8,"bbox":[96,246,6,138]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":8,"text":"PAPER 1","textPreview":"PAPER 1","textChars":7,"textLines":1,"bbox":[118,262,384,22]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":8,"text":"evidence -> belief","textPreview":"evidence -> belief","textChars":18,"textLines":1,"bbox":[118,280,384,42]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":8,"text":"How answer-first AI changes evidence search, Bayesian updating, and subjective mastery.","textPreview":"How answer-first AI changes evidence search, Bayesian updating, and subjective mastery.","textChars":87,"textLines":1,"bbox":[118,326,384,50]}
+{"kind":"shape","id":"sh/8bat47y1","slide":8,"bbox":[592,246,428,138]}
+{"kind":"shape","id":"sh/jqh0fepk","slide":8,"bbox":[592,246,6,138]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":8,"text":"PAPER 2","textPreview":"PAPER 2","textChars":7,"textLines":1,"bbox":[614,262,384,22]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":8,"text":"belief / feedback\n-> action threshold","textPreview":"belief / feedback | -> action threshold","textChars":37,"textLines":2,"bbox":[614,280,384,42]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":8,"text":"How early AI error recalibrates reliance under repeated feedback.","textPreview":"How early AI error recalibrates reliance under repeated feedback.","textChars":65,"textLines":1,"bbox":[614,326,384,50]}
+{"kind":"shape","id":"sh/orytsvu9","slide":8,"bbox":[96,420,428,138]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":8,"bbox":[96,420,6,138]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":8,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[118,436,384,22]}
+{"kind":"textbox","id":"sh/z61032ls","slide":8,"text":"action -> responsibility","textPreview":"action -> responsibility","textChars":24,"textLines":1,"bbox":[118,454,384,42]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":8,"text":"How AI-assisted action redistributes ownership and responsibility attribution.","textPreview":"How AI-assisted action redistributes ownership and responsibility attribution.","textChars":78,"textLines":1,"bbox":[118,500,384,50]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":8,"bbox":[592,420,428,138]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":8,"bbox":[592,420,6,138]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":8,"text":"NEXT","textPreview":"NEXT","textChars":4,"textLines":1,"bbox":[614,436,384,22]}
+{"kind":"textbox","id":"sh/obm58z25","slide":8,"text":"Why begin with Paper 1","textPreview":"Why begin with Paper 1","textChars":22,"textLines":1,"bbox":[614,454,384,42]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":8,"text":"Later reliance and responsibility rest on a belief base AI may already have reshaped.","textPreview":"Later reliance and responsibility rest on a belief base AI may already have reshaped.","textChars":85,"textLines":1,"bbox":[614,500,384,50]}
+{"kind":"notes","id":"nt/fu18jqh0","slide":8,"text":"In the current era, AI governance must be more closely connected with behavioral science.\nThe core object of AI governance is not only the model itself, but the human-AI decision system that emerges when AI is embedded in organizations, institutions, and high-risk contexts.\nIn this system, governance failure may not come only from technical error.\nIt may also come from people forming incorrect beliefs after interacting with AI, changing their risk judgments, developing inappropriate reliance, or reallocating responsibility.\nTherefore, AI governance must understand how AI changes human judgment and behavior.\nBehavioral science, in this sense, becomes a foundation for explaining the consequences of AI governance.\nThis dissertation builds on this framework and narrows the question to a more specific theoretical object: how AI, as a form of decision architecture, restructures belief formation, reliance calibration, risk judgment, and responsibility attribution in high-stakes human decision-making.\nThat broader framework is then operationalized across the three papers shown on this slide: Paper 1 on belief formation, Paper 2 on reliance calibration and action, and Paper 3 on responsibility attribution."}

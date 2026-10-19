@@ -1,0 +1,208 @@
+{"kind":"deck","id":"pr/jvhrs8","name":"Deck"}
+{"kind":"layout","layoutId":"84f8f8a8-47fe-4731-9568-71db7e3d5b0b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"033fc500-580d-42a4-b824-02cb423adaa1","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/jh0koe","slide":1,"title":"DISSERTATION SECTION III","textShapes":12}
+{"kind":"textbox","id":"sh/vu9knih4","slide":1,"text":"DISSERTATION SECTION III","textPreview":"DISSERTATION SECTION III","textChars":24,"textLines":1,"bbox":[82,84,1080,28]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":1,"text":"Paper 3: AI Responsibility Design and Escalatory Risk","textPreview":"Paper 3: AI Responsibility Design and Escalatory Risk","textChars":53,"textLines":1,"bbox":[82,146,1000,120]}
+{"kind":"textbox","id":"sh/d0z61032","slide":1,"text":"The paper studies how AI-supported decision systems reshape accountability, ownership, and risky strategic choice before outcomes occur.","textPreview":"The paper studies how AI-supported decision systems reshape accountability, ownership, and risky strategic choice before outcomes occur.","textChars":136,"textLines":1,"bbox":[82,286,930,74]}
+{"kind":"shape","id":"sh/2lszqtcj","slide":1,"bbox":[82,396,960,1.2]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":1,"text":"Belief formation","textPreview":"Belief formation","textChars":16,"textLines":1,"bbox":[82,438,250,22]}
+{"kind":"textbox","id":"sh/knih4byh","slide":1,"text":"Paper 1","textPreview":"Paper 1","textChars":7,"textLines":1,"bbox":[82,472,220,20]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":1,"text":"Reliance calibration","textPreview":"Reliance calibration","textChars":20,"textLines":1,"bbox":[414,438,250,22]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":1,"text":"Paper 2","textPreview":"Paper 2","textChars":7,"textLines":1,"bbox":[414,472,220,20]}
+{"kind":"textbox","id":"sh/val87ed8","slide":1,"text":"Responsibility design","textPreview":"Responsibility design","textChars":21,"textLines":1,"bbox":[746,438,250,22]}
+{"kind":"textbox","id":"sh/judg7ads","slide":1,"text":"Paper 3","textPreview":"Paper 3","textChars":7,"textLines":1,"bbox":[746,472,220,20]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":1,"text":"Action → responsibility","textPreview":"Action → responsibility","textChars":23,"textLines":1,"bbox":[82,628,300,18]}
+{"kind":"shape","id":"sh/1032lszq","slide":1,"bbox":[72,678,1136,1.2]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":1,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[72,686,200,18]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":1,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[1168,686,40,18]}
+{"kind":"notes","id":"nt/jh0koe","slide":1,"text":"This is the third paper in the dissertation chain.\nIf Paper 1 asks how AI changes evidence-to-belief mapping, and Paper 2 asks how feedback changes reliance, Paper 3 asks what happens once a consequential action has to be owned.\nThe core question is not simply whether AI is present. It is whether AI system design changes who feels accountable for the final move."}
+{"kind":"slide","id":"sl/nxllmu","slide":2,"title":"A concrete opening example","textShapes":13}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":2,"text":"A concrete opening example","textPreview":"A concrete opening example","textChars":26,"textLines":1,"bbox":[72,62,1016,16]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":2,"text":"AI can change not only the information people see, but who owns the final risk","textPreview":"AI can change not only the information people see, but who owns the final risk","textChars":78,"textLines":1,"bbox":[72,78,1016,66]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":2,"bbox":[72,148,1136,1.2]}
+{"kind":"shape","id":"sh/j6tovaho","slide":2,"bbox":[72,152,103.2,26]}
+{"kind":"textbox","id":"sh/ulwval87","slide":2,"text":"Crisis room","textPreview":"Crisis room","textChars":11,"textLines":1,"bbox":[84,157,79.2,16]}
+{"kind":"shape","id":"sh/1cfa9w3m","slide":2,"bbox":[190,152,132,26]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":2,"text":"Hospital triage","textPreview":"Hospital triage","textChars":15,"textLines":1,"bbox":[202,157,108,16]}
+{"kind":"shape","id":"sh/j2t83itg","slide":2,"bbox":[330,152,117.6,26]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":2,"text":"Public agency","textPreview":"Public agency","textChars":13,"textLines":1,"bbox":[342,157,93.6,16]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":2,"bbox":[86,200,520,380]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":2,"text":"Human-only decision room","textPreview":"Human-only decision room","textChars":24,"textLines":1,"bbox":[112,224,250,24]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":2,"text":"• A decision maker reviews evidence, trade-offs, and possible consequences.\n• The final choice is still experienced as clearly personal.\n• Risk and responsibility remain bundled inside one human decision point.","textPreview":"• A decision maker reviews evidence, trade-offs, and possible consequences. | • The final choice is still experienced as clearly personal...","textChars":210,"textLines":3,"bbox":[112,268,450,94]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":2,"text":"Information, ownership, and accountability stay tightly coupled.","textPreview":"Information, ownership, and accountability stay tightly coupled.","textChars":64,"textLines":1,"bbox":[112,498,420,40]}
+{"kind":"shape","id":"sh/svu9knih","slide":2,"bbox":[674,200,520,380]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":2,"text":"AI-embedded decision room","textPreview":"AI-embedded decision room","textChars":25,"textLines":1,"bbox":[700,224,320,24]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":2,"text":"• The decision maker now sees an AI analysis panel before acting.\n• The system may also require confirmation, disclosure, or explanation.\n• The final move can start to feel shared, staged, or partially offloaded.","textPreview":"• The decision maker now sees an AI analysis panel before acting. | • The system may also require confirmation, disclosure, or explanatio...","textChars":212,"textLines":3,"bbox":[700,268,450,94]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":2,"text":"The key shift is not only informational. It is also about who feels accountable for the final act.","textPreview":"The key shift is not only informational. It is also about who feels accountable for the final act.","textChars":98,"textLines":1,"bbox":[700,498,430,42]}
+{"kind":"shape","id":"sh/sji5snel","slide":2,"bbox":[72,678,1136,1.2]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":2,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[72,686,200,18]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[1168,686,40,18]}
+{"kind":"notes","id":"nt/nxllmu","slide":2,"text":"I want to begin with a familiar transition rather than with theory.\nIn more and more high-risk settings, people no longer decide alone. They see an AI analysis panel, and sometimes they also have to confirm or disclose how they used it.\nThat means the key shift is not only what information enters the room, but whether the final choice is still felt as fully one’s own."}
+{"kind":"slide","id":"sl/2bhadn","slide":3,"title":"What current research already explains","textShapes":14}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":3,"text":"What current research already explains","textPreview":"What current research already explains","textChars":38,"textLines":1,"bbox":[72,62,1016,16]}
+{"kind":"textbox","id":"sh/ulwval87","slide":3,"text":"Existing work studies trust, delegation, and blame mostly in separate literatures","textPreview":"Existing work studies trust, delegation, and blame mostly in separate literatures","textChars":81,"textLines":1,"bbox":[72,78,1016,66]}
+{"kind":"shape","id":"sh/j6tovaho","slide":3,"bbox":[72,148,1136,1.2]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":3,"bbox":[86,170,300,360]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":3,"text":"Trust in AI","textPreview":"Trust in AI","textChars":11,"textLines":1,"bbox":[108,198,250,52]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":3,"text":"When do people rely on algorithmic advice, and when do they resist it?","textPreview":"When do people rely on algorithmic advice, and when do they resist it?","textChars":70,"textLines":1,"bbox":[108,270,255,142]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":3,"text":"Dietvorst et al. (2015); Logg et al. (2019)","textPreview":"Dietvorst et al. (2015); Logg et al. (2019)","textChars":43,"textLines":1,"bbox":[108,454,255,44]}
+{"kind":"shape","id":"sh/8bat47y1","slide":3,"bbox":[446,170,300,360]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":3,"text":"Delegation","textPreview":"Delegation","textChars":10,"textLines":1,"bbox":[468,198,250,52]}
+{"kind":"textbox","id":"sh/d0z61032","slide":3,"text":"Will people pass difficult choices to another agent to avoid responsibility?","textPreview":"Will people pass difficult choices to another agent to avoid responsibility?","textChars":76,"textLines":1,"bbox":[468,270,255,142]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":3,"text":"Steffel et al. (2016); Chevrier & Teixeira (2024)","textPreview":"Steffel et al. (2016); Chevrier & Teixeira (2024)","textChars":49,"textLines":1,"bbox":[468,454,255,44]}
+{"kind":"shape","id":"sh/vu9knih4","slide":3,"bbox":[806,170,300,360]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":3,"text":"Blame after outcomes","textPreview":"Blame after outcomes","textChars":20,"textLines":1,"bbox":[828,198,250,52]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":3,"text":"Once harm occurs, how is blame redistributed across the user, the system, and the developer?","textPreview":"Once harm occurs, how is blame redistributed across the user, the system, and the developer?","textChars":92,"textLines":1,"bbox":[828,270,255,142]}
+{"kind":"textbox","id":"sh/knih4byh","slide":3,"text":"Kirchkamp & Strobel (2019); Coeckelbergh (2020)","textPreview":"Kirchkamp & Strobel (2019); Coeckelbergh (2020)","textChars":47,"textLines":1,"bbox":[828,454,255,44]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":3,"text":"These literatures are valuable, but they rarely track how AI system design shapes the whole path from decision structure to risky behavior.","textPreview":"These literatures are valuable, but they rarely track how AI system design shapes the whole path from decision structure to risky behavior.","textChars":139,"textLines":1,"bbox":[86,582,1020,46]}
+{"kind":"shape","id":"sh/2lszqtcj","slide":3,"bbox":[72,678,1136,1.2]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":3,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[72,686,200,18]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1168,686,40,18]}
+{"kind":"notes","id":"nt/2bhadn","slide":3,"text":"The literature is not empty. In fact, it is already quite rich.\nBut most studies focus on one piece at a time: trust in AI, delegation to another decision agent, or blame once the outcome is already known.\nWhat is still relatively underdeveloped is the full process question: how responsibility design inside an AI-supported decision system changes risky choice before the outcome arrives."}
+{"kind":"slide","id":"sl/36knw1","slide":4,"title":"The benchmark that Paper 3 tries to move beyond","textShapes":11}
+{"kind":"textbox","id":"sh/ixczed8v","slide":4,"text":"The benchmark that Paper 3 tries to move beyond","textPreview":"The benchmark that Paper 3 tries to move beyond","textChars":47,"textLines":1,"bbox":[72,62,1016,16]}
+{"kind":"textbox","id":"sh/tovahoza","slide":4,"text":"Traditional theories explain risk choice well, but they usually treat responsibility cost as fixed","textPreview":"Traditional theories explain risk choice well, but they usually treat responsibility cost as fixed","textChars":98,"textLines":1,"bbox":[72,78,1016,66]}
+{"kind":"shape","id":"sh/032lszqt","slide":4,"bbox":[72,148,1136,1.2]}
+{"kind":"shape","id":"sh/bulwval8","slide":4,"bbox":[96,184,510,228]}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":4,"text":"Rationalist conflict theories","textPreview":"Rationalist conflict theories","textChars":29,"textLines":1,"bbox":[122,210,270,24]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":4,"text":"• Conflict escalates because of bargaining failure, information asymmetry, or commitment problems.\n• The decision maker is still assumed to bear the consequences of the choice.","textPreview":"• Conflict escalates because of bargaining failure, information asymmetry, or commitment problems. | • The decision maker is still assume...","textChars":176,"textLines":2,"bbox":[122,252,430,64]}
+{"kind":"textbox","id":"sh/0fepkzup","slide":4,"text":"Fearon (1995); Powell (2006)","textPreview":"Fearon (1995); Powell (2006)","textChars":28,"textLines":1,"bbox":[122,360,360,32]}
+{"kind":"shape","id":"sh/byhgn29g","slide":4,"bbox":[672,184,510,228]}
+{"kind":"textbox","id":"sh/idonyd0z","slide":4,"text":"Behavioral risk theories","textPreview":"Behavioral risk theories","textChars":24,"textLines":1,"bbox":[698,210,280,24]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":4,"text":"• Loss aversion, framing, and affect can change whether people escalate or restrain.\n• But responsibility structure itself is rarely modeled as the variable that shifts choice.","textPreview":"• Loss aversion, framing, and affect can change whether people escalate or restrain. | • But responsibility structure itself is rarely mo...","textChars":176,"textLines":2,"bbox":[698,252,430,64]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":4,"text":"Kahneman & Tversky (1979); Loewenstein et al. (2001)","textPreview":"Kahneman & Tversky (1979); Loewenstein et al. (2001)","textChars":52,"textLines":1,"bbox":[698,360,360,32]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":4,"bbox":[182,470,916,124]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":4,"text":"Paper 3 adds the missing variable: accountability is not just a consequence of risky choice. In AI-supported systems, it can become part of the choice architecture itself.","textPreview":"Paper 3 adds the missing variable: accountability is not just a consequence of risky choice. In AI-supported systems, it can become part ...","textChars":171,"textLines":1,"bbox":[228,502,820,62]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":4,"bbox":[72,678,1136,1.2]}
+{"kind":"textbox","id":"sh/1032lszq","slide":4,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[72,686,200,18]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1168,686,40,18]}
+{"kind":"notes","id":"nt/36knw1","slide":4,"text":"The point here is not to reject traditional theory.\nThose theories are extremely useful for understanding strategic risk and escalation, but they generally treat responsibility cost as already given in the environment.\nWhat AI support potentially changes is exactly that background condition: the accountability structure itself."}
+{"kind":"slide","id":"sl/xrl37d","slide":5,"title":"Gap slide built from targeted literature critiques","textShapes":5}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":5,"text":"Gap slide built from targeted literature critiques","textPreview":"Gap slide built from targeted literature critiques","textChars":50,"textLines":1,"bbox":[72,62,1016,16]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":5,"text":"The literature points to a missing design-level question inside AI-supported decisions","textPreview":"The literature points to a missing design-level question inside AI-supported decisions","textChars":86,"textLines":1,"bbox":[72,78,1016,66]}
+{"kind":"shape","id":"sh/knih4byh","slide":5,"bbox":[72,148,1136,1.2]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":5,"text":"The gap is not that AI responsibility has never been studied. The gap is that responsibility design is rarely linked to live high-risk behavior before outcomes occur.","textPreview":"The gap is not that AI responsibility has never been studied. The gap is that responsibility design is rarely linked to live high-risk be...","textChars":166,"textLines":1,"bbox":[86,638,940,18]}
+{"kind":"shape","id":"sh/d0z61032","slide":5,"bbox":[72,678,1136,1.2]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":5,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[72,686,200,18]}
+{"kind":"textbox","id":"sh/vixczed8","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1168,686,40,18]}
+{"kind":"image","id":"im/2t83itgf","slide":5,"name":"","geometry":"rect","alt":"Literature targets on AI responsibility design and strategic risk","bbox":[84,132,1110,500]}
+{"kind":"notes","id":"nt/xrl37d","slide":5,"text":"This slide condenses the literature critique into one visual field.\nAcross management, delegation, accountability, and AI responsibility work, the common limit is that design choices inside the AI-supported process are rarely tied to risky strategic action before the outcome happens.\nThat is the opening for this paper."}
+{"kind":"slide","id":"sl/bjosxr","slide":6,"title":"Research questions","textShapes":11}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":6,"text":"Research questions","textPreview":"Research questions","textChars":18,"textLines":1,"bbox":[72,62,1016,16]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":6,"text":"The paper asks how responsibility design changes high-risk choice","textPreview":"The paper asks how responsibility design changes high-risk choice","textChars":65,"textLines":1,"bbox":[72,78,1016,66]}
+{"kind":"shape","id":"sh/4vmtwra5","slide":6,"bbox":[72,148,1136,1.2]}
+{"kind":"shape","id":"sh/bm58z25k","slide":6,"bbox":[88,172,316,338]}
+{"kind":"textbox","id":"sh/m1cfa9w3","slide":6,"text":"The move is from AI presence to responsibility design.","textPreview":"The move is from AI presence to responsibility design.","textChars":54,"textLines":1,"bbox":[116,210,256,120]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":6,"text":"The paper asks whether different AI-system interventions change ownership, felt accountability, and escalation.","textPreview":"The paper asks whether different AI-system interventions change ownership, felt accountability, and escalation.","textChars":111,"textLines":1,"bbox":[116,360,240,92]}
+{"kind":"shape","id":"sh/47y1kre1","slide":6,"bbox":[444,170,736,78]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":6,"text":"RQ1. Does AI support itself change strategic escalation?","textPreview":"RQ1. Does AI support itself change strategic escalation?","textChars":56,"textLines":1,"bbox":[472,188,680,44]}
+{"kind":"shape","id":"sh/m58z25kb","slide":6,"bbox":[444,268,736,78]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":6,"text":"RQ2. Does stronger human final agency raise decisional ownership and felt accountability?","textPreview":"RQ2. Does stronger human final agency raise decisional ownership and felt accountability?","textChars":89,"textLines":1,"bbox":[472,286,680,44]}
+{"kind":"shape","id":"sh/dsji5sne","slide":6,"bbox":[444,366,736,78]}
+{"kind":"textbox","id":"sh/61032lsz","slide":6,"text":"RQ3. Does AI-use traceability strengthen answerability, or does it normalize shared responsibility?","textPreview":"RQ3. Does AI-use traceability strengthen answerability, or does it normalize shared responsibility?","textChars":99,"textLines":1,"bbox":[472,384,680,44]}
+{"kind":"shape","id":"sh/vmtwra5g","slide":6,"bbox":[444,464,736,78]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":6,"text":"RQ4. Do these responsibility changes line up with observable behavior?","textPreview":"RQ4. Do these responsibility changes line up with observable behavior?","textChars":70,"textLines":1,"bbox":[472,482,680,44]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":6,"text":"The paper is not asking who gets blamed after failure. It asks how AI-supported systems shape responsibility before action is taken.","textPreview":"The paper is not asking who gets blamed after failure. It asks how AI-supported systems shape responsibility before action is taken.","textChars":132,"textLines":1,"bbox":[446,582,700,40]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":6,"bbox":[72,678,1136,1.2]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":6,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[72,686,200,18]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":6,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1168,686,40,18]}
+{"kind":"notes","id":"nt/bjosxr","slide":6,"text":"These research questions all push in the same direction.\nInstead of treating AI support as a single treatment, I want to know whether responsibility design changes behavior by changing how the human actor experiences final agency.\nThat is why the questions move from AI support itself to ownership, felt accountability, and then back to behavior."}
+{"kind":"slide","id":"sl/4o455h","slide":7,"title":"Framing and alignment","textShapes":11}
+{"kind":"textbox","id":"sh/z61032ls","slide":7,"text":"Framing and alignment","textPreview":"Framing and alignment","textChars":21,"textLines":1,"bbox":[72,62,1016,16]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":7,"text":"The broader theory is about AI proximity, but the current test focuses on confirm and disclosure","textPreview":"The broader theory is about AI proximity, but the current test focuses on confirm and disclosure","textChars":96,"textLines":1,"bbox":[72,78,1016,66]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":7,"bbox":[72,148,1136,1.2]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":7,"bbox":[92,182,480,362]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":7,"text":"Broader analytical motivation","textPreview":"Broader analytical motivation","textChars":29,"textLines":1,"bbox":[118,208,320,24]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":7,"text":"• As AI moves closer to the final action, ownership may weaken.\n• Analysis, advice, and delegation may create different responsibility architectures.\n• This is the broader map behind the paper.","textPreview":"• As AI moves closer to the final action, ownership may weaken. | • Analysis, advice, and delegation may create different responsibility ...","textChars":193,"textLines":3,"bbox":[118,252,398,91]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":7,"text":"Role proximity remains the conceptual backdrop.","textPreview":"Role proximity remains the conceptual backdrop.","textChars":47,"textLines":1,"bbox":[118,452,350,32]}
+{"kind":"shape","id":"sh/65wjudg7","slide":7,"bbox":[676,182,510,362]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":7,"text":"Current operational test","textPreview":"Current operational test","textChars":24,"textLines":1,"bbox":[702,208,320,24]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":7,"text":"• Human-only vs AI-baseline identifies AI support per se.\n• AI-confirm tests whether active human passage re-anchors final agency.\n• AI-disclosure tests whether explicit visibility and traceability change answerability.","textPreview":"• Human-only vs AI-baseline identifies AI support per se. | • AI-confirm tests whether active human passage re-anchors final agency. | • ...","textChars":219,"textLines":3,"bbox":[702,252,420,91]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":7,"text":"So the present experiment operationalizes responsibility design through confirm and disclosure.","textPreview":"So the present experiment operationalizes responsibility design through confirm and disclosure.","textChars":95,"textLines":1,"bbox":[702,452,406,48]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":7,"bbox":[214,578,844,68]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":7,"text":"The deck should therefore present role proximity as the motivation, and confirm / disclosure as the current identifiable design test.","textPreview":"The deck should therefore present role proximity as the motivation, and confirm / disclosure as the current identifiable design test.","textChars":133,"textLines":1,"bbox":[248,594,776,40]}
+{"kind":"shape","id":"sh/z61032ls","slide":7,"bbox":[72,678,1136,1.2]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":7,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[72,686,200,18]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":7,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1168,686,40,18]}
+{"kind":"notes","id":"nt/4o455h","slide":7,"text":"This is the alignment slide that prevents a predictable misunderstanding.\nThe broader theory does speak in terms of AI moving closer to action, but the current experiment does not claim to fully operationalize every role position at once.\nInstead, it focuses on two concrete responsibility-design interventions: confirm and disclosure."}
+{"kind":"slide","id":"sl/og8d6z","slide":8,"title":"Experimental prototype and participant flow","textShapes":31}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":8,"text":"Experimental prototype and participant flow","textPreview":"Experimental prototype and participant flow","textChars":43,"textLines":1,"bbox":[72,62,1016,16]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":8,"text":"A repeated Hawk-Dove task makes responsibility design behaviorally visible","textPreview":"A repeated Hawk-Dove task makes responsibility design behaviorally visible","textChars":74,"textLines":1,"bbox":[72,78,1016,66]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":8,"bbox":[72,148,1136,1.2]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":8,"bbox":[88,166,372,412]}
+{"kind":"textbox","id":"sh/svu9knih","slide":8,"text":"Why this prototype","textPreview":"Why this prototype","textChars":18,"textLines":1,"bbox":[114,192,240,24]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":8,"text":"• Escalation can deliver a unilateral gain.\n• Mutual escalation generates shared loss.\n• The choice is both risky and consequential for another party.\n• That makes responsibility structure behaviorally meaningful.","textPreview":"• Escalation can deliver a unilateral gain. | • Mutual escalation generates shared loss. | • The choice is both risky and consequential f...","textChars":213,"textLines":4,"bbox":[114,236,308,114]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":8,"text":"Illustrative payoff logic","textPreview":"Illustrative payoff logic","textChars":25,"textLines":1,"bbox":[114,430,210,20]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":8,"bbox":[210,460,88,42]}
+{"kind":"shape","id":"sh/sji5snel","slide":8,"bbox":[298,460,88,42]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":8,"text":"R","textPreview":"R","textChars":1,"textLines":1,"bbox":[226,470,56,16]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":8,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[314,470,56,16]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":8,"text":"R","textPreview":"R","textChars":1,"textLines":1,"bbox":[114,518,58,18]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":8,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[114,566,58,18]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":8,"bbox":[210,508,88,42]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":8,"text":"50, 50","textPreview":"50, 50","textChars":6,"textLines":1,"bbox":[220,518,68,16]}
+{"kind":"shape","id":"sh/8bat47y1","slide":8,"bbox":[298,508,88,42]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":8,"text":"20, 80","textPreview":"20, 80","textChars":6,"textLines":1,"bbox":[308,518,68,16]}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":8,"bbox":[210,556,88,42]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":8,"text":"80, 20","textPreview":"80, 20","textChars":6,"textLines":1,"bbox":[220,566,68,16]}
+{"kind":"shape","id":"sh/bat47y1k","slide":8,"bbox":[298,556,88,42]}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":8,"text":"10, 10","textPreview":"10, 10","textChars":6,"textLines":1,"bbox":[308,566,68,16]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":8,"text":"Condition logic","textPreview":"Condition logic","textChars":15,"textLines":1,"bbox":[506,174,380,22]}
+{"kind":"shape","id":"sh/4vmtwra5","slide":8,"bbox":[504,214,156,54]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":8,"text":"Human-only","textPreview":"Human-only","textChars":10,"textLines":1,"bbox":[504,232,156,18]}
+{"kind":"shape","id":"sh/m1cfa9w3","slide":8,"bbox":[674,214,156,54]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":8,"text":"AI-baseline","textPreview":"AI-baseline","textChars":11,"textLines":1,"bbox":[674,232,156,18]}
+{"kind":"shape","id":"sh/47y1kre1","slide":8,"bbox":[844,214,156,54]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":8,"text":"AI-confirm","textPreview":"AI-confirm","textChars":10,"textLines":1,"bbox":[844,232,156,18]}
+{"kind":"shape","id":"sh/m58z25kb","slide":8,"bbox":[1014,214,156,54]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":8,"text":"AI-disclosure","textPreview":"AI-disclosure","textChars":13,"textLines":1,"bbox":[1014,232,156,18]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":8,"text":"One participant, one round","textPreview":"One participant, one round","textChars":26,"textLines":1,"bbox":[506,320,420,22]}
+{"kind":"shape","id":"sh/e1w7mp0b","slide":8,"bbox":[504,360,122,118]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":8,"text":"See payoff matrix","textPreview":"See payoff matrix","textChars":17,"textLines":1,"bbox":[516,390,98,58]}
+{"kind":"textbox","id":"sh/wval87ed","slide":8,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[624,406,22,20]}
+{"kind":"shape","id":"sh/pg3ex0nu","slide":8,"bbox":[640,360,122,118]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":8,"text":"See AI analysis if assigned","textPreview":"See AI analysis if assigned","textChars":27,"textLines":1,"bbox":[652,390,98,58]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":8,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[760,406,22,20]}
+{"kind":"shape","id":"sh/wra5gbq1","slide":8,"bbox":[776,360,122,118]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":8,"text":"Confirm or disclose if required","textPreview":"Confirm or disclose if required","textChars":31,"textLines":1,"bbox":[788,390,98,58]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":8,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[896,406,22,20]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":8,"bbox":[912,360,122,118]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":8,"text":"Choose escalate or restrain","textPreview":"Choose escalate or restrain","textChars":27,"textLines":1,"bbox":[924,390,98,58]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":8,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[1032,406,22,20]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":8,"bbox":[1048,360,122,118]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":8,"text":"Observe outcome and continue","textPreview":"Observe outcome and continue","textChars":28,"textLines":1,"bbox":[1060,390,98,58]}
+{"kind":"textbox","id":"sh/z61032ls","slide":8,"text":"The prototype is deliberately simple: it holds the strategic environment fixed and lets responsibility design vary inside the same risky choice structure.","textPreview":"The prototype is deliberately simple: it holds the strategic environment fixed and lets responsibility design vary inside the same risky ...","textChars":154,"textLines":1,"bbox":[506,520,630,46]}
+{"kind":"shape","id":"sh/al87ed8b","slide":8,"bbox":[72,678,1136,1.2]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":8,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[72,686,200,18]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":8,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[1168,686,40,18]}
+{"kind":"notes","id":"nt/og8d6z","slide":8,"text":"This slide explains why the experimental environment is appropriate before getting lost in design detail.\nHawk-Dove is useful because escalation is not just a risk preference. It is a consequential move with external loss if both sides escalate.\nThe flow on the right then makes the design transparent: hold the strategic environment constant, vary the responsibility architecture inside the decision process, and observe behavior."}
+{"kind":"slide","id":"sl/dnfabw","slide":9,"title":"Core method table","textShapes":5}
+{"kind":"textbox","id":"sh/u54zidon","slide":9,"text":"Core method table","textPreview":"Core method table","textChars":17,"textLines":1,"bbox":[72,62,1016,16]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":9,"text":"The experimental logic cleanly aligns each manipulation with a comparison and an identification claim","textPreview":"The experimental logic cleanly aligns each manipulation with a comparison and an identification claim","textChars":101,"textLines":1,"bbox":[72,78,1016,66]}
+{"kind":"shape","id":"sh/cbulwval","slide":9,"bbox":[72,148,1136,1.2]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":9,"text":"This is the key method page: each contrast is tied to a distinct responsibility-design question rather than to a generic AI treatment.","textPreview":"This is the key method page: each contrast is tied to a distinct responsibility-design question rather than to a generic AI treatment.","textChars":134,"textLines":1,"bbox":[86,632,970,18]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":9,"bbox":[72,678,1136,1.2]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":9,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[72,686,200,18]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":9,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[1168,686,40,18]}
+{"kind":"image","id":"im/epkzupwb","slide":9,"name":"","geometry":"rect","alt":"Experimental logic from RQ to manipulation to comparison","bbox":[84,138,1112,480]}
+{"kind":"notes","id":"nt/dnfabw","slide":9,"text":"This is the most valuable method slide in the deck.\nThe point is to let the committee see, in one field, how each research question maps onto a manipulation, what comparison identifies it, and what mechanism that contrast is supposed to isolate.\nThat is what keeps the design from collapsing into a vague 'AI versus no AI' experiment."}
+{"kind":"slide","id":"sl/92y3du","slide":10,"title":"Expected patterns and dissertation contribution","textShapes":11}
+{"kind":"textbox","id":"sh/m1cfa9w3","slide":10,"text":"Expected patterns and dissertation contribution","textPreview":"Expected patterns and dissertation contribution","textChars":47,"textLines":1,"bbox":[72,62,1016,16]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":10,"text":"The contribution is to identify where AI changes responsibility before outcomes occur","textPreview":"The contribution is to identify where AI changes responsibility before outcomes occur","textChars":85,"textLines":1,"bbox":[72,78,1016,66]}
+{"kind":"shape","id":"sh/47y1kre1","slide":10,"bbox":[72,148,1136,1.2]}
+{"kind":"shape","id":"sh/bat47y1k","slide":10,"bbox":[88,180,320,338]}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":10,"text":"Expected pattern","textPreview":"Expected pattern","textChars":16,"textLines":1,"bbox":[112,208,240,28]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":10,"text":"• AI support may already shift escalation and responsibility perception.\n• Confirm may strengthen ownership by making human passage explicit.\n• Disclosure may either raise answerability or normalize responsibility sharing.","textPreview":"• AI support may already shift escalation and responsibility perception. | • Confirm may strengthen ownership by making human passage exp...","textChars":222,"textLines":3,"bbox":[112,260,256,88]}
+{"kind":"shape","id":"sh/4vmtwra5","slide":10,"bbox":[448,180,320,338]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":10,"text":"Mechanism claim","textPreview":"Mechanism claim","textChars":15,"textLines":1,"bbox":[472,208,240,28]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":10,"text":"• Structural accountability and felt accountability do not have to move together.\n• Behavioral change matters most when it lines up with ownership and answerability measures.\n• If not, competing mechanisms must be taken seriously.","textPreview":"• Structural accountability and felt accountability do not have to move together. | • Behavioral change matters most when it lines up wit...","textChars":230,"textLines":3,"bbox":[472,260,256,88]}
+{"kind":"shape","id":"sh/0z61032l","slide":10,"bbox":[808,180,320,338]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":10,"text":"Dissertation role","textPreview":"Dissertation role","textChars":17,"textLines":1,"bbox":[832,208,240,28]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":10,"text":"• Paper 1: how AI changes evidence and belief formation.\n• Paper 2: how feedback reshapes reliance calibration over time.\n• Paper 3: how AI-supported action reorganizes responsibility.","textPreview":"• Paper 1: how AI changes evidence and belief formation. | • Paper 2: how feedback reshapes reliance calibration over time. | • Paper 3: ...","textChars":184,"textLines":3,"bbox":[832,260,256,88]}
+{"kind":"shape","id":"sh/7ed8bat4","slide":10,"bbox":[170,552,938,82]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":10,"text":"The central claim is simple: what matters is not only whether people use AI, but how AI system design reorganizes responsibility before action is taken.","textPreview":"The central claim is simple: what matters is not only whether people use AI, but how AI system design reorganizes responsibility before a...","textChars":152,"textLines":1,"bbox":[212,572,850,50]}
+{"kind":"shape","id":"sh/p8nqxs72","slide":10,"bbox":[72,678,1136,1.2]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":10,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[72,686,200,18]}
+{"kind":"textbox","id":"sh/72x4nap4","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1168,686,40,18]}
+{"kind":"notes","id":"nt/92y3du","slide":10,"text":"I end by emphasizing that the contribution is not another generic claim about trust in AI.\nThe contribution is to identify where responsibility changes inside an AI-supported decision process, and to test whether those changes can be seen in behavior before outcomes arrive.\nThat is what makes Paper 3 the responsibility link in the larger dissertation architecture."}

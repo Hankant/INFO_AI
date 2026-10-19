@@ -1,0 +1,74 @@
+{"kind":"deck","id":"pr/9osp0e","name":"Deck"}
+{"kind":"layout","layoutId":"30cee5a0-9f12-4126-9810-ee18efff2dfb","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"95abf169-1c7f-4e7b-97fa-1cd554b9817c","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/um00gn","slide":1,"title":"EXPERIMENTAL TASK","textShapes":29}
+{"kind":"shape","id":"sh/fyxobm58","slide":1,"bbox":[58,48,0,624]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":1,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":1,"text":"EXPERIMENTAL TASK","textPreview":"EXPERIMENTAL TASK","textChars":17,"textLines":1,"bbox":[128,62,260,24]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":1,"text":"A Slot-Machine-Like Allocation Task","textPreview":"A Slot-Machine-Like Allocation Task","textChars":35,"textLines":1,"bbox":[96,100,900,46]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":1,"text":"Participants repeatedly allocate 100 points across three abstract channels, then choose between their own allocation and Agent-AI's allocation.","textPreview":"Participants repeatedly allocate 100 points across three abstract channels, then choose between their own allocation and Agent-AI's alloc...","textChars":143,"textLines":1,"bbox":[96,154,1020,42]}
+{"kind":"shape","id":"sh/8v6psfil","slide":1,"bbox":[96,216,720,390]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":1,"text":"Mock participant screen: Round t","textPreview":"Mock participant screen: Round t","textChars":32,"textLines":1,"bbox":[124,236,350,28]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":1,"text":"No real-world label","textPreview":"No real-world label","textChars":19,"textLines":1,"bbox":[558,240,210,20]}
+{"kind":"shape","id":"sh/je9cvixc","slide":1,"bbox":[126,282,156,118]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":1,"text":"α","textPreview":"α","textChars":1,"textLines":1,"bbox":[140,294,54,24]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":1,"text":"recent payoff","textPreview":"recent payoff","textChars":13,"textLines":1,"bbox":[196,298,70,16]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":1,"bbox":[144,338.72,8,27.28]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":1,"bbox":[157,336.43,8,29.57]}
+{"kind":"shape","id":"sh/r65wjudg","slide":1,"bbox":[170,333.67,8,32.33]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":1,"bbox":[183,331.84,8,34.16]}
+{"kind":"shape","id":"sh/9cvixcze","slide":1,"bbox":[196,330,8,36]}
+{"kind":"shape","id":"sh/gr2p8nqx","slide":1,"bbox":[144,364,120,12]}
+{"kind":"shape","id":"sh/rytsvu9k","slide":1,"bbox":[144,364,48,12]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":1,"text":"40 points","textPreview":"40 points","textChars":9,"textLines":1,"bbox":[144,380,120,14]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":1,"bbox":[302,282,156,118]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":1,"text":"β","textPreview":"β","textChars":1,"textLines":1,"bbox":[316,294,54,24]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":1,"text":"recent payoff","textPreview":"recent payoff","textChars":13,"textLines":1,"bbox":[372,298,70,16]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":1,"bbox":[320,330,8,36]}
+{"kind":"shape","id":"sh/al87ed8b","slide":1,"bbox":[333,331.12,8,34.88]}
+{"kind":"shape","id":"sh/z61032ls","slide":1,"bbox":[346,332.61,8,33.39]}
+{"kind":"shape","id":"sh/orytsvu9","slide":1,"bbox":[359,334.48,8,31.52]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":1,"bbox":[372,335.97,8,30.03]}
+{"kind":"shape","id":"sh/6xkf6dcb","slide":1,"bbox":[320,364,120,12]}
+{"kind":"shape","id":"sh/zed8v6ps","slide":1,"bbox":[320,364,42,12]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":1,"text":"35 points","textPreview":"35 points","textChars":9,"textLines":1,"bbox":[320,380,120,14]}
+{"kind":"shape","id":"sh/wval87ed","slide":1,"bbox":[478,282,156,118]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":1,"text":"γ","textPreview":"γ","textChars":1,"textLines":1,"bbox":[492,294,54,24]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":1,"text":"recent payoff","textPreview":"recent payoff","textChars":13,"textLines":1,"bbox":[548,298,70,16]}
+{"kind":"shape","id":"sh/psfil0rq","slide":1,"bbox":[496,342.22,8,23.78]}
+{"kind":"shape","id":"sh/w7mp0bi9","slide":1,"bbox":[509,338.65,8,27.35]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":1,"bbox":[522,335.6,8,30.4]}
+{"kind":"shape","id":"sh/e1w7mp0b","slide":1,"bbox":[535,333.05,8,32.95]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":1,"bbox":[548,330,8,36]}
+{"kind":"shape","id":"sh/wfyxobm5","slide":1,"bbox":[496,364,120,12]}
+{"kind":"shape","id":"sh/4nap4r65","slide":1,"bbox":[496,364,30,12]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":1,"text":"25 points","textPreview":"25 points","textChars":9,"textLines":1,"bbox":[496,380,120,14]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":1,"text":"Self allocation","textPreview":"Self allocation","textChars":15,"textLines":1,"bbox":[126,414,220,22]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":1,"text":"Agent-AI recommendation","textPreview":"Agent-AI recommendation","textChars":23,"textLines":1,"bbox":[302,414,310,22]}
+{"kind":"shape","id":"sh/4byhgn29","slide":1,"bbox":[126,446,222,42]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":1,"text":"Self: 40 / 35 / 25","textPreview":"Self: 40 / 35 / 25","textChars":18,"textLines":1,"bbox":[145,458,184,18]}
+{"kind":"shape","id":"sh/m58z25kb","slide":1,"bbox":[384,446,222,42]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":1,"text":"AI: 25 / 50 / 25","textPreview":"AI: 25 / 50 / 25","textChars":16,"textLines":1,"bbox":[403,458,184,18]}
+{"kind":"shape","id":"sh/47y1kre1","slide":1,"bbox":[350,467,32,0]}
+{"kind":"shape","id":"sh/tsvu9kni","slide":1,"bbox":[126,514,220,50]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":1,"text":"Submit self plan","textPreview":"Submit self plan","textChars":16,"textLines":1,"bbox":[144,529,184,18]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":1,"bbox":[386,514,220,50]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":1,"text":"Submit AI plan","textPreview":"Submit AI plan","textChars":14,"textLines":1,"bbox":[404,529,184,18]}
+{"kind":"shape","id":"sh/8bat47y1","slide":1,"bbox":[626,446,154,118]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":1,"text":"Full feedback","textPreview":"Full feedback","textChars":13,"textLines":1,"bbox":[646,462,114,20]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":1,"text":"Both chosen and unchosen payoffs are shown after each round.","textPreview":"Both chosen and unchosen payoffs are shown after each round.","textChars":60,"textLines":1,"bbox":[646,494,114,48]}
+{"kind":"shape","id":"sh/18jqh0fe","slide":1,"bbox":[850,226,330,116]}
+{"kind":"shape","id":"sh/8nqxs72x","slide":1,"bbox":[850,226,5,116]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":1,"text":"What the task is","textPreview":"What the task is","textChars":16,"textLines":1,"bbox":[872,242,286,22]}
+{"kind":"textbox","id":"sh/ulwval87","slide":1,"text":"A repeated, abstract, slot-machine-like allocation problem with three channels: alpha, beta, and gamma.","textPreview":"A repeated, abstract, slot-machine-like allocation problem with three channels: alpha, beta, and gamma.","textChars":103,"textLines":1,"bbox":[872,274,286,52]}
+{"kind":"shape","id":"sh/ed8v6psf","slide":1,"bbox":[850,362,330,116]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":1,"bbox":[850,362,5,116]}
+{"kind":"textbox","id":"sh/wjudg7ad","slide":1,"text":"Why history matters","textPreview":"Why history matters","textChars":19,"textLines":1,"bbox":[872,378,286,22]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":1,"text":"Payoffs are noisy but structured: short trends, state shifts, mean reversion, and random shocks all matter.","textPreview":"Payoffs are noisy but structured: short trends, state shifts, mean reversion, and random shocks all matter.","textChars":107,"textLines":1,"bbox":[872,410,286,52]}
+{"kind":"shape","id":"sh/i5sneloj","slide":1,"bbox":[850,498,330,116]}
+{"kind":"shape","id":"sh/7qpg3ex0","slide":1,"bbox":[850,498,5,116]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":1,"text":"What is manipulated","textPreview":"What is manipulated","textChars":19,"textLines":1,"bbox":[872,514,286,22]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":1,"text":"The interface stays the same. Treatments change when AI errors cluster and whether performance later recovers.","textPreview":"The interface stays the same. Treatments change when AI errors cluster and whether performance later recovers.","textChars":110,"textLines":1,"bbox":[872,546,286,52]}
+{"kind":"shape","id":"sh/itgfmlkj","slide":1,"bbox":[96,638,1084,44]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":1,"text":"Repeated loop: history -> self allocation -> AI recommendation -> final choice -> full feedback -> next-round reliance.","textPreview":"Repeated loop: history -> self allocation -> AI recommendation -> final choice -> full feedback -> next-round reliance.","textChars":119,"textLines":1,"bbox":[128,650,1018,18]}
+{"kind":"notes","id":"nt/um00gn","slide":1,"text":"I first introduce the experiment at the level of the participant's actual screen, because the design is easier to understand once the task is concrete.\nThe task is like an abstract slot-machine or multi-channel allocation problem. Participants do not see a finance, medical, hiring, or market label. They see three abstract channels, alpha, beta, and gamma. In each round, they use recent payoff histories to allocate 100 points across the three channels.\nThe key is that the channels are not pure random draws. Their payoffs follow a noisy dynamic process, so history is informative but imperfect. This prevents the task from becoming either pure guessing or something participants can solve after a few rounds.\nAfter participants make their own allocation, Agent-AI provides an alternative allocation for the same round. The participant then chooses whether to submit the self plan or the AI plan. After the round, the experiment shows full feedback: both the payoff of the chosen option and the counterfactual payoff of the unchosen option.\nThis loop repeats for about 20 rounds. The treatment does not change the basic interface. It changes the timing and clustering of AI errors, while keeping overall performance as comparable as possible."}

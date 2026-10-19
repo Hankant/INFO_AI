@@ -1,0 +1,474 @@
+{"kind":"deck","id":"pr/o5xldk","name":"Deck"}
+{"kind":"layout","layoutId":"42f4c9ec-8b06-4178-889e-191260865552","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"f00d5f98-134c-43d5-9a65-091cbaeec136","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/9qumz2","slide":1,"title":"PAPER 2","textShapes":8}
+{"kind":"shape","id":"sh/epkzupwb","slide":1,"bbox":[915,-160,440,440]}
+{"kind":"shape","id":"sh/pg3ex0nu","slide":1,"bbox":[-110,470,300,300]}
+{"kind":"shape","id":"sh/wval87ed","slide":1,"bbox":[86,86,24,24]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":1,"bbox":[84,626,1112,1]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":1,"text":"PAPER 2","textPreview":"PAPER 2","textChars":7,"textLines":1,"bbox":[128,82,260,24]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":1,"text":"AI Error Shocks and Dynamic Reliance","textPreview":"AI Error Shocks and Dynamic Reliance","textChars":36,"textLines":1,"bbox":[128,150,900,76]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":1,"text":"Repeated human-AI decision tasks with feedback","textPreview":"Repeated human-AI decision tasks with feedback","textChars":46,"textLines":1,"bbox":[128,236,780,56]}
+{"kind":"shape","id":"sh/7u54zido","slide":1,"bbox":[126,360,404,136]}
+{"kind":"shape","id":"sh/ed8bat47","slide":1,"bbox":[126,360,6,136]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":1,"text":"Dissertation position","textPreview":"Dissertation position","textChars":21,"textLines":1,"bbox":[144,372,374,30]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":1,"text":"Paper 2 isolates the step from feedback and belief to reliance calibration and action threshold.","textPreview":"Paper 2 isolates the step from feedback and belief to reliance calibration and action threshold.","textChars":96,"textLines":1,"bbox":[144,408,374,76]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":1,"bbox":[560,360,596,136]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":1,"bbox":[560,360,6,136]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":1,"text":"Core object","textPreview":"Core object","textChars":11,"textLines":1,"bbox":[578,372,566,30]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":1,"text":"The paper is not about generic trust. It asks how local AI failure changes later reliance in a repeated decision system.","textPreview":"The paper is not about generic trust. It asks how local AI failure changes later reliance in a repeated decision system.","textChars":120,"textLines":1,"bbox":[578,408,566,76]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":1,"text":"Belief formation -> reliance calibration -> responsibility","textPreview":"Belief formation -> reliance calibration -> responsibility","textChars":58,"textLines":1,"bbox":[132,646,980,18]}
+{"kind":"notes","id":"nt/9qumz2","slide":1,"text":"这一部分是 dissertation 的第二篇。前一篇讨论的是 AI 如何改变 belief formation，这一篇往后走一步，讨论人在看到反馈以后，后续到底还会不会继续依赖 AI。\n所以这里的核心对象不是泛泛的 trust，也不是单次是否采纳建议，而是 repeated interaction 里面 reliance path 会不会被局部错误改写。\n老师可以先带着一个最简单的问题进入后面几页：如果 AI 前面错过几次，后面即使恢复，人还会不会像之前那样继续用它？"}
+{"kind":"slide","id":"sl/87bjpu","slide":2,"title":"THE PUZZLE","textShapes":9}
+{"kind":"shape","id":"sh/s72x4nap","slide":2,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/3m94fu18","slide":2,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/a5gbq1or","slide":2,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":2,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/sji5snel","slide":2,"text":"THE PUZZLE","textPreview":"THE PUZZLE","textChars":10,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":2,"text":"The puzzle is not whether people dislike errors, but how they learn from them over time","textPreview":"The puzzle is not whether people dislike errors, but how they learn from them over time","textChars":87,"textLines":1,"bbox":[96,96,1040,74]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":2,"text":"In high-risk settings, one AI miss can carry more weight than one human miss even when later performance looks similar.","textPreview":"In high-risk settings, one AI miss can carry more weight than one human miss even when later performance looks similar.","textChars":119,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":2,"bbox":[96,236,500,252]}
+{"kind":"shape","id":"sh/svu9knih","slide":2,"bbox":[96,236,6,252]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":2,"text":"AI source","textPreview":"AI source","textChars":9,"textLines":1,"bbox":[114,248,470,30]}
+{"kind":"textbox","id":"sh/7u54zido","slide":2,"text":"A clinician or supervisor sees one visible AI miss and may read it as evidence that the source itself is unreliable.\n\nThe reaction is not only to the mistake, but to what the mistake seems to reveal about the source.","textPreview":"A clinician or supervisor sees one visible AI miss and may read it as evidence that the source itself is unreliable. |  | The reaction is...","textChars":216,"textLines":3,"bbox":[114,284,470,192]}
+{"kind":"shape","id":"sh/wfyxobm5","slide":2,"bbox":[640,236,536,252]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":2,"bbox":[640,236,6,252]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":2,"text":"Human source","textPreview":"Human source","textChars":12,"textLines":1,"bbox":[658,248,506,30]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":2,"text":"The same miss from a human colleague may be read more as a local mistake that can still be corrected through later interaction and feedback.\n\nThat creates a possible asymmetry in later updating.","textPreview":"The same miss from a human colleague may be read more as a local mistake that can still be corrected through later interaction and feedba...","textChars":194,"textLines":3,"bbox":[658,284,506,192]}
+{"kind":"shape","id":"sh/wra5gbq1","slide":2,"bbox":[156,532,968,92]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":2,"bbox":[156,532,6,92]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":2,"text":"What matters is the later path","textPreview":"What matters is the later path","textChars":30,"textLines":1,"bbox":[174,544,938,30]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":2,"text":"The key question is whether reliance recovers after later feedback, or whether early AI error keeps depressing adoption even when objective performance improves again.","textPreview":"The key question is whether reliance recovers after later feedback, or whether early AI error keeps depressing adoption even when objecti...","textChars":167,"textLines":1,"bbox":[174,580,938,32]}
+{"kind":"notes","id":"nt/87bjpu","slide":2,"text":"这页我先把 paper 的问题对象钉住。我们研究的不是 AI 能不能一次性说服人，而是人在和 AI 反复互动、反复看到结果以后，后续的采用路径会怎么变。\n换句话说，这篇不是在测一个静态 trust level，而是在看 feedback 之后 reliance 有没有发生系统性的重校准。\n这也是为什么后面的方法设计都围绕 repeated task 展开，而不是做一个单轮 vignette。"}
+{"kind":"slide","id":"sl/ujnoxt","slide":3,"title":"EXISTING WORK","textShapes":11}
+{"kind":"shape","id":"sh/ahoza1gv","slide":3,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/l87ed8ba","slide":3,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/sneloj2t","slide":3,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/3ex0nuxc","slide":3,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/at47y1kr","slide":3,"text":"EXISTING WORK","textPreview":"EXISTING WORK","textChars":13,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":3,"text":"Most existing work is still built around one-shot trust or one-shot advice use","textPreview":"Most existing work is still built around one-shot trust or one-shot advice use","textChars":78,"textLines":1,"bbox":[96,96,1030,74]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":3,"text":"We know a great deal about immediate reactions to advice, but much less about how reliance evolves across repeated feedback.","textPreview":"We know a great deal about immediate reactions to advice, but much less about how reliance evolves across repeated feedback.","textChars":124,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/3itgfmlk","slide":3,"bbox":[96,244,324,242]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":3,"bbox":[96,244,6,242]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":3,"text":"Algorithm aversion","textPreview":"Algorithm aversion","textChars":18,"textLines":1,"bbox":[114,256,294,30]}
+{"kind":"textbox","id":"sh/l0rqd4vm","slide":3,"text":"How visible algorithmic failure lowers immediate willingness to adopt advice.","textPreview":"How visible algorithmic failure lowers immediate willingness to adopt advice.","textChars":77,"textLines":1,"bbox":[114,292,294,182]}
+{"kind":"shape","id":"sh/ed8bat47","slide":3,"bbox":[452,244,324,242]}
+{"kind":"shape","id":"sh/7u54zido","slide":3,"bbox":[452,244,6,242]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":3,"text":"Advice taking","textPreview":"Advice taking","textChars":13,"textLines":1,"bbox":[470,256,294,30]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":3,"text":"How people weight their own judgment against an external recommendation.","textPreview":"How people weight their own judgment against an external recommendation.","textChars":72,"textLines":1,"bbox":[470,292,294,182]}
+{"kind":"shape","id":"sh/eloj2t83","slide":3,"bbox":[808,244,324,242]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":3,"bbox":[808,244,6,242]}
+{"kind":"textbox","id":"sh/wval87ed","slide":3,"text":"Trust in automation","textPreview":"Trust in automation","textChars":19,"textLines":1,"bbox":[826,256,294,30]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":3,"text":"How confidence, explanation, and transparency affect acceptance of machine advice.","textPreview":"How confidence, explanation, and transparency affect acceptance of machine advice.","textChars":82,"textLines":1,"bbox":[826,292,294,182]}
+{"kind":"shape","id":"sh/9knih4by","slide":3,"bbox":[156,532,968,92]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":3,"bbox":[156,532,6,92]}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":3,"text":"What this literature still leaves thin","textPreview":"What this literature still leaves thin","textChars":38,"textLines":1,"bbox":[174,544,938,30]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":3,"text":"The same participant is rarely followed through error, feedback, recovery, and later adoption in a clearly repeated task.","textPreview":"The same participant is rarely followed through error, feedback, recovery, and later adoption in a clearly repeated task.","textChars":121,"textLines":1,"bbox":[174,580,938,32]}
+{"kind":"notes","id":"nt/ujnoxt","slide":3,"text":"这里我想先说明，今天的 generative AI 和传统 algorithmic aid 在行为上并不是一回事。\n传统算法很多时候给的是一个 score、ranking，或者一个 recommendation；用户还需要自己解释这个信号到底意味着什么。\n但生成式 AI 往往直接给出一个组织好的答案，所以它影响人的方式，不只是提供信息，还在提供一种 ready-made interpretation。"}
+{"kind":"slide","id":"sl/o7v4hl","slide":4,"title":"TRADITIONAL VIEW","textShapes":11}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":4,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":4,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/czed8v6p","slide":4,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":4,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/u54zidon","slide":4,"text":"TRADITIONAL VIEW","textPreview":"TRADITIONAL VIEW","textChars":16,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":4,"text":"A symmetric learning view would predict similar updating from similar errors","textPreview":"A symmetric learning view would predict similar updating from similar errors","textChars":76,"textLines":1,"bbox":[96,96,980,74]}
+{"kind":"textbox","id":"sh/cbulwval","slide":4,"text":"If AI and human sources perform equally well overall, similar misses should produce similar later reliance updates.","textPreview":"If AI and human sources perform equally well overall, similar misses should produce similar later reliance updates.","textChars":115,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":4,"bbox":[96,240,324,244]}
+{"kind":"shape","id":"sh/y90je9cv","slide":4,"bbox":[96,240,6,244]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":4,"text":"Benchmark step 1","textPreview":"Benchmark step 1","textChars":16,"textLines":1,"bbox":[114,252,294,30]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":4,"text":"Observe how AI and human sources perform in the same environment.","textPreview":"Observe how AI and human sources perform in the same environment.","textChars":65,"textLines":1,"bbox":[114,288,294,184]}
+{"kind":"shape","id":"sh/6xkf6dcb","slide":4,"bbox":[452,240,324,244]}
+{"kind":"shape","id":"sh/zed8v6ps","slide":4,"bbox":[452,240,6,244]}
+{"kind":"textbox","id":"sh/obm58z25","slide":4,"text":"Benchmark step 2","textPreview":"Benchmark step 2","textChars":16,"textLines":1,"bbox":[470,252,294,30]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":4,"text":"Use later relative feedback to update which source is currently more useful.","textPreview":"Use later relative feedback to update which source is currently more useful.","textChars":76,"textLines":1,"bbox":[470,288,294,184]}
+{"kind":"shape","id":"sh/65wjudg7","slide":4,"bbox":[808,240,324,244]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":4,"bbox":[808,240,6,244]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":4,"text":"Benchmark implication","textPreview":"Benchmark implication","textChars":21,"textLines":1,"bbox":[826,252,294,30]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":4,"text":"Once later performance improves again, reliance should recover rather than remain persistently depressed.","textPreview":"Once later performance improves again, reliance should recover rather than remain persistently depressed.","textChars":105,"textLines":1,"bbox":[826,288,294,184]}
+{"kind":"shape","id":"sh/54zidony","slide":4,"bbox":[180,536,920,88]}
+{"kind":"shape","id":"sh/cj6tovah","slide":4,"bbox":[180,536,6,88]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":4,"text":"Why this benchmark matters","textPreview":"Why this benchmark matters","textChars":26,"textLines":1,"bbox":[198,548,890,30]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":4,"text":"Persistent AI-specific under-reliance is interesting only because a symmetric-learning benchmark would expect similar later recovery from similar errors.","textPreview":"Persistent AI-specific under-reliance is interesting only because a symmetric-learning benchmark would expect similar later recovery from...","textChars":153,"textLines":1,"bbox":[198,584,890,28]}
+{"kind":"notes","id":"nt/o7v4hl","slide":4,"text":"我特别想保留这一页，是因为 transformer-based generative AI 的特殊性，不应该在这个 paper 里被抹掉。\n它的关键不只是模型架构本身，而是这种架构使得输出经常表现为连贯语言、组织好的理由，以及一种 apparent completeness。\n行为含义是，AI 可能先通过 narrative coherence 建立 authority；而一旦它后面出现明显错误，这种 authority 的破裂也可能带来更强的 reliance recalibration。"}
+{"kind":"slide","id":"sl/h7ogrv","slide":5,"title":"GAP","textShapes":9}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":5,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":5,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":5,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":5,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":5,"text":"GAP","textPreview":"GAP","textChars":3,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":5,"text":"The gap has two parts: existing work is rarely multi-round, and it rarely isolates AI-specific diagnostic asymmetry","textPreview":"The gap has two parts: existing work is rarely multi-round, and it rarely isolates AI-specific diagnostic asymmetry","textChars":115,"textLines":1,"bbox":[96,96,1060,74]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":5,"text":"The unresolved issue is not only whether errors matter, but whether AI errors matter differently over time.","textPreview":"The unresolved issue is not only whether errors matter, but whether AI errors matter differently over time.","textChars":107,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":5,"bbox":[96,236,500,258]}
+{"kind":"shape","id":"sh/neloj2t8","slide":5,"bbox":[96,236,6,258]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":5,"text":"Gap 1  Multi-round gap","textPreview":"Gap 1  Multi-round gap","textChars":22,"textLines":1,"bbox":[114,248,470,30]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":5,"text":"Many studies are not designed to track the same participant through early error, later recovery, and the full adoption path.\n\nThat makes dynamic updating hard to observe directly.","textPreview":"Many studies are not designed to track the same participant through early error, later recovery, and the full adoption path. |  | That ma...","textChars":179,"textLines":3,"bbox":[114,284,470,198]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":5,"bbox":[640,236,536,258]}
+{"kind":"shape","id":"sh/cvixczed","slide":5,"bbox":[640,236,6,258]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":5,"text":"Gap 2  Asymmetry gap","textPreview":"Gap 2  Asymmetry gap","textChars":20,"textLines":1,"bbox":[658,248,506,30]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":5,"text":"Even fewer designs compare AI error with human error under equal overall performance.\n\nWithout that comparison, we cannot tell whether AI misses carry a special diagnostic penalty.","textPreview":"Even fewer designs compare AI error with human error under equal overall performance. |  | Without that comparison, we cannot tell whethe...","textChars":180,"textLines":3,"bbox":[658,284,506,198]}
+{"kind":"shape","id":"sh/54zidony","slide":5,"bbox":[156,530,968,94]}
+{"kind":"shape","id":"sh/cj6tovah","slide":5,"bbox":[156,530,6,94]}
+{"kind":"textbox","id":"sh/judg7ads","slide":5,"text":"Punchline","textPreview":"Punchline","textChars":9,"textLines":1,"bbox":[174,542,938,30]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":5,"text":"The paper is therefore not about generic distrust. It is about dynamic asymmetry under repeated feedback.","textPreview":"The paper is therefore not about generic distrust. It is about dynamic asymmetry under repeated feedback.","textChars":105,"textLines":1,"bbox":[174,578,938,34]}
+{"kind":"notes","id":"nt/h7ogrv","slide":5,"text":"这页我用一个最直观的例子来说明问题，不先讲理论。\n一个人在前几轮觉得 AI 说得很像那么回事，也愿意采用；但如果早期连续看到几次明显错误，后面即使 AI 客观表现恢复，他也可能已经不太愿意再继续用。\n所以我们关心的不是单次 error effect，而是 early miss 会不会把 later adoption path 整体往下拉。"}
+{"kind":"slide","id":"sl/dxj77w","slide":6,"title":"RQ AND FRAMING","textShapes":8}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":6,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":6,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/neloj2t8","slide":6,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/cbulwval","slide":6,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":6,"text":"RQ AND FRAMING","textPreview":"RQ AND FRAMING","textChars":14,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/u54zidon","slide":6,"text":"The gap leads to linked questions and one analytical framing","textPreview":"The gap leads to linked questions and one analytical framing","textChars":60,"textLines":1,"bbox":[96,96,930,74]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":6,"text":"The paper asks about dynamic reliance updating after source-specific error shocks, not about a generic trust score.","textPreview":"The paper asks about dynamic reliance updating after source-specific error shocks, not about a generic trust score.","textChars":115,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":6,"bbox":[96,234,640,330]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":6,"bbox":[96,234,6,330]}
+{"kind":"textbox","id":"sh/54zidony","slide":6,"text":"Research questions","textPreview":"Research questions","textChars":18,"textLines":1,"bbox":[114,246,610,30]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":6,"text":"RQ1  Does reliance track relative performance over time?\n\nRQ2  Do early AI errors depress later adoption even after later performance recovers?\n\nRQ3  Do timing and source asymmetry change how strong that later reliance shock becomes?","textPreview":"RQ1  Does reliance track relative performance over time? |  | RQ2  Do early AI errors depress later adoption even after later performance...","textChars":233,"textLines":5,"bbox":[114,282,610,270]}
+{"kind":"shape","id":"sh/nyd0z610","slide":6,"bbox":[778,234,398,330]}
+{"kind":"shape","id":"sh/udg7adsj","slide":6,"bbox":[778,234,6,330]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":6,"text":"Framing","textPreview":"Framing","textChars":7,"textLines":1,"bbox":[796,246,368,30]}
+{"kind":"textbox","id":"sh/cvixczed","slide":6,"text":"Not generic trust\n\nNot one-shot persuasion\n\nNot average accuracy alone\n\nThe object is dynamic reliance under repeated feedback.","textPreview":"Not generic trust |  | Not one-shot persuasion |  | Not average accuracy alone |  | The object is dynamic reliance under repeated feedback.","textChars":127,"textLines":7,"bbox":[796,282,368,270]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":6,"text":"This framing lets the paper connect AI authority, error experience, and later action threshold in one sequence.","textPreview":"This framing lets the paper connect AI authority, error experience, and later action threshold in one sequence.","textChars":111,"textLines":1,"bbox":[150,598,972,24]}
+{"kind":"notes","id":"nt/dxj77w","slide":6,"text":"现有文献给了我们很多重要碎片，比如 algorithm aversion、advice taking，以及 trust in automation。\n但这些研究通常停在 one-shot acceptance，或者停在错误发生当下的反应。\n它们很少继续追踪同一个人在 repeated feedback 里面，经过 error、recovery 之后，后续 reliance 会不会发生持续性的变化。"}
+{"kind":"slide","id":"sl/l3cebe","slide":7,"title":"AI DISTINCTIVENESS","textShapes":8}
+{"kind":"shape","id":"sh/qtcj6tov","slide":7,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/1gvy90je","slide":7,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":7,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":7,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":7,"text":"AI DISTINCTIVENESS","textPreview":"AI DISTINCTIVENESS","textChars":18,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":7,"text":"Generative AI advice is not just another score or recommendation","textPreview":"Generative AI advice is not just another score or recommendation","textChars":64,"textLines":1,"bbox":[96,96,1040,74]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":7,"text":"Its behavioral distinctiveness comes from how the signal arrives, not only from whether it is right.","textPreview":"Its behavioral distinctiveness comes from how the signal arrives, not only from whether it is right.","textChars":100,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/fyxobm58","slide":7,"bbox":[96,230,490,312]}
+{"kind":"shape","id":"sh/qd4vmtwr","slide":7,"bbox":[96,230,6,312]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":7,"text":"Traditional algorithmic aid","textPreview":"Traditional algorithmic aid","textChars":27,"textLines":1,"bbox":[114,242,460,30]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":7,"text":"Often appears as a score, ranking, probability, or recommendation.\n\nThe user still has to interpret what the signal means and how much weight it deserves.","textPreview":"Often appears as a score, ranking, probability, or recommendation. |  | The user still has to interpret what the signal means and how muc...","textChars":154,"textLines":3,"bbox":[114,278,460,252]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":7,"bbox":[690,230,486,312]}
+{"kind":"shape","id":"sh/zupwb2hw","slide":7,"bbox":[690,230,6,312]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":7,"text":"Generative AI advice","textPreview":"Generative AI advice","textChars":20,"textLines":1,"bbox":[708,242,456,30]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":7,"text":"Often arrives as a coherent answer with organized reasons, compressed ambiguity, and a ready-made interpretation.\n\nThat changes the felt authority of the advice before formal performance is even observed.","textPreview":"Often arrives as a coherent answer with organized reasons, compressed ambiguity, and a ready-made interpretation. |  | That changes the f...","textChars":204,"textLines":3,"bbox":[708,278,456,252]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":7,"text":"That difference creates conditions under which AI errors may become more diagnostic than comparable human errors.","textPreview":"That difference creates conditions under which AI errors may become more diagnostic than comparable human errors.","textChars":113,"textLines":1,"bbox":[96,584,1080,28]}
+{"kind":"notes","id":"nt/l3cebe","slide":7,"text":"传统 benchmark 其实并不复杂。如果人能持续观察 self 和 AI 的相对表现，那么 AI 后面一旦重新表现更好，依赖就应该回升。\n也就是说，标准预测是 recovery，而不是长期停留在低采用状态。\n正因为标准预测是 recovery，如果我们后来观察到 incomplete recovery 或 persistent under-reliance，这才构成真正值得解释的现象。"}
+{"kind":"slide","id":"sl/5tizel","slide":8,"title":"NARRATIVE AUTHORITY","textShapes":9}
+{"kind":"shape","id":"sh/bq1oryts","slide":8,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/4byhgn29","slide":8,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/twra5gbq","slide":8,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/mhk3q5o7","slide":8,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":8,"text":"NARRATIVE AUTHORITY","textPreview":"NARRATIVE AUTHORITY","textChars":19,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":8,"text":"Transformer-style outputs can make AI advice feel more settled than the evidence itself","textPreview":"Transformer-style outputs can make AI advice feel more settled than the evidence itself","textChars":87,"textLines":1,"bbox":[96,96,1000,74]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":8,"text":"Coherent language can create interpretive authority before formal performance is even observed.","textPreview":"Coherent language can create interpretive authority before formal performance is even observed.","textChars":95,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/mp0bi9s3","slide":8,"bbox":[96,236,1080,104]}
+{"kind":"shape","id":"sh/bat47y1k","slide":8,"bbox":[96,236,6,104]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":8,"text":"Organized reasons","textPreview":"Organized reasons","textChars":17,"textLines":1,"bbox":[114,248,1050,30]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":8,"text":"The advice comes packaged with explanations rather than as an isolated score.","textPreview":"The advice comes packaged with explanations rather than as an isolated score.","textChars":77,"textLines":1,"bbox":[114,284,1050,44]}
+{"kind":"shape","id":"sh/1kre1w7m","slide":8,"bbox":[96,358,1080,104]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":8,"bbox":[96,358,6,104]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":8,"text":"Compressed ambiguity","textPreview":"Compressed ambiguity","textChars":20,"textLines":1,"bbox":[114,370,1050,30]}
+{"kind":"textbox","id":"sh/ulwval87","slide":8,"text":"Conflicting cues are often folded into one fluent account instead of remaining visibly unresolved.","textPreview":"Conflicting cues are often folded into one fluent account instead of remaining visibly unresolved.","textChars":98,"textLines":1,"bbox":[114,406,1050,44]}
+{"kind":"shape","id":"sh/1cfa9w3m","slide":8,"bbox":[96,480,1080,104]}
+{"kind":"shape","id":"sh/crmhk3q5","slide":8,"bbox":[96,480,6,104]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":8,"text":"Apparent completeness","textPreview":"Apparent completeness","textChars":21,"textLines":1,"bbox":[114,492,1050,30]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":8,"text":"The user can feel that the system has already done the hard interpretive work.","textPreview":"The user can feel that the system has already done the hard interpretive work.","textChars":78,"textLines":1,"bbox":[114,528,1050,44]}
+{"kind":"notes","id":"nt/5tizel","slide":8,"text":"因此这里真正的 gap 不是一句笼统的‘研究还不够多’，而是一个很具体的动态缺口。\n我们已经知道局部错误会影响当下采纳，但还不知道 repeated feedback 之下，这种局部错误会不会改写后面的 reliance path；更不知道这种改写会不会在 AI 恢复之后仍然留下痕迹。\n如果答案是会，那 AI error 的治理含义就不只是减少当期损失，而是要防止后续 decision architecture 被扭转。"}
+{"kind":"slide","id":"sl/hy5f2v","slide":9,"title":"KEY COMPARISON","textShapes":11}
+{"kind":"shape","id":"sh/u9knih4b","slide":9,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/1032lszq","slide":9,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":9,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":9,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":9,"text":"KEY COMPARISON","textPreview":"KEY COMPARISON","textChars":14,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":9,"text":"The key comparison is AI error versus human error under equal performance","textPreview":"The key comparison is AI error versus human error under equal performance","textChars":73,"textLines":1,"bbox":[96,96,1060,74]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":9,"text":"Without performance parity, lower reliance could always be dismissed as a simple response to lower quality.","textPreview":"Without performance parity, lower reliance could always be dismissed as a simple response to lower quality.","textChars":107,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/nap4r65w","slide":9,"bbox":[96,238,324,256]}
+{"kind":"shape","id":"sh/upwb2hwf","slide":9,"bbox":[96,238,6,256]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":9,"text":"Match performance","textPreview":"Match performance","textChars":17,"textLines":1,"bbox":[114,250,294,30]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":9,"text":"AI and human sources must remain equally useful overall.","textPreview":"AI and human sources must remain equally useful overall.","textChars":56,"textLines":1,"bbox":[114,286,294,196]}
+{"kind":"shape","id":"sh/al87ed8b","slide":9,"bbox":[478,238,324,256]}
+{"kind":"shape","id":"sh/z61032ls","slide":9,"bbox":[478,238,6,256]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":9,"text":"Vary error source","textPreview":"Vary error source","textChars":17,"textLines":1,"bbox":[496,250,294,30]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":9,"text":"Ask whether an early AI miss carries a heavier later penalty than an early human miss.","textPreview":"Ask whether an early AI miss carries a heavier later penalty than an early human miss.","textChars":86,"textLines":1,"bbox":[496,286,294,196]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":9,"bbox":[860,238,316,256]}
+{"kind":"shape","id":"sh/zupwb2hw","slide":9,"bbox":[860,238,6,256]}
+{"kind":"textbox","id":"sh/obm58z25","slide":9,"text":"Observe later path","textPreview":"Observe later path","textChars":18,"textLines":1,"bbox":[878,250,286,30]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":9,"text":"The outcome is the later reliance trajectory after further feedback arrives.","textPreview":"The outcome is the later reliance trajectory after further feedback arrives.","textChars":76,"textLines":1,"bbox":[878,286,286,196]}
+{"kind":"shape","id":"sh/18jqh0fe","slide":9,"bbox":[156,536,968,88]}
+{"kind":"shape","id":"sh/8nqxs72x","slide":9,"bbox":[156,536,6,88]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":9,"text":"Why parity matters before design details","textPreview":"Why parity matters before design details","textChars":40,"textLines":1,"bbox":[174,548,938,30]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":9,"text":"Performance parity is an identification premise. Only then can a larger penalty on AI error be interpreted as source-specific diagnostic asymmetry.","textPreview":"Performance parity is an identification premise. Only then can a larger penalty on AI error be interpreted as source-specific diagnostic ...","textChars":147,"textLines":1,"bbox":[174,584,938,28]}
+{"kind":"notes","id":"nt/hy5f2v","slide":9,"text":"基于前面的 gap，这篇 paper 提出三组连在一起的问题。\n第一，reliance 会不会随着相对表现动态更新；第二，集中式的 AI error shock 会不会把后续 adoption 拉低，而且恢复不完全；第三，这个效应会不会受到 shock timing 和 source asymmetry 的影响。\n这里的 framing 也要讲清楚：我们研究的不是 generic trust，而是 repeated-feedback environment 里的 dynamic reliance。"}
+{"kind":"slide","id":"sl/pmz6sx","slide":10,"title":"MECHANISM","textShapes":13}
+{"kind":"shape","id":"sh/ih4byhgn","slide":10,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/p8nqxs72","slide":10,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/0nuxc3yl","slide":10,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/7ed8bat4","slide":10,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":10,"text":"MECHANISM","textPreview":"MECHANISM","textChars":9,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":10,"text":"A local failure can become a calibration shock","textPreview":"A local failure can become a calibration shock","textChars":46,"textLines":1,"bbox":[96,96,980,74]}
+{"kind":"textbox","id":"sh/0z61032l","slide":10,"text":"The proposed path is early authority, then a source-specific miss, then incomplete reliance recovery.","textPreview":"The proposed path is early authority, then a source-specific miss, then incomplete reliance recovery.","textChars":101,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/7qpg3ex0","slide":10,"bbox":[96,248,324,246]}
+{"kind":"shape","id":"sh/i5sneloj","slide":10,"bbox":[96,248,6,246]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":10,"text":"Stage 1  Initial authority","textPreview":"Stage 1  Initial authority","textChars":26,"textLines":1,"bbox":[114,260,294,30]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":10,"text":"Coherent AI output can establish interpretive authority and make adoption initially attractive.","textPreview":"Coherent AI output can establish interpretive authority and make adoption initially attractive.","textChars":95,"textLines":1,"bbox":[114,296,294,186]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":10,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[424,352,36,24]}
+{"kind":"shape","id":"sh/72x4nap4","slide":10,"bbox":[478,248,324,246]}
+{"kind":"shape","id":"sh/0z61032l","slide":10,"bbox":[478,248,6,246]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":10,"text":"Stage 2  Diagnostic miss","textPreview":"Stage 2  Diagnostic miss","textChars":24,"textLines":1,"bbox":[496,260,294,30]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":10,"text":"A salient AI error can trigger a stronger negative update when the miss is read as evidence about the source itself.","textPreview":"A salient AI error can trigger a stronger negative update when the miss is read as evidence about the source itself.","textChars":116,"textLines":1,"bbox":[496,296,294,186]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":10,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[806,352,36,24]}
+{"kind":"shape","id":"sh/0bi9s36h","slide":10,"bbox":[860,248,324,246]}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":10,"bbox":[860,248,6,246]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":10,"text":"Stage 3  Partial recovery","textPreview":"Stage 3  Partial recovery","textChars":25,"textLines":1,"bbox":[878,260,294,30]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":10,"text":"Even when AI later recovers, adoption may recover only partially and under-reliance can persist.","textPreview":"Even when AI later recovers, adoption may recover only partially and under-reliance can persist.","textChars":96,"textLines":1,"bbox":[878,296,294,186]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":10,"bbox":[180,536,920,86]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":10,"bbox":[180,536,6,86]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":10,"text":"Two mechanism modifiers","textPreview":"Two mechanism modifiers","textChars":23,"textLines":1,"bbox":[198,548,890,30]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":10,"text":"Timing heterogeneity asks whether early shocks matter more than later ones. Source asymmetry asks whether AI errors receive heavier negative learning weights than comparable human errors.","textPreview":"Timing heterogeneity asks whether early shocks matter more than later ones. Source asymmetry asks whether AI errors receive heavier negat...","textChars":187,"textLines":1,"bbox":[198,584,890,26]}
+{"kind":"notes","id":"nt/pmz6sx","slide":10,"text":"机制上，我把它写成一个两阶段再加后果的过程。\n第一阶段，generative AI 通过 coherent output 建立初始 authority；第二阶段，一旦出现显著错误，就可能触发一次比普通 signal 更强的负向重校准。\n最终的经验后果就是，哪怕 AI 后面客观恢复，adoption 也可能只恢复一部分。这也是 timing heterogeneity 和 source asymmetry 要进入机制讨论的原因。"}
+{"kind":"slide","id":"sl/t5ev8n","slide":11,"title":"PROTOTYPE REQUIREMENTS","textShapes":14}
+{"kind":"shape","id":"sh/c7u54zid","slide":11,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":11,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":11,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/1032lszq","slide":11,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":11,"text":"PROTOTYPE REQUIREMENTS","textPreview":"PROTOTYPE REQUIREMENTS","textChars":22,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/judg7ads","slide":11,"text":"The prototype has to satisfy five requirements","textPreview":"The prototype has to satisfy five requirements","textChars":46,"textLines":1,"bbox":[96,96,930,74]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":11,"text":"Before treatment details matter, the task has to make the target behavior observable and interpretable.","textPreview":"Before treatment details matter, the task has to make the target behavior observable and interpretable.","textChars":103,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/54zidony","slide":11,"bbox":[96,228,332,128]}
+{"kind":"shape","id":"sh/cj6tovah","slide":11,"bbox":[96,228,6,128]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":11,"text":"Repeated rounds","textPreview":"Repeated rounds","textChars":15,"textLines":1,"bbox":[114,240,302,30]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":11,"text":"The task must show decline, recovery, and persistence over time.","textPreview":"The task must show decline, recovery, and persistence over time.","textChars":64,"textLines":1,"bbox":[114,276,302,68]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":11,"bbox":[470,228,332,128]}
+{"kind":"shape","id":"sh/loj2t83i","slide":11,"bbox":[470,228,6,128]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":11,"text":"Learning cost","textPreview":"Learning cost","textChars":13,"textLines":1,"bbox":[488,240,302,30]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":11,"text":"The environment must stay learnable without becoming trivial after a few trials.","textPreview":"The environment must stay learnable without becoming trivial after a few trials.","textChars":80,"textLines":1,"bbox":[488,276,302,68]}
+{"kind":"shape","id":"sh/wb2hwfyx","slide":11,"bbox":[844,228,332,128]}
+{"kind":"shape","id":"sh/lwval87e","slide":11,"bbox":[844,228,6,128]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":11,"text":"Full feedback","textPreview":"Full feedback","textChars":13,"textLines":1,"bbox":[862,240,302,30]}
+{"kind":"textbox","id":"sh/32lszqtc","slide":11,"text":"Participants must see actual and counterfactual outcomes every round.","textPreview":"Participants must see actual and counterfactual outcomes every round.","textChars":69,"textLines":1,"bbox":[862,276,302,68]}
+{"kind":"shape","id":"sh/v6psfil0","slide":11,"bbox":[96,380,516,132]}
+{"kind":"shape","id":"sh/2lszqtcj","slide":11,"bbox":[96,380,6,132]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":11,"text":"Abstract setting","textPreview":"Abstract setting","textChars":16,"textLines":1,"bbox":[114,392,486,30]}
+{"kind":"textbox","id":"sh/knih4byh","slide":11,"text":"The task must avoid outside domain attitudes and prior labels.","textPreview":"The task must avoid outside domain attitudes and prior labels.","textChars":62,"textLines":1,"bbox":[114,428,486,72]}
+{"kind":"shape","id":"sh/vu9knih4","slide":11,"bbox":[660,380,516,132]}
+{"kind":"shape","id":"sh/29gr2p8n","slide":11,"bbox":[660,380,6,132]}
+{"kind":"textbox","id":"sh/d0z61032","slide":11,"text":"Parity-controlled AI usefulness","textPreview":"Parity-controlled AI usefulness","textChars":31,"textLines":1,"bbox":[678,392,486,30]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":11,"text":"AI must remain useful overall so under-reliance cannot be reduced to lower ability.","textPreview":"AI must remain useful overall so under-reliance cannot be reduced to lower ability.","textChars":83,"textLines":1,"bbox":[678,428,486,72]}
+{"kind":"textbox","id":"sh/vixczed8","slide":11,"text":"Only after these requirements are clear does the concrete treatment design become persuasive.","textPreview":"Only after these requirements are clear does the concrete treatment design become persuasive.","textChars":93,"textLines":1,"bbox":[126,560,1030,22]}
+{"kind":"notes","id":"nt/t5ev8n","slide":11,"text":"在具体设计之前，我先解释为什么实验原型必须长这个样子。\n如果没有 repeated rounds，我们看不到 path；如果没有 full counterfactual feedback，我们不知道参与者到底看到了什么相对表现；如果没有 parity-controlled usefulness，我们又无法排除 AI 本来就更差这个更简单的解释。\n所以这页是在说明，这个 task prototype 不是任意的，它是在为后面的识别服务。"}
+{"kind":"slide","id":"sl/pih3ip","slide":12,"title":"TASK OVERVIEW","textShapes":24}
+{"kind":"shape","id":"sh/j6tovaho","slide":12,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/crmhk3q5","slide":12,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/1cfa9w3m","slide":12,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":12,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":12,"text":"TASK OVERVIEW","textPreview":"TASK OVERVIEW","textChars":13,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":12,"text":"The task makes reliance visible round by round","textPreview":"The task makes reliance visible round by round","textChars":46,"textLines":1,"bbox":[96,96,950,74]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":12,"text":"Participants repeatedly allocate points, compare self with AI, and then observe full feedback.","textPreview":"Participants repeatedly allocate points, compare self with AI, and then observe full feedback.","textChars":94,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":12,"bbox":[96,232,268,176]}
+{"kind":"shape","id":"sh/jqh0fepk","slide":12,"bbox":[96,232,6,176]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":12,"text":"Decision object","textPreview":"Decision object","textChars":15,"textLines":1,"bbox":[114,244,238,30]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":12,"text":"Allocate 100 points across three channels with uncertain returns.","textPreview":"Allocate 100 points across three channels with uncertain returns.","textChars":65,"textLines":1,"bbox":[114,280,238,116]}
+{"kind":"shape","id":"sh/xs72x4na","slide":12,"bbox":[386,232,268,176]}
+{"kind":"shape","id":"sh/87ed8bat","slide":12,"bbox":[386,232,6,176]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":12,"text":"AI input","textPreview":"AI input","textChars":8,"textLines":1,"bbox":[404,244,238,30]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":12,"text":"See the Agent-AI allocation after making a self allocation.","textPreview":"See the Agent-AI allocation after making a self allocation.","textChars":59,"textLines":1,"bbox":[404,280,238,116]}
+{"kind":"shape","id":"sh/1gvy90je","slide":12,"bbox":[676,232,268,176]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":12,"bbox":[676,232,6,176]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":12,"text":"Behavioral choice","textPreview":"Behavioral choice","textChars":17,"textLines":1,"bbox":[694,244,238,30]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":12,"text":"Adopt self or adopt AI on every round.","textPreview":"Adopt self or adopt AI on every round.","textChars":38,"textLines":1,"bbox":[694,280,238,116]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":12,"bbox":[966,232,210,176]}
+{"kind":"shape","id":"sh/neloj2t8","slide":12,"bbox":[966,232,6,176]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":12,"text":"Feedback","textPreview":"Feedback","textChars":8,"textLines":1,"bbox":[984,244,180,30]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":12,"text":"Observe actual and counterfactual payoffs immediately.","textPreview":"Observe actual and counterfactual payoffs immediately.","textChars":54,"textLines":1,"bbox":[984,280,180,116]}
+{"kind":"textbox","id":"sh/u54zidon","slide":12,"text":"One participant loop","textPreview":"One participant loop","textChars":20,"textLines":1,"bbox":[96,462,300,24]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":12,"bbox":[96,500,164,112]}
+{"kind":"shape","id":"sh/cbulwval","slide":12,"bbox":[96,500,6,112]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":12,"text":"See history","textPreview":"See history","textChars":11,"textLines":1,"bbox":[114,512,134,30]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":12,"text":"Recent channel values","textPreview":"Recent channel values","textChars":21,"textLines":1,"bbox":[114,548,134,52]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":12,"bbox":[264,563,14,2]}
+{"kind":"shape","id":"sh/d0z61032","slide":12,"bbox":[278,500,164,112]}
+{"kind":"shape","id":"sh/kf6dcbul","slide":12,"bbox":[278,500,6,112]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":12,"text":"Self allocation","textPreview":"Self allocation","textChars":15,"textLines":1,"bbox":[296,512,134,30]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":12,"text":"100-point choice","textPreview":"100-point choice","textChars":16,"textLines":1,"bbox":[296,548,134,52]}
+{"kind":"shape","id":"sh/d8bat47y","slide":12,"bbox":[446,563,14,2]}
+{"kind":"shape","id":"sh/knih4byh","slide":12,"bbox":[460,500,164,112]}
+{"kind":"shape","id":"sh/v6psfil0","slide":12,"bbox":[460,500,6,112]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":12,"text":"AI allocation","textPreview":"AI allocation","textChars":13,"textLines":1,"bbox":[478,512,134,30]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":12,"text":"Agent-AI suggestion","textPreview":"Agent-AI suggestion","textChars":19,"textLines":1,"bbox":[478,548,134,52]}
+{"kind":"shape","id":"sh/kre1w7mp","slide":12,"bbox":[628,563,14,2]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":12,"bbox":[642,500,164,112]}
+{"kind":"shape","id":"sh/hoza1gvy","slide":12,"bbox":[642,500,6,112]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":12,"text":"Choose source","textPreview":"Choose source","textChars":13,"textLines":1,"bbox":[660,512,134,30]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":12,"text":"Adopt self or AI","textPreview":"Adopt self or AI","textChars":16,"textLines":1,"bbox":[660,548,134,52]}
+{"kind":"shape","id":"sh/svu9knih","slide":12,"bbox":[810,563,14,2]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":12,"bbox":[824,500,164,112]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":12,"bbox":[824,500,6,112]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":12,"text":"Full feedback","textPreview":"Full feedback","textChars":13,"textLines":1,"bbox":[842,512,134,30]}
+{"kind":"textbox","id":"sh/sji5snel","slide":12,"text":"Actual and counterfactual payoffs","textPreview":"Actual and counterfactual payoffs","textChars":33,"textLines":1,"bbox":[842,548,134,52]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":12,"bbox":[992,563,14,2]}
+{"kind":"shape","id":"sh/byhgn29g","slide":12,"bbox":[1006,500,164,112]}
+{"kind":"shape","id":"sh/idonyd0z","slide":12,"bbox":[1006,500,6,112]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":12,"text":"Update","textPreview":"Update","textChars":6,"textLines":1,"bbox":[1024,512,134,30]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":12,"text":"Carry the reliance state forward","textPreview":"Carry the reliance state forward","textChars":32,"textLines":1,"bbox":[1024,548,134,52]}
+{"kind":"notes","id":"nt/pih3ip","slide":12,"text":"这页开始进入具体 task，但我还是尽量把它讲得直观。\n每一轮里，受试者先看历史，再给出自己的 allocation，然后看到 AI allocation，最后在 self 和 AI 之间做选择，并立即看到 actual 和 counterfactual payoffs。\n这个结构的好处是，reliance 不再是一个抽象态度，而是每一轮都能被直接观察到的 adopt self or adopt AI 行为。"}
+{"kind":"slide","id":"sl/ty3mwa","slide":13,"title":"CONDITIONS AND PARITY","textShapes":35}
+{"kind":"shape","id":"sh/jqh0fepk","slide":13,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/8bat47y1","slide":13,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":13,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":13,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":13,"text":"CONDITIONS AND PARITY","textPreview":"CONDITIONS AND PARITY","textChars":21,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":13,"text":"Shock timing changes while AI usefulness stays matched","textPreview":"Shock timing changes while AI usefulness stays matched","textChars":54,"textLines":1,"bbox":[96,96,980,74]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":13,"text":"The identification logic is simple: move the concentrated AI error while keeping AI performance parity explicit.","textPreview":"The identification logic is simple: move the concentrated AI error while keeping AI performance parity explicit.","textChars":112,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"textbox","id":"sh/ulwval87","slide":13,"text":"Condition logic","textPreview":"Condition logic","textChars":15,"textLines":1,"bbox":[96,220,260,24]}
+{"kind":"shape","id":"sh/j6tovaho","slide":13,"bbox":[96,252,344,122]}
+{"kind":"shape","id":"sh/j2t83itg","slide":13,"bbox":[96,252,6,122]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":13,"text":"Balanced Error","textPreview":"Balanced Error","textChars":14,"textLines":1,"bbox":[114,264,314,30]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":13,"text":"Errors are distributed.","textPreview":"Errors are distributed.","textChars":23,"textLines":1,"bbox":[114,300,314,62]}
+{"kind":"shape","id":"sh/8nqxs72x","slide":13,"bbox":[114,332,34,22]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[123,334,16,16]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":13,"bbox":[160,332,34,22]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[169,334,16,16]}
+{"kind":"shape","id":"sh/8bat47y1","slide":13,"bbox":[206,332,34,22]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[215,334,16,16]}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":13,"bbox":[252,332,34,22]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[261,334,16,16]}
+{"kind":"shape","id":"sh/re1w7mp0","slide":13,"bbox":[298,332,34,22]}
+{"kind":"textbox","id":"sh/kzupwb2h","slide":13,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[307,334,16,16]}
+{"kind":"shape","id":"sh/9knih4by","slide":13,"bbox":[344,332,34,22]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":13,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[353,334,16,16]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":13,"bbox":[468,252,344,122]}
+{"kind":"shape","id":"sh/kb6xkf6d","slide":13,"bbox":[468,252,6,122]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":13,"text":"Early Shock","textPreview":"Early Shock","textChars":11,"textLines":1,"bbox":[486,264,314,30]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":13,"text":"Errors concentrate early.","textPreview":"Errors concentrate early.","textChars":25,"textLines":1,"bbox":[486,300,314,62]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":13,"bbox":[486,332,34,22]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[495,334,16,16]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":13,"bbox":[532,332,34,22]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[541,334,16,16]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":13,"bbox":[578,332,34,22]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[587,334,16,16]}
+{"kind":"shape","id":"sh/87ed8bat","slide":13,"bbox":[624,332,34,22]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[633,334,16,16]}
+{"kind":"shape","id":"sh/q1orytsv","slide":13,"bbox":[670,332,34,22]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":13,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[679,334,16,16]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":13,"bbox":[716,332,34,22]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":13,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[725,334,16,16]}
+{"kind":"shape","id":"sh/58z25kb6","slide":13,"bbox":[840,252,344,122]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":13,"bbox":[840,252,6,122]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":13,"text":"Mid Shock","textPreview":"Mid Shock","textChars":9,"textLines":1,"bbox":[858,264,314,30]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":13,"text":"Errors concentrate mid-way.","textPreview":"Errors concentrate mid-way.","textChars":27,"textLines":1,"bbox":[858,300,314,62]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":13,"bbox":[858,332,34,22]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[867,334,16,16]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":13,"bbox":[904,332,34,22]}
+{"kind":"textbox","id":"sh/cbulwval","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[913,334,16,16]}
+{"kind":"shape","id":"sh/5sneloj2","slide":13,"bbox":[950,332,34,22]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[959,334,16,16]}
+{"kind":"shape","id":"sh/29gr2p8n","slide":13,"bbox":[996,332,34,22]}
+{"kind":"textbox","id":"sh/d0z61032","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1005,334,16,16]}
+{"kind":"shape","id":"sh/kf6dcbul","slide":13,"bbox":[1042,332,34,22]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":13,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1051,334,16,16]}
+{"kind":"shape","id":"sh/2lszqtcj","slide":13,"bbox":[1088,332,34,22]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":13,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1097,334,16,16]}
+{"kind":"textbox","id":"sh/knih4byh","slide":13,"text":"Performance parity standard","textPreview":"Performance parity standard","textChars":27,"textLines":1,"bbox":[96,404,320,24]}
+{"kind":"shape","id":"sh/val87ed8","slide":13,"bbox":[96,438,250,70]}
+{"kind":"shape","id":"sh/6psfil0r","slide":13,"bbox":[96,438,6,70]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":13,"text":"same total payoff","textPreview":"same total payoff","textChars":17,"textLines":1,"bbox":[114,450,220,30]}
+{"kind":"shape","id":"sh/zidonyd0","slide":13,"bbox":[366,438,250,70]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":13,"bbox":[366,438,6,70]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":13,"text":"same mean payoff","textPreview":"same mean payoff","textChars":16,"textLines":1,"bbox":[384,450,220,30]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":13,"bbox":[636,438,250,70]}
+{"kind":"shape","id":"sh/za1gvy90","slide":13,"bbox":[636,438,6,70]}
+{"kind":"textbox","id":"sh/svu9knih","slide":13,"text":"same error count","textPreview":"same error count","textChars":16,"textLines":1,"bbox":[654,450,220,30]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":13,"bbox":[906,438,250,70]}
+{"kind":"shape","id":"sh/adsji5sn","slide":13,"bbox":[906,438,6,70]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":13,"text":"same recovery level","textPreview":"same recovery level","textChars":19,"textLines":1,"bbox":[924,450,220,30]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":13,"bbox":[96,548,1080,72]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":13,"bbox":[96,548,6,72]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":13,"text":"Why parity is central","textPreview":"Why parity is central","textChars":21,"textLines":1,"bbox":[114,560,1050,30]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":13,"text":"Parity blocks the simpler explanation that later under-reliance appears because the AI was actually worse overall. It makes timing the identifying variation.","textPreview":"Parity blocks the simpler explanation that later under-reliance appears because the AI was actually worse overall. It makes timing the id...","textChars":157,"textLines":1,"bbox":[114,596,1050,12]}
+{"kind":"notes","id":"nt/ty3mwa","slide":13,"text":"这里是最核心的 design logic。真正变化的是 error 出现的时间结构，而不是 AI 总体有用性。\nBalanced、Early Shock 和 Mid Shock 的区别，只在于 concentrated error 出现在什么时候；但 total payoff、mean payoff、error count 和 recovery level 都要匹配。\n所以 parity 在这里不是一个普通控制项，而是 identification prerequisite。只有这样，我们才能把后续 adoption gap 解释成 timing-driven path effect。"}
+{"kind":"slide","id":"sl/sqwdhg","slide":14,"title":"RQ TABLE","textShapes":28}
+{"kind":"shape","id":"sh/obm58z25","slide":14,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":14,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/65wjudg7","slide":14,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/hk3q5o7q","slide":14,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":14,"text":"RQ TABLE","textPreview":"RQ TABLE","textChars":8,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":14,"text":"Questions, manipulations, and comparisons line up cleanly","textPreview":"Questions, manipulations, and comparisons line up cleanly","textChars":57,"textLines":1,"bbox":[96,96,1000,74]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":14,"text":"This is the shortest route from hypothesis to identification while keeping parity visible.","textPreview":"This is the shortest route from hypothesis to identification while keeping parity visible.","textChars":90,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":14,"bbox":[86,220,170,52]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":14,"text":"RQ / H","textPreview":"RQ / H","textChars":6,"textLines":1,"bbox":[98,230,146,34]}
+{"kind":"shape","id":"sh/yxobm58z","slide":14,"bbox":[256,220,232,52]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":14,"text":"Experimental manipulation","textPreview":"Experimental manipulation","textChars":25,"textLines":1,"bbox":[268,230,208,34]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":14,"bbox":[488,220,208,52]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":14,"text":"Key comparison","textPreview":"Key comparison","textChars":14,"textLines":1,"bbox":[500,230,184,34]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":14,"bbox":[696,220,210,52]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":14,"text":"Parity standard","textPreview":"Parity standard","textChars":15,"textLines":1,"bbox":[708,230,186,34]}
+{"kind":"shape","id":"sh/gr2p8nqx","slide":14,"bbox":[906,220,288,52]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":14,"text":"What the comparison identifies","textPreview":"What the comparison identifies","textChars":30,"textLines":1,"bbox":[918,230,264,34]}
+{"kind":"shape","id":"sh/yd0z6103","slide":14,"bbox":[86,272,170,92]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":14,"text":"H1\nDynamic updating","textPreview":"H1 | Dynamic updating","textChars":19,"textLines":2,"bbox":[98,282,146,74]}
+{"kind":"shape","id":"sh/za1gvy90","slide":14,"bbox":[256,272,232,92]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":14,"text":"Repeated self-versus-AI choice with full feedback every round","textPreview":"Repeated self-versus-AI choice with full feedback every round","textChars":61,"textLines":1,"bbox":[268,282,208,74]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":14,"bbox":[488,272,208,92]}
+{"kind":"textbox","id":"sh/svu9knih","slide":14,"text":"Rounds after AI outperforms self versus rounds after AI underperforms self","textPreview":"Rounds after AI outperforms self versus rounds after AI underperforms self","textChars":74,"textLines":1,"bbox":[500,282,184,74]}
+{"kind":"shape","id":"sh/zidonyd0","slide":14,"bbox":[696,272,210,92]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":14,"text":"Same task, same interface, and same feedback rule for everyone","textPreview":"Same task, same interface, and same feedback rule for everyone","textChars":62,"textLines":1,"bbox":[708,282,186,74]}
+{"kind":"shape","id":"sh/hoza1gvy","slide":14,"bbox":[906,272,288,92]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":14,"text":"Whether reliance tracks relative performance at all","textPreview":"Whether reliance tracks relative performance at all","textChars":51,"textLines":1,"bbox":[918,282,264,74]}
+{"kind":"shape","id":"sh/3m94fu18","slide":14,"bbox":[86,364,170,104]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":14,"text":"H2-H3\nShock and recovery","textPreview":"H2-H3 | Shock and recovery","textChars":24,"textLines":2,"bbox":[98,374,146,86]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":14,"bbox":[256,364,232,104]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":14,"text":"Concentrated AI errors followed by recovery versus balanced AI errors","textPreview":"Concentrated AI errors followed by recovery versus balanced AI errors","textChars":69,"textLines":1,"bbox":[268,374,208,86]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":14,"bbox":[488,364,208,104]}
+{"kind":"textbox","id":"sh/vixczed8","slide":14,"text":"Shock versus Balanced in post-shock and recovery rounds","textPreview":"Shock versus Balanced in post-shock and recovery rounds","textChars":55,"textLines":1,"bbox":[500,374,184,86]}
+{"kind":"shape","id":"sh/kre1w7mp","slide":14,"bbox":[696,364,210,104]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":14,"text":"Matched total payoff, mean payoff, error count, and later recovery level","textPreview":"Matched total payoff, mean payoff, error count, and later recovery level","textChars":72,"textLines":1,"bbox":[708,374,186,86]}
+{"kind":"shape","id":"sh/6psfil0r","slide":14,"bbox":[906,364,288,104]}
+{"kind":"textbox","id":"sh/val87ed8","slide":14,"text":"Whether local failure lowers later adoption even after AI ability recovers","textPreview":"Whether local failure lowers later adoption even after AI ability recovers","textChars":74,"textLines":1,"bbox":[918,374,264,86]}
+{"kind":"shape","id":"sh/knih4byh","slide":14,"bbox":[86,468,170,92]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":14,"text":"H4\nTiming heterogeneity","textPreview":"H4 | Timing heterogeneity","textChars":23,"textLines":2,"bbox":[98,478,146,74]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":14,"bbox":[256,468,232,92]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":14,"text":"Move the concentrated shock to an early block or a mid block","textPreview":"Move the concentrated shock to an early block or a mid block","textChars":60,"textLines":1,"bbox":[268,478,208,74]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":14,"bbox":[488,468,208,92]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":14,"text":"Early Shock versus Mid Shock versus Balanced","textPreview":"Early Shock versus Mid Shock versus Balanced","textChars":44,"textLines":1,"bbox":[500,478,184,74]}
+{"kind":"shape","id":"sh/58z25kb6","slide":14,"bbox":[696,468,210,92]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":14,"text":"Matched AI performance and matched shock intensity","textPreview":"Matched AI performance and matched shock intensity","textChars":50,"textLines":1,"bbox":[708,478,186,74]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":14,"bbox":[906,468,288,92]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":14,"text":"Whether first impressions differ from the breakdown of an established pattern","textPreview":"Whether first impressions differ from the breakdown of an established pattern","textChars":77,"textLines":1,"bbox":[918,478,264,74]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":14,"bbox":[86,560,170,104]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":14,"text":"H5-H6\nAsymmetry and architecture shift","textPreview":"H5-H6 | Asymmetry and architecture shift","textChars":38,"textLines":2,"bbox":[98,570,146,86]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":14,"bbox":[256,560,232,104]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":14,"text":"Record reactions to AI versus self failures and measure block-level architecture preference","textPreview":"Record reactions to AI versus self failures and measure block-level architecture preference","textChars":91,"textLines":1,"bbox":[268,570,208,86]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":14,"bbox":[488,560,208,104]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":14,"text":"AI loss versus self loss; post-shock architecture preference across conditions","textPreview":"AI loss versus self loss; post-shock architecture preference across conditions","textChars":78,"textLines":1,"bbox":[500,570,184,86]}
+{"kind":"shape","id":"sh/q1orytsv","slide":14,"bbox":[696,560,210,104]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":14,"text":"Same counterfactual feedback and same preference schedule","textPreview":"Same counterfactual feedback and same preference schedule","textChars":57,"textLines":1,"bbox":[708,570,186,86]}
+{"kind":"shape","id":"sh/87ed8bat","slide":14,"bbox":[906,560,288,104]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":14,"text":"Whether AI errors receive heavier negative weights and shift the preferred decision architecture","textPreview":"Whether AI errors receive heavier negative weights and shift the preferred decision architecture","textChars":96,"textLines":1,"bbox":[918,570,264,86]}
+{"kind":"notes","id":"nt/sqwdhg","slide":14,"text":"这张表的作用是把整个 paper 压缩成一条很清楚的识别链。\n也就是从 RQ 或 hypothesis，走到具体 manipulation，再走到 key comparison，接着说明 parity standard，最后告诉老师这个比较到底识别什么。\n如果老师后面只记住一张方法页，我希望就是这张，因为它能最快说明这不是一个复杂但混乱的实验，而是一个结构上很清楚的设计。"}
+{"kind":"slide","id":"sl/eak369","slide":15,"title":"EXPECTED RESULTS","textShapes":13}
+{"kind":"shape","id":"sh/9w3m94fu","slide":15,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/25kb6xkf","slide":15,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":15,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":15,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/9knih4by","slide":15,"text":"EXPECTED RESULTS","textPreview":"EXPECTED RESULTS","textChars":16,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":15,"text":"We expect a visible path before a mechanism","textPreview":"We expect a visible path before a mechanism","textChars":43,"textLines":1,"bbox":[96,96,1040,74]}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":15,"text":"The analysis should first show that reliance changes, then test whether the change is causal, and only then explain why recovery is incomplete.","textPreview":"The analysis should first show that reliance changes, then test whether the change is causal, and only then explain why recovery is incom...","textChars":143,"textLines":1,"bbox":[96,176,1060,28]}
+{"kind":"shape","id":"sh/gvy90je9","slide":15,"bbox":[96,250,560,280]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":15,"text":"Expected adoption path","textPreview":"Expected adoption path","textChars":22,"textLines":1,"bbox":[116,264,220,26]}
+{"kind":"shape","id":"sh/dg7adsji","slide":15,"bbox":[170,418,136,-6]}
+{"kind":"shape","id":"sh/ovahoza1","slide":15,"bbox":[306,412,166,8]}
+{"kind":"shape","id":"sh/vahoza1g","slide":15,"bbox":[472,420,154,-8]}
+{"kind":"shape","id":"sh/6tovahoz","slide":15,"bbox":[170,424,136,-2]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":15,"bbox":[306,422,166,76]}
+{"kind":"shape","id":"sh/onyd0z61","slide":15,"bbox":[472,498,154,-26]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":15,"bbox":[170,430,136,-2]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":15,"bbox":[306,428,166,92]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":15,"bbox":[472,520,154,-28]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":15,"text":"Adoption","textPreview":"Adoption","textChars":8,"textLines":1,"bbox":[132,324,80,18]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":15,"text":"Rounds","textPreview":"Rounds","textChars":6,"textLines":1,"bbox":[560,538,70,18]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":15,"text":"Balanced","textPreview":"Balanced","textChars":8,"textLines":1,"bbox":[540,284,80,18]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":15,"text":"Mid","textPreview":"Mid","textChars":3,"textLines":1,"bbox":[540,306,80,18]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":15,"text":"Early","textPreview":"Early","textChars":5,"textLines":1,"bbox":[540,328,80,18]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":15,"bbox":[700,250,476,280]}
+{"kind":"shape","id":"sh/94fu18jq","slide":15,"bbox":[700,250,6,280]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":15,"text":"Analysis hierarchy","textPreview":"Analysis hierarchy","textChars":18,"textLines":1,"bbox":[718,262,446,30]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":15,"text":"1  Visible path\nShow that concentrated error creates a later adoption gap.\n\n2  Reduced-form identification\nUse post-shock and recovery comparisons to test whether timing causes that gap.\n\n3  EWA-inspired mechanism\nOnly then ask whether AI errors receive heavier negative learning weights.","textPreview":"1  Visible path | Show that concentrated error creates a later adoption gap. |  | 2  Reduced-form identification | Use post-shock and rec...","textChars":288,"textLines":8,"bbox":[718,298,446,220]}
+{"kind":"shape","id":"sh/kb6xkf6d","slide":15,"bbox":[96,566,1080,72]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":15,"bbox":[96,566,6,72]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":15,"text":"Expected contribution","textPreview":"Expected contribution","textChars":21,"textLines":1,"bbox":[114,578,1050,30]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":15,"text":"Paper 2 identifies path-dependent under-reliance and shows how local AI failure can reshape later decision architecture even when AI performance returns.","textPreview":"Paper 2 identifies path-dependent under-reliance and shows how local AI failure can reshape later decision architecture even when AI perf...","textChars":153,"textLines":1,"bbox":[114,614,1050,12]}
+{"kind":"notes","id":"nt/eak369","slide":15,"text":"最后这页先讲 expected pattern，再讲 analysis hierarchy。\n第一步是先把 visible adoption path 画出来，看 concentrated error 之后是否真的出现 later reliance gap；第二步是用 reduced-form comparison 去证明这个 gap 是 causal treatment effect；第三步才让 EWA-inspired mechanism 进入，解释为什么 recovery 不完全。\n所以整篇 paper 的贡献，不是单纯说 AI 会出错，而是识别什么时候一个局部 AI failure 会变成 path-dependent under-reliance。"}

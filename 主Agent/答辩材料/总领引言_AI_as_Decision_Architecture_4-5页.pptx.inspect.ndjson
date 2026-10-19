@@ -1,0 +1,163 @@
+{"kind":"deck","id":"pr/09u302","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/2x4nap4r","slide":1,"title":"DOCTORAL PROJECT","textShapes":15}
+{"kind":"shape","id":"sh/nap4r65w","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/cvixczed","slide":1,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":1,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/udg7adsj","slide":1,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/nyd0z610","slide":1,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"name":"kicker-label","text":"DOCTORAL PROJECT","textPreview":"DOCTORAL PROJECT","textChars":16,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/54zidony","slide":1,"text":"AI as Decision Architecture","textPreview":"AI as Decision Architecture","textChars":27,"textLines":1,"bbox":[96,118,640,140]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":1,"text":"生成式 AI 如何重构高风险决策中的信念、依赖与责任","textPreview":"生成式 AI 如何重构高风险决策中的信念、依赖与责任","textChars":26,"textLines":1,"bbox":[96,260,620,80]}
+{"kind":"textbox","id":"sh/judg7ads","slide":1,"text":"Xu | 博士论文答辩总领引言 | 2026年7月","textPreview":"Xu | 博士论文答辩总领引言 | 2026年7月","textChars":25,"textLines":1,"bbox":[96,384,300,30]}
+{"kind":"shape","id":"sh/nyd0z610","slide":1,"bbox":[800,118,320,110]}
+{"kind":"shape","id":"sh/udg7adsj","slide":1,"bbox":[800,118,6,110]}
+{"kind":"textbox","id":"sh/54zidony","slide":1,"text":"旧理解","textPreview":"旧理解","textChars":3,"textLines":1,"bbox":[822,134,276,22]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"text":"外部工具","textPreview":"外部工具","textChars":4,"textLines":1,"bbox":[822,152,276,42]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":1,"text":"提供信息、建议或执行效率。","textPreview":"提供信息、建议或执行效率。","textChars":13,"textLines":1,"bbox":[822,198,276,22]}
+{"kind":"shape","id":"sh/upwb2hwf","slide":1,"bbox":[860,268,320,110]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":1,"bbox":[860,268,6,110]}
+{"kind":"textbox","id":"sh/cvixczed","slide":1,"text":"新理解","textPreview":"新理解","textChars":3,"textLines":1,"bbox":[882,284,276,22]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":1,"text":"决策架构","textPreview":"决策架构","textChars":4,"textLines":1,"bbox":[882,302,276,42]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":1,"text":"重排证据、行动阈值与责任关系。","textPreview":"重排证据、行动阈值与责任关系。","textChars":15,"textLines":1,"bbox":[882,348,276,22]}
+{"kind":"shape","id":"sh/25kb6xkf","slide":1,"bbox":[800,418,320,110]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":1,"bbox":[800,418,6,110]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":1,"text":"核心问题","textPreview":"核心问题","textChars":4,"textLines":1,"bbox":[822,434,276,22]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":1,"text":"为什么是一个课题","textPreview":"为什么是一个课题","textChars":8,"textLines":1,"bbox":[822,452,276,42]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":1,"text":"因为三篇识别的是同一 AI-mediated decision process。","textPreview":"因为三篇识别的是同一 AI-mediated decision process。","textChars":40,"textLines":1,"bbox":[822,498,276,22]}
+{"kind":"shape","id":"sh/0rqd4vmt","slide":1,"bbox":[960,228,60,40]}
+{"kind":"shape","id":"sh/byhgn29g","slide":1,"bbox":[960,378,60,40]}
+{"kind":"textbox","id":"sh/9knih4by","slide":1,"text":"总领引言基于主Agent总框架与三篇文章映射。","textPreview":"总领引言基于主Agent总框架与三篇文章映射。","textChars":23,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"notes","id":"nt/2x4nap4r","slide":1,"text":""}
+{"kind":"slide","id":"sl/pg3ex0nu","slide":2,"title":"总问题","textShapes":16}
+{"kind":"shape","id":"sh/yxobm58z","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":2,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":2,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/r65wjudg","slide":2,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":2,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":2,"name":"kicker-label","text":"总问题","textPreview":"总问题","textChars":3,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":2,"text":"AI 不是外部工具，它在重写决策过程本身。","textPreview":"AI 不是外部工具，它在重写决策过程本身。","textChars":21,"textLines":1,"bbox":[96,96,700,110]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":2,"text":"现有研究常问 AI 是否更准、是否被采纳、是否该问责；本课题更进一步，问它是否重构了决策 architecture。","textPreview":"现有研究常问 AI 是否更准、是否被采纳、是否该问责；本课题更进一步，问它是否重构了决策 architecture。","textChars":58,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":2,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,258,24,58]}
+{"kind":"textbox","id":"sh/lwval87e","slide":2,"text":"AI 先组织证据与解释，再让人决定是否继续验证。","textPreview":"AI 先组织证据与解释，再让人决定是否继续验证。","textChars":24,"textLines":1,"bbox":[124,256,560,76]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":2,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,340,24,58]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":2,"text":"它改变的不只是结果，也改变依赖如何被校准、行动何时被触发。","textPreview":"它改变的不只是结果，也改变依赖如何被校准、行动何时被触发。","textChars":29,"textLines":1,"bbox":[124,338,560,76]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":2,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,422,24,58]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":2,"text":"一旦 AI 进入执行链条，责任关系也会被随之重排。","textPreview":"一旦 AI 进入执行链条，责任关系也会被随之重排。","textChars":25,"textLines":1,"bbox":[124,420,560,76]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":2,"bbox":[760,228,360,276]}
+{"kind":"shape","id":"sh/3itgfmlk","slide":2,"bbox":[760,228,6,276]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":2,"text":"ARCHITECTURE TURN","textPreview":"ARCHITECTURE TURN","textChars":17,"textLines":1,"bbox":[782,244,316,22]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":2,"text":"为什么这很重要","textPreview":"为什么这很重要","textChars":7,"textLines":1,"bbox":[782,262,316,42]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":2,"bbox":[810,290,260,42]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":2,"text":"重排信念","textPreview":"重排信念","textChars":4,"textLines":1,"bbox":[822,293,236,36]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":2,"bbox":[810,352,260,42]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":2,"text":"触发行动","textPreview":"触发行动","textChars":4,"textLines":1,"bbox":[822,355,236,36]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":2,"bbox":[810,414,260,42]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":2,"text":"重写责任","textPreview":"重写责任","textChars":4,"textLines":1,"bbox":[822,417,236,36]}
+{"kind":"textbox","id":"sh/7u54zido","slide":2,"text":"因此，三篇论文必须被放在同一个过程框架下理解。","textPreview":"因此，三篇论文必须被放在同一个过程框架下理解。","textChars":23,"textLines":1,"bbox":[96,576,1020,44]}
+{"kind":"notes","id":"nt/pg3ex0nu","slide":2,"text":""}
+{"kind":"slide","id":"sl/s72x4nap","slide":3,"title":"SHARED PROCESS","textShapes":31}
+{"kind":"shape","id":"sh/vmtwra5g","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":3,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/dsji5sne","slide":3,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":3,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/vy90je9c","slide":3,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"name":"kicker-label","text":"SHARED PROCESS","textPreview":"SHARED PROCESS","textChars":14,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"三篇文章共享同一条高风险 AI 决策链。","textPreview":"三篇文章共享同一条高风险 AI 决策链。","textChars":20,"textLines":1,"bbox":[96,96,860,110]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":3,"text":"Belief Formation → Risk Appraisal / Reliance Calibration → Responsibility","textPreview":"Belief Formation → Risk Appraisal / Reliance Calibration → Responsibility","textChars":73,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"shape","id":"sh/vy90je9c","slide":3,"bbox":[96,238,330,342]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":3,"bbox":[96,238,6,342]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"STAGE 1","textPreview":"STAGE 1","textChars":7,"textLines":1,"bbox":[118,254,286,22]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"text":"Belief Formation","textPreview":"Belief Formation","textChars":16,"textLines":1,"bbox":[118,272,286,42]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[116,314,24,56]}
+{"kind":"textbox","id":"sh/61032lsz","slide":3,"text":"evidence → belief","textPreview":"evidence → belief","textChars":17,"textLines":1,"bbox":[144,312,260,74]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[116,386,24,56]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":3,"text":"AI 改变“人相信什么”。","textPreview":"AI 改变“人相信什么”。","textChars":13,"textLines":1,"bbox":[144,384,260,74]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[116,458,24,56]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":3,"text":"这是后续依赖与责任的起点。","textPreview":"这是后续依赖与责任的起点。","textChars":13,"textLines":1,"bbox":[144,456,260,74]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":3,"text":"同一高风险判断一旦被 AI 中介化，链条最前端就不再中性。","textPreview":"同一高风险判断一旦被 AI 中介化，链条最前端就不再中性。","textChars":29,"textLines":1,"bbox":[116,526,286,44]}
+{"kind":"shape","id":"sh/7adsji5s","slide":3,"bbox":[460,238,330,342]}
+{"kind":"shape","id":"sh/wval87ed","slide":3,"bbox":[460,238,6,342]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":3,"text":"STAGE 2","textPreview":"STAGE 2","textChars":7,"textLines":1,"bbox":[482,254,286,22]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":3,"text":"Risk Appraisal /\nReliance Calibration","textPreview":"Risk Appraisal / | Reliance Calibration","textChars":37,"textLines":2,"bbox":[482,272,286,42]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[480,314,24,56]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":3,"text":"belief / feedback\n→ action threshold","textPreview":"belief / feedback | → action threshold","textChars":36,"textLines":2,"bbox":[508,312,260,74]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[480,386,24,56]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":3,"text":"AI 改变“何时依赖、何时行动”。","textPreview":"AI 改变“何时依赖、何时行动”。","textChars":17,"textLines":1,"bbox":[508,384,260,74]}
+{"kind":"textbox","id":"sh/7u54zido","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[480,458,24,56]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":3,"text":"反馈会继续重塑授权阈值。","textPreview":"反馈会继续重塑授权阈值。","textChars":12,"textLines":1,"bbox":[508,456,260,74]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":3,"text":"第二篇研究的是这个中段如何在重复互动中被重新校准。","textPreview":"第二篇研究的是这个中段如何在重复互动中被重新校准。","textChars":25,"textLines":1,"bbox":[480,526,286,44]}
+{"kind":"shape","id":"sh/bq1oryts","slide":3,"bbox":[824,238,330,342]}
+{"kind":"shape","id":"sh/m58z25kb","slide":3,"bbox":[824,238,6,342]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":3,"text":"STAGE 3","textPreview":"STAGE 3","textChars":7,"textLines":1,"bbox":[846,254,286,22]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":3,"text":"Responsibility","textPreview":"Responsibility","textChars":14,"textLines":1,"bbox":[846,272,286,42]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[844,314,24,56]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":3,"text":"action → responsibility","textPreview":"action → responsibility","textChars":23,"textLines":1,"bbox":[872,312,260,74]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[844,386,24,56]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":3,"text":"AI 参与行动后，后果不再自动归于单一主体。","textPreview":"AI 参与行动后，后果不再自动归于单一主体。","textChars":22,"textLines":1,"bbox":[872,384,260,74]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[844,458,24,56]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":3,"text":"问题从 blame 扩展到 ownership architecture。","textPreview":"问题从 blame 扩展到 ownership architecture。","textChars":37,"textLines":1,"bbox":[872,456,260,74]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":3,"text":"三篇不是并列应用题，而是同一次高风险决策的连续环节。","textPreview":"三篇不是并列应用题，而是同一次高风险决策的连续环节。","textChars":26,"textLines":1,"bbox":[844,526,286,44]}
+{"kind":"notes","id":"nt/s72x4nap","slide":3,"text":""}
+{"kind":"slide","id":"sl/val87ed8","slide":4,"title":"PAPER MAP","textShapes":16}
+{"kind":"shape","id":"sh/1gvy90je","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":4,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/je9cvixc","slide":4,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/87ed8bat","slide":4,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/xs72x4na","slide":4,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":4,"name":"kicker-label","text":"PAPER MAP","textPreview":"PAPER MAP","textChars":9,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":4,"text":"三篇论文分别隔离这条链上的不同映射。","textPreview":"三篇论文分别隔离这条链上的不同映射。","textChars":18,"textLines":1,"bbox":[96,96,760,110]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":4,"text":"统一性来自同一决策过程；独立性来自不同任务、反馈结构、行为数据与因变量。","textPreview":"统一性来自同一决策过程；独立性来自不同任务、反馈结构、行为数据与因变量。","textChars":36,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":4,"bbox":[96,246,428,138]}
+{"kind":"shape","id":"sh/8bat47y1","slide":4,"bbox":[96,246,6,138]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":4,"text":"PAPER 1","textPreview":"PAPER 1","textChars":7,"textLines":1,"bbox":[118,262,384,22]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":4,"text":"evidence → belief","textPreview":"evidence → belief","textChars":17,"textLines":1,"bbox":[118,280,384,42]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":4,"text":"Answer-first 结构如何改变证据搜索、贝叶斯更新与主观掌握感。记忆点：Belief anchoring。","textPreview":"Answer-first 结构如何改变证据搜索、贝叶斯更新与主观掌握感。记忆点：Belief anchoring。","textChars":57,"textLines":1,"bbox":[118,326,384,50]}
+{"kind":"shape","id":"sh/8nqxs72x","slide":4,"bbox":[592,246,428,138]}
+{"kind":"shape","id":"sh/j2t83itg","slide":4,"bbox":[592,246,6,138]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":4,"text":"PAPER 2","textPreview":"PAPER 2","textChars":7,"textLines":1,"bbox":[614,262,384,22]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":4,"text":"belief / feedback\n→ action threshold","textPreview":"belief / feedback | → action threshold","textChars":36,"textLines":2,"bbox":[614,280,384,42]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":4,"text":"早期 AI 错误作为校准冲击，识别依赖如何在有限重复中被重估。记忆点：Calibration shock。","textPreview":"早期 AI 错误作为校准冲击，识别依赖如何在有限重复中被重估。记忆点：Calibration shock。","textChars":53,"textLines":1,"bbox":[614,326,384,50]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":4,"bbox":[96,420,428,138]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":4,"bbox":[96,420,6,138]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":4,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[118,436,384,22]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":4,"text":"action → responsibility","textPreview":"action → responsibility","textChars":23,"textLines":1,"bbox":[118,454,384,42]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":4,"text":"AI 参与行动后，ownership、责任分享与 credit/blame allocation 如何被重写。记忆点：Ownership dilution。","textPreview":"AI 参与行动后，ownership、责任分享与 credit/blame allocation 如何被重写。记忆点：Ownership dilution。","textChars":78,"textLines":1,"bbox":[118,500,384,50]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":4,"bbox":[592,420,428,138]}
+{"kind":"shape","id":"sh/al87ed8b","slide":4,"bbox":[592,420,6,138]}
+{"kind":"textbox","id":"sh/z61032ls","slide":4,"text":"UNITY","textPreview":"UNITY","textChars":5,"textLines":1,"bbox":[614,436,384,22]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":4,"text":"同一过程，分层识别","textPreview":"同一过程，分层识别","textChars":9,"textLines":1,"bbox":[614,454,384,42]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":4,"text":"这不是三个松散实验，而是对同一 AI-mediated high-risk decision process 的层级拆解。","textPreview":"这不是三个松散实验，而是对同一 AI-mediated high-risk decision process 的层级拆解。","textChars":61,"textLines":1,"bbox":[614,500,384,50]}
+{"kind":"notes","id":"nt/val87ed8","slide":4,"text":""}
+{"kind":"slide","id":"sl/mlkjm1cf","slide":5,"title":"NEXT","textShapes":12}
+{"kind":"shape","id":"sh/vahoza1g","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ovahoza1","slide":5,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/dg7adsji","slide":5,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":5,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":5,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":5,"name":"kicker-label","text":"NEXT","textPreview":"NEXT","textChars":4,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":5,"text":"这不是三个松散实验，而是同一决策链的分层识别。","textPreview":"这不是三个松散实验，而是同一决策链的分层识别。","textChars":23,"textLines":1,"bbox":[96,96,760,110]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":5,"text":"统一性不在于都谈 AI，而在于都识别高风险 AI 决策链条上的一个关键环节。","textPreview":"统一性不在于都谈 AI，而在于都识别高风险 AI 决策链条上的一个关键环节。","textChars":38,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":5,"bbox":[96,280,282,184]}
+{"kind":"shape","id":"sh/y90je9cv","slide":5,"bbox":[96,280,6,184]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":5,"text":"共同问题","textPreview":"共同问题","textChars":4,"textLines":1,"bbox":[118,296,238,22]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":5,"text":"都在问 AI 如何改变高风险决策。","textPreview":"都在问 AI 如何改变高风险决策。","textChars":17,"textLines":1,"bbox":[118,314,238,42]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":5,"bbox":[426,280,282,184]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":5,"bbox":[426,280,6,184]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":5,"text":"识别方式","textPreview":"识别方式","textChars":4,"textLines":1,"bbox":[448,296,238,22]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":5,"text":"Paper 1 看 belief，Paper 2 看 threshold，Paper 3 看 responsibility。","textPreview":"Paper 1 看 belief，Paper 2 看 threshold，Paper 3 看 responsibility。","textChars":62,"textLines":1,"bbox":[448,314,238,42]}
+{"kind":"shape","id":"sh/neloj2t8","slide":5,"bbox":[756,280,282,184]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":5,"bbox":[756,280,6,184]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":5,"text":"独立性","textPreview":"独立性","textChars":3,"textLines":1,"bbox":[778,296,238,22]}
+{"kind":"textbox","id":"sh/vixczed8","slide":5,"text":"任务、反馈、行为数据和理论口径都不同。","textPreview":"任务、反馈、行为数据和理论口径都不同。","textChars":19,"textLines":1,"bbox":[778,314,238,42]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":5,"bbox":[96,528,984,72]}
+{"kind":"shape","id":"sh/donyd0z6","slide":5,"bbox":[96,528,6,72]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":5,"text":"CLOSING","textPreview":"CLOSING","textChars":7,"textLines":1,"bbox":[118,544,940,22]}
+{"kind":"textbox","id":"sh/val87ed8","slide":5,"text":"下面进入第一篇“双重贝叶斯偏离”：先看 AI 如何改变 evidence → belief。","textPreview":"下面进入第一篇“双重贝叶斯偏离”：先看 AI 如何改变 evidence → belief。","textChars":46,"textLines":1,"bbox":[118,562,940,42]}
+{"kind":"notes","id":"nt/mlkjm1cf","slide":5,"text":""}

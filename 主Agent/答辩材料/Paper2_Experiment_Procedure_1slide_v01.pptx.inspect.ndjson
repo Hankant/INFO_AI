@@ -1,0 +1,104 @@
+{"kind":"deck","id":"pr/xei52b","name":"Deck"}
+{"kind":"layout","layoutId":"76fea5c7-5cdf-4dbb-ac24-f96c969e025b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"d6cc84af-96bc-4dfb-b921-8d14f43ed495","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/vopgpg","slide":1,"title":"EXPERIMENTAL PROCEDURE","textShapes":34}
+{"kind":"shape","id":"sh/bq1oryts","slide":1,"bbox":[58,48,0,624]}
+{"kind":"shape","id":"sh/4byhgn29","slide":1,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":1,"text":"EXPERIMENTAL PROCEDURE","textPreview":"EXPERIMENTAL PROCEDURE","textChars":22,"textLines":1,"bbox":[128,62,260,24]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":1,"text":"How the Experiment Works","textPreview":"How the Experiment Works","textChars":24,"textLines":1,"bbox":[96,100,920,46]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":1,"text":"A repeated abstract allocation task lets each participant compare self judgment and AI judgment under full feedback.","textPreview":"A repeated abstract allocation task lets each participant compare self judgment and AI judgment under full feedback.","textChars":116,"textLines":1,"bbox":[96,154,1030,38]}
+{"kind":"shape","id":"sh/4nap4r65","slide":1,"bbox":[96,214,1084,164]}
+{"kind":"shape","id":"sh/t83itgfm","slide":1,"bbox":[96,214,6,164]}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":1,"text":"Between-subject path manipulation","textPreview":"Between-subject path manipulation","textChars":33,"textLines":1,"bbox":[122,232,420,26]}
+{"kind":"textbox","id":"sh/bat47y1k","slide":1,"text":"Same task, same feedback, parity-controlled AI performance","textPreview":"Same task, same feedback, parity-controlled AI performance","textChars":58,"textLines":1,"bbox":[746,234,380,24]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":1,"text":"Balanced error","textPreview":"Balanced error","textChars":14,"textLines":1,"bbox":[122,274,148,22]}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":1,"bbox":[288,278,16,22]}
+{"kind":"shape","id":"sh/1kre1w7m","slide":1,"bbox":[306,278,16,22]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":1,"bbox":[324,278,16,22]}
+{"kind":"shape","id":"sh/j6tovaho","slide":1,"bbox":[342,278,16,22]}
+{"kind":"shape","id":"sh/ulwval87","slide":1,"bbox":[360,278,16,22]}
+{"kind":"shape","id":"sh/1cfa9w3m","slide":1,"bbox":[378,278,16,22]}
+{"kind":"shape","id":"sh/crmhk3q5","slide":1,"bbox":[396,278,16,22]}
+{"kind":"shape","id":"sh/j2t83itg","slide":1,"bbox":[414,278,16,22]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":1,"bbox":[432,278,16,22]}
+{"kind":"shape","id":"sh/i5sneloj","slide":1,"bbox":[450,278,16,22]}
+{"kind":"shape","id":"sh/7qpg3ex0","slide":1,"bbox":[468,278,16,22]}
+{"kind":"shape","id":"sh/0bi9s36h","slide":1,"bbox":[486,278,16,22]}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":1,"bbox":[504,278,16,22]}
+{"kind":"shape","id":"sh/ed8v6psf","slide":1,"bbox":[522,278,16,22]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":1,"bbox":[540,278,16,22]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":1,"bbox":[558,278,16,22]}
+{"kind":"shape","id":"sh/p4r65wju","slide":1,"bbox":[576,278,16,22]}
+{"kind":"shape","id":"sh/ih4byhgn","slide":1,"bbox":[594,278,16,22]}
+{"kind":"shape","id":"sh/72x4nap4","slide":1,"bbox":[612,278,16,22]}
+{"kind":"shape","id":"sh/xc3ylc7u","slide":1,"bbox":[630,278,16,22]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":1,"text":"Rounds 1-20","textPreview":"Rounds 1-20","textChars":11,"textLines":1,"bbox":[288,308,360,18]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":1,"text":"Errors are spread across the repeated window.","textPreview":"Errors are spread across the repeated window.","textChars":45,"textLines":1,"bbox":[678,277,220,26]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":1,"text":"AI shock path","textPreview":"AI shock path","textChars":13,"textLines":1,"bbox":[122,326,148,22]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":1,"bbox":[288,330,16,22]}
+{"kind":"shape","id":"sh/4zidonyd","slide":1,"bbox":[306,330,16,22]}
+{"kind":"shape","id":"sh/fepkzupw","slide":1,"bbox":[324,330,16,22]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":1,"bbox":[342,330,16,22]}
+{"kind":"shape","id":"sh/xobm58z2","slide":1,"bbox":[360,330,16,22]}
+{"kind":"shape","id":"sh/83itgfml","slide":1,"bbox":[378,330,16,22]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":1,"bbox":[396,330,16,22]}
+{"kind":"shape","id":"sh/1032lszq","slide":1,"bbox":[414,330,16,22]}
+{"kind":"shape","id":"sh/u9knih4b","slide":1,"bbox":[432,330,16,22]}
+{"kind":"shape","id":"sh/judg7ads","slide":1,"bbox":[450,330,16,22]}
+{"kind":"shape","id":"sh/c7u54zid","slide":1,"bbox":[468,330,16,22]}
+{"kind":"shape","id":"sh/1orytsvu","slide":1,"bbox":[486,330,16,22]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":1,"bbox":[504,330,16,22]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":1,"bbox":[522,330,16,22]}
+{"kind":"shape","id":"sh/cvixczed","slide":1,"bbox":[540,330,16,22]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":1,"bbox":[558,330,16,22]}
+{"kind":"shape","id":"sh/val87ed8","slide":1,"bbox":[576,330,16,22]}
+{"kind":"shape","id":"sh/6psfil0r","slide":1,"bbox":[594,330,16,22]}
+{"kind":"shape","id":"sh/dcbulwva","slide":1,"bbox":[612,330,16,22]}
+{"kind":"shape","id":"sh/kre1w7mp","slide":1,"bbox":[630,330,16,22]}
+{"kind":"textbox","id":"sh/vixczed8","slide":1,"text":"Rounds 1-20","textPreview":"Rounds 1-20","textChars":11,"textLines":1,"bbox":[288,360,360,18]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":1,"text":"Errors are concentrated in a pre-registered block, followed by recovery.","textPreview":"Errors are concentrated in a pre-registered block, followed by recovery.","textChars":72,"textLines":1,"bbox":[678,329,220,26]}
+{"kind":"shape","id":"sh/donyd0z6","slide":1,"bbox":[902,313,188,28]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":1,"text":"Early / mid timing variants","textPreview":"Early / mid timing variants","textChars":27,"textLines":1,"bbox":[910,319,172,16]}
+{"kind":"shape","id":"sh/vu9knih4","slide":1,"bbox":[902,348,188,28]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":1,"text":"Total errors and payoff aligned","textPreview":"Total errors and payoff aligned","textChars":31,"textLines":1,"bbox":[910,354,172,16]}
+{"kind":"shape","id":"sh/adsji5sn","slide":1,"bbox":[96,410,1084,206]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":1,"text":"One participant, one round","textPreview":"One participant, one round","textChars":26,"textLines":1,"bbox":[122,428,420,26]}
+{"kind":"textbox","id":"sh/sji5snel","slide":1,"text":"The same loop repeats for about 20 rounds","textPreview":"The same loop repeats for about 20 rounds","textChars":41,"textLines":1,"bbox":[780,430,350,22]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":1,"bbox":[116,474,164,92]}
+{"kind":"shape","id":"sh/a5gbq1or","slide":1,"bbox":[128,488,26,26]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":1,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[136,492,10,14]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":1,"text":"History","textPreview":"History","textChars":7,"textLines":1,"bbox":[162,488,106,20]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":1,"text":"View recent values for alpha, beta, gamma.","textPreview":"View recent values for alpha, beta, gamma.","textChars":42,"textLines":1,"bbox":[134,524,128,30]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":1,"bbox":[294,474,164,92]}
+{"kind":"shape","id":"sh/zidonyd0","slide":1,"bbox":[306,488,26,26]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":1,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[314,492,10,14]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":1,"text":"Self plan","textPreview":"Self plan","textChars":9,"textLines":1,"bbox":[340,488,106,20]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":1,"text":"Allocate 100 points across three channels.","textPreview":"Allocate 100 points across three channels.","textChars":42,"textLines":1,"bbox":[312,524,128,30]}
+{"kind":"shape","id":"sh/yd0z6103","slide":1,"bbox":[472,474,164,92]}
+{"kind":"shape","id":"sh/9s36hcrm","slide":1,"bbox":[484,488,26,26]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":1,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[492,492,10,14]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":1,"text":"AI plan","textPreview":"AI plan","textChars":7,"textLines":1,"bbox":[518,488,106,20]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":1,"text":"See AI allocation for the same round.","textPreview":"See AI allocation for the same round.","textChars":37,"textLines":1,"bbox":[490,524,128,30]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":1,"bbox":[650,474,164,92]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":1,"bbox":[662,488,26,26]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":1,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[670,492,10,14]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":1,"text":"Submit","textPreview":"Submit","textChars":6,"textLines":1,"bbox":[696,488,106,20]}
+{"kind":"textbox","id":"sh/61032lsz","slide":1,"text":"Choose self or AI as final submission.","textPreview":"Choose self or AI as final submission.","textChars":38,"textLines":1,"bbox":[668,524,128,30]}
+{"kind":"shape","id":"sh/vmtwra5g","slide":1,"bbox":[828,474,164,92]}
+{"kind":"shape","id":"sh/oj2t83it","slide":1,"bbox":[840,488,26,26]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":1,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[848,492,10,14]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":1,"text":"Full feedback","textPreview":"Full feedback","textChars":13,"textLines":1,"bbox":[874,488,106,20]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":1,"text":"Observe chosen and unchosen payoffs.","textPreview":"Observe chosen and unchosen payoffs.","textChars":36,"textLines":1,"bbox":[846,524,128,30]}
+{"kind":"shape","id":"sh/onyd0z61","slide":1,"bbox":[1006,474,164,92]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":1,"bbox":[1018,488,26,26]}
+{"kind":"textbox","id":"sh/3ex0nuxc","slide":1,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1026,492,10,14]}
+{"kind":"textbox","id":"sh/at47y1kr","slide":1,"text":"Update","textPreview":"Update","textChars":6,"textLines":1,"bbox":[1052,488,106,20]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":1,"text":"Next choice reveals reliance updating.","textPreview":"Next choice reveals reliance updating.","textChars":38,"textLines":1,"bbox":[1024,524,128,30]}
+{"kind":"shape","id":"sh/szqtcj6t","slide":1,"bbox":[284,520,4,0]}
+{"kind":"shape","id":"sh/32lszqtc","slide":1,"bbox":[462,520,4,0]}
+{"kind":"shape","id":"sh/ahoza1gv","slide":1,"bbox":[640,520,4,0]}
+{"kind":"shape","id":"sh/l87ed8ba","slide":1,"bbox":[818,520,4,0]}
+{"kind":"shape","id":"sh/sneloj2t","slide":1,"bbox":[996,520,4,0]}
+{"kind":"shape","id":"sh/3q5o7qpg","slide":1,"bbox":[96,642,1084,42]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":1,"text":"What this identifies: whether a local AI error shock changes later AI adoption beyond what can be explained by average performance.","textPreview":"What this identifies: whether a local AI error shock changes later AI adoption beyond what can be explained by average performance.","textChars":131,"textLines":1,"bbox":[128,653,1016,18]}
+{"kind":"notes","id":"nt/vopgpg","slide":1,"text":"This slide gives the concrete experimental procedure before moving into the identification table.\nParticipants complete a repeated abstract allocation task. In each round, they first see recent history for three abstract channels, make their own allocation, then see the AI allocation for the same round. They choose whether to submit their own plan or the AI plan.\nThe critical design feature is full feedback. After each round, participants can observe both the payoff of the chosen option and the counterfactual payoff of the unchosen option. This means they can continuously compare self judgment and AI judgment.\nAcross participants, the experiment manipulates the timing structure of AI errors. Some paths distribute errors across the window, while shock paths concentrate errors in a pre-registered block and then allow AI performance to recover. Overall AI performance, error count, and error severity are kept as comparable as possible, so later under-reliance cannot simply be explained by the AI being worse on average."}

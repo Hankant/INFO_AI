@@ -1,0 +1,46 @@
+{"kind":"deck","id":"pr/irj6uj","name":"Deck"}
+{"kind":"layout","layoutId":"03a2d381-0d1c-4d51-8b83-edeb9859735c","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"42c08b94-fa3b-42c8-b9bf-7442eadf2d71","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/6wfboz","slide":1,"title":"EWA MECHANISM","textShapes":22}
+{"kind":"shape","id":"sh/gvy90je9","slide":1,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":1,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":1,"text":"EWA MECHANISM","textPreview":"EWA MECHANISM","textChars":13,"textLines":1,"bbox":[128,62,260,24]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":1,"text":"Why an EWA-Inspired Model Fits This Study","textPreview":"Why an EWA-Inspired Model Fits This Study","textChars":41,"textLines":1,"bbox":[96,100,920,52]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":1,"text":"EWA is useful because the experiment creates repeated self-versus-AI choices with actual and counterfactual feedback.","textPreview":"EWA is useful because the experiment creates repeated self-versus-AI choices with actual and counterfactual feedback.","textChars":117,"textLines":1,"bbox":[96,158,1030,38]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":1,"bbox":[96,218,426,296]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":1,"bbox":[96,218,6,296]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":1,"text":"What EWA captures","textPreview":"What EWA captures","textChars":17,"textLines":1,"bbox":[124,240,360,28]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":1,"text":"Repeated learning over rounds, not one-shot trust.\nAccumulated attraction toward AI versus self judgment.\nUpdating from both chosen and foregone payoffs.\nPath dependence: early feedback enters later attraction.\nPossible asymmetry in how AI and self errors are weighted.","textPreview":"Repeated learning over rounds, not one-shot trust. | Accumulated attraction toward AI versus self judgment. | Updating from both chosen a...","textChars":269,"textLines":5,"bbox":[124,286,354,168]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":1,"bbox":[124,462,352,34]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":1,"text":"Use EWA to model learning, not to replace the experimental comparison.","textPreview":"Use EWA to model learning, not to replace the experimental comparison.","textChars":70,"textLines":1,"bbox":[138,470,324,18]}
+{"kind":"shape","id":"sh/gvy90je9","slide":1,"bbox":[550,218,630,296]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":1,"text":"Which RQ/H can EWA help test?","textPreview":"Which RQ/H can EWA help test?","textChars":29,"textLines":1,"bbox":[576,240,420,28]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":1,"bbox":[576,286,178,34]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":1,"text":"Paper 2 RQ / H","textPreview":"Paper 2 RQ / H","textChars":14,"textLines":1,"bbox":[586,294,158,18]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":1,"bbox":[754,286,378,34]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":1,"text":"EWA model readout","textPreview":"EWA model readout","textChars":17,"textLines":1,"bbox":[764,294,358,18]}
+{"kind":"shape","id":"sh/25kb6xkf","slide":1,"bbox":[576,320,178,38]}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":1,"text":"H1 Dynamic updating","textPreview":"H1 Dynamic updating","textChars":19,"textLines":1,"bbox":[586,328,158,22]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":1,"bbox":[754,320,378,38]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":1,"text":"Do AI and self attractions track relative performance?","textPreview":"Do AI and self attractions track relative performance?","textChars":54,"textLines":1,"bbox":[764,328,358,22]}
+{"kind":"shape","id":"sh/1orytsvu","slide":1,"bbox":[576,358,178,38]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":1,"text":"H2 Shock penalty","textPreview":"H2 Shock penalty","textChars":16,"textLines":1,"bbox":[586,366,158,22]}
+{"kind":"shape","id":"sh/judg7ads","slide":1,"bbox":[754,358,378,38]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":1,"text":"Does clustered AI failure create extra AI-attraction loss?","textPreview":"Does clustered AI failure create extra AI-attraction loss?","textChars":58,"textLines":1,"bbox":[764,366,358,22]}
+{"kind":"shape","id":"sh/1032lszq","slide":1,"bbox":[576,396,178,38]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":1,"text":"H3 Recovery","textPreview":"H3 Recovery","textChars":11,"textLines":1,"bbox":[586,404,158,22]}
+{"kind":"shape","id":"sh/nyd0z610","slide":1,"bbox":[754,396,378,38]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":1,"text":"Does attraction remain below the balanced path after recovery?","textPreview":"Does attraction remain below the balanced path after recovery?","textChars":62,"textLines":1,"bbox":[764,404,358,22]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":1,"bbox":[576,434,178,38]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":1,"text":"H4 Timing","textPreview":"H4 Timing","textChars":9,"textLines":1,"bbox":[586,442,158,22]}
+{"kind":"shape","id":"sh/m94fu18j","slide":1,"bbox":[754,434,378,38]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":1,"text":"Is early shock harder to repair than mid shock?","textPreview":"Is early shock harder to repair than mid shock?","textChars":47,"textLines":1,"bbox":[764,442,358,22]}
+{"kind":"shape","id":"sh/83itgfml","slide":1,"bbox":[576,472,178,38]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":1,"text":"H5 Source asymmetry","textPreview":"H5 Source asymmetry","textChars":19,"textLines":1,"bbox":[586,480,158,22]}
+{"kind":"shape","id":"sh/qxs72x4n","slide":1,"bbox":[754,472,378,38]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":1,"text":"Is negative updating stronger after AI misses than self misses?","textPreview":"Is negative updating stronger after AI misses than self misses?","textChars":63,"textLines":1,"bbox":[764,480,358,22]}
+{"kind":"shape","id":"sh/4zidonyd","slide":1,"bbox":[96,540,1084,88]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":1,"text":"Minimal model intuition","textPreview":"Minimal model intuition","textChars":23,"textLines":1,"bbox":[128,560,330,20]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":1,"text":"P(choose AI)t = f(AI attractiont - Self attractiont)","textPreview":"P(choose AI)t = f(AI attractiont - Self attractiont)","textChars":52,"textLines":1,"bbox":[128,588,420,26]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":1,"text":"Reduced-form comparisons show whether reliance paths differ. EWA-inspired estimation tests whether the difference comes from asymmetric updating of source attraction.","textPreview":"Reduced-form comparisons show whether reliance paths differ. EWA-inspired estimation tests whether the difference comes from asymmetric u...","textChars":166,"textLines":1,"bbox":[600,560,536,52]}
+{"kind":"notes","id":"nt/6wfboz","slide":1,"text":"This slide explains why I use an EWA-inspired model rather than treating EWA as a decorative add-on.\nEWA fits the experiment because participants repeatedly choose between self judgment and AI judgment, then observe both actual and counterfactual feedback. That is exactly a learning environment with evolving source attractions.\nThe reduced-form comparisons remain the main identification strategy. The EWA layer asks whether the observed path differences are consistent with asymmetric updating of AI attraction, especially after early AI errors."}

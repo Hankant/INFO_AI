@@ -1,0 +1,41 @@
+{"kind":"deck","id":"pr/wj26v3","name":"Deck"}
+{"kind":"layout","layoutId":"f35b19b7-e900-4df5-ac52-7eab55bb2f64","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"9ab672ba-355e-47c9-9674-fa98cccec0db","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/aduahu","slide":1,"title":"PAPER 2 · REPLACEMENT SLIDE","textShapes":22}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":1,"name":"left-rail","bbox":[58,48,2,624]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":1,"name":"eyebrow","text":"PAPER 2 · REPLACEMENT SLIDE","textPreview":"PAPER 2 · REPLACEMENT SLIDE","textChars":27,"textLines":1,"bbox":[96,62,360,24]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":1,"name":"title","text":"Research Questions and Hypotheses","textPreview":"Research Questions and Hypotheses","textChars":33,"textLines":1,"bbox":[96,96,780,54]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":1,"name":"subtitle","text":"The design compares how reliance changes after matched feedback, local AI shocks, and later recovery.","textPreview":"The design compares how reliance changes after matched feedback, local AI shocks, and later recovery.","textChars":101,"textLines":1,"bbox":[96,142,1010,34]}
+{"kind":"shape","id":"sh/ulwval87","slide":1,"name":"rq-card","bbox":[96,188,1080,86]}
+{"kind":"shape","id":"sh/1cfa9w3m","slide":1,"name":"rq-accent","bbox":[96,188,8,86]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":1,"name":"rq-label","text":"Overall RQ","textPreview":"Overall RQ","textChars":10,"textLines":1,"bbox":[120,205,160,24]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":1,"name":"rq-text","text":"How do participants dynamically calibrate reliance on self vs. AI in repeated human-AI decisions, and how does a localized AI error shock reshape that reliance path?","textPreview":"How do participants dynamically calibrate reliance on self vs. AI in repeated human-AI decisions, and how does a localized AI error shock...","textChars":165,"textLines":1,"bbox":[300,200,820,58]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":1,"name":"H1-card","bbox":[96,302,336,118]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":1,"name":"H1-stripe","bbox":[96,302,6,118]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":1,"name":"H1-label","text":"H1","textPreview":"H1","textChars":2,"textLines":1,"bbox":[114,317,52,20]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":1,"name":"H1-title","text":"Dynamic calibration","textPreview":"Dynamic calibration","textChars":19,"textLines":1,"bbox":[172,314,240,28]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":1,"name":"H1-body","text":"Reliance should follow repeated feedback about relative self-AI performance.","textPreview":"Reliance should follow repeated feedback about relative self-AI performance.","textChars":76,"textLines":1,"bbox":[114,350,302,60]}
+{"kind":"shape","id":"sh/svu9knih","slide":1,"name":"H2-card","bbox":[460,302,336,118]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":1,"name":"H2-stripe","bbox":[460,302,6,118]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":1,"name":"H2-label","text":"H2","textPreview":"H2","textChars":2,"textLines":1,"bbox":[478,317,52,20]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":1,"name":"H2-title","text":"AI shock penalty","textPreview":"AI shock penalty","textChars":16,"textLines":1,"bbox":[536,314,240,28]}
+{"kind":"textbox","id":"sh/sji5snel","slide":1,"name":"H2-body","text":"Concentrated AI errors should reduce later AI adoption compared with balanced errors.","textPreview":"Concentrated AI errors should reduce later AI adoption compared with balanced errors.","textChars":85,"textLines":1,"bbox":[478,350,302,60]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":1,"name":"H3-card","bbox":[824,302,336,118]}
+{"kind":"shape","id":"sh/psfil0rq","slide":1,"name":"H3-stripe","bbox":[824,302,6,118]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":1,"name":"H3-label","text":"H3","textPreview":"H3","textChars":2,"textLines":1,"bbox":[842,317,52,20]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":1,"name":"H3-title","text":"Post-shock recovery","textPreview":"Post-shock recovery","textChars":19,"textLines":1,"bbox":[900,314,240,28]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":1,"name":"H3-body","text":"After AI performance recovers, reliance may rebound or remain persistently low.","textPreview":"After AI performance recovers, reliance may rebound or remain persistently low.","textChars":79,"textLines":1,"bbox":[842,350,302,60]}
+{"kind":"shape","id":"sh/pg3ex0nu","slide":1,"name":"H4-card","bbox":[96,448,520,118]}
+{"kind":"shape","id":"sh/wval87ed","slide":1,"name":"H4-stripe","bbox":[96,448,6,118]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":1,"name":"H4-label","text":"H4","textPreview":"H4","textChars":2,"textLines":1,"bbox":[114,463,52,20]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":1,"name":"H4-title","text":"Shock timing heterogeneity","textPreview":"Shock timing heterogeneity","textChars":26,"textLines":1,"bbox":[172,460,424,28]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":1,"name":"H4-body","text":"Early shocks affect initial calibration; mid shocks disrupt reliance after experience has formed.","textPreview":"Early shocks affect initial calibration; mid shocks disrupt reliance after experience has formed.","textChars":97,"textLines":1,"bbox":[114,496,486,60]}
+{"kind":"shape","id":"sh/wra5gbq1","slide":1,"name":"H5-card","bbox":[656,448,520,118]}
+{"kind":"shape","id":"sh/al87ed8b","slide":1,"name":"H5-stripe","bbox":[656,448,6,118]}
+{"kind":"textbox","id":"sh/z61032ls","slide":1,"name":"H5-label","text":"H5","textPreview":"H5","textChars":2,"textLines":1,"bbox":[674,463,52,20]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":1,"name":"H5-title","text":"AI-self asymmetric recovery","textPreview":"AI-self asymmetric recovery","textChars":27,"textLines":1,"bbox":[732,460,424,28]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":1,"name":"H5-body","text":"After comparable errors, AI reliance recovers more slowly than self reliance: AI is forgiven more slowly than self.","textPreview":"After comparable errors, AI reliance recovers more slowly than self reliance: AI is forgiven more slowly than self.","textChars":115,"textLines":1,"bbox":[674,496,486,60]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":1,"name":"bottom-band","bbox":[96,596,1080,54]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":1,"name":"central-label","text":"Central test","textPreview":"Central test","textChars":12,"textLines":1,"bbox":[120,612,160,24]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":1,"name":"central-text","text":"Do equal performance histories produce equal reliance recovery, or do AI errors leave a longer shadow?","textPreview":"Do equal performance histories produce equal reliance recovery, or do AI errors leave a longer shadow?","textChars":102,"textLines":1,"bbox":[292,610,830,28]}
+{"kind":"notes","id":"nt/aduahu","slide":1,"text":"Here I want to make the questions explicit before moving into the treatment map.\nThe overall question is how participants learn between self and AI in a repeated feedback environment. Every round gives them information about both sides, so the key outcome is not a one-time attitude. It is the reliance path.\nH1 asks whether people update reliance based on relative performance. If AI repeatedly performs better than self, AI adoption should rise. If self performs better, AI adoption should fall.\nH2 then introduces the shock: if AI errors are concentrated in one stage rather than spread out, do people reduce later AI adoption even when overall performance is matched?\nH3 asks what happens after the shock is over. If people recalibrate fully, reliance should recover when AI performance recovers. If there is path dependence or trust lag, reliance may stay low.\nH4 asks whether timing matters. Early shocks can shape initial calibration, while mid shocks can break a reliance relationship that has already started to form.\nH5 is the source-asymmetry test. It is not only whether AI is punished more immediately. It is whether AI is forgiven more slowly than self after comparable errors.\nSo the central test is whether equal performance histories lead to equal recovery, or whether AI errors leave a longer shadow."}

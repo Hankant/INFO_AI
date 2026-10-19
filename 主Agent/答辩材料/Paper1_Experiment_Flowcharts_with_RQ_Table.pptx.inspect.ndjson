@@ -1,0 +1,118 @@
+{"kind":"deck","id":"pr/8l8672","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/2x4nap4r","slide":1,"title":"PAPER 1 EXPERIMENT FLOW","textShapes":43}
+{"kind":"shape","id":"sh/nap4r65w","slide":1,"bbox":[1020,-120,320,320]}
+{"kind":"shape","id":"sh/cvixczed","slide":1,"bbox":[-120,510,280,280]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":1,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/udg7adsj","slide":1,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":1,"text":"PAPER 1 EXPERIMENT FLOW","textPreview":"PAPER 1 EXPERIMENT FLOW","textChars":23,"textLines":1,"bbox":[124,60,320,26]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"text":"One baseline and four summary conditions feed into one study","textPreview":"One baseline and four summary conditions feed into one study","textChars":60,"textLines":1,"bbox":[96,96,1010,60]}
+{"kind":"textbox","id":"sh/54zidony","slide":1,"text":"The first chart shows the 5-group design. The second chart shows how one participant moves through the study.","textPreview":"The first chart shows the 5-group design. The second chart shows how one participant moves through the study.","textChars":109,"textLines":1,"bbox":[96,150,1020,28]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":1,"text":"1. Condition Assignment","textPreview":"1. Condition Assignment","textChars":23,"textLines":1,"bbox":[96,212,280,24]}
+{"kind":"textbox","id":"sh/judg7ads","slide":1,"text":"1 no-summary baseline + 2 summary labels x 2 summary types = 5 groups","textPreview":"1 no-summary baseline + 2 summary labels x 2 summary types = 5 groups","textChars":69,"textLines":1,"bbox":[96,238,620,22]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":1,"text":"Baseline","textPreview":"Baseline","textChars":8,"textLines":1,"bbox":[110,252,250,22]}
+{"kind":"shape","id":"sh/udg7adsj","slide":1,"bbox":[110,284,250,130]}
+{"kind":"shape","id":"sh/54zidony","slide":1,"bbox":[110,284,6,130]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"text":"G1  No-summary control","textPreview":"G1  No-summary control","textChars":22,"textLines":1,"bbox":[128,296,222,28]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":1,"text":"Participants skip the summary and enter the common full evidence pool directly.","textPreview":"Participants skip the summary and enter the common full evidence pool directly.","textChars":79,"textLines":1,"bbox":[128,326,222,78]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":1,"text":"+","textPreview":"+","textChars":1,"textLines":1,"bbox":[426,330,44,24]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":1,"text":"Unlabeled summary","textPreview":"Unlabeled summary","textChars":17,"textLines":1,"bbox":[612,252,250,22]}
+{"kind":"textbox","id":"sh/cvixczed","slide":1,"text":"AI-labeled summary","textPreview":"AI-labeled summary","textChars":18,"textLines":1,"bbox":[878,252,250,22]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":1,"text":"Summary groups","textPreview":"Summary groups","textChars":14,"textLines":1,"bbox":[604,228,516,20]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":1,"text":"Complete\nsummary","textPreview":"Complete | summary","textChars":16,"textLines":2,"bbox":[484,290,110,34]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":1,"text":"Incomplete\nsummary","textPreview":"Incomplete | summary","textChars":18,"textLines":2,"bbox":[484,362,110,34]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":1,"bbox":[604,280,250,58]}
+{"kind":"shape","id":"sh/kb6xkf6d","slide":1,"bbox":[604,280,6,58]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":1,"text":"G2","textPreview":"G2","textChars":2,"textLines":1,"bbox":[622,292,222,28]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":1,"text":"Unlabeled + complete","textPreview":"Unlabeled + complete","textChars":20,"textLines":1,"bbox":[622,322,222,6]}
+{"kind":"shape","id":"sh/re1w7mp0","slide":1,"bbox":[870,280,250,58]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":1,"bbox":[870,280,6,58]}
+{"kind":"textbox","id":"sh/9knih4by","slide":1,"text":"G3","textPreview":"G3","textChars":2,"textLines":1,"bbox":[888,292,222,28]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":1,"text":"AI-labeled + complete","textPreview":"AI-labeled + complete","textChars":21,"textLines":1,"bbox":[888,322,222,6]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":1,"bbox":[604,354,250,58]}
+{"kind":"shape","id":"sh/xs72x4na","slide":1,"bbox":[604,354,6,58]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":1,"text":"G4","textPreview":"G4","textChars":2,"textLines":1,"bbox":[622,366,222,28]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":1,"text":"Unlabeled + incomplete","textPreview":"Unlabeled + incomplete","textChars":22,"textLines":1,"bbox":[622,396,222,6]}
+{"kind":"shape","id":"sh/q1orytsv","slide":1,"bbox":[870,354,250,58]}
+{"kind":"shape","id":"sh/1gvy90je","slide":1,"bbox":[870,354,6,58]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":1,"text":"G5","textPreview":"G5","textChars":2,"textLines":1,"bbox":[888,366,222,28]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":1,"text":"AI-labeled + incomplete","textPreview":"AI-labeled + incomplete","textChars":23,"textLines":1,"bbox":[888,396,222,6]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":1,"text":"All groups ultimately face the same full evidence pool; only the initial summary exposure changes.","textPreview":"All groups ultimately face the same full evidence pool; only the initial summary exposure changes.","textChars":98,"textLines":1,"bbox":[120,412,1010,26]}
+{"kind":"shape","id":"sh/xczed8v6","slide":1,"bbox":[96,452,1060,1]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":1,"text":"2. Participant Journey","textPreview":"2. Participant Journey","textChars":22,"textLines":1,"bbox":[96,468,280,24]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":1,"text":"Every participant then moves through the same search-and-update sequence","textPreview":"Every participant then moves through the same search-and-update sequence","textChars":72,"textLines":1,"bbox":[96,494,680,20]}
+{"kind":"shape","id":"sh/loj2t83i","slide":1,"bbox":[96,540,168,82]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":1,"bbox":[96,540,6,82]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":1,"text":"Step 1","textPreview":"Step 1","textChars":6,"textLines":1,"bbox":[114,552,140,28]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":1,"text":"Task instruction\nReport prior belief","textPreview":"Task instruction | Report prior belief","textChars":36,"textLines":2,"bbox":[114,582,140,30]}
+{"kind":"shape","id":"sh/lwval87e","slide":1,"bbox":[282,540,168,82]}
+{"kind":"shape","id":"sh/e9cvixcz","slide":1,"bbox":[282,540,6,82]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":1,"text":"Step 2","textPreview":"Step 2","textChars":6,"textLines":1,"bbox":[300,552,140,28]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":1,"text":"Assigned to one\nof the 5 groups","textPreview":"Assigned to one | of the 5 groups","textChars":31,"textLines":2,"bbox":[300,582,140,30]}
+{"kind":"shape","id":"sh/l87ed8ba","slide":1,"bbox":[468,540,168,82]}
+{"kind":"shape","id":"sh/b6xkf6dc","slide":1,"bbox":[468,540,6,82]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":1,"text":"Step 3","textPreview":"Step 3","textChars":6,"textLines":1,"bbox":[486,552,140,28]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":1,"text":"Initial information stage\nBaseline: no summary\nOthers: one of four\nsummary conditions","textPreview":"Initial information stage | Baseline: no summary | Others: one of four | summary conditions","textChars":85,"textLines":4,"bbox":[486,582,140,30]}
+{"kind":"shape","id":"sh/0rqd4vmt","slide":1,"bbox":[654,540,168,82]}
+{"kind":"shape","id":"sh/byhgn29g","slide":1,"bbox":[654,540,6,82]}
+{"kind":"textbox","id":"sh/idonyd0z","slide":1,"text":"Step 4","textPreview":"Step 4","textChars":6,"textLines":1,"bbox":[672,552,140,28]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":1,"text":"Search the evidence pool\nPay cost per card\nStop whenever ready","textPreview":"Search the evidence pool | Pay cost per card | Stop whenever ready","textChars":62,"textLines":3,"bbox":[672,582,140,30]}
+{"kind":"shape","id":"sh/0je9cvix","slide":1,"bbox":[840,540,168,82]}
+{"kind":"shape","id":"sh/bulwval8","slide":1,"bbox":[840,540,6,82]}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":1,"text":"Step 5","textPreview":"Step 5","textChars":6,"textLines":1,"bbox":[858,552,140,28]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":1,"text":"Report final posterior\nMake final choice","textPreview":"Report final posterior | Make final choice","textChars":40,"textLines":2,"bbox":[858,582,140,30]}
+{"kind":"shape","id":"sh/zed8v6ps","slide":1,"bbox":[1026,540,168,82]}
+{"kind":"shape","id":"sh/oza1gvy9","slide":1,"bbox":[1026,540,6,82]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":1,"text":"Step 6","textPreview":"Step 6","textChars":6,"textLines":1,"bbox":[1044,552,140,28]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":1,"text":"Post-task measures\nConfidence, perceived\ninformation, ownership,\nand comprehension check","textPreview":"Post-task measures | Confidence, perceived | information, ownership, | and comprehension check","textChars":88,"textLines":4,"bbox":[1044,582,140,30]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":1,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[265,566,40,28]}
+{"kind":"textbox","id":"sh/obm58z25","slide":1,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[451,566,40,28]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":1,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[637,566,40,28]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":1,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[823,566,40,28]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":1,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[1009,566,40,28]}
+{"kind":"textbox","id":"sh/l0rqd4vm","slide":1,"text":"Key identification: summary groups share the same full evidence pool and search cost; within matched summaries, only the AI source label changes.","textPreview":"Key identification: summary groups share the same full evidence pool and search cost; within matched summaries, only the AI source label ...","textChars":145,"textLines":1,"bbox":[96,650,1040,20]}
+{"kind":"notes","id":"nt/2x4nap4r","slide":1,"text":""}
+{"kind":"slide","id":"sl/cn2o9o","slide":2,"title":"RQ IDENTIFICATION LOGIC","textShapes":20}
+{"kind":"shape","id":"sh/czed8v6p","slide":2,"bbox":[1008,-112,320,320]}
+{"kind":"shape","id":"sh/neloj2t8","slide":2,"bbox":[-110,540,240,240]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":2,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/5sneloj2","slide":2,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/cbulwval","slide":2,"text":"RQ IDENTIFICATION LOGIC","textPreview":"RQ IDENTIFICATION LOGIC","textChars":23,"textLines":1,"bbox":[124,60,300,26]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":2,"text":"The three research questions rely on different comparisons","textPreview":"The three research questions rely on different comparisons","textChars":58,"textLines":1,"bbox":[96,96,1030,52]}
+{"kind":"textbox","id":"sh/u54zidon","slide":2,"text":"This simplified table translates the 5-group design into an audience-friendly logic map for the defense.","textPreview":"This simplified table translates the 5-group design into an audience-friendly logic map for the defense.","textChars":104,"textLines":1,"bbox":[96,148,1040,28]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":2,"bbox":[96,208,230,50]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":2,"text":"Research question","textPreview":"Research question","textChars":17,"textLines":1,"bbox":[110,218,202,30]}
+{"kind":"shape","id":"sh/qxs72x4n","slide":2,"bbox":[326,208,285,50]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":2,"text":"What is manipulated","textPreview":"What is manipulated","textChars":19,"textLines":1,"bbox":[340,218,257,30]}
+{"kind":"shape","id":"sh/83itgfml","slide":2,"bbox":[611,208,220,50]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":2,"text":"Key comparison","textPreview":"Key comparison","textChars":14,"textLines":1,"bbox":[625,218,192,30]}
+{"kind":"shape","id":"sh/m94fu18j","slide":2,"bbox":[831,208,353,50]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":2,"text":"How to read the result","textPreview":"How to read the result","textChars":22,"textLines":1,"bbox":[845,218,325,30]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":2,"bbox":[96,258,230,112]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":2,"text":"RQ1\nDoes the AI label change the stopping threshold for further search?","textPreview":"RQ1 | Does the AI label change the stopping threshold for further search?","textChars":71,"textLines":2,"bbox":[110,268,202,92]}
+{"kind":"shape","id":"sh/mlkjm1cf","slide":2,"bbox":[326,258,285,112]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":2,"text":"Matched summary groups see the same summary text. Only the AI source label changes, while the evidence pool and search cost stay the same.","textPreview":"Matched summary groups see the same summary text. Only the AI source label changes, while the evidence pool and search cost stay the same.","textChars":138,"textLines":1,"bbox":[340,268,257,92]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":2,"bbox":[611,258,220,112]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":2,"text":"AI-labeled summary\nvs.\nUnlabeled summary","textPreview":"AI-labeled summary | vs. | Unlabeled summary","textChars":40,"textLines":3,"bbox":[625,268,192,92]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":2,"bbox":[831,258,353,112]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":2,"text":"Less search suggests the AI label lowered the perceived value of extra evidence. More search suggests verification or AI skepticism.","textPreview":"Less search suggests the AI label lowered the perceived value of extra evidence. More search suggests verification or AI skepticism.","textChars":132,"textLines":1,"bbox":[845,268,325,92]}
+{"kind":"shape","id":"sh/7u54zido","slide":2,"bbox":[96,370,230,112]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":2,"text":"RQ2\nWhen search falls, is that efficient compression or harmful under-search?","textPreview":"RQ2 | When search falls, is that efficient compression or harmful under-search?","textChars":77,"textLines":2,"bbox":[110,380,202,92]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":2,"bbox":[326,370,285,112]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":2,"text":"Summary type changes against the same full evidence pool. One summary is complete; the other omits key counterevidence.","textPreview":"Summary type changes against the same full evidence pool. One summary is complete; the other omits key counterevidence.","textChars":119,"textLines":1,"bbox":[340,380,257,92]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":2,"bbox":[611,370,220,112]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":2,"text":"Complete summary\nvs.\nIncomplete summary","textPreview":"Complete summary | vs. | Incomplete summary","textChars":39,"textLines":3,"bbox":[625,380,192,92]}
+{"kind":"shape","id":"sh/oza1gvy9","slide":2,"bbox":[831,370,353,112]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":2,"text":"Less search is efficient compression if final judgments stay close to the full-information benchmark. It is harmful when less search produces larger Bayesian deviation.","textPreview":"Less search is efficient compression if final judgments stay close to the full-information benchmark. It is harmful when less search prod...","textChars":168,"textLines":1,"bbox":[845,380,325,92]}
+{"kind":"shape","id":"sh/6xkf6dcb","slide":2,"bbox":[96,482,230,126]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":2,"text":"RQ3\nDoes AI create a mismatch between judgment quality and subjective mastery?","textPreview":"RQ3 | Does AI create a mismatch between judgment quality and subjective mastery?","textChars":78,"textLines":2,"bbox":[110,492,202,106]}
+{"kind":"shape","id":"sh/obm58z25","slide":2,"bbox":[326,482,285,126]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":2,"text":"After the final decision, the study compares confidence, perceived information, understanding, and ownership with Bayesian deviation and comprehension.","textPreview":"After the final decision, the study compares confidence, perceived information, understanding, and ownership with Bayesian deviation and ...","textChars":151,"textLines":1,"bbox":[340,492,257,106]}
+{"kind":"shape","id":"sh/65wjudg7","slide":2,"bbox":[611,482,220,126]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":2,"text":"Baseline vs.\nfour summary groups\n\nLabel effect within\nsummary groups","textPreview":"Baseline vs. | four summary groups |  | Label effect within | summary groups","textChars":68,"textLines":5,"bbox":[625,492,192,106]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":2,"bbox":[831,482,353,126]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":2,"text":"Good judgment with low ownership suggests under-ownership. Poor judgment with high confidence suggests false mastery.","textPreview":"Good judgment with low ownership suggests under-ownership. Poor judgment with high confidence suggests false mastery.","textChars":117,"textLines":1,"bbox":[845,492,325,106]}
+{"kind":"shape","id":"sh/d8bat47y","slide":2,"bbox":[96,610,1088,1]}
+{"kind":"textbox","id":"sh/knih4byh","slide":2,"text":"The table highlights identification logic rather than every downstream variable.","textPreview":"The table highlights identification logic rather than every downstream variable.","textChars":80,"textLines":1,"bbox":[96,621,1088,24]}
+{"kind":"notes","id":"nt/cn2o9o","slide":2,"text":""}

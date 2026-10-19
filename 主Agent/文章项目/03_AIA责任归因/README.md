@@ -2,14 +2,24 @@
 
 ## 当前状态
 
-第三篇已有较丰富的 Notion proposal 草稿、实验设计笔记、材料地图和导师审查，但本地项目尚未把其中任何一版确认为正式基准。它不是“完全空白”，也不能被表述为“已经定稿”。
+用户于 2026-08-27 正式确认以下文件为 Paper 3 当前正式 Research Proposal 基准：
 
-当前有两条尚待用户选择的主路线：
+`E:\Info_AI\主Agent\文章项目\03_AIA责任归因\Paper3_加入群体后的新实验推进稿_2026-08-17.md`
 
-1. `AI role proximity / decision authority allocation`：比较 AI-analysis、AI-recommendation、AI-default/delegation。
-2. `responsibility design / accountability intervention`：比较 confirm、disclosure、logging 等责任设计。
+后续关于 Paper 3 的研究问题、理论故事、实验设计、假设和统计识别，默认以该文件为准。其他 Notion proposal 草稿、实验设计笔记、材料地图、对话总结和导师审查继续作为历史来源材料，不得覆盖当前正式基准。
 
-在主路线确认前，不应把两套操控全部塞进一个主实验。
+“正式基准”表示项目内唯一现行 RP，不表示设计已经通过实证验证、伦理审查或最终预注册。
+
+## 2026-08-06 重构决定
+
+- 停止推进 `AI intervention -> felt accountability / decisional ownership -> risk behavior` 路线。
+- 不再把“AI 进入决策过程后，人类决策者是否降低自身责任感受”作为 Paper 3 的默认研究问题。
+- confirm、disclosure、logging、AI role proximity 和既有 Hawk-Dove / escalation 设计均降为历史候选材料，不再约束新研究问题。
+- 新研究问题从既有理论出发生成。优先系统检查责任研究和 social preferences 研究中的理论命题、竞争性解释与未解决矛盾，再判断 AI 是否改变其中某个既有理论关系。
+- 将地缘冲突相关理论纳入同一轮筛选，重点检查国际冲突中的安全困境、战争议价、危机信号、升级，以及群际社会偏好；地缘冲突场景本身不构成理论贡献。
+- 目前尚未确定研究主体、核心构念、分析层级、理论来源、自变量、因变量或实验任务；在完成理论筛选前不得提前固定。
+
+下文“暂定方向”和既有专项材料仅作为历史文献入口；与当前正式基准冲突时，以当前正式基准为准。
 
 ## 暂定方向
 

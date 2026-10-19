@@ -1,0 +1,173 @@
+{"kind":"deck","id":"pr/gimo2n","name":"Deck"}
+{"kind":"layout","layoutId":"694e2b1a-2bb9-47fc-9c68-bbfd60dddf53","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"993ae73a-3125-4618-b9c9-dbce70a1f51d","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/4t21pa","slide":1,"title":"第一章","textShapes":6}
+{"kind":"textbox","id":"sh/oj2t83it","slide":1,"text":"第一章","textPreview":"第一章","textChars":3,"textLines":1,"bbox":[42,38,180,36]}
+{"kind":"shape","id":"sh/vy90je9c","slide":1,"bbox":[42,92,1196,1]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":1,"text":"算法权威与双重贝叶斯偏离","textPreview":"算法权威与双重贝叶斯偏离","textChars":12,"textLines":1,"bbox":[42,165,980,190]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":1,"text":"生成式 AI 如何重塑证据抽样与信念更新","textPreview":"生成式 AI 如何重塑证据抽样与信念更新","textChars":20,"textLines":1,"bbox":[46,382,900,78]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":1,"bbox":[42,535,450,70]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":1,"text":"核心线索：AI 不只是给答案，而是改变人判断证据是否已经足够。","textPreview":"核心线索：AI 不只是给答案，而是改变人判断证据是否已经足够。","textChars":31,"textLines":1,"bbox":[62,552,410,42]}
+{"kind":"textbox","id":"sh/61032lsz","slide":1,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/4t21pa","slide":1,"text":""}
+{"kind":"slide","id":"sl/dbfyim","slide":2,"title":"研究动机","textShapes":7}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":2,"text":"研究动机","textPreview":"研究动机","textChars":4,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":2,"text":"生成式 AI 的关键变化，是先给出一个看似完整的解释。","textPreview":"生成式 AI 的关键变化，是先给出一个看似完整的解释。","textChars":27,"textLines":1,"bbox":[42,82,780,108]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":2,"text":"传统搜索让用户先面对证据，再形成解释。生成式 AI 则常常先给出结论、理由和证据组织方式。用户因此可能在真正接触证据之前，就已经获得一个被算法预解释的判断框架。","textPreview":"传统搜索让用户先面对证据，再形成解释。生成式 AI 则常常先给出结论、理由和证据组织方式。用户因此可能在真正接触证据之前，就已经获得一个被算法预解释的判断框架。","textChars":80,"textLines":1,"bbox":[46,220,560,220]}
+{"kind":"shape","id":"sh/4zidonyd","slide":2,"bbox":[690,110,505,405]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":2,"text":"这改变了两个判断","textPreview":"这改变了两个判断","textChars":8,"textLines":1,"bbox":[720,142,440,42]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":2,"text":"我还需要继续找证据吗？\n\n后来的反向证据还重要吗？","textPreview":"我还需要继续找证据吗？ |  | 后来的反向证据还重要吗？","textChars":25,"textLines":3,"bbox":[720,210,430,250]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":2,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/83itgfml","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/dbfyim","slide":2,"text":""}
+{"kind":"slide","id":"sl/lvknlc","slide":3,"title":"核心张力","textShapes":7}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":3,"text":"核心张力","textPreview":"核心张力","textChars":4,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":3,"text":"少搜索不一定是坏事，关键是少搜索之后判断有没有变差。","textPreview":"少搜索不一定是坏事，关键是少搜索之后判断有没有变差。","textChars":26,"textLines":1,"bbox":[42,82,780,108]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":3,"text":"如果 summary 已经有效压缩了高质量证据，少查阅原始材料可能是理性的信息成本节约。只有当用户在 summary 不充分时仍然停止搜索，并且后验更偏离规范基准，才构成有害的信息获取偏离。","textPreview":"如果 summary 已经有效压缩了高质量证据，少查阅原始材料可能是理性的信息成本节约。只有当用户在 summary 不充分时仍然停止搜索，并且后验更偏离规范基准，才构成有害的信息获取偏离。","textChars":95,"textLines":1,"bbox":[46,220,560,220]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":3,"bbox":[690,110,505,405]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":3,"text":"本章避免一个误判","textPreview":"本章避免一个误判","textChars":8,"textLines":1,"bbox":[720,142,440,42]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":3,"text":"不是：AI 让人少搜索，所以判断更差\n\n而是：少搜索在什么条件下才变成贝叶斯偏离","textPreview":"不是：AI 让人少搜索，所以判断更差 |  | 而是：少搜索在什么条件下才变成贝叶斯偏离","textChars":40,"textLines":3,"bbox":[720,210,430,250]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":3,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/lvknlc","slide":3,"text":""}
+{"kind":"slide","id":"sl/ddhqyn","slide":4,"title":"文献缺口","textShapes":7}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":4,"text":"文献缺口","textPreview":"文献缺口","textChars":4,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":4,"text":"现有 AI 判断研究多看“是否采纳答案”，较少拆开信念形成的两个阶段。","textPreview":"现有 AI 判断研究多看“是否采纳答案”，较少拆开信念形成的两个阶段。","textChars":35,"textLines":1,"bbox":[42,82,780,108]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":4,"text":"algorithmic trust、automation bias 和 algorithm aversion 解释了人是否相信、采纳或回避算法。但生成式 AI 的特殊性在于，它先组织证据、处理冲突并生成叙事。因此，需要研究它如何改变搜索停止规则和后验更新规则。","textPreview":"algorithmic trust、automation bias 和 algorithm aversion 解释了人是否相信、采纳或回避算法。但生成式 AI 的特殊性在于，它先组织证据、处理冲突并生成叙事。因此，需要研究它如何改变搜索停止规则和后验更新规则。","textChars":130,"textLines":1,"bbox":[46,220,560,220]}
+{"kind":"shape","id":"sh/7ed8bat4","slide":4,"bbox":[690,110,505,405]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":4,"text":"本文补上的缺口","textPreview":"本文补上的缺口","textChars":7,"textLines":1,"bbox":[720,142,440,42]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":4,"text":"信息获取：用户是否过早停止抽样\n\n信息处理：用户是否低估反向证据诊断性","textPreview":"信息获取：用户是否过早停止抽样 |  | 信息处理：用户是否低估反向证据诊断性","textChars":35,"textLines":3,"bbox":[720,210,430,250]}
+{"kind":"textbox","id":"sh/0z61032l","slide":4,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/ddhqyn","slide":4,"text":""}
+{"kind":"slide","id":"sl/7fywx8","slide":5,"title":"理论入口","textShapes":7}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":5,"text":"理论入口","textPreview":"理论入口","textChars":4,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":5,"text":"perceived signal structure 描述用户如何想象 AI 背后的证据过程。","textPreview":"perceived signal structure 描述用户如何想象 AI 背后的证据过程。","textChars":47,"textLines":1,"bbox":[42,82,780,108]}
+{"kind":"textbox","id":"sh/72x4nap4","slide":5,"text":"用户看到的不是单独一句答案。他们还会推断 AI 看过多少证据、覆盖多少维度、是否处理过反方信息，以及 summary 是否能代表完整证据环境。","textPreview":"用户看到的不是单独一句答案。他们还会推断 AI 看过多少证据、覆盖多少维度、是否处理过反方信息，以及 summary 是否能代表完整证据环境。","textChars":71,"textLines":1,"bbox":[46,220,560,220]}
+{"kind":"shape","id":"sh/0z61032l","slide":5,"bbox":[690,110,505,405]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":5,"text":"它不是简单信任","textPreview":"它不是简单信任","textChars":7,"textLines":1,"bbox":[720,142,440,42]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":5,"text":"信任问：这个答案对不对？\n\n算法权威问：AI 是否已经替我充分处理了证据？","textPreview":"信任问：这个答案对不对？ |  | 算法权威问：AI 是否已经替我充分处理了证据？","textChars":37,"textLines":3,"bbox":[720,210,430,250]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":5,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/7fywx8","slide":5,"text":""}
+{"kind":"slide","id":"sl/phlfsm","slide":6,"title":"理论机制","textShapes":10}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":6,"text":"理论机制","textPreview":"理论机制","textChars":4,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":6,"text":"双重贝叶斯偏离不是一个偏差，而是两个阶段的偏离。","textPreview":"双重贝叶斯偏离不是一个偏差，而是两个阶段的偏离。","textChars":24,"textLines":1,"bbox":[42,82,1020,88]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":6,"bbox":[64,205,530,330]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":6,"bbox":[686,205,530,330]}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":6,"text":"路径一：看得更少","textPreview":"路径一：看得更少","textChars":8,"textLines":1,"bbox":[94,236,440,36]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":6,"text":"AI summary 看起来完整\n→ 用户高估证据覆盖\n→ 额外搜索价值下降\n→ 过早停止抽样","textPreview":"AI summary 看起来完整 | → 用户高估证据覆盖 | → 额外搜索价值下降 | → 过早停止抽样","textChars":47,"textLines":4,"bbox":[94,302,435,150]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":6,"text":"信息获取偏离","textPreview":"信息获取偏离","textChars":6,"textLines":1,"bbox":[94,468,230,30]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":6,"text":"路径二：更新更少","textPreview":"路径二：更新更少","textChars":8,"textLines":1,"bbox":[716,236,440,36]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":6,"text":"AI 叙事压缩模糊性\n→ 反向证据像局部例外\n→ 诊断性被低估\n→ 后验更新不足","textPreview":"AI 叙事压缩模糊性 | → 反向证据像局部例外 | → 诊断性被低估 | → 后验更新不足","textChars":40,"textLines":4,"bbox":[716,302,435,150]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":6,"text":"信息处理偏离","textPreview":"信息处理偏离","textChars":6,"textLines":1,"bbox":[716,468,230,30]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":6,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/phlfsm","slide":6,"text":""}
+{"kind":"slide","id":"sl/prpq72","slide":7,"title":"研究问题","textShapes":10}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":7,"text":"研究问题","textPreview":"研究问题","textChars":4,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":7,"text":"这篇文章不问“AI 是否让人少搜索”，而问少搜索意味着什么。","textPreview":"这篇文章不问“AI 是否让人少搜索”，而问少搜索意味着什么。","textChars":30,"textLines":1,"bbox":[42,82,1050,90]}
+{"kind":"textbox","id":"sh/svu9knih","slide":7,"text":"RQ1","textPreview":"RQ1","textChars":3,"textLines":1,"bbox":[70,222,90,42]}
+{"kind":"shape","id":"sh/zidonyd0","slide":7,"bbox":[165,215,950,72]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":7,"text":"AI summary 与 AI 标签是否改变后续搜索停止阈值？","textPreview":"AI summary 与 AI 标签是否改变后续搜索停止阈值？","textChars":31,"textLines":1,"bbox":[195,233,880,34]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":7,"text":"RQ2","textPreview":"RQ2","textChars":3,"textLines":1,"bbox":[70,334,90,42]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":7,"bbox":[165,327,950,72]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":7,"text":"搜索减少是理性信息压缩，还是贝叶斯意义上的信息获取偏离？","textPreview":"搜索减少是理性信息压缩，还是贝叶斯意义上的信息获取偏离？","textChars":28,"textLines":1,"bbox":[195,345,880,34]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":7,"text":"RQ3","textPreview":"RQ3","textChars":3,"textLines":1,"bbox":[70,446,90,42]}
+{"kind":"shape","id":"sh/kf6dcbul","slide":7,"bbox":[165,439,950,72]}
+{"kind":"textbox","id":"sh/d0z61032","slide":7,"text":"客观判断质量与主观信息掌握感是否发生错配？","textPreview":"客观判断质量与主观信息掌握感是否发生错配？","textChars":21,"textLines":1,"bbox":[195,457,880,34]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":7,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/prpq72","slide":7,"text":""}
+{"kind":"slide","id":"sl/ugbu4w","slide":8,"title":"实验设计","textShapes":18}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":8,"text":"实验设计","textPreview":"实验设计","textChars":4,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":8,"text":"同一段 summary，只改变来源标签；再改变 summary 是否代表完整证据。","textPreview":"同一段 summary，只改变来源标签；再改变 summary 是否代表完整证据。","textChars":41,"textLines":1,"bbox":[42,82,1080,86]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":8,"text":"信息呈现方式","textPreview":"信息呈现方式","textChars":6,"textLines":1,"bbox":[74,195,210,30]}
+{"kind":"textbox","id":"sh/judg7ads","slide":8,"text":"证据环境","textPreview":"证据环境","textChars":4,"textLines":1,"bbox":[74,485,160,30]}
+{"kind":"shape","id":"sh/u9knih4b","slide":8,"bbox":[300,190,250,70]}
+{"kind":"textbox","id":"sh/1032lszq","slide":8,"text":"No summary","textPreview":"No summary","textChars":10,"textLines":1,"bbox":[320,212,210,30]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":8,"bbox":[590,190,250,70]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":8,"text":"Unlabeled summary","textPreview":"Unlabeled summary","textChars":17,"textLines":1,"bbox":[610,212,210,30]}
+{"kind":"shape","id":"sh/udg7adsj","slide":8,"bbox":[880,190,250,70]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":8,"text":"AI-labeled summary","textPreview":"AI-labeled summary","textChars":18,"textLines":1,"bbox":[900,212,210,30]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":8,"bbox":[74,290,190,72]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":8,"text":"Representative","textPreview":"Representative","textChars":14,"textLines":1,"bbox":[90,313,160,30]}
+{"kind":"shape","id":"sh/neloj2t8","slide":8,"bbox":[300,290,250,72]}
+{"kind":"textbox","id":"sh/cbulwval","slide":8,"text":"条件 1","textPreview":"条件 1","textChars":4,"textLines":1,"bbox":[385,312,80,28]}
+{"kind":"shape","id":"sh/5sneloj2","slide":8,"bbox":[590,290,250,72]}
+{"kind":"textbox","id":"sh/u54zidon","slide":8,"text":"条件 2","textPreview":"条件 2","textChars":4,"textLines":1,"bbox":[675,312,80,28]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":8,"bbox":[880,290,250,72]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":8,"text":"条件 3","textPreview":"条件 3","textChars":4,"textLines":1,"bbox":[965,312,80,28]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":8,"bbox":[74,410,190,72]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":8,"text":"Incomplete","textPreview":"Incomplete","textChars":10,"textLines":1,"bbox":[90,433,160,30]}
+{"kind":"shape","id":"sh/0je9cvix","slide":8,"bbox":[300,410,250,72]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":8,"text":"条件 4","textPreview":"条件 4","textChars":4,"textLines":1,"bbox":[385,432,80,28]}
+{"kind":"shape","id":"sh/idonyd0z","slide":8,"bbox":[590,410,250,72]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":8,"text":"条件 5","textPreview":"条件 5","textChars":4,"textLines":1,"bbox":[675,432,80,28]}
+{"kind":"shape","id":"sh/0rqd4vmt","slide":8,"bbox":[880,410,250,72]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":8,"text":"条件 6","textPreview":"条件 6","textChars":4,"textLines":1,"bbox":[965,432,80,28]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":8,"text":"关键识别：AI-labeled 与 unlabeled 的正文完全相同，因此差异来自来源标签，而不是内容。","textPreview":"关键识别：AI-labeled 与 unlabeled 的正文完全相同，因此差异来自来源标签，而不是内容。","textChars":53,"textLines":1,"bbox":[80,575,1060,46]}
+{"kind":"textbox","id":"sh/tovahoza","slide":8,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/032lszqt","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/ugbu4w","slide":8,"text":""}
+{"kind":"slide","id":"sl/oeoyur","slide":9,"title":"贝叶斯基准","textShapes":9}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":9,"text":"贝叶斯基准","textPreview":"贝叶斯基准","textChars":5,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":9,"text":"可计算的规范后验，是这篇文章的识别支点。","textPreview":"可计算的规范后验，是这篇文章的识别支点。","textChars":20,"textLines":1,"bbox":[42,82,990,80]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":9,"bbox":[64,205,520,290]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":9,"text":"公司风险判断任务","textPreview":"公司风险判断任务","textChars":8,"textLines":1,"bbox":[94,236,420,36]}
+{"kind":"textbox","id":"sh/7u54zido","slide":9,"text":"固定证据库\n每条证据有预设诊断强度\n利好 / 利空信号对应 likelihood ratio\n被试报告高风险后验概率","textPreview":"固定证据库 | 每条证据有预设诊断强度 | 利好 / 利空信号对应 likelihood ratio | 被试报告高风险后验概率","textChars":58,"textLines":4,"bbox":[94,306,430,140]}
+{"kind":"shape","id":"sh/wfyxobm5","slide":9,"bbox":[665,205,520,290]}
+{"kind":"textbox","id":"sh/l0rqd4vm","slide":9,"text":"规范更新公式","textPreview":"规范更新公式","textChars":6,"textLines":1,"bbox":[700,236,420,36]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":9,"text":"logit(posterior)\n= logit(prior) + Σ log(LRj)","textPreview":"logit(posterior) | = logit(prior) + Σ log(LRj)","textChars":44,"textLines":2,"bbox":[700,315,430,85]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":9,"text":"它允许我们判断：用户到底是没看到证据，还是看到了但没有正确吸收。","textPreview":"它允许我们判断：用户到底是没看到证据，还是看到了但没有正确吸收。","textChars":32,"textLines":1,"bbox":[700,425,420,42]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":9,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/oeoyur","slide":9,"text":""}
+{"kind":"slide","id":"sl/bu6b2y","slide":10,"title":"核心指标","textShapes":13}
+{"kind":"textbox","id":"sh/at47y1kr","slide":10,"text":"核心指标","textPreview":"核心指标","textChars":4,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":10,"text":"两个 deviation 把“少看”和“少更”拆开。","textPreview":"两个 deviation 把“少看”和“少更”拆开。","textChars":26,"textLines":1,"bbox":[42,82,930,80]}
+{"kind":"shape","id":"sh/szqtcj6t","slide":10,"bbox":[64,198,1080,92]}
+{"kind":"textbox","id":"sh/32lszqtc","slide":10,"text":"Conditional Bayesian deviation","textPreview":"Conditional Bayesian deviation","textChars":30,"textLines":1,"bbox":[92,214,370,28]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":10,"text":"报告后验 vs 实际接触信息集下的规范后验","textPreview":"报告后验 vs 实际接触信息集下的规范后验","textChars":21,"textLines":1,"bbox":[488,212,430,28]}
+{"kind":"textbox","id":"sh/l87ed8ba","slide":10,"text":"衡量是否正确吸收已看到的信息","textPreview":"衡量是否正确吸收已看到的信息","textChars":14,"textLines":1,"bbox":[488,246,520,24]}
+{"kind":"shape","id":"sh/sneloj2t","slide":10,"bbox":[64,324,1080,92]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":10,"text":"Full-information deviation","textPreview":"Full-information deviation","textChars":26,"textLines":1,"bbox":[92,340,370,28]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":10,"text":"报告后验 vs 完整证据集下的规范后验","textPreview":"报告后验 vs 完整证据集下的规范后验","textChars":19,"textLines":1,"bbox":[488,338,430,28]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":10,"text":"衡量是否因搜索不足偏离完整信息判断","textPreview":"衡量是否因搜索不足偏离完整信息判断","textChars":17,"textLines":1,"bbox":[488,372,520,24]}
+{"kind":"shape","id":"sh/xs72x4na","slide":10,"bbox":[64,450,1080,92]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":10,"text":"Calibration gap","textPreview":"Calibration gap","textChars":15,"textLines":1,"bbox":[92,466,370,28]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":10,"text":"主观掌握感 − 客观表现","textPreview":"主观掌握感 − 客观表现","textChars":12,"textLines":1,"bbox":[488,464,430,28]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":10,"text":"衡量 epistemic ownership 与判断质量是否错配","textPreview":"衡量 epistemic ownership 与判断质量是否错配","textChars":32,"textLines":1,"bbox":[488,498,520,24]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":10,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/bu6b2y","slide":10,"text":""}
+{"kind":"slide","id":"sl/jjwkah","slide":11,"title":"识别逻辑","textShapes":7}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":11,"text":"识别逻辑","textPreview":"识别逻辑","textChars":4,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":11,"text":"实验设计让三种机制能够被分开观察。","textPreview":"实验设计让三种机制能够被分开观察。","textChars":17,"textLines":1,"bbox":[42,82,780,108]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":11,"text":"same-summary source-label design 分离内容效应与 AI 标签效应；representative 与 incomplete summary 分离理性信息压缩和有害偏离；两个 Bayesian deviation 指标分离信息获取不足和信息处理不足。","textPreview":"same-summary source-label design 分离内容效应与 AI 标签效应；representative 与 incomplete summary 分离理性信息压缩和有害偏离；两个 Bayesian deviation 指标分离信息获取不足和信息处理不足。","textChars":139,"textLines":1,"bbox":[46,220,560,220]}
+{"kind":"shape","id":"sh/u9knih4b","slide":11,"bbox":[690,110,505,405]}
+{"kind":"textbox","id":"sh/judg7ads","slide":11,"text":"如果出现关键模式","textPreview":"如果出现关键模式","textChars":8,"textLines":1,"bbox":[720,142,440,42]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":11,"text":"AI 标签降低搜索，但 representative 条件下判断不差：理性压缩\n\nAI 标签降低搜索，且 incomplete 条件下 full-information deviation 上升：有害偏离","textPreview":"AI 标签降低搜索，但 representative 条件下判断不差：理性压缩 |  | AI 标签降低搜索，且 incomplete 条件下 full-information deviation 上升：有害偏离","textChars":102,"textLines":3,"bbox":[720,210,430,250]}
+{"kind":"textbox","id":"sh/1032lszq","slide":11,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/jjwkah","slide":11,"text":""}
+{"kind":"slide","id":"sl/zdro0w","slide":12,"title":"本章贡献","textShapes":13}
+{"kind":"textbox","id":"sh/al87ed8b","slide":12,"text":"本章贡献","textPreview":"本章贡献","textChars":4,"textLines":1,"bbox":[42,38,500,28]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":12,"text":"第一章要建立一个更细的判断框架：AI 改变的是形成信念的过程。","textPreview":"第一章要建立一个更细的判断框架：AI 改变的是形成信念的过程。","textChars":31,"textLines":1,"bbox":[42,82,1110,86]}
+{"kind":"shape","id":"sh/orytsvu9","slide":12,"bbox":[64,220,500,105]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":12,"text":"理论贡献","textPreview":"理论贡献","textChars":4,"textLines":1,"bbox":[92,238,220,30]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":12,"text":"从 algorithmic advice 转向 algorithmic meaning-making agent。","textPreview":"从 algorithmic advice 转向 algorithmic meaning-making agent。","textChars":57,"textLines":1,"bbox":[92,277,430,28]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":12,"bbox":[624,220,500,105]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":12,"text":"机制贡献","textPreview":"机制贡献","textChars":4,"textLines":1,"bbox":[652,238,220,30]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":12,"text":"区分信息获取偏离与信息处理偏离。","textPreview":"区分信息获取偏离与信息处理偏离。","textChars":16,"textLines":1,"bbox":[652,277,430,28]}
+{"kind":"shape","id":"sh/65wjudg7","slide":12,"bbox":[64,370,500,105]}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":12,"text":"方法贡献","textPreview":"方法贡献","textChars":4,"textLines":1,"bbox":[92,388,220,30]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":12,"text":"用固定证据库和 likelihood ratio 建立可计算贝叶斯基准。","textPreview":"用固定证据库和 likelihood ratio 建立可计算贝叶斯基准。","textChars":36,"textLines":1,"bbox":[92,427,430,28]}
+{"kind":"shape","id":"sh/yxobm58z","slide":12,"bbox":[624,370,500,105]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":12,"text":"答辩价值","textPreview":"答辩价值","textChars":4,"textLines":1,"bbox":[652,388,220,30]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":12,"text":"为后三篇中的授权与责任问题提供共同的问题意识。","textPreview":"为后三篇中的授权与责任问题提供共同的问题意识。","textChars":23,"textLines":1,"bbox":[652,427,430,28]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":12,"text":"一句话收束：AI 不只是改变人接受哪个答案，也改变人什么时候觉得证据已经足够。","textPreview":"一句话收束：AI 不只是改变人接受哪个答案，也改变人什么时候觉得证据已经足够。","textChars":39,"textLines":1,"bbox":[74,570,1030,40]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":12,"text":"第一章｜双重贝叶斯偏离","textPreview":"第一章｜双重贝叶斯偏离","textChars":11,"textLines":1,"bbox":[42,666,420,24]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1190,666,48,24]}
+{"kind":"notes","id":"nt/zdro0w","slide":12,"text":""}

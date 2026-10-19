@@ -1,0 +1,108 @@
+{"kind":"deck","id":"pr/wj98uz","name":"Deck"}
+{"kind":"layout","layoutId":"8713dd4c-3f60-4518-be23-9df25af82525","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"7218d6d3-057e-4067-93e4-be6f08efb9c2","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/s87v4k","slide":1,"title":"ASYMMETRIC TRUST · MODEL 1","textShapes":24}
+{"kind":"textbox","id":"sh/nmp47ydw","slide":1,"name":"slide-kicker","text":"ASYMMETRIC TRUST · MODEL 1","textPreview":"ASYMMETRIC TRUST · MODEL 1","textChars":26,"textLines":1,"bbox":[60,38,340,24]}
+{"kind":"textbox","id":"sh/onil03eh","slide":1,"name":"slide-title","text":"模型建立：理性采用基准","textPreview":"模型建立：理性采用基准","textChars":11,"textLines":1,"bbox":[60,68,1130,60]}
+{"kind":"shape","id":"sh/p8rm98v2","slide":1,"name":"title-accent","bbox":[60,140,84,4]}
+{"kind":"textbox","id":"sh/a9032dc7","slide":1,"name":"left-header","text":"Rational adoption rule","textPreview":"Rational adoption rule","textChars":22,"textLines":1,"bbox":[60,174,500,34]}
+{"kind":"textbox","id":"sh/ba94bids","slide":1,"name":"left-intro","text":"决策者在完成同一任务的 Human（H）与 AI（A）之间选择。","textPreview":"决策者在完成同一任务的 Human（H）与 AI（A）之间选择。","textChars":32,"textLines":1,"bbox":[60,214,510,44]}
+{"kind":"shape","id":"sh/cbi54nud","slide":1,"name":"notation-band","bbox":[60,270,520,122]}
+{"kind":"textbox","id":"sh/xcrmdsvy","slide":1,"name":"notation-q","text":"qₐ, qₕ","textPreview":"qₐ, qₕ","textChars":6,"textLines":1,"bbox":[84,290,120,34]}
+{"kind":"textbox","id":"sh/qdw3q9w3","slide":1,"name":"notation-q-desc","text":"objective task accuracy","textPreview":"objective task accuracy","textChars":23,"textLines":1,"bbox":[214,292,315,28]}
+{"kind":"textbox","id":"sh/re54zedo","slide":1,"name":"notation-e","text":"eₐ = 1 − qₐ     eₕ = 1 − qₕ","textPreview":"eₐ = 1 − qₐ     eₕ = 1 − qₕ","textChars":27,"textLines":1,"bbox":[84,336,430,34]}
+{"kind":"textbox","id":"sh/bqdgn2xs","slide":1,"name":"cost-label","text":"Expected total cost","textPreview":"Expected total cost","textChars":19,"textLines":1,"bbox":[60,420,230,30]}
+{"kind":"textbox","id":"sh/qp4zexg7","slide":1,"name":"cost-formula","text":"Cⱼ = eⱼL + cⱼ     (j ∈ {h, a})","textPreview":"Cⱼ = eⱼL + cⱼ     (j ∈ {h, a})","textChars":30,"textLines":1,"bbox":[60,456,520,46]}
+{"kind":"shape","id":"sh/dsvipcfy","slide":1,"name":"choice-rule","bbox":[60,526,520,92]}
+{"kind":"textbox","id":"sh/crmhg7yd","slide":1,"name":"choice-rule-label","text":"Choose AI iff","textPreview":"Choose AI iff","textChars":13,"textLines":1,"bbox":[84,546,145,30]}
+{"kind":"textbox","id":"sh/3mtgj2xw","slide":1,"name":"choice-rule-formula","text":"eₕ − eₐ  >  (cₐ − cₕ) / L","textPreview":"eₕ − eₐ  >  (cₐ − cₕ) / L","textChars":25,"textLines":1,"bbox":[244,541,300,42]}
+{"kind":"textbox","id":"sh/21kzaxgb","slide":1,"name":"benchmark-note","text":"基准含义：选择预期总成本更低的来源。","textPreview":"基准含义：选择预期总成本更低的来源。","textChars":18,"textLines":1,"bbox":[84,584,450,24]}
+{"kind":"shape","id":"sh/povylcfm","slide":1,"name":"divider","bbox":[620,174,1,444]}
+{"kind":"textbox","id":"sh/onmhc7yh","slide":1,"name":"right-header","text":"Model assumptions","textPreview":"Model assumptions","textChars":17,"textLines":1,"bbox":[670,174,500,34]}
+{"kind":"shape","id":"sh/fytgfixk","slide":1,"name":"a1-dot","bbox":[670,233,8,8]}
+{"kind":"textbox","id":"sh/exkz6dgz","slide":1,"name":"a1-tag","text":"A1  Comparable alternatives","textPreview":"A1  Comparable alternatives","textChars":27,"textLines":1,"bbox":[690,225,500,28]}
+{"kind":"textbox","id":"sh/it0zid07","slide":1,"name":"a1-body","text":"同一任务、同一绩效指标；同类错误具有相同客观后果 Lₕ = Lₐ = L。","textPreview":"同一任务、同一绩效指标；同类错误具有相同客观后果 Lₕ = Lₐ = L。","textChars":37,"textLines":1,"bbox":[690,257,500,52]}
+{"kind":"shape","id":"sh/ju90ri1c","slide":1,"name":"a2-dot","bbox":[670,318,8,8]}
+{"kind":"textbox","id":"sh/4vihknix","slide":1,"name":"a2-tag","text":"A2  Risk neutrality","textPreview":"A2  Risk neutrality","textChars":19,"textLines":1,"bbox":[690,310,500,28]}
+{"kind":"textbox","id":"sh/5wbitszi","slide":1,"name":"a2-body","text":"决策者最小化 expected total cost。","textPreview":"决策者最小化 expected total cost。","textChars":27,"textLines":1,"bbox":[690,342,500,52]}
+{"kind":"shape","id":"sh/6xkzmx03","slide":1,"name":"a3-dot","bbox":[670,393,8,8]}
+{"kind":"textbox","id":"sh/ryt0v2ho","slide":1,"name":"a3-tag","text":"A3  Independent errors","textPreview":"A3  Independent errors","textChars":22,"textLines":1,"bbox":[690,385,500,28]}
+{"kind":"textbox","id":"sh/sz21o7i9","slide":1,"name":"a3-body","text":"Errors are independent draws。","textPreview":"Errors are independent draws。","textChars":29,"textLines":1,"bbox":[690,417,500,52]}
+{"kind":"shape","id":"sh/tkbixszu","slide":1,"name":"a4-dot","bbox":[670,468,8,8]}
+{"kind":"textbox","id":"sh/elkjqx0f","slide":1,"name":"a4-tag","text":"A4  Costless evaluation","textPreview":"A4  Costless evaluation","textChars":23,"textLines":1,"bbox":[690,460,500,28]}
+{"kind":"textbox","id":"sh/fmt0z2hk","slide":1,"name":"a4-body","text":"决策者能够准确观察 eₕ 与 eₐ。","textPreview":"决策者能够准确观察 eₕ 与 eₐ。","textChars":18,"textLines":1,"bbox":[690,492,500,52]}
+{"kind":"shape","id":"sh/pgf2pwj2","slide":1,"name":"a5-dot","bbox":[670,543,8,8]}
+{"kind":"textbox","id":"sh/of6lgr2h","slide":1,"name":"a5-tag","text":"A5  Stationary environment","textPreview":"A5  Stationary environment","textChars":26,"textLines":1,"bbox":[690,535,500,28]}
+{"kind":"textbox","id":"sh/3edkn61w","slide":1,"name":"a5-body","text":"eₕ、eₐ、L、cₕ、cₐ 在每个 decision block 内保持不变。","textPreview":"eₕ、eₐ、L、cₕ、cₐ 在每个 decision block 内保持不变。","textChars":39,"textLines":1,"bbox":[690,567,500,52]}
+{"kind":"textbox","id":"sh/2t43e1kb","slide":1,"name":"page-1","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1186,674,34,20]}
+{"kind":"notes","id":"nt/s87v4k","slide":1,"text":"本页先给出不包含心理变量的理性采用基准。\nA1–A5 是模型维持条件，不是关于 alpha 正负方向的研究假设。\n[Sources]\n- RP_Asymmetric_Trust_正式稿_2026-08-23.md, Sections 8.1–8.2."}
+{"kind":"slide","id":"sl/cc2l6h","slide":2,"title":"ASYMMETRIC TRUST · MODEL 2","textShapes":23}
+{"kind":"textbox","id":"sh/4bqh0vyl","slide":2,"name":"slide-kicker","text":"ASYMMETRIC TRUST · MODEL 2","textPreview":"ASYMMETRIC TRUST · MODEL 2","textChars":26,"textLines":1,"bbox":[60,38,340,24]}
+{"kind":"textbox","id":"sh/jahgrqx0","slide":2,"name":"slide-title","text":"模型建立：来源如何进入错误权重","textPreview":"模型建立：来源如何进入错误权重","textChars":15,"textLines":1,"bbox":[60,68,1130,60]}
+{"kind":"shape","id":"sh/ip8zylgf","slide":2,"name":"title-accent","bbox":[60,140,84,4]}
+{"kind":"textbox","id":"sh/tgjyx0f2","slide":2,"name":"left-header","text":"Behavioural departure","textPreview":"Behavioural departure","textChars":21,"textLines":1,"bbox":[60,176,520,34]}
+{"kind":"textbox","id":"sh/sfqh4vyh","slide":2,"name":"left-intro","text":"在理性基准上，仅引入一个有符号的结构参数 α。","textPreview":"在理性基准上，仅引入一个有符号的结构参数 α。","textChars":23,"textLines":1,"bbox":[60,218,520,40]}
+{"kind":"shape","id":"sh/rehgvqxw","slide":2,"name":"weight-box","bbox":[60,278,520,112]}
+{"kind":"textbox","id":"sh/6d8z2lgr","slide":2,"name":"weight-human","text":"L̃ₕ = L","textPreview":"L̃ₕ = L","textChars":7,"textLines":1,"bbox":[90,304,180,46]}
+{"kind":"textbox","id":"sh/9kfylwfy","slide":2,"name":"weight-ai","text":"L̃ₐ = (1 + α)L","textPreview":"L̃ₐ = (1 + α)L","textChars":14,"textLines":1,"bbox":[300,304,235,46]}
+{"kind":"textbox","id":"sh/8j6xsbyd","slide":2,"name":"weight-caption","text":"Human error weight remains L; AI error weight changes with α.","textPreview":"Human error weight remains L; AI error weight changes with α.","textChars":61,"textLines":1,"bbox":[90,354,430,24]}
+{"kind":"textbox","id":"sh/axwva5cn","slide":2,"name":"behavioral-cost","text":"C̃ₐ = (1 + α)eₐL + cₐ","textPreview":"C̃ₐ = (1 + α)eₐL + cₐ","textChars":21,"textLines":1,"bbox":[60,430,520,52]}
+{"kind":"shape","id":"sh/vy5c3ats","slide":2,"name":"behavioral-choice","bbox":[60,510,520,100]}
+{"kind":"textbox","id":"sh/wzedcvud","slide":2,"name":"behavioral-choice-label","text":"Choose AI iff","textPreview":"Choose AI iff","textChars":13,"textLines":1,"bbox":[84,530,145,30]}
+{"kind":"textbox","id":"sh/x0nu50by","slide":2,"name":"behavioral-choice-formula","text":"eₕ − eₐ − αeₐ  >  (cₐ − cₕ) / L","textPreview":"eₕ − eₐ − αeₐ  >  (cₐ − cₕ) / L","textChars":31,"textLines":1,"bbox":[84,564,465,34]}
+{"kind":"shape","id":"sh/i1wve5cj","slide":2,"name":"divider","bbox":[620,176,1,434]}
+{"kind":"textbox","id":"sh/j25c7at4","slide":2,"name":"right-header","text":"Signed interpretation of α","textPreview":"Signed interpretation of α","textChars":26,"textLines":1,"bbox":[670,176,520,34]}
+{"kind":"textbox","id":"sh/knedgfup","slide":2,"name":"right-intro","text":"α 衡量：AI 错误相对于等价 Human 错误获得的额外决策权重。","textPreview":"α 衡量：AI 错误相对于等价 Human 错误获得的额外决策权重。","textChars":34,"textLines":1,"bbox":[670,218,520,50]}
+{"kind":"shape","id":"sh/5o7u9kba","slide":2,"name":"axis","bbox":[710,358,420,4]}
+{"kind":"shape","id":"sh/6pgvipcf","slide":2,"name":"zero-tick","bbox":[918,338,4,44]}
+{"kind":"textbox","id":"sh/7qpcbut0","slide":2,"name":"axis-neg","text":"α < 0","textPreview":"α < 0","textChars":5,"textLines":1,"bbox":[680,302,130,38]}
+{"kind":"textbox","id":"sh/3upczu98","slide":2,"name":"axis-zero","text":"α = 0","textPreview":"α = 0","textChars":5,"textLines":1,"bbox":[862,302,130,38]}
+{"kind":"textbox","id":"sh/2tgbqp8n","slide":2,"name":"axis-pos","text":"α > 0","textPreview":"α > 0","textChars":5,"textLines":1,"bbox":[1062,302,130,38]}
+{"kind":"shape","id":"sh/pwru14re","slide":2,"name":"neg-zone","bbox":[670,400,165,138]}
+{"kind":"textbox","id":"sh/ovitszqt","slide":2,"name":"neg-title","text":"Excess tolerance","textPreview":"Excess tolerance","textChars":16,"textLines":1,"bbox":[688,420,130,34]}
+{"kind":"textbox","id":"sh/fqpcva9c","slide":2,"name":"neg-body","text":"AI 错误获得较低权重","textPreview":"AI 错误获得较低权重","textChars":11,"textLines":1,"bbox":[688,468,130,48]}
+{"kind":"shape","id":"sh/upgbm58r","slide":2,"name":"zero-zone","bbox":[850,400,165,138]}
+{"kind":"textbox","id":"sh/1s7uxkr2","slide":2,"name":"zero-title","text":"Source-neutral","textPreview":"Source-neutral","textChars":14,"textLines":1,"bbox":[868,420,130,34]}
+{"kind":"textbox","id":"sh/grytofqh","slide":2,"name":"zero-body","text":"Human 与 AI 错误同权","textPreview":"Human 与 AI 错误同权","textChars":15,"textLines":1,"bbox":[868,468,130,48]}
+{"kind":"shape","id":"sh/725sra90","slide":2,"name":"pos-zone","bbox":[1030,400,165,138]}
+{"kind":"textbox","id":"sh/61wbi58f","slide":2,"name":"pos-title","text":"Excess intolerance","textPreview":"Excess intolerance","textChars":18,"textLines":1,"bbox":[1048,420,130,34]}
+{"kind":"textbox","id":"sh/w7u9sb6d","slide":2,"name":"pos-body","text":"AI 错误获得较高权重","textPreview":"AI 错误获得较高权重","textChars":11,"textLines":1,"bbox":[1048,468,130,48]}
+{"kind":"textbox","id":"sh/x83q1g7y","slide":2,"name":"alpha-note","text":"α 是本文唯一的核心结构参数；它不是信任量表。","textPreview":"α 是本文唯一的核心结构参数；它不是信任量表。","textChars":23,"textLines":1,"bbox":[670,570,520,34]}
+{"kind":"textbox","id":"sh/a5crq1o7","slide":2,"name":"page-2","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1186,674,34,20]}
+{"kind":"notes","id":"nt/cc2l6h","slide":2,"text":"本页从理性基准进入行为偏离。\nalpha 允许正、零、负三个方向，因此同一模型可同时表示 excess tolerance、source-neutral weighting 与 excess intolerance。\n[Sources]\n- RP_Asymmetric_Trust_正式稿_2026-08-23.md, Section 8.3."}
+{"kind":"slide","id":"sl/0y38a3","slide":3,"title":"ASYMMETRIC TRUST · EMPIRICAL MAP","textShapes":26}
+{"kind":"textbox","id":"sh/i1ovu98n","slide":3,"name":"slide-kicker","text":"ASYMMETRIC TRUST · EMPIRICAL MAP","textPreview":"ASYMMETRIC TRUST · EMPIRICAL MAP","textChars":32,"textLines":1,"bbox":[60,38,340,24]}
+{"kind":"textbox","id":"sh/54fu5o7y","slide":3,"name":"slide-title","text":"模型解释：测量什么，如何识别 α","textPreview":"模型解释：测量什么，如何识别 α","textChars":16,"textLines":1,"bbox":[60,68,1130,60]}
+{"kind":"shape","id":"sh/436dwjqt","slide":3,"name":"title-accent","bbox":[60,140,84,4]}
+{"kind":"textbox","id":"sh/rqhc7yp4","slide":3,"name":"left-header","text":"Three levels of variables","textPreview":"Three levels of variables","textChars":25,"textLines":1,"bbox":[60,176,520,34]}
+{"kind":"shape","id":"sh/q58vytoj","slide":3,"name":"row-01","bbox":[60,230,520,90]}
+{"kind":"textbox","id":"sh/dszu987a","slide":3,"name":"row-01-n","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[82,248,44,32]}
+{"kind":"textbox","id":"sh/srqd036p","slide":3,"name":"row-01-title","text":"Objective performance","textPreview":"Objective performance","textChars":21,"textLines":1,"bbox":[138,244,250,28]}
+{"kind":"textbox","id":"sh/7adcvup0","slide":3,"name":"row-01-formula","text":"qₐ, qₕ  →  eₐ, eₕ","textPreview":"qₐ, qₕ  →  eₐ, eₕ","textChars":17,"textLines":1,"bbox":[395,244,155,32]}
+{"kind":"textbox","id":"sh/694bmp8f","slide":3,"name":"row-01-body","text":"AI 与 Human 的客观任务正确率及错误率","textPreview":"AI 与 Human 的客观任务正确率及错误率","textChars":23,"textLines":1,"bbox":[138,278,410,32]}
+{"kind":"shape","id":"sh/wzydgv65","slide":3,"name":"row-02","bbox":[60,338,520,90]}
+{"kind":"textbox","id":"sh/h07up0nq","slide":3,"name":"row-02-n","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[82,356,44,32]}
+{"kind":"textbox","id":"sh/uxgveloz","slide":3,"name":"row-02-title","text":"Psychological evaluation","textPreview":"Psychological evaluation","textChars":24,"textLines":1,"bbox":[138,352,250,28]}
+{"kind":"textbox","id":"sh/vypcnq5k","slide":3,"name":"row-02-formula","text":"PTₐ,ᵢ , PTₕ,ᵢ","textPreview":"PTₐ,ᵢ , PTₕ,ᵢ","textChars":13,"textLines":1,"bbox":[395,352,155,32]}
+{"kind":"textbox","id":"sh/43idkf61","slide":3,"name":"row-02-body","text":"Perceived trustworthiness：参与者认为来源多大程度上值得信任","textPreview":"Perceived trustworthiness：参与者认为来源多大程度上值得信任","textChars":42,"textLines":1,"bbox":[138,386,410,32]}
+{"kind":"shape","id":"sh/54retknm","slide":3,"name":"row-03","bbox":[60,446,520,90]}
+{"kind":"textbox","id":"sh/i10vi5ov","slide":3,"name":"row-03-n","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[82,464,44,32]}
+{"kind":"textbox","id":"sh/j29cra5g","slide":3,"name":"row-03-title","text":"Observed behaviour","textPreview":"Observed behaviour","textChars":18,"textLines":1,"bbox":[138,460,250,28]}
+{"kind":"textbox","id":"sh/k7ed8b6x","slide":3,"name":"row-03-formula","text":"Yᵢₜ","textPreview":"Yᵢₜ","textChars":3,"textLines":1,"bbox":[395,460,155,32]}
+{"kind":"textbox","id":"sh/l8nuhg7i","slide":3,"name":"row-03-body","text":"Source choice / AI adoption；只有满足构念条件时才解释为 trusting behaviour","textPreview":"Source choice / AI adoption；只有满足构念条件时才解释为 trusting behaviour","textChars":60,"textLines":1,"bbox":[138,494,410,32]}
+{"kind":"textbox","id":"sh/1ofa5cz6","slide":3,"name":"check-label","text":"Identification check","textPreview":"Identification check","textChars":20,"textLines":1,"bbox":[60,566,170,26]}
+{"kind":"textbox","id":"sh/036tc7yl","slide":3,"name":"check-formula","text":"q̂ₐ,ᵢ , q̂ₕ,ᵢ","textPreview":"q̂ₐ,ᵢ , q̂ₕ,ᵢ","textChars":13,"textLines":1,"bbox":[238,562,130,32]}
+{"kind":"textbox","id":"sh/f2xsj2h0","slide":3,"name":"check-body","text":"用于检查 A4；它是能力信念，不是信任构念。","textPreview":"用于检查 A4；它是能力信念，不是信任构念。","textChars":22,"textLines":1,"bbox":[378,566,202,44]}
+{"kind":"shape","id":"sh/e1obaxgf","slide":3,"name":"divider","bbox":[620,176,1,438]}
+{"kind":"textbox","id":"sh/9sza9cz2","slide":3,"name":"right-header","text":"Identification of α","textPreview":"Identification of α","textChars":19,"textLines":1,"bbox":[670,176,520,34]}
+{"kind":"textbox","id":"sh/orqtg7yx","slide":3,"name":"threshold-def","text":"e*ₐ,ᵢ：参与者 i 仍愿意选择 AI 时，可接受的最高客观 AI 错误率。","textPreview":"e*ₐ,ᵢ：参与者 i 仍愿意选择 AI 时，可接受的最高客观 AI 错误率。","textChars":39,"textLines":1,"bbox":[670,224,520,58]}
+{"kind":"shape","id":"sh/nqhs72hc","slide":3,"name":"threshold-box","bbox":[670,304,520,172]}
+{"kind":"textbox","id":"sh/2p8behgr","slide":3,"name":"threshold-eq","text":"(1 + αᵢ)e*ₐ,ᵢL + cₐ = eₕL + cₕ","textPreview":"(1 + αᵢ)e*ₐ,ᵢL + cₐ = eₕL + cₕ","textChars":30,"textLines":1,"bbox":[696,332,470,48]}
+{"kind":"shape","id":"sh/xwzudwze","slide":3,"name":"threshold-sep","bbox":[710,392,440,1]}
+{"kind":"textbox","id":"sh/wvqtkryt","slide":3,"name":"alpha-eq","text":"αᵢ = (eₕL + cₕ − cₐ) / (e*ₐ,ᵢL) − 1","textPreview":"αᵢ = (eₕL + cₕ − cₐ) / (e*ₐ,ᵢL) − 1","textChars":35,"textLines":1,"bbox":[696,410,470,46]}
+{"kind":"shape","id":"sh/up0zypsz","slide":3,"name":"interpretation","bbox":[670,502,520,104]}
+{"kind":"textbox","id":"sh/vq9grutk","slide":3,"name":"interpretation-title","text":"Interpretation","textPreview":"Interpretation","textChars":14,"textLines":1,"bbox":[694,520,150,28]}
+{"kind":"textbox","id":"sh/wrih0za5","slide":3,"name":"interpretation-body","text":"客观任务表现与来源选择共同识别 α；perceived trustworthiness 用于判断该选择差异能否解释为信任差异。","textPreview":"客观任务表现与来源选择共同识别 α；perceived trustworthiness 用于判断该选择差异能否解释为信任差异。","textChars":63,"textLines":1,"bbox":[694,552,470,48]}
+{"kind":"textbox","id":"sh/hsryt4bq","slide":3,"name":"caveat","text":"若 q̂ 系统偏离 q，A4 不成立，选择差异不能直接解释为 α。","textPreview":"若 q̂ 系统偏离 q，A4 不成立，选择差异不能直接解释为 α。","textChars":33,"textLines":1,"bbox":[670,626,520,30]}
+{"kind":"textbox","id":"sh/itkz29sb","slide":3,"name":"page-3","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1186,674,34,20]}
+{"kind":"notes","id":"nt/0y38a3","slide":3,"text":"本页把客观变量、心理变量与行为结果分开。\nPerceived task accuracy 用来检查参与者是否准确理解绩效信息；它不等于 perceived trustworthiness。\n[Sources]\n- RP_Asymmetric_Trust_正式稿_2026-08-23.md, Sections 6.3 and 8.4–8.5.\n- Everett, J. A. C., Claessens, S., Knöchel, T.-D., & Reinecke, M. G. (2026). Principles for understanding trust in artificial intelligence. Nature Reviews Psychology, 5, 388–401."}

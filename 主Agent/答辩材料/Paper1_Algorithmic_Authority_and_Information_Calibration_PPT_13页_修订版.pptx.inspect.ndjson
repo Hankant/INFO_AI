@@ -1,0 +1,313 @@
+{"kind":"deck","id":"pr/u6klok","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/2x4nap4r","slide":1,"title":"PAPER 1","textShapes":8}
+{"kind":"shape","id":"sh/nap4r65w","slide":1,"bbox":[915,-160,440,440]}
+{"kind":"shape","id":"sh/cvixczed","slide":1,"bbox":[-110,470,300,300]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":1,"bbox":[86,86,24,24]}
+{"kind":"shape","id":"sh/udg7adsj","slide":1,"bbox":[84,626,1112,1]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":1,"text":"PAPER 1","textPreview":"PAPER 1","textChars":7,"textLines":1,"bbox":[128,82,260,24]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"text":"Algorithmic Authority and Information Calibration","textPreview":"Algorithmic Authority and Information Calibration","textChars":49,"textLines":1,"bbox":[128,144,980,76]}
+{"kind":"textbox","id":"sh/54zidony","slide":1,"text":"How generative AI changes additional search and belief updating under uncertainty","textPreview":"How generative AI changes additional search and belief updating under uncertainty","textChars":81,"textLines":1,"bbox":[128,230,860,56]}
+{"kind":"shape","id":"sh/u9knih4b","slide":1,"bbox":[128,356,424,144]}
+{"kind":"shape","id":"sh/judg7ads","slide":1,"bbox":[128,356,6,144]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":1,"text":"Problem shift","textPreview":"Problem shift","textChars":13,"textLines":1,"bbox":[146,368,394,30]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":1,"text":"The question is not only what answer AI gives. The question is whether AI changes when people feel ready to stop looking for more evidence.","textPreview":"The question is not only what answer AI gives. The question is whether AI changes when people feel ready to stop looking for more evidence.","textChars":139,"textLines":1,"bbox":[146,404,394,84]}
+{"kind":"shape","id":"sh/54zidony","slide":1,"bbox":[582,356,576,144]}
+{"kind":"shape","id":"sh/cj6tovah","slide":1,"bbox":[582,356,6,144]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":1,"text":"Dissertation position","textPreview":"Dissertation position","textChars":21,"textLines":1,"bbox":[600,368,546,30]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":1,"text":"Paper 1 studies the first link in the broader chain: how AI reshapes the move from evidence to belief.","textPreview":"Paper 1 studies the first link in the broader chain: how AI reshapes the move from evidence to belief.","textChars":102,"textLines":1,"bbox":[600,404,546,84]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":1,"text":"Belief formation -> reliance calibration -> responsibility","textPreview":"Belief formation -> reliance calibration -> responsibility","textChars":58,"textLines":1,"bbox":[132,646,980,18]}
+{"kind":"notes","id":"nt/2x4nap4r","slide":1,"text":"This first paper focuses on the opening step in the dissertation: how AI changes the movement from evidence to belief.\nThe key shift is that generative AI does not just give a faster answer. It may change when users feel they have already seen enough and no longer need additional evidence.\nSo the central object is information calibration, not the older framing of double Bayesian distortion as a starting theory."}
+{"kind":"slide","id":"sl/pg3ex0nu","slide":2,"title":"CONCRETE EXAMPLE","textShapes":8}
+{"kind":"shape","id":"sh/yxobm58z","slide":2,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":2,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":2,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/r65wjudg","slide":2,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":2,"text":"CONCRETE EXAMPLE","textPreview":"CONCRETE EXAMPLE","textChars":16,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":2,"text":"Search engines ask for evidence first, but AI assistants answer first","textPreview":"Search engines ask for evidence first, but AI assistants answer first","textChars":69,"textLines":1,"bbox":[96,96,1080,74]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":2,"text":"The basic reversal is not only about speed. It changes the user's sense of whether more search is still worth doing.","textPreview":"The basic reversal is not only about speed. It changes the user's sense of whether more search is still worth doing.","textChars":116,"textLines":1,"bbox":[96,176,1060,30]}
+{"kind":"shape","id":"sh/rytsvu9k","slide":2,"bbox":[96,230,500,320]}
+{"kind":"shape","id":"sh/yd0z6103","slide":2,"bbox":[96,230,6,320]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":2,"text":"Search engine logic","textPreview":"Search engine logic","textChars":19,"textLines":1,"bbox":[114,242,470,30]}
+{"kind":"textbox","id":"sh/lwval87e","slide":2,"text":"Source 1\nSource 2\nSource 3\nSource 4\n\nThe user opens links, compares sources, notices conflict, and then forms a judgment.\n\nEvidence first -> interpretation later","textPreview":"Source 1 | Source 2 | Source 3 | Source 4 |  | The user opens links, compares sources, notices conflict, and then forms a judgment. |  | ...","textChars":161,"textLines":8,"bbox":[114,278,470,260]}
+{"kind":"shape","id":"sh/e9cvixcz","slide":2,"bbox":[680,230,496,320]}
+{"kind":"shape","id":"sh/3q5o7qpg","slide":2,"bbox":[680,230,6,320]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":2,"text":"AI assistant logic","textPreview":"AI assistant logic","textChars":18,"textLines":1,"bbox":[698,242,466,30]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":2,"text":"A summarized definition\nA coherent explanation\nA worked example\nA ready-made conclusion\n\nThe user first receives an interpreted answer and only later decides whether to verify it.\n\nInterpreted answer first -> optional verification later","textPreview":"A summarized definition | A coherent explanation | A worked example | A ready-made conclusion |  | The user first receives an interpreted...","textChars":236,"textLines":8,"bbox":[698,278,466,260]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":2,"text":"The reversal matters because the user may now judge the value of additional evidence through the AI's summary rather than through raw search alone.","textPreview":"The reversal matters because the user may now judge the value of additional evidence through the AI's summary rather than through raw sea...","textChars":147,"textLines":1,"bbox":[126,592,1028,26]}
+{"kind":"notes","id":"nt/pg3ex0nu","slide":2,"text":"I want to start with a simple and familiar contrast rather than an abstract framework.\nIn a search-engine setting, users usually see sources first and construct an interpretation later. In an AI-assistant setting, they often receive a coherent interpretation before they have seen the raw evidence.\nThat reversal is the opening intuition for the whole paper. It suggests that AI may change not just how much people search, but how they judge the value of searching further."}
+{"kind":"slide","id":"sl/s72x4nap","slide":3,"title":"CORE PROBLEM","textShapes":10}
+{"kind":"shape","id":"sh/vmtwra5g","slide":3,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":3,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/dsji5sne","slide":3,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":3,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":3,"text":"CORE PROBLEM","textPreview":"CORE PROBLEM","textChars":12,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"text":"Less search can mean efficiency or harmful under-search","textPreview":"Less search can mean efficiency or harmful under-search","textChars":55,"textLines":1,"bbox":[96,96,960,74]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"The key is not whether search declines. The key is whether judgment quality declines once search declines.","textPreview":"The key is not whether search declines. The key is whether judgment quality declines once search declines.","textChars":106,"textLines":1,"bbox":[96,176,1060,30]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":3,"bbox":[156,248,420,248]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":3,"bbox":[156,248,6,248]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":3,"text":"Efficient compression","textPreview":"Efficient compression","textChars":21,"textLines":1,"bbox":[174,260,390,30]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":3,"text":"Users search less because the summary has already compressed informative evidence.\n\nLater posterior quality does not deteriorate.","textPreview":"Users search less because the summary has already compressed informative evidence. |  | Later posterior quality does not deteriorate.","textChars":129,"textLines":3,"bbox":[174,296,390,188]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":3,"bbox":[704,248,420,248]}
+{"kind":"shape","id":"sh/oj2t83it","slide":3,"bbox":[704,248,6,248]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":3,"text":"Harmful under-search","textPreview":"Harmful under-search","textChars":20,"textLines":1,"bbox":[722,260,390,30]}
+{"kind":"textbox","id":"sh/61032lsz","slide":3,"text":"Users search less because they overestimate how complete the summary already is.\n\nLater judgment moves further away from the full-information benchmark.","textPreview":"Users search less because they overestimate how complete the summary already is. |  | Later judgment moves further away from the full-inf...","textChars":152,"textLines":3,"bbox":[722,296,390,188]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":3,"text":"vs","textPreview":"vs","textChars":2,"textLines":1,"bbox":[602,350,80,26]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":3,"bbox":[180,548,920,82]}
+{"kind":"shape","id":"sh/vahoza1g","slide":3,"bbox":[180,548,6,82]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":3,"text":"What this slide does","textPreview":"What this slide does","textChars":20,"textLines":1,"bbox":[198,560,890,30]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":3,"text":"It separates the behavioral fact of reduced search from the normative question of whether reduced search actually harms posterior judgment.","textPreview":"It separates the behavioral fact of reduced search from the normative question of whether reduced search actually harms posterior judgment.","textChars":139,"textLines":1,"bbox":[198,596,890,22]}
+{"kind":"notes","id":"nt/s72x4nap","slide":3,"text":"This slide cuts off a common shortcut in the discussion of AI and search.\nIf users search less after receiving an AI answer, that is not automatically a problem. It could be rational compression if the summary already captures informative evidence.\nThe paper therefore asks a stricter question: when search falls, do later beliefs still stay close to the appropriate benchmark, or do they move away from it?"}
+{"kind":"slide","id":"sl/val87ed8","slide":4,"title":"EXISTING WORK","textShapes":3}
+{"kind":"shape","id":"sh/1gvy90je","slide":4,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":4,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/je9cvixc","slide":4,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/87ed8bat","slide":4,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":4,"text":"EXISTING WORK","textPreview":"EXISTING WORK","textChars":13,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":4,"text":"The literature gives us reduced search and automation bias, but not a direct account of information calibration","textPreview":"The literature gives us reduced search and automation bias, but not a direct account of information calibration","textChars":111,"textLines":1,"bbox":[96,96,1060,74]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":4,"text":"This literature map shows the closest targets and clarifies why the paper must distinguish search behavior from evidentiary sufficiency and posterior quality.","textPreview":"This literature map shows the closest targets and clarifies why the paper must distinguish search behavior from evidentiary sufficiency a...","textChars":158,"textLines":1,"bbox":[96,176,1060,30]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":4,"bbox":[96,226,1080,438]}
+{"kind":"image","id":"im/8v6psfil","slide":4,"name":"","bbox":[151.75,240,968.49,410]}
+{"kind":"notes","id":"nt/val87ed8","slide":4,"text":"Here I want to anchor the paper in the existing literature more concretely.\nThe image summarizes the closest literature targets on automation bias, reduced search, and verification. These papers are valuable, but they often move too quickly from less search to worse judgment, or they treat verification intensity as the key mechanism.\nMy paper's move is different. I ask whether AI changes information calibration: whether users still correctly judge the value of additional evidence, and whether posterior quality remains aligned with what they think they know."}
+{"kind":"slide","id":"sl/mlkjm1cf","slide":5,"title":"TRADITIONAL BENCHMARK","textShapes":12}
+{"kind":"shape","id":"sh/vahoza1g","slide":5,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/ovahoza1","slide":5,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/dg7adsji","slide":5,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":5,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":5,"text":"TRADITIONAL BENCHMARK","textPreview":"TRADITIONAL BENCHMARK","textChars":21,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":5,"text":"The standard benchmark says people should stop when extra evidence is no longer worth its cost","textPreview":"The standard benchmark says people should stop when extra evidence is no longer worth its cost","textChars":94,"textLines":1,"bbox":[96,96,1050,74]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":5,"text":"Under a rational search view, less search is not itself a failure. It becomes a problem only when people stop too early.","textPreview":"Under a rational search view, less search is not itself a failure. It becomes a problem only when people stop too early.","textChars":120,"textLines":1,"bbox":[96,176,1060,30]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":5,"bbox":[96,246,324,248]}
+{"kind":"shape","id":"sh/vy90je9c","slide":5,"bbox":[96,246,6,248]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":5,"text":"Step 1","textPreview":"Step 1","textChars":6,"textLines":1,"bbox":[114,258,294,30]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":5,"text":"Users weigh the expected value of additional evidence against the cost of getting it.","textPreview":"Users weigh the expected value of additional evidence against the cost of getting it.","textChars":85,"textLines":1,"bbox":[114,294,294,188]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":5,"bbox":[478,246,324,248]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":5,"bbox":[478,246,6,248]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":5,"text":"Step 2","textPreview":"Step 2","textChars":6,"textLines":1,"bbox":[496,258,294,30]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":5,"text":"They continue searching if more evidence is still likely to change the posterior enough to matter.","textPreview":"They continue searching if more evidence is still likely to change the posterior enough to matter.","textChars":98,"textLines":1,"bbox":[496,294,294,188]}
+{"kind":"shape","id":"sh/58z25kb6","slide":5,"bbox":[860,246,316,248]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":5,"bbox":[860,246,6,248]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":5,"text":"Implication","textPreview":"Implication","textChars":11,"textLines":1,"bbox":[878,258,286,30]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":5,"text":"Reduced search is rational when information has already been efficiently compressed, but not when sufficiency is overestimated.","textPreview":"Reduced search is rational when information has already been efficiently compressed, but not when sufficiency is overestimated.","textChars":127,"textLines":1,"bbox":[878,294,286,188]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":5,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[430,352,48,24]}
+{"kind":"textbox","id":"sh/vixczed8","slide":5,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[812,352,48,24]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":5,"text":"This is why the main question is not whether AI reduces search, but whether it changes the stopping rule in a way that remains normatively justified.","textPreview":"This is why the main question is not whether AI reduces search, but whether it changes the stopping rule in a way that remains normativel...","textChars":149,"textLines":1,"bbox":[166,548,948,48]}
+{"kind":"notes","id":"nt/mlkjm1cf","slide":5,"text":"The traditional benchmark behind this paper is a search-cost benchmark.\nPeople should stop searching when the expected value of additional evidence falls below the cost of getting it. So stopping early is not automatically irrational.\nThe paper becomes interesting only if AI changes the stopping rule in a way that makes users think the evidence is already sufficient when, in fact, it is not."}
+{"kind":"slide","id":"sl/58z25kb6","slide":6,"title":"GAP","textShapes":9}
+{"kind":"shape","id":"sh/9cvixcze","slide":6,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":6,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/r65wjudg","slide":6,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":6,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":6,"text":"GAP","textPreview":"GAP","textChars":3,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":6,"text":"What is still missing is the judgment of evidentiary sufficiency after an AI answer","textPreview":"What is still missing is the judgment of evidentiary sufficiency after an AI answer","textChars":83,"textLines":1,"bbox":[96,96,1020,74]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":6,"text":"The unresolved issue is not simply search depth. It is whether answer-first systems change how complete the current evidence feels.","textPreview":"The unresolved issue is not simply search depth. It is whether answer-first systems change how complete the current evidence feels.","textChars":131,"textLines":1,"bbox":[96,176,1060,30]}
+{"kind":"shape","id":"sh/g7adsji5","slide":6,"bbox":[96,236,1080,106]}
+{"kind":"shape","id":"sh/9s36hcrm","slide":6,"bbox":[96,236,6,106]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":6,"text":"What has been shown","textPreview":"What has been shown","textChars":19,"textLines":1,"bbox":[114,248,1050,30]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":6,"text":"AI can reduce search behavior, and algorithmic labels can shape later responses.","textPreview":"AI can reduce search behavior, and algorithmic labels can shape later responses.","textChars":80,"textLines":1,"bbox":[114,284,1050,46]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":6,"bbox":[96,360,1080,106]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":6,"bbox":[96,360,6,106]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":6,"text":"What remains unresolved","textPreview":"What remains unresolved","textChars":23,"textLines":1,"bbox":[114,372,1050,30]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":6,"text":"We still do not know whether an AI summary changes users' judgment that the available evidence is already sufficient.","textPreview":"We still do not know whether an AI summary changes users' judgment that the available evidence is already sufficient.","textChars":117,"textLines":1,"bbox":[114,408,1050,46]}
+{"kind":"shape","id":"sh/vahoza1g","slide":6,"bbox":[96,484,1080,106]}
+{"kind":"shape","id":"sh/6tovahoz","slide":6,"bbox":[96,484,6,106]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":6,"text":"Why that matters","textPreview":"Why that matters","textChars":16,"textLines":1,"bbox":[114,496,1050,30]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":6,"text":"If the sufficiency judgment shifts, then AI can alter later evidence acquisition, posterior beliefs, and subjective mastery at the same time.","textPreview":"If the sufficiency judgment shifts, then AI can alter later evidence acquisition, posterior beliefs, and subjective mastery at the same t...","textChars":141,"textLines":1,"bbox":[114,532,1050,46]}
+{"kind":"notes","id":"nt/58z25kb6","slide":6,"text":"This is the gap that motivates the paper.\nThe unresolved question is not merely whether AI reduces search. It is whether an AI answer changes the user's judgment that the current evidence is already enough.\nThat matters because a shift in perceived sufficiency can affect later evidence acquisition, later Bayesian updating, and the user's own sense of how much they really know."}
+{"kind":"slide","id":"sl/0z61032l","slide":7,"title":"CORE QUESTION","textShapes":16}
+{"kind":"shape","id":"sh/qd4vmtwr","slide":7,"bbox":[1020,-36,264,236]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":7,"bbox":[-74,536,196,196]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":7,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/fa9w3m94","slide":7,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":7,"text":"CORE QUESTION","textPreview":"CORE QUESTION","textChars":13,"textLines":1,"bbox":[132,60,300,24]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":7,"text":"Core question: How do generative AI answers change users' stopping thresholds, Bayesian posterior quality, and subjective information mastery?","textPreview":"Core question: How do generative AI answers change users' stopping thresholds, Bayesian posterior quality, and subjective information mas...","textChars":142,"textLines":1,"bbox":[106,108,1060,100]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":7,"text":"The paper does not treat reduced raw-evidence viewing as search laziness. It reevaluates that behavior inside a Bayesian belief-updating framework.","textPreview":"The paper does not treat reduced raw-evidence viewing as search laziness. It reevaluates that behavior inside a Bayesian belief-updating ...","textChars":147,"textLines":1,"bbox":[106,206,1060,54]}
+{"kind":"shape","id":"sh/je9cvixc","slide":7,"bbox":[96,270,400,250]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":7,"bbox":[96,270,6,250]}
+{"kind":"textbox","id":"sh/svu9knih","slide":7,"text":"Framing","textPreview":"Framing","textChars":7,"textLines":1,"bbox":[124,288,352,28]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":7,"text":"• Reduced raw-evidence viewing is not assumed to be lazy by default.\n\n• The key question is whether AI changes how sufficient the current evidence feels.\n\n• Information calibration asks whether perceived sufficiency stays aligned with the real value of further evidence.","textPreview":"• Reduced raw-evidence viewing is not assumed to be lazy by default. |  | • The key question is whether AI changes how sufficient the cur...","textChars":270,"textLines":5,"bbox":[124,328,352,176]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":7,"bbox":[530,270,646,250]}
+{"kind":"shape","id":"sh/za1gvy90","slide":7,"bbox":[530,270,6,250]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":7,"text":"Mechanism in one line","textPreview":"Mechanism in one line","textChars":21,"textLines":1,"bbox":[558,288,586,28]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":7,"text":"AI answer / AI label","textPreview":"AI answer / AI label","textChars":20,"textLines":1,"bbox":[592,326,520,24]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":7,"text":"↓","textPreview":"↓","textChars":1,"textLines":1,"bbox":[822,346,56,18]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":7,"text":"inferred hidden search-and-integration process","textPreview":"inferred hidden search-and-integration process","textChars":46,"textLines":1,"bbox":[592,358,520,24]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":7,"text":"↓","textPreview":"↓","textChars":1,"textLines":1,"bbox":[822,378,56,18]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":7,"text":"perceived evidentiary sufficiency rises","textPreview":"perceived evidentiary sufficiency rises","textChars":39,"textLines":1,"bbox":[592,390,520,24]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":7,"text":"↓","textPreview":"↓","textChars":1,"textLines":1,"bbox":[822,410,56,18]}
+{"kind":"textbox","id":"sh/wval87ed","slide":7,"text":"the value of additional evidence falls","textPreview":"the value of additional evidence falls","textChars":38,"textLines":1,"bbox":[592,422,520,24]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":7,"text":"↓","textPreview":"↓","textChars":1,"textLines":1,"bbox":[822,442,56,18]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":7,"text":"the stopping threshold shifts forward","textPreview":"the stopping threshold shifts forward","textChars":37,"textLines":1,"bbox":[592,454,520,24]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":7,"text":"The paper therefore studies whether AI shifts the stopping rule by changing perceived evidentiary sufficiency.","textPreview":"The paper therefore studies whether AI shifts the stopping rule by changing perceived evidentiary sufficiency.","textChars":110,"textLines":1,"bbox":[176,570,920,44]}
+{"kind":"notes","id":"nt/0z61032l","slide":7,"text":"This slide now merges the earlier framing and mechanism pages into one core question slide.\nThe paper does not treat reduced raw-evidence viewing as search laziness. Instead, it reevaluates that behavior inside a Bayesian belief-updating framework.\nThe mechanism is that AI answers may change what users infer about hidden search and integration, which can make the current evidence feel sufficient too early and move the stopping threshold forward."}
+{"kind":"slide","id":"sl/qh0fepkz","slide":8,"title":"RESEARCH QUESTIONS","textShapes":9}
+{"kind":"shape","id":"sh/vahoza1g","slide":8,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/ovahoza1","slide":8,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/dg7adsji","slide":8,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":8,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":8,"text":"RESEARCH QUESTIONS","textPreview":"RESEARCH QUESTIONS","textChars":18,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":8,"text":"The study asks three linked questions","textPreview":"The study asks three linked questions","textChars":37,"textLines":1,"bbox":[96,96,860,74]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":8,"text":"The sequence runs from behavior, to normative evaluation, to metacognitive calibration.","textPreview":"The sequence runs from behavior, to normative evaluation, to metacognitive calibration.","textChars":87,"textLines":1,"bbox":[96,176,1060,30]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":8,"bbox":[96,238,324,296]}
+{"kind":"shape","id":"sh/vy90je9c","slide":8,"bbox":[96,238,6,296]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":8,"text":"RQ1","textPreview":"RQ1","textChars":3,"textLines":1,"bbox":[114,250,294,30]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":8,"text":"Does an AI-labeled summary lower the stopping threshold for additional search?","textPreview":"Does an AI-labeled summary lower the stopping threshold for additional search?","textChars":78,"textLines":1,"bbox":[114,286,294,236]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":8,"bbox":[478,238,324,296]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":8,"bbox":[478,238,6,296]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":8,"text":"RQ2","textPreview":"RQ2","textChars":3,"textLines":1,"bbox":[496,250,294,30]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":8,"text":"When search falls, is that rational information compression or harmful information-acquisition deviation?","textPreview":"When search falls, is that rational information compression or harmful information-acquisition deviation?","textChars":105,"textLines":1,"bbox":[496,286,294,236]}
+{"kind":"shape","id":"sh/58z25kb6","slide":8,"bbox":[860,238,316,296]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":8,"bbox":[860,238,6,296]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":8,"text":"RQ3","textPreview":"RQ3","textChars":3,"textLines":1,"bbox":[878,250,286,30]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":8,"text":"Does subjective information mastery become misaligned with objective judgment quality?","textPreview":"Does subjective information mastery become misaligned with objective judgment quality?","textChars":86,"textLines":1,"bbox":[878,286,286,236]}
+{"kind":"notes","id":"nt/qh0fepkz","slide":8,"text":"The three research questions are deliberately ordered.\nThe first is behavioral: does the AI label change the stopping threshold for additional search? The second is normative: when search declines, is that efficient compression or harmful deviation? The third is metacognitive: do subjective mastery and objective judgment quality separate from each other?\nThat sequence is what allows the paper to move from what users do, to whether it is justified, to whether they recognize their own informational position correctly."}
+{"kind":"slide","id":"sl/29gr2p8n","slide":9,"title":"TASK PROTOTYPE","textShapes":11}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":9,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/9gr2p8nq","slide":9,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/gvy90je9","slide":9,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":9,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":9,"text":"TASK PROTOTYPE","textPreview":"TASK PROTOTYPE","textChars":14,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":9,"text":"The prototype has to separate information value from search effort","textPreview":"The prototype has to separate information value from search effort","textChars":66,"textLines":1,"bbox":[96,96,1000,74]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":9,"text":"Before the design details matter, the task has to make additional evidence comparable across conditions.","textPreview":"Before the design details matter, the task has to make additional evidence comparable across conditions.","textChars":104,"textLines":1,"bbox":[96,176,1060,30]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":9,"bbox":[96,238,500,148]}
+{"kind":"shape","id":"sh/25kb6xkf","slide":9,"bbox":[96,238,6,148]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":9,"text":"Same initial content","textPreview":"Same initial content","textChars":20,"textLines":1,"bbox":[114,250,470,30]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":9,"text":"The starting summary content must be held constant when the source label changes.","textPreview":"The starting summary content must be held constant when the source label changes.","textChars":81,"textLines":1,"bbox":[114,286,470,88]}
+{"kind":"shape","id":"sh/m94fu18j","slide":9,"bbox":[676,238,500,148]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":9,"bbox":[676,238,6,148]}
+{"kind":"textbox","id":"sh/83itgfml","slide":9,"text":"Same extra search cost","textPreview":"Same extra search cost","textChars":22,"textLines":1,"bbox":[694,250,470,30]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":9,"text":"The cost of viewing additional evidence must remain the same across groups.","textPreview":"The cost of viewing additional evidence must remain the same across groups.","textChars":75,"textLines":1,"bbox":[694,286,470,88]}
+{"kind":"shape","id":"sh/qxs72x4n","slide":9,"bbox":[96,414,500,148]}
+{"kind":"shape","id":"sh/fil0rqd4","slide":9,"bbox":[96,414,6,148]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":9,"text":"Computable evidence value","textPreview":"Computable evidence value","textChars":25,"textLines":1,"bbox":[114,426,470,30]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":9,"text":"Each evidence item must have a known diagnostic weight so the value of further evidence is measurable.","textPreview":"Each evidence item must have a known diagnostic weight so the value of further evidence is measurable.","textChars":102,"textLines":1,"bbox":[114,462,470,88]}
+{"kind":"shape","id":"sh/xczed8v6","slide":9,"bbox":[676,414,500,148]}
+{"kind":"shape","id":"sh/8v6psfil","slide":9,"bbox":[676,414,6,148]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":9,"text":"Controlled evidence pool","textPreview":"Controlled evidence pool","textChars":24,"textLines":1,"bbox":[694,426,470,30]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":9,"text":"Everyone must draw from the same fixed evidence environment rather than an open web context.","textPreview":"Everyone must draw from the same fixed evidence environment rather than an open web context.","textChars":92,"textLines":1,"bbox":[694,462,470,88]}
+{"kind":"notes","id":"nt/29gr2p8n","slide":9,"text":"Before the design details matter, I want to say clearly what kind of experiment this is.\nIts Bayesian prototype is the classic urn-drawing or bookbag-and-poker-chip belief-updating task.\nThe innovation is to contextualize that prototype as company-risk judgment and add summary-first presentation plus later evidence search under a common cost structure."}
+{"kind":"slide","id":"sl/re1w7mp0","slide":10,"title":"DESIGN","textShapes":15}
+{"kind":"shape","id":"sh/dg7adsji","slide":10,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/6tovahoz","slide":10,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/vahoza1g","slide":10,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/onyd0z61","slide":10,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":10,"text":"DESIGN","textPreview":"DESIGN","textChars":6,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":10,"text":"The experiment has five groups built on one shared evidence pool","textPreview":"The experiment has five groups built on one shared evidence pool","textChars":64,"textLines":1,"bbox":[96,96,1020,74]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":10,"text":"One baseline enters the full evidence pool directly, and four summary groups vary completeness and source label.","textPreview":"One baseline enters the full evidence pool directly, and four summary groups vary completeness and source label.","textChars":112,"textLines":1,"bbox":[96,176,1060,30]}
+{"kind":"shape","id":"sh/oj2t83it","slide":10,"bbox":[96,250,200,214]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":10,"bbox":[96,250,6,214]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":10,"text":"Baseline","textPreview":"Baseline","textChars":8,"textLines":1,"bbox":[114,262,170,30]}
+{"kind":"textbox","id":"sh/sji5snel","slide":10,"text":"No summary\nDirect entry to the evidence pool","textPreview":"No summary | Direct entry to the evidence pool","textChars":44,"textLines":2,"bbox":[114,298,170,154]}
+{"kind":"shape","id":"sh/3ylc7u54","slide":10,"bbox":[320,250,214,214]}
+{"kind":"shape","id":"sh/adsji5sn","slide":10,"bbox":[320,250,6,214]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":10,"text":"Complete\nNo label","textPreview":"Complete | No label","textChars":17,"textLines":2,"bbox":[338,262,184,30]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":10,"text":"Representative summary","textPreview":"Representative summary","textChars":22,"textLines":1,"bbox":[338,298,184,154]}
+{"kind":"shape","id":"sh/3m94fu18","slide":10,"bbox":[548,250,214,214]}
+{"kind":"shape","id":"sh/a5gbq1or","slide":10,"bbox":[548,250,6,214]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":10,"text":"Complete\nAI label","textPreview":"Complete | AI label","textChars":17,"textLines":2,"bbox":[566,262,184,30]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":10,"text":"Representative summary","textPreview":"Representative summary","textChars":22,"textLines":1,"bbox":[566,298,184,154]}
+{"kind":"shape","id":"sh/4zidonyd","slide":10,"bbox":[776,250,214,214]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":10,"bbox":[776,250,6,214]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":10,"text":"An AI summary-assisted evidence search task in a company-risk judgment setting","textPreview":"An AI summary-assisted evidence search task in a company-risk judgment setting","textChars":78,"textLines":1,"bbox":[794,262,184,30]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":10,"text":"The design adapts a classic urn-drawing / bookbag-and-poker-chip belief-updating task and adds summary-first presentation plus follow-on evidence search.","textPreview":"The design adapts a classic urn-drawing / bookbag-and-poker-chip belief-updating task and adds summary-first presentation plus follow-on ...","textChars":153,"textLines":1,"bbox":[794,298,184,154]}
+{"kind":"shape","id":"sh/4r65wjud","slide":10,"bbox":[1004,250,214,214]}
+{"kind":"shape","id":"sh/xc3ylc7u","slide":10,"bbox":[1004,250,6,214]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":10,"text":"Incomplete\nAI label","textPreview":"Incomplete | AI label","textChars":19,"textLines":2,"bbox":[1022,262,184,30]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":10,"text":"Incomplete summary","textPreview":"Incomplete summary","textChars":18,"textLines":1,"bbox":[1022,298,184,154]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":10,"bbox":[180,520,920,92]}
+{"kind":"shape","id":"sh/x0nuxc3y","slide":10,"bbox":[180,520,6,92]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":10,"text":"Why five groups instead of a full six-cell matrix","textPreview":"Why five groups instead of a full six-cell matrix","textChars":49,"textLines":1,"bbox":[198,532,890,30]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":10,"text":"The no-summary baseline does not need a representative versus incomplete split because everyone in that condition enters the same full evidence pool directly.","textPreview":"The no-summary baseline does not need a representative versus incomplete split because everyone in that condition enters the same full ev...","textChars":158,"textLines":1,"bbox":[198,568,890,32]}
+{"kind":"notes","id":"nt/re1w7mp0","slide":10,"text":"This is an important correction relative to the older six-cell description.\nThe current design has five groups. There is one no-summary baseline that enters the shared full evidence pool directly, and then four summary groups produced by completeness crossed with source label.\nThe baseline does not need to be split in two, because the baseline always faces the same full pool rather than a separate summary condition."}
+{"kind":"slide","id":"sl/4fu18jqh","slide":11,"title":"IDENTIFICATION","textShapes":18}
+{"kind":"shape","id":"sh/3m94fu18","slide":11,"bbox":[1020,-118,320,320]}
+{"kind":"shape","id":"sh/s72x4nap","slide":11,"bbox":[-118,540,240,240]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":11,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/adsji5sn","slide":11,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":11,"text":"IDENTIFICATION","textPreview":"IDENTIFICATION","textChars":14,"textLines":1,"bbox":[124,60,420,24]}
+{"kind":"textbox","id":"sh/sji5snel","slide":11,"text":"The same summary text isolates the AI label effect","textPreview":"The same summary text isolates the AI label effect","textChars":50,"textLines":1,"bbox":[96,96,980,74]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":11,"text":"The content stays the same while the label changes, and every participant then moves through the same additional-search sequence.","textPreview":"The content stays the same while the label changes, and every participant then moves through the same additional-search sequence.","textChars":129,"textLines":1,"bbox":[96,176,1060,30]}
+{"kind":"shape","id":"sh/ap4r65wj","slide":11,"bbox":[96,236,500,214]}
+{"kind":"shape","id":"sh/za1gvy90","slide":11,"bbox":[96,236,6,214]}
+{"kind":"textbox","id":"sh/z61032ls","slide":11,"text":"Unlabeled summary","textPreview":"Unlabeled summary","textChars":17,"textLines":1,"bbox":[114,248,470,30]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":11,"text":"The participant sees a summary of the exact same initial evidence, but the source is not identified as AI.","textPreview":"The participant sees a summary of the exact same initial evidence, but the source is not identified as AI.","textChars":106,"textLines":1,"bbox":[114,284,470,154]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":11,"bbox":[680,236,496,214]}
+{"kind":"shape","id":"sh/orytsvu9","slide":11,"bbox":[680,236,6,214]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":11,"text":"AI-labeled summary","textPreview":"AI-labeled summary","textChars":18,"textLines":1,"bbox":[698,248,466,30]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":11,"text":"The participant sees the very same summary text, but now the system explicitly says the summary was generated by AI.","textPreview":"The participant sees the very same summary text, but now the system explicitly says the summary was generated by AI.","textChars":116,"textLines":1,"bbox":[698,284,466,154]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":11,"text":"Participant sequence","textPreview":"Participant sequence","textChars":20,"textLines":1,"bbox":[96,486,260,24]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":11,"bbox":[96,524,188,108]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":11,"bbox":[96,524,6,108]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":11,"text":"See prior","textPreview":"See prior","textChars":9,"textLines":1,"bbox":[114,536,158,30]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":11,"text":"Start from the same prior","textPreview":"Start from the same prior","textChars":25,"textLines":1,"bbox":[114,572,158,48]}
+{"kind":"shape","id":"sh/7u54zido","slide":11,"bbox":[290,578,18,2]}
+{"kind":"shape","id":"sh/wfyxobm5","slide":11,"bbox":[312,524,188,108]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":11,"bbox":[312,524,6,108]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":11,"text":"Read summary","textPreview":"Read summary","textChars":12,"textLines":1,"bbox":[330,536,158,30]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":11,"text":"Or skip summary in baseline","textPreview":"Or skip summary in baseline","textChars":27,"textLines":1,"bbox":[330,572,158,48]}
+{"kind":"shape","id":"sh/wra5gbq1","slide":11,"bbox":[506,578,18,2]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":11,"bbox":[528,524,188,108]}
+{"kind":"shape","id":"sh/epkzupwb","slide":11,"bbox":[528,524,6,108]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":11,"text":"Choose search","textPreview":"Choose search","textChars":13,"textLines":1,"bbox":[546,536,158,30]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":11,"text":"Open more evidence or stop","textPreview":"Open more evidence or stop","textChars":26,"textLines":1,"bbox":[546,572,158,48]}
+{"kind":"shape","id":"sh/4vmtwra5","slide":11,"bbox":[722,578,18,2]}
+{"kind":"shape","id":"sh/bat47y1k","slide":11,"bbox":[744,524,188,108]}
+{"kind":"shape","id":"sh/mp0bi9s3","slide":11,"bbox":[744,524,6,108]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":11,"text":"Report posterior","textPreview":"Report posterior","textChars":16,"textLines":1,"bbox":[762,536,158,30]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":11,"text":"Give the final probability","textPreview":"Give the final probability","textChars":26,"textLines":1,"bbox":[762,572,158,48]}
+{"kind":"shape","id":"sh/bm58z25k","slide":11,"bbox":[938,578,18,2]}
+{"kind":"shape","id":"sh/m1cfa9w3","slide":11,"bbox":[960,524,188,108]}
+{"kind":"shape","id":"sh/twra5gbq","slide":11,"bbox":[960,524,6,108]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":11,"text":"Rate mastery","textPreview":"Rate mastery","textChars":12,"textLines":1,"bbox":[978,536,158,30]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":11,"text":"Report confidence and ownership","textPreview":"Report confidence and ownership","textChars":31,"textLines":1,"bbox":[978,572,158,48]}
+{"kind":"notes","id":"nt/4fu18jqh","slide":11,"text":"This slide captures the cleanest identification logic in the design.\nThe unlabeled-summary and AI-labeled-summary groups read exactly the same summary text. The only difference is whether the source is explicitly marked as AI.\nSo if their later search, posterior, or mastery judgments diverge, that difference cannot be attributed to content. It has to come from the source label and the authority inferences it triggers."}
+{"kind":"slide","id":"sl/lwval87e","slide":12,"title":"RESULT PATTERNS","textShapes":11}
+{"kind":"shape","id":"sh/ed8bat47","slide":12,"bbox":[1020,-36,264,236]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":12,"bbox":[-74,536,196,196]}
+{"kind":"shape","id":"sh/wfyxobm5","slide":12,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":12,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":12,"text":"RESULT PATTERNS","textPreview":"RESULT PATTERNS","textChars":15,"textLines":1,"bbox":[132,60,300,24]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":12,"text":"Different result patterns would support different hypotheses","textPreview":"Different result patterns would support different hypotheses","textChars":60,"textLines":1,"bbox":[106,108,1020,74]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":12,"text":"Once the experiment is in place, the key issue is how the observed result pattern maps onto the three research questions.","textPreview":"Once the experiment is in place, the key issue is how the observed result pattern maps onto the three research questions.","textChars":121,"textLines":1,"bbox":[106,184,1060,52]}
+{"kind":"shape","id":"sh/7adsji5s","slide":12,"bbox":[96,248,500,176]}
+{"kind":"shape","id":"sh/epkzupwb","slide":12,"bbox":[96,248,6,176]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":12,"text":"RQ1: stopping-threshold effect","textPreview":"RQ1: stopping-threshold effect","textChars":30,"textLines":1,"bbox":[124,266,452,28]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":12,"text":"If the AI-labeled summary group searches less, stops earlier, or is willing to pay less for extra evidence than the unlabeled-summary group, that supports the claim that the AI label shifts the search stopping threshold.","textPreview":"If the AI-labeled summary group searches less, stops earlier, or is willing to pay less for extra evidence than the unlabeled-summary gro...","textChars":220,"textLines":1,"bbox":[124,306,452,102]}
+{"kind":"shape","id":"sh/qd4vmtwr","slide":12,"bbox":[676,248,500,176]}
+{"kind":"shape","id":"sh/fyxobm58","slide":12,"bbox":[676,248,6,176]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":12,"text":"RQ2: efficient compression","textPreview":"RQ2: efficient compression","textChars":26,"textLines":1,"bbox":[704,266,452,28]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":12,"text":"If search falls under representative summaries without worse full-information performance, the reduction in search is consistent with efficient information compression rather than harmful under-search.","textPreview":"If search falls under representative summaries without worse full-information performance, the reduction in search is consistent with eff...","textChars":201,"textLines":1,"bbox":[704,306,452,102]}
+{"kind":"shape","id":"sh/qpg3ex0n","slide":12,"bbox":[96,450,500,176]}
+{"kind":"shape","id":"sh/fa9w3m94","slide":12,"bbox":[96,450,6,176]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":12,"text":"RQ2: harmful under-search","textPreview":"RQ2: harmful under-search","textChars":25,"textLines":1,"bbox":[124,468,452,28]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":12,"text":"If search still falls under incomplete summaries and full-information deviation grows, the result supports harmful information-acquisition deviation caused by overestimated sufficiency.","textPreview":"If search still falls under incomplete summaries and full-information deviation grows, the result supports harmful information-acquisitio...","textChars":185,"textLines":1,"bbox":[124,508,452,102]}
+{"kind":"shape","id":"sh/loj2t83i","slide":12,"bbox":[676,450,500,176]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":12,"bbox":[676,450,6,176]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":12,"text":"RQ3: calibration mismatch","textPreview":"RQ3: calibration mismatch","textChars":25,"textLines":1,"bbox":[704,468,452,28]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":12,"text":"If AI-summary users show better posterior quality but lower subjective mastery or epistemic ownership, the result supports a mismatch between objective updating quality and subjective information mastery.","textPreview":"If AI-summary users show better posterior quality but lower subjective mastery or epistemic ownership, the result supports a mismatch bet...","textChars":204,"textLines":1,"bbox":[704,508,452,102]}
+{"kind":"notes","id":"nt/lwval87e","slide":12,"text":"This page explains how different result patterns would count as support for different hypotheses.\nFirst, RQ1 is supported if the AI label lowers the stopping threshold relative to the unlabeled summary.\nSecond, RQ2 splits into two possibilities: representative summaries can reveal efficient compression, while incomplete summaries can reveal harmful under-search.\nThird, RQ3 is supported if objective posterior quality and subjective mastery move apart after summary-based interaction."}
+{"kind":"slide","id":"sl/25kb6xkf","slide":13,"title":"EXPECTED CONTRIBUTIONS","textShapes":10}
+{"kind":"shape","id":"sh/val87ed8","slide":13,"bbox":[1020,-36,264,236]}
+{"kind":"shape","id":"sh/kre1w7mp","slide":13,"bbox":[-74,536,196,196]}
+{"kind":"shape","id":"sh/dcbulwva","slide":13,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":13,"bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/vixczed8","slide":13,"text":"EXPECTED CONTRIBUTIONS","textPreview":"EXPECTED CONTRIBUTIONS","textChars":22,"textLines":1,"bbox":[132,60,300,24]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":13,"text":"Expected contributions","textPreview":"Expected contributions","textChars":22,"textLines":1,"bbox":[106,108,960,72]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":13,"text":"The paper contributes by identifying where AI changes additional search, posterior updating, and subjective information mastery.","textPreview":"The paper contributes by identifying where AI changes additional search, posterior updating, and subjective information mastery.","textChars":128,"textLines":1,"bbox":[106,184,1060,52]}
+{"kind":"shape","id":"sh/29gr2p8n","slide":13,"bbox":[96,252,340,266]}
+{"kind":"shape","id":"sh/vu9knih4","slide":13,"bbox":[96,252,6,266]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":13,"text":"Theoretical move","textPreview":"Theoretical move","textChars":16,"textLines":1,"bbox":[124,270,292,28]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":13,"text":"The paper shifts the focus from generic trust and automation bias to an evidence-to-belief mechanism: how AI changes users' judgments of evidentiary sufficiency and the stopping rule for further search.","textPreview":"The paper shifts the focus from generic trust and automation bias to an evidence-to-belief mechanism: how AI changes users' judgments of ...","textChars":202,"textLines":1,"bbox":[124,310,292,192]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":13,"bbox":[470,252,340,266]}
+{"kind":"shape","id":"sh/sji5snel","slide":13,"bbox":[470,252,6,266]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":13,"text":"Method contribution","textPreview":"Method contribution","textChars":19,"textLines":1,"bbox":[498,270,292,28]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":13,"text":"It extends a classic Bayesian belief-updating paradigm into a company-risk task with summary-first presentation, follow-on evidence search, and same-summary source-label identification.","textPreview":"It extends a classic Bayesian belief-updating paradigm into a company-risk task with summary-first presentation, follow-on evidence searc...","textChars":185,"textLines":1,"bbox":[498,310,292,192]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":13,"bbox":[844,252,332,266]}
+{"kind":"shape","id":"sh/s72x4nap","slide":13,"bbox":[844,252,6,266]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":13,"text":"Substantive contribution","textPreview":"Substantive contribution","textChars":24,"textLines":1,"bbox":[872,270,284,28]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":13,"text":"The paper distinguishes efficient compression from harmful under-search and shows how objective posterior quality can separate from subjective mastery and epistemic ownership.","textPreview":"The paper distinguishes efficient compression from harmful under-search and shows how objective posterior quality can separate from subje...","textChars":175,"textLines":1,"bbox":[872,310,284,192]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":13,"bbox":[172,554,928,74]}
+{"kind":"shape","id":"sh/r65wjudg","slide":13,"bbox":[172,554,6,74]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":13,"text":"Taken together, the paper asks not only whether AI reduces search, but whether it changes when users feel they have already seen enough.","textPreview":"Taken together, the paper asks not only whether AI reduces search, but whether it changes when users feel they have already seen enough.","textChars":136,"textLines":1,"bbox":[202,572,870,36]}
+{"kind":"notes","id":"nt/25kb6xkf","slide":13,"text":"I would close the paper by emphasizing three contributions.\nThe first is theoretical: the move from generic trust to information calibration as an evidence-to-belief mechanism.\nThe second is methodological: the paper adapts a classical Bayesian updating paradigm and adds summary-first presentation, extra search, and same-summary source-label identification.\nThe third is substantive: it separates efficient compression, harmful under-search, and subjective-objective calibration mismatch."}

@@ -90,7 +90,7 @@
 | --- | --- | --- |
 | 总框架 | 建立 AI as Decision Architecture；明确 belief -> reliance/action -> responsibility 三段链 | 需要保持为整合框架，避免包装成成熟理论 |
 | 第一篇 | 当前基准稿、文献批判靶子、英文映射、多轮 PPT 与讲稿 | 旧 Double Bayesian 口径尚未完全归档；PPT 当前版未唯一化 |
-| 第二篇 | 多 Agent 理论/方法/表达包；用户修订的当前基准 PDF | 旧 strategic belief/beauty contest 材料仍与当前基准并列；需要按 repeated forecasting 重构可编辑底稿 |
+| 第二篇 | 核心概念已收束为 Asymmetric Trust；经济激励退出主线；完成 Human–AI 信任构念与客观绩效的第一轮边界审计 | 当前先确定 Asymmetric Trust 的核心结果层次、理论对话对象与任务边界；具体 Study 和参数识别后置 |
 | 第三篇 | Notion 材料地图、导师审查、RQ/操控图、文献目标图、多版 PPT | 用户尚未确认主轴；role proximity 与 responsibility design 尚未二选一 |
 | 文献库 | 文献综述、原始 PDF、Bib、citation health、知识图谱 | 新下载文献与多 Bib 需要统一并库和去重 |
 | 答辩 | 总领引言、三篇分节 PPT、组合 deck、多份审查大纲 | 版本链过长；需要指定总 deck 和每篇唯一 CURRENT 版本 |

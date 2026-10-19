@@ -1,0 +1,163 @@
+{"kind":"deck","id":"pr/z9ptt1","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/2x4nap4r","slide":1,"title":"DOCTORAL PROJECT","textShapes":15}
+{"kind":"shape","id":"sh/nap4r65w","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/cvixczed","slide":1,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":1,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/udg7adsj","slide":1,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/nyd0z610","slide":1,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"name":"kicker-label","text":"DOCTORAL PROJECT","textPreview":"DOCTORAL PROJECT","textChars":16,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/54zidony","slide":1,"text":"AI as Decision Architecture","textPreview":"AI as Decision Architecture","textChars":27,"textLines":1,"bbox":[96,118,640,140]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":1,"text":"A behavioral framework for governing human-AI decision systems in high-risk contexts","textPreview":"A behavioral framework for governing human-AI decision systems in high-risk contexts","textChars":84,"textLines":1,"bbox":[96,260,620,80]}
+{"kind":"textbox","id":"sh/judg7ads","slide":1,"text":"Xu | Doctoral Project Intro | July 2026","textPreview":"Xu | Doctoral Project Intro | July 2026","textChars":39,"textLines":1,"bbox":[96,384,300,30]}
+{"kind":"shape","id":"sh/nyd0z610","slide":1,"bbox":[800,118,320,110]}
+{"kind":"shape","id":"sh/udg7adsj","slide":1,"bbox":[800,118,6,110]}
+{"kind":"textbox","id":"sh/54zidony","slide":1,"text":"OLD VIEW","textPreview":"OLD VIEW","textChars":8,"textLines":1,"bbox":[822,134,276,22]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"text":"Model-centered governance","textPreview":"Model-centered governance","textChars":25,"textLines":1,"bbox":[822,152,276,42]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":1,"text":"Focuses on model accuracy, robustness, and technical error.","textPreview":"Focuses on model accuracy, robustness, and technical error.","textChars":59,"textLines":1,"bbox":[822,198,276,22]}
+{"kind":"shape","id":"sh/upwb2hwf","slide":1,"bbox":[860,268,320,110]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":1,"bbox":[860,268,6,110]}
+{"kind":"textbox","id":"sh/cvixczed","slide":1,"text":"NEW VIEW","textPreview":"NEW VIEW","textChars":8,"textLines":1,"bbox":[882,284,276,22]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":1,"text":"Human-AI decision system","textPreview":"Human-AI decision system","textChars":24,"textLines":1,"bbox":[882,302,276,42]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":1,"text":"Governance also depends on how people judge, rely, and act with AI.","textPreview":"Governance also depends on how people judge, rely, and act with AI.","textChars":67,"textLines":1,"bbox":[882,348,276,22]}
+{"kind":"shape","id":"sh/25kb6xkf","slide":1,"bbox":[800,418,320,110]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":1,"bbox":[800,418,6,110]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":1,"text":"CORE QUESTION","textPreview":"CORE QUESTION","textChars":13,"textLines":1,"bbox":[822,434,276,22]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":1,"text":"Why one dissertation","textPreview":"Why one dissertation","textChars":20,"textLines":1,"bbox":[822,452,276,42]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":1,"text":"Because the three papers identify one behavioral governance problem in stages.","textPreview":"Because the three papers identify one behavioral governance problem in stages.","textChars":78,"textLines":1,"bbox":[822,498,276,22]}
+{"kind":"shape","id":"sh/0rqd4vmt","slide":1,"bbox":[960,228,60,40]}
+{"kind":"shape","id":"sh/byhgn29g","slide":1,"bbox":[960,378,60,40]}
+{"kind":"textbox","id":"sh/9knih4by","slide":1,"text":"A behavioral governance framing for the dissertation as a whole.","textPreview":"A behavioral governance framing for the dissertation as a whole.","textChars":64,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"notes","id":"nt/2x4nap4r","slide":1,"text":""}
+{"kind":"slide","id":"sl/pg3ex0nu","slide":2,"title":"GOVERNANCE LENS","textShapes":16}
+{"kind":"shape","id":"sh/yxobm58z","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":2,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":2,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/r65wjudg","slide":2,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":2,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":2,"name":"kicker-label","text":"GOVERNANCE LENS","textPreview":"GOVERNANCE LENS","textChars":15,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":2,"text":"AI governance must study the human-AI decision system, not only the model","textPreview":"AI governance must study the human-AI decision system, not only the model","textChars":73,"textLines":1,"bbox":[96,96,700,110]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":2,"text":"Once AI is embedded in organizations, institutions, and high-risk settings, the relevant object is a human-AI decision system.","textPreview":"Once AI is embedded in organizations, institutions, and high-risk settings, the relevant object is a human-AI decision system.","textChars":126,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":2,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,258,24,58]}
+{"kind":"textbox","id":"sh/lwval87e","slide":2,"text":"Governance failure may come not only from technical error but also from how people interpret and use AI output.","textPreview":"Governance failure may come not only from technical error but also from how people interpret and use AI output.","textChars":111,"textLines":1,"bbox":[124,256,560,76]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":2,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,340,24,58]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":2,"text":"Behavioral science explains why the same model can produce different governance outcomes across users and settings.","textPreview":"Behavioral science explains why the same model can produce different governance outcomes across users and settings.","textChars":115,"textLines":1,"bbox":[124,338,560,76]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":2,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[96,422,24,58]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":2,"text":"This is why the dissertation starts from judgment and behavior rather than model performance alone.","textPreview":"This is why the dissertation starts from judgment and behavior rather than model performance alone.","textChars":99,"textLines":1,"bbox":[124,420,560,76]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":2,"bbox":[760,228,360,276]}
+{"kind":"shape","id":"sh/3itgfmlk","slide":2,"bbox":[760,228,6,276]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":2,"text":"FAILURE POINTS","textPreview":"FAILURE POINTS","textChars":14,"textLines":1,"bbox":[782,244,316,22]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":2,"text":"Where failure emerges","textPreview":"Where failure emerges","textChars":21,"textLines":1,"bbox":[782,262,316,42]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":2,"bbox":[810,290,260,42]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":2,"text":"Belief error","textPreview":"Belief error","textChars":12,"textLines":1,"bbox":[822,293,236,36]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":2,"bbox":[810,352,260,42]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":2,"text":"Risk shift","textPreview":"Risk shift","textChars":10,"textLines":1,"bbox":[822,355,236,36]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":2,"bbox":[810,414,260,42]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":2,"text":"Misplaced reliance","textPreview":"Misplaced reliance","textChars":18,"textLines":1,"bbox":[822,417,236,36]}
+{"kind":"textbox","id":"sh/7u54zido","slide":2,"text":"Technical performance is not the whole governance story once people and institutions are inside the loop.","textPreview":"Technical performance is not the whole governance story once people and institutions are inside the loop.","textChars":105,"textLines":1,"bbox":[96,576,1020,44]}
+{"kind":"notes","id":"nt/pg3ex0nu","slide":2,"text":""}
+{"kind":"slide","id":"sl/s72x4nap","slide":3,"title":"BEHAVIORAL PROCESS","textShapes":31}
+{"kind":"shape","id":"sh/vmtwra5g","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":3,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/dsji5sne","slide":3,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":3,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/vy90je9c","slide":3,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"name":"kicker-label","text":"BEHAVIORAL PROCESS","textPreview":"BEHAVIORAL PROCESS","textChars":18,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"In that system, governance failure can emerge at several behavioral stages","textPreview":"In that system, governance failure can emerge at several behavioral stages","textChars":74,"textLines":1,"bbox":[96,96,860,110]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":3,"text":"Belief Formation → Risk Appraisal / Reliance Calibration → Responsibility","textPreview":"Belief Formation → Risk Appraisal / Reliance Calibration → Responsibility","textChars":73,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"shape","id":"sh/vy90je9c","slide":3,"bbox":[96,238,330,342]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":3,"bbox":[96,238,6,342]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":3,"text":"STAGE 1","textPreview":"STAGE 1","textChars":7,"textLines":1,"bbox":[118,254,286,22]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":3,"text":"Belief Formation","textPreview":"Belief Formation","textChars":16,"textLines":1,"bbox":[118,272,286,42]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[116,314,24,56]}
+{"kind":"textbox","id":"sh/61032lsz","slide":3,"text":"what evidence is believed","textPreview":"what evidence is believed","textChars":25,"textLines":1,"bbox":[144,312,260,74]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[116,386,24,56]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":3,"text":"People may form incorrect beliefs after interacting with AI.","textPreview":"People may form incorrect beliefs after interacting with AI.","textChars":60,"textLines":1,"bbox":[144,384,260,74]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[116,458,24,56]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":3,"text":"That changed belief base carries into later reliance and responsibility.","textPreview":"That changed belief base carries into later reliance and responsibility.","textChars":72,"textLines":1,"bbox":[144,456,260,74]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":3,"text":"Governance begins to shift before any final action is taken.","textPreview":"Governance begins to shift before any final action is taken.","textChars":60,"textLines":1,"bbox":[116,526,286,44]}
+{"kind":"shape","id":"sh/7adsji5s","slide":3,"bbox":[460,238,330,342]}
+{"kind":"shape","id":"sh/wval87ed","slide":3,"bbox":[460,238,6,342]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":3,"text":"STAGE 2","textPreview":"STAGE 2","textChars":7,"textLines":1,"bbox":[482,254,286,22]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":3,"text":"Risk Appraisal /\nReliance Calibration","textPreview":"Risk Appraisal / | Reliance Calibration","textChars":37,"textLines":2,"bbox":[482,272,286,42]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[480,314,24,56]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":3,"text":"belief / feedback\n→ action threshold","textPreview":"belief / feedback | → action threshold","textChars":36,"textLines":2,"bbox":[508,312,260,74]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[480,386,24,56]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":3,"text":"AI can shift risk judgments and produce inappropriate reliance.","textPreview":"AI can shift risk judgments and produce inappropriate reliance.","textChars":63,"textLines":1,"bbox":[508,384,260,74]}
+{"kind":"textbox","id":"sh/7u54zido","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[480,458,24,56]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":3,"text":"Feedback then recalibrates when people delegate and when they act.","textPreview":"Feedback then recalibrates when people delegate and when they act.","textChars":66,"textLines":1,"bbox":[508,456,260,74]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":3,"text":"This is the middle governance problem inside repeated interaction.","textPreview":"This is the middle governance problem inside repeated interaction.","textChars":66,"textLines":1,"bbox":[480,526,286,44]}
+{"kind":"shape","id":"sh/bq1oryts","slide":3,"bbox":[824,238,330,342]}
+{"kind":"shape","id":"sh/m58z25kb","slide":3,"bbox":[824,238,6,342]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":3,"text":"STAGE 3","textPreview":"STAGE 3","textChars":7,"textLines":1,"bbox":[846,254,286,22]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":3,"text":"Responsibility","textPreview":"Responsibility","textChars":14,"textLines":1,"bbox":[846,272,286,42]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[844,314,24,56]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":3,"text":"action → responsibility","textPreview":"action → responsibility","textChars":23,"textLines":1,"bbox":[872,312,260,74]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[844,386,24,56]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":3,"text":"Once AI participates in action, responsibility may be reallocated.","textPreview":"Once AI participates in action, responsibility may be reallocated.","textChars":66,"textLines":1,"bbox":[872,384,260,74]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":3,"text":"-","textPreview":"-","textChars":1,"textLines":1,"bbox":[844,458,24,56]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":3,"text":"The governance question expands from error to responsibility attribution.","textPreview":"The governance question expands from error to responsibility attribution.","textChars":73,"textLines":1,"bbox":[872,456,260,74]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":3,"text":"This is why the dissertation treats the three papers as linked stages of one process.","textPreview":"This is why the dissertation treats the three papers as linked stages of one process.","textChars":85,"textLines":1,"bbox":[844,526,286,44]}
+{"kind":"notes","id":"nt/s72x4nap","slide":3,"text":""}
+{"kind":"slide","id":"sl/val87ed8","slide":4,"title":"DECISION ARCHITECTURE","textShapes":16}
+{"kind":"shape","id":"sh/1gvy90je","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":4,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/je9cvixc","slide":4,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/87ed8bat","slide":4,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/xs72x4na","slide":4,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":4,"name":"kicker-label","text":"DECISION ARCHITECTURE","textPreview":"DECISION ARCHITECTURE","textChars":21,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":4,"text":"The dissertation narrows this governance problem into AI as decision architecture","textPreview":"The dissertation narrows this governance problem into AI as decision architecture","textChars":81,"textLines":1,"bbox":[96,96,760,110]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":4,"text":"The term is used here as an integrative framework for how AI restructures information flow, thresholds, and responsibility relations.","textPreview":"The term is used here as an integrative framework for how AI restructures information flow, thresholds, and responsibility relations.","textChars":133,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":4,"bbox":[96,246,428,138]}
+{"kind":"shape","id":"sh/8bat47y1","slide":4,"bbox":[96,246,6,138]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":4,"text":"PAPER 1","textPreview":"PAPER 1","textChars":7,"textLines":1,"bbox":[118,262,384,22]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":4,"text":"evidence → belief","textPreview":"evidence → belief","textChars":17,"textLines":1,"bbox":[118,280,384,42]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":4,"text":"Answer-first structure changes evidence search, Bayesian updating, and subjective mastery.","textPreview":"Answer-first structure changes evidence search, Bayesian updating, and subjective mastery.","textChars":90,"textLines":1,"bbox":[118,326,384,50]}
+{"kind":"shape","id":"sh/8nqxs72x","slide":4,"bbox":[592,246,428,138]}
+{"kind":"shape","id":"sh/j2t83itg","slide":4,"bbox":[592,246,6,138]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":4,"text":"PAPER 2","textPreview":"PAPER 2","textChars":7,"textLines":1,"bbox":[614,262,384,22]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":4,"text":"belief / feedback\n→ action threshold","textPreview":"belief / feedback | → action threshold","textChars":36,"textLines":2,"bbox":[614,280,384,42]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":4,"text":"Early AI error changes reliance calibration and risk thresholds under repeated feedback.","textPreview":"Early AI error changes reliance calibration and risk thresholds under repeated feedback.","textChars":88,"textLines":1,"bbox":[614,326,384,50]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":4,"bbox":[96,420,428,138]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":4,"bbox":[96,420,6,138]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":4,"text":"PAPER 3","textPreview":"PAPER 3","textChars":7,"textLines":1,"bbox":[118,436,384,22]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":4,"text":"action → responsibility","textPreview":"action → responsibility","textChars":23,"textLines":1,"bbox":[118,454,384,42]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":4,"text":"After AI participates in action, ownership and responsibility attribution are restructured.","textPreview":"After AI participates in action, ownership and responsibility attribution are restructured.","textChars":91,"textLines":1,"bbox":[118,500,384,50]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":4,"bbox":[592,420,428,138]}
+{"kind":"shape","id":"sh/al87ed8b","slide":4,"bbox":[592,420,6,138]}
+{"kind":"textbox","id":"sh/z61032ls","slide":4,"text":"FRAMEWORK","textPreview":"FRAMEWORK","textChars":9,"textLines":1,"bbox":[614,436,384,22]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":4,"text":"One problem, layered studies","textPreview":"One problem, layered studies","textChars":28,"textLines":1,"bbox":[614,454,384,42]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":4,"text":"The papers are independent in design but cumulative in what they explain about governance.","textPreview":"The papers are independent in design but cumulative in what they explain about governance.","textChars":90,"textLines":1,"bbox":[614,500,384,50]}
+{"kind":"notes","id":"nt/val87ed8","slide":4,"text":""}
+{"kind":"slide","id":"sl/mlkjm1cf","slide":5,"title":"BRIDGE","textShapes":9}
+{"kind":"shape","id":"sh/vahoza1g","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ovahoza1","slide":5,"bbox":[1000,-120,360,360]}
+{"kind":"shape","id":"sh/dg7adsji","slide":5,"bbox":[-120,500,300,300]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":5,"bbox":[58,48,2,624]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":5,"name":"kicker-marker","bbox":[96,69,18,18]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":5,"name":"kicker-label","text":"BRIDGE","textPreview":"BRIDGE","textChars":6,"textLines":1,"bbox":[124,60,260,36]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":5,"text":"The three papers are separate studies of one high-stakes decision process","textPreview":"The three papers are separate studies of one high-stakes decision process","textChars":73,"textLines":1,"bbox":[96,96,760,110]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":5,"text":"Their unity comes from one behavioral governance problem and their independence comes from different mechanisms and outcomes.","textPreview":"Their unity comes from one behavioral governance problem and their independence comes from different mechanisms and outcomes.","textChars":125,"textLines":1,"bbox":[96,682,930,20]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1130,676,60,24]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":5,"bbox":[96,280,282,184]}
+{"kind":"shape","id":"sh/y90je9cv","slide":5,"bbox":[96,280,6,184]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":5,"bbox":[118,296,238,22]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":5,"text":"\nHow does AI change human judgment in consequential decisions?","textPreview":"| How does AI change human judgment in consequential decisions?","textChars":62,"textLines":2,"bbox":[118,314,238,42]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":5,"bbox":[426,280,282,184]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":5,"bbox":[426,280,6,184]}
+{"kind":"shape","id":"sh/58z25kb6","slide":5,"bbox":[448,296,238,22]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":5,"text":"\nPaper 1 isolates belief, Paper 2 calibration, and Paper 3 responsibility.","textPreview":"| Paper 1 isolates belief, Paper 2 calibration, and Paper 3 responsibility.","textChars":74,"textLines":2,"bbox":[448,314,238,42]}
+{"kind":"shape","id":"sh/neloj2t8","slide":5,"bbox":[756,280,282,184]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":5,"bbox":[756,280,6,184]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":5,"bbox":[778,296,238,22]}
+{"kind":"textbox","id":"sh/vixczed8","slide":5,"text":"\nLater reliance rests on a belief base AI may already have reshaped.","textPreview":"| Later reliance rests on a belief base AI may already have reshaped.","textChars":68,"textLines":2,"bbox":[778,314,238,42]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":5,"bbox":[96,528,984,72]}
+{"kind":"shape","id":"sh/donyd0z6","slide":5,"bbox":[96,528,6,72]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":5,"text":"NEXT","textPreview":"NEXT","textChars":4,"textLines":1,"bbox":[118,544,940,22]}
+{"kind":"textbox","id":"sh/val87ed8","slide":5,"text":"I begin with Paper 1, which asks how AI changes the evidence-to-belief mapping before later reliance and responsibility are even possible.","textPreview":"I begin with Paper 1, which asks how AI changes the evidence-to-belief mapping before later reliance and responsibility are even possible.","textChars":138,"textLines":1,"bbox":[118,562,940,42]}
+{"kind":"notes","id":"nt/mlkjm1cf","slide":5,"text":""}
